@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.83 17.14">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="圖層_2" data-name="圖層 2">
+    <g id="圖層_2-2" data-name="圖層 2">
+      <g>
+        <path class="cls-1" d="M7.74,9.72H3v4.54H8.61v2.88H0V0H8.59V2.88H3V6.93H7.74Z"/>
+        <path class="cls-1" d="M20.83,17.14h-3L13.38,5.9V17.14h-3V0h3l4.44,11.25V0h3Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
