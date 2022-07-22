@@ -1,0 +1,68 @@
+.check_box_bg {
+    background: rgba(73, 188, 191, 0.1);
+}
+
+.write_btn_bg {
+    background: #49BCBF;
+}
+.write_btn_bg:hover {background: #0B7D9B;color:#fff;}
+.list_style_square {
+    list-style: square;
+    padding-left: 1.3em;
+}
+
+ol,
+ul {
+    padding-left: 1rem;
+}
+thead th:first-child,
+  tbody td:first-child {
+    width: 2em;
+  }
+.step_main .step {
+    color: #828180;
+}
+dt {
+    font-weight: 500;
+}
+.step_main svg {
+    color: #3DB67C;
+}
+main a.text-decoration-underline  {color: #0B7D9B;}
+.svg-inline--fa.fa-w-8 {
+    width: 1.5em;
+}
+.blockquote-footer {
+    margin-top: 0.5rem;
+    display: block;
+}
+.topBtn {background: #0B7D9B;}
+.wrap5 {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.title3,.breadcrumb-item.active {
+    color: #0B7D9B;
+}
+.title3:after {background-color:#0B7D9B}
+.blockquote-footer::before {
+    display: none
+}
+#Image1 {height: 40px;}
+label.add_file>input {
+    display: none;
+    /* 上傳按鈕*/
+}
+
+Label.add_file,
+#btnRe.add_file {
+    color: #000;
+    /*指定標籤文字的顏色*/
+    
+    padding: 5px 10px;
+    /*指定標籤之間的邊距標籤和文字 */
+    border: 0;
+}
+.file_btn_color {background-color: #C9CACA;}
+.file_btn_color:hover,.file_btn_color:focus {background-color: #999;}
+#btnRe {width:100%}

@@ -1,0 +1,19 @@
+/*=============================================
+=                     Print                   =
+=============================================*/
+@page {
+  size: 380mm 500mm;
+  margin: 5mm 14mm; }
+@media print {
+  html, body {
+    width: 380mm;
+    height: 500mm; }
+
+  .header > .wrap1, .baseNav, .navbarNav, .mLang, .navbar-toggler, footer, .topBtn {
+    display: none !important; }
+
+  .header, body.hdFixed .navbar {
+    position: relative; }
+
+  .main {
+    padding-top: 0; } }

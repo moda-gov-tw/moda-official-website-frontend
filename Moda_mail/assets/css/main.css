@@ -1,0 +1,81 @@
+body {
+    background: #F4F6F7;
+}
+.ftBtm {
+    background: #0B7D9B;
+}
+.img {width: 100%;height: auto;}
+.img2 {width: 100%;height: 100%;}
+footer,.ftBtm a {color:#FFF}
+.header .a11yBrick {
+    color: var(--md-white-1);
+}
+p svg {vertical-align: bottom;margin-right: 10px;}
+button.fontSizeDdNow {background-position: 4px!important;}
+button[title=中字級] { background: url(../img/mailbox/fontsize_m.svg) no-repeat bottom center/contain;}
+button[title=中字級]:hover,button[title=中字級]:focus { background: url(../img/mailbox/fontsize_m_hr.svg) no-repeat bottom center/contain;}
+button[title=大字級] { background: url(../img/mailbox/fontsize_l.svg) no-repeat bottom center/contain;}
+button[title=大字級]:hover,button[title=大字級]:focus { background: url(../img/mailbox/fontsize_l_hr.svg) no-repeat bottom center/contain;}
+button[title=小字級] { background: url(../img/mailbox/fontsize_s.svg) no-repeat bottom center/contain;}
+button[title=小字級]:hover,button[title=小字級]:focus { background: url(../img/mailbox/fontsize_s_hr.svg) no-repeat bottom center/contain;}
+.en_icon {background: url(../img/mailbox/en.svg) no-repeat bottom center/contain;width: 40px;height: 40px;display: block;}
+.en_icon:hover,.en_icon:focus {background: url(../img/mailbox/en_hr.svg) no-repeat bottom center/contain;}
+.en_icon span,.Step1,.Step2,.Step3 {    width: 0px;
+    height: 0px;
+    display: block;
+    font-size: 0px;
+    color: transparent;}
+.Step1 {background: url(../img/mailbox/Step1.svg) no-repeat bottom center/contain;width: 50px;height: 50px;}
+.Step1.not_yet {background: url(../img/mailbox/Step1_n.svg) no-repeat bottom center/contain;}
+.Step2.not_yet {background: url(../img/mailbox/Step2_n.svg) no-repeat bottom center/contain;}
+.Step3.not_yet {background: url(../img/mailbox/Step3_n.svg) no-repeat bottom center/contain;}
+.step_list {position: relative;}
+.step_list:after {content:""; background: url(../img/mailbox/Vector.svg) no-repeat bottom center/contain;width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    right: 0}
+    .step_list:last-child::after {display: none;}
+.Step2 {background: url(../img/mailbox/Step2.svg) no-repeat bottom center/contain;width: 50px;height: 50px;}
+.Step3 {background: url(../img/mailbox/Step3.svg) no-repeat bottom center/contain;width: 50px;height: 50px;}
+button.dropdown-toggle  span,button.dropdown-toggle:after,button.dropdown-item,.dropdown-item:hover, .dropdown-item:focus {color: transparent;}
+.btn-dropdownNow:focus, .btn-dropdownNow:hover,button.dropdown-item,.dropdown-item:hover {
+    background-color: transparent;
+}
+.dropdown-menu {border:0; background-color: transparent;}
+.dropdown-item {
+    padding: 0.5rem 1rem;
+}
+.dropdown-menu {
+    padding: 0.5rem 0;
+}
+.btn_play {background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;}
+.list-inline-item ul li:first-child {padding: 0 0 0.5em 0;}
+.list-unstyled {display: flex;}
+.top_nav:hover {color: var(--md-black-1);}
+.nav_icon {display: flex;
+    background: #3DB67C;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;}
+ .bs-blue {background-color: #49BCBF;} 
+ .bs-blue2{background-color:#0B7D9B}
+ .nav_icon:hover,.nav_icon:focus {background: #56CF95;}
+ .bs-blue:hover,.bs-blue:focus  {background-color: #62D5D8;} 
+ .bs-blue2:hover,.bs-blue2:focus  {background-color: #4DAFCE;} 
+@media screen and (min-width: 768px){
+    .navbar-brand img {
+        width: 100%;height: 69px;
+    }
+    .navbar_mail {position: relative;
+        display: flex;    flex-wrap: nowrap;
+        justify-content: flex-start;
+        height: 168px;background: var(--md-white-1);
+        z-index: 200;
+    }
+}
