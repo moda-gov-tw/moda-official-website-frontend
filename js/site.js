@@ -2,6 +2,9 @@
 function GetApiUrl() {
     return "https://web1-05.i-me-i.com";
 }
+function GetWebTestKey() {
+    return "web1-04";
+}
 
 $(document).on("click", "a", function () {
     if ($(this).find('span').length > 0) {
@@ -20,34 +23,33 @@ $(document).on("click", "a", function () {
 });
 
 function gooSearch(lan, webSiteId) {
-    var _lan = lan == "zh-tw" ? "" :  lan + "/" ;
-    var _webSiteId = webSiteId == "MODA" ? "" :  webSiteId+"/";
+    var _lan = lan == "zh-tw" ? "" : lan + "/";
+    var _webSiteId = webSiteId == "MODA" ? "" : webSiteId + "/";
     var _txt = $(".searchAreaIpt").val();
     if (window.location.hostname.indexOf("web1-04") > -1) {
-        lan = lan == "zh-tw" ? "" :   lan+ "/";
+        lan = lan == "zh-tw" ? "" : lan + "/";
         location.href = "/".concat(_lan, _webSiteId, "home/", "search.html", "?q=", _txt);
     } else {
-        location.href = "/".concat(webSiteId, "/", lan,"/" , "home/", "search", "?q=", _txt);
+        location.href = "/".concat(webSiteId, "/", lan, "/", "home/", "search", "?q=", _txt);
     }
 }
 function gooSearch(lan, webSiteId, txt) {
     var _lan = lan == "zh-tw" ? "" : lan + "/";
-    var _webSiteId = webSiteId == "MODA" ? "" :   webSiteId+"/";
+    var _webSiteId = webSiteId == "MODA" ? "" : webSiteId + "/";
     var _txt = txt;
     if (window.location.hostname.indexOf("web1-04") > -1) {
-		
         location.href = "/".concat(_lan, _webSiteId, "home/", "search.html", "?q=", _txt);
     } else {
         location.href = "/".concat(webSiteId, "/", lan, "/", "home/", "search", "?q=", _txt);
     }
 }
 function webSiteLange(lan, webSiteId) {
-    if (window.location.hostname.indexOf("web1-04") > -1) {
+    if (window.location.hostname.indexOf(GetWebTestKey()) > -1) {
         if (lan != null) {
             var lan = lan == "zh-tw" ? "" : "/" + lan;
             var webSiteId = webSiteId == "MODA" ? "" : "/" + webSiteId;
             $(".header").load(lan + webSiteId + "/home/Header.html", function () { FECommon.headerNavSet(); });
-            $(".footer").load(lan + webSiteId + "/home/Footer.html", function () { FECommon.footerFtSubNavStyle();});
+            $(".footer").load(lan + webSiteId + "/home/Footer.html", function () { FECommon.footerFtNavStyle();});
         }
     }
 }
@@ -61,7 +63,11 @@ function NewList(sqn) {
         $("#QryDateS").val(objJson.str);
         $("#QryDateE").val(objJson.end);
         $("#QryKeyword").val(objJson.txt);
-        if ($("#QryDateS").val() != "" || $("#QryDateE").val() != "" || $("#QryKeyword").val() != "") {
+        $("#Condition4").val(objJson.C4);
+        $("#Condition5").val(objJson.C5);
+        $("#Condition6").val(objJson.C6);
+        if ($("#QryDateS").val() != "" || $("#QryDateE").val() != "" || $("#QryKeyword").val() != "" ||
+            $("#Condition4").val() != "" || $("#Condition5").val() != "" || $("#Condition6").val() != "") {
             $(".searchSwitch").click();
         }
         SearchObj(objJson);
@@ -82,6 +88,9 @@ function Search(p) {
         str: $("#QryDateS").val(),
         end: $("#QryDateE").val(),
         txt: $("#QryKeyword").val(),
+        C4: $("#Condition4").val(),
+        C5: $("#Condition5").val(),
+        C6: $("#Condition6").val(),
         displaycount: displaycount,
         p: p
     };
@@ -92,13 +101,52 @@ function Search(p) {
 
 function SearchObj(obj) {
     FECommon.basicLoadingOn();
- 
-    //靜態
-    $('#ListTable').remove();
-    if ($('.pageBar').length > 0) {
-        $('.pageBar').remove();
+    var msg = "";
+    //檢核
+    if (obj.str != "" || obj.end != "") {
+        if (obj.str != "" && !dateIsValid(obj.str)) {
+            msg += "起始時間格式有誤。\n The time format for StartDate is not allow. \n";
+        }
+        if (obj.end != "" && !dateIsValid(obj.end)) {
+            msg += "結束時間格式有誤。\n The time format for EndDate is not allow. \n";
+        }
+        if (obj.str != "" && obj.end != "" && msg == "") {
+            if (Date.parse(obj.str) > Date.parse(obj.end)) {
+                msg += "起始時間請勿小於結束時間。\n StartDate should not be later than EndDate. \n";
+            }
+        }
     }
-    $('#ContentHeader').after(SearchAjax(obj));
+
+    if (obj.txt != "") {
+        if (obj.txt.length > 50) {
+            msg += "查詢字串請勿超過50個字。\n Keyword should not be longer than 50 letters. \n";
+        }
+    }
+    if (msg != "") {
+        alert(msg);
+        FECommon.basicLoadingOff();
+        return;
+    }
+
+    //靜態
+    $('.rightMain').empty();
+    $('.rightMain').html(SearchAjax(obj)).promise().done(function () {
+        if (obj != "") {
+            $("#QryDateS").val(obj.str);
+            $("#QryDateE").val(obj.end);
+            $("#QryKeyword").val(obj.txt);
+            $("#Condition4").val(obj.C4);
+            $("#Condition5").val(obj.C5);
+            $("#Condition6").val(obj.C6);
+            if ($("#QryDateS").val() != "" || $("#QryDateE").val() != "" || $("#QryKeyword").val() != "" ||
+                $("#Condition4").val() != "" || $("#Condition5").val() != "" || $("#Condition6").val() != "") {
+                $(".searchSwitch").click();
+            }
+        }
+
+        $('.datepicker1').datepicker();
+    });
+
     FECommon.basicLoadingOff();
 }
 
@@ -111,6 +159,9 @@ function SearchAjax(obj) {
         "StartDate": obj.str,
         "EndDate": obj.end,
         "SearchString": obj.txt,
+        "Condition4": obj.C4,
+        "Condition5": obj.C5,
+        "Condition6": obj.C6,
         "P": parseInt(obj.p),
         "DisplayCount":  parseInt(obj.displaycount)
     };   
@@ -126,18 +177,6 @@ function SearchAjax(obj) {
         }
     });
     return innerHtml;
-
-    //axios.post(Url, data)
-    //    .then(function (response) {
-    //        var data = response;
-    //        $("#" + data.ListType).empty();
-
-    //        $("#" + data.ListType).innerHtml = OneTextList(response.data);
-    //        console.log(response);
-    //    })
-    //    .catch(function (error) {
-    //        console.log(error);
-    //    });
 }
 
 function LeftMenu(obj) {
@@ -187,13 +226,30 @@ function SetCookie(name, value) {
     var strjson = JSON.stringify(value);
     d.setTime(d.getTime() + (1 * 2 * 60 * 60 * 1000)); //以1 hours 計算
     var expires = "expires=" + d.toGMTString();
-    document.cookie = name + "=" + strjson + ";" + expires + ";cookie_flags: 'max-age=7200;secure;SameSite=lax;";
+    document.cookie = name + "=" + strjson + ";" + expires + ";cookie_flags: 'max-age=7200;secure;SameSite=lax;'";
 }
 function RemoveCookie(name) {
     var d = new Date();
     var strjson = JSON.stringify("");
     d.setTime(d.getTime() + (1 * 1 * 1 * 1 * -1)); //立刻過期
     var expires = "expires=" + d.toGMTString();
-    document.cookie = name + "=" + strjson + ";" + expires + ";cookie_flags: 'max-age=7200;secure;SameSite=lax';";
+    document.cookie = name + "=" + strjson + ";" + expires + ";cookie_flags: 'max-age=7200;secure;SameSite=lax;'";
 
+}
+
+function dateIsValid(dateStr) {
+    const regex = /^\d{4}-\d{2}-\d{2}$/;
+
+    if (dateStr.match(regex) === null) {
+        return false;
+    }
+
+    const date = new Date(dateStr);
+    const timestamp = date.getTime();
+
+    if (typeof timestamp !== 'number' || Number.isNaN(timestamp)) {
+        return false;
+    }
+
+    return true;
 }

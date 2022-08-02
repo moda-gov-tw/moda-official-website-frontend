@@ -1,0 +1,13 @@
+/*=============================================
+=                     Print                   =
+=============================================*/
+@page {
+  size: 330mm 427mm;
+  margin: 5mm 15mm; }
+@media print {
+  html, body {
+    width: 330mm;
+    height: 427mm; }
+
+  body {
+    padding: 0 6mm; } }

@@ -23,9 +23,9 @@
     <!-- PWA -->
 
     <!-- 套件css -->
-    <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=wrnjAnJ10SquvD31267b2eIzYihn7yCe1Ar5IQRbN6M" media="all" />
+    <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=zFl4ml_cnP0bO0tqgxMjqNU7qUzAKuoCFI9CIXTNyCo" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/assets/css/layout.css?v=0yOYMd6lI3Y7yLhi58PYoP_q-PsUsFkQ2hbGYovEDtE" media="all" />
+            <link rel="stylesheet" href="/assets/css/layout.css?v=-hIAnGh5dwAc3Usd7ntMXrO2lGX55l9NXFWfxCW4yGQ" media="all" />
 
     <!-- ======單獨這頁用的css end -->
     
@@ -684,7 +684,7 @@
             <div class="row">
                 <div class="col-12 col-md">
                     <div class="ftBtmLogo mb-3">
-                        <a class="d-inline-block" href="index.html">
+                        <a class="d-inline-block" href="/index.html">
                             <!-- 淺色版面的logo -->
                             <img class="mw-100 lightShow" src="/copyright/MODA/jdhpjf44.flh.svg" width="340" height="56" alt="&#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;">
                             <!-- 深色版面的logo -->
@@ -693,7 +693,7 @@
                     </div>
                     <div class="ftBtmRights">
                         <p class="mb-3">Copyright &#xA9; 2022 Ministry of Digital Affairs. All rights reserved.</p>
-                        <p class="mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-07-22<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                        <p class="mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-07-27<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                     </div>
                 </div>
                 <div class="col-12 col-md text-md-end">
@@ -731,13 +731,14 @@
     <script src="/vendor/js/jquery-ui.min.js?v=EAH39nQqNEy6oFY3jCY7pbC_2wvhoAhdxH-VzLuEJO0"></script>
     <script src="/vendor/js/bootstrap.bundle.min.js?v=EgZm4B1nHbFyzs2Hqq7Vyw_rLaJNlxwpH-G44PZLGKw"></script>
     <script src="/vendor/js/bootstrap-submenu.js?v=1Y9RTzSmvcMZ_XlqjfXKjBZYLtmKI2R4Iz_p5siDh4g"></script>
-    <script src="/vendor/js/swiper-bundle.min.js?v=1N77Zqu5bNSNRbRZHP_6c2_snd3kZuFggjLSQrqajFU"></script>
+    <script src="/vendor/js/swiper-bundle.min.js?v=NJwLCx5WWkMLkRKMHvvMKBjX0xz1pZPkpqQmU3J9hiY"></script>
+    <script src="/vendor/js/lazyload.min.js?v=chZm2VfM5r7hxFu6TGArcJmYU-Y19fT-mg58IBVCtdU"></script>
     <script src="/vendor/js/aos.js?v=omKpPLcfsEA5uAU3eBb3KA0I8o4Ql7DW84u6Y8wHerY"></script>
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <!-- main -->
-            <script src="/assets/js/common.js?v=3zCHFiN-Q6y7gMXaflCdsPBECYpzQdBVWC6MPDAKFQk"></script>
-    <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=hyLoCZRyY6ijVg7CD9t2TAJnRMcuBlkfV4L_OO1sSf0"></script>
+            <script src="/assets/js/common.js?v=C-algOvllSC_Nrq0p24O5-2Kd8feFbEiHkrjnGB6KNU"></script>
+    <script src="/js/axios.min.js?v=iSkNRnKsHORmMCNgQIxzyW0QzHrWeko_lyVjyI78G2c"></script>
+    <script src="/js/site.js?v=rOqQMP6sZ10u0TEkdx2NzvxQmGr6X40umqW0b9odmpg"></script>
     <script>
         webSiteLange('zh-tw' ,'MODA'  );
 

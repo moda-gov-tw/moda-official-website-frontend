@@ -20,16 +20,28 @@
     <!-- favicon -->
         <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.ico">
     <link rel="apple-touch-icon" sizes="192x192" href="/assets/img/touch-icon.png">
-    <!-- PWA -->
+
+    <!-- (google font)connect to domain of font files -->
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<!-- (google font)optionally increase loading priority -->
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
 
     <!-- 套件css -->
-    <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=wrnjAnJ10SquvD31267b2eIzYihn7yCe1Ar5IQRbN6M" media="all" />
+    <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=RXGyvR-V1yq9EGRVcKhbcsfNsHQEl259cLsfbdOg6BY" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/assets/css/layout.css?v=0yOYMd6lI3Y7yLhi58PYoP_q-PsUsFkQ2hbGYovEDtE" media="all" />
+            <link rel="stylesheet" href="/assets/css/layout.css?v=IeTYptz9Xool1Fx1QlrpSeScks1pVrrwS08OIaGGYZg" media="all" />
 
-    <!-- ======單獨這頁用的css end -->
+    <!-- (google font)async CSS -->
+	<link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
+	<!-- (google font)no-JS fallback -->
+	<noscript>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
+	</noscript>
+
     
-<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-7THDT5WE9H"></script><script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7THDT5WE9H"></script>
+<script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -121,13 +133,13 @@
             </div>
             <div class="hotSearch w-100 py-4">
                 <div class="listTag">
-                            <a class="btn mb-2" onclick="gooSearch('zh-tw','MODA','5G' )" role="button">5G</a>
-                            <a class="btn mb-2" onclick="gooSearch('zh-tw','MODA','&#x8CC7;&#x901A;&#x5B89;&#x5168;' )" role="button">&#x8CC7;&#x901A;&#x5B89;&#x5168;</a>
-                            <a class="btn mb-2" onclick="gooSearch('zh-tw','MODA','&#x7814;&#x8A0E;&#x6703;' )" role="button">&#x7814;&#x8A0E;&#x6703;</a>
-                            <a class="btn mb-2" onclick="gooSearch('zh-tw','MODA','&#x591A;&#x5143;&#x5275;&#x65B0;' )" role="button">&#x591A;&#x5143;&#x5275;&#x65B0;</a>
-                            <a class="btn mb-2" onclick="gooSearch('zh-tw','MODA','&#x65BD;&#x653F;&#x91CD;&#x9EDE;' )" role="button">&#x65BD;&#x653F;&#x91CD;&#x9EDE;</a>
-                            <a class="btn mb-2" onclick="gooSearch('zh-tw','MODA','&#x6C38;&#x7E8C;' )" role="button">&#x6C38;&#x7E8C;</a>
-                            <a class="btn mb-2" onclick="gooSearch('zh-tw','MODA','&#x6DE8;&#x96F6;' )" role="button">&#x6DE8;&#x96F6;</a>
+                            <a class="btn mb-2" href="javascript:;" onclick="gooSearch('zh-tw','MODA','5G')" role="button">5G</a>
+                            <a class="btn mb-2" href="javascript:;" onclick="gooSearch('zh-tw','MODA','&#x8CC7;&#x901A;&#x5B89;&#x5168;')" role="button">&#x8CC7;&#x901A;&#x5B89;&#x5168;</a>
+                            <a class="btn mb-2" href="javascript:;" onclick="gooSearch('zh-tw','MODA','&#x7814;&#x8A0E;&#x6703;')" role="button">&#x7814;&#x8A0E;&#x6703;</a>
+                            <a class="btn mb-2" href="javascript:;" onclick="gooSearch('zh-tw','MODA','&#x591A;&#x5143;&#x5275;&#x65B0;')" role="button">&#x591A;&#x5143;&#x5275;&#x65B0;</a>
+                            <a class="btn mb-2" href="javascript:;" onclick="gooSearch('zh-tw','MODA','&#x65BD;&#x653F;&#x91CD;&#x9EDE;')" role="button">&#x65BD;&#x653F;&#x91CD;&#x9EDE;</a>
+                            <a class="btn mb-2" href="javascript:;" onclick="gooSearch('zh-tw','MODA','&#x6C38;&#x7E8C;')" role="button">&#x6C38;&#x7E8C;</a>
+                            <a class="btn mb-2" href="javascript:;" onclick="gooSearch('zh-tw','MODA','&#x6DE8;&#x96F6;')" role="button">&#x6DE8;&#x96F6;</a>
                 </div>
             </div>
         </div>
@@ -263,18 +275,19 @@
 		
 		<!-- 0. kv -->
 		<section class="kv position-relative" data-aos="fade">
-    <div class="swiper-container kv1SwiperJs">
+    <div class="swiper kv1SwiperJs">
         <button type="button" class="swiper-button-prev kv1SwiperPrevBtn border-0 rounded-circle kv1SwiperPrevBtnJs" title="&#x4E0A;&#x4E00;&#x5247;&#x4E3B;&#x984C;"><span>&#x4E0A;&#x4E00;&#x5247;&#x4E3B;&#x984C;</span></button>
         <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <a class="position-relative d-block w-100 h-100" href="#" target='_blank' rel='noreferrer noopener' title='MODA(另開新視窗)'>
                             <!-- 桌機版圖 -->
-                            <div class="bg-cover d-none d-xl-block" style="background-image:url(/copyright/MODA/qzss2liv.dhe.jpg)"></div>
+                            <div class="bg-cover d-none d-xl-block swiper-lazy" data-background="/copyright/MODA/qzss2liv.dhe.jpg"></div>
                             <!-- 手機版圖 -->
-                            <div class="bg-cover d-block d-xl-none" style="background-image:url(/copyright/MODA/1w5mp5lh.ovv.jpg)"></div>
+                            <div class="bg-cover d-block d-xl-none swiper-lazy" data-background="/copyright/MODA/1w5mp5lh.ovv.jpg"></div>
                             <div class="kvTxtWrap">
                                 <span class="kvTxt visually-hidden">MODA</span>
                             </div>
+                            <div class="swiper-lazy-preloader"></div>
                         </a>
                     </div>
         </div>
@@ -293,74 +306,92 @@
         </div>
         <div class="idxFocusT row">
                     <div class="col-12 col-md-6 idxFocusTI2">
-                        <a href="/majorpolicies/368.html" style="background-image: url(/copyright/MODA/e13yn555.x4o.jpg);" target='_self' title='政策願景'>
+                        <a href="/majorpolicies/368.html" class="lazy" data-bg="/copyright/MODA/e13yn555.x4o.jpg" target='_self' title='政策願景'>
                             <div class="txt">
-                                <span class="idxFocusIcon" style="background-image:url(/copyright/MODA/1fkogfpp.jjy.svg);"></span>
-                                <span class="idxFocusTxt">政策願景</span>
+                                <div class="txtWrap">
+                                    <span class="idxFocusIcon lazy" data-bg="/copyright/MODA/1fkogfpp.jjy.svg"></span>
+                                    <span class="idxFocusTxt">政策願景</span>
+                                </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-6 col-md-3 idxFocusTI1">
-                        <a href="/digital-affairs/digital-service/354.html" style="background-image: url(/copyright/MODA/kopi212z.lac.jpg);" target='_self' title='數位政府'>
+                        <a href="/digital-affairs/digital-service/354.html" class="lazy" data-bg="/copyright/MODA/kopi212z.lac.jpg" target='' title='數位政府'>
                             <div class="txt">
-                                <span class="idxFocusIcon" style="background-image:url(/copyright/MODA/tiig4dkl.23z.svg);"></span>
-                                <span class="idxFocusTxt">數位政府</span>
+                                <div class="txtWrap">
+                                    <span class="idxFocusIcon lazy" data-bg="/copyright/MODA/tiig4dkl.23z.svg"></span>
+                                    <span class="idxFocusTxt">數位政府</span>
+                                </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-6 col-md-3 idxFocusTI1">
-                        <a href="/digital-affairs/plural-innovations/352.html" style="background-image: url(/copyright/MODA/icjdpl2x.ugo.jpg);" target='_self' title='多元創新'>
+                        <a href="/digital-affairs/plural-innovations/352.html" class="lazy" data-bg="/copyright/MODA/icjdpl2x.ugo.jpg" target='' title='多元創新'>
                             <div class="txt">
-                                <span class="idxFocusIcon" style="background-image:url(/copyright/MODA/pu33wclx.1li.svg);"></span>
-                                <span class="idxFocusTxt">多元創新</span>
+                                <div class="txtWrap">
+                                    <span class="idxFocusIcon lazy" data-bg="/copyright/MODA/pu33wclx.1li.svg"></span>
+                                    <span class="idxFocusTxt">多元創新</span>
+                                </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-6 col-md-3 idxFocusTI1">
-                        <a href="/digitalaffairs/democracynetworks/360.html" style="background-image: url(/copyright/MODA/bstxs1hk.00z.jpg);" target='_self' title='民主網路'>
+                        <a href="/digitalaffairs/democracynetworks/360.html" class="lazy" data-bg="/copyright/MODA/bstxs1hk.00z.jpg" target='' title='民主網路'>
                             <div class="txt">
-                                <span class="idxFocusIcon" style="background-image:url(/copyright/MODA/fooy5z1e.lgv.svg);"></span>
-                                <span class="idxFocusTxt">民主網路</span>
+                                <div class="txtWrap">
+                                    <span class="idxFocusIcon lazy" data-bg="/copyright/MODA/fooy5z1e.lgv.svg"></span>
+                                    <span class="idxFocusTxt">民主網路</span>
+                                </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-6 col-md-3 idxFocusTI1">
-                        <a href="/digital-affairs/communications-cyber-resilience/358.html" style="background-image: url(/copyright/MODA/k4bc2lp3.ezg.jpg);" target='_self' title='韌性建設'>
+                        <a href="/digital-affairs/communications-cyber-resilience/358.html" class="lazy" data-bg="/copyright/MODA/k4bc2lp3.ezg.jpg" target='_self' title='韌性建設'>
                             <div class="txt">
-                                <span class="idxFocusIcon" style="background-image:url(/copyright/MODA/zyujjphz.3v4.svg);"></span>
-                                <span class="idxFocusTxt">韌性建設</span>
+                                <div class="txtWrap">
+                                    <span class="idxFocusIcon lazy" data-bg="/copyright/MODA/zyujjphz.3v4.svg"></span>
+                                    <span class="idxFocusTxt">韌性建設</span>
+                                </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-12 col-md-6 idxFocusTI2">
-                        <a href="/ACS/index.html" style="background-image: url(/copyright/MODA/xryk4b50.vrn.jpg);" target='_blank' rel='noreferrer noopener' title='資通安全(另開新視窗)'>
+                        <a href="/ACS/index.html" class="lazy" data-bg="/copyright/MODA/xryk4b50.vrn.jpg" target='_blank' rel='noreferrer noopener' title='資通安全(另開新視窗)'>
                             <div class="txt">
-                                <span class="idxFocusIcon" style="background-image:url(/copyright/MODA/3j55ca4m.utg.svg);"></span>
-                                <span class="idxFocusTxt">資通安全</span>
+                                <div class="txtWrap">
+                                    <span class="idxFocusIcon lazy" data-bg="/copyright/MODA/3j55ca4m.utg.svg"></span>
+                                    <span class="idxFocusTxt">資通安全</span>
+                                </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-12 col-md-6 idxFocusTI2">
-                        <a href="/ADI/index.html" style="background-image: url(/copyright/MODA/nbn3mgha.sk5.jpg);" target='_blank' rel='noreferrer noopener' title='產業發展(另開新視窗)'>
+                        <a href="/ADI/index.html" class="lazy" data-bg="/copyright/MODA/nbn3mgha.sk5.jpg" target='_blank' rel='noreferrer noopener' title='產業發展(另開新視窗)'>
                             <div class="txt">
-                                <span class="idxFocusIcon" style="background-image:url(/copyright/MODA/danmi2yb.2ce.svg);"></span>
-                                <span class="idxFocusTxt">產業發展</span>
+                                <div class="txtWrap">
+                                    <span class="idxFocusIcon lazy" data-bg="/copyright/MODA/danmi2yb.2ce.svg"></span>
+                                    <span class="idxFocusTxt">產業發展</span>
+                                </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-6 col-md-3 idxFocusTI1">
-                        <a href="/digital-affairs/resource-management/356.html" style="background-image: url(/copyright/MODA/vczmtwqi.dc3.jpg);" target='_self' title='資源管理'>
+                        <a href="/digital-affairs/resource-management/356.html" class="lazy" data-bg="/copyright/MODA/vczmtwqi.dc3.jpg" target='_self' title='資源管理'>
                             <div class="txt">
-                                <span class="idxFocusIcon" style="background-image:url(/copyright/MODA/zefknbzh.fem.svg);"></span>
-                                <span class="idxFocusTxt">資源管理</span>
+                                <div class="txtWrap">
+                                    <span class="idxFocusIcon lazy" data-bg="/copyright/MODA/zefknbzh.fem.svg"></span>
+                                    <span class="idxFocusTxt">資源管理</span>
+                                </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-6 col-md-3 idxFocusTI1">
-                        <a href="/digital-affairs/digital-strategies/350.html" style="background-image: url(/copyright/MODA/3qtjrgmk.qab.jpg);" target='_self' title='數位策略'>
+                        <a href="/digital-affairs/digital-strategies/350.html" class="lazy" data-bg="/copyright/MODA/3qtjrgmk.qab.jpg" target='_self' title='數位策略'>
                             <div class="txt">
-                                <span class="idxFocusIcon" style="background-image:url(/copyright/MODA/wsvuzgbn.2vj.svg);"></span>
-                                <span class="idxFocusTxt">數位策略</span>
+                                <div class="txtWrap">
+                                    <span class="idxFocusIcon lazy" data-bg="/copyright/MODA/wsvuzgbn.2vj.svg"></span>
+                                    <span class="idxFocusTxt">數位策略</span>
+                                </div>
                             </div>
                         </a>
                     </div>
@@ -538,7 +569,7 @@
                     <div class="swiper-wrapper h-auto">
                                 <div class="swiper-slide h-auto">
                                     <a href="/focus-topics/1357.html" class="card h-100 rounded-4 shadow-md border-start-0 border-end-0 border-bottom-0 text-decoration-none" target='' title='政府網站體驗感受提升'>
-                                        <span class="idxIssueIcon" style="background-image:url(/copyright/MODA/gnlue2pj.squ.svg)"></span>
+                                        <span class="idxIssueIcon lazy" data-bg="/copyright/MODA/gnlue2pj.squ.svg"></span>
                                         <div class="card-body">
                                             <div class="card-title">政府網站體驗感受提升</div>
                                             <div class="card-text fw-lighter">隨著科技與資訊化進步的程度，電子化政府一直是我國長期推動的政策，而政府網站相當於政府為民服務的虛擬門市，隨著家戶電腦擁有率、上網普及率的提升及上網人數逐年增加，政府網站服務需求亦呈現逐年增加的趨勢。</div>
@@ -547,7 +578,7 @@
                                 </div>
                                 <div class="swiper-slide h-auto">
                                     <a href="/focus-topics/1361.html" class="card h-100 rounded-4 shadow-md border-start-0 border-end-0 border-bottom-0 text-decoration-none" target='' title='政府資料開放平臺'>
-                                        <span class="idxIssueIcon" style="background-image:url(/copyright/MODA/dmogd5cl.lna.svg)"></span>
+                                        <span class="idxIssueIcon lazy" data-bg="/copyright/MODA/dmogd5cl.lna.svg"></span>
                                         <div class="card-body">
                                             <div class="card-title">政府資料開放平臺</div>
                                             <div class="card-text fw-lighter">政府施政透明、提升民眾參與公共政策議題是世界各國政府推動的趨勢，經由政府資料的開放，可促使跨機關資料流通，提升施政效能，滿足民眾需求，以強化民眾監督政府的力量。</div>
@@ -556,7 +587,7 @@
                                 </div>
                                 <div class="swiper-slide h-auto">
                                     <a href="/focus-topics/1363.html" class="card h-100 rounded-4 shadow-md border-start-0 border-end-0 border-bottom-0 text-decoration-none" target='' title='政府資料標準'>
-                                        <span class="idxIssueIcon" style="background-image:url(/copyright/MODA/t2cvgb03.yso.svg)"></span>
+                                        <span class="idxIssueIcon lazy" data-bg="/copyright/MODA/t2cvgb03.yso.svg"></span>
                                         <div class="card-body">
                                             <div class="card-title">政府資料標準</div>
                                             <div class="card-text fw-lighter">資料標準為資料流通交換之基礎，推動政府資料標準主要是為了促進跨域資料的交換及整合，讓資料蒐集者在資料產生源頭，就依照一定的屬性及格式來蒐集資料，也讓資料使用者容易理解資料意涵，並作後續的資料分析及應用。</div>
@@ -565,7 +596,7 @@
                                 </div>
                                 <div class="swiper-slide h-auto">
                                     <a href="/focus-topics/1365.html" class="card h-100 rounded-4 shadow-md border-start-0 border-end-0 border-bottom-0 text-decoration-none" target='' title='個人化資料自主運用 （MyData）'>
-                                        <span class="idxIssueIcon" style="background-image:url(/copyright/MODA/ujknnron.dpu.svg)"></span>
+                                        <span class="idxIssueIcon lazy" data-bg="/copyright/MODA/ujknnron.dpu.svg"></span>
                                         <div class="card-body">
                                             <div class="card-title">個人化資料自主運用 （MyData）</div>
                                             <div class="card-text fw-lighter">為推動個人資料自主運用，讓民眾可自行下載運用個人化資料或單次即時同意傳輸給第三方運用，「個人化資料自主運用（MyData）平臺」，在個資安全與隱私保護下，平臺提供民眾多元化個人資料下載及線上介接服務，讓保存在政府機關內的資料，回歸民眾合理運用。</div>
@@ -632,7 +663,7 @@
                                             <div class="swiper-slide h-auto">
                                                 <a href="#" class="card h-100 d-block rounded-4 border-0" target='_self' title='數位民主基礎環境建構'>
                                                     <div class="pic position-relative overflow-hidden rounded-4">
-                                                        <img src="/copyright/MODA/vqedgs3h.fva.jpg" alt="">
+                                                        <img class="lazy" data-src="/copyright/MODA/vqedgs3h.fva.jpg" alt="">
                                                     </div>
                                                     <div class="card-body shadow-md position-absolute start-0 end-0 bottom-0 mx-auto shadow-md">
                                                         <span class="badge1 fw-lighter"><i class="bi bi-tag align-middle me-1 fs-5"></i>公民</span>
@@ -643,7 +674,7 @@
                                             <div class="swiper-slide h-auto">
                                                 <a href="#" class="card h-100 d-block rounded-4 border-0" target='_self' title='政府私有雲整合'>
                                                     <div class="pic position-relative overflow-hidden rounded-4">
-                                                        <img src="/copyright/MODA/bl4qcymy.asd.jpg" alt="">
+                                                        <img class="lazy" data-src="/copyright/MODA/bl4qcymy.asd.jpg" alt="">
                                                     </div>
                                                     <div class="card-body shadow-md position-absolute start-0 end-0 bottom-0 mx-auto shadow-md">
                                                         <span class="badge1 fw-lighter"><i class="bi bi-tag align-middle me-1 fs-5"></i>政府</span>
@@ -654,7 +685,7 @@
                                             <div class="swiper-slide h-auto">
                                                 <a href="#" class="card h-100 d-block rounded-4 border-0" target='_self' title='6G產業發展'>
                                                     <div class="pic position-relative overflow-hidden rounded-4">
-                                                        <img src="/copyright/MODA/nvbaosar.s4a.jpg" alt="">
+                                                        <img class="lazy" data-src="/copyright/MODA/nvbaosar.s4a.jpg" alt="">
                                                     </div>
                                                     <div class="card-body shadow-md position-absolute start-0 end-0 bottom-0 mx-auto shadow-md">
                                                         <span class="badge1 fw-lighter"><i class="bi bi-tag align-middle me-1 fs-5"></i>產業</span>
@@ -665,7 +696,7 @@
                                             <div class="swiper-slide h-auto">
                                                 <a href="#" class="card h-100 d-block rounded-4 border-0" target='_self' title='資安教育訓練'>
                                                     <div class="pic position-relative overflow-hidden rounded-4">
-                                                        <img src="/copyright/MODA/mbto02mn.nfw.jpg" alt="">
+                                                        <img class="lazy" data-src="/copyright/MODA/mbto02mn.nfw.jpg" alt="">
                                                     </div>
                                                     <div class="card-body shadow-md position-absolute start-0 end-0 bottom-0 mx-auto shadow-md">
                                                         <span class="badge1 fw-lighter"><i class="bi bi-tag align-middle me-1 fs-5"></i>資安</span>
@@ -689,7 +720,7 @@
                                             <div class="swiper-slide h-auto">
                                                 <a href="#" class="card h-100 d-block rounded-4 border-0" target='_self' title='數位民主基礎環境建構'>
                                                     <div class="pic position-relative overflow-hidden rounded-4">
-                                                        <img src="/copyright/MODA/vqedgs3h.fva.jpg" alt="">
+                                                        <img class="lazy" data-src="/copyright/MODA/vqedgs3h.fva.jpg" alt="">
                                                     </div>
                                                     <div class="card-body shadow-md position-absolute start-0 end-0 bottom-0 mx-auto shadow-md">
                                                         <span class="badge1 fw-lighter"><i class="bi bi-tag align-middle me-1 fs-5"></i>公民</span>
@@ -700,7 +731,7 @@
                                             <div class="swiper-slide h-auto">
                                                 <a href="#" class="card h-100 d-block rounded-4 border-0" target='_self' title='政府私有雲整合'>
                                                     <div class="pic position-relative overflow-hidden rounded-4">
-                                                        <img src="/copyright/MODA/bl4qcymy.asd.jpg" alt="">
+                                                        <img class="lazy" data-src="/copyright/MODA/bl4qcymy.asd.jpg" alt="">
                                                     </div>
                                                     <div class="card-body shadow-md position-absolute start-0 end-0 bottom-0 mx-auto shadow-md">
                                                         <span class="badge1 fw-lighter"><i class="bi bi-tag align-middle me-1 fs-5"></i>政府</span>
@@ -711,7 +742,7 @@
                                             <div class="swiper-slide h-auto">
                                                 <a href="#" class="card h-100 d-block rounded-4 border-0" target='_self' title='6G產業發展'>
                                                     <div class="pic position-relative overflow-hidden rounded-4">
-                                                        <img src="/copyright/MODA/nvbaosar.s4a.jpg" alt="">
+                                                        <img class="lazy" data-src="/copyright/MODA/nvbaosar.s4a.jpg" alt="">
                                                     </div>
                                                     <div class="card-body shadow-md position-absolute start-0 end-0 bottom-0 mx-auto shadow-md">
                                                         <span class="badge1 fw-lighter"><i class="bi bi-tag align-middle me-1 fs-5"></i>產業</span>
@@ -722,7 +753,7 @@
                                             <div class="swiper-slide h-auto">
                                                 <a href="#" class="card h-100 d-block rounded-4 border-0" target='_self' title='資安教育訓練'>
                                                     <div class="pic position-relative overflow-hidden rounded-4">
-                                                        <img src="/copyright/MODA/mbto02mn.nfw.jpg" alt="">
+                                                        <img class="lazy" data-src="/copyright/MODA/mbto02mn.nfw.jpg" alt="">
                                                     </div>
                                                     <div class="card-body shadow-md position-absolute start-0 end-0 bottom-0 mx-auto shadow-md">
                                                         <span class="badge1 fw-lighter"><i class="bi bi-tag align-middle me-1 fs-5"></i>資安</span>
@@ -744,7 +775,7 @@
                                                 <div class="swiper-slide h-auto">
                                                     <a href="#" class="card h-100 d-block rounded-4 border-0" target='_self' title='數位民主基礎環境建構'>
                                                         <div class="pic position-relative overflow-hidden rounded-4">
-                                                            <img src="/copyright/MODA/vqedgs3h.fva.jpg" alt="">
+                                                            <img class="lazy" data-src="/copyright/MODA/vqedgs3h.fva.jpg" alt="">
                                                         </div>
                                                         <div class="card-body shadow-md position-absolute start-0 end-0 bottom-0 mx-auto shadow-md">
                                                             <span class="badge1 fw-lighter"><i class="bi bi-tag align-middle me-1 fs-5"></i>公民</span>
@@ -766,7 +797,7 @@
                                                 <div class="swiper-slide h-auto">
                                                     <a href="#" class="card h-100 d-block rounded-4 border-0" target='_self' title='政府私有雲整合'>
                                                         <div class="pic position-relative overflow-hidden rounded-4">
-                                                            <img src="/copyright/MODA/bl4qcymy.asd.jpg" alt="">
+                                                            <img class="lazy" data-src="/copyright/MODA/bl4qcymy.asd.jpg" alt="">
                                                         </div>
                                                         <div class="card-body shadow-md position-absolute start-0 end-0 bottom-0 mx-auto shadow-md">
                                                             <span class="badge1 fw-lighter"><i class="bi bi-tag align-middle me-1 fs-5"></i>政府</span>
@@ -788,7 +819,7 @@
                                                 <div class="swiper-slide h-auto">
                                                     <a href="#" class="card h-100 d-block rounded-4 border-0" target='_self' title='6G產業發展'>
                                                         <div class="pic position-relative overflow-hidden rounded-4">
-                                                            <img src="/copyright/MODA/nvbaosar.s4a.jpg" alt="">
+                                                            <img class="lazy" data-src="/copyright/MODA/nvbaosar.s4a.jpg" alt="">
                                                         </div>
                                                         <div class="card-body shadow-md position-absolute start-0 end-0 bottom-0 mx-auto shadow-md">
                                                             <span class="badge1 fw-lighter"><i class="bi bi-tag align-middle me-1 fs-5"></i>產業</span>
@@ -810,7 +841,7 @@
                                                 <div class="swiper-slide h-auto">
                                                     <a href="#" class="card h-100 d-block rounded-4 border-0" target='_self' title='資安教育訓練'>
                                                         <div class="pic position-relative overflow-hidden rounded-4">
-                                                            <img src="/copyright/MODA/mbto02mn.nfw.jpg" alt="">
+                                                            <img class="lazy" data-src="/copyright/MODA/mbto02mn.nfw.jpg" alt="">
                                                         </div>
                                                         <div class="card-body shadow-md position-absolute start-0 end-0 bottom-0 mx-auto shadow-md">
                                                             <span class="badge1 fw-lighter"><i class="bi bi-tag align-middle me-1 fs-5"></i>資安</span>
@@ -885,33 +916,33 @@
                 <div class="swiper idxList3Swiper idxList3SwiperJs">
                     <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <a class="d-block position-relative" href="https://www.google.com/" target='_blank' rel='noreferrer noopener' title='行政院(另開新視窗)'>
-                                        <div class="pic position-relative"><img src="/copyright/MODA/o1nccrfd.ypn.svg" alt=""></div>
-                                        <div class="pic picHv position-absolute start-0 top-0 w-100 h-100"><img src="/copyright/MODA/y4vhmlmv.if0.svg" alt=""></div>
+                                    <a class="d-block position-relative" href="https://www.ey.gov.tw/" target='_blank' rel='noreferrer noopener' title='行政院(另開新視窗)'>
+                                        <div class="pic position-relative"><img class="lazy" data-src="/copyright/MODA/o1nccrfd.ypn.svg" alt=""></div>
+                                        <div class="pic picHv position-absolute start-0 top-0 w-100 h-100"><img class="lazy" data-src="/copyright/MODA/y4vhmlmv.if0.svg" alt="&#x884C;&#x653F;&#x9662;"></div>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
                                     <a class="d-block position-relative" href="https://bost.ey.gov.tw/" target='_blank' rel='noreferrer noopener' title='BOST(另開新視窗)'>
-                                        <div class="pic position-relative"><img src="/copyright/MODA/fb4mpzdi.rmp.svg" alt=""></div>
-                                        <div class="pic picHv position-absolute start-0 top-0 w-100 h-100"><img src="/copyright/MODA/m1yawxxi.oir.svg" alt=""></div>
+                                        <div class="pic position-relative"><img class="lazy" data-src="/copyright/MODA/fb4mpzdi.rmp.svg" alt=""></div>
+                                        <div class="pic picHv position-absolute start-0 top-0 w-100 h-100"><img class="lazy" data-src="/copyright/MODA/m1yawxxi.oir.svg" alt="BOST"></div>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
                                     <a class="d-block position-relative" href="https://www.moeaidb.gov.tw/ctlr?PRO=idx2015" target='_blank' rel='noreferrer noopener' title='IDB(另開新視窗)'>
-                                        <div class="pic position-relative"><img src="/copyright/MODA/wvzhgakt.1k0.svg" alt=""></div>
-                                        <div class="pic picHv position-absolute start-0 top-0 w-100 h-100"><img src="/copyright/MODA/afr2fzhg.5zj.svg" alt=""></div>
+                                        <div class="pic position-relative"><img class="lazy" data-src="/copyright/MODA/wvzhgakt.1k0.svg" alt=""></div>
+                                        <div class="pic picHv position-absolute start-0 top-0 w-100 h-100"><img class="lazy" data-src="/copyright/MODA/afr2fzhg.5zj.svg" alt="IDB"></div>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
                                     <a class="d-block position-relative" href="https://www.ncc.gov.tw/chinese/index.aspx" target='_blank' rel='noreferrer noopener' title='NCC(另開新視窗)'>
-                                        <div class="pic position-relative"><img src="/copyright/MODA/sord45ob.fmh.svg" alt=""></div>
-                                        <div class="pic picHv position-absolute start-0 top-0 w-100 h-100"><img src="/copyright/MODA/appo0ut4.blk.svg" alt=""></div>
+                                        <div class="pic position-relative"><img class="lazy" data-src="/copyright/MODA/sord45ob.fmh.svg" alt=""></div>
+                                        <div class="pic picHv position-absolute start-0 top-0 w-100 h-100"><img class="lazy" data-src="/copyright/MODA/appo0ut4.blk.svg" alt="NCC"></div>
                                     </a>
                                 </div>
                                 <div class="swiper-slide">
                                     <a class="d-block position-relative" href="https://www.ndc.gov.tw/Default.aspx" target='_blank' rel='noreferrer noopener' title='NDC(另開新視窗)'>
-                                        <div class="pic position-relative"><img src="/copyright/MODA/l5bsfy0w.bqo.svg" alt=""></div>
-                                        <div class="pic picHv position-absolute start-0 top-0 w-100 h-100"><img src="/copyright/MODA/tx33d2i5.c24.svg" alt=""></div>
+                                        <div class="pic position-relative"><img class="lazy" data-src="/copyright/MODA/l5bsfy0w.bqo.svg" alt=""></div>
+                                        <div class="pic picHv position-absolute start-0 top-0 w-100 h-100"><img class="lazy" data-src="/copyright/MODA/tx33d2i5.c24.svg" alt="NDC"></div>
                                     </a>
                                 </div>
                     </div>
@@ -1161,7 +1192,7 @@
             <div class="row">
                 <div class="col-12 col-md">
                     <div class="ftBtmLogo mb-3">
-                        <a class="d-inline-block" href="index.html">
+                        <a class="d-inline-block" href="/index.html">
                             <!-- 淺色版面的logo -->
                             <img class="mw-100 lightShow" src="/copyright/MODA/jdhpjf44.flh.svg" width="340" height="56" alt="&#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;">
                             <!-- 深色版面的logo -->
@@ -1170,7 +1201,7 @@
                     </div>
                     <div class="ftBtmRights">
                         <p class="mb-3">Copyright &#xA9; 2022 Ministry of Digital Affairs. All rights reserved.</p>
-                        <p class="mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-07-22<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                        <p class="mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-08-02<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                     </div>
                 </div>
                 <div class="col-12 col-md text-md-end">
@@ -1208,13 +1239,14 @@
     <script src="/vendor/js/jquery-ui.min.js?v=EAH39nQqNEy6oFY3jCY7pbC_2wvhoAhdxH-VzLuEJO0"></script>
     <script src="/vendor/js/bootstrap.bundle.min.js?v=EgZm4B1nHbFyzs2Hqq7Vyw_rLaJNlxwpH-G44PZLGKw"></script>
     <script src="/vendor/js/bootstrap-submenu.js?v=1Y9RTzSmvcMZ_XlqjfXKjBZYLtmKI2R4Iz_p5siDh4g"></script>
-    <script src="/vendor/js/swiper-bundle.min.js?v=1N77Zqu5bNSNRbRZHP_6c2_snd3kZuFggjLSQrqajFU"></script>
+    <script src="/vendor/js/swiper-bundle.min.js?v=NJwLCx5WWkMLkRKMHvvMKBjX0xz1pZPkpqQmU3J9hiY"></script>
+    <script src="/vendor/js/lazyload.min.js?v=chZm2VfM5r7hxFu6TGArcJmYU-Y19fT-mg58IBVCtdU"></script>
     <script src="/vendor/js/aos.js?v=omKpPLcfsEA5uAU3eBb3KA0I8o4Ql7DW84u6Y8wHerY"></script>
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <!-- main -->
-            <script src="/assets/js/common.js?v=3zCHFiN-Q6y7gMXaflCdsPBECYpzQdBVWC6MPDAKFQk"></script>
-    <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=hyLoCZRyY6ijVg7CD9t2TAJnRMcuBlkfV4L_OO1sSf0"></script>
+            <script src="/assets/js/common.js?v=Lp_opFSYuzxC5peYI2r0gllo306OGBvsR7iT6pR_MPA"></script>
+    <script src="/js/axios.min.js?v=iSkNRnKsHORmMCNgQIxzyW0QzHrWeko_lyVjyI78G2c"></script>
+    <script src="/js/site.js?v=0qkLxdiTQwrkza2sPTYcyykc0dsJS6X91rQ844w2Lek"></script>
     <script>
         webSiteLange('zh-tw' ,'MODA'  );
 
@@ -1227,6 +1259,7 @@
 			$("#MainPlanTab").empty();
 			$("#SB" + sb + " > div").clone().appendTo("#MainPlanTab");
 			FECommon.widgetIdxList2Swiper();
+			wLazyLoad.update();//update lazyload
 		});
 	</script>
 

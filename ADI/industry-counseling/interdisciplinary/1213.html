@@ -20,21 +20,33 @@
     <!-- favicon -->
         <link rel="shortcut icon" type="image/png" href="/ADI/assets/img/favicon.ico">
     <link rel="apple-touch-icon" sizes="192x192" href="/assets/img/touch-icon.png">
-    <!-- PWA -->
+
+    <!-- (google font)connect to domain of font files -->
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<!-- (google font)optionally increase loading priority -->
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
 
     <!-- 套件css -->
-    <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=wrnjAnJ10SquvD31267b2eIzYihn7yCe1Ar5IQRbN6M" media="all" />
+    <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=RXGyvR-V1yq9EGRVcKhbcsfNsHQEl259cLsfbdOg6BY" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/ADI/assets/css/layout.css?v=Vy-NAtQViWxCh1WI2Jz7MAtmG9GdBpTbIkhvjq9gnfk" media="all" />
+            <link rel="stylesheet" href="/ADI/assets/css/layout.css?v=ktiYV2dEJjtAU11hfOc6E8PiRm99RmwS6Rkhyi_0o_w" media="all" />
 
-    <!-- ======單獨這頁用的css end -->
+    <!-- (google font)async CSS -->
+	<link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
+	<!-- (google font)no-JS fallback -->
+	<noscript>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
+	</noscript>
+
     
-<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-7THDT5WE9H"></script><script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-169LBQCZ1T"></script>
+<script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-7THDT5WE9H');
+  gtag('config', 'G-169LBQCZ1T');
 </script>
 </head>
 <body class="d-flex flex-column min-vh-100  ADI ">
@@ -174,7 +186,7 @@
                                     <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item" href="/ADI/news/latest-news/766.html">新聞發布</a></li>
                                                     <li><a class="dropdown-item" href="/ADI/news/announcements/860.html">訊息公告</a></li>
-                                                    <li><a class="dropdown-item" href="/ADI/news/events/772.html">活動報報</a></li>
+                                                    <li><a class="dropdown-item" href="/ADI/zh-tw/Level/772">活動報報</a></li>
                                                     <li><a class="dropdown-item" href="/ADI/news/media/864.html">影音專區</a></li>
                                     </ul>
                                 </li>
@@ -182,18 +194,18 @@
                                     <a class="nav-link dropdown-toggle" href="/ADI/services/760.html" data-bs-toggle="dropdown" data-submenu>業務服務</a>
                                     <ul class="dropdown-menu">
                                                     <li class="dropdown dropdown-submenu dropend">
-                                                        <a class="dropdown-item dropdown-toggle" href="/ADI/services/laws&regulations/790.html" data-toggle="dropdown">法令規章</a>
-                                                        <ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
-                                                                    <li><a class="dropdown-item" href="/ADI/services/laws&regulations/related-law-and-regulation-of-adi/886.html">本署主管法規</a></li>
-                                                                    <li><a class="dropdown-item" href="/ADI/services/laws&regulations/administrative regulations/908.html">行政規則</a></li>
-                                                        </ul>
+                                                        <a class="dropdown-item dropdown-toggle" href="/ADI/zh-tw/Level/790" data-toggle="dropdown">法令規章</a>
+                                                            <ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+                                                                        <li><a class="dropdown-item" href="/ADI/services/laws&regulations/related-law-and-regulation-of-adi/886.html">本署主管法規</a></li>
+                                                                        <li><a class="dropdown-item" href="/ADI/zh-tw/Level/908">行政規則</a></li>
+                                                            </ul>
                                                     </li>
                                                     <li class="dropdown dropdown-submenu dropend">
-                                                        <a class="dropdown-item dropdown-toggle" href="/ADI/services/apply-serivces/794.html" data-toggle="dropdown">申請服務</a>
-                                                        <ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
-                                                                    <li><a class="dropdown-item" href="/ADI/services/apply-serivces/regulations-for-industrial-innovation/888.html">產業創新條例</a></li>
-                                                                    <li><a class="dropdown-item" href="/ADI/services/apply-serivces/others/892.html">其他</a></li>
-                                                        </ul>
+                                                        <a class="dropdown-item dropdown-toggle" href="/ADI/zh-tw/Level/794" data-toggle="dropdown">申請服務</a>
+                                                            <ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+                                                                        <li><a class="dropdown-item" href="/ADI/services/apply-serivces/regulations-for-industrial-innovation/888.html">產業創新條例</a></li>
+                                                                        <li><a class="dropdown-item" href="/ADI/services/apply-serivces/others/892.html">其他</a></li>
+                                                            </ul>
                                                     </li>
                                     </ul>
                                 </li>
@@ -211,18 +223,18 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="/ADI/policies/762.html" data-bs-toggle="dropdown" data-submenu>政策計畫</a>
                                     <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="/ADI/policies/policies/796.html">重大政策</a></li>
+                                                    <li><a class="dropdown-item" href="/ADI/zh-tw/Level/796">重大政策</a></li>
                                                     <li><a class="dropdown-item" href="/ADI/policies/plans/852.html">施政計畫</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="/ADI/about-us/764.html" data-bs-toggle="dropdown" data-submenu>關於我們</a>
                                     <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="/ADI/about-us/introduction/800.html">本署簡介</a></li>
-                                                    <li><a class="dropdown-item" href="/ADI/about-us/functions/804.html">組織執掌</a></li>
+                                                    <li><a class="dropdown-item" href="/ADI/zh-tw/Level/800">本署簡介</a></li>
+                                                    <li><a class="dropdown-item" href="/ADI/zh-tw/Level/804">組織執掌</a></li>
                                                     <li><a class="dropdown-item" href="/ADI/about-us/director-general/854.html">認識署長</a></li>
                                                     <li><a class="dropdown-item" href="/ADI/about-us/visuals/858.html">標誌理念</a></li>
-                                                    <li><a class="dropdown-item" href="/ADI/about-us/contact/810.html">聯絡資訊</a></li>
+                                                    <li><a class="dropdown-item" href="/ADI/zh-tw/Level/810">聯絡資訊</a></li>
                                     </ul>
                                 </li>
                 </ul>
@@ -309,7 +321,7 @@
 											<a href="/ADI/news/announcements/860.html">訊息公告</a>
 										</li>
 										<li class="">
-											<a href="/ADI/news/events/772.html">活動報報</a>
+											<a href="/ADI/zh-tw/Level/772">活動報報</a>
 										</li>
 										<li class="">
 											<a href="/ADI/news/media/864.html">影音專區</a>
@@ -320,10 +332,10 @@
 						<a class="menuI" href="javascript:;"><span class="menuIFirst">業務服務</span></a>
 							<ul class="menuSub list-unstyled">
 										<li class="">
-											<a href="/ADI/services/laws&regulations/790.html">法令規章</a>
+											<a href="/ADI/zh-tw/Level/790">法令規章</a>
 										</li>
 										<li class="">
-											<a href="/ADI/services/apply-serivces/794.html">申請服務</a>
+											<a href="/ADI/zh-tw/Level/794">申請服務</a>
 										</li>
 							</ul>
 					</li>
@@ -354,7 +366,7 @@
 						<a class="menuI" href="javascript:;"><span class="menuIFirst">政策計畫</span></a>
 							<ul class="menuSub list-unstyled">
 										<li class="">
-											<a href="/ADI/policies/policies/796.html">重大政策</a>
+											<a href="/ADI/zh-tw/Level/796">重大政策</a>
 										</li>
 										<li class="">
 											<a href="/ADI/policies/plans/852.html">施政計畫</a>
@@ -365,10 +377,10 @@
 						<a class="menuI" href="javascript:;"><span class="menuIFirst">關於我們</span></a>
 							<ul class="menuSub list-unstyled">
 										<li class="">
-											<a href="/ADI/about-us/introduction/800.html">本署簡介</a>
+											<a href="/ADI/zh-tw/Level/800">本署簡介</a>
 										</li>
 										<li class="">
-											<a href="/ADI/about-us/functions/804.html">組織執掌</a>
+											<a href="/ADI/zh-tw/Level/804">組織執掌</a>
 										</li>
 										<li class="">
 											<a href="/ADI/about-us/director-general/854.html">認識署長</a>
@@ -377,7 +389,7 @@
 											<a href="/ADI/about-us/visuals/858.html">標誌理念</a>
 										</li>
 										<li class="">
-											<a href="/ADI/about-us/contact/810.html">聯絡資訊</a>
+											<a href="/ADI/zh-tw/Level/810">聯絡資訊</a>
 										</li>
 							</ul>
 					</li>
@@ -416,7 +428,7 @@
 
                 <!-- 標籤 -->
                 <div class="listTag3 mb-2 mb-md-3">
-                            <a class="btn" onclick="gooSearch('zh-tw','ADI','&#x8CC7;&#x5B89;&#x7522;&#x696D;' )" role="button">&#x8CC7;&#x5B89;&#x7522;&#x696D;</a>
+                            <a class="btn" href="javascript:;" role="button">&#x8CC7;&#x5B89;&#x7522;&#x696D;</a>
                 </div>
                 <!-- 文字編輯區 -->
                 <div class="article1 cpArticle">
@@ -451,9 +463,9 @@
                         </div>
                 <div class="articleInfo">
                     <div class="d-block d-md-inline-flex">
-                        <div class="infoUnit"><b>發布單位：</b>&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72;</div>
-                        <div class="infoDate"><b>發布日期：</b>2022-07-11 </div>
-                        <div class="infoTime"><b>更新日期：</b>2022-07-20</div>
+                        <div class="infoUnit"><b>&#x767C;&#x5E03;&#x55AE;&#x4F4D;&#xFF1A;</b>&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72;</div>
+                        <div class="infoDate"><b>&#x767C;&#x5E03;&#x65E5;&#x671F;&#xFF1A;</b>2022-07-11 </div>
+                        <div class="infoTime"><b>&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;</b>2022-07-20</div>
                     </div>
                 </div>
             </div>
@@ -496,7 +508,7 @@
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="/ADI/news/events/772.html" class="d-block text-white" title="&#x6D3B;&#x52D5;&#x5831;&#x5831;">
+                                                            <a href="/ADI/zh-tw/Level/772" class="d-block text-white" title="&#x6D3B;&#x52D5;&#x5831;&#x5831;">
                                                                 活動報報
                                                             </a>
                                                         </li>
@@ -519,12 +531,12 @@
                                         <div class="col">
                                             <ul class="list-unstyled flex-column">
                                                         <li>
-                                                            <a href="/ADI/services/laws&regulations/790.html" class="d-block text-white" title="&#x6CD5;&#x4EE4;&#x898F;&#x7AE0;">
+                                                            <a href="/ADI/zh-tw/Level/790" class="d-block text-white" title="&#x6CD5;&#x4EE4;&#x898F;&#x7AE0;">
                                                                 法令規章
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="/ADI/services/apply-serivces/794.html" class="d-block text-white" title="&#x7533;&#x8ACB;&#x670D;&#x52D9;">
+                                                            <a href="/ADI/zh-tw/Level/794" class="d-block text-white" title="&#x7533;&#x8ACB;&#x670D;&#x52D9;">
                                                                 申請服務
                                                             </a>
                                                         </li>
@@ -585,7 +597,7 @@
                                         <div class="col">
                                             <ul class="list-unstyled flex-column">
                                                         <li>
-                                                            <a href="/ADI/policies/policies/796.html" class="d-block text-white" title="&#x91CD;&#x5927;&#x653F;&#x7B56;">
+                                                            <a href="/ADI/zh-tw/Level/796" class="d-block text-white" title="&#x91CD;&#x5927;&#x653F;&#x7B56;">
                                                                 重大政策
                                                             </a>
                                                         </li>
@@ -608,12 +620,12 @@
                                         <div class="col">
                                             <ul class="list-unstyled flex-column">
                                                         <li>
-                                                            <a href="/ADI/about-us/introduction/800.html" class="d-block text-white" title="&#x672C;&#x7F72;&#x7C21;&#x4ECB;">
+                                                            <a href="/ADI/zh-tw/Level/800" class="d-block text-white" title="&#x672C;&#x7F72;&#x7C21;&#x4ECB;">
                                                                 本署簡介
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="/ADI/about-us/functions/804.html" class="d-block text-white" title="&#x7D44;&#x7E54;&#x57F7;&#x638C;">
+                                                            <a href="/ADI/zh-tw/Level/804" class="d-block text-white" title="&#x7D44;&#x7E54;&#x57F7;&#x638C;">
                                                                 組織執掌
                                                             </a>
                                                         </li>
@@ -628,7 +640,7 @@
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="/ADI/about-us/contact/810.html" class="d-block text-white" title="&#x806F;&#x7D61;&#x8CC7;&#x8A0A;">
+                                                            <a href="/ADI/zh-tw/Level/810" class="d-block text-white" title="&#x806F;&#x7D61;&#x8CC7;&#x8A0A;">
                                                                 聯絡資訊
                                                             </a>
                                                         </li>
@@ -654,7 +666,7 @@
             <div class="row">
                 <div class="col-12 col-md">
                     <div class="ftBtmLogo mb-3">
-                        <a class="d-inline-block" href="index.html">
+                        <a class="d-inline-block" href="/ADI/index.html">
                             <!-- 淺色版面的logo -->
                             <img class="mw-100 lightShow" src="/copyright/ADI/wnzhd5gr.bn4.svg" width="340" height="56" alt="&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72;">
                             <!-- 深色版面的logo -->
@@ -663,7 +675,7 @@
                     </div>
                     <div class="ftBtmRights">
                         <p class="mb-3">Copyright &#xA9; 2022 Ministry of Digital Affairs. All rights reserved.</p>
-                        <p class="mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-07-21<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                        <p class="mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-08-02<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                     </div>
                 </div>
                 <div class="col-12 col-md text-md-end">
@@ -691,13 +703,14 @@
     <script src="/vendor/js/jquery-ui.min.js?v=EAH39nQqNEy6oFY3jCY7pbC_2wvhoAhdxH-VzLuEJO0"></script>
     <script src="/vendor/js/bootstrap.bundle.min.js?v=EgZm4B1nHbFyzs2Hqq7Vyw_rLaJNlxwpH-G44PZLGKw"></script>
     <script src="/vendor/js/bootstrap-submenu.js?v=1Y9RTzSmvcMZ_XlqjfXKjBZYLtmKI2R4Iz_p5siDh4g"></script>
-    <script src="/vendor/js/swiper-bundle.min.js?v=1N77Zqu5bNSNRbRZHP_6c2_snd3kZuFggjLSQrqajFU"></script>
+    <script src="/vendor/js/swiper-bundle.min.js?v=NJwLCx5WWkMLkRKMHvvMKBjX0xz1pZPkpqQmU3J9hiY"></script>
+    <script src="/vendor/js/lazyload.min.js?v=chZm2VfM5r7hxFu6TGArcJmYU-Y19fT-mg58IBVCtdU"></script>
     <script src="/vendor/js/aos.js?v=omKpPLcfsEA5uAU3eBb3KA0I8o4Ql7DW84u6Y8wHerY"></script>
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <!-- main -->
-            <script src="/ADI/assets/js/common.js?v=yZaoW0r46RLg6mVut1wN7LEtG-9GIAGAtP8ef2-Z_wM"></script>
-    <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=hyLoCZRyY6ijVg7CD9t2TAJnRMcuBlkfV4L_OO1sSf0"></script>
+            <script src="/ADI/assets/js/common.js?v=BM0LXy27RHgviMs_P9DG44vL3B5ANX-ZAa80a_I3CaE"></script>
+    <script src="/js/axios.min.js?v=iSkNRnKsHORmMCNgQIxzyW0QzHrWeko_lyVjyI78G2c"></script>
+    <script src="/js/site.js?v=0qkLxdiTQwrkza2sPTYcyykc0dsJS6X91rQ844w2Lek"></script>
     <script>
         webSiteLange('zh-tw' ,'ADI'  );
 
