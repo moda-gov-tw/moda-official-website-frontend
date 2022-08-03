@@ -2,9 +2,7 @@
 function GetApiUrl() {
     return "https://web1-05.i-me-i.com";
 }
-function GetWebTestKey() {
-    return "web1-04";
-}
+
 
 $(document).on("click", "a", function () {
     if ($(this).find('span').length > 0) {
@@ -35,20 +33,16 @@ function gooSearch(lan, webSiteId, txt) {
     var _lan = lan == "zh-tw" ? "" : lan + "/";
     var _webSiteId = webSiteId == "MODA" ? "" : webSiteId + "/";
     var _txt = txt;
-   
-        location.href = "/".concat(_lan, _webSiteId, "home/", "search.html", "?q=", _txt);
+     location.href = "/".concat(_lan, _webSiteId, "home/", "search.html", "?q=", _txt);
     
 }
 function webSiteLange(lan, webSiteId) {
-    
         if (lan != null) {
             var lan = lan == "zh-tw" ? "" : "/" + lan;
             var webSiteId = webSiteId == "MODA" ? "" : "/" + webSiteId;
-            
             $(".header").load(lan + webSiteId + "/home/Header.html", function () { FECommon.headerNavSet(); });
             $(".footer").load(lan + webSiteId + "/home/Footer.html", function () { FECommon.footerFtNavStyle();});
         }
-    
 }
 
 //search
@@ -67,6 +61,7 @@ function NewList(sqn) {
             $("#Condition4").val() != "" || $("#Condition5").val() != "" || $("#Condition6").val() != "") {
             $(".searchSwitch").click();
         }
+       
         SearchObj(objJson);
     } else {
         Search(1);
@@ -75,6 +70,7 @@ function NewList(sqn) {
 
 
 function Search(p) {
+    
     var displaycount = 15;
     var key = $("#sqn").val();
     if ($("#perPageShow").length > 0) {
@@ -95,8 +91,8 @@ function Search(p) {
     SearchObj(obj);
 }
 
-
 function SearchObj(obj) {
+
     FECommon.basicLoadingOn();
     var msg = "";
     //檢核
@@ -125,26 +121,9 @@ function SearchObj(obj) {
         return;
     }
 
+    SearchAjax(obj);
     //靜態
-    $('.rightMain').empty();
-    $('.rightMain').html(SearchAjax(obj)).promise().done(function () {
-        if (obj != "") {
-            $("#QryDateS").val(obj.str);
-            $("#QryDateE").val(obj.end);
-            $("#QryKeyword").val(obj.txt);
-            $("#Condition4").val(obj.C4);
-            $("#Condition5").val(obj.C5);
-            $("#Condition6").val(obj.C6);
-            if ($("#QryDateS").val() != "" || $("#QryDateE").val() != "" || $("#QryKeyword").val() != "" ||
-                $("#Condition4").val() != "" || $("#Condition5").val() != "" || $("#Condition6").val() != "") {
-                $(".searchSwitch").click();
-            }
-        }
 
-        $('.datepicker1').datepicker();
-    });
-
-    FECommon.basicLoadingOff();
 }
 
 function SearchAjax(obj) {
@@ -171,16 +150,33 @@ function SearchAjax(obj) {
         data: JSON.stringify(data),
         success: function (res) {
             innerHtml = res;
+            $('.rightMain').empty();
+         
+            $('.rightMain').html(innerHtml).promise().done(function () {
+                if (obj != "") {
+                    $("#QryDateS").val(obj.str);
+                    $("#QryDateE").val(obj.end);
+                    $("#QryKeyword").val(obj.txt);
+                    $("#Condition4").val(obj.C4);
+                    $("#Condition5").val(obj.C5);
+                    $("#Condition6").val(obj.C6);
+                    if ($("#QryDateS").val() != "" || $("#QryDateE").val() != "" || $("#QryKeyword").val() != "" ||
+                        $("#Condition4").val() != "" || $("#Condition5").val() != "" || $("#Condition6").val() != "") {
+                        $(".searchSwitch").click();
+                    }
+                }
+                $('.datepicker1').datepicker();
+            });
+        }, complete: function (data) {
+            FECommon.basicLoadingOff();
         }
     });
-    return innerHtml;
+   // return innerHtml;
 }
 
 function LeftMenu(obj) {
-    if (window.location.hostname.indexOf("web1-04") > -1) {
-        $('.leftMenu').remove();
-        $(".twoColConWrap").prepend(LeftMenuAjax(obj));
-    }
+    LeftMenuAjax(obj);
+    
 }
 function LeftMenuAjax(obj) {
     var innerHtml = "";
@@ -193,9 +189,11 @@ function LeftMenuAjax(obj) {
         async: false,
         success: function (res) {
             innerHtml = res;
+            $('.leftMenu').remove();
+            $(".twoColConWrap").prepend(innerHtml);
         }
     });
-    return innerHtml;
+   // return innerHtml;
 }
 
 function htmlEncode(e) {
