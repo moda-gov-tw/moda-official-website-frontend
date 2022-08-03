@@ -26,32 +26,29 @@ function gooSearch(lan, webSiteId) {
     var _lan = lan == "zh-tw" ? "" : lan + "/";
     var _webSiteId = webSiteId == "MODA" ? "" : webSiteId + "/";
     var _txt = $(".searchAreaIpt").val();
-    if (window.location.hostname.indexOf("web1-04") > -1) {
+    
         lan = lan == "zh-tw" ? "" : lan + "/";
         location.href = "/".concat(_lan, _webSiteId, "home/", "search.html", "?q=", _txt);
-    } else {
-        location.href = "/".concat(webSiteId, "/", lan, "/", "home/", "search", "?q=", _txt);
-    }
+    
 }
 function gooSearch(lan, webSiteId, txt) {
     var _lan = lan == "zh-tw" ? "" : lan + "/";
     var _webSiteId = webSiteId == "MODA" ? "" : webSiteId + "/";
     var _txt = txt;
-    if (window.location.hostname.indexOf("web1-04") > -1) {
+   
         location.href = "/".concat(_lan, _webSiteId, "home/", "search.html", "?q=", _txt);
-    } else {
-        location.href = "/".concat(webSiteId, "/", lan, "/", "home/", "search", "?q=", _txt);
-    }
+    
 }
 function webSiteLange(lan, webSiteId) {
-    if (window.location.hostname.indexOf(GetWebTestKey()) > -1) {
+    
         if (lan != null) {
             var lan = lan == "zh-tw" ? "" : "/" + lan;
             var webSiteId = webSiteId == "MODA" ? "" : "/" + webSiteId;
+            
             $(".header").load(lan + webSiteId + "/home/Header.html", function () { FECommon.headerNavSet(); });
             $(".footer").load(lan + webSiteId + "/home/Footer.html", function () { FECommon.footerFtNavStyle();});
         }
-    }
+    
 }
 
 //search
