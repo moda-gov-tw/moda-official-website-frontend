@@ -20,14 +20,24 @@
     <!-- favicon -->
         <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.ico">
     <link rel="apple-touch-icon" sizes="192x192" href="/assets/img/touch-icon.png">
-    <!-- PWA -->
+
+    <!-- (google font)connect to domain of font files -->
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<!-- (google font)optionally increase loading priority -->
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
 
     <!-- 套件css -->
-    <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=zFl4ml_cnP0bO0tqgxMjqNU7qUzAKuoCFI9CIXTNyCo" media="all" />
+    <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=RXGyvR-V1yq9EGRVcKhbcsfNsHQEl259cLsfbdOg6BY" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/assets/css/layout.css?v=omq4MlB21JjAF9gMIyHcs77GmxvkvZqR12m7aUTfK2E" media="all" />
+            <link rel="stylesheet" href="/assets/css/layout.css?v=HXFXWtYijkXpL7WBhWsddDq4IPkCTGqITICnkHJYgwg" media="all" />
 
-    <!-- ======單獨這頁用的css end -->
+    <!-- (google font)async CSS -->
+	<link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
+	<!-- (google font)no-JS fallback -->
+	<noscript>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
+	</noscript>
+
     
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-C4DDNRQ0F6"></script>
@@ -173,7 +183,7 @@
                                     <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item" href="/en/digital-affairs/digital-strategies/350.html">Digital Strategies</a></li>
                                                     <li><a class="dropdown-item" href="/en/digital-affairs/communications-cyber-resilience/358.html">Communications and Cyber Resilience</a></li>
-                                                    <li><a class="dropdown-item" href="/en/digital-affairs/resource-management/356.html">Resource Management</a></li>
+                                                    <li><a class="dropdown-item" href="/MODA/en/Dept/356">Resource Management</a></li>
                                                     <li><a class="dropdown-item" href="/en/digital-affairs/digital-service/354.html">Digital Service</a></li>
                                                     <li><a class="dropdown-item" href="/en/digital-affairs/democracy-networks/360.html">Democracy Networks</a></li>
                                                     <li><a class="dropdown-item" href="/en/digital-affairs/plural-innovations/352.html">Plural Innovations</a></li>
@@ -274,7 +284,7 @@ Introduction to MODA					</li>
 											<a href="/en/digital-affairs/communications-cyber-resilience/358.html">Communications and Cyber Resilience</a>
 										</li>
 										<li class="">
-											<a href="/en/digital-affairs/resource-management/356.html">Resource Management</a>
+											<a href="/MODA/en/Dept/356">Resource Management</a>
 										</li>
 										<li class="">
 											<a href="/en/digital-affairs/digital-service/354.html">Digital Service</a>
@@ -323,7 +333,7 @@ Introduction to MODA					</li>
             <div class="rightMain">
 
                 <div class="a11yBrickBar1">
-                    <a href="#AC" id="AC" accesskey="C" class="a11yBrick position-absolute"	title="頁面中央內容區塊[快捷鍵Alt+C]">:::</a>
+                    <a href="#AC" id="AC" accesskey="C" class="a11yBrick position-absolute"	title="Alt &#x2B; C:Content Area">:::</a>
                 </div>
                 
                 <!-- 標題 -->
@@ -379,7 +389,7 @@ Introduction to MODA					</li>
                     <div class="d-block d-md-inline-flex">
                         <div class="infoUnit"><b>Data Source: </b>Ministry of Digital Affairs</div>
                         <div class="infoDate"><b>Publication date: </b>2022-07-21 </div>
-                        <div class="infoTime"><b>Update Date: </b>2022-07-27</div>
+                        <div class="infoTime"><b>Update Date: </b>2022-08-04</div>
                     </div>
                 </div>
             </div>
@@ -429,7 +439,7 @@ Introduction to MODA					</li>
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="/en/digital-affairs/resource-management/356.html" class="d-block text-white" title="Resource Management">
+                                                            <a href="/MODA/en/Dept/356" class="d-block text-white" title="Resource Management">
                                                                 Resource Management
                                                             </a>
                                                         </li>
@@ -542,7 +552,7 @@ Introduction to MODA					</li>
                     </div>
                     <div class="ftBtmRights">
                         <p class="mb-3">Copyright &#xA9; 2022 Ministry of Digital Affairs. All rights reserved.</p>
-                        <p class="mb-md-0">Update Date: 2022-07-29<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                        <p class="mb-md-0">Update Date: 2022-08-04<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                     </div>
                 </div>
                 <div class="col-12 col-md text-md-end">
@@ -576,9 +586,9 @@ Introduction to MODA					</li>
     <script src="/vendor/js/aos.js?v=omKpPLcfsEA5uAU3eBb3KA0I8o4Ql7DW84u6Y8wHerY"></script>
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <!-- main -->
-            <script src="/assets/js/common.js?v=C-algOvllSC_Nrq0p24O5-2Kd8feFbEiHkrjnGB6KNU"></script>
-    <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=OCIhX82GhRXOdkpMSOYTxCnZxFn9GU4STOIZaJ7g_a4"></script>
+            <script src="/assets/js/common.js?v=Lp_opFSYuzxC5peYI2r0gllo306OGBvsR7iT6pR_MPA"></script>
+    <script src="/js/axios.min.js?v=iSkNRnKsHORmMCNgQIxzyW0QzHrWeko_lyVjyI78G2c"></script>
+    <script src="/js/site.js?v=Ghi6q-mRhq_KYlChDwct-qwWriEFrqejm0bsqCn8h60"></script>
     <script>
         webSiteLange('en' ,'MODA'  );
 
