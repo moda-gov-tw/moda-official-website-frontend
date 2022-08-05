@@ -40,8 +40,15 @@ function webSiteLange(lan, webSiteId) {
         if (lan != null) {
             var lan = lan == "zh-tw" ? "" : "/" + lan;
             var webSiteId = webSiteId == "MODA" ? "" : "/" + webSiteId;
-            $(".header").load(lan + webSiteId + "/home/Header.html", function () { FECommon.headerNavSet(); });
-            $(".footer").load(lan + webSiteId + "/home/Footer.html", function () { FECommon.footerFtNavStyle();});
+            $("#divHeader").load(lan + webSiteId + "/home/Header.html", function () {
+                FECommon.headerNavSet();
+                FECommon.headerNavClose();
+                FECommon.headerSideNavSwitch();
+                
+            });
+            $(".footer").load(lan + webSiteId + "/home/Footer.html", function () {
+                FECommon.footerFtNavStyle();
+            });
         }
 }
 
