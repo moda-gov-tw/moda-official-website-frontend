@@ -1,0 +1,22 @@
+﻿<div class="row d-flex justify-content-center">
+    <div class="col">
+        <div class="accordion mb-5" id="qa1">
+            <div class="accordion-item">
+                <!-- 每項題目需套不同的id-->
+                <div class="accordion-header" id="#mainsn">
+                    <!--需套跟內容對應的data-bs-target、aria-controls -->
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#mainsn" aria-controls="#mainsn">
+                        <span>#newstitle</span>
+                    </button>
+                </div>
+                <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
+                <div id="#mainsn" class="accordion-collapse collapse" aria-labelledby="#mainsn" data-bs-parent="#qa1">
+                    <div class="accordion-body">
+                        <div class="article1">
+                            #contenttext
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div></div>

@@ -2,8 +2,9 @@
 function GetApiUrl() {
     return "https://web1-05.i-me-i.com";
 }
-
-
+function GetWebTestKey() {
+    return "web1-04";
+}
 $(document).on("click", "a", function () {
     if ($(this).find('span').length > 0) {
         if ($(this).find('span')[0].innerHTML.toUpperCase().indexOf("PDF") >= 0) {
@@ -11,7 +12,11 @@ $(document).on("click", "a", function () {
             return false;
         }
     }
-    else if (!($(this).attr('href').startsWith('/') || $(this).attr('href').startsWith(location.hostname) || $(this).attr('href').startsWith('#') || $(this).attr('href').startsWith('javascript:;')))
+    else if (!($(this).attr('href').startsWith('/') ||
+        $(this).attr('href').startsWith(location.herf) ||
+        $(this).attr('href').startsWith(GetApiUrl()) ||
+        $(this).attr('href').startsWith('#') ||
+        $(this).attr('href').startsWith('javascript:;')))
     {
         var flag = confirm("是否要連結至非本網站頁面？ \n Are you sure you want to visit this website? \n" + $(this).attr('href'));
         if (!flag) {
@@ -44,7 +49,7 @@ function webSiteLange(lan, webSiteId) {
                 FECommon.headerNavSet();
                 FECommon.headerNavClose();
                 FECommon.headerSideNavSwitch();
-                
+               
             });
             $(".footer").load(lan + webSiteId + "/home/Footer.html", function () {
                 FECommon.footerFtNavStyle();
@@ -53,6 +58,8 @@ function webSiteLange(lan, webSiteId) {
 }
 
 //search
+var _JsData;
+
 function NewList(sqn) {
     var obj = getCookie("SearchObj".concat(sqn));
     if (obj != "") {
@@ -74,8 +81,6 @@ function NewList(sqn) {
         Search(1);
     }
 }
-
-
 function Search(p) {
     
     var displaycount = 15;
@@ -97,9 +102,9 @@ function Search(p) {
     SetCookie("SearchObj".concat(key), obj);
     SearchObj(obj);
 }
-
+var chk = false;
 function SearchObj(obj) {
-
+    chk = false;
     FECommon.basicLoadingOn();
     var msg = "";
     //檢核
@@ -132,7 +137,6 @@ function SearchObj(obj) {
     //靜態
 
 }
-
 function SearchAjax(obj) {
     var innerHtml = "";
     var Url = GetApiUrl().concat("/WebsiteList/NewsList");
@@ -173,6 +177,8 @@ function SearchAjax(obj) {
                     }
                 }
                 $('.datepicker1').datepicker();
+                _JsData = JSON.parse($('#JsonData').val());
+                $('#JsonData').remove();
             });
         }, complete: function (data) {
             FECommon.basicLoadingOff();
@@ -180,7 +186,131 @@ function SearchAjax(obj) {
     });
    // return innerHtml;
 }
-
+//
+function NeedTag(e) {
+    var needAarray = ["OneTextList", "TwoTextList"];
+    if (needAarray.indexOf(e) > -1) { return true; } else { return false; }
+}
+function SearchJsonData(p) {
+    var S1 = $("#ns")[0].innerHTML;
+    var S2 = $("#ca")[0].innerHTML;
+    var displaycount = 15;
+    if ($("#perPageShow").length > 0) {
+        displaycount = $("#perPageShow").find(':selected').val();
+    }
+    var itemArray = [];
+    var itemCoint = _JsData.length;
+    var Page = p;
+    var PageCount = displaycount;
+    for (var i = 0; i < PageCount; i++) {
+        var _item = ((Page - 1) * PageCount) + i;
+        if (_item >= itemCoint) { }
+        else {
+            var JsData = _JsData[_item];
+            var _s1 = "";
+            var _tags = "";
+            _s1 = NewListReJson(S1, JsData);
+            if (_needtag) {
+                _s1 = _s1.replace("</div></li>", "").replace("</div></div>", "");
+                if (JsData.tags.length > 0) {
+                    $.each(JsData.tags, function (j, jitem) {
+                        var _s2 = "";
+                        _s2 = NewListReJson(S2, JsData.tags[j]);
+                        _tags += _s2;
+                    });
+                }
+                var _end = '' == "OneTextList" ? "</div></li>" : "</div></div>";
+                itemArray.push("".concat(_s1, _tags, _end));
+            } else {
+                itemArray.push("".concat(_s1));
+            }
+        }
+    }
+    $("#ListTable").html(itemArray);
+    JsPagination(p);
+}
+function NewListReJson(str, obj) {
+    $.each(Object.keys(obj), function (i, item) {
+        str = str.replace(new RegExp("#".concat(item), 'g'), obj[item] == null ? "" : obj[item]);
+    });
+    return str;
+}
+function JsPagination(p) {
+    var itemCoint = _JsData.length;
+    var displaycount = 15;
+    if ($("#perPageShow").length > 0) {
+        displaycount = $("#perPageShow").find(':selected').val();
+    }
+    var TotlePage = Math.ceil(itemCoint / displaycount);
+    ReLoadPagination(p, TotlePage);
+    $(".totalPage").html(TotlePage);
+    $(".pageNum").html(p);
+}
+function ReLoadPagination(p, pageCount) {
+    var lang = $(".webSitelanguage").attr("lang");
+    var pendingcount = parseInt(5 / 2);
+    var pageIndex = parseInt(p - 1);
+    var start = 0;
+    var end = 0;
+    start = pageIndex - pendingcount < 0 ? 0 : pageIndex - pendingcount;
+    end = (pageIndex + pendingcount) > (pageCount - 1) ? ( pendingcount - 1) :( pageIndex + pendingcount);
+    if (pageIndex + pendingcount > pageCount - 1) {
+        start -= (pageIndex + pendingcount) - (pageCount - 1);
+        start = start < 0 ? 0 : start;
+    }
+    if (pageIndex - pendingcount < 0) {
+        end += 0 - (pageIndex - pendingcount);
+        end = end > pageCount - 1 ? pageCount - 1 : end;
+    }
+    var itemArray = [];
+    if (pageIndex != 0) {
+        var firstPageTxt = "First";
+        if (lang != "en") {
+            firstPageTxt = "第一頁";
+        }
+        itemArray.push("<a class='page_a firstP' onclick='SearchJsonData(1)' href='javascript:; ' data-page='1'>" + firstPageTxt+"</a>");
+    }
+    if (pageIndex <= parseInt(5/2)){}
+    else
+    {
+        itemArray.push("<a class='page_a' onclick='SearchJsonData(1)' href='javascript:; ' data-page='1'>1</a>");
+        itemArray.push("<span>..</span>");
+    }
+    for (var i = start; i <= end; i++)
+    {
+        if (pageIndex == i) {
+            itemArray.push("<a class='page_a on' onclick='SearchJsonData(" + (i + 1) + ") ' href='javascript:; ' data-page='" + (i + 1) + "'>" + (i + 1) +"</a>");
+        }
+        else {
+            itemArray.push("<a class='page_a' onclick='SearchJsonData(" + (i + 1) + ") ' href='javascript:; ' data-page='" + (i + 1) + "'>" + (i + 1) + "</a>");
+        }
+    }
+    if (pageIndex >= (pageCount - 1 - parseInt(5/2) )  )
+    {
+    }else{
+        itemArray.push("<span>..</span>");
+        itemArray.push("<a class='page_a' onclick='SearchJsonData('" + pageCount + "')' href='javascript:; ' data-page='" + pageCount + "'>");
+        itemArray.push(pageCount);
+        itemArray.push("</a>");
+    }
+    //NextPage
+    if (pageIndex >= (pageCount - 1)) { }
+    else {
+        var lastText = "Last";
+        if (lang != "en") {
+            lastText = "最後一頁";
+        }
+        itemArray.push("<a class='page_a lastP' onclick='SearchJsonData('" + pageCount + "')' href='javascript:; ' data-page='" + pageCount + "'>" + lastText + "</a>");
+    }
+    console.log(itemArray);
+    $(".pageNav").html("");
+    var ss = "";
+    $.each(itemArray, function (i, item) {
+        ss += item;
+    });
+    $(".pageNav").html(ss);
+}
+//
 function LeftMenu(obj) {
     LeftMenuAjax(obj);
     
