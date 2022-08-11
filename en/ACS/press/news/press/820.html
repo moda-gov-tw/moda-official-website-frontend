@@ -186,6 +186,10 @@
                                                     <li><a class="dropdown-item" href="/en/ACS/laws/certificates/676.html">List of Cyber Security Certificates</a></li>
                                                     <li class="dropdown dropdown-submenu dropend">
                                                         <a class="dropdown-item dropdown-toggle" href="/en/ACS/laws/guide/902.html" data-toggle="dropdown">guidelines</a>
+                                                            <ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+                                                                        <li><a class="dropdown-item" href="/en/ACS/laws/guide/rules-guidelines/904.html">Relevant Rules and Guidelines</a></li>
+                                                                        <li><a class="dropdown-item" href="/en/ACS/laws/guide/not-applicable/906.html">Obsolete Guidelines</a></li>
+                                                            </ul>
                                                     </li>
                                                     <li><a class="dropdown-item" href="/en/ACS/laws/documents/680.html">Document Templates</a></li>
                                     </ul>
@@ -420,7 +424,36 @@ Press Releases					</li>
                 </div>
 
                 <!-- 列表 -->
-                        <div id="ListTable" class="text-center txt1 py-5">No results !!</div>
+                                <ul class="list4-2 list-group divider mb-5" id="ListTable">
+                                        <li class="list-group-item d-block bg-transparent px-0">
+                                            <a href="/en/ACS/press/news/press/1669.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='Test'>
+                                                <div class="listDate ms-md-3 order-md-2">2022-08-10</div>
+                                                <div class="col mb-0">
+                                                    <b class="title5 fw-normal">
+                                                        Test
+                                                    </b>
+                                                </div>
+                                            </a>
+                                        </li>
+                                </ul>
+                        <div class="pageBar mb-5 ">
+    <div class="pageSet mb-4">
+                    <div class="mRow">page<span class="pageNum">1</span>of<span class="totalPage">1</span>, total items<span class="totalData">1</span>, </div>
+                    <div class="mRow">
+                        <select class="sel2 rounded-4" id="perPageShow" title="items per page">
+                            <option value=15 selected>15</option><option value=30 >30</option><option value=45 >45</option><option value=60 >60</option><option value=75 >75</option>;
+                        </select>
+                        <label for="perPageShow">items per page</label>
+                    </div>
+                    <div class="mRow">
+                        <a href="javascript:;" class="btn btn3 rounded-4" onclick="SearchJsonData(1)" role="button">GO</a>
+                    </div>
+    </div>
+    <div class="pageNav">
+                    <a class="page_a on" onclick="SearchJsonData(1)" href="javascript:;" data-page="1">1</a>
+    </div>
+</div>
+
                 <!--Footer-->
                 <div class="article1 mb-4">
                     
@@ -667,13 +700,13 @@ Press Releases					</li>
                 <div class="ftBtmLogo mb-3">
                     <a class="d-inline-block" href="/en/ACS/index.html">
                         <!-- 淺色版面的logo -->
-                        <img class="mw-100 lightShow" src="/copyright/ACS/u43fua1r.bxo.svg" width="340" height="56" alt="Administration for Cyber Security">
+                        <img class="mw-100 lightShow" src="/copyright/ACS/vvfp5hqx.5zh.svg" width="340" height="56" alt="Administration for Cyber Security">
                         <!-- 深色版面的logo -->
                         <!-- <img class="mw-100 darkShow" src="~/assets/img/logo_moda-dark2.svg" width="340" height="56" alt="數位發展部"> -->
                     </a>
                 </div>
                 <div class="ftBtmRights">
-                    <p class="mb-2 mb-md-3">CC0 No copyright reserved.</p>
+                    <p class="mb-2 mb-md-3"><a href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="CC0(New Page)">CC0</a> No copyright reserved.</p>
 
                     <p class="mb-2 mb-md-0">Update Date :2022-08-10<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
@@ -730,7 +763,7 @@ Press Releases					</li>
     var S1 ;
     var S2 ;
     var _needtag = NeedTag('OneTextList');
-    _JsData = JSON.parse('[]');
+    _JsData = JSON.parse('[{"mainsn":"1669","istopdisplay":"none","href":"/en/ACS/press/news/press/1669.html","target":null,"title":"Test","startdate":"2022-08-10","newstitle":"Test","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"}]');
     LeftMenu('821');
     NewList('820');
     var ListPage = '/_news/OneTextList.html';
