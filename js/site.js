@@ -2,9 +2,6 @@
 function GetApiUrl() {
     return "https://web1-05.i-me-i.com";
 }
-function GetWebTestKey() {
-    return "web1-04";
-}
 $(document).on("click", "a", function () {
     if ($(this).find('span').length > 0) {
         if ($(this).find('span')[0].innerHTML.toUpperCase().indexOf("PDF") >= 0) {
@@ -12,11 +9,7 @@ $(document).on("click", "a", function () {
             return false;
         }
     }
-    else if (!($(this).attr('href').startsWith('/') ||
-        $(this).attr('href').startsWith(location.herf) ||
-        $(this).attr('href').startsWith(GetApiUrl()) ||
-        $(this).attr('href').startsWith('#') ||
-        $(this).attr('href').startsWith('javascript:;')))
+    else if (!LocalUrl($(this).attr('href'), location.href))
     {
         var flag = confirm("是否要連結至非本網站頁面？ \n Are you sure you want to visit this website? \n" + $(this).attr('href'));
         if (!flag) {
@@ -39,7 +32,6 @@ function gooSearch(lan, webSiteId, txt) {
     var _webSiteId = webSiteId == "MODA" ? "" : webSiteId + "/";
     var _txt = txt;
      location.href = "/".concat(_lan, _webSiteId, "home/", "search.html", "?q=", _txt);
-    
 }
 function webSiteLange(lan, webSiteId) {
         if (lan != null) {
@@ -61,9 +53,9 @@ function webSiteLange(lan, webSiteId) {
 var _JsData;
 
 function NewList(sqn) {
-    var obj = getCookie("SearchObj".concat(sqn));
+    var obj = getCookie("SearchObjN");
     if (obj != "") {
-        RemoveCookie("SearchObj".concat(sqn));
+        RemoveCookie("SearchObjN");
         var objJson = JSON.parse(obj);
         $("#QryDateS").val(objJson.str);
         $("#QryDateE").val(objJson.end);
@@ -99,7 +91,7 @@ function Search(p) {
         displaycount: displaycount,
         p: p
     };
-    SetCookie("SearchObj".concat(key), obj);
+    SetCookie("SearchObjN", obj);
     SearchObj(obj);
 }
 var chk = false;
@@ -184,10 +176,11 @@ function SearchAjax(obj) {
             FECommon.basicLoadingOff();
         }
     });
-   // return innerHtml;
 }
 //
+var listType = "";
 function NeedTag(e) {
+    listType = e;
     var needAarray = ["OneTextList", "TwoTextList"];
     if (needAarray.indexOf(e) > -1) { return true; } else { return false; }
 }
@@ -211,7 +204,6 @@ function SearchJsonData(p) {
             var _tags = "";
             _s1 = NewListReJson(S1, JsData);
             if (_needtag) {
-                _s1 = _s1.replace("</div></li>", "").replace("</div></div>", "");
                 if (JsData.tags.length > 0) {
                     $.each(JsData.tags, function (j, jitem) {
                         var _s2 = "";
@@ -219,14 +211,24 @@ function SearchJsonData(p) {
                         _tags += _s2;
                     });
                 }
-                var _end = '' == "OneTextList" ? "</div></li>" : "</div></div>";
-                itemArray.push("".concat(_s1, _tags, _end));
+                _s1 = _s1.replace('#areatags', _tags);
+                itemArray.push("".concat(_s1));
             } else {
                 itemArray.push("".concat(_s1));
             }
         }
     }
-    $("#ListTable").html(itemArray);
+    var itemHtml = "";
+    if (listType == "AccordionList") {
+        itemHtml = "<div class='row d-flex justify-content-center'><div class='col'><div class='accordion mb-5' id='qa1'>";
+    }
+    $.each(itemArray, function (i, item) {
+        itemHtml += item;
+    });
+    if (listType == "AccordionList") {
+        itemHtml += "</div></div></div>";
+    }
+    $("#ListTable").html(itemHtml);
     JsPagination(p);
 }
 function NewListReJson(str, obj) {
@@ -302,7 +304,6 @@ function ReLoadPagination(p, pageCount) {
         }
         itemArray.push("<a class='page_a lastP' onclick='SearchJsonData('" + pageCount + "')' href='javascript:; ' data-page='" + pageCount + "'>" + lastText + "</a>");
     }
-    console.log(itemArray);
     $(".pageNav").html("");
     var ss = "";
     $.each(itemArray, function (i, item) {
@@ -332,7 +333,6 @@ function LeftMenuAjax(obj) {
     });
    // return innerHtml;
 }
-
 function htmlEncode(e) {
     var ele = document.createElement('span');
     ele.appendChild(document.createTextNode(e.val()));
@@ -384,4 +384,16 @@ function dateIsValid(dateStr) {
     }
 
     return true;
+}
+
+
+function LocalUrl(href, location) {
+    var _chk = true;
+    var Urls = ["/", location, GetApiUrl(), "#", "javascript:;", "mailto", "tel"];
+    $.each(Urls, function (i, itme) {
+        if (href.startsWith(itme)) {
+            _chk =  true;
+        }
+    });
+    return _chk;
 }
