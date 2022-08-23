@@ -10998,7 +10998,7 @@ a:focus {
 .accordion .accordion-item .accordion-button::after {
   color: var(--on-background);
   background-image: none;
-  content: "\f64d"; /* plus */
+  content: "\F64D"; /* plus */
   font-family: "bootstrap-icons";
   text-align: center;
   width: auto;
@@ -11015,7 +11015,7 @@ a:focus {
 .accordion .accordion-item .accordion-button:not(.collapsed)::after {
   color: var(--on-background);
   background-image: none;
-  content: "\f64d"; /* plus */
+  content: "\F64D"; /* plus */
   font-family: "bootstrap-icons";
   text-align: center;
   transform: rotate(-45deg);
@@ -11086,7 +11086,7 @@ a:focus {
 .accordion .accordion .accordion-item .accordion-header .accordion-button::after {
   color: var(--on-background);
   background-image: none;
-  content: "\f4fa"; /* plus-circle */
+  content: "\F4FA"; /* plus-circle */
   font-family: "bootstrap-icons";
   text-align: center;
 }
@@ -11098,7 +11098,7 @@ a:focus {
 .accordion .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed)::after {
   color: var(--on-background);
   background-image: none;
-  content: "\f4fa"; /* dash-square */
+  content: "\F4FA"; /* dash-square */
   font-family: "bootstrap-icons";
   text-align: center;
 }

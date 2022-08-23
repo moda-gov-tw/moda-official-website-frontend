@@ -1,4 +1,4 @@
-﻿
+﻿//開發階段
 function GetApiUrl() {
     return "https://www-api.moda.gov.tw";
 }
@@ -249,13 +249,17 @@ function JsPagination(p) {
     $(".pageNum").html(p);
 }
 function ReLoadPagination(p, pageCount) {
+    console.log(p);
+    console.log(pageCount);
     var lang = $(".webSitelanguage").attr("lang");
     var pendingcount = parseInt(5 / 2);
+    console.log("pendingcount" +pendingcount);
     var pageIndex = parseInt(p - 1);
+    console.log("pageIndex" + pageIndex);
     var start = 0;
     var end = 0;
     start = pageIndex - pendingcount < 0 ? 0 : pageIndex - pendingcount;
-    end = (pageIndex + pendingcount) > (pageCount - 1) ? ( pendingcount - 1) :( pageIndex + pendingcount);
+    end = (pageIndex + pendingcount) > (pageCount - 1) ? (pageCount - 1) :( pageIndex + pendingcount);
     if (pageIndex + pendingcount > pageCount - 1) {
         start -= (pageIndex + pendingcount) - (pageCount - 1);
         start = start < 0 ? 0 : start;
@@ -272,7 +276,9 @@ function ReLoadPagination(p, pageCount) {
         }
         itemArray.push("<a class='page_a firstP' onclick='SearchJsonData(1)' href='javascript:; ' data-page='1'>" + firstPageTxt+"</a>");
     }
-    if (pageIndex <= parseInt(5/2)){}
+    console.log("start" + start);
+    console.log("end" + end);
+    if (pageIndex <= Math.ceil(5/2)){}
     else
     {
         itemArray.push("<a class='page_a' onclick='SearchJsonData(1)' href='javascript:; ' data-page='1'>1</a>");
@@ -287,11 +293,11 @@ function ReLoadPagination(p, pageCount) {
             itemArray.push("<a class='page_a' onclick='SearchJsonData(" + (i + 1) + ") ' href='javascript:; ' data-page='" + (i + 1) + "'>" + (i + 1) + "</a>");
         }
     }
-    if (pageIndex >= (pageCount - 1 - parseInt(5/2) )  )
+    if (pageIndex >= (pageCount - 1 - Math.ceil(5/2) )  )
     {
-    }else{
+    } else {
         itemArray.push("<span>..</span>");
-        itemArray.push("<a class='page_a' onclick='SearchJsonData('" + pageCount + "')' href='javascript:; ' data-page='" + pageCount + "'>");
+        itemArray.push("<a class='page_a' onclick='SearchJsonData(" + pageCount + ")' href='javascript:; ' data-page='" + pageCount + "'>");
         itemArray.push(pageCount);
         itemArray.push("</a>");
     }
@@ -302,7 +308,7 @@ function ReLoadPagination(p, pageCount) {
         if (lang != "en") {
             lastText = "最後一頁";
         }
-        itemArray.push("<a class='page_a lastP' onclick='SearchJsonData('" + pageCount + "')' href='javascript:; ' data-page='" + pageCount + "'>" + lastText + "</a>");
+        itemArray.push("<a class='page_a lastP' onclick='SearchJsonData(" + pageCount + ")' href='javascript:; ' data-page=" + pageCount + ">" + lastText + "</a>");
     }
     $(".pageNav").html("");
     var ss = "";
