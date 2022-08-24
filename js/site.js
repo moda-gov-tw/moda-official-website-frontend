@@ -143,7 +143,8 @@ function SearchAjax(obj) {
         "Condition6": obj.C6,
         "P": parseInt(obj.p),
         "DisplayCount":  parseInt(obj.displaycount)
-    };   
+    };  
+ console.log(data)	
     $.ajax({
         url: Url,
         method: 'POST',
