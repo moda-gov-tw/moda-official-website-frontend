@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/ADI/assets/css/layout.css?v=Z4xdesM1OfYXl5lMkKTuPf1jRpX4FmLuK8ZxhegdxHM" media="all" />
+            <link rel="stylesheet" href="/ADI/assets/css/layout.css?v=ifA5EbODQNqkS4G3VXtql1Ghm1vnAtrQBw2VVE6jnFc" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -431,7 +431,36 @@
                 </div>
 
                 <!-- 列表 -->
-                        <div id="ListTable" class="text-center txt1 py-5">查無任何資訊</div>
+                                <ul class="list4-2 list-group divider mb-5" id="ListTable">
+                                        <li class="list-group-item d-block bg-transparent px-0">
+                                            <a href="/ADI/news/latest-news/1926.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='「數位發展部數位產業署」今揭牌 偕同各部會推動各行各業數位轉型'>
+                                                <div class="listDate ms-md-3 order-md-2">2022-08-25</div>
+                                                <div class="col mb-0">
+                                                    <b class="title5 fw-normal">
+                                                        &#x300C;&#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72;&#x300D;&#x4ECA;&#x63ED;&#x724C; &#x5055;&#x540C;&#x5404;&#x90E8;&#x6703;&#x63A8;&#x52D5;&#x5404;&#x884C;&#x5404;&#x696D;&#x6578;&#x4F4D;&#x8F49;&#x578B;
+                                                    </b>
+                                                </div>
+                                            </a>
+                                        </li>
+                                </ul>
+                        <div class="pageBar mb-5 ">
+    <div class="pageSet mb-4">
+                    <div class="mRow">共<span class="totalData">1</span>筆資料，第<span class="pageNum">1</span>/<span class="totalPage">1</span>頁，</div>
+                    <div class="mRow">
+                        <label for="perPageShow">每頁顯示</label>
+                        <select class="sel2 rounded-4" id="perPageShow" title="每頁顯示筆數">
+                            <option value=15 selected>15</option><option value=30 >30</option><option value=45 >45</option><option value=60 >60</option><option value=75 >75</option>;
+                        </select>筆
+                    </div>
+                    <div class="mRow">
+                        <a href="javascript:;" class="btn btn3 rounded-4" onclick="SearchJsonData(1)" role="button">確定</a>
+                    </div>
+    </div>
+    <div class="pageNav">
+                    <a class="page_a on" onclick="SearchJsonData(1)" href="javascript:;" data-page="1">1</a>
+    </div>
+</div>
+
                 <!--Footer-->
                 <div class="article1 mb-4">
                     
@@ -654,9 +683,9 @@
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/ADI/assets/js/common.js?v=oV6xIYb0CYIWxdWK_VXUvTls-SYPeDuqxgqpjpp2PPU"></script>
+            <script src="/ADI/assets/js/common.js?v=j5vT4phgWrOBi4VRSMnygCVJtKFS7rWvQgVIfpqi5FM"></script>
     <script src="/js/axios.min.js?v=iSkNRnKsHORmMCNgQIxzyW0QzHrWeko_lyVjyI78G2c"></script>
-    <script src="/js/site.js?v=3L_gvzdwY278qAXHAqWL6xWSELg3YkzWcIgEFBMStEg"></script>
+    <script src="/js/site.js?v=y5bU6yojzY75ZwFpNVBQfajKPubtZDfadJhCvNjcMq0"></script>
     <script>
         webSiteLange('zh-tw' ,'ADI'  );
 
@@ -667,7 +696,7 @@
     var S1 ;
     var S2 ;
     var _needtag = NeedTag('OneTextList');
-    _JsData = JSON.parse('[]');
+    _JsData = JSON.parse('[{"mainsn":"1926","istopdisplay":"none","href":"/ADI/news/latest-news/1926.html","target":null,"title":"\u300C\u6578\u4F4D\u767C\u5C55\u90E8\u6578\u4F4D\u7522\u696D\u7F72\u300D\u4ECA\u63ED\u724C \u5055\u540C\u5404\u90E8\u6703\u63A8\u52D5\u5404\u884C\u5404\u696D\u6578\u4F4D\u8F49\u578B","startdate":"2022-08-25","newstitle":"\u300C\u6578\u4F4D\u767C\u5C55\u90E8\u6578\u4F4D\u7522\u696D\u7F72\u300D\u4ECA\u63ED\u724C \u5055\u540C\u5404\u90E8\u6703\u63A8\u52D5\u5404\u884C\u5404\u696D\u6578\u4F4D\u8F49\u578B","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"}]');
     LeftMenu('766');
     NewList('766');
     var ListPage = '/_news/OneTextList.html';
