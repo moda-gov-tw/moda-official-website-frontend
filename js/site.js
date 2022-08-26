@@ -54,7 +54,7 @@ var _JsData;
 
 function NewList(sqn) {
     var obj = getCookie("SearchObjN");
-obj ="";
+       obj ="";
     if (obj != "") {
         RemoveCookie("SearchObjN");
         var objJson = JSON.parse(obj);
