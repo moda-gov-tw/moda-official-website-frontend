@@ -400,27 +400,40 @@ Sections					</li>
                 </div>
 
                 <!-- 列表 -->
-                                <div class="list5-2 row mb-5 g-3" id="ListTable">
-                                            <div class="col-12 col-sm-6 col-md-4">
-                                                <a href="#" class="d-block px-5 py-4 text-center d-flex justify-content-center align-items-center" target='' title='Section of Overall Planning'>
-                                                    <b class="mb-0 fw-normal">Section of Overall Planning</b>
+                                <!-- 列表樣式七 -->
+                                <div class="list1 row mb-5 g-3" id="ListTable">
+                                        <div class="col-12 col-sm-6 col-md-4">
+                                            <div class="card h-100 shadow-md">
+                                                <a href="#" class="card-body text-decoration-none" target='' title='Section of Overall Planning'>
+                                                    <b class="card-title title5">Section of Overall Planning</b>
+                                                    <p class="card-text"></p>
                                                 </a>
                                             </div>
-                                            <div class="col-12 col-sm-6 col-md-4">
-                                                <a href="#" class="d-block px-5 py-4 text-center d-flex justify-content-center align-items-center" target='_self' title='Section of Research and Analysis'>
-                                                    <b class="mb-0 fw-normal">Section of Research and Analysis</b>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-4">
+                                            <div class="card h-100 shadow-md">
+                                                <a href="#" class="card-body text-decoration-none" target='_self' title='Section of Research and Analysis'>
+                                                    <b class="card-title title5">Section of Research and Analysis</b>
+                                                    <p class="card-text"></p>
                                                 </a>
                                             </div>
-                                            <div class="col-12 col-sm-6 col-md-4">
-                                                <a href="#" class="d-block px-5 py-4 text-center d-flex justify-content-center align-items-center" target='_self' title='Section of Supervision and Evaluation'>
-                                                    <b class="mb-0 fw-normal">Section of Supervision and Evaluation</b>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-4">
+                                            <div class="card h-100 shadow-md">
+                                                <a href="#" class="card-body text-decoration-none" target='_self' title='Section of Supervision and Evaluation'>
+                                                    <b class="card-title title5">Section of Supervision and Evaluation</b>
+                                                    <p class="card-text"></p>
                                                 </a>
                                             </div>
-                                            <div class="col-12 col-sm-6 col-md-4">
-                                                <a href="#" class="d-block px-5 py-4 text-center d-flex justify-content-center align-items-center" target='_self' title='Section of Public Relations'>
-                                                    <b class="mb-0 fw-normal">Section of Public Relations</b>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-4">
+                                            <div class="card h-100 shadow-md">
+                                                <a href="#" class="card-body text-decoration-none" target='_self' title='Section of Public Relations'>
+                                                    <b class="card-title title5">Section of Public Relations</b>
+                                                    <p class="card-text"></p>
                                                 </a>
                                             </div>
+                                        </div>
                                 </div>
                         <div class="pageBar mb-5 ">
     <div class="pageSet mb-4">
@@ -640,11 +653,11 @@ Sections					</li>
     var _JsData;
     var S1 ;
     var S2 ;
-    var _needtag = NeedTag('ColorBlockList');
+    var _needtag = NeedTag('LabelList');
     _JsData = JSON.parse('[{"mainsn":"71","istopdisplay":"none","href":"#","target":null,"title":"Section of Overall Planning","startdate":"2022-08-23","newstitle":"Section of Overall Planning","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"75","istopdisplay":"none","href":"#","target":"_self","title":"Section of Research and Analysis","startdate":"2022-08-23","newstitle":"Section of Research and Analysis","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"77","istopdisplay":"none","href":"#","target":"_self","title":"Section of Supervision and Evaluation","startdate":"2022-08-23","newstitle":"Section of Supervision and Evaluation","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"81","istopdisplay":"none","href":"#","target":"_self","title":"Section of Public Relations","startdate":"2022-08-23","newstitle":"Section of Public Relations","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"}]');
     LeftMenu('483');
     NewList('482');
-    var ListPage = '/_news/ColorBlockList.html';
+    var ListPage = '/_news/LabelList.html';
     var listTag2Page = '/_news/listTag2.html';
     $("#ns").load(ListPage, function () {
         if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
