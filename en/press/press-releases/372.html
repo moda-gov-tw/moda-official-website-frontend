@@ -166,6 +166,7 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="/en/press/370.html" data-bs-toggle="dropdown" data-submenu target='' title='News and Releases'>News and Releases</a>
                                     <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="/en/press/press-releases/372.html" target='' title='Press Releases'>Press Releases</a></li>
                                                     <li><a class="dropdown-item" href="/en/press/multimedia/380.html" target='' title='Multimedia'>Multimedia</a></li>
                                     </ul>
                                 </li>
@@ -282,6 +283,9 @@ Press Releases					</li>
 					<li class="on">
 						<a class="menuI" href="javascript:;" target='' title='News and Releases'><span class="menuIFirst">News and Releases</span></a>
 							<ul class="menuSub list-unstyled">
+										<li class="on">
+											<a href="/en/press/press-releases/372.html"  target='' title='Press Releases'>Press Releases</a>
+										</li>
 										<li class="">
 											<a href="/en/press/multimedia/380.html"  target='' title='Multimedia'>Multimedia</a>
 										</li>
@@ -399,7 +403,36 @@ Press Releases					</li>
                 </div>
 
                 <!-- 列表 -->
-                        <div id="ListTable" class="text-center txt1 py-5">No results</div>
+                                <ul class="list4-2 list-group divider mb-5" id="ListTable">
+                                        <li class="list-group-item d-block bg-transparent px-0">
+                                            <a href="/en/press/press-releases/1986.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='Taiwan inaugurates Ministry of Digital Affairs, strives to ‘Free the Future’'>
+                                                <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
+                                                <div class="col mb-0">
+                                                    <b class="title5 fw-normal">
+                                                        Taiwan inaugurates Ministry of Digital Affairs, strives to &#x2018;Free the Future&#x2019;
+                                                    </b>
+                                                </div>
+                                            </a>
+                                        </li>
+                                </ul>
+                        <div class="pageBar mb-5 ">
+    <div class="pageSet mb-4">
+                    <div class="mRow">page<span class="pageNum">1</span>of<span class="totalPage">1</span>, total items<span class="totalData">1</span>, </div>
+                    <div class="mRow">
+                        <select class="sel2 rounded-4" id="perPageShow" title="items per page">
+                            <option value=15 selected>15</option><option value=30 >30</option><option value=45 >45</option><option value=60 >60</option><option value=75 >75</option>;
+                        </select>
+                        <label for="perPageShow">items per page</label>
+                    </div>
+                    <div class="mRow">
+                        <a href="javascript:;" class="btn btn3 rounded-4" onclick="SearchJsonData(1)" role="button">GO</a>
+                    </div>
+    </div>
+    <div class="pageNav">
+                    <a class="page_a on" onclick="SearchJsonData(1)" href="javascript:;" data-page="1">1</a>
+    </div>
+</div>
+
                 <!--Footer-->
                 <div class="article1 mb-4">
                     
@@ -496,6 +529,11 @@ Press Releases					</li>
                                 <div class="ftNavLv2">
                                     <div class="col">
                                         <ul class="list-unstyled flex-column">
+                                                    <li>
+                                                        <a href="/en/press/press-releases/372.html" class="d-block text-white" target='' title='Press Releases'>
+                                                            Press Releases
+                                                        </a>
+                                                    </li>
                                                     <li>
                                                         <a href="/en/press/multimedia/380.html" class="d-block text-white" target='' title='Multimedia'>
                                                             Multimedia
@@ -625,7 +663,7 @@ Press Releases					</li>
     var S1 ;
     var S2 ;
     var _needtag = NeedTag('OneTextList');
-    _JsData = JSON.parse('[]');
+    _JsData = JSON.parse('[{"mainsn":"1986","istopdisplay":"none","href":"/en/press/press-releases/1986.html","target":null,"title":"Taiwan inaugurates Ministry of Digital Affairs, strives to \u2018Free the Future\u2019","startdate":"2022-08-27","newstitle":"Taiwan inaugurates Ministry of Digital Affairs, strives to \u2018Free the Future\u2019","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"}]');
     LeftMenu('373');
     NewList('372');
     var ListPage = '/_news/OneTextList.html';
