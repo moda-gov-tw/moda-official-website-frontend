@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale = 1" />
     <meta name="format-detection" content="telephone=no">
     
-<title>News and Releases&#xFF5C;Ministry of Digital Affairs</title>
-<meta property="og:title" content="News and Releases&#xFF5C;Ministry of Digital Affairs" />
+<title>Press Releases-News and Releases&#xFF5C;Ministry of Digital Affairs</title>
+<meta property="og:title" content="Press Releases-News and Releases&#xFF5C;Ministry of Digital Affairs" />
 <meta property="og:image" content="/assets/img/fbshare.jpg" />
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
@@ -228,8 +228,11 @@
 				<li class="breadcrumb-item breadHome">
 					<a href="/en/index.html")">Home</a>
 					</li>
+					<li class="breadcrumb-item  ">
+							<a href="/en/press/370.html">News and Releases</a>	
+					</li>
 					<li class="breadcrumb-item  active">
-News and Releases					</li>
+Press Releases					</li>
 			</ol>
 		</nav>
 	</div>
@@ -317,13 +320,13 @@ News and Releases					</li>
             <div class="rightMain">
 
                 <div class="a11yBrickBar1">
-                    <a href="#AC" id="AC" accesskey="C" class="a11yBrick position-absolute"	title="頁面中央內容區塊[快捷鍵Alt+C]">:::</a>
+                    <a href="#AC" id="AC" accesskey="C" class="a11yBrick position-absolute" title="Alt&#x2B;C: Content Area">:::</a>
                 </div>
-                
+
                 <!-- 標題 -->
                 <div class="titleBar2 row">
     <div class="col">
-        <h2 class="title3 mb-0 fw-normal"><span class="titleTxt">News and Releases</span></h2>
+        <h2 class="title3 mb-0 fw-normal"><span class="titleTxt">Press Releases</span></h2>
     </div>
     <div class="col-auto text-end d-flex">
         <ul class="shareBar list-unstyled list-inline mb-0">
@@ -339,30 +342,75 @@ News and Releases					</li>
             <li class="list-inline-item d-none d-md-inline-block">
                 <a class="printBtn printJs" href="javascript:;" title="Print Page Info"><i class="ci ci-print"></i><span class="visually-hidden">Print</span></a>
             </li>
+                <li class="list-inline-item">
+                    <a href="javascript:;" class="searchSwitch searchSwitchJs" data-opentitle="Expand Search Bar" data-closetitle="Collapse Search Bar" title="Expand Search Bar"><i class="ci ci-open"></i><span class="visually-hidden">Expand Search Bar</span></a>
+                </li>
         </ul>
     </div>
 </div>
 
+                <!-- 搜尋功能 -->
+                <div class="conSearchBar1 mb-4 conSearchBarJs off">
+                    <!-- <div class="text-end">
+                        <a href="javascript:;" class="searchSwitch btn rounded-4 searchSwitchJs" data-opentitle="展開查詢" data-closetitle="收合查詢">展開查詢</a>
+                    </div> -->
+                    <div class="conSearchBarWrap">
+                        <!-- 結尾有日曆的 -->
+                        <div class="searchIw3">
+                            <div class="searchI">
+                                <div class="searchI-C">
+                                    <label for="QryDateS" class="visually-hidden">Date</label>
+                                    <input name="QryDateS" type="text" id="QryDateS" title="yyyy-mm-dd" class="ipt1 rounded-4 datepicker1" placeholder="yyyy-mm-dd" maxlength="10" autocomplete="off" value="">
+                                </div>
+                                <div class="searchI-R">
+                                    <a href="javascript:;" title="StartDate" class="calendarBtn1"><span class="visually-hidden">StartDate</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 開頭有~結尾有日曆的 -->
+                        <div class="searchIw4">
+                            <div class="searchI">
+                                <div class="searchI-L">~</div>
+                                <div class="searchI-C">
+                                    <label for="QryDateE" class="visually-hidden">To</label>
+                                    <input name="QryDateE" type="text" id="QryDateE" title="yyyy-mm-dd" class="ipt1 rounded-4 datepicker1" placeholder="yyyy-mm-dd" maxlength="10" autocomplete="off" value="">
+                                </div>
+                                <div class="searchI-R">
+                                    <a href="javascript:;" title="EndDate" class="calendarBtn1"><span class="visually-hidden">EndDate</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 結尾有按鈕 -->
+                        <div class="searchIw5">
+                            <div class="searchI">
+                                <div class="searchI-C">
+                                    <label for="QryKeyword" class="visually-hidden">Keyword(s)</label>
+                                    <input type="text" name="QryKeyword" id="QryKeyword" placeholder="Enter KeyWords" value="" class="searchI-C ipt1 rounded-4 searchField" title="Enter KeyWords">
+                                </div>
+                                <div class="searchI-R">
+                                    <input type="button" class="btn btn2 rounded-4 searchSubmit" value="Search" title="Search KeyWords" onclick="Search(1)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!--Header-->
+                <div id="ContentHeader">
+                </div>
+
                 <!-- 列表 -->
-                            <!-- 列表樣式六 -->
-<div class="list5-2 row mb-5 g-3">
-            <div class="col-12 col-sm-6 col-md-4">
-                <a href="/en/press/press-releases/372.html" class="d-block px-5 py-4 text-center d-flex justify-content-center align-items-center" target='' title='Press Releases'>
-                    <b class="mb-0 fw-normal">Press Releases</b>
-                </a>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4">
-                <a href="/en/press/multimedia/380.html" class="d-block px-5 py-4 text-center d-flex justify-content-center align-items-center" target='' title='Multimedia'>
-                    <b class="mb-0 fw-normal">Multimedia</b>
-                </a>
-            </div>
-</div>
+                        <div id="ListTable" class="text-center txt1 py-5">No results</div>
                 <!--Footer-->
+                <div class="article1 mb-4">
+                    
+                </div>
             </div>
             <!-- 右半主內容 end -->
         </div>
     </div>
+    <input type="hidden" value='372' id="sqn" />
+    <div id="ns" style="display:none;"></div>
+    <div id="ca" style="display:none;"></div>
 </main>
 
 
@@ -572,9 +620,20 @@ News and Releases					</li>
 
     </script>
     
-    <script>
-    LeftMenu('371');
-    </script>
+<script>
+    var _JsData;
+    var S1 ;
+    var S2 ;
+    var _needtag = NeedTag('OneTextList');
+    _JsData = JSON.parse('[]');
+    LeftMenu('373');
+    NewList('372');
+    var ListPage = '/_news/OneTextList.html';
+    var listTag2Page = '/_news/listTag2.html';
+    $("#ns").load(ListPage, function () {
+        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+    });
+</script>
 
 </body>
 </html>
