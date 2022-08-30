@@ -9,8 +9,7 @@ $(document).on("click", "a", function () {
             return false;
         }
     }
-    else if (!LocalUrl($(this).attr('href'), location.href))
-    {
+    else if (!LocalUrl($(this).attr('href'), location.href)) {
         var flag = confirm("是否要連結至非本網站頁面？ \n Are you sure you want to visit this website? \n" + $(this).attr('href'));
         if (!flag) {
             return false;
@@ -22,31 +21,31 @@ function gooSearch(lan, webSiteId) {
     var _lan = lan == "zh-tw" ? "" : lan + "/";
     var _webSiteId = webSiteId == "MODA" ? "" : webSiteId + "/";
     var _txt = $(".searchAreaIpt").val();
-    
-        lan = lan == "zh-tw" ? "" : lan + "/";
-        location.href = "/".concat(_lan, _webSiteId, "home/", "search.html", "?q=", _txt);
-    
+
+    lan = lan == "zh-tw" ? "" : lan + "/";
+    location.href = "/".concat(_lan, _webSiteId, "home/", "search.html", "?q=", _txt);
+
 }
 function gooSearch(lan, webSiteId, txt) {
     var _lan = lan == "zh-tw" ? "" : lan + "/";
     var _webSiteId = webSiteId == "MODA" ? "" : webSiteId + "/";
     var _txt = txt;
-     location.href = "/".concat(_lan, _webSiteId, "home/", "search.html", "?q=", _txt);
+    location.href = "/".concat(_lan, _webSiteId, "home/", "search.html", "?q=", _txt);
 }
 function webSiteLange(lan, webSiteId) {
-        if (lan != null) {
-            var lan = lan == "zh-tw" ? "" : "/" + lan;
-            var webSiteId = webSiteId == "MODA" ? "" : "/" + webSiteId;
-            $("#divHeader").load(lan + webSiteId + "/home/Header.html", function () {
-                FECommon.headerNavSet();
-                FECommon.headerNavClose();
-                FECommon.headerSideNavSwitch();
-               
-            });
-            $(".footer").load(lan + webSiteId + "/home/Footer.html", function () {
-                FECommon.footerFtNavStyle();
-            });
-        }
+    if (lan != null) {
+        var lan = lan == "zh-tw" ? "" : "/" + lan;
+        var webSiteId = webSiteId == "MODA" ? "" : "/" + webSiteId;
+        $("#divHeader").load(lan + webSiteId + "/home/Header.html", function () {
+            FECommon.headerNavSet();
+            FECommon.headerNavClose();
+            FECommon.headerSideNavSwitch();
+
+        });
+        $(".footer").load(lan + webSiteId + "/home/Footer.html", function () {
+            FECommon.footerFtNavStyle();
+        });
+    }
 }
 
 //search
@@ -54,7 +53,7 @@ var _JsData;
 
 function NewList(sqn) {
     var obj = getCookie("SearchObjN");
-       obj ="";
+    obj = "";
     if (obj != "") {
         RemoveCookie("SearchObjN");
         var objJson = JSON.parse(obj);
@@ -68,14 +67,14 @@ function NewList(sqn) {
             $("#Condition4").val() != "" || $("#Condition5").val() != "" || $("#Condition6").val() != "") {
             $(".searchSwitch").click();
         }
-       
+
         SearchObj(objJson);
     } else {
         Search(1);
     }
 }
 function Search(p) {
-    
+
     var displaycount = 15;
     var key = $("#sqn").val();
     if ($("#perPageShow").length > 0) {
@@ -114,7 +113,6 @@ function SearchObj(obj) {
             }
         }
     }
-
     if (obj.txt != "") {
         if (obj.txt.length > 50) {
             msg += "查詢字串請勿超過50個字。\n Keyword should not be longer than 50 letters. \n";
@@ -127,8 +125,6 @@ function SearchObj(obj) {
     }
 
     SearchAjax(obj);
-    //靜態
-
 }
 function SearchAjax(obj) {
     var innerHtml = "";
@@ -143,9 +139,9 @@ function SearchAjax(obj) {
         "Condition5": obj.C5,
         "Condition6": obj.C6,
         "P": parseInt(obj.p),
-        "DisplayCount":  parseInt(obj.displaycount)
-    };  
- console.log(data)	
+        "DisplayCount": parseInt(obj.displaycount)
+    };
+
     $.ajax({
         url: Url,
         method: 'POST',
@@ -156,7 +152,6 @@ function SearchAjax(obj) {
         success: function (res) {
             innerHtml = res;
             $('.rightMain').empty();
-         
             $('.rightMain').html(innerHtml).promise().done(function () {
                 if (obj != "") {
                     $("#QryDateS").val(obj.str);
@@ -251,17 +246,16 @@ function JsPagination(p) {
     $(".pageNum").html(p);
 }
 function ReLoadPagination(p, pageCount) {
-    console.log(p);
-    console.log(pageCount);
+
     var lang = $(".webSitelanguage").attr("lang");
     var pendingcount = parseInt(5 / 2);
-    console.log("pendingcount" +pendingcount);
+    console.log("pendingcount" + pendingcount);
     var pageIndex = parseInt(p - 1);
     console.log("pageIndex" + pageIndex);
     var start = 0;
     var end = 0;
     start = pageIndex - pendingcount < 0 ? 0 : pageIndex - pendingcount;
-    end = (pageIndex + pendingcount) > (pageCount - 1) ? (pageCount - 1) :( pageIndex + pendingcount);
+    end = (pageIndex + pendingcount) > (pageCount - 1) ? (pageCount - 1) : (pageIndex + pendingcount);
     if (pageIndex + pendingcount > pageCount - 1) {
         start -= (pageIndex + pendingcount) - (pageCount - 1);
         start = start < 0 ? 0 : start;
@@ -276,32 +270,35 @@ function ReLoadPagination(p, pageCount) {
         if (lang != "en") {
             firstPageTxt = "第一頁";
         }
-        itemArray.push("<a class='page_a firstP' onclick='SearchJsonData(1)' href='javascript:; ' data-page='1'>" + firstPageTxt+"</a>");
+        itemArray.push("<a class='page_a firstP' onclick='SearchJsonData(1)' href='javascript:; ' data-page='1'>" + firstPageTxt + "</a>");
     }
-    console.log("start" + start);
-    console.log("end" + end);
-    if (pageIndex <= Math.ceil(5/2)){}
-    else
-    {
-        itemArray.push("<a class='page_a' onclick='SearchJsonData(1)' href='javascript:; ' data-page='1'>1</a>");
-        itemArray.push("<span>..</span>");
+    var strCot = (start + 1);
+    if (pageIndex <= Math.ceil(5 / 2)) { }
+    else {
+        if (strCot != 1) {
+            itemArray.push("<a class='page_a' onclick='SearchJsonData(1)' href='javascript:; ' data-page='1'>1</a>");
+            itemArray.push("<span>..</span>");
+        }
     }
-    for (var i = start; i <= end; i++)
-    {
+
+    var endCont = (end + 1);
+    for (var i = start; i <= end; i++) {
         if (pageIndex == i) {
-            itemArray.push("<a class='page_a on' onclick='SearchJsonData(" + (i + 1) + ") ' href='javascript:; ' data-page='" + (i + 1) + "'>" + (i + 1) +"</a>");
+            itemArray.push("<a class='page_a on' onclick='SearchJsonData(" + (i + 1) + ") ' href='javascript:; ' data-page='" + (i + 1) + "'>" + (i + 1) + "</a>");
         }
         else {
             itemArray.push("<a class='page_a' onclick='SearchJsonData(" + (i + 1) + ") ' href='javascript:; ' data-page='" + (i + 1) + "'>" + (i + 1) + "</a>");
         }
     }
-    if (pageIndex >= (pageCount - 1 - Math.ceil(5/2) )  )
-    {
+    if (pageIndex >= (pageCount - 1 - Math.ceil(5 / 2))) {
     } else {
-        itemArray.push("<span>..</span>");
-        itemArray.push("<a class='page_a' onclick='SearchJsonData(" + pageCount + ")' href='javascript:; ' data-page='" + pageCount + "'>");
-        itemArray.push(pageCount);
-        itemArray.push("</a>");
+        if (endCont != pageCount) {
+            itemArray.push("<span>..</span>");
+            itemArray.push("<a class='page_a' onclick='SearchJsonData(" + pageCount + ")' href='javascript:; ' data-page='" + pageCount + "'>");
+            itemArray.push(pageCount);
+            itemArray.push("</a>");
+        }
+
     }
     //NextPage
     if (pageIndex >= (pageCount - 1)) { }
@@ -322,7 +319,7 @@ function ReLoadPagination(p, pageCount) {
 //
 function LeftMenu(obj) {
     LeftMenuAjax(obj);
-    
+
 }
 function LeftMenuAjax(obj) {
     var innerHtml = "";
@@ -339,7 +336,7 @@ function LeftMenuAjax(obj) {
             $(".twoColConWrap").prepend(innerHtml);
         }
     });
-   // return innerHtml;
+    // return innerHtml;
 }
 function htmlEncode(e) {
     var ele = document.createElement('span');
@@ -400,7 +397,7 @@ function LocalUrl(href, location) {
     var Urls = ["/", location, GetApiUrl(), "#", "javascript:;", "mailto", "tel"];
     $.each(Urls, function (i, itme) {
         if (href.startsWith(itme)) {
-            _chk =  true;
+            _chk = true;
         }
     });
     return _chk;
