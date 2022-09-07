@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Deploy to IPFS
+        env:
+          IPFS_DEPLOY_CLOUDFLARE__API_TOKEN: ${{ secrets.IPFS_DEPLOY_CLOUDFLARE__API_TOKEN }}
+          IPFS_DEPLOY_CLOUDFLARE__RECORD: ${{ secrets.IPFS_DEPLOY_CLOUDFLARE__RECORD }}
+          IPFS_DEPLOY_CLOUDFLARE__ZONE: ${{ secrets.IPFS_DEPLOY_CLOUDFLARE__ZONE }}
+          IPFS_DEPLOY_IPFS_CLUSTER__HOST: ${{ secrets.IPFS_DEPLOY_IPFS_CLUSTER__HOST }}
+          IPFS_DEPLOY_IPFS_CLUSTER__PASSWORD: ${{ secrets.IPFS_DEPLOY_IPFS_CLUSTER__PASSWORD }}
+          IPFS_DEPLOY_IPFS_CLUSTER__USERNAME: ${{ secrets.IPFS_DEPLOY_IPFS_CLUSTER__USERNAME }}
+        run: |
+          rm -rf .git
+          npm install -g ipfs-deploy
+          curl https://ipfs-deploy.pages.dev/ipfs-cluster.js > "/opt/hostedtoolcache/node/16.17.0/x64/lib/node_modules/ipfs-deploy/src/pinners/ipfs-cluster.js"
+          ipfs-deploy -C -p ipfs-cluster -d cloudflare ./
+
