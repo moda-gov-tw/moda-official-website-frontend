@@ -63,8 +63,9 @@ function NewList(sqn) {
         $("#Condition4").val(objJson.C4);
         $("#Condition5").val(objJson.C5);
         $("#Condition6").val(objJson.C6);
+        $("#CustomizeTags").val(objJson.CT);
         if ($("#QryDateS").val() != "" || $("#QryDateE").val() != "" || $("#QryKeyword").val() != "" ||
-            $("#Condition4").val() != "" || $("#Condition5").val() != "" || $("#Condition6").val() != "") {
+            $("#Condition4").val() != "" || $("#Condition5").val() != "" || $("#Condition6").val() != "" || $("#CustomizeTags").val() != "") {
             $(".searchSwitch").click();
         }
 
@@ -85,9 +86,10 @@ function Search(p) {
         str: $("#QryDateS").val(),
         end: $("#QryDateE").val(),
         txt: $("#QryKeyword").val(),
-        C4: $("#Condition4").val(),
-        C5: $("#Condition5").val(),
-        C6: $("#Condition6").val(),
+        C4: $("#Condition4").val() ?? "",
+        C5: $("#Condition5").val() ?? "",
+        C6: $("#Condition6").val() ?? "",
+        CT: $("#CustomizeTags").val() ?? "",
         displaycount: displaycount,
         p: p
     };
@@ -138,6 +140,7 @@ function SearchAjax(obj) {
         "Condition4": obj.C4,
         "Condition5": obj.C5,
         "Condition6": obj.C6,
+        "CustomizeTagSN": obj.CT,
         "P": parseInt(obj.p),
         "DisplayCount": parseInt(obj.displaycount)
     };
@@ -160,8 +163,9 @@ function SearchAjax(obj) {
                     $("#Condition4").val(obj.C4);
                     $("#Condition5").val(obj.C5);
                     $("#Condition6").val(obj.C6);
+                    $("#CustomizeTags").val(obj.CT);
                     if ($("#QryDateS").val() != "" || $("#QryDateE").val() != "" || $("#QryKeyword").val() != "" ||
-                        $("#Condition4").val() != "" || $("#Condition5").val() != "" || $("#Condition6").val() != "") {
+                        $("#Condition4").val() != "" || $("#Condition5").val() != "" || $("#Condition6").val() != "" || $("#CustomizeTags").val() != "") {
                         $(".searchSwitch").click();
                     }
                 }
