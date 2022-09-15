@@ -366,11 +366,11 @@
                 </div>
 
                 <!-- 列表 -->
+                                <!-- 列表樣式三 -->
                                 <ul class="list4-2 list-group divider mb-5" id="ListTable">
                                         <li class="list-group-item d-block bg-transparent px-0">
                                             <a href="https://www-api.moda.gov.tw/File/Get/TSaDrh6zxYeHQWB" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='數位發展部112年度施政計畫.pdf（另開新視窗）'>
-                                                <div class="listDate ms-md-3 order-md-2">2022-09-15</div>
-                                                <div class="col mb-0">
+                                                <div class="col mb-0 listIcon1">
                                                     <b class="title5 fw-normal">
                                                         &#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;112&#x5E74;&#x5EA6;&#x65BD;&#x653F;&#x8A08;&#x756B;
                                                             <span class="fileTypeI">PDF</span>
@@ -659,11 +659,11 @@
     var _JsData;
     var S1 ;
     var S2 ;
-    var _needtag = NeedTag('OneTextList');
+    var _needtag = NeedTag('NoDateTextList');
     _JsData = JSON.parse('[{"mainsn":"2374","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/TSaDrh6zxYeHQWB","target":null,"title":"\u6578\u4F4D\u767C\u5C55\u90E8112\u5E74\u5EA6\u65BD\u653F\u8A08\u756B","startdate":"2022-09-15","newstitle":"\u6578\u4F4D\u767C\u5C55\u90E8112\u5E74\u5EA6\u65BD\u653F\u8A08\u756B","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"}]');
     LeftMenu('1049');
    NewList('1049');
-    var ListPage = '/_news/OneTextList.html';
+    var ListPage = '/_news/NoDateTextList.html';
     var listTag2Page = '/_news/listTag2.html';
     $("#ns").load(ListPage, function () {
         if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
