@@ -1,6 +1,6 @@
 ﻿//開發階段
 function GetApiUrl() {
-    return "https://web1-05.i-me-i.com";
+    return "https://www-api.moda.gov.tw";
 }
 $(document).on("click", "a", function () {
     if ($(this).find('span').length > 0) {
