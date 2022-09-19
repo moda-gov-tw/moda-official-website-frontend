@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/assets/css/layout.css?v=tTGoCxztsQOvCiNhPuj18KZLmIGt1fwY3ntriCxklTI" media="all" />
+            <link rel="stylesheet" href="/assets/css/layout.css?v=e1P_5uuoUtjl1zChWah5ruj4KO91O9429nZDv13HEBE" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -54,18 +54,22 @@
     <header class="header">
         <!-- header -->
         <div b-jabq2d7uqs class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-jabq2d7uqs class="a11yBrickBar1 position-relative"><a b-jabq2d7uqs href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="Go Top">:::</a></div></div>
-        <div b-jabq2d7uqs class="baseNav d-none d-xxl-block">
+
+        <!-- 若沒有社群鈕<div class="baseNav d-none d-xxl-block"> -->
+		<div b-jabq2d7uqs class="baseNav">
             <div b-jabq2d7uqs class="wrap1 mx-auto px-4 px-lg-5">
-                <div b-jabq2d7uqs class="d-md-flex justify-content-end align-items-center">
+				<div b-jabq2d7uqs class="d-flex justify-content-end align-items-top">
                     <!-- Top bar right -->
                     <div b-jabq2d7uqs class="d-flex align-items-top">
-                        <ul b-jabq2d7uqs class="nav">
+                        <!-- 社群鈕 -->
+                        <ul b-jabq2d7uqs class="nav d-none d-xxl-flex">
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/en/sitemap/546.html" title="Site Map">
                                     <i b-jabq2d7uqs class="ci ci-sitemap"></i>
                                     <span b-jabq2d7uqs class="visually-hidden">Site Map</span>
                                 </a>
                             </li>
+
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/index.html" title="&#x4E2D;&#x6587;&#x7248;">
                                     <i b-jabq2d7uqs class="ci ci-tw"></i>
@@ -74,7 +78,7 @@
                             </li>
                         </ul>
                         <!-- 切換字體大小 -->
-                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs">
+                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs d-none d-xxl-flex">
                             <button b-jabq2d7uqs class="fontSizeDdNow btn-dropdownNow dropdown-toggle text-white" type="button" id="fontSizeDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-order="2" title="Medium"><i b-jabq2d7uqs class="ci ci-font2"></i><span b-jabq2d7uqs class="visually-hidden">A</span></button>
                             <ul b-jabq2d7uqs class="dropdown-menu" aria-labelledby="fontSizeDropdown">
                                 <li b-jabq2d7uqs><button b-jabq2d7uqs class="dropdown-item" type="button" data-order="1" title="Large">A<sup b-jabq2d7uqs>+</sup></button></li>
@@ -82,13 +86,19 @@
                             </ul>
                         </div>
                         <!-- 搜尋鈕 -->
-                        <div b-jabq2d7uqs class="nav-item navbar-icon-link">
+                        <div b-jabq2d7uqs class="nav-item navbar-icon-link d-none d-xxl-flex">
                             <a b-jabq2d7uqs href="javascript:;" id="S" accesskey="S" class="searchSwitchBtn searchSwitchBtnJs nav-link text-white px-3" title="Search">
                                 <i b-jabq2d7uqs class="ci ci-scope"></i>
                                 <span b-jabq2d7uqs class="visually-hidden">Search</span>
                             </a>
                         </div>
                     </div>
+                    <script>
+                        //detect header social btn
+                        if(!document.getElementsByClassName('navSocial').length){
+                            document.body.className += ' noHdSocial';
+                        }
+                    </script>
                 </div>
             </div>
         </div>
@@ -407,81 +417,81 @@ Operations					</li>
                 </div>
 
                 <!-- 列表 -->
-                                <!-- 列表樣式七 -->
-                                <div class="list1 row mb-5 g-3" id="ListTable">
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/en/digital-affairs/digital-service/operations/120.html" class="card-body text-decoration-none" target='' title='Smart Government Development Strategy'>
-                                                    <b class="card-title title5">Smart Government Development Strategy</b>
-                                                    <p class="card-text">Improving governmental digitalization and services based on public demands</p>
-                                                </a>
+                                    <!-- 列表樣式七 -->
+                                    <div class="list1 row mb-5 g-3" id="ListTable">
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/en/digital-affairs/digital-service/operations/120.html" class="card-body text-decoration-none" target='' title='Smart Government Development Strategy'>
+                                                        <b class="card-title title5">Smart Government Development Strategy</b>
+                                                        <p class="card-text">Improving governmental digitalization and services based on public demands</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/en/digital-affairs/digital-service/operations/190.html" class="card-body text-decoration-none" target='' title='Service Resilience for the Cloud Generation'>
-                                                    <b class="card-title title5">Service Resilience for the Cloud Generation</b>
-                                                    <p class="card-text">Strengthening the resilience of key government networks and services, promoting cloud applications</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/en/digital-affairs/digital-service/operations/190.html" class="card-body text-decoration-none" target='' title='Service Resilience for the Cloud Generation'>
+                                                        <b class="card-title title5">Service Resilience for the Cloud Generation</b>
+                                                        <p class="card-text">Strengthening the resilience of key government networks and services, promoting cloud applications</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/en/digital-affairs/digital-service/operations/208.html" class="card-body text-decoration-none" target='' title='National Digital Development Research'>
-                                                    <b class="card-title title5">National Digital Development Research</b>
-                                                    <p class="card-text">Monitoring Taiwan&#x2019;s Digital Development Progress with Digital Well-being</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/en/digital-affairs/digital-service/operations/208.html" class="card-body text-decoration-none" target='' title='National Digital Development Research'>
+                                                        <b class="card-title title5">National Digital Development Research</b>
+                                                        <p class="card-text">Monitoring Taiwan&#x2019;s Digital Development Progress with Digital Well-being</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/en/digital-affairs/digital-service/guide/584.html" class="card-body text-decoration-none" target='_self' title='Government Digital Service Guidelines and Website Service Manage'>
-                                                    <b class="card-title title5">Government Digital Service Guidelines and Website Service Manage</b>
-                                                    <p class="card-text">Leading government agencies with building people-oriented digital services</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/en/digital-affairs/digital-service/guide/584.html" class="card-body text-decoration-none" target='_self' title='Government Digital Service Guidelines and Website Service Manage'>
+                                                        <b class="card-title title5">Government Digital Service Guidelines and Website Service Manage</b>
+                                                        <p class="card-text">Leading government agencies with building people-oriented digital services</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/en/digital-affairs/digital-service/operations/228.html" class="card-body text-decoration-none" target='' title='Government Accessible Web Check'>
-                                                    <b class="card-title title5">Government Accessible Web Check</b>
-                                                    <p class="card-text">Enhancing inclusive, accessible government digital service experiences</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/en/digital-affairs/digital-service/operations/228.html" class="card-body text-decoration-none" target='' title='Government Accessible Web Check'>
+                                                        <b class="card-title title5">Government Accessible Web Check</b>
+                                                        <p class="card-text">Enhancing inclusive, accessible government digital service experiences</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/en/digital-affairs/digital-service/operations/230.html" class="card-body text-decoration-none" target='' title='My e-Government Portal'>
-                                                    <b class="card-title title5">My e-Government Portal</b>
-                                                    <p class="card-text">Consolidating government services based on major life events for easy public access</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/en/digital-affairs/digital-service/operations/230.html" class="card-body text-decoration-none" target='' title='My e-Government Portal'>
+                                                        <b class="card-title title5">My e-Government Portal</b>
+                                                        <p class="card-text">Consolidating government services based on major life events for easy public access</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/en/digital-affairs/digital-service/operations/232.html" class="card-body text-decoration-none" target='' title='Common Government Application Services'>
-                                                    <b class="card-title title5">Common Government Application Services</b>
-                                                    <p class="card-text">Cross-agency data transfer, code for Chinese characters, and document format standard</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/en/digital-affairs/digital-service/operations/232.html" class="card-body text-decoration-none" target='' title='Common Government Application Services'>
+                                                        <b class="card-title title5">Common Government Application Services</b>
+                                                        <p class="card-text">Cross-agency data transfer, code for Chinese characters, and document format standard</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/en/digital-affairs/digital-service/operations/234.html" class="card-body text-decoration-none" target='' title='Digital Governance Competency Cultivation'>
-                                                    <b class="card-title title5">Digital Governance Competency Cultivation</b>
-                                                    <p class="card-text">Elevating the government workforce&#x2019;s digital skills and cross-boundary governance abilities</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/en/digital-affairs/digital-service/operations/234.html" class="card-body text-decoration-none" target='' title='Digital Governance Competency Cultivation'>
+                                                        <b class="card-title title5">Digital Governance Competency Cultivation</b>
+                                                        <p class="card-text">Elevating the government workforce&#x2019;s digital skills and cross-boundary governance abilities</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/en/digital-affairs/digital-service/operations/242.html" class="card-body text-decoration-none" target='' title='Government Digital Infrastructure'>
-                                                    <b class="card-title title5">Government Digital Infrastructure</b>
-                                                    <p class="card-text">Operating safe, stable, efficient network and electronic certification environments</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/en/digital-affairs/digital-service/operations/242.html" class="card-body text-decoration-none" target='' title='Government Digital Infrastructure'>
+                                                        <b class="card-title title5">Government Digital Infrastructure</b>
+                                                        <p class="card-text">Operating safe, stable, efficient network and electronic certification environments</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                </div>
+                                    </div>
                         <div class="pageBar mb-5 ">
     <div class="pageSet mb-4">
                         <div class="mRow">total items<span class="totalData">9</span>.</div>
@@ -682,7 +692,7 @@ Operations					</li>
                 <div class="ftBtmRights">
                     <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero (open in new window)">CC0</a>No copyright reserved.</p>
 
-                    <p class="mb-2 mb-md-0">Update Date: 2022-09-18<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                    <p class="mb-2 mb-md-0">Update Date: 2022-09-19<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
             </div>
             <div class="col-12 col-md text-md-end">
@@ -722,28 +732,27 @@ Operations					</li>
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/assets/js/common.js?v=gDbLZglneWxIXoUIs8UczuclyHwWlQIsF2m5b1w6GZE"></script>
+            <script src="/assets/js/common.js?v=QZ5wUV6wmTSH_KN9q1eKJ9BC2A45ymIwOsi7Y6WeDXY"></script>
     <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=V2JExwd7xdBP26AtgTeajbqPQbpLse0DlFgoRNwRcdo"></script>
+    <script src="/js/site.js?v=r3b45PJ-Q435KvD8SAVTjXll8cXI-McYimLv_DaGbWU"></script>
     <script>
         webSiteLange('en' ,'MODA'  );
 
     </script>
     
-<script>
-    var _JsData;
-    var S1 ;
-    var S2 ;
-    var _needtag = NeedTag('LabelList');
-    _JsData = JSON.parse('[{"mainsn":"120","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/120.html","target":null,"title":"Smart Government Development Strategy","startdate":"2022-08-27","newstitle":"Smart Government Development Strategy","newssubtitle":"Improving governmental digitalization and services based on public demands","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Department of Digital Service"},{"tag":"Department of Plural Innovations"}],"crosslinkdisplay":"none"},{"mainsn":"190","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/190.html","target":null,"title":"Service Resilience for the Cloud Generation","startdate":"2022-08-27","newstitle":"Service Resilience for the Cloud Generation","newssubtitle":"Strengthening the resilience of key government networks and services, promoting cloud applications","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Digital government"}],"crosslinkdisplay":"none"},{"mainsn":"208","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/208.html","target":null,"title":"National Digital Development Research","startdate":"2022-08-27","newstitle":"National Digital Development Research","newssubtitle":"Monitoring Taiwan\u2019s Digital Development Progress with Digital Well-being","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Digital government"}],"crosslinkdisplay":"none"},{"mainsn":"218","istopdisplay":"none","href":"/en/digital-affairs/digital-service/guide/584.html","target":"_self","title":"Government Digital Service Guidelines and Website Service Manage","startdate":"2022-08-27","newstitle":"Government Digital Service Guidelines and Website Service Manage","newssubtitle":"Leading government agencies with building people-oriented digital services","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"228","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/228.html","target":null,"title":"Government Accessible Web Check","startdate":"2022-08-27","newstitle":"Government Accessible Web Check","newssubtitle":"Enhancing inclusive, accessible government digital service experiences","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"230","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/230.html","target":null,"title":"My e-Government Portal","startdate":"2022-08-27","newstitle":"My e-Government Portal","newssubtitle":"Consolidating government services based on major life events for easy public access","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"232","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/232.html","target":null,"title":"Common Government Application Services","startdate":"2022-08-27","newstitle":"Common Government Application Services","newssubtitle":"Cross-agency data transfer, code for Chinese characters, and document format standard","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"234","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/234.html","target":null,"title":"Digital Governance Competency Cultivation","startdate":"2022-08-27","newstitle":"Digital Governance Competency Cultivation","newssubtitle":"Elevating the government workforce\u2019s digital skills and cross-boundary governance abilities","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"242","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/242.html","target":null,"title":"Government Digital Infrastructure","startdate":"2022-08-27","newstitle":"Government Digital Infrastructure","newssubtitle":"Operating safe, stable, efficient network and electronic certification environments","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"}]');
-    LeftMenu('451');
-   NewList('450');
-    var ListPage = '/_news/LabelList.html';
-    var listTag2Page = '/_news/listTag2.html';
-    $("#ns").load(ListPage, function () {
-        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
-    });
-</script>
+    <script>
+        var _JsData;
+        var _needtag = NeedTag('LabelList');
+        var _Module = 'NEWS';
+        _JsData = JSON.parse('[{"mainsn":"120","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/120.html","target":null,"title":"Smart Government Development Strategy","startdate":"2022-08-27","newstitle":"Smart Government Development Strategy","newssubtitle":"Improving governmental digitalization and services based on public demands","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Department of Digital Service"},{"tag":"Department of Plural Innovations"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"190","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/190.html","target":null,"title":"Service Resilience for the Cloud Generation","startdate":"2022-08-27","newstitle":"Service Resilience for the Cloud Generation","newssubtitle":"Strengthening the resilience of key government networks and services, promoting cloud applications","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Digital government"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"208","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/208.html","target":null,"title":"National Digital Development Research","startdate":"2022-08-27","newstitle":"National Digital Development Research","newssubtitle":"Monitoring Taiwan\u2019s Digital Development Progress with Digital Well-being","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Digital government"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"218","istopdisplay":"none","href":"/en/digital-affairs/digital-service/guide/584.html","target":"_self","title":"Government Digital Service Guidelines and Website Service Manage","startdate":"2022-08-27","newstitle":"Government Digital Service Guidelines and Website Service Manage","newssubtitle":"Leading government agencies with building people-oriented digital services","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"228","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/228.html","target":null,"title":"Government Accessible Web Check","startdate":"2022-08-27","newstitle":"Government Accessible Web Check","newssubtitle":"Enhancing inclusive, accessible government digital service experiences","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"230","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/230.html","target":null,"title":"My e-Government Portal","startdate":"2022-08-27","newstitle":"My e-Government Portal","newssubtitle":"Consolidating government services based on major life events for easy public access","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"232","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/232.html","target":null,"title":"Common Government Application Services","startdate":"2022-08-27","newstitle":"Common Government Application Services","newssubtitle":"Cross-agency data transfer, code for Chinese characters, and document format standard","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"234","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/234.html","target":null,"title":"Digital Governance Competency Cultivation","startdate":"2022-08-27","newstitle":"Digital Governance Competency Cultivation","newssubtitle":"Elevating the government workforce\u2019s digital skills and cross-boundary governance abilities","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"242","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/242.html","target":null,"title":"Government Digital Infrastructure","startdate":"2022-08-27","newstitle":"Government Digital Infrastructure","newssubtitle":"Operating safe, stable, efficient network and electronic certification environments","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null}]');
+        LeftMenu('451');
+        NewList('450');
+        var ListPage = '/_news/LabelList.html';
+        var listTag2Page = '/_news/listTag2.html';
+        $("#ns").load(ListPage, function () {
+            if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+        });
+    </script>
 
 </body>
 </html>
