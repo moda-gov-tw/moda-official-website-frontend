@@ -1,6 +1,6 @@
 ﻿//開發階段
 function GetApiUrl() {
-    return "https://www-api.moda.gov.tw";
+    return "https://web1-05.i-me-i.com";
 }
 $(document).on("click", "a", function () {
     if ($(this).find('span').length > 0) {
@@ -64,8 +64,9 @@ function NewList(sqn) {
         $("#Condition5").val(objJson.C5);
         $("#Condition6").val(objJson.C6);
         $("#CustomizeTags").val(objJson.CT);
+        $("#SysZipCode").val(objJson.ZC);
         if ($("#QryDateS").val() != "" || $("#QryDateE").val() != "" || $("#QryKeyword").val() != "" ||
-            $("#Condition4").val() != "" || $("#Condition5").val() != "" || $("#Condition6").val() != "" || $("#CustomizeTags").val() != "") {
+            $("#Condition4").val() != "" || $("#Condition5").val() != "" || $("#Condition6").val() != "" || $("#CustomizeTags").val() != "" || $("#SysZipCode").val() != "") {
             $(".searchSwitch").click();
         }
 
@@ -90,6 +91,7 @@ function Search(p) {
         C5: $("#Condition5").val() ?? "",
         C6: $("#Condition6").val() ?? "",
         CT: $("#CustomizeTags").val() ?? "",
+        ZC: $("#SysZipCode").val() ?? "",
         displaycount: displaycount,
         p: p
     };
@@ -141,6 +143,7 @@ function SearchAjax(obj) {
         "Condition5": obj.C5,
         "Condition6": obj.C6,
         "CustomizeTagSN": obj.CT,
+        "SysZipCode": obj.ZC,
         "P": parseInt(obj.p),
         "DisplayCount": parseInt(obj.displaycount)
     };
@@ -164,14 +167,17 @@ function SearchAjax(obj) {
                     $("#Condition5").val(obj.C5);
                     $("#Condition6").val(obj.C6);
                     $("#CustomizeTags").val(obj.CT);
-                    if ($("#QryDateS").val() != "" || $("#QryDateE").val() != "" || $("#QryKeyword").val() != "" ||
-                        $("#Condition4").val() != "" || $("#Condition5").val() != "" || $("#Condition6").val() != "" || $("#CustomizeTags").val() != "") {
+                    $("#SysZipCode").val(obj.ZC);
+                    if (obj.str != "" || obj.end != "" || obj.txt != "" ||
+                        obj.C4 != "" || obj.C5 != "" || obj.C6 != "" || obj.CT != "" || obj.ZC != "") {
                         $(".searchSwitch").click();
                     }
                 }
                 $('.datepicker1').datepicker();
                 _JsData = JSON.parse($('#JsonData').val());
                 $('#JsonData').remove();
+                FECommon.widgetMagnific();
+                $('html').stop().animate({ scrollTop: 0 }, 100, 'linear');
             });
         }, complete: function (data) {
             FECommon.basicLoadingOff();
@@ -186,51 +192,58 @@ function NeedTag(e) {
     if (needAarray.indexOf(e) > -1) { return true; } else { return false; }
 }
 function SearchJsonData(p) {
-    var S1 = $("#ns")[0].innerHTML;
-    var S2 = $("#ca")[0].innerHTML;
-    var displaycount = 15;
-    if ($("#perPageShow").length > 0) {
-        displaycount = $("#perPageShow").find(':selected').val();
+    if (_Module == "Schedule") {
+        Search(p);
     }
-    var itemArray = [];
-    var itemCoint = _JsData.length;
-    var Page = p;
-    var PageCount = displaycount;
-    for (var i = 0; i < PageCount; i++) {
-        var _item = ((Page - 1) * PageCount) + i;
-        if (_item >= itemCoint) { }
-        else {
-            var JsData = _JsData[_item];
-            var _s1 = "";
-            var _tags = "";
-            _s1 = NewListReJson(S1, JsData);
-            if (_needtag) {
-                if (JsData.tags.length > 0) {
-                    $.each(JsData.tags, function (j, jitem) {
-                        var _s2 = "";
-                        _s2 = NewListReJson(S2, JsData.tags[j]);
-                        _tags += _s2;
-                    });
+    else
+    {
+        var S1 = $("#ns")[0].innerHTML;
+        var S2 = $("#ca")[0].innerHTML;
+        var displaycount = 15;
+        if ($("#perPageShow").length > 0) {
+            displaycount = $("#perPageShow").find(':selected').val();
+        }
+        var itemArray = [];
+        var itemCoint = _JsData.length;
+        var Page = p;
+        var PageCount = displaycount;
+        for (var i = 0; i < PageCount; i++) {
+            var _item = ((Page - 1) * PageCount) + i;
+            if (_item >= itemCoint) { }
+            else {
+                var JsData = _JsData[_item];
+                var _s1 = "";
+                var _tags = "";
+                _s1 = NewListReJson(S1, JsData);
+                if (_needtag) {
+                    if (JsData.tags.length > 0) {
+                        $.each(JsData.tags, function (j, jitem) {
+                            var _s2 = "";
+                            _s2 = NewListReJson(S2, JsData.tags[j]);
+                            _tags += _s2;
+                        });
+                    }
+                    _s1 = _s1.replace('#areatags', _tags);
+                    itemArray.push("".concat(_s1));
+                } else {
+                    itemArray.push("".concat(_s1));
                 }
-                _s1 = _s1.replace('#areatags', _tags);
-                itemArray.push("".concat(_s1));
-            } else {
-                itemArray.push("".concat(_s1));
             }
         }
-    }
-    var itemHtml = "";
-    if (listType == "AccordionList") {
-        itemHtml = "<div class='row d-flex justify-content-center'><div class='col'><div class='accordion mb-5' id='qa1'>";
-    }
-    $.each(itemArray, function (i, item) {
-        itemHtml += item;
-    });
-    if (listType == "AccordionList") {
-        itemHtml += "</div></div></div>";
-    }
-    $("#ListTable").html(itemHtml);
-    JsPagination(p);
+        var itemHtml = "";
+        if (listType == "AccordionList") {
+            itemHtml = "<div class='row d-flex justify-content-center'><div class='col'><div class='accordion mb-5' id='qa1'>";
+        }
+        $.each(itemArray, function (i, item) {
+            itemHtml += item;
+        });
+        if (listType == "AccordionList") {
+            itemHtml += "</div></div></div>";
+        }
+        $("#ListTable").html(itemHtml);
+        JsPagination(p);
+        $('html').stop().animate({ scrollTop: 0 }, 100, 'linear');
+    } 
 }
 function NewListReJson(str, obj) {
     $.each(Object.keys(obj), function (i, item) {
