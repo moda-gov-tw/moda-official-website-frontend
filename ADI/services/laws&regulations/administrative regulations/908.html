@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/ADI/assets/css/layout.css?v=lFRGWo9ll0_yrhbB0k7NHWoFYODtIvA5J4BOAF_ss00" media="all" />
+            <link rel="stylesheet" href="/ADI/assets/css/layout.css?v=jZyKUu2SZ5ExvaVv1DVT7z8BKU_Z3Q98pCjfF9x0Ux8" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -55,12 +55,15 @@
     <header class="header">
         <!-- header -->
         <div b-jabq2d7uqs class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-jabq2d7uqs class="a11yBrickBar1 position-relative"><a b-jabq2d7uqs href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="&#x9801;&#x9762;&#x9802;&#x7AEF;&#x529F;&#x80FD;&#x5340;&#x584A;[&#x5FEB;&#x6377;&#x9375;Alt&#x2B;U]">:::</a></div></div>
-        <div b-jabq2d7uqs class="baseNav d-none d-xxl-block">
+
+        <!-- 若沒有社群鈕<div class="baseNav d-none d-xxl-block"> -->
+		<div b-jabq2d7uqs class="baseNav">
             <div b-jabq2d7uqs class="wrap1 mx-auto px-4 px-lg-5">
-                <div b-jabq2d7uqs class="d-md-flex justify-content-end align-items-center">
+				<div b-jabq2d7uqs class="d-flex justify-content-end align-items-top">
                     <!-- Top bar right -->
                     <div b-jabq2d7uqs class="d-flex align-items-top">
-                        <ul b-jabq2d7uqs class="nav">
+                        <!-- 社群鈕 -->
+                        <ul b-jabq2d7uqs class="nav d-none d-xxl-flex">
                                 <li b-jabq2d7uqs class="nav-item">
                                     <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/" target='_blank' rel='noreferrer noopener' title='數位發展部（另開新視窗）'>
                                         <i b-jabq2d7uqs class="ci ci-moda"></i>
@@ -73,6 +76,7 @@
                                     <span b-jabq2d7uqs class="visually-hidden">&#x7DB2;&#x7AD9;&#x5C0E;&#x89BD;</span>
                                 </a>
                             </li>
+
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/en/ADI/index.html" title="English">
                                     <i b-jabq2d7uqs class="ci ci-en"></i>
@@ -81,7 +85,7 @@
                             </li>
                         </ul>
                         <!-- 切換字體大小 -->
-                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs">
+                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs d-none d-xxl-flex">
                             <button b-jabq2d7uqs class="fontSizeDdNow btn-dropdownNow dropdown-toggle text-white" type="button" id="fontSizeDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-order="2" title="&#x4E2D;&#x5B57;&#x7D1A;"><i b-jabq2d7uqs class="ci ci-font2"></i><span b-jabq2d7uqs class="visually-hidden">A</span></button>
                             <ul b-jabq2d7uqs class="dropdown-menu" aria-labelledby="fontSizeDropdown">
                                 <li b-jabq2d7uqs><button b-jabq2d7uqs class="dropdown-item" type="button" data-order="1" title="&#x5927;&#x5B57;&#x7D1A;">A<sup b-jabq2d7uqs>+</sup></button></li>
@@ -89,13 +93,19 @@
                             </ul>
                         </div>
                         <!-- 搜尋鈕 -->
-                        <div b-jabq2d7uqs class="nav-item navbar-icon-link">
+                        <div b-jabq2d7uqs class="nav-item navbar-icon-link d-none d-xxl-flex">
                             <a b-jabq2d7uqs href="javascript:;" id="S" accesskey="S" class="searchSwitchBtn searchSwitchBtnJs nav-link text-white px-3" title="&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;">
                                 <i b-jabq2d7uqs class="ci ci-scope"></i>
                                 <span b-jabq2d7uqs class="visually-hidden">&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;</span>
                             </a>
                         </div>
                     </div>
+                    <script>
+                        //detect header social btn
+                        if(!document.getElementsByClassName('navSocial').length){
+                            document.body.className += ' noHdSocial';
+                        }
+                    </script>
                 </div>
             </div>
         </div>
@@ -389,59 +399,59 @@
                 </div>
 
                 <!-- 列表 -->
-                                <!-- 列表樣式三 -->
-                                <ul class="list4-2 list-group divider mb-5" id="ListTable">
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://law.moea.gov.tw/LawContent.aspx?id=GL001139#lawmenu" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='地方文化特色整合5G應用與落地計畫補助作業要點（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x5730;&#x65B9;&#x6587;&#x5316;&#x7279;&#x8272;&#x6574;&#x5408;5G&#x61C9;&#x7528;&#x8207;&#x843D;&#x5730;&#x8A08;&#x756B;&#x88DC;&#x52A9;&#x4F5C;&#x696D;&#x8981;&#x9EDE;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://law.moea.gov.tw/LawContent.aspx?id=FL077117#lawmenu" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='數位發展部推薦從事跨境網路交易價金代收轉付資料處理服務業者作業要點（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;&#x63A8;&#x85A6;&#x5F9E;&#x4E8B;&#x8DE8;&#x5883;&#x7DB2;&#x8DEF;&#x4EA4;&#x6613;&#x50F9;&#x91D1;&#x4EE3;&#x6536;&#x8F49;&#x4ED8;&#x8CC7;&#x6599;&#x8655;&#x7406;&#x670D;&#x52D9;&#x696D;&#x8005;&#x4F5C;&#x696D;&#x8981;&#x9EDE;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://law.moea.gov.tw/LawContent.aspx?id=GL001131" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='數位發展部數位產業署引領中小微型企業數位轉型戰略攻頂計畫補助作業要點（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72;&#x5F15;&#x9818;&#x4E2D;&#x5C0F;&#x5FAE;&#x578B;&#x4F01;&#x696D;&#x6578;&#x4F4D;&#x8F49;&#x578B;&#x6230;&#x7565;&#x653B;&#x9802;&#x8A08;&#x756B;&#x88DC;&#x52A9;&#x4F5C;&#x696D;&#x8981;&#x9EDE;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://law.moea.gov.tw/LawContent.aspx?id=GL001068" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='數位發展部數位產業署數位青年轉型種子賦能計畫作業要點（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72;&#x6578;&#x4F4D;&#x9752;&#x5E74;&#x8F49;&#x578B;&#x7A2E;&#x5B50;&#x8CE6;&#x80FD;&#x8A08;&#x756B;&#x4F5C;&#x696D;&#x8981;&#x9EDE;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://ncclaw.ncc.gov.tw/FLAW/FLAWDAT01.aspx?id=FL069481&amp;keyword=" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='數位發展部審查通訊傳播事業研究發展活動支出適用投資抵減作業要點（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;&#x5BE9;&#x67E5;&#x901A;&#x8A0A;&#x50B3;&#x64AD;&#x4E8B;&#x696D;&#x7814;&#x7A76;&#x767C;&#x5C55;&#x6D3B;&#x52D5;&#x652F;&#x51FA;&#x9069;&#x7528;&#x6295;&#x8CC7;&#x62B5;&#x6E1B;&#x4F5C;&#x696D;&#x8981;&#x9EDE;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                </ul>
+                                    <!-- 列表樣式三 -->
+                                    <ul class="list4-2 list-group divider mb-5" id="ListTable">
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://law.moea.gov.tw/LawContent.aspx?id=GL001139#lawmenu" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='地方文化特色整合5G應用與落地計畫補助作業要點（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x5730;&#x65B9;&#x6587;&#x5316;&#x7279;&#x8272;&#x6574;&#x5408;5G&#x61C9;&#x7528;&#x8207;&#x843D;&#x5730;&#x8A08;&#x756B;&#x88DC;&#x52A9;&#x4F5C;&#x696D;&#x8981;&#x9EDE;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://law.moea.gov.tw/LawContent.aspx?id=FL077117#lawmenu" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='數位發展部推薦從事跨境網路交易價金代收轉付資料處理服務業者作業要點（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;&#x63A8;&#x85A6;&#x5F9E;&#x4E8B;&#x8DE8;&#x5883;&#x7DB2;&#x8DEF;&#x4EA4;&#x6613;&#x50F9;&#x91D1;&#x4EE3;&#x6536;&#x8F49;&#x4ED8;&#x8CC7;&#x6599;&#x8655;&#x7406;&#x670D;&#x52D9;&#x696D;&#x8005;&#x4F5C;&#x696D;&#x8981;&#x9EDE;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://law.moea.gov.tw/LawContent.aspx?id=GL001131" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='數位發展部數位產業署引領中小微型企業數位轉型戰略攻頂計畫補助作業要點（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72;&#x5F15;&#x9818;&#x4E2D;&#x5C0F;&#x5FAE;&#x578B;&#x4F01;&#x696D;&#x6578;&#x4F4D;&#x8F49;&#x578B;&#x6230;&#x7565;&#x653B;&#x9802;&#x8A08;&#x756B;&#x88DC;&#x52A9;&#x4F5C;&#x696D;&#x8981;&#x9EDE;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://law.moea.gov.tw/LawContent.aspx?id=GL001068" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='數位發展部數位產業署數位青年轉型種子賦能計畫作業要點（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72;&#x6578;&#x4F4D;&#x9752;&#x5E74;&#x8F49;&#x578B;&#x7A2E;&#x5B50;&#x8CE6;&#x80FD;&#x8A08;&#x756B;&#x4F5C;&#x696D;&#x8981;&#x9EDE;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://ncclaw.ncc.gov.tw/FLAW/FLAWDAT01.aspx?id=FL069481&amp;keyword=" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='數位發展部審查通訊傳播事業研究發展活動支出適用投資抵減作業要點（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;&#x5BE9;&#x67E5;&#x901A;&#x8A0A;&#x50B3;&#x64AD;&#x4E8B;&#x696D;&#x7814;&#x7A76;&#x767C;&#x5C55;&#x6D3B;&#x52D5;&#x652F;&#x51FA;&#x9069;&#x7528;&#x6295;&#x8CC7;&#x62B5;&#x6E1B;&#x4F5C;&#x696D;&#x8981;&#x9EDE;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                    </ul>
                         <div class="pageBar mb-5 ">
     <div class="pageSet mb-4">
                         <div class="mRow">共<span class="totalData">5</span>筆資料</div>
@@ -633,7 +643,7 @@
                 <div class="ftBtmRights">
                     <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero (另開新視窗)">CC0</a>&nbsp;No copyright reserved.</p>
 
-                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-18<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-19<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
             </div>
             <div class="col-12 col-md text-md-end">
@@ -673,28 +683,27 @@
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/ADI/assets/js/common.js?v=x0UupwgjHYYaah8zqMcOzWDeoIMb2-zxrmwpE3QrD6M"></script>
+            <script src="/ADI/assets/js/common.js?v=zmUPd4Szq_QadYaZuW3Pv7TwZ8vgeEkcGx3qVI32v1M"></script>
     <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=V2JExwd7xdBP26AtgTeajbqPQbpLse0DlFgoRNwRcdo"></script>
+    <script src="/js/site.js?v=r3b45PJ-Q435KvD8SAVTjXll8cXI-McYimLv_DaGbWU"></script>
     <script>
         webSiteLange('zh-tw' ,'ADI'  );
 
     </script>
     
-<script>
-    var _JsData;
-    var S1 ;
-    var S2 ;
-    var _needtag = NeedTag('NoDateTextList');
-    _JsData = JSON.parse('[{"mainsn":"1551","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL001139#lawmenu","target":"_blank","title":"\u5730\u65B9\u6587\u5316\u7279\u8272\u6574\u54085G\u61C9\u7528\u8207\u843D\u5730\u8A08\u756B\u88DC\u52A9\u4F5C\u696D\u8981\u9EDE","startdate":"2022-08-27","newstitle":"\u5730\u65B9\u6587\u5316\u7279\u8272\u6574\u54085G\u61C9\u7528\u8207\u843D\u5730\u8A08\u756B\u88DC\u52A9\u4F5C\u696D\u8981\u9EDE","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"1553","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=FL077117#lawmenu","target":"_blank","title":"\u6578\u4F4D\u767C\u5C55\u90E8\u63A8\u85A6\u5F9E\u4E8B\u8DE8\u5883\u7DB2\u8DEF\u4EA4\u6613\u50F9\u91D1\u4EE3\u6536\u8F49\u4ED8\u8CC7\u6599\u8655\u7406\u670D\u52D9\u696D\u8005\u4F5C\u696D\u8981\u9EDE","startdate":"2022-08-27","newstitle":"\u6578\u4F4D\u767C\u5C55\u90E8\u63A8\u85A6\u5F9E\u4E8B\u8DE8\u5883\u7DB2\u8DEF\u4EA4\u6613\u50F9\u91D1\u4EE3\u6536\u8F49\u4ED8\u8CC7\u6599\u8655\u7406\u670D\u52D9\u696D\u8005\u4F5C\u696D\u8981\u9EDE","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"1555","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL001131","target":"_blank","title":"\u6578\u4F4D\u767C\u5C55\u90E8\u6578\u4F4D\u7522\u696D\u7F72\u5F15\u9818\u4E2D\u5C0F\u5FAE\u578B\u4F01\u696D\u6578\u4F4D\u8F49\u578B\u6230\u7565\u653B\u9802\u8A08\u756B\u88DC\u52A9\u4F5C\u696D\u8981\u9EDE","startdate":"2022-08-27","newstitle":"\u6578\u4F4D\u767C\u5C55\u90E8\u6578\u4F4D\u7522\u696D\u7F72\u5F15\u9818\u4E2D\u5C0F\u5FAE\u578B\u4F01\u696D\u6578\u4F4D\u8F49\u578B\u6230\u7565\u653B\u9802\u8A08\u756B\u88DC\u52A9\u4F5C\u696D\u8981\u9EDE","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"1557","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL001068","target":"_blank","title":"\u6578\u4F4D\u767C\u5C55\u90E8\u6578\u4F4D\u7522\u696D\u7F72\u6578\u4F4D\u9752\u5E74\u8F49\u578B\u7A2E\u5B50\u8CE6\u80FD\u8A08\u756B\u4F5C\u696D\u8981\u9EDE","startdate":"2022-08-27","newstitle":"\u6578\u4F4D\u767C\u5C55\u90E8\u6578\u4F4D\u7522\u696D\u7F72\u6578\u4F4D\u9752\u5E74\u8F49\u578B\u7A2E\u5B50\u8CE6\u80FD\u8A08\u756B\u4F5C\u696D\u8981\u9EDE","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"1559","istopdisplay":"none","href":"https://ncclaw.ncc.gov.tw/FLAW/FLAWDAT01.aspx?id=FL069481\u0026keyword=","target":"_blank","title":"\u6578\u4F4D\u767C\u5C55\u90E8\u5BE9\u67E5\u901A\u8A0A\u50B3\u64AD\u4E8B\u696D\u7814\u7A76\u767C\u5C55\u6D3B\u52D5\u652F\u51FA\u9069\u7528\u6295\u8CC7\u62B5\u6E1B\u4F5C\u696D\u8981\u9EDE","startdate":"2022-08-27","newstitle":"\u6578\u4F4D\u767C\u5C55\u90E8\u5BE9\u67E5\u901A\u8A0A\u50B3\u64AD\u4E8B\u696D\u7814\u7A76\u767C\u5C55\u6D3B\u52D5\u652F\u51FA\u9069\u7528\u6295\u8CC7\u62B5\u6E1B\u4F5C\u696D\u8981\u9EDE","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"}]');
-    LeftMenu('908');
-   NewList('908');
-    var ListPage = '/_news/NoDateTextList.html';
-    var listTag2Page = '/_news/listTag2.html';
-    $("#ns").load(ListPage, function () {
-        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
-    });
-</script>
+    <script>
+        var _JsData;
+        var _needtag = NeedTag('NoDateTextList');
+        var _Module = 'NEWS';
+        _JsData = JSON.parse('[{"mainsn":"1551","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL001139#lawmenu","target":"_blank","title":"\u5730\u65B9\u6587\u5316\u7279\u8272\u6574\u54085G\u61C9\u7528\u8207\u843D\u5730\u8A08\u756B\u88DC\u52A9\u4F5C\u696D\u8981\u9EDE","startdate":"2022-08-27","newstitle":"\u5730\u65B9\u6587\u5316\u7279\u8272\u6574\u54085G\u61C9\u7528\u8207\u843D\u5730\u8A08\u756B\u88DC\u52A9\u4F5C\u696D\u8981\u9EDE","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1553","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=FL077117#lawmenu","target":"_blank","title":"\u6578\u4F4D\u767C\u5C55\u90E8\u63A8\u85A6\u5F9E\u4E8B\u8DE8\u5883\u7DB2\u8DEF\u4EA4\u6613\u50F9\u91D1\u4EE3\u6536\u8F49\u4ED8\u8CC7\u6599\u8655\u7406\u670D\u52D9\u696D\u8005\u4F5C\u696D\u8981\u9EDE","startdate":"2022-08-27","newstitle":"\u6578\u4F4D\u767C\u5C55\u90E8\u63A8\u85A6\u5F9E\u4E8B\u8DE8\u5883\u7DB2\u8DEF\u4EA4\u6613\u50F9\u91D1\u4EE3\u6536\u8F49\u4ED8\u8CC7\u6599\u8655\u7406\u670D\u52D9\u696D\u8005\u4F5C\u696D\u8981\u9EDE","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1555","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL001131","target":"_blank","title":"\u6578\u4F4D\u767C\u5C55\u90E8\u6578\u4F4D\u7522\u696D\u7F72\u5F15\u9818\u4E2D\u5C0F\u5FAE\u578B\u4F01\u696D\u6578\u4F4D\u8F49\u578B\u6230\u7565\u653B\u9802\u8A08\u756B\u88DC\u52A9\u4F5C\u696D\u8981\u9EDE","startdate":"2022-08-27","newstitle":"\u6578\u4F4D\u767C\u5C55\u90E8\u6578\u4F4D\u7522\u696D\u7F72\u5F15\u9818\u4E2D\u5C0F\u5FAE\u578B\u4F01\u696D\u6578\u4F4D\u8F49\u578B\u6230\u7565\u653B\u9802\u8A08\u756B\u88DC\u52A9\u4F5C\u696D\u8981\u9EDE","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1557","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL001068","target":"_blank","title":"\u6578\u4F4D\u767C\u5C55\u90E8\u6578\u4F4D\u7522\u696D\u7F72\u6578\u4F4D\u9752\u5E74\u8F49\u578B\u7A2E\u5B50\u8CE6\u80FD\u8A08\u756B\u4F5C\u696D\u8981\u9EDE","startdate":"2022-08-27","newstitle":"\u6578\u4F4D\u767C\u5C55\u90E8\u6578\u4F4D\u7522\u696D\u7F72\u6578\u4F4D\u9752\u5E74\u8F49\u578B\u7A2E\u5B50\u8CE6\u80FD\u8A08\u756B\u4F5C\u696D\u8981\u9EDE","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1559","istopdisplay":"none","href":"https://ncclaw.ncc.gov.tw/FLAW/FLAWDAT01.aspx?id=FL069481\u0026keyword=","target":"_blank","title":"\u6578\u4F4D\u767C\u5C55\u90E8\u5BE9\u67E5\u901A\u8A0A\u50B3\u64AD\u4E8B\u696D\u7814\u7A76\u767C\u5C55\u6D3B\u52D5\u652F\u51FA\u9069\u7528\u6295\u8CC7\u62B5\u6E1B\u4F5C\u696D\u8981\u9EDE","startdate":"2022-08-27","newstitle":"\u6578\u4F4D\u767C\u5C55\u90E8\u5BE9\u67E5\u901A\u8A0A\u50B3\u64AD\u4E8B\u696D\u7814\u7A76\u767C\u5C55\u6D3B\u52D5\u652F\u51FA\u9069\u7528\u6295\u8CC7\u62B5\u6E1B\u4F5C\u696D\u8981\u9EDE","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null}]');
+        LeftMenu('908');
+        NewList('908');
+        var ListPage = '/_news/NoDateTextList.html';
+        var listTag2Page = '/_news/listTag2.html';
+        $("#ns").load(ListPage, function () {
+            if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+        });
+    </script>
 
 </body>
 </html>

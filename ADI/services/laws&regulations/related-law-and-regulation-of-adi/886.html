@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/ADI/assets/css/layout.css?v=lFRGWo9ll0_yrhbB0k7NHWoFYODtIvA5J4BOAF_ss00" media="all" />
+            <link rel="stylesheet" href="/ADI/assets/css/layout.css?v=jZyKUu2SZ5ExvaVv1DVT7z8BKU_Z3Q98pCjfF9x0Ux8" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -55,12 +55,15 @@
     <header class="header">
         <!-- header -->
         <div b-jabq2d7uqs class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-jabq2d7uqs class="a11yBrickBar1 position-relative"><a b-jabq2d7uqs href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="&#x9801;&#x9762;&#x9802;&#x7AEF;&#x529F;&#x80FD;&#x5340;&#x584A;[&#x5FEB;&#x6377;&#x9375;Alt&#x2B;U]">:::</a></div></div>
-        <div b-jabq2d7uqs class="baseNav d-none d-xxl-block">
+
+        <!-- 若沒有社群鈕<div class="baseNav d-none d-xxl-block"> -->
+		<div b-jabq2d7uqs class="baseNav">
             <div b-jabq2d7uqs class="wrap1 mx-auto px-4 px-lg-5">
-                <div b-jabq2d7uqs class="d-md-flex justify-content-end align-items-center">
+				<div b-jabq2d7uqs class="d-flex justify-content-end align-items-top">
                     <!-- Top bar right -->
                     <div b-jabq2d7uqs class="d-flex align-items-top">
-                        <ul b-jabq2d7uqs class="nav">
+                        <!-- 社群鈕 -->
+                        <ul b-jabq2d7uqs class="nav d-none d-xxl-flex">
                                 <li b-jabq2d7uqs class="nav-item">
                                     <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/" target='_blank' rel='noreferrer noopener' title='數位發展部（另開新視窗）'>
                                         <i b-jabq2d7uqs class="ci ci-moda"></i>
@@ -73,6 +76,7 @@
                                     <span b-jabq2d7uqs class="visually-hidden">&#x7DB2;&#x7AD9;&#x5C0E;&#x89BD;</span>
                                 </a>
                             </li>
+
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/en/ADI/index.html" title="English">
                                     <i b-jabq2d7uqs class="ci ci-en"></i>
@@ -81,7 +85,7 @@
                             </li>
                         </ul>
                         <!-- 切換字體大小 -->
-                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs">
+                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs d-none d-xxl-flex">
                             <button b-jabq2d7uqs class="fontSizeDdNow btn-dropdownNow dropdown-toggle text-white" type="button" id="fontSizeDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-order="2" title="&#x4E2D;&#x5B57;&#x7D1A;"><i b-jabq2d7uqs class="ci ci-font2"></i><span b-jabq2d7uqs class="visually-hidden">A</span></button>
                             <ul b-jabq2d7uqs class="dropdown-menu" aria-labelledby="fontSizeDropdown">
                                 <li b-jabq2d7uqs><button b-jabq2d7uqs class="dropdown-item" type="button" data-order="1" title="&#x5927;&#x5B57;&#x7D1A;">A<sup b-jabq2d7uqs>+</sup></button></li>
@@ -89,13 +93,19 @@
                             </ul>
                         </div>
                         <!-- 搜尋鈕 -->
-                        <div b-jabq2d7uqs class="nav-item navbar-icon-link">
+                        <div b-jabq2d7uqs class="nav-item navbar-icon-link d-none d-xxl-flex">
                             <a b-jabq2d7uqs href="javascript:;" id="S" accesskey="S" class="searchSwitchBtn searchSwitchBtnJs nav-link text-white px-3" title="&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;">
                                 <i b-jabq2d7uqs class="ci ci-scope"></i>
                                 <span b-jabq2d7uqs class="visually-hidden">&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;</span>
                             </a>
                         </div>
                     </div>
+                    <script>
+                        //detect header social btn
+                        if(!document.getElementsByClassName('navSocial').length){
+                            document.body.className += ' noHdSocial';
+                        }
+                    </script>
                 </div>
             </div>
         </div>
@@ -389,139 +399,139 @@
                 </div>
 
                 <!-- 列表 -->
-                                <!-- 列表樣式三 -->
-                                <ul class="list4-2 list-group divider mb-5" id="ListTable">
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080037" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='電子簽章法（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x96FB;&#x5B50;&#x7C3D;&#x7AE0;&#x6CD5;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080039&amp;kw=%e9%9b%bb%e5%ad%90%e7%b0%bd%e7%ab%a0%e6%b3%95" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='電子簽章法施行細則（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x96FB;&#x5B50;&#x7C3D;&#x7AE0;&#x6CD5;&#x65BD;&#x884C;&#x7D30;&#x5247;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080038" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='外國憑證機構許可辦法（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x5916;&#x570B;&#x6191;&#x8B49;&#x6A5F;&#x69CB;&#x8A31;&#x53EF;&#x8FA6;&#x6CD5;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080040" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='憑證實務作業基準應載明事項準則（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x6191;&#x8B49;&#x5BE6;&#x52D9;&#x4F5C;&#x696D;&#x57FA;&#x6E96;&#x61C9;&#x8F09;&#x660E;&#x4E8B;&#x9805;&#x6E96;&#x5247;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://law.moea.gov.tw/LawContent.aspx?id=GL001228&amp;kw=%e9%9b%b6%e5%94%ae%e6%a5%ad%e7%ad%89%e7%b6%b2%e8%b7%af%e4%ba%a4%e6%98%93%e5%ae%9a%e5%9e%8b%e5%8c%96%e5%a5%91%e7%b4%84%e6%87%89%e8%a8%98%e8%bc%89%e5%8f%8a%e4%b8%8d%e5%be%97%e8%a8%98%e8%bc%89%e4%ba%8b%e9%a0%85" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='零售業等網路交易定型化契約應記載及不得記載事項（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x96F6;&#x552E;&#x696D;&#x7B49;&#x7DB2;&#x8DEF;&#x4EA4;&#x6613;&#x5B9A;&#x578B;&#x5316;&#x5951;&#x7D04;&#x61C9;&#x8A18;&#x8F09;&#x53CA;&#x4E0D;&#x5F97;&#x8A18;&#x8F09;&#x4E8B;&#x9805;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080060" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='第三方支付服務業防制洗錢及打擊資恐辦法（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x7B2C;&#x4E09;&#x65B9;&#x652F;&#x4ED8;&#x670D;&#x52D9;&#x696D;&#x9632;&#x5236;&#x6D17;&#x9322;&#x53CA;&#x6253;&#x64CA;&#x8CC7;&#x6050;&#x8FA6;&#x6CD5;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://law.moea.gov.tw/LawContent.aspx?id=GL001229&amp;kw=%e7%ac%ac%e4%b8%89%e6%96%b9%e6%94%af%e4%bb%98%e6%9c%8d%e5%8b%99%e5%ae%9a%e5%9e%8b%e5%8c%96%e5%a5%91%e7%b4%84%e6%87%89%e8%a8%98%e8%bc%89%e5%8f%8a%e4%b8%8d%e5%be%97%e8%a8%98%e8%bc%89%e4%ba%8b%e9%a0%85" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='第三方支付服務定型化契約應記載及不得記載事項（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x7B2C;&#x4E09;&#x65B9;&#x652F;&#x4ED8;&#x670D;&#x52D9;&#x5B9A;&#x578B;&#x5316;&#x5951;&#x7D04;&#x61C9;&#x8A18;&#x8F09;&#x53CA;&#x4E0D;&#x5F97;&#x8A18;&#x8F09;&#x4E8B;&#x9805;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080052&amp;flno=4" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='網際網路零售業及網際網路零售服務平台業個人資料檔案安全維護計畫及業務終止後個人資料處理作業辦法（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x7DB2;&#x969B;&#x7DB2;&#x8DEF;&#x96F6;&#x552E;&#x696D;&#x53CA;&#x7DB2;&#x969B;&#x7DB2;&#x8DEF;&#x96F6;&#x552E;&#x670D;&#x52D9;&#x5E73;&#x53F0;&#x696D;&#x500B;&#x4EBA;&#x8CC7;&#x6599;&#x6A94;&#x6848;&#x5B89;&#x5168;&#x7DAD;&#x8B77;&#x8A08;&#x756B;&#x53CA;&#x696D;&#x52D9;&#x7D42;&#x6B62;&#x5F8C;&#x500B;&#x4EBA;&#x8CC7;&#x6599;&#x8655;&#x7406;&#x4F5C;&#x696D;&#x8FA6;&#x6CD5;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://law.moea.gov.tw/LawContent.aspx?id=GL000876&amp;kw=%e7%b6%b2%e9%9a%9b%e7%b6%b2%e8%b7%af%e6%95%99%e5%ad%b8%e6%9c%8d%e5%8b%99%e5%ae%9a%e5%9e%8b%e5%8c%96%e5%a5%91%e7%b4%84%e6%87%89%e8%a8%98%e8%bc%89%e5%8f%8a%e4%b8%8d%e5%be%97%e8%a8%98%e8%bc%89%e4%ba%8b%e9%a0%85" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='網際網路教學服務定型化契約應記載及不得記載事項（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x7DB2;&#x969B;&#x7DB2;&#x8DEF;&#x6559;&#x5B78;&#x670D;&#x52D9;&#x5B9A;&#x578B;&#x5316;&#x5951;&#x7D04;&#x61C9;&#x8A18;&#x8F09;&#x53CA;&#x4E0D;&#x5F97;&#x8A18;&#x8F09;&#x4E8B;&#x9805;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://law.moea.gov.tw/LawContent.aspx?id=GL000876#lawmenu" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='網路連線遊戲服務定型化契約應記載及不得記載事項（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x7DB2;&#x8DEF;&#x9023;&#x7DDA;&#x904A;&#x6232;&#x670D;&#x52D9;&#x5B9A;&#x578B;&#x5316;&#x5951;&#x7D04;&#x61C9;&#x8A18;&#x8F09;&#x53CA;&#x4E0D;&#x5F97;&#x8A18;&#x8F09;&#x4E8B;&#x9805;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://law.moea.gov.tw/LawContent.aspx?id=GL001209&amp;kw=%e7%b7%9a%e4%b8%8a%e9%81%8a%e6%88%b2%e9%bb%9e%ef%a5%a9%ef%bc%88%e5%8d%a1%ef%bc%89%e5%ae%9a%e5%9e%8b%e5%8c%96%ef%a4%89%e7%b4%84%e6%87%89%e8%a8%98%e8%bc%89%e5%8f%8a%ef%a5%a7%e5%be%97%e8%a8%98%e8%bc%89%e4%ba%8b%e9%a0%85" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='線上遊戲點數（卡）定型化契約應記載及不得記載事項（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x7DDA;&#x4E0A;&#x904A;&#x6232;&#x9EDE;&#xF969;&#xFF08;&#x5361;&#xFF09;&#x5B9A;&#x578B;&#x5316;&#xF909;&#x7D04;&#x61C9;&#x8A18;&#x8F09;&#x53CA;&#xF967;&#x5F97;&#x8A18;&#x8F09;&#x4E8B;&#x9805;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0030086" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='遊戲軟體分級管理辦法（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x904A;&#x6232;&#x8EDF;&#x9AD4;&#x5206;&#x7D1A;&#x7BA1;&#x7406;&#x8FA6;&#x6CD5;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://law.moea.gov.tw/LawContent.aspx?id=GL000459#lawmenu" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='即時通訊軟體服務定型化契約應記載及不得記載事項（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x5373;&#x6642;&#x901A;&#x8A0A;&#x8EDF;&#x9AD4;&#x670D;&#x52D9;&#x5B9A;&#x578B;&#x5316;&#x5951;&#x7D04;&#x61C9;&#x8A18;&#x8F09;&#x53CA;&#x4E0D;&#x5F97;&#x8A18;&#x8F09;&#x4E8B;&#x9805;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                </ul>
+                                    <!-- 列表樣式三 -->
+                                    <ul class="list4-2 list-group divider mb-5" id="ListTable">
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080037" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='電子簽章法（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x96FB;&#x5B50;&#x7C3D;&#x7AE0;&#x6CD5;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080039&amp;kw=%e9%9b%bb%e5%ad%90%e7%b0%bd%e7%ab%a0%e6%b3%95" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='電子簽章法施行細則（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x96FB;&#x5B50;&#x7C3D;&#x7AE0;&#x6CD5;&#x65BD;&#x884C;&#x7D30;&#x5247;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080038" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='外國憑證機構許可辦法（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x5916;&#x570B;&#x6191;&#x8B49;&#x6A5F;&#x69CB;&#x8A31;&#x53EF;&#x8FA6;&#x6CD5;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080040" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='憑證實務作業基準應載明事項準則（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x6191;&#x8B49;&#x5BE6;&#x52D9;&#x4F5C;&#x696D;&#x57FA;&#x6E96;&#x61C9;&#x8F09;&#x660E;&#x4E8B;&#x9805;&#x6E96;&#x5247;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://law.moea.gov.tw/LawContent.aspx?id=GL001228&amp;kw=%e9%9b%b6%e5%94%ae%e6%a5%ad%e7%ad%89%e7%b6%b2%e8%b7%af%e4%ba%a4%e6%98%93%e5%ae%9a%e5%9e%8b%e5%8c%96%e5%a5%91%e7%b4%84%e6%87%89%e8%a8%98%e8%bc%89%e5%8f%8a%e4%b8%8d%e5%be%97%e8%a8%98%e8%bc%89%e4%ba%8b%e9%a0%85" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='零售業等網路交易定型化契約應記載及不得記載事項（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x96F6;&#x552E;&#x696D;&#x7B49;&#x7DB2;&#x8DEF;&#x4EA4;&#x6613;&#x5B9A;&#x578B;&#x5316;&#x5951;&#x7D04;&#x61C9;&#x8A18;&#x8F09;&#x53CA;&#x4E0D;&#x5F97;&#x8A18;&#x8F09;&#x4E8B;&#x9805;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080060" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='第三方支付服務業防制洗錢及打擊資恐辦法（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x7B2C;&#x4E09;&#x65B9;&#x652F;&#x4ED8;&#x670D;&#x52D9;&#x696D;&#x9632;&#x5236;&#x6D17;&#x9322;&#x53CA;&#x6253;&#x64CA;&#x8CC7;&#x6050;&#x8FA6;&#x6CD5;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://law.moea.gov.tw/LawContent.aspx?id=GL001229&amp;kw=%e7%ac%ac%e4%b8%89%e6%96%b9%e6%94%af%e4%bb%98%e6%9c%8d%e5%8b%99%e5%ae%9a%e5%9e%8b%e5%8c%96%e5%a5%91%e7%b4%84%e6%87%89%e8%a8%98%e8%bc%89%e5%8f%8a%e4%b8%8d%e5%be%97%e8%a8%98%e8%bc%89%e4%ba%8b%e9%a0%85" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='第三方支付服務定型化契約應記載及不得記載事項（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x7B2C;&#x4E09;&#x65B9;&#x652F;&#x4ED8;&#x670D;&#x52D9;&#x5B9A;&#x578B;&#x5316;&#x5951;&#x7D04;&#x61C9;&#x8A18;&#x8F09;&#x53CA;&#x4E0D;&#x5F97;&#x8A18;&#x8F09;&#x4E8B;&#x9805;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080052&amp;flno=4" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='網際網路零售業及網際網路零售服務平台業個人資料檔案安全維護計畫及業務終止後個人資料處理作業辦法（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x7DB2;&#x969B;&#x7DB2;&#x8DEF;&#x96F6;&#x552E;&#x696D;&#x53CA;&#x7DB2;&#x969B;&#x7DB2;&#x8DEF;&#x96F6;&#x552E;&#x670D;&#x52D9;&#x5E73;&#x53F0;&#x696D;&#x500B;&#x4EBA;&#x8CC7;&#x6599;&#x6A94;&#x6848;&#x5B89;&#x5168;&#x7DAD;&#x8B77;&#x8A08;&#x756B;&#x53CA;&#x696D;&#x52D9;&#x7D42;&#x6B62;&#x5F8C;&#x500B;&#x4EBA;&#x8CC7;&#x6599;&#x8655;&#x7406;&#x4F5C;&#x696D;&#x8FA6;&#x6CD5;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://law.moea.gov.tw/LawContent.aspx?id=GL000876&amp;kw=%e7%b6%b2%e9%9a%9b%e7%b6%b2%e8%b7%af%e6%95%99%e5%ad%b8%e6%9c%8d%e5%8b%99%e5%ae%9a%e5%9e%8b%e5%8c%96%e5%a5%91%e7%b4%84%e6%87%89%e8%a8%98%e8%bc%89%e5%8f%8a%e4%b8%8d%e5%be%97%e8%a8%98%e8%bc%89%e4%ba%8b%e9%a0%85" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='網際網路教學服務定型化契約應記載及不得記載事項（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x7DB2;&#x969B;&#x7DB2;&#x8DEF;&#x6559;&#x5B78;&#x670D;&#x52D9;&#x5B9A;&#x578B;&#x5316;&#x5951;&#x7D04;&#x61C9;&#x8A18;&#x8F09;&#x53CA;&#x4E0D;&#x5F97;&#x8A18;&#x8F09;&#x4E8B;&#x9805;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://law.moea.gov.tw/LawContent.aspx?id=GL000876#lawmenu" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='網路連線遊戲服務定型化契約應記載及不得記載事項（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x7DB2;&#x8DEF;&#x9023;&#x7DDA;&#x904A;&#x6232;&#x670D;&#x52D9;&#x5B9A;&#x578B;&#x5316;&#x5951;&#x7D04;&#x61C9;&#x8A18;&#x8F09;&#x53CA;&#x4E0D;&#x5F97;&#x8A18;&#x8F09;&#x4E8B;&#x9805;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://law.moea.gov.tw/LawContent.aspx?id=GL001209&amp;kw=%e7%b7%9a%e4%b8%8a%e9%81%8a%e6%88%b2%e9%bb%9e%ef%a5%a9%ef%bc%88%e5%8d%a1%ef%bc%89%e5%ae%9a%e5%9e%8b%e5%8c%96%ef%a4%89%e7%b4%84%e6%87%89%e8%a8%98%e8%bc%89%e5%8f%8a%ef%a5%a7%e5%be%97%e8%a8%98%e8%bc%89%e4%ba%8b%e9%a0%85" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='線上遊戲點數（卡）定型化契約應記載及不得記載事項（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x7DDA;&#x4E0A;&#x904A;&#x6232;&#x9EDE;&#xF969;&#xFF08;&#x5361;&#xFF09;&#x5B9A;&#x578B;&#x5316;&#xF909;&#x7D04;&#x61C9;&#x8A18;&#x8F09;&#x53CA;&#xF967;&#x5F97;&#x8A18;&#x8F09;&#x4E8B;&#x9805;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0030086" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='遊戲軟體分級管理辦法（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x904A;&#x6232;&#x8EDF;&#x9AD4;&#x5206;&#x7D1A;&#x7BA1;&#x7406;&#x8FA6;&#x6CD5;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://law.moea.gov.tw/LawContent.aspx?id=GL000459#lawmenu" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='即時通訊軟體服務定型化契約應記載及不得記載事項（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x5373;&#x6642;&#x901A;&#x8A0A;&#x8EDF;&#x9AD4;&#x670D;&#x52D9;&#x5B9A;&#x578B;&#x5316;&#x5951;&#x7D04;&#x61C9;&#x8A18;&#x8F09;&#x53CA;&#x4E0D;&#x5F97;&#x8A18;&#x8F09;&#x4E8B;&#x9805;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                    </ul>
                         <div class="pageBar mb-5 ">
     <div class="pageSet mb-4">
                         <div class="mRow">共<span class="totalData">13</span>筆資料</div>
@@ -713,7 +723,7 @@
                 <div class="ftBtmRights">
                     <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero (另開新視窗)">CC0</a>&nbsp;No copyright reserved.</p>
 
-                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-18<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-19<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
             </div>
             <div class="col-12 col-md text-md-end">
@@ -753,28 +763,27 @@
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/ADI/assets/js/common.js?v=x0UupwgjHYYaah8zqMcOzWDeoIMb2-zxrmwpE3QrD6M"></script>
+            <script src="/ADI/assets/js/common.js?v=zmUPd4Szq_QadYaZuW3Pv7TwZ8vgeEkcGx3qVI32v1M"></script>
     <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=V2JExwd7xdBP26AtgTeajbqPQbpLse0DlFgoRNwRcdo"></script>
+    <script src="/js/site.js?v=r3b45PJ-Q435KvD8SAVTjXll8cXI-McYimLv_DaGbWU"></script>
     <script>
         webSiteLange('zh-tw' ,'ADI'  );
 
     </script>
     
-<script>
-    var _JsData;
-    var S1 ;
-    var S2 ;
-    var _needtag = NeedTag('NoDateTextList');
-    _JsData = JSON.parse('[{"mainsn":"1537","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080037","target":"_blank","title":"\u96FB\u5B50\u7C3D\u7AE0\u6CD5","startdate":"2022-08-27","newstitle":"\u96FB\u5B50\u7C3D\u7AE0\u6CD5","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"1245","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080039\u0026kw=%e9%9b%bb%e5%ad%90%e7%b0%bd%e7%ab%a0%e6%b3%95","target":"_blank","title":"\u96FB\u5B50\u7C3D\u7AE0\u6CD5\u65BD\u884C\u7D30\u5247","startdate":"2022-08-27","newstitle":"\u96FB\u5B50\u7C3D\u7AE0\u6CD5\u65BD\u884C\u7D30\u5247","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"1247","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080038","target":"_blank","title":"\u5916\u570B\u6191\u8B49\u6A5F\u69CB\u8A31\u53EF\u8FA6\u6CD5","startdate":"2022-08-27","newstitle":"\u5916\u570B\u6191\u8B49\u6A5F\u69CB\u8A31\u53EF\u8FA6\u6CD5","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"1249","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080040","target":"_blank","title":"\u6191\u8B49\u5BE6\u52D9\u4F5C\u696D\u57FA\u6E96\u61C9\u8F09\u660E\u4E8B\u9805\u6E96\u5247","startdate":"2022-08-27","newstitle":"\u6191\u8B49\u5BE6\u52D9\u4F5C\u696D\u57FA\u6E96\u61C9\u8F09\u660E\u4E8B\u9805\u6E96\u5247","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"1539","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL001228\u0026kw=%e9%9b%b6%e5%94%ae%e6%a5%ad%e7%ad%89%e7%b6%b2%e8%b7%af%e4%ba%a4%e6%98%93%e5%ae%9a%e5%9e%8b%e5%8c%96%e5%a5%91%e7%b4%84%e6%87%89%e8%a8%98%e8%bc%89%e5%8f%8a%e4%b8%8d%e5%be%97%e8%a8%98%e8%bc%89%e4%ba%8b%e9%a0%85","target":"_blank","title":"\u96F6\u552E\u696D\u7B49\u7DB2\u8DEF\u4EA4\u6613\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","startdate":"2022-08-27","newstitle":"\u96F6\u552E\u696D\u7B49\u7DB2\u8DEF\u4EA4\u6613\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"1541","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080060","target":"_blank","title":"\u7B2C\u4E09\u65B9\u652F\u4ED8\u670D\u52D9\u696D\u9632\u5236\u6D17\u9322\u53CA\u6253\u64CA\u8CC7\u6050\u8FA6\u6CD5","startdate":"2022-08-27","newstitle":"\u7B2C\u4E09\u65B9\u652F\u4ED8\u670D\u52D9\u696D\u9632\u5236\u6D17\u9322\u53CA\u6253\u64CA\u8CC7\u6050\u8FA6\u6CD5","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"1549","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL001229\u0026kw=%e7%ac%ac%e4%b8%89%e6%96%b9%e6%94%af%e4%bb%98%e6%9c%8d%e5%8b%99%e5%ae%9a%e5%9e%8b%e5%8c%96%e5%a5%91%e7%b4%84%e6%87%89%e8%a8%98%e8%bc%89%e5%8f%8a%e4%b8%8d%e5%be%97%e8%a8%98%e8%bc%89%e4%ba%8b%e9%a0%85","target":"_blank","title":"\u7B2C\u4E09\u65B9\u652F\u4ED8\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","startdate":"2022-08-27","newstitle":"\u7B2C\u4E09\u65B9\u652F\u4ED8\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"1543","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080052\u0026flno=4","target":"_blank","title":"\u7DB2\u969B\u7DB2\u8DEF\u96F6\u552E\u696D\u53CA\u7DB2\u969B\u7DB2\u8DEF\u96F6\u552E\u670D\u52D9\u5E73\u53F0\u696D\u500B\u4EBA\u8CC7\u6599\u6A94\u6848\u5B89\u5168\u7DAD\u8B77\u8A08\u756B\u53CA\u696D\u52D9\u7D42\u6B62\u5F8C\u500B\u4EBA\u8CC7\u6599\u8655\u7406\u4F5C\u696D\u8FA6\u6CD5","startdate":"2022-08-27","newstitle":"\u7DB2\u969B\u7DB2\u8DEF\u96F6\u552E\u696D\u53CA\u7DB2\u969B\u7DB2\u8DEF\u96F6\u552E\u670D\u52D9\u5E73\u53F0\u696D\u500B\u4EBA\u8CC7\u6599\u6A94\u6848\u5B89\u5168\u7DAD\u8B77\u8A08\u756B\u53CA\u696D\u52D9\u7D42\u6B62\u5F8C\u500B\u4EBA\u8CC7\u6599\u8655\u7406\u4F5C\u696D\u8FA6\u6CD5","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"1545","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL000876\u0026kw=%e7%b6%b2%e9%9a%9b%e7%b6%b2%e8%b7%af%e6%95%99%e5%ad%b8%e6%9c%8d%e5%8b%99%e5%ae%9a%e5%9e%8b%e5%8c%96%e5%a5%91%e7%b4%84%e6%87%89%e8%a8%98%e8%bc%89%e5%8f%8a%e4%b8%8d%e5%be%97%e8%a8%98%e8%bc%89%e4%ba%8b%e9%a0%85","target":"_blank","title":"\u7DB2\u969B\u7DB2\u8DEF\u6559\u5B78\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","startdate":"2022-08-27","newstitle":"\u7DB2\u969B\u7DB2\u8DEF\u6559\u5B78\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"1257","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL000876#lawmenu","target":"_blank","title":"\u7DB2\u8DEF\u9023\u7DDA\u904A\u6232\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","startdate":"2022-08-27","newstitle":"\u7DB2\u8DEF\u9023\u7DDA\u904A\u6232\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"1547","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL001209\u0026kw=%e7%b7%9a%e4%b8%8a%e9%81%8a%e6%88%b2%e9%bb%9e%ef%a5%a9%ef%bc%88%e5%8d%a1%ef%bc%89%e5%ae%9a%e5%9e%8b%e5%8c%96%ef%a4%89%e7%b4%84%e6%87%89%e8%a8%98%e8%bc%89%e5%8f%8a%ef%a5%a7%e5%be%97%e8%a8%98%e8%bc%89%e4%ba%8b%e9%a0%85","target":"_blank","title":"\u7DDA\u4E0A\u904A\u6232\u9EDE\uF969\uFF08\u5361\uFF09\u5B9A\u578B\u5316\uF909\u7D04\u61C9\u8A18\u8F09\u53CA\uF967\u5F97\u8A18\u8F09\u4E8B\u9805","startdate":"2022-08-27","newstitle":"\u7DDA\u4E0A\u904A\u6232\u9EDE\uF969\uFF08\u5361\uFF09\u5B9A\u578B\u5316\uF909\u7D04\u61C9\u8A18\u8F09\u53CA\uF967\u5F97\u8A18\u8F09\u4E8B\u9805","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"1259","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0030086","target":"_blank","title":"\u904A\u6232\u8EDF\u9AD4\u5206\u7D1A\u7BA1\u7406\u8FA6\u6CD5","startdate":"2022-08-27","newstitle":"\u904A\u6232\u8EDF\u9AD4\u5206\u7D1A\u7BA1\u7406\u8FA6\u6CD5","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"1740","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL000459#lawmenu","target":"_blank","title":"\u5373\u6642\u901A\u8A0A\u8EDF\u9AD4\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","startdate":"2022-08-27","newstitle":"\u5373\u6642\u901A\u8A0A\u8EDF\u9AD4\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"}]');
-    LeftMenu('886');
-   NewList('886');
-    var ListPage = '/_news/NoDateTextList.html';
-    var listTag2Page = '/_news/listTag2.html';
-    $("#ns").load(ListPage, function () {
-        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
-    });
-</script>
+    <script>
+        var _JsData;
+        var _needtag = NeedTag('NoDateTextList');
+        var _Module = 'NEWS';
+        _JsData = JSON.parse('[{"mainsn":"1537","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080037","target":"_blank","title":"\u96FB\u5B50\u7C3D\u7AE0\u6CD5","startdate":"2022-08-27","newstitle":"\u96FB\u5B50\u7C3D\u7AE0\u6CD5","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1245","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080039\u0026kw=%e9%9b%bb%e5%ad%90%e7%b0%bd%e7%ab%a0%e6%b3%95","target":"_blank","title":"\u96FB\u5B50\u7C3D\u7AE0\u6CD5\u65BD\u884C\u7D30\u5247","startdate":"2022-08-27","newstitle":"\u96FB\u5B50\u7C3D\u7AE0\u6CD5\u65BD\u884C\u7D30\u5247","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1247","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080038","target":"_blank","title":"\u5916\u570B\u6191\u8B49\u6A5F\u69CB\u8A31\u53EF\u8FA6\u6CD5","startdate":"2022-08-27","newstitle":"\u5916\u570B\u6191\u8B49\u6A5F\u69CB\u8A31\u53EF\u8FA6\u6CD5","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1249","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080040","target":"_blank","title":"\u6191\u8B49\u5BE6\u52D9\u4F5C\u696D\u57FA\u6E96\u61C9\u8F09\u660E\u4E8B\u9805\u6E96\u5247","startdate":"2022-08-27","newstitle":"\u6191\u8B49\u5BE6\u52D9\u4F5C\u696D\u57FA\u6E96\u61C9\u8F09\u660E\u4E8B\u9805\u6E96\u5247","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1539","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL001228\u0026kw=%e9%9b%b6%e5%94%ae%e6%a5%ad%e7%ad%89%e7%b6%b2%e8%b7%af%e4%ba%a4%e6%98%93%e5%ae%9a%e5%9e%8b%e5%8c%96%e5%a5%91%e7%b4%84%e6%87%89%e8%a8%98%e8%bc%89%e5%8f%8a%e4%b8%8d%e5%be%97%e8%a8%98%e8%bc%89%e4%ba%8b%e9%a0%85","target":"_blank","title":"\u96F6\u552E\u696D\u7B49\u7DB2\u8DEF\u4EA4\u6613\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","startdate":"2022-08-27","newstitle":"\u96F6\u552E\u696D\u7B49\u7DB2\u8DEF\u4EA4\u6613\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1541","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080060","target":"_blank","title":"\u7B2C\u4E09\u65B9\u652F\u4ED8\u670D\u52D9\u696D\u9632\u5236\u6D17\u9322\u53CA\u6253\u64CA\u8CC7\u6050\u8FA6\u6CD5","startdate":"2022-08-27","newstitle":"\u7B2C\u4E09\u65B9\u652F\u4ED8\u670D\u52D9\u696D\u9632\u5236\u6D17\u9322\u53CA\u6253\u64CA\u8CC7\u6050\u8FA6\u6CD5","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1549","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL001229\u0026kw=%e7%ac%ac%e4%b8%89%e6%96%b9%e6%94%af%e4%bb%98%e6%9c%8d%e5%8b%99%e5%ae%9a%e5%9e%8b%e5%8c%96%e5%a5%91%e7%b4%84%e6%87%89%e8%a8%98%e8%bc%89%e5%8f%8a%e4%b8%8d%e5%be%97%e8%a8%98%e8%bc%89%e4%ba%8b%e9%a0%85","target":"_blank","title":"\u7B2C\u4E09\u65B9\u652F\u4ED8\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","startdate":"2022-08-27","newstitle":"\u7B2C\u4E09\u65B9\u652F\u4ED8\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1543","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080052\u0026flno=4","target":"_blank","title":"\u7DB2\u969B\u7DB2\u8DEF\u96F6\u552E\u696D\u53CA\u7DB2\u969B\u7DB2\u8DEF\u96F6\u552E\u670D\u52D9\u5E73\u53F0\u696D\u500B\u4EBA\u8CC7\u6599\u6A94\u6848\u5B89\u5168\u7DAD\u8B77\u8A08\u756B\u53CA\u696D\u52D9\u7D42\u6B62\u5F8C\u500B\u4EBA\u8CC7\u6599\u8655\u7406\u4F5C\u696D\u8FA6\u6CD5","startdate":"2022-08-27","newstitle":"\u7DB2\u969B\u7DB2\u8DEF\u96F6\u552E\u696D\u53CA\u7DB2\u969B\u7DB2\u8DEF\u96F6\u552E\u670D\u52D9\u5E73\u53F0\u696D\u500B\u4EBA\u8CC7\u6599\u6A94\u6848\u5B89\u5168\u7DAD\u8B77\u8A08\u756B\u53CA\u696D\u52D9\u7D42\u6B62\u5F8C\u500B\u4EBA\u8CC7\u6599\u8655\u7406\u4F5C\u696D\u8FA6\u6CD5","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1545","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL000876\u0026kw=%e7%b6%b2%e9%9a%9b%e7%b6%b2%e8%b7%af%e6%95%99%e5%ad%b8%e6%9c%8d%e5%8b%99%e5%ae%9a%e5%9e%8b%e5%8c%96%e5%a5%91%e7%b4%84%e6%87%89%e8%a8%98%e8%bc%89%e5%8f%8a%e4%b8%8d%e5%be%97%e8%a8%98%e8%bc%89%e4%ba%8b%e9%a0%85","target":"_blank","title":"\u7DB2\u969B\u7DB2\u8DEF\u6559\u5B78\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","startdate":"2022-08-27","newstitle":"\u7DB2\u969B\u7DB2\u8DEF\u6559\u5B78\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1257","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL000876#lawmenu","target":"_blank","title":"\u7DB2\u8DEF\u9023\u7DDA\u904A\u6232\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","startdate":"2022-08-27","newstitle":"\u7DB2\u8DEF\u9023\u7DDA\u904A\u6232\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1547","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL001209\u0026kw=%e7%b7%9a%e4%b8%8a%e9%81%8a%e6%88%b2%e9%bb%9e%ef%a5%a9%ef%bc%88%e5%8d%a1%ef%bc%89%e5%ae%9a%e5%9e%8b%e5%8c%96%ef%a4%89%e7%b4%84%e6%87%89%e8%a8%98%e8%bc%89%e5%8f%8a%ef%a5%a7%e5%be%97%e8%a8%98%e8%bc%89%e4%ba%8b%e9%a0%85","target":"_blank","title":"\u7DDA\u4E0A\u904A\u6232\u9EDE\uF969\uFF08\u5361\uFF09\u5B9A\u578B\u5316\uF909\u7D04\u61C9\u8A18\u8F09\u53CA\uF967\u5F97\u8A18\u8F09\u4E8B\u9805","startdate":"2022-08-27","newstitle":"\u7DDA\u4E0A\u904A\u6232\u9EDE\uF969\uFF08\u5361\uFF09\u5B9A\u578B\u5316\uF909\u7D04\u61C9\u8A18\u8F09\u53CA\uF967\u5F97\u8A18\u8F09\u4E8B\u9805","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1259","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0030086","target":"_blank","title":"\u904A\u6232\u8EDF\u9AD4\u5206\u7D1A\u7BA1\u7406\u8FA6\u6CD5","startdate":"2022-08-27","newstitle":"\u904A\u6232\u8EDF\u9AD4\u5206\u7D1A\u7BA1\u7406\u8FA6\u6CD5","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1740","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL000459#lawmenu","target":"_blank","title":"\u5373\u6642\u901A\u8A0A\u8EDF\u9AD4\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","startdate":"2022-08-27","newstitle":"\u5373\u6642\u901A\u8A0A\u8EDF\u9AD4\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null}]');
+        LeftMenu('886');
+        NewList('886');
+        var ListPage = '/_news/NoDateTextList.html';
+        var listTag2Page = '/_news/listTag2.html';
+        $("#ns").load(ListPage, function () {
+            if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+        });
+    </script>
 
 </body>
 </html>
