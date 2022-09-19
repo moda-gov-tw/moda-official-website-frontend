@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/assets/css/layout.css?v=tTGoCxztsQOvCiNhPuj18KZLmIGt1fwY3ntriCxklTI" media="all" />
+            <link rel="stylesheet" href="/assets/css/layout.css?v=e1P_5uuoUtjl1zChWah5ruj4KO91O9429nZDv13HEBE" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -54,18 +54,22 @@
     <header class="header">
         <!-- header -->
         <div b-jabq2d7uqs class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-jabq2d7uqs class="a11yBrickBar1 position-relative"><a b-jabq2d7uqs href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="Go Top">:::</a></div></div>
-        <div b-jabq2d7uqs class="baseNav d-none d-xxl-block">
+
+        <!-- 若沒有社群鈕<div class="baseNav d-none d-xxl-block"> -->
+		<div b-jabq2d7uqs class="baseNav">
             <div b-jabq2d7uqs class="wrap1 mx-auto px-4 px-lg-5">
-                <div b-jabq2d7uqs class="d-md-flex justify-content-end align-items-center">
+				<div b-jabq2d7uqs class="d-flex justify-content-end align-items-top">
                     <!-- Top bar right -->
                     <div b-jabq2d7uqs class="d-flex align-items-top">
-                        <ul b-jabq2d7uqs class="nav">
+                        <!-- 社群鈕 -->
+                        <ul b-jabq2d7uqs class="nav d-none d-xxl-flex">
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/en/sitemap/546.html" title="Site Map">
                                     <i b-jabq2d7uqs class="ci ci-sitemap"></i>
                                     <span b-jabq2d7uqs class="visually-hidden">Site Map</span>
                                 </a>
                             </li>
+
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/index.html" title="&#x4E2D;&#x6587;&#x7248;">
                                     <i b-jabq2d7uqs class="ci ci-tw"></i>
@@ -74,7 +78,7 @@
                             </li>
                         </ul>
                         <!-- 切換字體大小 -->
-                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs">
+                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs d-none d-xxl-flex">
                             <button b-jabq2d7uqs class="fontSizeDdNow btn-dropdownNow dropdown-toggle text-white" type="button" id="fontSizeDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-order="2" title="Medium"><i b-jabq2d7uqs class="ci ci-font2"></i><span b-jabq2d7uqs class="visually-hidden">A</span></button>
                             <ul b-jabq2d7uqs class="dropdown-menu" aria-labelledby="fontSizeDropdown">
                                 <li b-jabq2d7uqs><button b-jabq2d7uqs class="dropdown-item" type="button" data-order="1" title="Large">A<sup b-jabq2d7uqs>+</sup></button></li>
@@ -82,13 +86,19 @@
                             </ul>
                         </div>
                         <!-- 搜尋鈕 -->
-                        <div b-jabq2d7uqs class="nav-item navbar-icon-link">
+                        <div b-jabq2d7uqs class="nav-item navbar-icon-link d-none d-xxl-flex">
                             <a b-jabq2d7uqs href="javascript:;" id="S" accesskey="S" class="searchSwitchBtn searchSwitchBtnJs nav-link text-white px-3" title="Search">
                                 <i b-jabq2d7uqs class="ci ci-scope"></i>
                                 <span b-jabq2d7uqs class="visually-hidden">Search</span>
                             </a>
                         </div>
                     </div>
+                    <script>
+                        //detect header social btn
+                        if(!document.getElementsByClassName('navSocial').length){
+                            document.body.className += ' noHdSocial';
+                        }
+                    </script>
                 </div>
             </div>
         </div>
@@ -400,128 +410,128 @@ Plan					</li>
                 </div>
 
                 <!-- 列表 -->
-                                <ul class="list4-2 list-group divider mb-5" id="ListTable">
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/en/digital-affairs/digital-service/operations/120.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_self' title='Smart Government Development Strategy'>
-                                                <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        Smart Government Development Strategy
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/en/digital-affairs/digital-service/operations/190.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_self' title='Service Resilience for the Cloud Generation'>
-                                                <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        Service Resilience for the Cloud Generation
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/en/digital-affairs/digital-service/operations/208.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_self' title='National Digital Development Research'>
-                                                <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        National Digital Development Research
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/en/digital-affairs/digital-service/guide/584.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_self' title='Government Digital Service Guidelines and Website Service Manage'>
-                                                <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        Government Digital Service Guidelines and Website Service Manage
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/en/digital-affairs/digital-service/operations/228.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_self' title='Government Accessible Web Check'>
-                                                <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        Government Accessible Web Check
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/en/digital-affairs/digital-service/operations/230.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_self' title='My e-Government Portal Share Print'>
-                                                <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        My e-Government Portal Share Print
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/en/digital-affairs/digital-service/operations/232.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_self' title='Common Government Application Services'>
-                                                <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        Common Government Application Services
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/en/digital-affairs/digital-service/operations/234.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_self' title='Digital Governance Competency Cultivation'>
-                                                <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        Digital Governance Competency Cultivation
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/en/digital-affairs/digital-service/354.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_self' title='Government Digital Infrastructure'>
-                                                <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        Government Digital Infrastructure
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/en/digital-affairs/plural-innovation/operations/244.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_self' title='Government Open Data'>
-                                                <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        Government Open Data
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/en/digital-affairs/plural-innovation/operations/266.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_self' title='Autonomous Use of Personal Data (MyData)'>
-                                                <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        Autonomous Use of Personal Data (MyData)
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/en/digital-affairs/plural-innovation/operations/268.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_self' title='Government Data Standards'>
-                                                <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        Government Data Standards
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                </ul>
+                                    <ul class="list4-2 list-group divider mb-5" id="ListTable">
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/en/digital-affairs/digital-service/operations/120.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_self' title='Smart Government Development Strategy'>
+                                                    <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            Smart Government Development Strategy
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/en/digital-affairs/digital-service/operations/190.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_self' title='Service Resilience for the Cloud Generation'>
+                                                    <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            Service Resilience for the Cloud Generation
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/en/digital-affairs/digital-service/operations/208.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_self' title='National Digital Development Research'>
+                                                    <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            National Digital Development Research
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/en/digital-affairs/digital-service/guide/584.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_self' title='Government Digital Service Guidelines and Website Service Manage'>
+                                                    <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            Government Digital Service Guidelines and Website Service Manage
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/en/digital-affairs/digital-service/operations/228.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_self' title='Government Accessible Web Check'>
+                                                    <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            Government Accessible Web Check
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/en/digital-affairs/digital-service/operations/230.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_self' title='My e-Government Portal Share Print'>
+                                                    <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            My e-Government Portal Share Print
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/en/digital-affairs/digital-service/operations/232.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_self' title='Common Government Application Services'>
+                                                    <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            Common Government Application Services
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/en/digital-affairs/digital-service/operations/234.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_self' title='Digital Governance Competency Cultivation'>
+                                                    <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            Digital Governance Competency Cultivation
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/en/digital-affairs/digital-service/354.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_self' title='Government Digital Infrastructure'>
+                                                    <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            Government Digital Infrastructure
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/en/digital-affairs/plural-innovation/operations/244.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_self' title='Government Open Data'>
+                                                    <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            Government Open Data
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/en/digital-affairs/plural-innovation/operations/266.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_self' title='Autonomous Use of Personal Data (MyData)'>
+                                                    <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            Autonomous Use of Personal Data (MyData)
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/en/digital-affairs/plural-innovation/operations/268.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_self' title='Government Data Standards'>
+                                                    <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            Government Data Standards
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                    </ul>
                         <div class="pageBar mb-5 ">
     <div class="pageSet mb-4">
                         <div class="mRow">total items<span class="totalData">12</span>.</div>
@@ -722,7 +732,7 @@ Plan					</li>
                 <div class="ftBtmRights">
                     <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero (open in new window)">CC0</a>No copyright reserved.</p>
 
-                    <p class="mb-2 mb-md-0">Update Date: 2022-09-18<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                    <p class="mb-2 mb-md-0">Update Date: 2022-09-19<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
             </div>
             <div class="col-12 col-md text-md-end">
@@ -762,28 +772,27 @@ Plan					</li>
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/assets/js/common.js?v=gDbLZglneWxIXoUIs8UczuclyHwWlQIsF2m5b1w6GZE"></script>
+            <script src="/assets/js/common.js?v=QZ5wUV6wmTSH_KN9q1eKJ9BC2A45ymIwOsi7Y6WeDXY"></script>
     <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=V2JExwd7xdBP26AtgTeajbqPQbpLse0DlFgoRNwRcdo"></script>
+    <script src="/js/site.js?v=r3b45PJ-Q435KvD8SAVTjXll8cXI-McYimLv_DaGbWU"></script>
     <script>
         webSiteLange('en' ,'MODA'  );
 
     </script>
     
-<script>
-    var _JsData;
-    var S1 ;
-    var S2 ;
-    var _needtag = NeedTag('OneTextList');
-    _JsData = JSON.parse('[{"mainsn":"1714","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/120.html","target":"_self","title":"Smart Government Development Strategy","startdate":"2022-08-27","newstitle":"Smart Government Development Strategy","newssubtitle":"Improving governmental digitalization and services based on public demands","filetypedisplay":"none","weblogopath":"/copyright/MODA/jdqrbgea.khc.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1712","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/190.html","target":"_self","title":"Service Resilience for the Cloud Generation","startdate":"2022-08-27","newstitle":"Service Resilience for the Cloud Generation","newssubtitle":"Strengthening the resilience of key government networks and services, promoting cloud applications","filetypedisplay":"none","weblogopath":"/copyright/MODA/lnd1ptfc.npq.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1357","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/208.html","target":"_self","title":"National Digital Development Research","startdate":"2022-08-27","newstitle":"National Digital Development Research","newssubtitle":"Monitoring Taiwan\u2019s Digital Development Progress with Digital Well-being","filetypedisplay":"none","weblogopath":"/copyright/MODA/d2peoe4a.kb4.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1710","istopdisplay":"none","href":"/en/digital-affairs/digital-service/guide/584.html","target":"_self","title":"Government Digital Service Guidelines and Website Service Manage","startdate":"2022-08-27","newstitle":"Government Digital Service Guidelines and Website Service Manage","newssubtitle":"Leading government agencies with building people-oriented digital services","filetypedisplay":"none","weblogopath":"/copyright/MODA/tcdw34zi.vk0.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1698","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/228.html","target":"_self","title":"Government Accessible Web Check","startdate":"2022-08-27","newstitle":"Government Accessible Web Check","newssubtitle":"Enhancing inclusive, accessible government digital service experiences","filetypedisplay":"none","weblogopath":"/copyright/MODA/gvnqzcit.cdf.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1700","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/230.html","target":"_self","title":"My e-Government Portal Share Print","startdate":"2022-08-27","newstitle":"My e-Government Portal Share Print","newssubtitle":"Consolidating government services based on major life events for easy public access .","filetypedisplay":"none","weblogopath":"/copyright/MODA/fymoj4gw.5fk.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1708","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/232.html","target":"_self","title":"Common Government Application Services","startdate":"2022-08-27","newstitle":"Common Government Application Services","newssubtitle":"Cross-agency data transfer, code for Chinese characters, and document format standard","filetypedisplay":"none","weblogopath":"/copyright/MODA/rpvvnycx.3ad.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1702","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/234.html","target":"_self","title":"Digital Governance Competency Cultivation","startdate":"2022-08-27","newstitle":"Digital Governance Competency Cultivation","newssubtitle":"Elevating the government workforce\u2019s digital skills and cross-boundary governance abilities","filetypedisplay":"none","weblogopath":"/copyright/MODA/i3jz03td.nuu.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1706","istopdisplay":"none","href":"/en/digital-affairs/digital-service/354.html","target":"_self","title":"Government Digital Infrastructure","startdate":"2022-08-27","newstitle":"Government Digital Infrastructure","newssubtitle":"Operating safe, stable, efficient network and electronic certification environments","filetypedisplay":"none","weblogopath":"/copyright/MODA/x03314ew.erw.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1361","istopdisplay":"none","href":"/en/digital-affairs/plural-innovation/operations/244.html","target":"_self","title":"Government Open Data","startdate":"2022-08-27","newstitle":"Government Open Data","newssubtitle":"Building a friendly, trusted government open data environment, enhancing data service capacity","filetypedisplay":"none","weblogopath":"/copyright/MODA/kc5i5cnj.wgg.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1365","istopdisplay":"none","href":"/en/digital-affairs/plural-innovation/operations/266.html","target":"_self","title":"Autonomous Use of Personal Data (MyData)","startdate":"2022-08-27","newstitle":"Autonomous Use of Personal Data (MyData)","newssubtitle":"Promoting human-centered data use, allowing the public to download and use personalized data on their own or agree to single-time transfers for third parties to use on-demand, thus creating a more precise digital service","filetypedisplay":"none","weblogopath":"/copyright/MODA/dnzo5k15.zbn.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1363","istopdisplay":"none","href":"/en/digital-affairs/plural-innovation/operations/268.html","target":"_self","title":"Government Data Standards","startdate":"2022-08-27","newstitle":"Government Data Standards","newssubtitle":"Promoting government field data standards, facilitating interdisciplinary data exchange and consolidation","filetypedisplay":"none","weblogopath":"/copyright/MODA/4mxug5of.riz.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"}]');
-    LeftMenu('911');
-   NewList('910');
-    var ListPage = '/_news/OneTextList.html';
-    var listTag2Page = '/_news/listTag2.html';
-    $("#ns").load(ListPage, function () {
-        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
-    });
-</script>
+    <script>
+        var _JsData;
+        var _needtag = NeedTag('OneTextList');
+        var _Module = 'NEWS';
+        _JsData = JSON.parse('[{"mainsn":"1714","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/120.html","target":"_self","title":"Smart Government Development Strategy","startdate":"2022-08-27","newstitle":"Smart Government Development Strategy","newssubtitle":"Improving governmental digitalization and services based on public demands","filetypedisplay":"none","weblogopath":"/copyright/MODA/jdqrbgea.khc.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1712","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/190.html","target":"_self","title":"Service Resilience for the Cloud Generation","startdate":"2022-08-27","newstitle":"Service Resilience for the Cloud Generation","newssubtitle":"Strengthening the resilience of key government networks and services, promoting cloud applications","filetypedisplay":"none","weblogopath":"/copyright/MODA/lnd1ptfc.npq.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1357","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/208.html","target":"_self","title":"National Digital Development Research","startdate":"2022-08-27","newstitle":"National Digital Development Research","newssubtitle":"Monitoring Taiwan\u2019s Digital Development Progress with Digital Well-being","filetypedisplay":"none","weblogopath":"/copyright/MODA/d2peoe4a.kb4.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1710","istopdisplay":"none","href":"/en/digital-affairs/digital-service/guide/584.html","target":"_self","title":"Government Digital Service Guidelines and Website Service Manage","startdate":"2022-08-27","newstitle":"Government Digital Service Guidelines and Website Service Manage","newssubtitle":"Leading government agencies with building people-oriented digital services","filetypedisplay":"none","weblogopath":"/copyright/MODA/tcdw34zi.vk0.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1698","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/228.html","target":"_self","title":"Government Accessible Web Check","startdate":"2022-08-27","newstitle":"Government Accessible Web Check","newssubtitle":"Enhancing inclusive, accessible government digital service experiences","filetypedisplay":"none","weblogopath":"/copyright/MODA/gvnqzcit.cdf.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1700","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/230.html","target":"_self","title":"My e-Government Portal Share Print","startdate":"2022-08-27","newstitle":"My e-Government Portal Share Print","newssubtitle":"Consolidating government services based on major life events for easy public access .","filetypedisplay":"none","weblogopath":"/copyright/MODA/fymoj4gw.5fk.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1708","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/232.html","target":"_self","title":"Common Government Application Services","startdate":"2022-08-27","newstitle":"Common Government Application Services","newssubtitle":"Cross-agency data transfer, code for Chinese characters, and document format standard","filetypedisplay":"none","weblogopath":"/copyright/MODA/rpvvnycx.3ad.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1702","istopdisplay":"none","href":"/en/digital-affairs/digital-service/operations/234.html","target":"_self","title":"Digital Governance Competency Cultivation","startdate":"2022-08-27","newstitle":"Digital Governance Competency Cultivation","newssubtitle":"Elevating the government workforce\u2019s digital skills and cross-boundary governance abilities","filetypedisplay":"none","weblogopath":"/copyright/MODA/i3jz03td.nuu.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1706","istopdisplay":"none","href":"/en/digital-affairs/digital-service/354.html","target":"_self","title":"Government Digital Infrastructure","startdate":"2022-08-27","newstitle":"Government Digital Infrastructure","newssubtitle":"Operating safe, stable, efficient network and electronic certification environments","filetypedisplay":"none","weblogopath":"/copyright/MODA/x03314ew.erw.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1361","istopdisplay":"none","href":"/en/digital-affairs/plural-innovation/operations/244.html","target":"_self","title":"Government Open Data","startdate":"2022-08-27","newstitle":"Government Open Data","newssubtitle":"Building a friendly, trusted government open data environment, enhancing data service capacity","filetypedisplay":"none","weblogopath":"/copyright/MODA/kc5i5cnj.wgg.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1365","istopdisplay":"none","href":"/en/digital-affairs/plural-innovation/operations/266.html","target":"_self","title":"Autonomous Use of Personal Data (MyData)","startdate":"2022-08-27","newstitle":"Autonomous Use of Personal Data (MyData)","newssubtitle":"Promoting human-centered data use, allowing the public to download and use personalized data on their own or agree to single-time transfers for third parties to use on-demand, thus creating a more precise digital service","filetypedisplay":"none","weblogopath":"/copyright/MODA/dnzo5k15.zbn.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1363","istopdisplay":"none","href":"/en/digital-affairs/plural-innovation/operations/268.html","target":"_self","title":"Government Data Standards","startdate":"2022-08-27","newstitle":"Government Data Standards","newssubtitle":"Promoting government field data standards, facilitating interdisciplinary data exchange and consolidation","filetypedisplay":"none","weblogopath":"/copyright/MODA/4mxug5of.riz.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null}]');
+        LeftMenu('911');
+        NewList('910');
+        var ListPage = '/_news/OneTextList.html';
+        var listTag2Page = '/_news/listTag2.html';
+        $("#ns").load(ListPage, function () {
+            if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+        });
+    </script>
 
 </body>
 </html>

@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/assets/css/layout.css?v=tTGoCxztsQOvCiNhPuj18KZLmIGt1fwY3ntriCxklTI" media="all" />
+            <link rel="stylesheet" href="/assets/css/layout.css?v=e1P_5uuoUtjl1zChWah5ruj4KO91O9429nZDv13HEBE" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -54,18 +54,22 @@
     <header class="header">
         <!-- header -->
         <div b-jabq2d7uqs class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-jabq2d7uqs class="a11yBrickBar1 position-relative"><a b-jabq2d7uqs href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="Go Top">:::</a></div></div>
-        <div b-jabq2d7uqs class="baseNav d-none d-xxl-block">
+
+        <!-- 若沒有社群鈕<div class="baseNav d-none d-xxl-block"> -->
+		<div b-jabq2d7uqs class="baseNav">
             <div b-jabq2d7uqs class="wrap1 mx-auto px-4 px-lg-5">
-                <div b-jabq2d7uqs class="d-md-flex justify-content-end align-items-center">
+				<div b-jabq2d7uqs class="d-flex justify-content-end align-items-top">
                     <!-- Top bar right -->
                     <div b-jabq2d7uqs class="d-flex align-items-top">
-                        <ul b-jabq2d7uqs class="nav">
+                        <!-- 社群鈕 -->
+                        <ul b-jabq2d7uqs class="nav d-none d-xxl-flex">
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/en/sitemap/546.html" title="Site Map">
                                     <i b-jabq2d7uqs class="ci ci-sitemap"></i>
                                     <span b-jabq2d7uqs class="visually-hidden">Site Map</span>
                                 </a>
                             </li>
+
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/index.html" title="&#x4E2D;&#x6587;&#x7248;">
                                     <i b-jabq2d7uqs class="ci ci-tw"></i>
@@ -74,7 +78,7 @@
                             </li>
                         </ul>
                         <!-- 切換字體大小 -->
-                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs">
+                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs d-none d-xxl-flex">
                             <button b-jabq2d7uqs class="fontSizeDdNow btn-dropdownNow dropdown-toggle text-white" type="button" id="fontSizeDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-order="2" title="Medium"><i b-jabq2d7uqs class="ci ci-font2"></i><span b-jabq2d7uqs class="visually-hidden">A</span></button>
                             <ul b-jabq2d7uqs class="dropdown-menu" aria-labelledby="fontSizeDropdown">
                                 <li b-jabq2d7uqs><button b-jabq2d7uqs class="dropdown-item" type="button" data-order="1" title="Large">A<sup b-jabq2d7uqs>+</sup></button></li>
@@ -82,13 +86,19 @@
                             </ul>
                         </div>
                         <!-- 搜尋鈕 -->
-                        <div b-jabq2d7uqs class="nav-item navbar-icon-link">
+                        <div b-jabq2d7uqs class="nav-item navbar-icon-link d-none d-xxl-flex">
                             <a b-jabq2d7uqs href="javascript:;" id="S" accesskey="S" class="searchSwitchBtn searchSwitchBtnJs nav-link text-white px-3" title="Search">
                                 <i b-jabq2d7uqs class="ci ci-scope"></i>
                                 <span b-jabq2d7uqs class="visually-hidden">Search</span>
                             </a>
                         </div>
                     </div>
+                    <script>
+                        //detect header social btn
+                        if(!document.getElementsByClassName('navSocial').length){
+                            document.body.className += ' noHdSocial';
+                        }
+                    </script>
                 </div>
             </div>
         </div>
@@ -407,129 +417,129 @@ Operations					</li>
                 </div>
 
                 <!-- 列表 -->
-                                <!-- 列表樣式七 -->
-                                <div class="list1 row mb-5 g-3" id="ListTable">
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/en/digital-affairs/communications-cyber-resilience/operations/310.html" class="card-body text-decoration-none" target='' title='Preparation and Planning for Advanced Networks'>
-                                                    <b class="card-title title5">Preparation and Planning for Advanced Networks</b>
-                                                    <p class="card-text">Preparation and Planning for advanced network infrastructure ,and the resilience of the public telecommunications network </p>
-                                                </a>
+                                    <!-- 列表樣式七 -->
+                                    <div class="list1 row mb-5 g-3" id="ListTable">
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/en/digital-affairs/communications-cyber-resilience/operations/310.html" class="card-body text-decoration-none" target='' title='Preparation and Planning for Advanced Networks'>
+                                                        <b class="card-title title5">Preparation and Planning for Advanced Networks</b>
+                                                        <p class="card-text">Preparation and Planning for advanced network infrastructure ,and the resilience of the public telecommunications network </p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/en/digital-affairs/communications-cyber-resilience/operations/312.html" class="card-body text-decoration-none" target='' title='Planning for Communications Network Construction'>
-                                                    <b class="card-title title5">Planning for Communications Network Construction</b>
-                                                    <p class="card-text">Planning for Communications Network Construction and Providing Subsidies</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/en/digital-affairs/communications-cyber-resilience/operations/312.html" class="card-body text-decoration-none" target='' title='Planning for Communications Network Construction'>
+                                                        <b class="card-title title5">Planning for Communications Network Construction</b>
+                                                        <p class="card-text">Planning for Communications Network Construction and Providing Subsidies</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/en/digital-affairs/communications-cyber-resilience/operations/314.html" class="card-body text-decoration-none" target='' title='Telecommunications Infrastructure Protection'>
-                                                    <b class="card-title title5">Telecommunications Infrastructure Protection</b>
-                                                    <p class="card-text">Planning and management of telecommunications Iinfrastructure protection</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/en/digital-affairs/communications-cyber-resilience/operations/314.html" class="card-body text-decoration-none" target='' title='Telecommunications Infrastructure Protection'>
+                                                        <b class="card-title title5">Telecommunications Infrastructure Protection</b>
+                                                        <p class="card-text">Planning and management of telecommunications Iinfrastructure protection</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/en/digital-affairs/communications-cyber-resilience/operations/368.html" class="card-body text-decoration-none" target='' title='Supervision and Management of Equal Access Services'>
-                                                    <b class="card-title title5">Supervision and Management of Equal Access Services</b>
-                                                    <p class="card-text">Supervising, managing, and guiding of number portability service and equal access services</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/en/digital-affairs/communications-cyber-resilience/operations/368.html" class="card-body text-decoration-none" target='' title='Supervision and Management of Equal Access Services'>
+                                                        <b class="card-title title5">Supervision and Management of Equal Access Services</b>
+                                                        <p class="card-text">Supervising, managing, and guiding of number portability service and equal access services</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/en/digital-affairs/communications-cyber-resilience/operations/370.html" class="card-body text-decoration-none" target='' title='Reinforcing Telecommunications Universal Service'>
-                                                    <b class="card-title title5">Reinforcing Telecommunications Universal Service</b>
-                                                    <p class="card-text">Planning, implementing, and supervising universal service of telecommunications providers</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/en/digital-affairs/communications-cyber-resilience/operations/370.html" class="card-body text-decoration-none" target='' title='Reinforcing Telecommunications Universal Service'>
+                                                        <b class="card-title title5">Reinforcing Telecommunications Universal Service</b>
+                                                        <p class="card-text">Planning, implementing, and supervising universal service of telecommunications providers</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/en/digital-affairs/communications-cyber-resilience/operations/322.html" class="card-body text-decoration-none" target='' title='Telecommunications Network Technology Research'>
-                                                    <b class="card-title title5">Telecommunications Network Technology Research</b>
-                                                    <p class="card-text">Referring to regulations and relevant information from other nations when planning domestic technical regulations</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/en/digital-affairs/communications-cyber-resilience/operations/322.html" class="card-body text-decoration-none" target='' title='Telecommunications Network Technology Research'>
+                                                        <b class="card-title title5">Telecommunications Network Technology Research</b>
+                                                        <p class="card-text">Referring to regulations and relevant information from other nations when planning domestic technical regulations</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/en/digital-affairs/communications-cyber-resilience/operations/326.html" class="card-body text-decoration-none" target='' title='Management of  the Cybersecurity of Telecommunications'>
-                                                    <b class="card-title title5">Management of  the Cybersecurity of Telecommunications</b>
-                                                    <p class="card-text">Ensuring the cybersecurity, reliability, and resilience of telecommunications </p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/en/digital-affairs/communications-cyber-resilience/operations/326.html" class="card-body text-decoration-none" target='' title='Management of  the Cybersecurity of Telecommunications'>
+                                                        <b class="card-title title5">Management of  the Cybersecurity of Telecommunications</b>
+                                                        <p class="card-text">Ensuring the cybersecurity, reliability, and resilience of telecommunications </p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/en/digital-affairs/communications-cyber-resilience/operations/332.html" class="card-body text-decoration-none" target='' title='Joint Defense of Communication Network Cyber Security'>
-                                                    <b class="card-title title5">Joint Defense of Communication Network Cyber Security</b>
-                                                    <p class="card-text">Enhancing joint defense mechanisms for communication network cyber security</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/en/digital-affairs/communications-cyber-resilience/operations/332.html" class="card-body text-decoration-none" target='' title='Joint Defense of Communication Network Cyber Security'>
+                                                        <b class="card-title title5">Joint Defense of Communication Network Cyber Security</b>
+                                                        <p class="card-text">Enhancing joint defense mechanisms for communication network cyber security</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/en/digital-affairs/communications-cyber-resilience/operations/320.html" class="card-body text-decoration-none" target='' title='Mobilization Readiness Program and of Telecommunications'>
-                                                    <b class="card-title title5">Mobilization Readiness Program and of Telecommunications</b>
-                                                    <p class="card-text">Affairs Relating to the Mobilization of Telecommunications </p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/en/digital-affairs/communications-cyber-resilience/operations/320.html" class="card-body text-decoration-none" target='' title='Mobilization Readiness Program and of Telecommunications'>
+                                                        <b class="card-title title5">Mobilization Readiness Program and of Telecommunications</b>
+                                                        <p class="card-text">Affairs Relating to the Mobilization of Telecommunications </p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/en/digital-affairs/communications-cyber-resilience/operations/324.html" class="card-body text-decoration-none" target='' title='Cybersecurity Inspections of Telecommunications Networks'>
-                                                    <b class="card-title title5">Cybersecurity Inspections of Telecommunications Networks</b>
-                                                    <p class="card-text">Cybersecurity inspections for applications and modifications of telecommunications networks</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/en/digital-affairs/communications-cyber-resilience/operations/324.html" class="card-body text-decoration-none" target='' title='Cybersecurity Inspections of Telecommunications Networks'>
+                                                        <b class="card-title title5">Cybersecurity Inspections of Telecommunications Networks</b>
+                                                        <p class="card-text">Cybersecurity inspections for applications and modifications of telecommunications networks</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/en/digital-affairs/communications-cyber-resilience/operations/328.html" class="card-body text-decoration-none" target='' title='Cybersecurity Regulations on Information Communications Equipment'>
-                                                    <b class="card-title title5">Cybersecurity Regulations on Information Communications Equipment</b>
-                                                    <p class="card-text">Technical specification regulations, Regulations for Management of Testing Bodies and Certification Bodies</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/en/digital-affairs/communications-cyber-resilience/operations/328.html" class="card-body text-decoration-none" target='' title='Cybersecurity Regulations on Information Communications Equipment'>
+                                                        <b class="card-title title5">Cybersecurity Regulations on Information Communications Equipment</b>
+                                                        <p class="card-text">Technical specification regulations, Regulations for Management of Testing Bodies and Certification Bodies</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/en/digital-affairs/communications-cyber-resilience/operations/330.html" class="card-body text-decoration-none" target='' title='List of Certification Laboratories'>
-                                                    <b class="card-title title5">List of Certification Laboratories</b>
-                                                    <p class="card-text">List of qualified CTI information and communications equipment cyber security certification laboratories</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/en/digital-affairs/communications-cyber-resilience/operations/330.html" class="card-body text-decoration-none" target='' title='List of Certification Laboratories'>
+                                                        <b class="card-title title5">List of Certification Laboratories</b>
+                                                        <p class="card-text">List of qualified CTI information and communications equipment cyber security certification laboratories</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/en/digital-affairs/communications-cyber-resilience/operations/372.html" class="card-body text-decoration-none" target='' title='Telecom Technology Center Supervision'>
-                                                    <b class="card-title title5">Telecom Technology Center Supervision</b>
-                                                    <p class="card-text">Management of the Telecom Technology Center</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/en/digital-affairs/communications-cyber-resilience/operations/372.html" class="card-body text-decoration-none" target='' title='Telecom Technology Center Supervision'>
+                                                        <b class="card-title title5">Telecom Technology Center Supervision</b>
+                                                        <p class="card-text">Management of the Telecom Technology Center</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/en/digital-affairs/communications-cyber-resilience/operations/338.html" class="card-body text-decoration-none" target='' title='Inspections of the Embedded Software of Mobile Phones'>
-                                                    <b class="card-title title5">Inspections of the Embedded Software of Mobile Phones</b>
-                                                    <p class="card-text">Annual sampling inspection results of mobile phone embedded software cybersecurity</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/en/digital-affairs/communications-cyber-resilience/operations/338.html" class="card-body text-decoration-none" target='' title='Inspections of the Embedded Software of Mobile Phones'>
+                                                        <b class="card-title title5">Inspections of the Embedded Software of Mobile Phones</b>
+                                                        <p class="card-text">Annual sampling inspection results of mobile phone embedded software cybersecurity</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/en/digital-affairs/communications-cyber-resilience/smartphonerule/578.html" class="card-body text-decoration-none" target='_self' title='Specifications for Mobile Phone Embedded Software'>
-                                                    <b class="card-title title5">Specifications for Mobile Phone Embedded Software</b>
-                                                    <p class="card-text">Promotion and verification of Infocom Security Test Specifications for Embedded Software on Smartphone Systems  </p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/en/digital-affairs/communications-cyber-resilience/smartphonerule/578.html" class="card-body text-decoration-none" target='_self' title='Specifications for Mobile Phone Embedded Software'>
+                                                        <b class="card-title title5">Specifications for Mobile Phone Embedded Software</b>
+                                                        <p class="card-text">Promotion and verification of Infocom Security Test Specifications for Embedded Software on Smartphone Systems  </p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                </div>
+                                    </div>
                         <div class="pageBar mb-5 ">
     <div class="pageSet mb-4">
                         <div class="mRow">total items<span class="totalData">15</span>.</div>
@@ -730,7 +740,7 @@ Operations					</li>
                 <div class="ftBtmRights">
                     <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero (open in new window)">CC0</a>No copyright reserved.</p>
 
-                    <p class="mb-2 mb-md-0">Update Date: 2022-09-18<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                    <p class="mb-2 mb-md-0">Update Date: 2022-09-19<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
             </div>
             <div class="col-12 col-md text-md-end">
@@ -770,28 +780,27 @@ Operations					</li>
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/assets/js/common.js?v=gDbLZglneWxIXoUIs8UczuclyHwWlQIsF2m5b1w6GZE"></script>
+            <script src="/assets/js/common.js?v=QZ5wUV6wmTSH_KN9q1eKJ9BC2A45ymIwOsi7Y6WeDXY"></script>
     <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=V2JExwd7xdBP26AtgTeajbqPQbpLse0DlFgoRNwRcdo"></script>
+    <script src="/js/site.js?v=r3b45PJ-Q435KvD8SAVTjXll8cXI-McYimLv_DaGbWU"></script>
     <script>
         webSiteLange('en' ,'MODA'  );
 
     </script>
     
-<script>
-    var _JsData;
-    var S1 ;
-    var S2 ;
-    var _needtag = NeedTag('LabelList');
-    _JsData = JSON.parse('[{"mainsn":"310","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/310.html","target":null,"title":"Preparation and Planning for Advanced Networks","startdate":"2022-08-27","newstitle":"Preparation and Planning for Advanced Networks","newssubtitle":"Preparation and Planning for advanced network infrastructure ,and the resilience of the public telecommunications network ","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"312","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/312.html","target":null,"title":"Planning for Communications Network Construction","startdate":"2022-08-27","newstitle":"Planning for Communications Network Construction","newssubtitle":"Planning for Communications Network Construction and Providing Subsidies","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"314","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/314.html","target":null,"title":"Telecommunications Infrastructure Protection","startdate":"2022-08-27","newstitle":"Telecommunications Infrastructure Protection","newssubtitle":"Planning and management of telecommunications Iinfrastructure protection","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Telecommunications infrastructure protection planning"},{"tag":"supervision, and management"}],"crosslinkdisplay":"none"},{"mainsn":"368","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/368.html","target":null,"title":"Supervision and Management of Equal Access Services","startdate":"2022-08-27","newstitle":"Supervision and Management of Equal Access Services","newssubtitle":"Supervising, managing, and guiding of number portability service and equal access services","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Management of eEqual access service and number portability management"}],"crosslinkdisplay":"none"},{"mainsn":"370","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/370.html","target":null,"title":"Reinforcing Telecommunications Universal Service","startdate":"2022-08-27","newstitle":"Reinforcing Telecommunications Universal Service","newssubtitle":"Planning, implementing, and supervising universal service of telecommunications providers","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"322","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/322.html","target":null,"title":"Telecommunications Network Technology Research","startdate":"2022-08-27","newstitle":"Telecommunications Network Technology Research","newssubtitle":"Referring to regulations and relevant information from other nations when planning domestic technical regulations","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Telecommunications network technology research"}],"crosslinkdisplay":"none"},{"mainsn":"326","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/326.html","target":null,"title":"Management of  the Cybersecurity of Telecommunications","startdate":"2022-08-27","newstitle":"Management of  the Cybersecurity of Telecommunications","newssubtitle":"Ensuring the cybersecurity, reliability, and resilience of telecommunications ","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Main operations"}],"crosslinkdisplay":"none"},{"mainsn":"332","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/332.html","target":null,"title":"Joint Defense of Communication Network Cyber Security","startdate":"2022-08-27","newstitle":"Joint Defense of Communication Network Cyber Security","newssubtitle":"Enhancing joint defense mechanisms for communication network cyber security","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Main operations"}],"crosslinkdisplay":"none"},{"mainsn":"320","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/320.html","target":null,"title":"Mobilization Readiness Program and of Telecommunications","startdate":"2022-08-27","newstitle":"Mobilization Readiness Program and of Telecommunications","newssubtitle":"Affairs Relating to the Mobilization of Telecommunications ","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Affairs relating to the mobilization of telecommunications"}],"crosslinkdisplay":"none"},{"mainsn":"324","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/324.html","target":null,"title":"Cybersecurity Inspections of Telecommunications Networks","startdate":"2022-08-27","newstitle":"Cybersecurity Inspections of Telecommunications Networks","newssubtitle":"Cybersecurity inspections for applications and modifications of telecommunications networks","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"328","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/328.html","target":null,"title":"Cybersecurity Regulations on Information Communications Equipment","startdate":"2022-08-27","newstitle":"Cybersecurity Regulations on Information Communications Equipment","newssubtitle":"Technical specification regulations, Regulations for Management of Testing Bodies and Certification Bodies","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Regulations Governing Testing and Certification Bodies of Information and Communications Equipment Used by Critical Telecommunications Infrastructure"}],"crosslinkdisplay":"none"},{"mainsn":"330","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/330.html","target":null,"title":"List of Certification Laboratories","startdate":"2022-08-27","newstitle":"List of Certification Laboratories","newssubtitle":"List of qualified CTI information and communications equipment cyber security certification laboratories","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"372","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/372.html","target":null,"title":"Telecom Technology Center Supervision","startdate":"2022-08-27","newstitle":"Telecom Technology Center Supervision","newssubtitle":"Management of the Telecom Technology Center","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Telecom Technology Center supervision"}],"crosslinkdisplay":"none"},{"mainsn":"338","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/338.html","target":null,"title":"Inspections of the Embedded Software of Mobile Phones","startdate":"2022-08-27","newstitle":"Inspections of the Embedded Software of Mobile Phones","newssubtitle":"Annual sampling inspection results of mobile phone embedded software cybersecurity","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Cybersecurity testing of mobile phones"}],"crosslinkdisplay":"none"},{"mainsn":"356","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/smartphonerule/578.html","target":"_self","title":"Specifications for Mobile Phone Embedded Software","startdate":"2022-08-27","newstitle":"Specifications for Mobile Phone Embedded Software","newssubtitle":"Promotion and verification of Infocom Security Test Specifications for Embedded Software on Smartphone Systems  ","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"}]');
-    LeftMenu('467');
-   NewList('466');
-    var ListPage = '/_news/LabelList.html';
-    var listTag2Page = '/_news/listTag2.html';
-    $("#ns").load(ListPage, function () {
-        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
-    });
-</script>
+    <script>
+        var _JsData;
+        var _needtag = NeedTag('LabelList');
+        var _Module = 'NEWS';
+        _JsData = JSON.parse('[{"mainsn":"310","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/310.html","target":null,"title":"Preparation and Planning for Advanced Networks","startdate":"2022-08-27","newstitle":"Preparation and Planning for Advanced Networks","newssubtitle":"Preparation and Planning for advanced network infrastructure ,and the resilience of the public telecommunications network ","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"312","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/312.html","target":null,"title":"Planning for Communications Network Construction","startdate":"2022-08-27","newstitle":"Planning for Communications Network Construction","newssubtitle":"Planning for Communications Network Construction and Providing Subsidies","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"314","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/314.html","target":null,"title":"Telecommunications Infrastructure Protection","startdate":"2022-08-27","newstitle":"Telecommunications Infrastructure Protection","newssubtitle":"Planning and management of telecommunications Iinfrastructure protection","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Telecommunications infrastructure protection planning"},{"tag":"supervision, and management"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"368","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/368.html","target":null,"title":"Supervision and Management of Equal Access Services","startdate":"2022-08-27","newstitle":"Supervision and Management of Equal Access Services","newssubtitle":"Supervising, managing, and guiding of number portability service and equal access services","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Management of eEqual access service and number portability management"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"370","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/370.html","target":null,"title":"Reinforcing Telecommunications Universal Service","startdate":"2022-08-27","newstitle":"Reinforcing Telecommunications Universal Service","newssubtitle":"Planning, implementing, and supervising universal service of telecommunications providers","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"322","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/322.html","target":null,"title":"Telecommunications Network Technology Research","startdate":"2022-08-27","newstitle":"Telecommunications Network Technology Research","newssubtitle":"Referring to regulations and relevant information from other nations when planning domestic technical regulations","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Telecommunications network technology research"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"326","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/326.html","target":null,"title":"Management of  the Cybersecurity of Telecommunications","startdate":"2022-08-27","newstitle":"Management of  the Cybersecurity of Telecommunications","newssubtitle":"Ensuring the cybersecurity, reliability, and resilience of telecommunications ","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Main operations"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"332","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/332.html","target":null,"title":"Joint Defense of Communication Network Cyber Security","startdate":"2022-08-27","newstitle":"Joint Defense of Communication Network Cyber Security","newssubtitle":"Enhancing joint defense mechanisms for communication network cyber security","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Main operations"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"320","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/320.html","target":null,"title":"Mobilization Readiness Program and of Telecommunications","startdate":"2022-08-27","newstitle":"Mobilization Readiness Program and of Telecommunications","newssubtitle":"Affairs Relating to the Mobilization of Telecommunications ","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Affairs relating to the mobilization of telecommunications"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"324","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/324.html","target":null,"title":"Cybersecurity Inspections of Telecommunications Networks","startdate":"2022-08-27","newstitle":"Cybersecurity Inspections of Telecommunications Networks","newssubtitle":"Cybersecurity inspections for applications and modifications of telecommunications networks","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"328","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/328.html","target":null,"title":"Cybersecurity Regulations on Information Communications Equipment","startdate":"2022-08-27","newstitle":"Cybersecurity Regulations on Information Communications Equipment","newssubtitle":"Technical specification regulations, Regulations for Management of Testing Bodies and Certification Bodies","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Regulations Governing Testing and Certification Bodies of Information and Communications Equipment Used by Critical Telecommunications Infrastructure"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"330","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/330.html","target":null,"title":"List of Certification Laboratories","startdate":"2022-08-27","newstitle":"List of Certification Laboratories","newssubtitle":"List of qualified CTI information and communications equipment cyber security certification laboratories","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"372","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/372.html","target":null,"title":"Telecom Technology Center Supervision","startdate":"2022-08-27","newstitle":"Telecom Technology Center Supervision","newssubtitle":"Management of the Telecom Technology Center","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Telecom Technology Center supervision"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"338","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/338.html","target":null,"title":"Inspections of the Embedded Software of Mobile Phones","startdate":"2022-08-27","newstitle":"Inspections of the Embedded Software of Mobile Phones","newssubtitle":"Annual sampling inspection results of mobile phone embedded software cybersecurity","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Cybersecurity testing of mobile phones"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"356","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/smartphonerule/578.html","target":"_self","title":"Specifications for Mobile Phone Embedded Software","startdate":"2022-08-27","newstitle":"Specifications for Mobile Phone Embedded Software","newssubtitle":"Promotion and verification of Infocom Security Test Specifications for Embedded Software on Smartphone Systems  ","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null}]');
+        LeftMenu('467');
+        NewList('466');
+        var ListPage = '/_news/LabelList.html';
+        var listTag2Page = '/_news/listTag2.html';
+        $("#ns").load(ListPage, function () {
+            if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+        });
+    </script>
 
 </body>
 </html>
