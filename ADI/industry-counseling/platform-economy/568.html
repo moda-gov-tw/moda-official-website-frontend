@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/ADI/assets/css/layout.css?v=lFRGWo9ll0_yrhbB0k7NHWoFYODtIvA5J4BOAF_ss00" media="all" />
+            <link rel="stylesheet" href="/ADI/assets/css/layout.css?v=jZyKUu2SZ5ExvaVv1DVT7z8BKU_Z3Q98pCjfF9x0Ux8" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -55,12 +55,15 @@
     <header class="header">
         <!-- header -->
         <div b-jabq2d7uqs class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-jabq2d7uqs class="a11yBrickBar1 position-relative"><a b-jabq2d7uqs href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="&#x9801;&#x9762;&#x9802;&#x7AEF;&#x529F;&#x80FD;&#x5340;&#x584A;[&#x5FEB;&#x6377;&#x9375;Alt&#x2B;U]">:::</a></div></div>
-        <div b-jabq2d7uqs class="baseNav d-none d-xxl-block">
+
+        <!-- 若沒有社群鈕<div class="baseNav d-none d-xxl-block"> -->
+		<div b-jabq2d7uqs class="baseNav">
             <div b-jabq2d7uqs class="wrap1 mx-auto px-4 px-lg-5">
-                <div b-jabq2d7uqs class="d-md-flex justify-content-end align-items-center">
+				<div b-jabq2d7uqs class="d-flex justify-content-end align-items-top">
                     <!-- Top bar right -->
                     <div b-jabq2d7uqs class="d-flex align-items-top">
-                        <ul b-jabq2d7uqs class="nav">
+                        <!-- 社群鈕 -->
+                        <ul b-jabq2d7uqs class="nav d-none d-xxl-flex">
                                 <li b-jabq2d7uqs class="nav-item">
                                     <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/" target='_blank' rel='noreferrer noopener' title='數位發展部（另開新視窗）'>
                                         <i b-jabq2d7uqs class="ci ci-moda"></i>
@@ -73,6 +76,7 @@
                                     <span b-jabq2d7uqs class="visually-hidden">&#x7DB2;&#x7AD9;&#x5C0E;&#x89BD;</span>
                                 </a>
                             </li>
+
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/en/ADI/index.html" title="English">
                                     <i b-jabq2d7uqs class="ci ci-en"></i>
@@ -81,7 +85,7 @@
                             </li>
                         </ul>
                         <!-- 切換字體大小 -->
-                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs">
+                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs d-none d-xxl-flex">
                             <button b-jabq2d7uqs class="fontSizeDdNow btn-dropdownNow dropdown-toggle text-white" type="button" id="fontSizeDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-order="2" title="&#x4E2D;&#x5B57;&#x7D1A;"><i b-jabq2d7uqs class="ci ci-font2"></i><span b-jabq2d7uqs class="visually-hidden">A</span></button>
                             <ul b-jabq2d7uqs class="dropdown-menu" aria-labelledby="fontSizeDropdown">
                                 <li b-jabq2d7uqs><button b-jabq2d7uqs class="dropdown-item" type="button" data-order="1" title="&#x5927;&#x5B57;&#x7D1A;">A<sup b-jabq2d7uqs>+</sup></button></li>
@@ -89,13 +93,19 @@
                             </ul>
                         </div>
                         <!-- 搜尋鈕 -->
-                        <div b-jabq2d7uqs class="nav-item navbar-icon-link">
+                        <div b-jabq2d7uqs class="nav-item navbar-icon-link d-none d-xxl-flex">
                             <a b-jabq2d7uqs href="javascript:;" id="S" accesskey="S" class="searchSwitchBtn searchSwitchBtnJs nav-link text-white px-3" title="&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;">
                                 <i b-jabq2d7uqs class="ci ci-scope"></i>
                                 <span b-jabq2d7uqs class="visually-hidden">&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;</span>
                             </a>
                         </div>
                     </div>
+                    <script>
+                        //detect header social btn
+                        if(!document.getElementsByClassName('navSocial').length){
+                            document.body.className += ' noHdSocial';
+                        }
+                    </script>
                 </div>
             </div>
         </div>
@@ -443,116 +453,116 @@
                 </div>
 
                 <!-- 列表 -->
-                                <div class="list3-2 row gy-3 gx-sm-5 mb-5" id="ListTable">
-                                        <div class="col-12 col-sm-6 position-relative">
-                                            <div class="card h-100 rounded-0">
-                                                <div class="card-body ps-0 pb-0 pe-0">
-                                                    <div class="d-flex flex-wrap">
-                                                        <a href="/ADI/industry-counseling/platform-economy/1197.html" class="cardT col-12" target='' title='AI 智慧應用服務發展環境推動計畫'>
-                                                            <b class="card-title title5 fw-normal">
-                                                                AI &#x667A;&#x6167;&#x61C9;&#x7528;&#x670D;&#x52D9;&#x767C;&#x5C55;&#x74B0;&#x5883;&#x63A8;&#x52D5;&#x8A08;&#x756B;
-                                                            </b>
-                                                                <p class="card-text">以產業AI化、AI產業化為雙核心主軸，加速產業發展並建構智慧服務系統生態。</p>
-                                                        </a>
-                                                        <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
-                                                            <div class="listTag2 flex-fill pt-2 pe-4">
-                                                                    <a href="javascript:;" class="btn" role="button">&#x5E73;&#x53F0;&#x6CBB;&#x7406;</a>
-                                                            </div>
+                                    <div class="list3-2 row gy-3 gx-sm-5 mb-5" id="ListTable">
+                                            <div class="col-12 col-sm-6 position-relative">
+                                                <div class="card h-100 rounded-0">
+                                                    <div class="card-body ps-0 pb-0 pe-0">
+                                                        <div class="d-flex flex-wrap">
+                                                            <a href="/ADI/industry-counseling/platform-economy/1197.html" class="cardT col-12" target='' title='AI 智慧應用服務發展環境推動計畫'>
+                                                                <b class="card-title title5 fw-normal">
+                                                                    AI &#x667A;&#x6167;&#x61C9;&#x7528;&#x670D;&#x52D9;&#x767C;&#x5C55;&#x74B0;&#x5883;&#x63A8;&#x52D5;&#x8A08;&#x756B;
+                                                                </b>
+                                                                    <p class="card-text">以產業AI化、AI產業化為雙核心主軸，加速產業發展並建構智慧服務系統生態。</p>
+                                                            </a>
+                                                            <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
+                                                                <div class="listTag2 flex-fill pt-2 pe-4">
+                                                                        <a href="javascript:;" class="btn" role="button">&#x5E73;&#x53F0;&#x6CBB;&#x7406;</a>
+                                                                </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 position-relative">
-                                            <div class="card h-100 rounded-0">
-                                                <div class="card-body ps-0 pb-0 pe-0">
-                                                    <div class="d-flex flex-wrap">
-                                                        <a href="/ADI/industry-counseling/platform-economy/1199.html" class="cardT col-12" target='' title='AI 產業實戰應用人才淬煉計畫'>
-                                                            <b class="card-title title5 fw-normal">
-                                                                AI &#x7522;&#x696D;&#x5BE6;&#x6230;&#x61C9;&#x7528;&#x4EBA;&#x624D;&#x6DEC;&#x7149;&#x8A08;&#x756B;
-                                                            </b>
-                                                                <p class="card-text">以人工智慧為核心，培養產業智慧化技術整合及創新應用人才。</p>
-                                                        </a>
-                                                        <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
-                                                            <div class="listTag2 flex-fill pt-2 pe-4">
-                                                                    <a href="javascript:;" class="btn" role="button">&#x5E73;&#x53F0;&#x6CBB;&#x7406;</a>
-                                                            </div>
+                                            <div class="col-12 col-sm-6 position-relative">
+                                                <div class="card h-100 rounded-0">
+                                                    <div class="card-body ps-0 pb-0 pe-0">
+                                                        <div class="d-flex flex-wrap">
+                                                            <a href="/ADI/industry-counseling/platform-economy/1199.html" class="cardT col-12" target='' title='AI 產業實戰應用人才淬煉計畫'>
+                                                                <b class="card-title title5 fw-normal">
+                                                                    AI &#x7522;&#x696D;&#x5BE6;&#x6230;&#x61C9;&#x7528;&#x4EBA;&#x624D;&#x6DEC;&#x7149;&#x8A08;&#x756B;
+                                                                </b>
+                                                                    <p class="card-text">以人工智慧為核心，培養產業智慧化技術整合及創新應用人才。</p>
+                                                            </a>
+                                                            <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
+                                                                <div class="listTag2 flex-fill pt-2 pe-4">
+                                                                        <a href="javascript:;" class="btn" role="button">&#x5E73;&#x53F0;&#x6CBB;&#x7406;</a>
+                                                                </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 position-relative">
-                                            <div class="card h-100 rounded-0">
-                                                <div class="card-body ps-0 pb-0 pe-0">
-                                                    <div class="d-flex flex-wrap">
-                                                        <a href="/ADI/industry-counseling/platform-economy/1201.html" class="cardT col-12" target='' title='智慧內容創新應用發展計畫'>
-                                                            <b class="card-title title5 fw-normal">
-                                                                &#x667A;&#x6167;&#x5167;&#x5BB9;&#x5275;&#x65B0;&#x61C9;&#x7528;&#x767C;&#x5C55;&#x8A08;&#x756B;
-                                                            </b>
-                                                                <p class="card-text">以帶動「內容加值」於各行各業之目標，驅動產業數位轉型動能。</p>
-                                                        </a>
-                                                        <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
-                                                            <div class="listTag2 flex-fill pt-2 pe-4">
-                                                                    <a href="javascript:;" class="btn" role="button">&#x6578;&#x4F4D;&#x9AD4;&#x9A57;</a>
-                                                            </div>
+                                            <div class="col-12 col-sm-6 position-relative">
+                                                <div class="card h-100 rounded-0">
+                                                    <div class="card-body ps-0 pb-0 pe-0">
+                                                        <div class="d-flex flex-wrap">
+                                                            <a href="/ADI/industry-counseling/platform-economy/1201.html" class="cardT col-12" target='' title='智慧內容創新應用發展計畫'>
+                                                                <b class="card-title title5 fw-normal">
+                                                                    &#x667A;&#x6167;&#x5167;&#x5BB9;&#x5275;&#x65B0;&#x61C9;&#x7528;&#x767C;&#x5C55;&#x8A08;&#x756B;
+                                                                </b>
+                                                                    <p class="card-text">以帶動「內容加值」於各行各業之目標，驅動產業數位轉型動能。</p>
+                                                            </a>
+                                                            <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
+                                                                <div class="listTag2 flex-fill pt-2 pe-4">
+                                                                        <a href="javascript:;" class="btn" role="button">&#x6578;&#x4F4D;&#x9AD4;&#x9A57;</a>
+                                                                </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 position-relative">
-                                            <div class="card h-100 rounded-0">
-                                                <div class="card-body ps-0 pb-0 pe-0">
-                                                    <div class="d-flex flex-wrap">
-                                                        <a href="/ADI/industry-counseling/platform-economy/1203.html" class="cardT col-12" target='' title='健全數位娛樂環境與開發者輔導創新計畫'>
-                                                            <b class="card-title title5 fw-normal">
-                                                                &#x5065;&#x5168;&#x6578;&#x4F4D;&#x5A1B;&#x6A02;&#x74B0;&#x5883;&#x8207;&#x958B;&#x767C;&#x8005;&#x8F14;&#x5C0E;&#x5275;&#x65B0;&#x8A08;&#x756B;
-                                                            </b>
-                                                                <p class="card-text">打造創新基礎環境，協助數位遊戲產業提升研發與內容產製能力，塑造友善優質的經營環境。</p>
-                                                        </a>
-                                                        <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
-                                                            <div class="listTag2 flex-fill pt-2 pe-4">
-                                                                    <a href="javascript:;" class="btn" role="button">&#x6578;&#x4F4D;&#x9AD4;&#x9A57;</a>
-                                                            </div>
+                                            <div class="col-12 col-sm-6 position-relative">
+                                                <div class="card h-100 rounded-0">
+                                                    <div class="card-body ps-0 pb-0 pe-0">
+                                                        <div class="d-flex flex-wrap">
+                                                            <a href="/ADI/industry-counseling/platform-economy/1203.html" class="cardT col-12" target='' title='健全數位娛樂環境與開發者輔導創新計畫'>
+                                                                <b class="card-title title5 fw-normal">
+                                                                    &#x5065;&#x5168;&#x6578;&#x4F4D;&#x5A1B;&#x6A02;&#x74B0;&#x5883;&#x8207;&#x958B;&#x767C;&#x8005;&#x8F14;&#x5C0E;&#x5275;&#x65B0;&#x8A08;&#x756B;
+                                                                </b>
+                                                                    <p class="card-text">打造創新基礎環境，協助數位遊戲產業提升研發與內容產製能力，塑造友善優質的經營環境。</p>
+                                                            </a>
+                                                            <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
+                                                                <div class="listTag2 flex-fill pt-2 pe-4">
+                                                                        <a href="javascript:;" class="btn" role="button">&#x6578;&#x4F4D;&#x9AD4;&#x9A57;</a>
+                                                                </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 position-relative">
-                                            <div class="card h-100 rounded-0">
-                                                <div class="card-body ps-0 pb-0 pe-0">
-                                                    <div class="d-flex flex-wrap">
-                                                        <a href="/ADI/industry-counseling/platform-economy/1205.html" class="cardT col-12" target='' title='智慧學習產業整合輸出計畫'>
-                                                            <b class="card-title title5 fw-normal">
-                                                                &#x667A;&#x6167;&#x5B78;&#x7FD2;&#x7522;&#x696D;&#x6574;&#x5408;&#x8F38;&#x51FA;&#x8A08;&#x756B;
-                                                            </b>
-                                                                <p class="card-text">推動智慧學習產業走向國際，提升我國教育科技領域的競爭力與知名度。</p>
-                                                        </a>
-                                                        <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
-                                                            <div class="listTag2 flex-fill pt-2 pe-4">
-                                                                    <a href="javascript:;" class="btn" role="button">&#x6578;&#x4F4D;&#x9AD4;&#x9A57;</a>
-                                                            </div>
+                                            <div class="col-12 col-sm-6 position-relative">
+                                                <div class="card h-100 rounded-0">
+                                                    <div class="card-body ps-0 pb-0 pe-0">
+                                                        <div class="d-flex flex-wrap">
+                                                            <a href="/ADI/industry-counseling/platform-economy/1205.html" class="cardT col-12" target='' title='智慧學習產業整合輸出計畫'>
+                                                                <b class="card-title title5 fw-normal">
+                                                                    &#x667A;&#x6167;&#x5B78;&#x7FD2;&#x7522;&#x696D;&#x6574;&#x5408;&#x8F38;&#x51FA;&#x8A08;&#x756B;
+                                                                </b>
+                                                                    <p class="card-text">推動智慧學習產業走向國際，提升我國教育科技領域的競爭力與知名度。</p>
+                                                            </a>
+                                                            <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
+                                                                <div class="listTag2 flex-fill pt-2 pe-4">
+                                                                        <a href="javascript:;" class="btn" role="button">&#x6578;&#x4F4D;&#x9AD4;&#x9A57;</a>
+                                                                </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 position-relative">
-                                            <div class="card h-100 rounded-0">
-                                                <div class="card-body ps-0 pb-0 pe-0">
-                                                    <div class="d-flex flex-wrap">
-                                                        <a href="/ADI/industry-counseling/platform-economy/1207.html" class="cardT col-12" target='' title='數據創新服務生態系推動計畫'>
-                                                            <b class="card-title title5 fw-normal">
-                                                                &#x6578;&#x64DA;&#x5275;&#x65B0;&#x670D;&#x52D9;&#x751F;&#x614B;&#x7CFB;&#x63A8;&#x52D5;&#x8A08;&#x756B;
-                                                            </b>
-                                                                <p class="card-text">透過平台整合產業資料，推動數據技術核心之應用與合作，來發展新興數據經濟與創新業態之發展。</p>
-                                                        </a>
-                                                        <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
-                                                            <div class="listTag2 flex-fill pt-2 pe-4">
-                                                                    <a href="javascript:;" class="btn" role="button">&#x6578;&#x64DA;&#x7D93;&#x6FDF;</a>
-                                                            </div>
+                                            <div class="col-12 col-sm-6 position-relative">
+                                                <div class="card h-100 rounded-0">
+                                                    <div class="card-body ps-0 pb-0 pe-0">
+                                                        <div class="d-flex flex-wrap">
+                                                            <a href="/ADI/industry-counseling/platform-economy/1207.html" class="cardT col-12" target='' title='數據創新服務生態系推動計畫'>
+                                                                <b class="card-title title5 fw-normal">
+                                                                    &#x6578;&#x64DA;&#x5275;&#x65B0;&#x670D;&#x52D9;&#x751F;&#x614B;&#x7CFB;&#x63A8;&#x52D5;&#x8A08;&#x756B;
+                                                                </b>
+                                                                    <p class="card-text">透過平台整合產業資料，推動數據技術核心之應用與合作，來發展新興數據經濟與創新業態之發展。</p>
+                                                            </a>
+                                                            <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
+                                                                <div class="listTag2 flex-fill pt-2 pe-4">
+                                                                        <a href="javascript:;" class="btn" role="button">&#x6578;&#x64DA;&#x7D93;&#x6FDF;</a>
+                                                                </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                </div>
+                                    </div>
                         <div class="pageBar mb-5 ">
     <div class="pageSet mb-4">
                         <div class="mRow">共<span class="totalData">6</span>筆資料</div>
@@ -744,7 +754,7 @@
                 <div class="ftBtmRights">
                     <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero (另開新視窗)">CC0</a>&nbsp;No copyright reserved.</p>
 
-                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-18<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-19<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
             </div>
             <div class="col-12 col-md text-md-end">
@@ -784,28 +794,27 @@
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/ADI/assets/js/common.js?v=x0UupwgjHYYaah8zqMcOzWDeoIMb2-zxrmwpE3QrD6M"></script>
+            <script src="/ADI/assets/js/common.js?v=zmUPd4Szq_QadYaZuW3Pv7TwZ8vgeEkcGx3qVI32v1M"></script>
     <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=V2JExwd7xdBP26AtgTeajbqPQbpLse0DlFgoRNwRcdo"></script>
+    <script src="/js/site.js?v=r3b45PJ-Q435KvD8SAVTjXll8cXI-McYimLv_DaGbWU"></script>
     <script>
         webSiteLange('zh-tw' ,'ADI'  );
 
     </script>
     
-<script>
-    var _JsData;
-    var S1 ;
-    var S2 ;
-    var _needtag = NeedTag('TwoTextList');
-    _JsData = JSON.parse('[{"mainsn":"1197","istopdisplay":"none","href":"/ADI/industry-counseling/platform-economy/1197.html","target":null,"title":"AI \u667A\u6167\u61C9\u7528\u670D\u52D9\u767C\u5C55\u74B0\u5883\u63A8\u52D5\u8A08\u756B","startdate":"2022-08-27","newstitle":"AI \u667A\u6167\u61C9\u7528\u670D\u52D9\u767C\u5C55\u74B0\u5883\u63A8\u52D5\u8A08\u756B","newssubtitle":"\u4EE5\u7522\u696DAI\u5316\u3001AI\u7522\u696D\u5316\u70BA\u96D9\u6838\u5FC3\u4E3B\u8EF8\uFF0C\u52A0\u901F\u7522\u696D\u767C\u5C55\u4E26\u5EFA\u69CB\u667A\u6167\u670D\u52D9\u7CFB\u7D71\u751F\u614B\u3002","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u5E73\u53F0\u6CBB\u7406"}],"crosslinkdisplay":"none"},{"mainsn":"1199","istopdisplay":"none","href":"/ADI/industry-counseling/platform-economy/1199.html","target":null,"title":"AI \u7522\u696D\u5BE6\u6230\u61C9\u7528\u4EBA\u624D\u6DEC\u7149\u8A08\u756B","startdate":"2022-08-27","newstitle":"AI \u7522\u696D\u5BE6\u6230\u61C9\u7528\u4EBA\u624D\u6DEC\u7149\u8A08\u756B","newssubtitle":"\u4EE5\u4EBA\u5DE5\u667A\u6167\u70BA\u6838\u5FC3\uFF0C\u57F9\u990A\u7522\u696D\u667A\u6167\u5316\u6280\u8853\u6574\u5408\u53CA\u5275\u65B0\u61C9\u7528\u4EBA\u624D\u3002","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u5E73\u53F0\u6CBB\u7406"}],"crosslinkdisplay":"none"},{"mainsn":"1201","istopdisplay":"none","href":"/ADI/industry-counseling/platform-economy/1201.html","target":null,"title":"\u667A\u6167\u5167\u5BB9\u5275\u65B0\u61C9\u7528\u767C\u5C55\u8A08\u756B","startdate":"2022-08-27","newstitle":"\u667A\u6167\u5167\u5BB9\u5275\u65B0\u61C9\u7528\u767C\u5C55\u8A08\u756B","newssubtitle":"\u4EE5\u5E36\u52D5\u300C\u5167\u5BB9\u52A0\u503C\u300D\u65BC\u5404\u884C\u5404\u696D\u4E4B\u76EE\u6A19\uFF0C\u9A45\u52D5\u7522\u696D\u6578\u4F4D\u8F49\u578B\u52D5\u80FD\u3002","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u6578\u4F4D\u9AD4\u9A57"}],"crosslinkdisplay":"none"},{"mainsn":"1203","istopdisplay":"none","href":"/ADI/industry-counseling/platform-economy/1203.html","target":null,"title":"\u5065\u5168\u6578\u4F4D\u5A1B\u6A02\u74B0\u5883\u8207\u958B\u767C\u8005\u8F14\u5C0E\u5275\u65B0\u8A08\u756B","startdate":"2022-08-27","newstitle":"\u5065\u5168\u6578\u4F4D\u5A1B\u6A02\u74B0\u5883\u8207\u958B\u767C\u8005\u8F14\u5C0E\u5275\u65B0\u8A08\u756B","newssubtitle":"\u6253\u9020\u5275\u65B0\u57FA\u790E\u74B0\u5883\uFF0C\u5354\u52A9\u6578\u4F4D\u904A\u6232\u7522\u696D\u63D0\u5347\u7814\u767C\u8207\u5167\u5BB9\u7522\u88FD\u80FD\u529B\uFF0C\u5851\u9020\u53CB\u5584\u512A\u8CEA\u7684\u7D93\u71DF\u74B0\u5883\u3002","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u6578\u4F4D\u9AD4\u9A57"}],"crosslinkdisplay":"none"},{"mainsn":"1205","istopdisplay":"none","href":"/ADI/industry-counseling/platform-economy/1205.html","target":null,"title":"\u667A\u6167\u5B78\u7FD2\u7522\u696D\u6574\u5408\u8F38\u51FA\u8A08\u756B","startdate":"2022-08-27","newstitle":"\u667A\u6167\u5B78\u7FD2\u7522\u696D\u6574\u5408\u8F38\u51FA\u8A08\u756B","newssubtitle":"\u63A8\u52D5\u667A\u6167\u5B78\u7FD2\u7522\u696D\u8D70\u5411\u570B\u969B\uFF0C\u63D0\u5347\u6211\u570B\u6559\u80B2\u79D1\u6280\u9818\u57DF\u7684\u7AF6\u722D\u529B\u8207\u77E5\u540D\u5EA6\u3002","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u6578\u4F4D\u9AD4\u9A57"}],"crosslinkdisplay":"none"},{"mainsn":"1207","istopdisplay":"none","href":"/ADI/industry-counseling/platform-economy/1207.html","target":null,"title":"\u6578\u64DA\u5275\u65B0\u670D\u52D9\u751F\u614B\u7CFB\u63A8\u52D5\u8A08\u756B","startdate":"2022-08-27","newstitle":"\u6578\u64DA\u5275\u65B0\u670D\u52D9\u751F\u614B\u7CFB\u63A8\u52D5\u8A08\u756B","newssubtitle":"\u900F\u904E\u5E73\u53F0\u6574\u5408\u7522\u696D\u8CC7\u6599\uFF0C\u63A8\u52D5\u6578\u64DA\u6280\u8853\u6838\u5FC3\u4E4B\u61C9\u7528\u8207\u5408\u4F5C\uFF0C\u4F86\u767C\u5C55\u65B0\u8208\u6578\u64DA\u7D93\u6FDF\u8207\u5275\u65B0\u696D\u614B\u4E4B\u767C\u5C55\u3002","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u6578\u64DA\u7D93\u6FDF"}],"crosslinkdisplay":"none"}]');
-    LeftMenu('568');
-   NewList('568');
-    var ListPage = '/_news/TwoTextList.html';
-    var listTag2Page = '/_news/listTag2.html';
-    $("#ns").load(ListPage, function () {
-        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
-    });
-</script>
+    <script>
+        var _JsData;
+        var _needtag = NeedTag('TwoTextList');
+        var _Module = 'NEWS';
+        _JsData = JSON.parse('[{"mainsn":"1197","istopdisplay":"none","href":"/ADI/industry-counseling/platform-economy/1197.html","target":null,"title":"AI \u667A\u6167\u61C9\u7528\u670D\u52D9\u767C\u5C55\u74B0\u5883\u63A8\u52D5\u8A08\u756B","startdate":"2022-08-27","newstitle":"AI \u667A\u6167\u61C9\u7528\u670D\u52D9\u767C\u5C55\u74B0\u5883\u63A8\u52D5\u8A08\u756B","newssubtitle":"\u4EE5\u7522\u696DAI\u5316\u3001AI\u7522\u696D\u5316\u70BA\u96D9\u6838\u5FC3\u4E3B\u8EF8\uFF0C\u52A0\u901F\u7522\u696D\u767C\u5C55\u4E26\u5EFA\u69CB\u667A\u6167\u670D\u52D9\u7CFB\u7D71\u751F\u614B\u3002","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u5E73\u53F0\u6CBB\u7406"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1199","istopdisplay":"none","href":"/ADI/industry-counseling/platform-economy/1199.html","target":null,"title":"AI \u7522\u696D\u5BE6\u6230\u61C9\u7528\u4EBA\u624D\u6DEC\u7149\u8A08\u756B","startdate":"2022-08-27","newstitle":"AI \u7522\u696D\u5BE6\u6230\u61C9\u7528\u4EBA\u624D\u6DEC\u7149\u8A08\u756B","newssubtitle":"\u4EE5\u4EBA\u5DE5\u667A\u6167\u70BA\u6838\u5FC3\uFF0C\u57F9\u990A\u7522\u696D\u667A\u6167\u5316\u6280\u8853\u6574\u5408\u53CA\u5275\u65B0\u61C9\u7528\u4EBA\u624D\u3002","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u5E73\u53F0\u6CBB\u7406"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1201","istopdisplay":"none","href":"/ADI/industry-counseling/platform-economy/1201.html","target":null,"title":"\u667A\u6167\u5167\u5BB9\u5275\u65B0\u61C9\u7528\u767C\u5C55\u8A08\u756B","startdate":"2022-08-27","newstitle":"\u667A\u6167\u5167\u5BB9\u5275\u65B0\u61C9\u7528\u767C\u5C55\u8A08\u756B","newssubtitle":"\u4EE5\u5E36\u52D5\u300C\u5167\u5BB9\u52A0\u503C\u300D\u65BC\u5404\u884C\u5404\u696D\u4E4B\u76EE\u6A19\uFF0C\u9A45\u52D5\u7522\u696D\u6578\u4F4D\u8F49\u578B\u52D5\u80FD\u3002","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u6578\u4F4D\u9AD4\u9A57"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1203","istopdisplay":"none","href":"/ADI/industry-counseling/platform-economy/1203.html","target":null,"title":"\u5065\u5168\u6578\u4F4D\u5A1B\u6A02\u74B0\u5883\u8207\u958B\u767C\u8005\u8F14\u5C0E\u5275\u65B0\u8A08\u756B","startdate":"2022-08-27","newstitle":"\u5065\u5168\u6578\u4F4D\u5A1B\u6A02\u74B0\u5883\u8207\u958B\u767C\u8005\u8F14\u5C0E\u5275\u65B0\u8A08\u756B","newssubtitle":"\u6253\u9020\u5275\u65B0\u57FA\u790E\u74B0\u5883\uFF0C\u5354\u52A9\u6578\u4F4D\u904A\u6232\u7522\u696D\u63D0\u5347\u7814\u767C\u8207\u5167\u5BB9\u7522\u88FD\u80FD\u529B\uFF0C\u5851\u9020\u53CB\u5584\u512A\u8CEA\u7684\u7D93\u71DF\u74B0\u5883\u3002","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u6578\u4F4D\u9AD4\u9A57"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1205","istopdisplay":"none","href":"/ADI/industry-counseling/platform-economy/1205.html","target":null,"title":"\u667A\u6167\u5B78\u7FD2\u7522\u696D\u6574\u5408\u8F38\u51FA\u8A08\u756B","startdate":"2022-08-27","newstitle":"\u667A\u6167\u5B78\u7FD2\u7522\u696D\u6574\u5408\u8F38\u51FA\u8A08\u756B","newssubtitle":"\u63A8\u52D5\u667A\u6167\u5B78\u7FD2\u7522\u696D\u8D70\u5411\u570B\u969B\uFF0C\u63D0\u5347\u6211\u570B\u6559\u80B2\u79D1\u6280\u9818\u57DF\u7684\u7AF6\u722D\u529B\u8207\u77E5\u540D\u5EA6\u3002","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u6578\u4F4D\u9AD4\u9A57"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1207","istopdisplay":"none","href":"/ADI/industry-counseling/platform-economy/1207.html","target":null,"title":"\u6578\u64DA\u5275\u65B0\u670D\u52D9\u751F\u614B\u7CFB\u63A8\u52D5\u8A08\u756B","startdate":"2022-08-27","newstitle":"\u6578\u64DA\u5275\u65B0\u670D\u52D9\u751F\u614B\u7CFB\u63A8\u52D5\u8A08\u756B","newssubtitle":"\u900F\u904E\u5E73\u53F0\u6574\u5408\u7522\u696D\u8CC7\u6599\uFF0C\u63A8\u52D5\u6578\u64DA\u6280\u8853\u6838\u5FC3\u4E4B\u61C9\u7528\u8207\u5408\u4F5C\uFF0C\u4F86\u767C\u5C55\u65B0\u8208\u6578\u64DA\u7D93\u6FDF\u8207\u5275\u65B0\u696D\u614B\u4E4B\u767C\u5C55\u3002","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u6578\u64DA\u7D93\u6FDF"}],"crosslinkdisplay":"none","schedule":null}]');
+        LeftMenu('568');
+        NewList('568');
+        var ListPage = '/_news/TwoTextList.html';
+        var listTag2Page = '/_news/listTag2.html';
+        $("#ns").load(ListPage, function () {
+            if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+        });
+    </script>
 
 </body>
 </html>

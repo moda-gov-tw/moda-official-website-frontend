@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/ADI/assets/css/layout.css?v=lFRGWo9ll0_yrhbB0k7NHWoFYODtIvA5J4BOAF_ss00" media="all" />
+            <link rel="stylesheet" href="/ADI/assets/css/layout.css?v=jZyKUu2SZ5ExvaVv1DVT7z8BKU_Z3Q98pCjfF9x0Ux8" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -55,12 +55,15 @@
     <header class="header">
         <!-- header -->
         <div b-jabq2d7uqs class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-jabq2d7uqs class="a11yBrickBar1 position-relative"><a b-jabq2d7uqs href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="&#x9801;&#x9762;&#x9802;&#x7AEF;&#x529F;&#x80FD;&#x5340;&#x584A;[&#x5FEB;&#x6377;&#x9375;Alt&#x2B;U]">:::</a></div></div>
-        <div b-jabq2d7uqs class="baseNav d-none d-xxl-block">
+
+        <!-- 若沒有社群鈕<div class="baseNav d-none d-xxl-block"> -->
+		<div b-jabq2d7uqs class="baseNav">
             <div b-jabq2d7uqs class="wrap1 mx-auto px-4 px-lg-5">
-                <div b-jabq2d7uqs class="d-md-flex justify-content-end align-items-center">
+				<div b-jabq2d7uqs class="d-flex justify-content-end align-items-top">
                     <!-- Top bar right -->
                     <div b-jabq2d7uqs class="d-flex align-items-top">
-                        <ul b-jabq2d7uqs class="nav">
+                        <!-- 社群鈕 -->
+                        <ul b-jabq2d7uqs class="nav d-none d-xxl-flex">
                                 <li b-jabq2d7uqs class="nav-item">
                                     <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/" target='_blank' rel='noreferrer noopener' title='數位發展部（另開新視窗）'>
                                         <i b-jabq2d7uqs class="ci ci-moda"></i>
@@ -73,6 +76,7 @@
                                     <span b-jabq2d7uqs class="visually-hidden">&#x7DB2;&#x7AD9;&#x5C0E;&#x89BD;</span>
                                 </a>
                             </li>
+
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/en/ADI/index.html" title="English">
                                     <i b-jabq2d7uqs class="ci ci-en"></i>
@@ -81,7 +85,7 @@
                             </li>
                         </ul>
                         <!-- 切換字體大小 -->
-                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs">
+                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs d-none d-xxl-flex">
                             <button b-jabq2d7uqs class="fontSizeDdNow btn-dropdownNow dropdown-toggle text-white" type="button" id="fontSizeDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-order="2" title="&#x4E2D;&#x5B57;&#x7D1A;"><i b-jabq2d7uqs class="ci ci-font2"></i><span b-jabq2d7uqs class="visually-hidden">A</span></button>
                             <ul b-jabq2d7uqs class="dropdown-menu" aria-labelledby="fontSizeDropdown">
                                 <li b-jabq2d7uqs><button b-jabq2d7uqs class="dropdown-item" type="button" data-order="1" title="&#x5927;&#x5B57;&#x7D1A;">A<sup b-jabq2d7uqs>+</sup></button></li>
@@ -89,13 +93,19 @@
                             </ul>
                         </div>
                         <!-- 搜尋鈕 -->
-                        <div b-jabq2d7uqs class="nav-item navbar-icon-link">
+                        <div b-jabq2d7uqs class="nav-item navbar-icon-link d-none d-xxl-flex">
                             <a b-jabq2d7uqs href="javascript:;" id="S" accesskey="S" class="searchSwitchBtn searchSwitchBtnJs nav-link text-white px-3" title="&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;">
                                 <i b-jabq2d7uqs class="ci ci-scope"></i>
                                 <span b-jabq2d7uqs class="visually-hidden">&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;</span>
                             </a>
                         </div>
                     </div>
+                    <script>
+                        //detect header social btn
+                        if(!document.getElementsByClassName('navSocial').length){
+                            document.body.className += ' noHdSocial';
+                        }
+                    </script>
                 </div>
             </div>
         </div>
@@ -443,98 +453,98 @@
                 </div>
 
                 <!-- 列表 -->
-                                <div class="list3-2 row gy-3 gx-sm-5 mb-5" id="ListTable">
-                                        <div class="col-12 col-sm-6 position-relative">
-                                            <div class="card h-100 rounded-0">
-                                                <div class="card-body ps-0 pb-0 pe-0">
-                                                    <div class="d-flex flex-wrap">
-                                                        <a href="/ADI/industry-counseling/digital-service/1221.html" class="cardT col-12" target='' title='引領中小企業數位轉型戰略攻頂計畫'>
-                                                            <b class="card-title title5 fw-normal">
-                                                                &#x5F15;&#x9818;&#x4E2D;&#x5C0F;&#x4F01;&#x696D;&#x6578;&#x4F4D;&#x8F49;&#x578B;&#x6230;&#x7565;&#x653B;&#x9802;&#x8A08;&#x756B;
-                                                            </b>
-                                                                <p class="card-text">落實中小企業數位轉型目標，確保轉型後的具體、可衡量價值，並確保數據與經驗累積、加值與擴散。</p>
-                                                        </a>
-                                                        <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
-                                                            <div class="listTag2 flex-fill pt-2 pe-4">
-                                                                    <a href="javascript:;" class="btn" role="button">&#x8F49;&#x578B;&#x8F14;&#x5C0E;</a>
-                                                            </div>
+                                    <div class="list3-2 row gy-3 gx-sm-5 mb-5" id="ListTable">
+                                            <div class="col-12 col-sm-6 position-relative">
+                                                <div class="card h-100 rounded-0">
+                                                    <div class="card-body ps-0 pb-0 pe-0">
+                                                        <div class="d-flex flex-wrap">
+                                                            <a href="/ADI/industry-counseling/digital-service/1221.html" class="cardT col-12" target='' title='引領中小企業數位轉型戰略攻頂計畫'>
+                                                                <b class="card-title title5 fw-normal">
+                                                                    &#x5F15;&#x9818;&#x4E2D;&#x5C0F;&#x4F01;&#x696D;&#x6578;&#x4F4D;&#x8F49;&#x578B;&#x6230;&#x7565;&#x653B;&#x9802;&#x8A08;&#x756B;
+                                                                </b>
+                                                                    <p class="card-text">落實中小企業數位轉型目標，確保轉型後的具體、可衡量價值，並確保數據與經驗累積、加值與擴散。</p>
+                                                            </a>
+                                                            <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
+                                                                <div class="listTag2 flex-fill pt-2 pe-4">
+                                                                        <a href="javascript:;" class="btn" role="button">&#x8F49;&#x578B;&#x8F14;&#x5C0E;</a>
+                                                                </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 position-relative">
-                                            <div class="card h-100 rounded-0">
-                                                <div class="card-body ps-0 pb-0 pe-0">
-                                                    <div class="d-flex flex-wrap">
-                                                        <a href="/ADI/industry-counseling/digital-service/1223.html" class="cardT col-12" target='' title='企業對政府雲端機器可讀介面優化計畫'>
-                                                            <b class="card-title title5 fw-normal">
-                                                                &#x4F01;&#x696D;&#x5C0D;&#x653F;&#x5E9C;&#x96F2;&#x7AEF;&#x6A5F;&#x5668;&#x53EF;&#x8B80;&#x4ECB;&#x9762;&#x512A;&#x5316;&#x8A08;&#x756B;
-                                                            </b>
-                                                                <p class="card-text">建置企業使用者視角之政府服務平台，提供中小微企業快速串接多項跨政府服務。</p>
-                                                        </a>
-                                                        <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
-                                                            <div class="listTag2 flex-fill pt-2 pe-4">
-                                                                    <a href="javascript:;" class="btn" role="button">&#x6574;&#x5408;&#x670D;&#x52D9;</a>
-                                                            </div>
+                                            <div class="col-12 col-sm-6 position-relative">
+                                                <div class="card h-100 rounded-0">
+                                                    <div class="card-body ps-0 pb-0 pe-0">
+                                                        <div class="d-flex flex-wrap">
+                                                            <a href="/ADI/industry-counseling/digital-service/1223.html" class="cardT col-12" target='' title='企業對政府雲端機器可讀介面優化計畫'>
+                                                                <b class="card-title title5 fw-normal">
+                                                                    &#x4F01;&#x696D;&#x5C0D;&#x653F;&#x5E9C;&#x96F2;&#x7AEF;&#x6A5F;&#x5668;&#x53EF;&#x8B80;&#x4ECB;&#x9762;&#x512A;&#x5316;&#x8A08;&#x756B;
+                                                                </b>
+                                                                    <p class="card-text">建置企業使用者視角之政府服務平台，提供中小微企業快速串接多項跨政府服務。</p>
+                                                            </a>
+                                                            <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
+                                                                <div class="listTag2 flex-fill pt-2 pe-4">
+                                                                        <a href="javascript:;" class="btn" role="button">&#x6574;&#x5408;&#x670D;&#x52D9;</a>
+                                                                </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 position-relative">
-                                            <div class="card h-100 rounded-0">
-                                                <div class="card-body ps-0 pb-0 pe-0">
-                                                    <div class="d-flex flex-wrap">
-                                                        <a href="/ADI/industry-counseling/digital-service/1225.html" class="cardT col-12" target='' title='資訊服務業發展計畫'>
-                                                            <b class="card-title title5 fw-normal">
-                                                                &#x8CC7;&#x8A0A;&#x670D;&#x52D9;&#x696D;&#x767C;&#x5C55;&#x8A08;&#x756B;
-                                                            </b>
-                                                                <p class="card-text">協助資訊服務業者投入跨域整合，於解決方案融入服務體驗設計思維或AIoT技術，以開發創新解決方案或服務模式。</p>
-                                                        </a>
-                                                        <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
-                                                            <div class="listTag2 flex-fill pt-2 pe-4">
-                                                                    <a href="javascript:;" class="btn" role="button">&#x6574;&#x5408;&#x670D;&#x52D9;</a>
-                                                            </div>
+                                            <div class="col-12 col-sm-6 position-relative">
+                                                <div class="card h-100 rounded-0">
+                                                    <div class="card-body ps-0 pb-0 pe-0">
+                                                        <div class="d-flex flex-wrap">
+                                                            <a href="/ADI/industry-counseling/digital-service/1225.html" class="cardT col-12" target='' title='資訊服務業發展計畫'>
+                                                                <b class="card-title title5 fw-normal">
+                                                                    &#x8CC7;&#x8A0A;&#x670D;&#x52D9;&#x696D;&#x767C;&#x5C55;&#x8A08;&#x756B;
+                                                                </b>
+                                                                    <p class="card-text">協助資訊服務業者投入跨域整合，於解決方案融入服務體驗設計思維或AIoT技術，以開發創新解決方案或服務模式。</p>
+                                                            </a>
+                                                            <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
+                                                                <div class="listTag2 flex-fill pt-2 pe-4">
+                                                                        <a href="javascript:;" class="btn" role="button">&#x6574;&#x5408;&#x670D;&#x52D9;</a>
+                                                                </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 position-relative">
-                                            <div class="card h-100 rounded-0">
-                                                <div class="card-body ps-0 pb-0 pe-0">
-                                                    <div class="d-flex flex-wrap">
-                                                        <a href="/ADI/industry-counseling/digital-service/1227.html" class="cardT col-12" target='' title='數位平台服務推動計畫'>
-                                                            <b class="card-title title5 fw-normal">
-                                                                &#x6578;&#x4F4D;&#x5E73;&#x53F0;&#x670D;&#x52D9;&#x63A8;&#x52D5;&#x8A08;&#x756B;
-                                                            </b>
-                                                                <p class="card-text">發展數位雲服務，並提供企業建議與轉型並接軌產業數位平台服務，串聯產業公協會等建立聯盟網絡，打造健全生態系。</p>
-                                                        </a>
-                                                        <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
-                                                            <div class="listTag2 flex-fill pt-2 pe-4">
-                                                                    <a href="javascript:;" class="btn" role="button">&#x6574;&#x5408;&#x670D;&#x52D9;</a>
-                                                            </div>
+                                            <div class="col-12 col-sm-6 position-relative">
+                                                <div class="card h-100 rounded-0">
+                                                    <div class="card-body ps-0 pb-0 pe-0">
+                                                        <div class="d-flex flex-wrap">
+                                                            <a href="/ADI/industry-counseling/digital-service/1227.html" class="cardT col-12" target='' title='數位平台服務推動計畫'>
+                                                                <b class="card-title title5 fw-normal">
+                                                                    &#x6578;&#x4F4D;&#x5E73;&#x53F0;&#x670D;&#x52D9;&#x63A8;&#x52D5;&#x8A08;&#x756B;
+                                                                </b>
+                                                                    <p class="card-text">發展數位雲服務，並提供企業建議與轉型並接軌產業數位平台服務，串聯產業公協會等建立聯盟網絡，打造健全生態系。</p>
+                                                            </a>
+                                                            <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
+                                                                <div class="listTag2 flex-fill pt-2 pe-4">
+                                                                        <a href="javascript:;" class="btn" role="button">&#x6574;&#x5408;&#x670D;&#x52D9;</a>
+                                                                </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 position-relative">
-                                            <div class="card h-100 rounded-0">
-                                                <div class="card-body ps-0 pb-0 pe-0">
-                                                    <div class="d-flex flex-wrap">
-                                                        <a href="/ADI/industry-counseling/digital-service/1229.html" class="cardT col-12" target='' title='政府軟體採購推動計畫'>
-                                                            <b class="card-title title5 fw-normal">
-                                                                &#x653F;&#x5E9C;&#x8EDF;&#x9AD4;&#x63A1;&#x8CFC;&#x63A8;&#x52D5;&#x8A08;&#x756B;
-                                                            </b>
-                                                                <p class="card-text">訂定及推動產品規格與產業標準、執行軟體檢測以及平台服務與機制維運，將能使公部門採購價格與品質合宜的軟體產品。</p>
-                                                        </a>
-                                                        <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
-                                                            <div class="listTag2 flex-fill pt-2 pe-4">
-                                                                    <a href="javascript:;" class="btn" role="button">&#x5275;&#x65B0;&#x61C9;&#x7528;</a>
-                                                            </div>
+                                            <div class="col-12 col-sm-6 position-relative">
+                                                <div class="card h-100 rounded-0">
+                                                    <div class="card-body ps-0 pb-0 pe-0">
+                                                        <div class="d-flex flex-wrap">
+                                                            <a href="/ADI/industry-counseling/digital-service/1229.html" class="cardT col-12" target='' title='政府軟體採購推動計畫'>
+                                                                <b class="card-title title5 fw-normal">
+                                                                    &#x653F;&#x5E9C;&#x8EDF;&#x9AD4;&#x63A1;&#x8CFC;&#x63A8;&#x52D5;&#x8A08;&#x756B;
+                                                                </b>
+                                                                    <p class="card-text">訂定及推動產品規格與產業標準、執行軟體檢測以及平台服務與機制維運，將能使公部門採購價格與品質合宜的軟體產品。</p>
+                                                            </a>
+                                                            <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
+                                                                <div class="listTag2 flex-fill pt-2 pe-4">
+                                                                        <a href="javascript:;" class="btn" role="button">&#x5275;&#x65B0;&#x61C9;&#x7528;</a>
+                                                                </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                </div>
+                                    </div>
                         <div class="pageBar mb-5 ">
     <div class="pageSet mb-4">
                         <div class="mRow">共<span class="totalData">5</span>筆資料</div>
@@ -726,7 +736,7 @@
                 <div class="ftBtmRights">
                     <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero (另開新視窗)">CC0</a>&nbsp;No copyright reserved.</p>
 
-                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-18<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-19<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
             </div>
             <div class="col-12 col-md text-md-end">
@@ -766,28 +776,27 @@
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/ADI/assets/js/common.js?v=x0UupwgjHYYaah8zqMcOzWDeoIMb2-zxrmwpE3QrD6M"></script>
+            <script src="/ADI/assets/js/common.js?v=zmUPd4Szq_QadYaZuW3Pv7TwZ8vgeEkcGx3qVI32v1M"></script>
     <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=V2JExwd7xdBP26AtgTeajbqPQbpLse0DlFgoRNwRcdo"></script>
+    <script src="/js/site.js?v=r3b45PJ-Q435KvD8SAVTjXll8cXI-McYimLv_DaGbWU"></script>
     <script>
         webSiteLange('zh-tw' ,'ADI'  );
 
     </script>
     
-<script>
-    var _JsData;
-    var S1 ;
-    var S2 ;
-    var _needtag = NeedTag('TwoTextList');
-    _JsData = JSON.parse('[{"mainsn":"1221","istopdisplay":"none","href":"/ADI/industry-counseling/digital-service/1221.html","target":null,"title":"\u5F15\u9818\u4E2D\u5C0F\u4F01\u696D\u6578\u4F4D\u8F49\u578B\u6230\u7565\u653B\u9802\u8A08\u756B","startdate":"2022-08-27","newstitle":"\u5F15\u9818\u4E2D\u5C0F\u4F01\u696D\u6578\u4F4D\u8F49\u578B\u6230\u7565\u653B\u9802\u8A08\u756B","newssubtitle":"\u843D\u5BE6\u4E2D\u5C0F\u4F01\u696D\u6578\u4F4D\u8F49\u578B\u76EE\u6A19\uFF0C\u78BA\u4FDD\u8F49\u578B\u5F8C\u7684\u5177\u9AD4\u3001\u53EF\u8861\u91CF\u50F9\u503C\uFF0C\u4E26\u78BA\u4FDD\u6578\u64DA\u8207\u7D93\u9A57\u7D2F\u7A4D\u3001\u52A0\u503C\u8207\u64F4\u6563\u3002","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u8F49\u578B\u8F14\u5C0E"}],"crosslinkdisplay":"none"},{"mainsn":"1223","istopdisplay":"none","href":"/ADI/industry-counseling/digital-service/1223.html","target":null,"title":"\u4F01\u696D\u5C0D\u653F\u5E9C\u96F2\u7AEF\u6A5F\u5668\u53EF\u8B80\u4ECB\u9762\u512A\u5316\u8A08\u756B","startdate":"2022-08-27","newstitle":"\u4F01\u696D\u5C0D\u653F\u5E9C\u96F2\u7AEF\u6A5F\u5668\u53EF\u8B80\u4ECB\u9762\u512A\u5316\u8A08\u756B","newssubtitle":"\u5EFA\u7F6E\u4F01\u696D\u4F7F\u7528\u8005\u8996\u89D2\u4E4B\u653F\u5E9C\u670D\u52D9\u5E73\u53F0\uFF0C\u63D0\u4F9B\u4E2D\u5C0F\u5FAE\u4F01\u696D\u5FEB\u901F\u4E32\u63A5\u591A\u9805\u8DE8\u653F\u5E9C\u670D\u52D9\u3002","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u6574\u5408\u670D\u52D9"}],"crosslinkdisplay":"none"},{"mainsn":"1225","istopdisplay":"none","href":"/ADI/industry-counseling/digital-service/1225.html","target":null,"title":"\u8CC7\u8A0A\u670D\u52D9\u696D\u767C\u5C55\u8A08\u756B","startdate":"2022-08-27","newstitle":"\u8CC7\u8A0A\u670D\u52D9\u696D\u767C\u5C55\u8A08\u756B","newssubtitle":"\u5354\u52A9\u8CC7\u8A0A\u670D\u52D9\u696D\u8005\u6295\u5165\u8DE8\u57DF\u6574\u5408\uFF0C\u65BC\u89E3\u6C7A\u65B9\u6848\u878D\u5165\u670D\u52D9\u9AD4\u9A57\u8A2D\u8A08\u601D\u7DAD\u6216AIoT\u6280\u8853\uFF0C\u4EE5\u958B\u767C\u5275\u65B0\u89E3\u6C7A\u65B9\u6848\u6216\u670D\u52D9\u6A21\u5F0F\u3002","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u6574\u5408\u670D\u52D9"}],"crosslinkdisplay":"none"},{"mainsn":"1227","istopdisplay":"none","href":"/ADI/industry-counseling/digital-service/1227.html","target":null,"title":"\u6578\u4F4D\u5E73\u53F0\u670D\u52D9\u63A8\u52D5\u8A08\u756B","startdate":"2022-08-27","newstitle":"\u6578\u4F4D\u5E73\u53F0\u670D\u52D9\u63A8\u52D5\u8A08\u756B","newssubtitle":"\u767C\u5C55\u6578\u4F4D\u96F2\u670D\u52D9\uFF0C\u4E26\u63D0\u4F9B\u4F01\u696D\u5EFA\u8B70\u8207\u8F49\u578B\u4E26\u63A5\u8ECC\u7522\u696D\u6578\u4F4D\u5E73\u53F0\u670D\u52D9\uFF0C\u4E32\u806F\u7522\u696D\u516C\u5354\u6703\u7B49\u5EFA\u7ACB\u806F\u76DF\u7DB2\u7D61\uFF0C\u6253\u9020\u5065\u5168\u751F\u614B\u7CFB\u3002","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u6574\u5408\u670D\u52D9"}],"crosslinkdisplay":"none"},{"mainsn":"1229","istopdisplay":"none","href":"/ADI/industry-counseling/digital-service/1229.html","target":null,"title":"\u653F\u5E9C\u8EDF\u9AD4\u63A1\u8CFC\u63A8\u52D5\u8A08\u756B","startdate":"2022-08-27","newstitle":"\u653F\u5E9C\u8EDF\u9AD4\u63A1\u8CFC\u63A8\u52D5\u8A08\u756B","newssubtitle":"\u8A02\u5B9A\u53CA\u63A8\u52D5\u7522\u54C1\u898F\u683C\u8207\u7522\u696D\u6A19\u6E96\u3001\u57F7\u884C\u8EDF\u9AD4\u6AA2\u6E2C\u4EE5\u53CA\u5E73\u53F0\u670D\u52D9\u8207\u6A5F\u5236\u7DAD\u904B\uFF0C\u5C07\u80FD\u4F7F\u516C\u90E8\u9580\u63A1\u8CFC\u50F9\u683C\u8207\u54C1\u8CEA\u5408\u5B9C\u7684\u8EDF\u9AD4\u7522\u54C1\u3002","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u5275\u65B0\u61C9\u7528"}],"crosslinkdisplay":"none"}]');
-    LeftMenu('572');
-   NewList('572');
-    var ListPage = '/_news/TwoTextList.html';
-    var listTag2Page = '/_news/listTag2.html';
-    $("#ns").load(ListPage, function () {
-        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
-    });
-</script>
+    <script>
+        var _JsData;
+        var _needtag = NeedTag('TwoTextList');
+        var _Module = 'NEWS';
+        _JsData = JSON.parse('[{"mainsn":"1221","istopdisplay":"none","href":"/ADI/industry-counseling/digital-service/1221.html","target":null,"title":"\u5F15\u9818\u4E2D\u5C0F\u4F01\u696D\u6578\u4F4D\u8F49\u578B\u6230\u7565\u653B\u9802\u8A08\u756B","startdate":"2022-08-27","newstitle":"\u5F15\u9818\u4E2D\u5C0F\u4F01\u696D\u6578\u4F4D\u8F49\u578B\u6230\u7565\u653B\u9802\u8A08\u756B","newssubtitle":"\u843D\u5BE6\u4E2D\u5C0F\u4F01\u696D\u6578\u4F4D\u8F49\u578B\u76EE\u6A19\uFF0C\u78BA\u4FDD\u8F49\u578B\u5F8C\u7684\u5177\u9AD4\u3001\u53EF\u8861\u91CF\u50F9\u503C\uFF0C\u4E26\u78BA\u4FDD\u6578\u64DA\u8207\u7D93\u9A57\u7D2F\u7A4D\u3001\u52A0\u503C\u8207\u64F4\u6563\u3002","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u8F49\u578B\u8F14\u5C0E"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1223","istopdisplay":"none","href":"/ADI/industry-counseling/digital-service/1223.html","target":null,"title":"\u4F01\u696D\u5C0D\u653F\u5E9C\u96F2\u7AEF\u6A5F\u5668\u53EF\u8B80\u4ECB\u9762\u512A\u5316\u8A08\u756B","startdate":"2022-08-27","newstitle":"\u4F01\u696D\u5C0D\u653F\u5E9C\u96F2\u7AEF\u6A5F\u5668\u53EF\u8B80\u4ECB\u9762\u512A\u5316\u8A08\u756B","newssubtitle":"\u5EFA\u7F6E\u4F01\u696D\u4F7F\u7528\u8005\u8996\u89D2\u4E4B\u653F\u5E9C\u670D\u52D9\u5E73\u53F0\uFF0C\u63D0\u4F9B\u4E2D\u5C0F\u5FAE\u4F01\u696D\u5FEB\u901F\u4E32\u63A5\u591A\u9805\u8DE8\u653F\u5E9C\u670D\u52D9\u3002","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u6574\u5408\u670D\u52D9"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1225","istopdisplay":"none","href":"/ADI/industry-counseling/digital-service/1225.html","target":null,"title":"\u8CC7\u8A0A\u670D\u52D9\u696D\u767C\u5C55\u8A08\u756B","startdate":"2022-08-27","newstitle":"\u8CC7\u8A0A\u670D\u52D9\u696D\u767C\u5C55\u8A08\u756B","newssubtitle":"\u5354\u52A9\u8CC7\u8A0A\u670D\u52D9\u696D\u8005\u6295\u5165\u8DE8\u57DF\u6574\u5408\uFF0C\u65BC\u89E3\u6C7A\u65B9\u6848\u878D\u5165\u670D\u52D9\u9AD4\u9A57\u8A2D\u8A08\u601D\u7DAD\u6216AIoT\u6280\u8853\uFF0C\u4EE5\u958B\u767C\u5275\u65B0\u89E3\u6C7A\u65B9\u6848\u6216\u670D\u52D9\u6A21\u5F0F\u3002","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u6574\u5408\u670D\u52D9"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1227","istopdisplay":"none","href":"/ADI/industry-counseling/digital-service/1227.html","target":null,"title":"\u6578\u4F4D\u5E73\u53F0\u670D\u52D9\u63A8\u52D5\u8A08\u756B","startdate":"2022-08-27","newstitle":"\u6578\u4F4D\u5E73\u53F0\u670D\u52D9\u63A8\u52D5\u8A08\u756B","newssubtitle":"\u767C\u5C55\u6578\u4F4D\u96F2\u670D\u52D9\uFF0C\u4E26\u63D0\u4F9B\u4F01\u696D\u5EFA\u8B70\u8207\u8F49\u578B\u4E26\u63A5\u8ECC\u7522\u696D\u6578\u4F4D\u5E73\u53F0\u670D\u52D9\uFF0C\u4E32\u806F\u7522\u696D\u516C\u5354\u6703\u7B49\u5EFA\u7ACB\u806F\u76DF\u7DB2\u7D61\uFF0C\u6253\u9020\u5065\u5168\u751F\u614B\u7CFB\u3002","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u6574\u5408\u670D\u52D9"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1229","istopdisplay":"none","href":"/ADI/industry-counseling/digital-service/1229.html","target":null,"title":"\u653F\u5E9C\u8EDF\u9AD4\u63A1\u8CFC\u63A8\u52D5\u8A08\u756B","startdate":"2022-08-27","newstitle":"\u653F\u5E9C\u8EDF\u9AD4\u63A1\u8CFC\u63A8\u52D5\u8A08\u756B","newssubtitle":"\u8A02\u5B9A\u53CA\u63A8\u52D5\u7522\u54C1\u898F\u683C\u8207\u7522\u696D\u6A19\u6E96\u3001\u57F7\u884C\u8EDF\u9AD4\u6AA2\u6E2C\u4EE5\u53CA\u5E73\u53F0\u670D\u52D9\u8207\u6A5F\u5236\u7DAD\u904B\uFF0C\u5C07\u80FD\u4F7F\u516C\u90E8\u9580\u63A1\u8CFC\u50F9\u683C\u8207\u54C1\u8CEA\u5408\u5B9C\u7684\u8EDF\u9AD4\u7522\u54C1\u3002","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u5275\u65B0\u61C9\u7528"}],"crosslinkdisplay":"none","schedule":null}]');
+        LeftMenu('572');
+        NewList('572');
+        var ListPage = '/_news/TwoTextList.html';
+        var listTag2Page = '/_news/listTag2.html';
+        $("#ns").load(ListPage, function () {
+            if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+        });
+    </script>
 
 </body>
 </html>

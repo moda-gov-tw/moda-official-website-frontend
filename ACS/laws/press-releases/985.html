@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/ACS/assets/css/layout.css?v=fa_ELizBi-4EapHkhLTXE99RVr3IwF2IeMZngQ8S6mc" media="all" />
+            <link rel="stylesheet" href="/ACS/assets/css/layout.css?v=VLa2QB5pEi1GX1m3QlKosyj1QeSmg056aViGaQ3Z7gE" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -55,12 +55,15 @@
     <header class="header">
         <!-- header -->
         <div b-jabq2d7uqs class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-jabq2d7uqs class="a11yBrickBar1 position-relative"><a b-jabq2d7uqs href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="&#x9801;&#x9762;&#x9802;&#x7AEF;&#x529F;&#x80FD;&#x5340;&#x584A;[&#x5FEB;&#x6377;&#x9375;Alt&#x2B;U]">:::</a></div></div>
-        <div b-jabq2d7uqs class="baseNav d-none d-xxl-block">
+
+        <!-- 若沒有社群鈕<div class="baseNav d-none d-xxl-block"> -->
+		<div b-jabq2d7uqs class="baseNav">
             <div b-jabq2d7uqs class="wrap1 mx-auto px-4 px-lg-5">
-                <div b-jabq2d7uqs class="d-md-flex justify-content-end align-items-center">
+				<div b-jabq2d7uqs class="d-flex justify-content-end align-items-top">
                     <!-- Top bar right -->
                     <div b-jabq2d7uqs class="d-flex align-items-top">
-                        <ul b-jabq2d7uqs class="nav">
+                        <!-- 社群鈕 -->
+                        <ul b-jabq2d7uqs class="nav d-none d-xxl-flex">
                                 <li b-jabq2d7uqs class="nav-item">
                                     <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/" target='_blank' rel='noreferrer noopener' title='數位發展部（另開新視窗）'>
                                         <i b-jabq2d7uqs class="ci ci-moda"></i>
@@ -73,6 +76,7 @@
                                     <span b-jabq2d7uqs class="visually-hidden">&#x7DB2;&#x7AD9;&#x5C0E;&#x89BD;</span>
                                 </a>
                             </li>
+
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/en/ACS/index.html" title="English">
                                     <i b-jabq2d7uqs class="ci ci-en"></i>
@@ -81,7 +85,7 @@
                             </li>
                         </ul>
                         <!-- 切換字體大小 -->
-                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs">
+                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs d-none d-xxl-flex">
                             <button b-jabq2d7uqs class="fontSizeDdNow btn-dropdownNow dropdown-toggle text-white" type="button" id="fontSizeDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-order="2" title="&#x4E2D;&#x5B57;&#x7D1A;"><i b-jabq2d7uqs class="ci ci-font2"></i><span b-jabq2d7uqs class="visually-hidden">A</span></button>
                             <ul b-jabq2d7uqs class="dropdown-menu" aria-labelledby="fontSizeDropdown">
                                 <li b-jabq2d7uqs><button b-jabq2d7uqs class="dropdown-item" type="button" data-order="1" title="&#x5927;&#x5B57;&#x7D1A;">A<sup b-jabq2d7uqs>+</sup></button></li>
@@ -89,13 +93,19 @@
                             </ul>
                         </div>
                         <!-- 搜尋鈕 -->
-                        <div b-jabq2d7uqs class="nav-item navbar-icon-link">
+                        <div b-jabq2d7uqs class="nav-item navbar-icon-link d-none d-xxl-flex">
                             <a b-jabq2d7uqs href="javascript:;" id="S" accesskey="S" class="searchSwitchBtn searchSwitchBtnJs nav-link text-white px-3" title="&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;">
                                 <i b-jabq2d7uqs class="ci ci-scope"></i>
                                 <span b-jabq2d7uqs class="visually-hidden">&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;</span>
                             </a>
                         </div>
                     </div>
+                    <script>
+                        //detect header social btn
+                        if(!document.getElementsByClassName('navSocial').length){
+                            document.body.className += ' noHdSocial';
+                        }
+                    </script>
                 </div>
             </div>
         </div>
@@ -512,96 +522,96 @@
                 </div>
 
                 <!-- 列表 -->
-                                <ul class="list4-2 list-group divider mb-5" id="ListTable">
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://www-api.moda.gov.tw/File/Get/4lYmeEfADSrCMDy" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='1061026回應風傳媒有關「資通安全管理法草案及發展藍圖」之說明.pdf（另開新視窗）'>
-                                                <div class="listDate ms-md-3 order-md-2">2017-10-26</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        &#x56DE;&#x61C9;&#x98A8;&#x50B3;&#x5A92;&#x6709;&#x95DC;&#x300C;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x8349;&#x6848;&#x53CA;&#x767C;&#x5C55;&#x85CD;&#x5716;&#x300D;&#x4E4B;&#x8AAA;&#x660E;
-                                                            <span class="fileTypeI">PDF</span>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://www-api.moda.gov.tw/File/Get/9k7xEo0YBYjmpu6" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='1060818回應「蘋果日報」讀者投書澄清說明資通安全管理法草案.pdf（另開新視窗）'>
-                                                <div class="listDate ms-md-3 order-md-2">2017-08-18</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        &#x56DE;&#x61C9;&#x300C;&#x860B;&#x679C;&#x65E5;&#x5831;&#x300D;&#x8B80;&#x8005;&#x6295;&#x66F8;&#x3000;&#x6F84;&#x6E05;&#x8AAA;&#x660E;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x8349;&#x6848;
-                                                            <span class="fileTypeI">PDF</span>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://www-api.moda.gov.tw/File/Get/XPpIt99UoEmfLjb" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='1060810回應「台灣網路治理論壇」澄清說明資通安全管理法草案.pdf（另開新視窗）'>
-                                                <div class="listDate ms-md-3 order-md-2">2017-08-10</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        &#x56DE;&#x61C9;&#x300C;&#x53F0;&#x7063;&#x7DB2;&#x8DEF;&#x6CBB;&#x7406;&#x8AD6;&#x58C7;&#x300D;&#x3000;&#x6F84;&#x6E05;&#x8AAA;&#x660E;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x8349;&#x6848;
-                                                            <span class="fileTypeI">PDF</span>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://www-api.moda.gov.tw/File/Get/RDc4HzimZ6mOiuZ" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='1060522回應風傳媒報導有關資通安全管理法草案之澄清說明.pdf（另開新視窗）'>
-                                                <div class="listDate ms-md-3 order-md-2">2017-05-22</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        &#x56DE;&#x61C9;&#x98A8;&#x50B3;&#x5A92;&#x5831;&#x5C0E;&#x6709;&#x95DC;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x8349;&#x6848;&#x4E4B;&#x6F84;&#x6E05;&#x8AAA;&#x660E;
-                                                            <span class="fileTypeI">PDF</span>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://www-api.moda.gov.tw/File/Get/6JNcwlFroXt1Zw3" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='1060516回應聯合報黑白集有關當資安法遇到勒索病毒之澄清說明.pdf（另開新視窗）'>
-                                                <div class="listDate ms-md-3 order-md-2">2017-05-16</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        &#x56DE;&#x61C9;&#x806F;&#x5408;&#x5831;&#x9ED1;&#x767D;&#x96C6;&#x6709;&#x95DC;&#x7576;&#x8CC7;&#x5B89;&#x6CD5;&#x9047;&#x5230;&#x52D2;&#x7D22;&#x75C5;&#x6BD2;&#x4E4B;&#x6F84;&#x6E05;&#x8AAA;&#x660E;
-                                                            <span class="fileTypeI">PDF</span>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://www-api.moda.gov.tw/File/Get/j9VolbBeH5aj9TL" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='1060508回應風傳媒報導有關資通安全管理法草案之澄清說明.pdf（另開新視窗）'>
-                                                <div class="listDate ms-md-3 order-md-2">2017-05-08</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        &#x56DE;&#x61C9;&#x98A8;&#x50B3;&#x5A92;&#x5831;&#x5C0E;&#x6709;&#x95DC;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x8349;&#x6848;&#x4E4B;&#x6F84;&#x6E05;&#x8AAA;&#x660E;
-                                                            <span class="fileTypeI">PDF</span>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://www-api.moda.gov.tw/File/Get/xqgAUdXfa7GWU6g" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='1060503回應風傳媒報導有關資通安全管理法草案之澄清說明.pdf（另開新視窗）'>
-                                                <div class="listDate ms-md-3 order-md-2">2017-05-03</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        &#x56DE;&#x61C9;&#x98A8;&#x50B3;&#x5A92;&#x5831;&#x5C0E;&#x6709;&#x95DC;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x8349;&#x6848;&#x4E4B;&#x6F84;&#x6E05;&#x8AAA;&#x660E;
-                                                            <span class="fileTypeI">PDF</span>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://www-api.moda.gov.tw/File/Get/3wIPggn0DOXk5xH" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='1051014回應風傳媒報導有關資安管理法之澄清說明.pdf（另開新視窗）'>
-                                                <div class="listDate ms-md-3 order-md-2">2016-10-14</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        &#x56DE;&#x61C9;&#x98A8;&#x50B3;&#x5A92;&#x5831;&#x5C0E;&#x6709;&#x95DC;&#x8CC7;&#x5B89;&#x7BA1;&#x7406;&#x6CD5;&#x4E4B;&#x6F84;&#x6E05;&#x8AAA;&#x660E;
-                                                            <span class="fileTypeI">PDF</span>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                </ul>
+                                    <ul class="list4-2 list-group divider mb-5" id="ListTable">
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://www-api.moda.gov.tw/File/Get/4lYmeEfADSrCMDy" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='1061026回應風傳媒有關「資通安全管理法草案及發展藍圖」之說明.pdf（另開新視窗）'>
+                                                    <div class="listDate ms-md-3 order-md-2">2017-10-26</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            &#x56DE;&#x61C9;&#x98A8;&#x50B3;&#x5A92;&#x6709;&#x95DC;&#x300C;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x8349;&#x6848;&#x53CA;&#x767C;&#x5C55;&#x85CD;&#x5716;&#x300D;&#x4E4B;&#x8AAA;&#x660E;
+                                                                <span class="fileTypeI">PDF</span>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://www-api.moda.gov.tw/File/Get/9k7xEo0YBYjmpu6" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='1060818回應「蘋果日報」讀者投書澄清說明資通安全管理法草案.pdf（另開新視窗）'>
+                                                    <div class="listDate ms-md-3 order-md-2">2017-08-18</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            &#x56DE;&#x61C9;&#x300C;&#x860B;&#x679C;&#x65E5;&#x5831;&#x300D;&#x8B80;&#x8005;&#x6295;&#x66F8;&#x3000;&#x6F84;&#x6E05;&#x8AAA;&#x660E;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x8349;&#x6848;
+                                                                <span class="fileTypeI">PDF</span>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://www-api.moda.gov.tw/File/Get/XPpIt99UoEmfLjb" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='1060810回應「台灣網路治理論壇」澄清說明資通安全管理法草案.pdf（另開新視窗）'>
+                                                    <div class="listDate ms-md-3 order-md-2">2017-08-10</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            &#x56DE;&#x61C9;&#x300C;&#x53F0;&#x7063;&#x7DB2;&#x8DEF;&#x6CBB;&#x7406;&#x8AD6;&#x58C7;&#x300D;&#x3000;&#x6F84;&#x6E05;&#x8AAA;&#x660E;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x8349;&#x6848;
+                                                                <span class="fileTypeI">PDF</span>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://www-api.moda.gov.tw/File/Get/RDc4HzimZ6mOiuZ" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='1060522回應風傳媒報導有關資通安全管理法草案之澄清說明.pdf（另開新視窗）'>
+                                                    <div class="listDate ms-md-3 order-md-2">2017-05-22</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            &#x56DE;&#x61C9;&#x98A8;&#x50B3;&#x5A92;&#x5831;&#x5C0E;&#x6709;&#x95DC;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x8349;&#x6848;&#x4E4B;&#x6F84;&#x6E05;&#x8AAA;&#x660E;
+                                                                <span class="fileTypeI">PDF</span>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://www-api.moda.gov.tw/File/Get/6JNcwlFroXt1Zw3" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='1060516回應聯合報黑白集有關當資安法遇到勒索病毒之澄清說明.pdf（另開新視窗）'>
+                                                    <div class="listDate ms-md-3 order-md-2">2017-05-16</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            &#x56DE;&#x61C9;&#x806F;&#x5408;&#x5831;&#x9ED1;&#x767D;&#x96C6;&#x6709;&#x95DC;&#x7576;&#x8CC7;&#x5B89;&#x6CD5;&#x9047;&#x5230;&#x52D2;&#x7D22;&#x75C5;&#x6BD2;&#x4E4B;&#x6F84;&#x6E05;&#x8AAA;&#x660E;
+                                                                <span class="fileTypeI">PDF</span>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://www-api.moda.gov.tw/File/Get/j9VolbBeH5aj9TL" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='1060508回應風傳媒報導有關資通安全管理法草案之澄清說明.pdf（另開新視窗）'>
+                                                    <div class="listDate ms-md-3 order-md-2">2017-05-08</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            &#x56DE;&#x61C9;&#x98A8;&#x50B3;&#x5A92;&#x5831;&#x5C0E;&#x6709;&#x95DC;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x8349;&#x6848;&#x4E4B;&#x6F84;&#x6E05;&#x8AAA;&#x660E;
+                                                                <span class="fileTypeI">PDF</span>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://www-api.moda.gov.tw/File/Get/xqgAUdXfa7GWU6g" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='1060503回應風傳媒報導有關資通安全管理法草案之澄清說明.pdf（另開新視窗）'>
+                                                    <div class="listDate ms-md-3 order-md-2">2017-05-03</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            &#x56DE;&#x61C9;&#x98A8;&#x50B3;&#x5A92;&#x5831;&#x5C0E;&#x6709;&#x95DC;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x8349;&#x6848;&#x4E4B;&#x6F84;&#x6E05;&#x8AAA;&#x660E;
+                                                                <span class="fileTypeI">PDF</span>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://www-api.moda.gov.tw/File/Get/3wIPggn0DOXk5xH" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='1051014回應風傳媒報導有關資安管理法之澄清說明.pdf（另開新視窗）'>
+                                                    <div class="listDate ms-md-3 order-md-2">2016-10-14</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            &#x56DE;&#x61C9;&#x98A8;&#x50B3;&#x5A92;&#x5831;&#x5C0E;&#x6709;&#x95DC;&#x8CC7;&#x5B89;&#x7BA1;&#x7406;&#x6CD5;&#x4E4B;&#x6F84;&#x6E05;&#x8AAA;&#x660E;
+                                                                <span class="fileTypeI">PDF</span>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                    </ul>
                         <div class="pageBar mb-5 ">
     <div class="pageSet mb-4">
                         <div class="mRow">共<span class="totalData">8</span>筆資料</div>
@@ -877,7 +887,7 @@
                 <div class="ftBtmRights">
                     <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero (另開新視窗)">CC0</a>No copyright reserved.</p>
 
-                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-18<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-19<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
             </div>
             <div class="col-12 col-md text-md-end">
@@ -917,28 +927,27 @@
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/ACS/assets/js/common.js?v=BLEx1xMx8LdNW-siIJG4LygHISZ5IOw30trbmzE4joY"></script>
+            <script src="/ACS/assets/js/common.js?v=GAhTzP0xl-JvdI-CVtp-UnsTsdJHzyy7DxzZzVIKmAg"></script>
     <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=V2JExwd7xdBP26AtgTeajbqPQbpLse0DlFgoRNwRcdo"></script>
+    <script src="/js/site.js?v=r3b45PJ-Q435KvD8SAVTjXll8cXI-McYimLv_DaGbWU"></script>
     <script>
         webSiteLange('zh-tw' ,'ACS'  );
 
     </script>
     
-<script>
-    var _JsData;
-    var S1 ;
-    var S2 ;
-    var _needtag = NeedTag('OneTextList');
-    _JsData = JSON.parse('[{"mainsn":"1764","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/4lYmeEfADSrCMDy","target":null,"title":"\u56DE\u61C9\u98A8\u50B3\u5A92\u6709\u95DC\u300C\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848\u53CA\u767C\u5C55\u85CD\u5716\u300D\u4E4B\u8AAA\u660E","startdate":"2017-10-26","newstitle":"\u56DE\u61C9\u98A8\u50B3\u5A92\u6709\u95DC\u300C\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848\u53CA\u767C\u5C55\u85CD\u5716\u300D\u4E4B\u8AAA\u660E","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1766","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/9k7xEo0YBYjmpu6","target":null,"title":"\u56DE\u61C9\u300C\u860B\u679C\u65E5\u5831\u300D\u8B80\u8005\u6295\u66F8\u3000\u6F84\u6E05\u8AAA\u660E\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848","startdate":"2017-08-18","newstitle":"\u56DE\u61C9\u300C\u860B\u679C\u65E5\u5831\u300D\u8B80\u8005\u6295\u66F8\u3000\u6F84\u6E05\u8AAA\u660E\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1768","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/XPpIt99UoEmfLjb","target":null,"title":"\u56DE\u61C9\u300C\u53F0\u7063\u7DB2\u8DEF\u6CBB\u7406\u8AD6\u58C7\u300D\u3000\u6F84\u6E05\u8AAA\u660E\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848","startdate":"2017-08-10","newstitle":"\u56DE\u61C9\u300C\u53F0\u7063\u7DB2\u8DEF\u6CBB\u7406\u8AD6\u58C7\u300D\u3000\u6F84\u6E05\u8AAA\u660E\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1770","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/RDc4HzimZ6mOiuZ","target":null,"title":"\u56DE\u61C9\u98A8\u50B3\u5A92\u5831\u5C0E\u6709\u95DC\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848\u4E4B\u6F84\u6E05\u8AAA\u660E","startdate":"2017-05-22","newstitle":"\u56DE\u61C9\u98A8\u50B3\u5A92\u5831\u5C0E\u6709\u95DC\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848\u4E4B\u6F84\u6E05\u8AAA\u660E","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1772","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/6JNcwlFroXt1Zw3","target":null,"title":"\u56DE\u61C9\u806F\u5408\u5831\u9ED1\u767D\u96C6\u6709\u95DC\u7576\u8CC7\u5B89\u6CD5\u9047\u5230\u52D2\u7D22\u75C5\u6BD2\u4E4B\u6F84\u6E05\u8AAA\u660E","startdate":"2017-05-16","newstitle":"\u56DE\u61C9\u806F\u5408\u5831\u9ED1\u767D\u96C6\u6709\u95DC\u7576\u8CC7\u5B89\u6CD5\u9047\u5230\u52D2\u7D22\u75C5\u6BD2\u4E4B\u6F84\u6E05\u8AAA\u660E","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1774","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/j9VolbBeH5aj9TL","target":null,"title":"\u56DE\u61C9\u98A8\u50B3\u5A92\u5831\u5C0E\u6709\u95DC\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848\u4E4B\u6F84\u6E05\u8AAA\u660E","startdate":"2017-05-08","newstitle":"\u56DE\u61C9\u98A8\u50B3\u5A92\u5831\u5C0E\u6709\u95DC\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848\u4E4B\u6F84\u6E05\u8AAA\u660E","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1776","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/xqgAUdXfa7GWU6g","target":null,"title":"\u56DE\u61C9\u98A8\u50B3\u5A92\u5831\u5C0E\u6709\u95DC\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848\u4E4B\u6F84\u6E05\u8AAA\u660E","startdate":"2017-05-03","newstitle":"\u56DE\u61C9\u98A8\u50B3\u5A92\u5831\u5C0E\u6709\u95DC\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848\u4E4B\u6F84\u6E05\u8AAA\u660E","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1778","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/3wIPggn0DOXk5xH","target":null,"title":"\u56DE\u61C9\u98A8\u50B3\u5A92\u5831\u5C0E\u6709\u95DC\u8CC7\u5B89\u7BA1\u7406\u6CD5\u4E4B\u6F84\u6E05\u8AAA\u660E","startdate":"2016-10-14","newstitle":"\u56DE\u61C9\u98A8\u50B3\u5A92\u5831\u5C0E\u6709\u95DC\u8CC7\u5B89\u7BA1\u7406\u6CD5\u4E4B\u6F84\u6E05\u8AAA\u660E","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"}]');
-    LeftMenu('985');
-   NewList('985');
-    var ListPage = '/_news/OneTextList.html';
-    var listTag2Page = '/_news/listTag2.html';
-    $("#ns").load(ListPage, function () {
-        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
-    });
-</script>
+    <script>
+        var _JsData;
+        var _needtag = NeedTag('OneTextList');
+        var _Module = 'NEWS';
+        _JsData = JSON.parse('[{"mainsn":"1764","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/4lYmeEfADSrCMDy","target":null,"title":"\u56DE\u61C9\u98A8\u50B3\u5A92\u6709\u95DC\u300C\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848\u53CA\u767C\u5C55\u85CD\u5716\u300D\u4E4B\u8AAA\u660E","startdate":"2017-10-26","newstitle":"\u56DE\u61C9\u98A8\u50B3\u5A92\u6709\u95DC\u300C\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848\u53CA\u767C\u5C55\u85CD\u5716\u300D\u4E4B\u8AAA\u660E","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1766","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/9k7xEo0YBYjmpu6","target":null,"title":"\u56DE\u61C9\u300C\u860B\u679C\u65E5\u5831\u300D\u8B80\u8005\u6295\u66F8\u3000\u6F84\u6E05\u8AAA\u660E\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848","startdate":"2017-08-18","newstitle":"\u56DE\u61C9\u300C\u860B\u679C\u65E5\u5831\u300D\u8B80\u8005\u6295\u66F8\u3000\u6F84\u6E05\u8AAA\u660E\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1768","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/XPpIt99UoEmfLjb","target":null,"title":"\u56DE\u61C9\u300C\u53F0\u7063\u7DB2\u8DEF\u6CBB\u7406\u8AD6\u58C7\u300D\u3000\u6F84\u6E05\u8AAA\u660E\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848","startdate":"2017-08-10","newstitle":"\u56DE\u61C9\u300C\u53F0\u7063\u7DB2\u8DEF\u6CBB\u7406\u8AD6\u58C7\u300D\u3000\u6F84\u6E05\u8AAA\u660E\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1770","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/RDc4HzimZ6mOiuZ","target":null,"title":"\u56DE\u61C9\u98A8\u50B3\u5A92\u5831\u5C0E\u6709\u95DC\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848\u4E4B\u6F84\u6E05\u8AAA\u660E","startdate":"2017-05-22","newstitle":"\u56DE\u61C9\u98A8\u50B3\u5A92\u5831\u5C0E\u6709\u95DC\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848\u4E4B\u6F84\u6E05\u8AAA\u660E","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1772","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/6JNcwlFroXt1Zw3","target":null,"title":"\u56DE\u61C9\u806F\u5408\u5831\u9ED1\u767D\u96C6\u6709\u95DC\u7576\u8CC7\u5B89\u6CD5\u9047\u5230\u52D2\u7D22\u75C5\u6BD2\u4E4B\u6F84\u6E05\u8AAA\u660E","startdate":"2017-05-16","newstitle":"\u56DE\u61C9\u806F\u5408\u5831\u9ED1\u767D\u96C6\u6709\u95DC\u7576\u8CC7\u5B89\u6CD5\u9047\u5230\u52D2\u7D22\u75C5\u6BD2\u4E4B\u6F84\u6E05\u8AAA\u660E","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1774","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/j9VolbBeH5aj9TL","target":null,"title":"\u56DE\u61C9\u98A8\u50B3\u5A92\u5831\u5C0E\u6709\u95DC\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848\u4E4B\u6F84\u6E05\u8AAA\u660E","startdate":"2017-05-08","newstitle":"\u56DE\u61C9\u98A8\u50B3\u5A92\u5831\u5C0E\u6709\u95DC\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848\u4E4B\u6F84\u6E05\u8AAA\u660E","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1776","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/xqgAUdXfa7GWU6g","target":null,"title":"\u56DE\u61C9\u98A8\u50B3\u5A92\u5831\u5C0E\u6709\u95DC\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848\u4E4B\u6F84\u6E05\u8AAA\u660E","startdate":"2017-05-03","newstitle":"\u56DE\u61C9\u98A8\u50B3\u5A92\u5831\u5C0E\u6709\u95DC\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848\u4E4B\u6F84\u6E05\u8AAA\u660E","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1778","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/3wIPggn0DOXk5xH","target":null,"title":"\u56DE\u61C9\u98A8\u50B3\u5A92\u5831\u5C0E\u6709\u95DC\u8CC7\u5B89\u7BA1\u7406\u6CD5\u4E4B\u6F84\u6E05\u8AAA\u660E","startdate":"2016-10-14","newstitle":"\u56DE\u61C9\u98A8\u50B3\u5A92\u5831\u5C0E\u6709\u95DC\u8CC7\u5B89\u7BA1\u7406\u6CD5\u4E4B\u6F84\u6E05\u8AAA\u660E","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null}]');
+        LeftMenu('985');
+        NewList('985');
+        var ListPage = '/_news/OneTextList.html';
+        var listTag2Page = '/_news/listTag2.html';
+        $("#ns").load(ListPage, function () {
+            if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+        });
+    </script>
 
 </body>
 </html>
