@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/ADI/assets/css/layout.css?v=lFRGWo9ll0_yrhbB0k7NHWoFYODtIvA5J4BOAF_ss00" media="all" />
+            <link rel="stylesheet" href="/ADI/assets/css/layout.css?v=jZyKUu2SZ5ExvaVv1DVT7z8BKU_Z3Q98pCjfF9x0Ux8" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -55,12 +55,15 @@
     <header class="header">
         <!-- header -->
         <div b-jabq2d7uqs class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-jabq2d7uqs class="a11yBrickBar1 position-relative"><a b-jabq2d7uqs href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="&#x9801;&#x9762;&#x9802;&#x7AEF;&#x529F;&#x80FD;&#x5340;&#x584A;[&#x5FEB;&#x6377;&#x9375;Alt&#x2B;U]">:::</a></div></div>
-        <div b-jabq2d7uqs class="baseNav d-none d-xxl-block">
+
+        <!-- 若沒有社群鈕<div class="baseNav d-none d-xxl-block"> -->
+		<div b-jabq2d7uqs class="baseNav">
             <div b-jabq2d7uqs class="wrap1 mx-auto px-4 px-lg-5">
-                <div b-jabq2d7uqs class="d-md-flex justify-content-end align-items-center">
+				<div b-jabq2d7uqs class="d-flex justify-content-end align-items-top">
                     <!-- Top bar right -->
                     <div b-jabq2d7uqs class="d-flex align-items-top">
-                        <ul b-jabq2d7uqs class="nav">
+                        <!-- 社群鈕 -->
+                        <ul b-jabq2d7uqs class="nav d-none d-xxl-flex">
                                 <li b-jabq2d7uqs class="nav-item">
                                     <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/" target='_blank' rel='noreferrer noopener' title='數位發展部（另開新視窗）'>
                                         <i b-jabq2d7uqs class="ci ci-moda"></i>
@@ -73,6 +76,7 @@
                                     <span b-jabq2d7uqs class="visually-hidden">&#x7DB2;&#x7AD9;&#x5C0E;&#x89BD;</span>
                                 </a>
                             </li>
+
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/en/ADI/index.html" title="English">
                                     <i b-jabq2d7uqs class="ci ci-en"></i>
@@ -81,7 +85,7 @@
                             </li>
                         </ul>
                         <!-- 切換字體大小 -->
-                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs">
+                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs d-none d-xxl-flex">
                             <button b-jabq2d7uqs class="fontSizeDdNow btn-dropdownNow dropdown-toggle text-white" type="button" id="fontSizeDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-order="2" title="&#x4E2D;&#x5B57;&#x7D1A;"><i b-jabq2d7uqs class="ci ci-font2"></i><span b-jabq2d7uqs class="visually-hidden">A</span></button>
                             <ul b-jabq2d7uqs class="dropdown-menu" aria-labelledby="fontSizeDropdown">
                                 <li b-jabq2d7uqs><button b-jabq2d7uqs class="dropdown-item" type="button" data-order="1" title="&#x5927;&#x5B57;&#x7D1A;">A<sup b-jabq2d7uqs>+</sup></button></li>
@@ -89,13 +93,19 @@
                             </ul>
                         </div>
                         <!-- 搜尋鈕 -->
-                        <div b-jabq2d7uqs class="nav-item navbar-icon-link">
+                        <div b-jabq2d7uqs class="nav-item navbar-icon-link d-none d-xxl-flex">
                             <a b-jabq2d7uqs href="javascript:;" id="S" accesskey="S" class="searchSwitchBtn searchSwitchBtnJs nav-link text-white px-3" title="&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;">
                                 <i b-jabq2d7uqs class="ci ci-scope"></i>
                                 <span b-jabq2d7uqs class="visually-hidden">&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;</span>
                             </a>
                         </div>
                     </div>
+                    <script>
+                        //detect header social btn
+                        if(!document.getElementsByClassName('navSocial').length){
+                            document.body.className += ' noHdSocial';
+                        }
+                    </script>
                 </div>
             </div>
         </div>
@@ -389,65 +399,65 @@
                 </div>
 
                 <!-- 列表 -->
-                                <!-- 列表樣式三 -->
-                                <ul class="list4-2 list-group divider mb-5" id="ListTable">
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0070008&amp;kw=%e5%85%ac%e8%81%b7%e4%ba%ba%e5%93%a1%e5%88%a9%e7%9b%8a%e8%a1%9d%e7%aa%81%e8%bf%b4%e9%81%bf%e6%b3%95" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='公職人員利益衝突迴避法（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x516C;&#x8077;&#x4EBA;&#x54E1;&#x5229;&#x76CA;&#x885D;&#x7A81;&#x8FF4;&#x907F;&#x6CD5;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0070009&amp;kw=%e5%85%ac%e8%81%b7%e4%ba%ba%e5%93%a1%e5%88%a9%e7%9b%8a%e8%a1%9d%e7%aa%81%e8%bf%b4%e9%81%bf%e6%b3%95" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='公職人員利益衝突迴避法施行細則（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x516C;&#x8077;&#x4EBA;&#x54E1;&#x5229;&#x76CA;&#x885D;&#x7A81;&#x8FF4;&#x907F;&#x6CD5;&#x65BD;&#x884C;&#x7D30;&#x5247;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/ADI/news/information/ethics/anti-corruption/sunshine-acts/conflicts-of-interest/2324.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='公職人員利益衝突迴避之資訊揭露表單暨範本'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x516C;&#x8077;&#x4EBA;&#x54E1;&#x5229;&#x76CA;&#x885D;&#x7A81;&#x8FF4;&#x907F;&#x4E4B;&#x8CC7;&#x8A0A;&#x63ED;&#x9732;&#x8868;&#x55AE;&#x66A8;&#x7BC4;&#x672C;
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/ADI/news/information/ethics/anti-corruption/sunshine-acts/conflicts-of-interest/2326.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='利益衝突迴避申請書(含通知書)'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x5229;&#x76CA;&#x885D;&#x7A81;&#x8FF4;&#x907F;&#x7533;&#x8ACB;&#x66F8;(&#x542B;&#x901A;&#x77E5;&#x66F8;)
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/ADI/news/information/ethics/anti-corruption/sunshine-acts/conflicts-of-interest/2328.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='身分關係揭露公告區'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x8EAB;&#x5206;&#x95DC;&#x4FC2;&#x63ED;&#x9732;&#x516C;&#x544A;&#x5340;
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/ADI/news/information/ethics/anti-corruption/sunshine-acts/conflicts-of-interest/2330.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='相關函釋'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x76F8;&#x95DC;&#x51FD;&#x91CB;
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                </ul>
+                                    <!-- 列表樣式三 -->
+                                    <ul class="list4-2 list-group divider mb-5" id="ListTable">
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0070008&amp;kw=%e5%85%ac%e8%81%b7%e4%ba%ba%e5%93%a1%e5%88%a9%e7%9b%8a%e8%a1%9d%e7%aa%81%e8%bf%b4%e9%81%bf%e6%b3%95" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='公職人員利益衝突迴避法（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x516C;&#x8077;&#x4EBA;&#x54E1;&#x5229;&#x76CA;&#x885D;&#x7A81;&#x8FF4;&#x907F;&#x6CD5;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0070009&amp;kw=%e5%85%ac%e8%81%b7%e4%ba%ba%e5%93%a1%e5%88%a9%e7%9b%8a%e8%a1%9d%e7%aa%81%e8%bf%b4%e9%81%bf%e6%b3%95" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='公職人員利益衝突迴避法施行細則（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x516C;&#x8077;&#x4EBA;&#x54E1;&#x5229;&#x76CA;&#x885D;&#x7A81;&#x8FF4;&#x907F;&#x6CD5;&#x65BD;&#x884C;&#x7D30;&#x5247;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/ADI/news/information/ethics/anti-corruption/sunshine-acts/conflicts-of-interest/2324.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='公職人員利益衝突迴避之資訊揭露表單暨範本'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x516C;&#x8077;&#x4EBA;&#x54E1;&#x5229;&#x76CA;&#x885D;&#x7A81;&#x8FF4;&#x907F;&#x4E4B;&#x8CC7;&#x8A0A;&#x63ED;&#x9732;&#x8868;&#x55AE;&#x66A8;&#x7BC4;&#x672C;
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/ADI/news/information/ethics/anti-corruption/sunshine-acts/conflicts-of-interest/2326.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='利益衝突迴避申請書(含通知書)'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x5229;&#x76CA;&#x885D;&#x7A81;&#x8FF4;&#x907F;&#x7533;&#x8ACB;&#x66F8;(&#x542B;&#x901A;&#x77E5;&#x66F8;)
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/ADI/news/information/ethics/anti-corruption/sunshine-acts/conflicts-of-interest/2328.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='身分關係揭露公告區'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x8EAB;&#x5206;&#x95DC;&#x4FC2;&#x63ED;&#x9732;&#x516C;&#x544A;&#x5340;
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/ADI/news/information/ethics/anti-corruption/sunshine-acts/conflicts-of-interest/2330.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='相關函釋'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x76F8;&#x95DC;&#x51FD;&#x91CB;
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                    </ul>
                         <div class="pageBar mb-5 ">
     <div class="pageSet mb-4">
                         <div class="mRow">共<span class="totalData">6</span>筆資料</div>
@@ -639,7 +649,7 @@
                 <div class="ftBtmRights">
                     <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero (另開新視窗)">CC0</a>&nbsp;No copyright reserved.</p>
 
-                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-18<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-19<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
             </div>
             <div class="col-12 col-md text-md-end">
@@ -679,28 +689,27 @@
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/ADI/assets/js/common.js?v=x0UupwgjHYYaah8zqMcOzWDeoIMb2-zxrmwpE3QrD6M"></script>
+            <script src="/ADI/assets/js/common.js?v=zmUPd4Szq_QadYaZuW3Pv7TwZ8vgeEkcGx3qVI32v1M"></script>
     <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=V2JExwd7xdBP26AtgTeajbqPQbpLse0DlFgoRNwRcdo"></script>
+    <script src="/js/site.js?v=r3b45PJ-Q435KvD8SAVTjXll8cXI-McYimLv_DaGbWU"></script>
     <script>
         webSiteLange('zh-tw' ,'ADI'  );
 
     </script>
     
-<script>
-    var _JsData;
-    var S1 ;
-    var S2 ;
-    var _needtag = NeedTag('NoDateTextList');
-    _JsData = JSON.parse('[{"mainsn":"2320","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0070008\u0026kw=%e5%85%ac%e8%81%b7%e4%ba%ba%e5%93%a1%e5%88%a9%e7%9b%8a%e8%a1%9d%e7%aa%81%e8%bf%b4%e9%81%bf%e6%b3%95","target":"_blank","title":"\u516C\u8077\u4EBA\u54E1\u5229\u76CA\u885D\u7A81\u8FF4\u907F\u6CD5","startdate":"2022-09-12","newstitle":"\u516C\u8077\u4EBA\u54E1\u5229\u76CA\u885D\u7A81\u8FF4\u907F\u6CD5","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"2322","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0070009\u0026kw=%e5%85%ac%e8%81%b7%e4%ba%ba%e5%93%a1%e5%88%a9%e7%9b%8a%e8%a1%9d%e7%aa%81%e8%bf%b4%e9%81%bf%e6%b3%95","target":"_blank","title":"\u516C\u8077\u4EBA\u54E1\u5229\u76CA\u885D\u7A81\u8FF4\u907F\u6CD5\u65BD\u884C\u7D30\u5247","startdate":"2022-09-12","newstitle":"\u516C\u8077\u4EBA\u54E1\u5229\u76CA\u885D\u7A81\u8FF4\u907F\u6CD5\u65BD\u884C\u7D30\u5247","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"2324","istopdisplay":"none","href":"/ADI/news/information/ethics/anti-corruption/sunshine-acts/conflicts-of-interest/2324.html","target":null,"title":"\u516C\u8077\u4EBA\u54E1\u5229\u76CA\u885D\u7A81\u8FF4\u907F\u4E4B\u8CC7\u8A0A\u63ED\u9732\u8868\u55AE\u66A8\u7BC4\u672C","startdate":"2022-09-12","newstitle":"\u516C\u8077\u4EBA\u54E1\u5229\u76CA\u885D\u7A81\u8FF4\u907F\u4E4B\u8CC7\u8A0A\u63ED\u9732\u8868\u55AE\u66A8\u7BC4\u672C","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"2326","istopdisplay":"none","href":"/ADI/news/information/ethics/anti-corruption/sunshine-acts/conflicts-of-interest/2326.html","target":null,"title":"\u5229\u76CA\u885D\u7A81\u8FF4\u907F\u7533\u8ACB\u66F8(\u542B\u901A\u77E5\u66F8)","startdate":"2022-09-12","newstitle":"\u5229\u76CA\u885D\u7A81\u8FF4\u907F\u7533\u8ACB\u66F8(\u542B\u901A\u77E5\u66F8)","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"2328","istopdisplay":"none","href":"/ADI/news/information/ethics/anti-corruption/sunshine-acts/conflicts-of-interest/2328.html","target":null,"title":"\u8EAB\u5206\u95DC\u4FC2\u63ED\u9732\u516C\u544A\u5340","startdate":"2022-09-12","newstitle":"\u8EAB\u5206\u95DC\u4FC2\u63ED\u9732\u516C\u544A\u5340","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"2330","istopdisplay":"none","href":"/ADI/news/information/ethics/anti-corruption/sunshine-acts/conflicts-of-interest/2330.html","target":null,"title":"\u76F8\u95DC\u51FD\u91CB","startdate":"2022-09-12","newstitle":"\u76F8\u95DC\u51FD\u91CB","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"}]');
-    LeftMenu('1043');
-   NewList('1043');
-    var ListPage = '/_news/NoDateTextList.html';
-    var listTag2Page = '/_news/listTag2.html';
-    $("#ns").load(ListPage, function () {
-        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
-    });
-</script>
+    <script>
+        var _JsData;
+        var _needtag = NeedTag('NoDateTextList');
+        var _Module = 'NEWS';
+        _JsData = JSON.parse('[{"mainsn":"2320","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0070008\u0026kw=%e5%85%ac%e8%81%b7%e4%ba%ba%e5%93%a1%e5%88%a9%e7%9b%8a%e8%a1%9d%e7%aa%81%e8%bf%b4%e9%81%bf%e6%b3%95","target":"_blank","title":"\u516C\u8077\u4EBA\u54E1\u5229\u76CA\u885D\u7A81\u8FF4\u907F\u6CD5","startdate":"2022-09-12","newstitle":"\u516C\u8077\u4EBA\u54E1\u5229\u76CA\u885D\u7A81\u8FF4\u907F\u6CD5","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"2322","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0070009\u0026kw=%e5%85%ac%e8%81%b7%e4%ba%ba%e5%93%a1%e5%88%a9%e7%9b%8a%e8%a1%9d%e7%aa%81%e8%bf%b4%e9%81%bf%e6%b3%95","target":"_blank","title":"\u516C\u8077\u4EBA\u54E1\u5229\u76CA\u885D\u7A81\u8FF4\u907F\u6CD5\u65BD\u884C\u7D30\u5247","startdate":"2022-09-12","newstitle":"\u516C\u8077\u4EBA\u54E1\u5229\u76CA\u885D\u7A81\u8FF4\u907F\u6CD5\u65BD\u884C\u7D30\u5247","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"2324","istopdisplay":"none","href":"/ADI/news/information/ethics/anti-corruption/sunshine-acts/conflicts-of-interest/2324.html","target":null,"title":"\u516C\u8077\u4EBA\u54E1\u5229\u76CA\u885D\u7A81\u8FF4\u907F\u4E4B\u8CC7\u8A0A\u63ED\u9732\u8868\u55AE\u66A8\u7BC4\u672C","startdate":"2022-09-12","newstitle":"\u516C\u8077\u4EBA\u54E1\u5229\u76CA\u885D\u7A81\u8FF4\u907F\u4E4B\u8CC7\u8A0A\u63ED\u9732\u8868\u55AE\u66A8\u7BC4\u672C","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"2326","istopdisplay":"none","href":"/ADI/news/information/ethics/anti-corruption/sunshine-acts/conflicts-of-interest/2326.html","target":null,"title":"\u5229\u76CA\u885D\u7A81\u8FF4\u907F\u7533\u8ACB\u66F8(\u542B\u901A\u77E5\u66F8)","startdate":"2022-09-12","newstitle":"\u5229\u76CA\u885D\u7A81\u8FF4\u907F\u7533\u8ACB\u66F8(\u542B\u901A\u77E5\u66F8)","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"2328","istopdisplay":"none","href":"/ADI/news/information/ethics/anti-corruption/sunshine-acts/conflicts-of-interest/2328.html","target":null,"title":"\u8EAB\u5206\u95DC\u4FC2\u63ED\u9732\u516C\u544A\u5340","startdate":"2022-09-12","newstitle":"\u8EAB\u5206\u95DC\u4FC2\u63ED\u9732\u516C\u544A\u5340","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"2330","istopdisplay":"none","href":"/ADI/news/information/ethics/anti-corruption/sunshine-acts/conflicts-of-interest/2330.html","target":null,"title":"\u76F8\u95DC\u51FD\u91CB","startdate":"2022-09-12","newstitle":"\u76F8\u95DC\u51FD\u91CB","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null}]');
+        LeftMenu('1043');
+        NewList('1043');
+        var ListPage = '/_news/NoDateTextList.html';
+        var listTag2Page = '/_news/listTag2.html';
+        $("#ns").load(ListPage, function () {
+            if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+        });
+    </script>
 
 </body>
 </html>

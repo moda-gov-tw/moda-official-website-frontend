@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/ADI/assets/css/layout.css?v=lFRGWo9ll0_yrhbB0k7NHWoFYODtIvA5J4BOAF_ss00" media="all" />
+            <link rel="stylesheet" href="/ADI/assets/css/layout.css?v=jZyKUu2SZ5ExvaVv1DVT7z8BKU_Z3Q98pCjfF9x0Ux8" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -55,12 +55,15 @@
     <header class="header">
         <!-- header -->
         <div b-jabq2d7uqs class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-jabq2d7uqs class="a11yBrickBar1 position-relative"><a b-jabq2d7uqs href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="Go Top">:::</a></div></div>
-        <div b-jabq2d7uqs class="baseNav d-none d-xxl-block">
+
+        <!-- 若沒有社群鈕<div class="baseNav d-none d-xxl-block"> -->
+		<div b-jabq2d7uqs class="baseNav">
             <div b-jabq2d7uqs class="wrap1 mx-auto px-4 px-lg-5">
-                <div b-jabq2d7uqs class="d-md-flex justify-content-end align-items-center">
+				<div b-jabq2d7uqs class="d-flex justify-content-end align-items-top">
                     <!-- Top bar right -->
                     <div b-jabq2d7uqs class="d-flex align-items-top">
-                        <ul b-jabq2d7uqs class="nav">
+                        <!-- 社群鈕 -->
+                        <ul b-jabq2d7uqs class="nav d-none d-xxl-flex">
                                 <li b-jabq2d7uqs class="nav-item">
                                     <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/en/" target='_blank' rel='noreferrer noopener' title='Ministry of Digital Affairs(open in new window)'>
                                         <i b-jabq2d7uqs class="ci ci-moda"></i>
@@ -73,6 +76,7 @@
                                     <span b-jabq2d7uqs class="visually-hidden">Site Map</span>
                                 </a>
                             </li>
+
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/ADI/index.html" title="&#x4E2D;&#x6587;&#x7248;">
                                     <i b-jabq2d7uqs class="ci ci-tw"></i>
@@ -81,7 +85,7 @@
                             </li>
                         </ul>
                         <!-- 切換字體大小 -->
-                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs">
+                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs d-none d-xxl-flex">
                             <button b-jabq2d7uqs class="fontSizeDdNow btn-dropdownNow dropdown-toggle text-white" type="button" id="fontSizeDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-order="2" title="Medium"><i b-jabq2d7uqs class="ci ci-font2"></i><span b-jabq2d7uqs class="visually-hidden">A</span></button>
                             <ul b-jabq2d7uqs class="dropdown-menu" aria-labelledby="fontSizeDropdown">
                                 <li b-jabq2d7uqs><button b-jabq2d7uqs class="dropdown-item" type="button" data-order="1" title="Large">A<sup b-jabq2d7uqs>+</sup></button></li>
@@ -89,13 +93,19 @@
                             </ul>
                         </div>
                         <!-- 搜尋鈕 -->
-                        <div b-jabq2d7uqs class="nav-item navbar-icon-link">
+                        <div b-jabq2d7uqs class="nav-item navbar-icon-link d-none d-xxl-flex">
                             <a b-jabq2d7uqs href="javascript:;" id="S" accesskey="S" class="searchSwitchBtn searchSwitchBtnJs nav-link text-white px-3" title="Search">
                                 <i b-jabq2d7uqs class="ci ci-scope"></i>
                                 <span b-jabq2d7uqs class="visually-hidden">Search</span>
                             </a>
                         </div>
                     </div>
+                    <script>
+                        //detect header social btn
+                        if(!document.getElementsByClassName('navSocial').length){
+                            document.body.className += ' noHdSocial';
+                        }
+                    </script>
                 </div>
             </div>
         </div>
@@ -410,116 +420,116 @@ Platform Economy					</li>
                 </div>
 
                 <!-- 列表 -->
-                                <div class="list3-2 row gy-3 gx-sm-5 mb-5" id="ListTable">
-                                        <div class="col-12 col-sm-6 position-relative">
-                                            <div class="card h-100 rounded-0">
-                                                <div class="card-body ps-0 pb-0 pe-0">
-                                                    <div class="d-flex flex-wrap">
-                                                        <a href="/en/ADI/industry-counseling/platform-economy/1197.html" class="cardT col-12" target='' title='AI Application Service Development Environment Promotion Program'>
-                                                            <b class="card-title title5 fw-normal">
-                                                                AI Application Service Development Environment Promotion Program
-                                                            </b>
-                                                                <p class="card-text">Accelerating industry development and creating an AI service ecosystem by infusing industries with and industrializing AI.</p>
-                                                        </a>
-                                                        <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
-                                                            <div class="listTag2 flex-fill pt-2 pe-4">
-                                                                    <a href="javascript:;" class="btn" role="button">Platform Governance</a>
-                                                            </div>
+                                    <div class="list3-2 row gy-3 gx-sm-5 mb-5" id="ListTable">
+                                            <div class="col-12 col-sm-6 position-relative">
+                                                <div class="card h-100 rounded-0">
+                                                    <div class="card-body ps-0 pb-0 pe-0">
+                                                        <div class="d-flex flex-wrap">
+                                                            <a href="/en/ADI/industry-counseling/platform-economy/1197.html" class="cardT col-12" target='' title='AI Application Service Development Environment Promotion Program'>
+                                                                <b class="card-title title5 fw-normal">
+                                                                    AI Application Service Development Environment Promotion Program
+                                                                </b>
+                                                                    <p class="card-text">Accelerating industry development and creating an AI service ecosystem by infusing industries with and industrializing AI.</p>
+                                                            </a>
+                                                            <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
+                                                                <div class="listTag2 flex-fill pt-2 pe-4">
+                                                                        <a href="javascript:;" class="btn" role="button">Platform Governance</a>
+                                                                </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 position-relative">
-                                            <div class="card h-100 rounded-0">
-                                                <div class="card-body ps-0 pb-0 pe-0">
-                                                    <div class="d-flex flex-wrap">
-                                                        <a href="/en/ADI/industry-counseling/platform-economy/1199.html" class="cardT col-12" target='' title='AI Talent Training Program'>
-                                                            <b class="card-title title5 fw-normal">
-                                                                AI Talent Training Program
-                                                            </b>
-                                                                <p class="card-text">Cultivating talents for industry smart technology infusion and innovative applications with artificial intelligence as core</p>
-                                                        </a>
-                                                        <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
-                                                            <div class="listTag2 flex-fill pt-2 pe-4">
-                                                                    <a href="javascript:;" class="btn" role="button">Platform Governance</a>
-                                                            </div>
+                                            <div class="col-12 col-sm-6 position-relative">
+                                                <div class="card h-100 rounded-0">
+                                                    <div class="card-body ps-0 pb-0 pe-0">
+                                                        <div class="d-flex flex-wrap">
+                                                            <a href="/en/ADI/industry-counseling/platform-economy/1199.html" class="cardT col-12" target='' title='AI Talent Training Program'>
+                                                                <b class="card-title title5 fw-normal">
+                                                                    AI Talent Training Program
+                                                                </b>
+                                                                    <p class="card-text">Cultivating talents for industry smart technology infusion and innovative applications with artificial intelligence as core</p>
+                                                            </a>
+                                                            <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
+                                                                <div class="listTag2 flex-fill pt-2 pe-4">
+                                                                        <a href="javascript:;" class="btn" role="button">Platform Governance</a>
+                                                                </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 position-relative">
-                                            <div class="card h-100 rounded-0">
-                                                <div class="card-body ps-0 pb-0 pe-0">
-                                                    <div class="d-flex flex-wrap">
-                                                        <a href="/en/ADI/industry-counseling/platform-economy/1201.html" class="cardT col-12" target='' title='The Program of Innovative application in Digital Content Industry's Development'>
-                                                            <b class="card-title title5 fw-normal">
-                                                                The Program of Innovative application in Digital Content Industry&#x27;s Development
-                                                            </b>
-                                                                <p class="card-text">Driving industrial digital transformation with the goal of promoting value-added content</p>
-                                                        </a>
-                                                        <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
-                                                            <div class="listTag2 flex-fill pt-2 pe-4">
-                                                                    <a href="javascript:;" class="btn" role="button">Digital Experience</a>
-                                                            </div>
+                                            <div class="col-12 col-sm-6 position-relative">
+                                                <div class="card h-100 rounded-0">
+                                                    <div class="card-body ps-0 pb-0 pe-0">
+                                                        <div class="d-flex flex-wrap">
+                                                            <a href="/en/ADI/industry-counseling/platform-economy/1201.html" class="cardT col-12" target='' title='The Program of Innovative application in Digital Content Industry's Development'>
+                                                                <b class="card-title title5 fw-normal">
+                                                                    The Program of Innovative application in Digital Content Industry&#x27;s Development
+                                                                </b>
+                                                                    <p class="card-text">Driving industrial digital transformation with the goal of promoting value-added content</p>
+                                                            </a>
+                                                            <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
+                                                                <div class="listTag2 flex-fill pt-2 pe-4">
+                                                                        <a href="javascript:;" class="btn" role="button">Digital Experience</a>
+                                                                </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 position-relative">
-                                            <div class="card h-100 rounded-0">
-                                                <div class="card-body ps-0 pb-0 pe-0">
-                                                    <div class="d-flex flex-wrap">
-                                                        <a href="/en/ADI/industry-counseling/platform-economy/1203.html" class="cardT col-12" target='' title='Wellness of Digital Entertainment Environment and Guidance of Developer Innovation Project'>
-                                                            <b class="card-title title5 fw-normal">
-                                                                Wellness of Digital Entertainment Environment and Guidance of Developer Innovation Project
-                                                            </b>
-                                                                <p class="card-text">Building a base environment for innovation, assisting the digital game industry with enhancing development and content production capacities, creating a friendly and high-quality business environment</p>
-                                                        </a>
-                                                        <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
-                                                            <div class="listTag2 flex-fill pt-2 pe-4">
-                                                                    <a href="javascript:;" class="btn" role="button">Digital Experience</a>
-                                                            </div>
+                                            <div class="col-12 col-sm-6 position-relative">
+                                                <div class="card h-100 rounded-0">
+                                                    <div class="card-body ps-0 pb-0 pe-0">
+                                                        <div class="d-flex flex-wrap">
+                                                            <a href="/en/ADI/industry-counseling/platform-economy/1203.html" class="cardT col-12" target='' title='Wellness of Digital Entertainment Environment and Guidance of Developer Innovation Project'>
+                                                                <b class="card-title title5 fw-normal">
+                                                                    Wellness of Digital Entertainment Environment and Guidance of Developer Innovation Project
+                                                                </b>
+                                                                    <p class="card-text">Building a base environment for innovation, assisting the digital game industry with enhancing development and content production capacities, creating a friendly and high-quality business environment</p>
+                                                            </a>
+                                                            <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
+                                                                <div class="listTag2 flex-fill pt-2 pe-4">
+                                                                        <a href="javascript:;" class="btn" role="button">Digital Experience</a>
+                                                                </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 position-relative">
-                                            <div class="card h-100 rounded-0">
-                                                <div class="card-body ps-0 pb-0 pe-0">
-                                                    <div class="d-flex flex-wrap">
-                                                        <a href="/en/ADI/industry-counseling/platform-economy/1205.html" class="cardT col-12" target='' title='The Integrated and International Intelligent Learning Industry Program'>
-                                                            <b class="card-title title5 fw-normal">
-                                                                The Integrated and International Intelligent Learning Industry Program
-                                                            </b>
-                                                                <p class="card-text">Promoting smart learning industry internationalization, enhancing Taiwan’s education technology competitiveness and reputation</p>
-                                                        </a>
-                                                        <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
-                                                            <div class="listTag2 flex-fill pt-2 pe-4">
-                                                                    <a href="javascript:;" class="btn" role="button">Digital Experience</a>
-                                                            </div>
+                                            <div class="col-12 col-sm-6 position-relative">
+                                                <div class="card h-100 rounded-0">
+                                                    <div class="card-body ps-0 pb-0 pe-0">
+                                                        <div class="d-flex flex-wrap">
+                                                            <a href="/en/ADI/industry-counseling/platform-economy/1205.html" class="cardT col-12" target='' title='The Integrated and International Intelligent Learning Industry Program'>
+                                                                <b class="card-title title5 fw-normal">
+                                                                    The Integrated and International Intelligent Learning Industry Program
+                                                                </b>
+                                                                    <p class="card-text">Promoting smart learning industry internationalization, enhancing Taiwan’s education technology competitiveness and reputation</p>
+                                                            </a>
+                                                            <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
+                                                                <div class="listTag2 flex-fill pt-2 pe-4">
+                                                                        <a href="javascript:;" class="btn" role="button">Digital Experience</a>
+                                                                </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 position-relative">
-                                            <div class="card h-100 rounded-0">
-                                                <div class="card-body ps-0 pb-0 pe-0">
-                                                    <div class="d-flex flex-wrap">
-                                                        <a href="/en/ADI/industry-counseling/platform-economy/1207.html" class="cardT col-12" target='' title='Data Innovation Ecosystem Promotion Project'>
-                                                            <b class="card-title title5 fw-normal">
-                                                                Data Innovation Ecosystem Promotion Project
-                                                            </b>
-                                                                <p class="card-text">Consolidating industry data through platforms, promoting core data technology application and collaboration to develop the emerging data economy and innovative industrial formats</p>
-                                                        </a>
-                                                        <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
-                                                            <div class="listTag2 flex-fill pt-2 pe-4">
-                                                                    <a href="javascript:;" class="btn" role="button">Data Economy</a>
-                                                            </div>
+                                            <div class="col-12 col-sm-6 position-relative">
+                                                <div class="card h-100 rounded-0">
+                                                    <div class="card-body ps-0 pb-0 pe-0">
+                                                        <div class="d-flex flex-wrap">
+                                                            <a href="/en/ADI/industry-counseling/platform-economy/1207.html" class="cardT col-12" target='' title='Data Innovation Ecosystem Promotion Project'>
+                                                                <b class="card-title title5 fw-normal">
+                                                                    Data Innovation Ecosystem Promotion Project
+                                                                </b>
+                                                                    <p class="card-text">Consolidating industry data through platforms, promoting core data technology application and collaboration to develop the emerging data economy and innovative industrial formats</p>
+                                                            </a>
+                                                            <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
+                                                                <div class="listTag2 flex-fill pt-2 pe-4">
+                                                                        <a href="javascript:;" class="btn" role="button">Data Economy</a>
+                                                                </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                </div>
+                                    </div>
                         <div class="pageBar mb-5 ">
     <div class="pageSet mb-4">
                         <div class="mRow">total items<span class="totalData">6</span>.</div>
@@ -684,7 +694,7 @@ Platform Economy					</li>
                 <div class="ftBtmRights">
                     <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero(open in new window)">CC0</a>&nbsp;No copyright reserved.</p>
 
-                    <p class="mb-2 mb-md-0">Update Date: 2022-09-18<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                    <p class="mb-2 mb-md-0">Update Date: 2022-09-19<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
             </div>
             <div class="col-12 col-md text-md-end">
@@ -724,28 +734,27 @@ Platform Economy					</li>
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/ADI/assets/js/common.js?v=x0UupwgjHYYaah8zqMcOzWDeoIMb2-zxrmwpE3QrD6M"></script>
+            <script src="/ADI/assets/js/common.js?v=zmUPd4Szq_QadYaZuW3Pv7TwZ8vgeEkcGx3qVI32v1M"></script>
     <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=V2JExwd7xdBP26AtgTeajbqPQbpLse0DlFgoRNwRcdo"></script>
+    <script src="/js/site.js?v=r3b45PJ-Q435KvD8SAVTjXll8cXI-McYimLv_DaGbWU"></script>
     <script>
         webSiteLange('en' ,'ADI'  );
 
     </script>
     
-<script>
-    var _JsData;
-    var S1 ;
-    var S2 ;
-    var _needtag = NeedTag('TwoTextList');
-    _JsData = JSON.parse('[{"mainsn":"1197","istopdisplay":"none","href":"/en/ADI/industry-counseling/platform-economy/1197.html","target":null,"title":"AI Application Service Development Environment Promotion Program","startdate":"2022-08-27","newstitle":"AI Application Service Development Environment Promotion Program","newssubtitle":"Accelerating industry development and creating an AI service ecosystem by infusing industries with and industrializing AI.","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Platform Governance"}],"crosslinkdisplay":"none"},{"mainsn":"1199","istopdisplay":"none","href":"/en/ADI/industry-counseling/platform-economy/1199.html","target":null,"title":"AI Talent Training Program","startdate":"2022-08-27","newstitle":"AI Talent Training Program","newssubtitle":"Cultivating talents for industry smart technology infusion and innovative applications with artificial intelligence as core","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Platform Governance"}],"crosslinkdisplay":"none"},{"mainsn":"1201","istopdisplay":"none","href":"/en/ADI/industry-counseling/platform-economy/1201.html","target":null,"title":"The Program of Innovative application in Digital Content Industry\u0027s Development","startdate":"2022-08-27","newstitle":"The Program of Innovative application in Digital Content Industry\u0027s Development","newssubtitle":"Driving industrial digital transformation with the goal of promoting value-added content","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Digital Experience"}],"crosslinkdisplay":"none"},{"mainsn":"1203","istopdisplay":"none","href":"/en/ADI/industry-counseling/platform-economy/1203.html","target":null,"title":"Wellness of Digital Entertainment Environment and Guidance of Developer Innovation Project","startdate":"2022-08-27","newstitle":"Wellness of Digital Entertainment Environment and Guidance of Developer Innovation Project","newssubtitle":"Building a base environment for innovation, assisting the digital game industry with enhancing development and content production capacities, creating a friendly and high-quality business environment","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Digital Experience"}],"crosslinkdisplay":"none"},{"mainsn":"1205","istopdisplay":"none","href":"/en/ADI/industry-counseling/platform-economy/1205.html","target":null,"title":"The Integrated and International Intelligent Learning Industry Program","startdate":"2022-08-27","newstitle":"The Integrated and International Intelligent Learning Industry Program","newssubtitle":"Promoting smart learning industry internationalization, enhancing Taiwan\u2019s education technology competitiveness and reputation","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Digital Experience"}],"crosslinkdisplay":"none"},{"mainsn":"1207","istopdisplay":"none","href":"/en/ADI/industry-counseling/platform-economy/1207.html","target":null,"title":"Data Innovation Ecosystem Promotion Project","startdate":"2022-08-27","newstitle":"Data Innovation Ecosystem Promotion Project","newssubtitle":"Consolidating industry data through platforms, promoting core data technology application and collaboration to develop the emerging data economy and innovative industrial formats","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Data Economy"}],"crosslinkdisplay":"none"}]');
-    LeftMenu('569');
-   NewList('568');
-    var ListPage = '/_news/TwoTextList.html';
-    var listTag2Page = '/_news/listTag2.html';
-    $("#ns").load(ListPage, function () {
-        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
-    });
-</script>
+    <script>
+        var _JsData;
+        var _needtag = NeedTag('TwoTextList');
+        var _Module = 'NEWS';
+        _JsData = JSON.parse('[{"mainsn":"1197","istopdisplay":"none","href":"/en/ADI/industry-counseling/platform-economy/1197.html","target":null,"title":"AI Application Service Development Environment Promotion Program","startdate":"2022-08-27","newstitle":"AI Application Service Development Environment Promotion Program","newssubtitle":"Accelerating industry development and creating an AI service ecosystem by infusing industries with and industrializing AI.","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Platform Governance"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1199","istopdisplay":"none","href":"/en/ADI/industry-counseling/platform-economy/1199.html","target":null,"title":"AI Talent Training Program","startdate":"2022-08-27","newstitle":"AI Talent Training Program","newssubtitle":"Cultivating talents for industry smart technology infusion and innovative applications with artificial intelligence as core","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Platform Governance"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1201","istopdisplay":"none","href":"/en/ADI/industry-counseling/platform-economy/1201.html","target":null,"title":"The Program of Innovative application in Digital Content Industry\u0027s Development","startdate":"2022-08-27","newstitle":"The Program of Innovative application in Digital Content Industry\u0027s Development","newssubtitle":"Driving industrial digital transformation with the goal of promoting value-added content","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Digital Experience"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1203","istopdisplay":"none","href":"/en/ADI/industry-counseling/platform-economy/1203.html","target":null,"title":"Wellness of Digital Entertainment Environment and Guidance of Developer Innovation Project","startdate":"2022-08-27","newstitle":"Wellness of Digital Entertainment Environment and Guidance of Developer Innovation Project","newssubtitle":"Building a base environment for innovation, assisting the digital game industry with enhancing development and content production capacities, creating a friendly and high-quality business environment","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Digital Experience"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1205","istopdisplay":"none","href":"/en/ADI/industry-counseling/platform-economy/1205.html","target":null,"title":"The Integrated and International Intelligent Learning Industry Program","startdate":"2022-08-27","newstitle":"The Integrated and International Intelligent Learning Industry Program","newssubtitle":"Promoting smart learning industry internationalization, enhancing Taiwan\u2019s education technology competitiveness and reputation","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Digital Experience"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1207","istopdisplay":"none","href":"/en/ADI/industry-counseling/platform-economy/1207.html","target":null,"title":"Data Innovation Ecosystem Promotion Project","startdate":"2022-08-27","newstitle":"Data Innovation Ecosystem Promotion Project","newssubtitle":"Consolidating industry data through platforms, promoting core data technology application and collaboration to develop the emerging data economy and innovative industrial formats","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Data Economy"}],"crosslinkdisplay":"none","schedule":null}]');
+        LeftMenu('569');
+        NewList('568');
+        var ListPage = '/_news/TwoTextList.html';
+        var listTag2Page = '/_news/listTag2.html';
+        $("#ns").load(ListPage, function () {
+            if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+        });
+    </script>
 
 </body>
 </html>
