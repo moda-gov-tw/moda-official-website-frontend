@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/ACS/assets/css/layout.css?v=fa_ELizBi-4EapHkhLTXE99RVr3IwF2IeMZngQ8S6mc" media="all" />
+            <link rel="stylesheet" href="/ACS/assets/css/layout.css?v=VLa2QB5pEi1GX1m3QlKosyj1QeSmg056aViGaQ3Z7gE" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -55,12 +55,15 @@
     <header class="header">
         <!-- header -->
         <div b-jabq2d7uqs class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-jabq2d7uqs class="a11yBrickBar1 position-relative"><a b-jabq2d7uqs href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="&#x9801;&#x9762;&#x9802;&#x7AEF;&#x529F;&#x80FD;&#x5340;&#x584A;[&#x5FEB;&#x6377;&#x9375;Alt&#x2B;U]">:::</a></div></div>
-        <div b-jabq2d7uqs class="baseNav d-none d-xxl-block">
+
+        <!-- 若沒有社群鈕<div class="baseNav d-none d-xxl-block"> -->
+		<div b-jabq2d7uqs class="baseNav">
             <div b-jabq2d7uqs class="wrap1 mx-auto px-4 px-lg-5">
-                <div b-jabq2d7uqs class="d-md-flex justify-content-end align-items-center">
+				<div b-jabq2d7uqs class="d-flex justify-content-end align-items-top">
                     <!-- Top bar right -->
                     <div b-jabq2d7uqs class="d-flex align-items-top">
-                        <ul b-jabq2d7uqs class="nav">
+                        <!-- 社群鈕 -->
+                        <ul b-jabq2d7uqs class="nav d-none d-xxl-flex">
                                 <li b-jabq2d7uqs class="nav-item">
                                     <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/" target='_blank' rel='noreferrer noopener' title='數位發展部（另開新視窗）'>
                                         <i b-jabq2d7uqs class="ci ci-moda"></i>
@@ -73,6 +76,7 @@
                                     <span b-jabq2d7uqs class="visually-hidden">&#x7DB2;&#x7AD9;&#x5C0E;&#x89BD;</span>
                                 </a>
                             </li>
+
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/en/ACS/index.html" title="English">
                                     <i b-jabq2d7uqs class="ci ci-en"></i>
@@ -81,7 +85,7 @@
                             </li>
                         </ul>
                         <!-- 切換字體大小 -->
-                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs">
+                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs d-none d-xxl-flex">
                             <button b-jabq2d7uqs class="fontSizeDdNow btn-dropdownNow dropdown-toggle text-white" type="button" id="fontSizeDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-order="2" title="&#x4E2D;&#x5B57;&#x7D1A;"><i b-jabq2d7uqs class="ci ci-font2"></i><span b-jabq2d7uqs class="visually-hidden">A</span></button>
                             <ul b-jabq2d7uqs class="dropdown-menu" aria-labelledby="fontSizeDropdown">
                                 <li b-jabq2d7uqs><button b-jabq2d7uqs class="dropdown-item" type="button" data-order="1" title="&#x5927;&#x5B57;&#x7D1A;">A<sup b-jabq2d7uqs>+</sup></button></li>
@@ -89,13 +93,19 @@
                             </ul>
                         </div>
                         <!-- 搜尋鈕 -->
-                        <div b-jabq2d7uqs class="nav-item navbar-icon-link">
+                        <div b-jabq2d7uqs class="nav-item navbar-icon-link d-none d-xxl-flex">
                             <a b-jabq2d7uqs href="javascript:;" id="S" accesskey="S" class="searchSwitchBtn searchSwitchBtnJs nav-link text-white px-3" title="&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;">
                                 <i b-jabq2d7uqs class="ci ci-scope"></i>
                                 <span b-jabq2d7uqs class="visually-hidden">&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;</span>
                             </a>
                         </div>
                     </div>
+                    <script>
+                        //detect header social btn
+                        if(!document.getElementsByClassName('navSocial').length){
+                            document.body.className += ' noHdSocial';
+                        }
+                    </script>
                 </div>
             </div>
         </div>
@@ -421,109 +431,109 @@
                 </div>
 
                 <!-- 列表 -->
-                                <ul class="list4-2 list-group divider mb-5" id="ListTable">
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/ACS/press/govinfo/report/1351.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='110年國家資通安全情勢報告'>
-                                                <div class="listDate ms-md-3 order-md-2">2022-06-17</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        110&#x5E74;&#x570B;&#x5BB6;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x60C5;&#x52E2;&#x5831;&#x544A;
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/ACS/press/govinfo/report/1349.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='110年公務機關資安稽核概況報告'>
-                                                <div class="listDate ms-md-3 order-md-2">2022-06-17</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        110&#x5E74;&#x516C;&#x52D9;&#x6A5F;&#x95DC;&#x8CC7;&#x5B89;&#x7A3D;&#x6838;&#x6982;&#x6CC1;&#x5831;&#x544A;
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/ACS/press/govinfo/report/1061.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='109年國家資通安全情勢報告'>
-                                                <div class="listDate ms-md-3 order-md-2">2021-06-29</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        109&#x5E74;&#x570B;&#x5BB6;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x60C5;&#x52E2;&#x5831;&#x544A;
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/ACS/press/govinfo/report/1055.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='109年公務機關資安稽核概況報告'>
-                                                <div class="listDate ms-md-3 order-md-2">2021-06-29</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        109&#x5E74;&#x516C;&#x52D9;&#x6A5F;&#x95DC;&#x8CC7;&#x5B89;&#x7A3D;&#x6838;&#x6982;&#x6CC1;&#x5831;&#x544A;
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/ACS/press/govinfo/report/1063.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='108年國家資通安全情勢報告'>
-                                                <div class="listDate ms-md-3 order-md-2">2020-07-03</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        108&#x5E74;&#x570B;&#x5BB6;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x60C5;&#x52E2;&#x5831;&#x544A;
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/ACS/press/govinfo/report/1057.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='108年公務機關資安稽核概況報告'>
-                                                <div class="listDate ms-md-3 order-md-2">2020-07-03</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        108&#x5E74;&#x516C;&#x52D9;&#x6A5F;&#x95DC;&#x8CC7;&#x5B89;&#x7A3D;&#x6838;&#x6982;&#x6CC1;&#x5831;&#x544A;
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/ACS/press/govinfo/report/1067.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='2019年我國資安現況調查摘要'>
-                                                <div class="listDate ms-md-3 order-md-2">2020-02-03</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        2019&#x5E74;&#x6211;&#x570B;&#x8CC7;&#x5B89;&#x73FE;&#x6CC1;&#x8ABF;&#x67E5;&#x6458;&#x8981;
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/ACS/press/govinfo/report/1065.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='107年國家資通安全情勢報告'>
-                                                <div class="listDate ms-md-3 order-md-2">2019-08-21</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        107&#x5E74;&#x570B;&#x5BB6;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x60C5;&#x52E2;&#x5831;&#x544A;
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/ACS/press/govinfo/report/1059.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='107年公務機關資安稽核概況報告'>
-                                                <div class="listDate ms-md-3 order-md-2">2019-08-21</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        107&#x5E74;&#x516C;&#x52D9;&#x6A5F;&#x95DC;&#x8CC7;&#x5B89;&#x7A3D;&#x6838;&#x6982;&#x6CC1;&#x5831;&#x544A;
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://www-api.moda.gov.tw/File/Get/EPyDaZd2w0gajxd" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='2017年我國資安現況調查摘要.pdf（另開新視窗）'>
-                                                <div class="listDate ms-md-3 order-md-2">2018-06-20</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        2017&#x5E74;&#x6211;&#x570B;&#x8CC7;&#x5B89;&#x73FE;&#x6CC1;&#x8ABF;&#x67E5;&#x6458;&#x8981;
-                                                            <span class="fileTypeI">PDF</span>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                </ul>
+                                    <ul class="list4-2 list-group divider mb-5" id="ListTable">
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/ACS/press/govinfo/report/1351.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='110年國家資通安全情勢報告'>
+                                                    <div class="listDate ms-md-3 order-md-2">2022-06-17</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            110&#x5E74;&#x570B;&#x5BB6;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x60C5;&#x52E2;&#x5831;&#x544A;
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/ACS/press/govinfo/report/1349.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='110年公務機關資安稽核概況報告'>
+                                                    <div class="listDate ms-md-3 order-md-2">2022-06-17</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            110&#x5E74;&#x516C;&#x52D9;&#x6A5F;&#x95DC;&#x8CC7;&#x5B89;&#x7A3D;&#x6838;&#x6982;&#x6CC1;&#x5831;&#x544A;
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/ACS/press/govinfo/report/1061.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='109年國家資通安全情勢報告'>
+                                                    <div class="listDate ms-md-3 order-md-2">2021-06-29</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            109&#x5E74;&#x570B;&#x5BB6;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x60C5;&#x52E2;&#x5831;&#x544A;
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/ACS/press/govinfo/report/1055.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='109年公務機關資安稽核概況報告'>
+                                                    <div class="listDate ms-md-3 order-md-2">2021-06-29</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            109&#x5E74;&#x516C;&#x52D9;&#x6A5F;&#x95DC;&#x8CC7;&#x5B89;&#x7A3D;&#x6838;&#x6982;&#x6CC1;&#x5831;&#x544A;
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/ACS/press/govinfo/report/1063.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='108年國家資通安全情勢報告'>
+                                                    <div class="listDate ms-md-3 order-md-2">2020-07-03</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            108&#x5E74;&#x570B;&#x5BB6;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x60C5;&#x52E2;&#x5831;&#x544A;
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/ACS/press/govinfo/report/1057.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='108年公務機關資安稽核概況報告'>
+                                                    <div class="listDate ms-md-3 order-md-2">2020-07-03</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            108&#x5E74;&#x516C;&#x52D9;&#x6A5F;&#x95DC;&#x8CC7;&#x5B89;&#x7A3D;&#x6838;&#x6982;&#x6CC1;&#x5831;&#x544A;
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/ACS/press/govinfo/report/1067.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='2019年我國資安現況調查摘要'>
+                                                    <div class="listDate ms-md-3 order-md-2">2020-02-03</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            2019&#x5E74;&#x6211;&#x570B;&#x8CC7;&#x5B89;&#x73FE;&#x6CC1;&#x8ABF;&#x67E5;&#x6458;&#x8981;
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/ACS/press/govinfo/report/1065.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='107年國家資通安全情勢報告'>
+                                                    <div class="listDate ms-md-3 order-md-2">2019-08-21</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            107&#x5E74;&#x570B;&#x5BB6;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x60C5;&#x52E2;&#x5831;&#x544A;
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/ACS/press/govinfo/report/1059.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='107年公務機關資安稽核概況報告'>
+                                                    <div class="listDate ms-md-3 order-md-2">2019-08-21</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            107&#x5E74;&#x516C;&#x52D9;&#x6A5F;&#x95DC;&#x8CC7;&#x5B89;&#x7A3D;&#x6838;&#x6982;&#x6CC1;&#x5831;&#x544A;
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://www-api.moda.gov.tw/File/Get/EPyDaZd2w0gajxd" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='2017年我國資安現況調查摘要.pdf（另開新視窗）'>
+                                                    <div class="listDate ms-md-3 order-md-2">2018-06-20</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            2017&#x5E74;&#x6211;&#x570B;&#x8CC7;&#x5B89;&#x73FE;&#x6CC1;&#x8ABF;&#x67E5;&#x6458;&#x8981;
+                                                                <span class="fileTypeI">PDF</span>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                    </ul>
                         <div class="pageBar mb-5 ">
     <div class="pageSet mb-4">
                         <div class="mRow">共<span class="totalData">10</span>筆資料</div>
@@ -799,7 +809,7 @@
                 <div class="ftBtmRights">
                     <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero (另開新視窗)">CC0</a>No copyright reserved.</p>
 
-                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-18<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-19<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
             </div>
             <div class="col-12 col-md text-md-end">
@@ -839,28 +849,27 @@
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/ACS/assets/js/common.js?v=BLEx1xMx8LdNW-siIJG4LygHISZ5IOw30trbmzE4joY"></script>
+            <script src="/ACS/assets/js/common.js?v=GAhTzP0xl-JvdI-CVtp-UnsTsdJHzyy7DxzZzVIKmAg"></script>
     <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=V2JExwd7xdBP26AtgTeajbqPQbpLse0DlFgoRNwRcdo"></script>
+    <script src="/js/site.js?v=r3b45PJ-Q435KvD8SAVTjXll8cXI-McYimLv_DaGbWU"></script>
     <script>
         webSiteLange('zh-tw' ,'ACS'  );
 
     </script>
     
-<script>
-    var _JsData;
-    var S1 ;
-    var S2 ;
-    var _needtag = NeedTag('OneTextList');
-    _JsData = JSON.parse('[{"mainsn":"1351","istopdisplay":"none","href":"/ACS/press/govinfo/report/1351.html","target":null,"title":"110\u5E74\u570B\u5BB6\u8CC7\u901A\u5B89\u5168\u60C5\u52E2\u5831\u544A","startdate":"2022-06-17","newstitle":"110\u5E74\u570B\u5BB6\u8CC7\u901A\u5B89\u5168\u60C5\u52E2\u5831\u544A","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1349","istopdisplay":"none","href":"/ACS/press/govinfo/report/1349.html","target":null,"title":"110\u5E74\u516C\u52D9\u6A5F\u95DC\u8CC7\u5B89\u7A3D\u6838\u6982\u6CC1\u5831\u544A","startdate":"2022-06-17","newstitle":"110\u5E74\u516C\u52D9\u6A5F\u95DC\u8CC7\u5B89\u7A3D\u6838\u6982\u6CC1\u5831\u544A","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1061","istopdisplay":"none","href":"/ACS/press/govinfo/report/1061.html","target":null,"title":"109\u5E74\u570B\u5BB6\u8CC7\u901A\u5B89\u5168\u60C5\u52E2\u5831\u544A","startdate":"2021-06-29","newstitle":"109\u5E74\u570B\u5BB6\u8CC7\u901A\u5B89\u5168\u60C5\u52E2\u5831\u544A","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1055","istopdisplay":"none","href":"/ACS/press/govinfo/report/1055.html","target":null,"title":"109\u5E74\u516C\u52D9\u6A5F\u95DC\u8CC7\u5B89\u7A3D\u6838\u6982\u6CC1\u5831\u544A","startdate":"2021-06-29","newstitle":"109\u5E74\u516C\u52D9\u6A5F\u95DC\u8CC7\u5B89\u7A3D\u6838\u6982\u6CC1\u5831\u544A","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1063","istopdisplay":"none","href":"/ACS/press/govinfo/report/1063.html","target":null,"title":"108\u5E74\u570B\u5BB6\u8CC7\u901A\u5B89\u5168\u60C5\u52E2\u5831\u544A","startdate":"2020-07-03","newstitle":"108\u5E74\u570B\u5BB6\u8CC7\u901A\u5B89\u5168\u60C5\u52E2\u5831\u544A","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1057","istopdisplay":"none","href":"/ACS/press/govinfo/report/1057.html","target":null,"title":"108\u5E74\u516C\u52D9\u6A5F\u95DC\u8CC7\u5B89\u7A3D\u6838\u6982\u6CC1\u5831\u544A","startdate":"2020-07-03","newstitle":"108\u5E74\u516C\u52D9\u6A5F\u95DC\u8CC7\u5B89\u7A3D\u6838\u6982\u6CC1\u5831\u544A","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1067","istopdisplay":"none","href":"/ACS/press/govinfo/report/1067.html","target":null,"title":"2019\u5E74\u6211\u570B\u8CC7\u5B89\u73FE\u6CC1\u8ABF\u67E5\u6458\u8981","startdate":"2020-02-03","newstitle":"2019\u5E74\u6211\u570B\u8CC7\u5B89\u73FE\u6CC1\u8ABF\u67E5\u6458\u8981","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1065","istopdisplay":"none","href":"/ACS/press/govinfo/report/1065.html","target":null,"title":"107\u5E74\u570B\u5BB6\u8CC7\u901A\u5B89\u5168\u60C5\u52E2\u5831\u544A","startdate":"2019-08-21","newstitle":"107\u5E74\u570B\u5BB6\u8CC7\u901A\u5B89\u5168\u60C5\u52E2\u5831\u544A","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1059","istopdisplay":"none","href":"/ACS/press/govinfo/report/1059.html","target":null,"title":"107\u5E74\u516C\u52D9\u6A5F\u95DC\u8CC7\u5B89\u7A3D\u6838\u6982\u6CC1\u5831\u544A","startdate":"2019-08-21","newstitle":"107\u5E74\u516C\u52D9\u6A5F\u95DC\u8CC7\u5B89\u7A3D\u6838\u6982\u6CC1\u5831\u544A","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"1069","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/EPyDaZd2w0gajxd","target":null,"title":"2017\u5E74\u6211\u570B\u8CC7\u5B89\u73FE\u6CC1\u8ABF\u67E5\u6458\u8981","startdate":"2018-06-20","newstitle":"2017\u5E74\u6211\u570B\u8CC7\u5B89\u73FE\u6CC1\u8ABF\u67E5\u6458\u8981","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"}]');
-    LeftMenu('826');
-   NewList('826');
-    var ListPage = '/_news/OneTextList.html';
-    var listTag2Page = '/_news/listTag2.html';
-    $("#ns").load(ListPage, function () {
-        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
-    });
-</script>
+    <script>
+        var _JsData;
+        var _needtag = NeedTag('OneTextList');
+        var _Module = 'NEWS';
+        _JsData = JSON.parse('[{"mainsn":"1351","istopdisplay":"none","href":"/ACS/press/govinfo/report/1351.html","target":null,"title":"110\u5E74\u570B\u5BB6\u8CC7\u901A\u5B89\u5168\u60C5\u52E2\u5831\u544A","startdate":"2022-06-17","newstitle":"110\u5E74\u570B\u5BB6\u8CC7\u901A\u5B89\u5168\u60C5\u52E2\u5831\u544A","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1349","istopdisplay":"none","href":"/ACS/press/govinfo/report/1349.html","target":null,"title":"110\u5E74\u516C\u52D9\u6A5F\u95DC\u8CC7\u5B89\u7A3D\u6838\u6982\u6CC1\u5831\u544A","startdate":"2022-06-17","newstitle":"110\u5E74\u516C\u52D9\u6A5F\u95DC\u8CC7\u5B89\u7A3D\u6838\u6982\u6CC1\u5831\u544A","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1061","istopdisplay":"none","href":"/ACS/press/govinfo/report/1061.html","target":null,"title":"109\u5E74\u570B\u5BB6\u8CC7\u901A\u5B89\u5168\u60C5\u52E2\u5831\u544A","startdate":"2021-06-29","newstitle":"109\u5E74\u570B\u5BB6\u8CC7\u901A\u5B89\u5168\u60C5\u52E2\u5831\u544A","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1055","istopdisplay":"none","href":"/ACS/press/govinfo/report/1055.html","target":null,"title":"109\u5E74\u516C\u52D9\u6A5F\u95DC\u8CC7\u5B89\u7A3D\u6838\u6982\u6CC1\u5831\u544A","startdate":"2021-06-29","newstitle":"109\u5E74\u516C\u52D9\u6A5F\u95DC\u8CC7\u5B89\u7A3D\u6838\u6982\u6CC1\u5831\u544A","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1063","istopdisplay":"none","href":"/ACS/press/govinfo/report/1063.html","target":null,"title":"108\u5E74\u570B\u5BB6\u8CC7\u901A\u5B89\u5168\u60C5\u52E2\u5831\u544A","startdate":"2020-07-03","newstitle":"108\u5E74\u570B\u5BB6\u8CC7\u901A\u5B89\u5168\u60C5\u52E2\u5831\u544A","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1057","istopdisplay":"none","href":"/ACS/press/govinfo/report/1057.html","target":null,"title":"108\u5E74\u516C\u52D9\u6A5F\u95DC\u8CC7\u5B89\u7A3D\u6838\u6982\u6CC1\u5831\u544A","startdate":"2020-07-03","newstitle":"108\u5E74\u516C\u52D9\u6A5F\u95DC\u8CC7\u5B89\u7A3D\u6838\u6982\u6CC1\u5831\u544A","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1067","istopdisplay":"none","href":"/ACS/press/govinfo/report/1067.html","target":null,"title":"2019\u5E74\u6211\u570B\u8CC7\u5B89\u73FE\u6CC1\u8ABF\u67E5\u6458\u8981","startdate":"2020-02-03","newstitle":"2019\u5E74\u6211\u570B\u8CC7\u5B89\u73FE\u6CC1\u8ABF\u67E5\u6458\u8981","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1065","istopdisplay":"none","href":"/ACS/press/govinfo/report/1065.html","target":null,"title":"107\u5E74\u570B\u5BB6\u8CC7\u901A\u5B89\u5168\u60C5\u52E2\u5831\u544A","startdate":"2019-08-21","newstitle":"107\u5E74\u570B\u5BB6\u8CC7\u901A\u5B89\u5168\u60C5\u52E2\u5831\u544A","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1059","istopdisplay":"none","href":"/ACS/press/govinfo/report/1059.html","target":null,"title":"107\u5E74\u516C\u52D9\u6A5F\u95DC\u8CC7\u5B89\u7A3D\u6838\u6982\u6CC1\u5831\u544A","startdate":"2019-08-21","newstitle":"107\u5E74\u516C\u52D9\u6A5F\u95DC\u8CC7\u5B89\u7A3D\u6838\u6982\u6CC1\u5831\u544A","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1069","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/EPyDaZd2w0gajxd","target":null,"title":"2017\u5E74\u6211\u570B\u8CC7\u5B89\u73FE\u6CC1\u8ABF\u67E5\u6458\u8981","startdate":"2018-06-20","newstitle":"2017\u5E74\u6211\u570B\u8CC7\u5B89\u73FE\u6CC1\u8ABF\u67E5\u6458\u8981","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null}]');
+        LeftMenu('826');
+        NewList('826');
+        var ListPage = '/_news/OneTextList.html';
+        var listTag2Page = '/_news/listTag2.html';
+        $("#ns").load(ListPage, function () {
+            if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+        });
+    </script>
 
 </body>
 </html>

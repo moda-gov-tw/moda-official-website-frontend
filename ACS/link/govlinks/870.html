@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/ACS/assets/css/layout.css?v=fa_ELizBi-4EapHkhLTXE99RVr3IwF2IeMZngQ8S6mc" media="all" />
+            <link rel="stylesheet" href="/ACS/assets/css/layout.css?v=VLa2QB5pEi1GX1m3QlKosyj1QeSmg056aViGaQ3Z7gE" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -55,12 +55,15 @@
     <header class="header">
         <!-- header -->
         <div b-jabq2d7uqs class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-jabq2d7uqs class="a11yBrickBar1 position-relative"><a b-jabq2d7uqs href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="&#x9801;&#x9762;&#x9802;&#x7AEF;&#x529F;&#x80FD;&#x5340;&#x584A;[&#x5FEB;&#x6377;&#x9375;Alt&#x2B;U]">:::</a></div></div>
-        <div b-jabq2d7uqs class="baseNav d-none d-xxl-block">
+
+        <!-- 若沒有社群鈕<div class="baseNav d-none d-xxl-block"> -->
+		<div b-jabq2d7uqs class="baseNav">
             <div b-jabq2d7uqs class="wrap1 mx-auto px-4 px-lg-5">
-                <div b-jabq2d7uqs class="d-md-flex justify-content-end align-items-center">
+				<div b-jabq2d7uqs class="d-flex justify-content-end align-items-top">
                     <!-- Top bar right -->
                     <div b-jabq2d7uqs class="d-flex align-items-top">
-                        <ul b-jabq2d7uqs class="nav">
+                        <!-- 社群鈕 -->
+                        <ul b-jabq2d7uqs class="nav d-none d-xxl-flex">
                                 <li b-jabq2d7uqs class="nav-item">
                                     <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/" target='_blank' rel='noreferrer noopener' title='數位發展部（另開新視窗）'>
                                         <i b-jabq2d7uqs class="ci ci-moda"></i>
@@ -73,6 +76,7 @@
                                     <span b-jabq2d7uqs class="visually-hidden">&#x7DB2;&#x7AD9;&#x5C0E;&#x89BD;</span>
                                 </a>
                             </li>
+
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/en/ACS/index.html" title="English">
                                     <i b-jabq2d7uqs class="ci ci-en"></i>
@@ -81,7 +85,7 @@
                             </li>
                         </ul>
                         <!-- 切換字體大小 -->
-                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs">
+                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs d-none d-xxl-flex">
                             <button b-jabq2d7uqs class="fontSizeDdNow btn-dropdownNow dropdown-toggle text-white" type="button" id="fontSizeDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-order="2" title="&#x4E2D;&#x5B57;&#x7D1A;"><i b-jabq2d7uqs class="ci ci-font2"></i><span b-jabq2d7uqs class="visually-hidden">A</span></button>
                             <ul b-jabq2d7uqs class="dropdown-menu" aria-labelledby="fontSizeDropdown">
                                 <li b-jabq2d7uqs><button b-jabq2d7uqs class="dropdown-item" type="button" data-order="1" title="&#x5927;&#x5B57;&#x7D1A;">A<sup b-jabq2d7uqs>+</sup></button></li>
@@ -89,13 +93,19 @@
                             </ul>
                         </div>
                         <!-- 搜尋鈕 -->
-                        <div b-jabq2d7uqs class="nav-item navbar-icon-link">
+                        <div b-jabq2d7uqs class="nav-item navbar-icon-link d-none d-xxl-flex">
                             <a b-jabq2d7uqs href="javascript:;" id="S" accesskey="S" class="searchSwitchBtn searchSwitchBtnJs nav-link text-white px-3" title="&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;">
                                 <i b-jabq2d7uqs class="ci ci-scope"></i>
                                 <span b-jabq2d7uqs class="visually-hidden">&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;</span>
                             </a>
                         </div>
                     </div>
+                    <script>
+                        //detect header social btn
+                        if(!document.getElementsByClassName('navSocial').length){
+                            document.body.className += ' noHdSocial';
+                        }
+                    </script>
                 </div>
             </div>
         </div>
@@ -512,129 +522,129 @@
                 </div>
 
                 <!-- 列表 -->
-                                <!-- 列表樣式三 -->
-                                <ul class="list4-2 list-group divider mb-5" id="ListTable">
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="http://www.ndc.gov.tw/" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='國家發展委員會'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x570B;&#x5BB6;&#x767C;&#x5C55;&#x59D4;&#x54E1;&#x6703;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://www.nccst.nat.gov.tw/" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='行政院國家資通安全會報技術服務中心（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x884C;&#x653F;&#x9662;&#x570B;&#x5BB6;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x6703;&#x5831;&#x6280;&#x8853;&#x670D;&#x52D9;&#x4E2D;&#x5FC3;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://www.ncert.nat.gov.tw/" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='國家資通安全通報應變網站（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x570B;&#x5BB6;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x901A;&#x5831;&#x61C9;&#x8B8A;&#x7DB2;&#x7AD9;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://www.twncert.org.tw/Default?lang=zh" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='國家電腦事件處理中心（TWNCERT）（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x570B;&#x5BB6;&#x96FB;&#x8166;&#x4E8B;&#x4EF6;&#x8655;&#x7406;&#x4E2D;&#x5FC3;&#xFF08;TWNCERT&#xFF09;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://iscb.nchu.edu.tw/" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='ISCB教育機構資安驗證中心（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        ISCB&#x6559;&#x80B2;&#x6A5F;&#x69CB;&#x8CC7;&#x5B89;&#x9A57;&#x8B49;&#x4E2D;&#x5FC3;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://isafe.moe.edu.tw/" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='全民資安素養網（教育部）（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x5168;&#x6C11;&#x8CC7;&#x5B89;&#x7D20;&#x990A;&#x7DB2;&#xFF08;&#x6559;&#x80B2;&#x90E8;&#xFF09;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="http://www.gov.tw/" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='電子化政府入口網（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x96FB;&#x5B50;&#x5316;&#x653F;&#x5E9C;&#x5165;&#x53E3;&#x7DB2;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://gsn.nat.gov.tw/" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='政府網際服務網（GSN）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x653F;&#x5E9C;&#x7DB2;&#x969B;&#x670D;&#x52D9;&#x7DB2;&#xFF08;GSN&#xFF09;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="http://www.gsp.gov.tw/" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='E政府服務平台（GSP）（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        E&#x653F;&#x5E9C;&#x670D;&#x52D9;&#x5E73;&#x53F0;&#xFF08;GSP&#xFF09;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="http://moica.nat.gov.tw/" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='內政部憑證管理中心（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x5167;&#x653F;&#x90E8;&#x6191;&#x8B49;&#x7BA1;&#x7406;&#x4E2D;&#x5FC3;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://lifelonglearn.dgpa.gov.tw/" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='公務人員終身學習入口網（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x516C;&#x52D9;&#x4EBA;&#x54E1;&#x7D42;&#x8EAB;&#x5B78;&#x7FD2;&#x5165;&#x53E3;&#x7DB2;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://ecollege.elearn.hrd.gov.tw/mooc/index.php" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='文官ｅ學苑（另開新視窗）'>
-                                                <div class="col mb-0 listIcon1">
-                                                    <b class="title5 fw-normal">
-                                                        &#x6587;&#x5B98;&#xFF45;&#x5B78;&#x82D1;
-                                                                <i class="bi bi-box-arrow-up-right"></i>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                </ul>
+                                    <!-- 列表樣式三 -->
+                                    <ul class="list4-2 list-group divider mb-5" id="ListTable">
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="http://www.ndc.gov.tw/" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='國家發展委員會'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x570B;&#x5BB6;&#x767C;&#x5C55;&#x59D4;&#x54E1;&#x6703;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://www.nccst.nat.gov.tw/" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='行政院國家資通安全會報技術服務中心（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x884C;&#x653F;&#x9662;&#x570B;&#x5BB6;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x6703;&#x5831;&#x6280;&#x8853;&#x670D;&#x52D9;&#x4E2D;&#x5FC3;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://www.ncert.nat.gov.tw/" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='國家資通安全通報應變網站（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x570B;&#x5BB6;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x901A;&#x5831;&#x61C9;&#x8B8A;&#x7DB2;&#x7AD9;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://www.twncert.org.tw/Default?lang=zh" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='國家電腦事件處理中心（TWNCERT）（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x570B;&#x5BB6;&#x96FB;&#x8166;&#x4E8B;&#x4EF6;&#x8655;&#x7406;&#x4E2D;&#x5FC3;&#xFF08;TWNCERT&#xFF09;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://iscb.nchu.edu.tw/" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='ISCB教育機構資安驗證中心（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            ISCB&#x6559;&#x80B2;&#x6A5F;&#x69CB;&#x8CC7;&#x5B89;&#x9A57;&#x8B49;&#x4E2D;&#x5FC3;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://isafe.moe.edu.tw/" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='全民資安素養網（教育部）（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x5168;&#x6C11;&#x8CC7;&#x5B89;&#x7D20;&#x990A;&#x7DB2;&#xFF08;&#x6559;&#x80B2;&#x90E8;&#xFF09;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="http://www.gov.tw/" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='電子化政府入口網（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x96FB;&#x5B50;&#x5316;&#x653F;&#x5E9C;&#x5165;&#x53E3;&#x7DB2;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://gsn.nat.gov.tw/" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='政府網際服務網（GSN）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x653F;&#x5E9C;&#x7DB2;&#x969B;&#x670D;&#x52D9;&#x7DB2;&#xFF08;GSN&#xFF09;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="http://www.gsp.gov.tw/" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='E政府服務平台（GSP）（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            E&#x653F;&#x5E9C;&#x670D;&#x52D9;&#x5E73;&#x53F0;&#xFF08;GSP&#xFF09;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="http://moica.nat.gov.tw/" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='內政部憑證管理中心（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x5167;&#x653F;&#x90E8;&#x6191;&#x8B49;&#x7BA1;&#x7406;&#x4E2D;&#x5FC3;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://lifelonglearn.dgpa.gov.tw/" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='公務人員終身學習入口網（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x516C;&#x52D9;&#x4EBA;&#x54E1;&#x7D42;&#x8EAB;&#x5B78;&#x7FD2;&#x5165;&#x53E3;&#x7DB2;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://ecollege.elearn.hrd.gov.tw/mooc/index.php" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='_blank' rel='noreferrer noopener' title='文官ｅ學苑（另開新視窗）'>
+                                                    <div class="col mb-0 listIcon1">
+                                                        <b class="title5 fw-normal">
+                                                            &#x6587;&#x5B98;&#xFF45;&#x5B78;&#x82D1;
+                                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                    </ul>
                         <div class="pageBar mb-5 ">
     <div class="pageSet mb-4">
                         <div class="mRow">共<span class="totalData">12</span>筆資料</div>
@@ -910,7 +920,7 @@
                 <div class="ftBtmRights">
                     <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero (另開新視窗)">CC0</a>No copyright reserved.</p>
 
-                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-18<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-19<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
             </div>
             <div class="col-12 col-md text-md-end">
@@ -950,28 +960,27 @@
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/ACS/assets/js/common.js?v=BLEx1xMx8LdNW-siIJG4LygHISZ5IOw30trbmzE4joY"></script>
+            <script src="/ACS/assets/js/common.js?v=GAhTzP0xl-JvdI-CVtp-UnsTsdJHzyy7DxzZzVIKmAg"></script>
     <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=V2JExwd7xdBP26AtgTeajbqPQbpLse0DlFgoRNwRcdo"></script>
+    <script src="/js/site.js?v=r3b45PJ-Q435KvD8SAVTjXll8cXI-McYimLv_DaGbWU"></script>
     <script>
         webSiteLange('zh-tw' ,'ACS'  );
 
     </script>
     
-<script>
-    var _JsData;
-    var S1 ;
-    var S2 ;
-    var _needtag = NeedTag('NoDateTextList');
-    _JsData = JSON.parse('[{"mainsn":"992","istopdisplay":"none","href":"http://www.ndc.gov.tw/","target":null,"title":"\u570B\u5BB6\u767C\u5C55\u59D4\u54E1\u6703","startdate":"2022-08-27","newstitle":"\u570B\u5BB6\u767C\u5C55\u59D4\u54E1\u6703","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"994","istopdisplay":"none","href":"https://www.nccst.nat.gov.tw/","target":"_blank","title":"\u884C\u653F\u9662\u570B\u5BB6\u8CC7\u901A\u5B89\u5168\u6703\u5831\u6280\u8853\u670D\u52D9\u4E2D\u5FC3","startdate":"2022-07-05","newstitle":"\u884C\u653F\u9662\u570B\u5BB6\u8CC7\u901A\u5B89\u5168\u6703\u5831\u6280\u8853\u670D\u52D9\u4E2D\u5FC3","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"996","istopdisplay":"none","href":"https://www.ncert.nat.gov.tw/","target":"_blank","title":"\u570B\u5BB6\u8CC7\u901A\u5B89\u5168\u901A\u5831\u61C9\u8B8A\u7DB2\u7AD9","startdate":"2022-07-05","newstitle":"\u570B\u5BB6\u8CC7\u901A\u5B89\u5168\u901A\u5831\u61C9\u8B8A\u7DB2\u7AD9","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"998","istopdisplay":"none","href":"https://www.twncert.org.tw/Default?lang=zh","target":"_blank","title":"\u570B\u5BB6\u96FB\u8166\u4E8B\u4EF6\u8655\u7406\u4E2D\u5FC3\uFF08TWNCERT\uFF09","startdate":"2022-07-05","newstitle":"\u570B\u5BB6\u96FB\u8166\u4E8B\u4EF6\u8655\u7406\u4E2D\u5FC3\uFF08TWNCERT\uFF09","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"1000","istopdisplay":"none","href":"https://iscb.nchu.edu.tw/","target":"_blank","title":"ISCB\u6559\u80B2\u6A5F\u69CB\u8CC7\u5B89\u9A57\u8B49\u4E2D\u5FC3","startdate":"2022-07-05","newstitle":"ISCB\u6559\u80B2\u6A5F\u69CB\u8CC7\u5B89\u9A57\u8B49\u4E2D\u5FC3","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"1002","istopdisplay":"none","href":"https://isafe.moe.edu.tw/","target":"_blank","title":"\u5168\u6C11\u8CC7\u5B89\u7D20\u990A\u7DB2\uFF08\u6559\u80B2\u90E8\uFF09","startdate":"2022-07-05","newstitle":"\u5168\u6C11\u8CC7\u5B89\u7D20\u990A\u7DB2\uFF08\u6559\u80B2\u90E8\uFF09","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"1004","istopdisplay":"none","href":"http://www.gov.tw/","target":"_blank","title":"\u96FB\u5B50\u5316\u653F\u5E9C\u5165\u53E3\u7DB2","startdate":"2022-07-05","newstitle":"\u96FB\u5B50\u5316\u653F\u5E9C\u5165\u53E3\u7DB2","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"1006","istopdisplay":"none","href":"https://gsn.nat.gov.tw/","target":null,"title":"\u653F\u5E9C\u7DB2\u969B\u670D\u52D9\u7DB2\uFF08GSN\uFF09","startdate":"2022-07-05","newstitle":"\u653F\u5E9C\u7DB2\u969B\u670D\u52D9\u7DB2\uFF08GSN\uFF09","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"1008","istopdisplay":"none","href":"http://www.gsp.gov.tw/","target":"_blank","title":"E\u653F\u5E9C\u670D\u52D9\u5E73\u53F0\uFF08GSP\uFF09","startdate":"2022-07-05","newstitle":"E\u653F\u5E9C\u670D\u52D9\u5E73\u53F0\uFF08GSP\uFF09","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"1010","istopdisplay":"none","href":"http://moica.nat.gov.tw/","target":"_blank","title":"\u5167\u653F\u90E8\u6191\u8B49\u7BA1\u7406\u4E2D\u5FC3","startdate":"2022-07-05","newstitle":"\u5167\u653F\u90E8\u6191\u8B49\u7BA1\u7406\u4E2D\u5FC3","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"1012","istopdisplay":"none","href":"https://lifelonglearn.dgpa.gov.tw/","target":"_blank","title":"\u516C\u52D9\u4EBA\u54E1\u7D42\u8EAB\u5B78\u7FD2\u5165\u53E3\u7DB2","startdate":"2022-07-05","newstitle":"\u516C\u52D9\u4EBA\u54E1\u7D42\u8EAB\u5B78\u7FD2\u5165\u53E3\u7DB2","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"1014","istopdisplay":"none","href":"https://ecollege.elearn.hrd.gov.tw/mooc/index.php","target":"_blank","title":"\u6587\u5B98\uFF45\u5B78\u82D1","startdate":"2022-07-05","newstitle":"\u6587\u5B98\uFF45\u5B78\u82D1","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"}]');
-    LeftMenu('870');
-   NewList('870');
-    var ListPage = '/_news/NoDateTextList.html';
-    var listTag2Page = '/_news/listTag2.html';
-    $("#ns").load(ListPage, function () {
-        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
-    });
-</script>
+    <script>
+        var _JsData;
+        var _needtag = NeedTag('NoDateTextList');
+        var _Module = 'NEWS';
+        _JsData = JSON.parse('[{"mainsn":"992","istopdisplay":"none","href":"http://www.ndc.gov.tw/","target":null,"title":"\u570B\u5BB6\u767C\u5C55\u59D4\u54E1\u6703","startdate":"2022-08-27","newstitle":"\u570B\u5BB6\u767C\u5C55\u59D4\u54E1\u6703","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"994","istopdisplay":"none","href":"https://www.nccst.nat.gov.tw/","target":"_blank","title":"\u884C\u653F\u9662\u570B\u5BB6\u8CC7\u901A\u5B89\u5168\u6703\u5831\u6280\u8853\u670D\u52D9\u4E2D\u5FC3","startdate":"2022-07-05","newstitle":"\u884C\u653F\u9662\u570B\u5BB6\u8CC7\u901A\u5B89\u5168\u6703\u5831\u6280\u8853\u670D\u52D9\u4E2D\u5FC3","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"996","istopdisplay":"none","href":"https://www.ncert.nat.gov.tw/","target":"_blank","title":"\u570B\u5BB6\u8CC7\u901A\u5B89\u5168\u901A\u5831\u61C9\u8B8A\u7DB2\u7AD9","startdate":"2022-07-05","newstitle":"\u570B\u5BB6\u8CC7\u901A\u5B89\u5168\u901A\u5831\u61C9\u8B8A\u7DB2\u7AD9","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"998","istopdisplay":"none","href":"https://www.twncert.org.tw/Default?lang=zh","target":"_blank","title":"\u570B\u5BB6\u96FB\u8166\u4E8B\u4EF6\u8655\u7406\u4E2D\u5FC3\uFF08TWNCERT\uFF09","startdate":"2022-07-05","newstitle":"\u570B\u5BB6\u96FB\u8166\u4E8B\u4EF6\u8655\u7406\u4E2D\u5FC3\uFF08TWNCERT\uFF09","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1000","istopdisplay":"none","href":"https://iscb.nchu.edu.tw/","target":"_blank","title":"ISCB\u6559\u80B2\u6A5F\u69CB\u8CC7\u5B89\u9A57\u8B49\u4E2D\u5FC3","startdate":"2022-07-05","newstitle":"ISCB\u6559\u80B2\u6A5F\u69CB\u8CC7\u5B89\u9A57\u8B49\u4E2D\u5FC3","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1002","istopdisplay":"none","href":"https://isafe.moe.edu.tw/","target":"_blank","title":"\u5168\u6C11\u8CC7\u5B89\u7D20\u990A\u7DB2\uFF08\u6559\u80B2\u90E8\uFF09","startdate":"2022-07-05","newstitle":"\u5168\u6C11\u8CC7\u5B89\u7D20\u990A\u7DB2\uFF08\u6559\u80B2\u90E8\uFF09","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1004","istopdisplay":"none","href":"http://www.gov.tw/","target":"_blank","title":"\u96FB\u5B50\u5316\u653F\u5E9C\u5165\u53E3\u7DB2","startdate":"2022-07-05","newstitle":"\u96FB\u5B50\u5316\u653F\u5E9C\u5165\u53E3\u7DB2","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1006","istopdisplay":"none","href":"https://gsn.nat.gov.tw/","target":null,"title":"\u653F\u5E9C\u7DB2\u969B\u670D\u52D9\u7DB2\uFF08GSN\uFF09","startdate":"2022-07-05","newstitle":"\u653F\u5E9C\u7DB2\u969B\u670D\u52D9\u7DB2\uFF08GSN\uFF09","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1008","istopdisplay":"none","href":"http://www.gsp.gov.tw/","target":"_blank","title":"E\u653F\u5E9C\u670D\u52D9\u5E73\u53F0\uFF08GSP\uFF09","startdate":"2022-07-05","newstitle":"E\u653F\u5E9C\u670D\u52D9\u5E73\u53F0\uFF08GSP\uFF09","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1010","istopdisplay":"none","href":"http://moica.nat.gov.tw/","target":"_blank","title":"\u5167\u653F\u90E8\u6191\u8B49\u7BA1\u7406\u4E2D\u5FC3","startdate":"2022-07-05","newstitle":"\u5167\u653F\u90E8\u6191\u8B49\u7BA1\u7406\u4E2D\u5FC3","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1012","istopdisplay":"none","href":"https://lifelonglearn.dgpa.gov.tw/","target":"_blank","title":"\u516C\u52D9\u4EBA\u54E1\u7D42\u8EAB\u5B78\u7FD2\u5165\u53E3\u7DB2","startdate":"2022-07-05","newstitle":"\u516C\u52D9\u4EBA\u54E1\u7D42\u8EAB\u5B78\u7FD2\u5165\u53E3\u7DB2","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1014","istopdisplay":"none","href":"https://ecollege.elearn.hrd.gov.tw/mooc/index.php","target":"_blank","title":"\u6587\u5B98\uFF45\u5B78\u82D1","startdate":"2022-07-05","newstitle":"\u6587\u5B98\uFF45\u5B78\u82D1","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null}]');
+        LeftMenu('870');
+        NewList('870');
+        var ListPage = '/_news/NoDateTextList.html';
+        var listTag2Page = '/_news/listTag2.html';
+        $("#ns").load(ListPage, function () {
+            if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+        });
+    </script>
 
 </body>
 </html>
