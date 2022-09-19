@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/ACS/assets/css/layout.css?v=fa_ELizBi-4EapHkhLTXE99RVr3IwF2IeMZngQ8S6mc" media="all" />
+            <link rel="stylesheet" href="/ACS/assets/css/layout.css?v=VLa2QB5pEi1GX1m3QlKosyj1QeSmg056aViGaQ3Z7gE" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -55,12 +55,15 @@
     <header class="header">
         <!-- header -->
         <div b-jabq2d7uqs class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-jabq2d7uqs class="a11yBrickBar1 position-relative"><a b-jabq2d7uqs href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="&#x9801;&#x9762;&#x9802;&#x7AEF;&#x529F;&#x80FD;&#x5340;&#x584A;[&#x5FEB;&#x6377;&#x9375;Alt&#x2B;U]">:::</a></div></div>
-        <div b-jabq2d7uqs class="baseNav d-none d-xxl-block">
+
+        <!-- 若沒有社群鈕<div class="baseNav d-none d-xxl-block"> -->
+		<div b-jabq2d7uqs class="baseNav">
             <div b-jabq2d7uqs class="wrap1 mx-auto px-4 px-lg-5">
-                <div b-jabq2d7uqs class="d-md-flex justify-content-end align-items-center">
+				<div b-jabq2d7uqs class="d-flex justify-content-end align-items-top">
                     <!-- Top bar right -->
                     <div b-jabq2d7uqs class="d-flex align-items-top">
-                        <ul b-jabq2d7uqs class="nav">
+                        <!-- 社群鈕 -->
+                        <ul b-jabq2d7uqs class="nav d-none d-xxl-flex">
                                 <li b-jabq2d7uqs class="nav-item">
                                     <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/" target='_blank' rel='noreferrer noopener' title='數位發展部（另開新視窗）'>
                                         <i b-jabq2d7uqs class="ci ci-moda"></i>
@@ -73,6 +76,7 @@
                                     <span b-jabq2d7uqs class="visually-hidden">&#x7DB2;&#x7AD9;&#x5C0E;&#x89BD;</span>
                                 </a>
                             </li>
+
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/en/ACS/index.html" title="English">
                                     <i b-jabq2d7uqs class="ci ci-en"></i>
@@ -81,7 +85,7 @@
                             </li>
                         </ul>
                         <!-- 切換字體大小 -->
-                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs">
+                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs d-none d-xxl-flex">
                             <button b-jabq2d7uqs class="fontSizeDdNow btn-dropdownNow dropdown-toggle text-white" type="button" id="fontSizeDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-order="2" title="&#x4E2D;&#x5B57;&#x7D1A;"><i b-jabq2d7uqs class="ci ci-font2"></i><span b-jabq2d7uqs class="visually-hidden">A</span></button>
                             <ul b-jabq2d7uqs class="dropdown-menu" aria-labelledby="fontSizeDropdown">
                                 <li b-jabq2d7uqs><button b-jabq2d7uqs class="dropdown-item" type="button" data-order="1" title="&#x5927;&#x5B57;&#x7D1A;">A<sup b-jabq2d7uqs>+</sup></button></li>
@@ -89,13 +93,19 @@
                             </ul>
                         </div>
                         <!-- 搜尋鈕 -->
-                        <div b-jabq2d7uqs class="nav-item navbar-icon-link">
+                        <div b-jabq2d7uqs class="nav-item navbar-icon-link d-none d-xxl-flex">
                             <a b-jabq2d7uqs href="javascript:;" id="S" accesskey="S" class="searchSwitchBtn searchSwitchBtnJs nav-link text-white px-3" title="&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;">
                                 <i b-jabq2d7uqs class="ci ci-scope"></i>
                                 <span b-jabq2d7uqs class="visually-hidden">&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;</span>
                             </a>
                         </div>
                     </div>
+                    <script>
+                        //detect header social btn
+                        if(!document.getElementsByClassName('navSocial').length){
+                            document.body.className += ' noHdSocial';
+                        }
+                    </script>
                 </div>
             </div>
         </div>
@@ -512,122 +522,122 @@
                 </div>
 
                 <!-- 列表 -->
-                                <ul class="list4-2 list-group divider mb-5" id="ListTable">
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/ACS/laws/updates/534.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='資通安全管理法子法最新公告'>
-                                                <div class="listDate ms-md-3 order-md-2">2022-06-22</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        &#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x5B50;&#x6CD5;&#x6700;&#x65B0;&#x516C;&#x544A;
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/ACS/laws/updates/524.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='「資通安全管理法施行細則」、「資通安全責任等級分級辦法」、「資通安全事件通報及應變辦法」、「特定非公務機關資通安全維護計畫實施情形稽核辦法」、「資通安全情資分享辦法」及「公務機關所屬人員資通安全事項獎懲辦法」部分條文修正'>
-                                                <div class="listDate ms-md-3 order-md-2">2021-08-23</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        &#x300C;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x65BD;&#x884C;&#x7D30;&#x5247;&#x300D;&#x3001;&#x300C;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x8CAC;&#x4EFB;&#x7B49;&#x7D1A;&#x5206;&#x7D1A;&#x8FA6;&#x6CD5;&#x300D;&#x3001;&#x300C;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x4E8B;&#x4EF6;&#x901A;&#x5831;&#x53CA;&#x61C9;&#x8B8A;&#x8FA6;&#x6CD5;&#x300D;&#x3001;&#x300C;&#x7279;&#x5B9A;&#x975E;&#x516C;&#x52D9;&#x6A5F;&#x95DC;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7DAD;&#x8B77;&#x8A08;&#x756B;&#x5BE6;&#x65BD;&#x60C5;&#x5F62;&#x7A3D;&#x6838;&#x8FA6;&#x6CD5;&#x300D;&#x3001;&#x300C;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x60C5;&#x8CC7;&#x5206;&#x4EAB;&#x8FA6;&#x6CD5;&#x300D;&#x53CA;&#x300C;&#x516C;&#x52D9;&#x6A5F;&#x95DC;&#x6240;&#x5C6C;&#x4EBA;&#x54E1;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x4E8B;&#x9805;&#x734E;&#x61F2;&#x8FA6;&#x6CD5;&#x300D;&#x90E8;&#x5206;&#x689D;&#x6587;&#x4FEE;&#x6B63;
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/ACS/laws/updates/526.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='109年資通安全管理法修法說明會資料（修正草案對照表）'>
-                                                <div class="listDate ms-md-3 order-md-2">2020-12-11</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        109&#x5E74;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x4FEE;&#x6CD5;&#x8AAA;&#x660E;&#x6703;&#x8CC7;&#x6599;&#xFF08;&#x4FEE;&#x6B63;&#x8349;&#x6848;&#x5C0D;&#x7167;&#x8868;&#xFF09;
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/ACS/laws/updates/528.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='資通安全責任等級分級辦法部分條文修正'>
-                                                <div class="listDate ms-md-3 order-md-2">2019-08-26</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        &#x8CC7;&#x901A;&#x5B89;&#x5168;&#x8CAC;&#x4EFB;&#x7B49;&#x7D1A;&#x5206;&#x7D1A;&#x8FA6;&#x6CD5;&#x90E8;&#x5206;&#x689D;&#x6587;&#x4FEE;&#x6B63;
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/ACS/laws/updates/530.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='「資通安全責任等級分級辦法」部分條文修正草案公告'>
-                                                <div class="listDate ms-md-3 order-md-2">2019-05-21</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        &#x300C;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x8CAC;&#x4EFB;&#x7B49;&#x7D1A;&#x5206;&#x7D1A;&#x8FA6;&#x6CD5;&#x300D;&#x90E8;&#x5206;&#x689D;&#x6587;&#x4FEE;&#x6B63;&#x8349;&#x6848;&#x516C;&#x544A;
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/ACS/laws/updates/536.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='資通安全管理法子法最新公告草案'>
-                                                <div class="listDate ms-md-3 order-md-2">2018-09-26</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        &#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x5B50;&#x6CD5;&#x6700;&#x65B0;&#x516C;&#x544A;&#x8349;&#x6848;
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://www-api.moda.gov.tw/File/Get/p0E35guu5UE7VbZ" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='資通安全管理法子法草案分區座談會簡報.pdf（另開新視窗）'>
-                                                <div class="listDate ms-md-3 order-md-2">2018-08-01</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        &#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x5B50;&#x6CD5;&#x8349;&#x6848;&#x5206;&#x5340;&#x5EA7;&#x8AC7;&#x6703;&#x7C21;&#x5831;
-                                                            <span class="fileTypeI">PDF</span>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/ACS/laws/updates/540.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='資通安全管理法子法預告'>
-                                                <div class="listDate ms-md-3 order-md-2">2018-07-09</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        &#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x5B50;&#x6CD5;&#x9810;&#x544A;
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://www-api.moda.gov.tw/File/Get/tZxxeMJx1GjjzBJ" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='資通安全管理法_總統令公告  107年6月6日_.pdf（另開新視窗）'>
-                                                <div class="listDate ms-md-3 order-md-2">2018-06-06</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        &#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;(&#x7E3D;&#x7D71;&#x4EE4;&#x516C;&#x544A; 107&#x5E74;6&#x6708;6&#x65E5;)
-                                                            <span class="fileTypeI">PDF</span>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://www-api.moda.gov.tw/File/Get/p9VoJ2cNjiPFwGz" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='資通安全管理法草案_經立法院司法及法制委員會審議版本_.pdf（另開新視窗）'>
-                                                <div class="listDate ms-md-3 order-md-2">2017-12-20</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        &#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x8349;&#x6848;(&#x7D93;&#x7ACB;&#x6CD5;&#x9662;&#x53F8;&#x6CD5;&#x53CA;&#x6CD5;&#x5236;&#x59D4;&#x54E1;&#x6703;&#x5BE9;&#x8B70;&#x7248;&#x672C;)
-                                                            <span class="fileTypeI">PDF</span>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://www-api.moda.gov.tw/File/Get/DKpdCGJcgRF7wzL" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='資通安全管理法草案_函送立法院版本_.pdf（另開新視窗）'>
-                                                <div class="listDate ms-md-3 order-md-2">2017-04-28</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        &#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x8349;&#x6848;(&#x51FD;&#x9001;&#x7ACB;&#x6CD5;&#x9662;&#x7248;&#x672C;)
-                                                            <span class="fileTypeI">PDF</span>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                </ul>
+                                    <ul class="list4-2 list-group divider mb-5" id="ListTable">
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/ACS/laws/updates/534.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='資通安全管理法子法最新公告'>
+                                                    <div class="listDate ms-md-3 order-md-2">2022-06-22</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            &#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x5B50;&#x6CD5;&#x6700;&#x65B0;&#x516C;&#x544A;
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/ACS/laws/updates/524.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='「資通安全管理法施行細則」、「資通安全責任等級分級辦法」、「資通安全事件通報及應變辦法」、「特定非公務機關資通安全維護計畫實施情形稽核辦法」、「資通安全情資分享辦法」及「公務機關所屬人員資通安全事項獎懲辦法」部分條文修正'>
+                                                    <div class="listDate ms-md-3 order-md-2">2021-08-23</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            &#x300C;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x65BD;&#x884C;&#x7D30;&#x5247;&#x300D;&#x3001;&#x300C;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x8CAC;&#x4EFB;&#x7B49;&#x7D1A;&#x5206;&#x7D1A;&#x8FA6;&#x6CD5;&#x300D;&#x3001;&#x300C;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x4E8B;&#x4EF6;&#x901A;&#x5831;&#x53CA;&#x61C9;&#x8B8A;&#x8FA6;&#x6CD5;&#x300D;&#x3001;&#x300C;&#x7279;&#x5B9A;&#x975E;&#x516C;&#x52D9;&#x6A5F;&#x95DC;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7DAD;&#x8B77;&#x8A08;&#x756B;&#x5BE6;&#x65BD;&#x60C5;&#x5F62;&#x7A3D;&#x6838;&#x8FA6;&#x6CD5;&#x300D;&#x3001;&#x300C;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x60C5;&#x8CC7;&#x5206;&#x4EAB;&#x8FA6;&#x6CD5;&#x300D;&#x53CA;&#x300C;&#x516C;&#x52D9;&#x6A5F;&#x95DC;&#x6240;&#x5C6C;&#x4EBA;&#x54E1;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x4E8B;&#x9805;&#x734E;&#x61F2;&#x8FA6;&#x6CD5;&#x300D;&#x90E8;&#x5206;&#x689D;&#x6587;&#x4FEE;&#x6B63;
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/ACS/laws/updates/526.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='109年資通安全管理法修法說明會資料（修正草案對照表）'>
+                                                    <div class="listDate ms-md-3 order-md-2">2020-12-11</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            109&#x5E74;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x4FEE;&#x6CD5;&#x8AAA;&#x660E;&#x6703;&#x8CC7;&#x6599;&#xFF08;&#x4FEE;&#x6B63;&#x8349;&#x6848;&#x5C0D;&#x7167;&#x8868;&#xFF09;
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/ACS/laws/updates/528.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='資通安全責任等級分級辦法部分條文修正'>
+                                                    <div class="listDate ms-md-3 order-md-2">2019-08-26</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            &#x8CC7;&#x901A;&#x5B89;&#x5168;&#x8CAC;&#x4EFB;&#x7B49;&#x7D1A;&#x5206;&#x7D1A;&#x8FA6;&#x6CD5;&#x90E8;&#x5206;&#x689D;&#x6587;&#x4FEE;&#x6B63;
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/ACS/laws/updates/530.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='「資通安全責任等級分級辦法」部分條文修正草案公告'>
+                                                    <div class="listDate ms-md-3 order-md-2">2019-05-21</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            &#x300C;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x8CAC;&#x4EFB;&#x7B49;&#x7D1A;&#x5206;&#x7D1A;&#x8FA6;&#x6CD5;&#x300D;&#x90E8;&#x5206;&#x689D;&#x6587;&#x4FEE;&#x6B63;&#x8349;&#x6848;&#x516C;&#x544A;
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/ACS/laws/updates/536.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='資通安全管理法子法最新公告草案'>
+                                                    <div class="listDate ms-md-3 order-md-2">2018-09-26</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            &#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x5B50;&#x6CD5;&#x6700;&#x65B0;&#x516C;&#x544A;&#x8349;&#x6848;
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://www-api.moda.gov.tw/File/Get/p0E35guu5UE7VbZ" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='資通安全管理法子法草案分區座談會簡報.pdf（另開新視窗）'>
+                                                    <div class="listDate ms-md-3 order-md-2">2018-08-01</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            &#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x5B50;&#x6CD5;&#x8349;&#x6848;&#x5206;&#x5340;&#x5EA7;&#x8AC7;&#x6703;&#x7C21;&#x5831;
+                                                                <span class="fileTypeI">PDF</span>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/ACS/laws/updates/540.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='資通安全管理法子法預告'>
+                                                    <div class="listDate ms-md-3 order-md-2">2018-07-09</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            &#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x5B50;&#x6CD5;&#x9810;&#x544A;
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://www-api.moda.gov.tw/File/Get/tZxxeMJx1GjjzBJ" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='資通安全管理法_總統令公告  107年6月6日_.pdf（另開新視窗）'>
+                                                    <div class="listDate ms-md-3 order-md-2">2018-06-06</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            &#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;(&#x7E3D;&#x7D71;&#x4EE4;&#x516C;&#x544A; 107&#x5E74;6&#x6708;6&#x65E5;)
+                                                                <span class="fileTypeI">PDF</span>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://www-api.moda.gov.tw/File/Get/p9VoJ2cNjiPFwGz" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='資通安全管理法草案_經立法院司法及法制委員會審議版本_.pdf（另開新視窗）'>
+                                                    <div class="listDate ms-md-3 order-md-2">2017-12-20</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            &#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x8349;&#x6848;(&#x7D93;&#x7ACB;&#x6CD5;&#x9662;&#x53F8;&#x6CD5;&#x53CA;&#x6CD5;&#x5236;&#x59D4;&#x54E1;&#x6703;&#x5BE9;&#x8B70;&#x7248;&#x672C;)
+                                                                <span class="fileTypeI">PDF</span>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://www-api.moda.gov.tw/File/Get/DKpdCGJcgRF7wzL" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='資通安全管理法草案_函送立法院版本_.pdf（另開新視窗）'>
+                                                    <div class="listDate ms-md-3 order-md-2">2017-04-28</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            &#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x6CD5;&#x8349;&#x6848;(&#x51FD;&#x9001;&#x7ACB;&#x6CD5;&#x9662;&#x7248;&#x672C;)
+                                                                <span class="fileTypeI">PDF</span>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                    </ul>
                         <div class="pageBar mb-5 ">
     <div class="pageSet mb-4">
                         <div class="mRow">共<span class="totalData">11</span>筆資料</div>
@@ -903,7 +913,7 @@
                 <div class="ftBtmRights">
                     <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero (另開新視窗)">CC0</a>No copyright reserved.</p>
 
-                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-18<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-19<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
             </div>
             <div class="col-12 col-md text-md-end">
@@ -943,28 +953,27 @@
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/ACS/assets/js/common.js?v=BLEx1xMx8LdNW-siIJG4LygHISZ5IOw30trbmzE4joY"></script>
+            <script src="/ACS/assets/js/common.js?v=GAhTzP0xl-JvdI-CVtp-UnsTsdJHzyy7DxzZzVIKmAg"></script>
     <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=V2JExwd7xdBP26AtgTeajbqPQbpLse0DlFgoRNwRcdo"></script>
+    <script src="/js/site.js?v=r3b45PJ-Q435KvD8SAVTjXll8cXI-McYimLv_DaGbWU"></script>
     <script>
         webSiteLange('zh-tw' ,'ACS'  );
 
     </script>
     
-<script>
-    var _JsData;
-    var S1 ;
-    var S2 ;
-    var _needtag = NeedTag('OneTextList');
-    _JsData = JSON.parse('[{"mainsn":"534","istopdisplay":"none","href":"/ACS/laws/updates/534.html","target":null,"title":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u5B50\u6CD5\u6700\u65B0\u516C\u544A","startdate":"2022-06-22","newstitle":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u5B50\u6CD5\u6700\u65B0\u516C\u544A","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"524","istopdisplay":"none","href":"/ACS/laws/updates/524.html","target":null,"title":"\u300C\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u65BD\u884C\u7D30\u5247\u300D\u3001\u300C\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u300D\u3001\u300C\u8CC7\u901A\u5B89\u5168\u4E8B\u4EF6\u901A\u5831\u53CA\u61C9\u8B8A\u8FA6\u6CD5\u300D\u3001\u300C\u7279\u5B9A\u975E\u516C\u52D9\u6A5F\u95DC\u8CC7\u901A\u5B89\u5168\u7DAD\u8B77\u8A08\u756B\u5BE6\u65BD\u60C5\u5F62\u7A3D\u6838\u8FA6\u6CD5\u300D\u3001\u300C\u8CC7\u901A\u5B89\u5168\u60C5\u8CC7\u5206\u4EAB\u8FA6\u6CD5\u300D\u53CA\u300C\u516C\u52D9\u6A5F\u95DC\u6240\u5C6C\u4EBA\u54E1\u8CC7\u901A\u5B89\u5168\u4E8B\u9805\u734E\u61F2\u8FA6\u6CD5\u300D\u90E8\u5206\u689D\u6587\u4FEE\u6B63","startdate":"2021-08-23","newstitle":"\u300C\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u65BD\u884C\u7D30\u5247\u300D\u3001\u300C\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u300D\u3001\u300C\u8CC7\u901A\u5B89\u5168\u4E8B\u4EF6\u901A\u5831\u53CA\u61C9\u8B8A\u8FA6\u6CD5\u300D\u3001\u300C\u7279\u5B9A\u975E\u516C\u52D9\u6A5F\u95DC\u8CC7\u901A\u5B89\u5168\u7DAD\u8B77\u8A08\u756B\u5BE6\u65BD\u60C5\u5F62\u7A3D\u6838\u8FA6\u6CD5\u300D\u3001\u300C\u8CC7\u901A\u5B89\u5168\u60C5\u8CC7\u5206\u4EAB\u8FA6\u6CD5\u300D\u53CA\u300C\u516C\u52D9\u6A5F\u95DC\u6240\u5C6C\u4EBA\u54E1\u8CC7\u901A\u5B89\u5168\u4E8B\u9805\u734E\u61F2\u8FA6\u6CD5\u300D\u90E8\u5206\u689D\u6587\u4FEE\u6B63","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"526","istopdisplay":"none","href":"/ACS/laws/updates/526.html","target":null,"title":"109\u5E74\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u4FEE\u6CD5\u8AAA\u660E\u6703\u8CC7\u6599\uFF08\u4FEE\u6B63\u8349\u6848\u5C0D\u7167\u8868\uFF09","startdate":"2020-12-11","newstitle":"109\u5E74\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u4FEE\u6CD5\u8AAA\u660E\u6703\u8CC7\u6599\uFF08\u4FEE\u6B63\u8349\u6848\u5C0D\u7167\u8868\uFF09","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"528","istopdisplay":"none","href":"/ACS/laws/updates/528.html","target":null,"title":"\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u90E8\u5206\u689D\u6587\u4FEE\u6B63","startdate":"2019-08-26","newstitle":"\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u90E8\u5206\u689D\u6587\u4FEE\u6B63","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"530","istopdisplay":"none","href":"/ACS/laws/updates/530.html","target":null,"title":"\u300C\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u300D\u90E8\u5206\u689D\u6587\u4FEE\u6B63\u8349\u6848\u516C\u544A","startdate":"2019-05-21","newstitle":"\u300C\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u300D\u90E8\u5206\u689D\u6587\u4FEE\u6B63\u8349\u6848\u516C\u544A","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"536","istopdisplay":"none","href":"/ACS/laws/updates/536.html","target":null,"title":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u5B50\u6CD5\u6700\u65B0\u516C\u544A\u8349\u6848","startdate":"2018-09-26","newstitle":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u5B50\u6CD5\u6700\u65B0\u516C\u544A\u8349\u6848","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"538","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/p0E35guu5UE7VbZ","target":null,"title":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u5B50\u6CD5\u8349\u6848\u5206\u5340\u5EA7\u8AC7\u6703\u7C21\u5831","startdate":"2018-08-01","newstitle":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u5B50\u6CD5\u8349\u6848\u5206\u5340\u5EA7\u8AC7\u6703\u7C21\u5831","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"540","istopdisplay":"none","href":"/ACS/laws/updates/540.html","target":null,"title":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u5B50\u6CD5\u9810\u544A","startdate":"2018-07-09","newstitle":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u5B50\u6CD5\u9810\u544A","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"542","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/tZxxeMJx1GjjzBJ","target":null,"title":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5(\u7E3D\u7D71\u4EE4\u516C\u544A 107\u5E746\u67086\u65E5)","startdate":"2018-06-06","newstitle":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5(\u7E3D\u7D71\u4EE4\u516C\u544A 107\u5E746\u67086\u65E5)","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"544","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/p9VoJ2cNjiPFwGz","target":null,"title":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848(\u7D93\u7ACB\u6CD5\u9662\u53F8\u6CD5\u53CA\u6CD5\u5236\u59D4\u54E1\u6703\u5BE9\u8B70\u7248\u672C)","startdate":"2017-12-20","newstitle":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848(\u7D93\u7ACB\u6CD5\u9662\u53F8\u6CD5\u53CA\u6CD5\u5236\u59D4\u54E1\u6703\u5BE9\u8B70\u7248\u672C)","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"546","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/DKpdCGJcgRF7wzL","target":null,"title":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848(\u51FD\u9001\u7ACB\u6CD5\u9662\u7248\u672C)","startdate":"2017-04-28","newstitle":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848(\u51FD\u9001\u7ACB\u6CD5\u9662\u7248\u672C)","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"}]');
-    LeftMenu('626');
-   NewList('626');
-    var ListPage = '/_news/OneTextList.html';
-    var listTag2Page = '/_news/listTag2.html';
-    $("#ns").load(ListPage, function () {
-        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
-    });
-</script>
+    <script>
+        var _JsData;
+        var _needtag = NeedTag('OneTextList');
+        var _Module = 'NEWS';
+        _JsData = JSON.parse('[{"mainsn":"534","istopdisplay":"none","href":"/ACS/laws/updates/534.html","target":null,"title":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u5B50\u6CD5\u6700\u65B0\u516C\u544A","startdate":"2022-06-22","newstitle":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u5B50\u6CD5\u6700\u65B0\u516C\u544A","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"524","istopdisplay":"none","href":"/ACS/laws/updates/524.html","target":null,"title":"\u300C\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u65BD\u884C\u7D30\u5247\u300D\u3001\u300C\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u300D\u3001\u300C\u8CC7\u901A\u5B89\u5168\u4E8B\u4EF6\u901A\u5831\u53CA\u61C9\u8B8A\u8FA6\u6CD5\u300D\u3001\u300C\u7279\u5B9A\u975E\u516C\u52D9\u6A5F\u95DC\u8CC7\u901A\u5B89\u5168\u7DAD\u8B77\u8A08\u756B\u5BE6\u65BD\u60C5\u5F62\u7A3D\u6838\u8FA6\u6CD5\u300D\u3001\u300C\u8CC7\u901A\u5B89\u5168\u60C5\u8CC7\u5206\u4EAB\u8FA6\u6CD5\u300D\u53CA\u300C\u516C\u52D9\u6A5F\u95DC\u6240\u5C6C\u4EBA\u54E1\u8CC7\u901A\u5B89\u5168\u4E8B\u9805\u734E\u61F2\u8FA6\u6CD5\u300D\u90E8\u5206\u689D\u6587\u4FEE\u6B63","startdate":"2021-08-23","newstitle":"\u300C\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u65BD\u884C\u7D30\u5247\u300D\u3001\u300C\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u300D\u3001\u300C\u8CC7\u901A\u5B89\u5168\u4E8B\u4EF6\u901A\u5831\u53CA\u61C9\u8B8A\u8FA6\u6CD5\u300D\u3001\u300C\u7279\u5B9A\u975E\u516C\u52D9\u6A5F\u95DC\u8CC7\u901A\u5B89\u5168\u7DAD\u8B77\u8A08\u756B\u5BE6\u65BD\u60C5\u5F62\u7A3D\u6838\u8FA6\u6CD5\u300D\u3001\u300C\u8CC7\u901A\u5B89\u5168\u60C5\u8CC7\u5206\u4EAB\u8FA6\u6CD5\u300D\u53CA\u300C\u516C\u52D9\u6A5F\u95DC\u6240\u5C6C\u4EBA\u54E1\u8CC7\u901A\u5B89\u5168\u4E8B\u9805\u734E\u61F2\u8FA6\u6CD5\u300D\u90E8\u5206\u689D\u6587\u4FEE\u6B63","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"526","istopdisplay":"none","href":"/ACS/laws/updates/526.html","target":null,"title":"109\u5E74\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u4FEE\u6CD5\u8AAA\u660E\u6703\u8CC7\u6599\uFF08\u4FEE\u6B63\u8349\u6848\u5C0D\u7167\u8868\uFF09","startdate":"2020-12-11","newstitle":"109\u5E74\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u4FEE\u6CD5\u8AAA\u660E\u6703\u8CC7\u6599\uFF08\u4FEE\u6B63\u8349\u6848\u5C0D\u7167\u8868\uFF09","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"528","istopdisplay":"none","href":"/ACS/laws/updates/528.html","target":null,"title":"\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u90E8\u5206\u689D\u6587\u4FEE\u6B63","startdate":"2019-08-26","newstitle":"\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u90E8\u5206\u689D\u6587\u4FEE\u6B63","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"530","istopdisplay":"none","href":"/ACS/laws/updates/530.html","target":null,"title":"\u300C\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u300D\u90E8\u5206\u689D\u6587\u4FEE\u6B63\u8349\u6848\u516C\u544A","startdate":"2019-05-21","newstitle":"\u300C\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u300D\u90E8\u5206\u689D\u6587\u4FEE\u6B63\u8349\u6848\u516C\u544A","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"536","istopdisplay":"none","href":"/ACS/laws/updates/536.html","target":null,"title":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u5B50\u6CD5\u6700\u65B0\u516C\u544A\u8349\u6848","startdate":"2018-09-26","newstitle":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u5B50\u6CD5\u6700\u65B0\u516C\u544A\u8349\u6848","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"538","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/p0E35guu5UE7VbZ","target":null,"title":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u5B50\u6CD5\u8349\u6848\u5206\u5340\u5EA7\u8AC7\u6703\u7C21\u5831","startdate":"2018-08-01","newstitle":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u5B50\u6CD5\u8349\u6848\u5206\u5340\u5EA7\u8AC7\u6703\u7C21\u5831","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"540","istopdisplay":"none","href":"/ACS/laws/updates/540.html","target":null,"title":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u5B50\u6CD5\u9810\u544A","startdate":"2018-07-09","newstitle":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u5B50\u6CD5\u9810\u544A","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"542","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/tZxxeMJx1GjjzBJ","target":null,"title":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5(\u7E3D\u7D71\u4EE4\u516C\u544A 107\u5E746\u67086\u65E5)","startdate":"2018-06-06","newstitle":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5(\u7E3D\u7D71\u4EE4\u516C\u544A 107\u5E746\u67086\u65E5)","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"544","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/p9VoJ2cNjiPFwGz","target":null,"title":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848(\u7D93\u7ACB\u6CD5\u9662\u53F8\u6CD5\u53CA\u6CD5\u5236\u59D4\u54E1\u6703\u5BE9\u8B70\u7248\u672C)","startdate":"2017-12-20","newstitle":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848(\u7D93\u7ACB\u6CD5\u9662\u53F8\u6CD5\u53CA\u6CD5\u5236\u59D4\u54E1\u6703\u5BE9\u8B70\u7248\u672C)","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"546","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/DKpdCGJcgRF7wzL","target":null,"title":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848(\u51FD\u9001\u7ACB\u6CD5\u9662\u7248\u672C)","startdate":"2017-04-28","newstitle":"\u8CC7\u901A\u5B89\u5168\u7BA1\u7406\u6CD5\u8349\u6848(\u51FD\u9001\u7ACB\u6CD5\u9662\u7248\u672C)","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null}]');
+        LeftMenu('626');
+        NewList('626');
+        var ListPage = '/_news/OneTextList.html';
+        var listTag2Page = '/_news/listTag2.html';
+        $("#ns").load(ListPage, function () {
+            if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+        });
+    </script>
 
 </body>
 </html>

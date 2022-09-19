@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/ACS/assets/css/layout.css?v=fa_ELizBi-4EapHkhLTXE99RVr3IwF2IeMZngQ8S6mc" media="all" />
+            <link rel="stylesheet" href="/ACS/assets/css/layout.css?v=VLa2QB5pEi1GX1m3QlKosyj1QeSmg056aViGaQ3Z7gE" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -55,12 +55,15 @@
     <header class="header">
         <!-- header -->
         <div b-jabq2d7uqs class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-jabq2d7uqs class="a11yBrickBar1 position-relative"><a b-jabq2d7uqs href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="&#x9801;&#x9762;&#x9802;&#x7AEF;&#x529F;&#x80FD;&#x5340;&#x584A;[&#x5FEB;&#x6377;&#x9375;Alt&#x2B;U]">:::</a></div></div>
-        <div b-jabq2d7uqs class="baseNav d-none d-xxl-block">
+
+        <!-- 若沒有社群鈕<div class="baseNav d-none d-xxl-block"> -->
+		<div b-jabq2d7uqs class="baseNav">
             <div b-jabq2d7uqs class="wrap1 mx-auto px-4 px-lg-5">
-                <div b-jabq2d7uqs class="d-md-flex justify-content-end align-items-center">
+				<div b-jabq2d7uqs class="d-flex justify-content-end align-items-top">
                     <!-- Top bar right -->
                     <div b-jabq2d7uqs class="d-flex align-items-top">
-                        <ul b-jabq2d7uqs class="nav">
+                        <!-- 社群鈕 -->
+                        <ul b-jabq2d7uqs class="nav d-none d-xxl-flex">
                                 <li b-jabq2d7uqs class="nav-item">
                                     <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/" target='_blank' rel='noreferrer noopener' title='數位發展部（另開新視窗）'>
                                         <i b-jabq2d7uqs class="ci ci-moda"></i>
@@ -73,6 +76,7 @@
                                     <span b-jabq2d7uqs class="visually-hidden">&#x7DB2;&#x7AD9;&#x5C0E;&#x89BD;</span>
                                 </a>
                             </li>
+
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/en/ACS/index.html" title="English">
                                     <i b-jabq2d7uqs class="ci ci-en"></i>
@@ -81,7 +85,7 @@
                             </li>
                         </ul>
                         <!-- 切換字體大小 -->
-                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs">
+                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs d-none d-xxl-flex">
                             <button b-jabq2d7uqs class="fontSizeDdNow btn-dropdownNow dropdown-toggle text-white" type="button" id="fontSizeDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-order="2" title="&#x4E2D;&#x5B57;&#x7D1A;"><i b-jabq2d7uqs class="ci ci-font2"></i><span b-jabq2d7uqs class="visually-hidden">A</span></button>
                             <ul b-jabq2d7uqs class="dropdown-menu" aria-labelledby="fontSizeDropdown">
                                 <li b-jabq2d7uqs><button b-jabq2d7uqs class="dropdown-item" type="button" data-order="1" title="&#x5927;&#x5B57;&#x7D1A;">A<sup b-jabq2d7uqs>+</sup></button></li>
@@ -89,13 +93,19 @@
                             </ul>
                         </div>
                         <!-- 搜尋鈕 -->
-                        <div b-jabq2d7uqs class="nav-item navbar-icon-link">
+                        <div b-jabq2d7uqs class="nav-item navbar-icon-link d-none d-xxl-flex">
                             <a b-jabq2d7uqs href="javascript:;" id="S" accesskey="S" class="searchSwitchBtn searchSwitchBtnJs nav-link text-white px-3" title="&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;">
                                 <i b-jabq2d7uqs class="ci ci-scope"></i>
                                 <span b-jabq2d7uqs class="visually-hidden">&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;</span>
                             </a>
                         </div>
                     </div>
+                    <script>
+                        //detect header social btn
+                        if(!document.getElementsByClassName('navSocial').length){
+                            document.body.className += ' noHdSocial';
+                        }
+                    </script>
                 </div>
             </div>
         </div>
@@ -448,197 +458,197 @@
                 </div>
 
                 <!-- 列表 -->
-                                <div class="qa" id="ListTable">
-                                    <div class="row d-flex justify-content-center">
-                                        <div class="col">
-                                            <div class="accordion mb-5" id="qa1">
-                                                    <div class="accordion-item">
-                                                        <!-- 每項題目需套不同的id-->
+                                    <div class="qa" id="ListTable">
+                                        <div class="row d-flex justify-content-center">
+                                            <div class="col">
+                                                <div class="accordion mb-5" id="qa1">
+                                                        <div class="accordion-item">
+                                                            <!-- 每項題目需套不同的id-->
                                         <div class="accordion-header" id="qaH570">
-                                                            <!--需套跟內容對應的data-bs-target、aria-controls -->
+                                                                <!--需套跟內容對應的data-bs-target、aria-controls -->
                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#qaCon570" aria-controls="qaCon570">
-                                                                <span>2.1. &#x8CC7;&#x901A;&#x5B89;&#x5168;&#x8CAC;&#x4EFB;&#x7B49;&#x7D1A;&#x5206;&#x7D1A;&#x8FA6;&#x6CD5;&#x7B2C;4&#x689D;&#x4E2D;&#xFF0C;&#x5168;&#x570B;&#x6027;&#x6C11;&#x773E;&#x6216;&#x516C;&#x52D9;&#x54E1;&#x500B;&#x4EBA;&#x8CC7;&#x6599;&#x6A94;&#x6848;&#x5176;&#x8A8D;&#x5B9A;&#x6A19;&#x6E96;&#x70BA;&#x4F55;&#xFF1F;</span>
-                                                            </button>
-                                                        </div>
-                                                        <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
+                                                                    <span>2.1. &#x8CC7;&#x901A;&#x5B89;&#x5168;&#x8CAC;&#x4EFB;&#x7B49;&#x7D1A;&#x5206;&#x7D1A;&#x8FA6;&#x6CD5;&#x7B2C;4&#x689D;&#x4E2D;&#xFF0C;&#x5168;&#x570B;&#x6027;&#x6C11;&#x773E;&#x6216;&#x516C;&#x52D9;&#x54E1;&#x500B;&#x4EBA;&#x8CC7;&#x6599;&#x6A94;&#x6848;&#x5176;&#x8A8D;&#x5B9A;&#x6A19;&#x6E96;&#x70BA;&#x4F55;&#xFF1F;</span>
+                                                                </button>
+                                                            </div>
+                                                            <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
                                         <div id="qaCon570" class="accordion-collapse collapse" aria-labelledby="qaH570" data-bs-parent="#qa1">
-                                                            <div class="accordion-body">
-                                                                <div class="article1">
-                                                                    <p>全國性民眾或公務員個人資料檔案，指含括全國大部分民眾或公務員之個人資料檔案。</p>
+                                                                <div class="accordion-body">
+                                                                    <div class="article1">
+                                                                        <p>全國性民眾或公務員個人資料檔案，指含括全國大部分民眾或公務員之個人資料檔案。</p>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="accordion-item">
-                                                        <!-- 每項題目需套不同的id-->
+                                                        <div class="accordion-item">
+                                                            <!-- 每項題目需套不同的id-->
                                         <div class="accordion-header" id="qaH572">
-                                                            <!--需套跟內容對應的data-bs-target、aria-controls -->
+                                                                <!--需套跟內容對應的data-bs-target、aria-controls -->
                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#qaCon572" aria-controls="qaCon572">
-                                                                <span>2.2. &#x8CC7;&#x901A;&#x5B89;&#x5168;&#x8CAC;&#x4EFB;&#x7B49;&#x7D1A;&#x5206;&#x7D1A;&#x8FA6;&#x6CD5;&#x7B2C;5&#x689D;&#x4E2D;&#xFF0C;&#x5340;&#x57DF;&#x6027;&#x3001;&#x5730;&#x5340;&#x6027;&#x6C11;&#x773E;&#x500B;&#x4EBA;&#x8CC7;&#x6599;&#x6A94;&#x6848;&#xFF0C;&#x5176;&#x8A8D;&#x5B9A;&#x6A19;&#x6E96;&#x70BA;&#x4F55;&#xFF1F;</span>
-                                                            </button>
-                                                        </div>
-                                                        <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
+                                                                    <span>2.2. &#x8CC7;&#x901A;&#x5B89;&#x5168;&#x8CAC;&#x4EFB;&#x7B49;&#x7D1A;&#x5206;&#x7D1A;&#x8FA6;&#x6CD5;&#x7B2C;5&#x689D;&#x4E2D;&#xFF0C;&#x5340;&#x57DF;&#x6027;&#x3001;&#x5730;&#x5340;&#x6027;&#x6C11;&#x773E;&#x500B;&#x4EBA;&#x8CC7;&#x6599;&#x6A94;&#x6848;&#xFF0C;&#x5176;&#x8A8D;&#x5B9A;&#x6A19;&#x6E96;&#x70BA;&#x4F55;&#xFF1F;</span>
+                                                                </button>
+                                                            </div>
+                                                            <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
                                         <div id="qaCon572" class="accordion-collapse collapse" aria-labelledby="qaH572" data-bs-parent="#qa1">
-                                                            <div class="accordion-body">
-                                                                <div class="article1">
-                                                                    <p>區域性或地區性民眾個人資料檔案，指含括跨直轄市、縣（市）或單一直轄市、縣（市）地域範圍內之大部分民眾之個人資料檔案。</p>
+                                                                <div class="accordion-body">
+                                                                    <div class="article1">
+                                                                        <p>區域性或地區性民眾個人資料檔案，指含括跨直轄市、縣（市）或單一直轄市、縣（市）地域範圍內之大部分民眾之個人資料檔案。</p>
 
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="accordion-item">
-                                                        <!-- 每項題目需套不同的id-->
+                                                        <div class="accordion-item">
+                                                            <!-- 每項題目需套不同的id-->
                                         <div class="accordion-header" id="qaH574">
-                                                            <!--需套跟內容對應的data-bs-target、aria-controls -->
+                                                                <!--需套跟內容對應的data-bs-target、aria-controls -->
                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#qaCon574" aria-controls="qaCon574">
-                                                                <span>2.3. &#x6A5F;&#x95DC;&#x7684;&#x5B98;&#x65B9;&#x7DB2;&#x7AD9;&#x662F;&#x63D0;&#x4F9B;&#x8CC7;&#x8A0A;&#x7D66;&#x5168;&#x570B;&#x6C11;&#x773E;&#xFF0C;&#x662F;&#x5426;&#x5C6C;&#x65BC;&#x5168;&#x570B;&#x6027;&#x7684;&#x6C11;&#x773E;&#x670D;&#x52D9; ?</span>
-                                                            </button>
-                                                        </div>
-                                                        <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
+                                                                    <span>2.3. &#x6A5F;&#x95DC;&#x7684;&#x5B98;&#x65B9;&#x7DB2;&#x7AD9;&#x662F;&#x63D0;&#x4F9B;&#x8CC7;&#x8A0A;&#x7D66;&#x5168;&#x570B;&#x6C11;&#x773E;&#xFF0C;&#x662F;&#x5426;&#x5C6C;&#x65BC;&#x5168;&#x570B;&#x6027;&#x7684;&#x6C11;&#x773E;&#x670D;&#x52D9; ?</span>
+                                                                </button>
+                                                            </div>
+                                                            <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
                                         <div id="qaCon574" class="accordion-collapse collapse" aria-labelledby="qaH574" data-bs-parent="#qa1">
-                                                            <div class="accordion-body">
-                                                                <div class="article1">
-                                                                    <p>機關之官網非屬本法所稱全國性民眾服務之範圍，全國性民眾服務通常為中央機關為執行法定職掌，統一規劃及提供予全國民眾或全國公務機關使用之申辦服務，如戶籍登記、地籍登記、工商登記、報稅等。</p>
+                                                                <div class="accordion-body">
+                                                                    <div class="article1">
+                                                                        <p>機關之官網非屬本法所稱全國性民眾服務之範圍，全國性民眾服務通常為中央機關為執行法定職掌，統一規劃及提供予全國民眾或全國公務機關使用之申辦服務，如戶籍登記、地籍登記、工商登記、報稅等。</p>
 
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="accordion-item">
-                                                        <!-- 每項題目需套不同的id-->
+                                                        <div class="accordion-item">
+                                                            <!-- 每項題目需套不同的id-->
                                         <div class="accordion-header" id="qaH576">
-                                                            <!--需套跟內容對應的data-bs-target、aria-controls -->
+                                                                <!--需套跟內容對應的data-bs-target、aria-controls -->
                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#qaCon576" aria-controls="qaCon576">
-                                                                <span>2.4. &#x5E02;&#x7ACB;&#x7684;&#x4E2D;&#x91AB;&#x91AB;&#x9662;&#x662F;&#x5426;&#x4E5F;&#x5C6C;&#x65BC;&#x516C;&#x7ACB;&#x5340;&#x57DF;&#x91AB;&#x9662;&#x6216;&#x5730;&#x5340;&#x91AB;&#x9662;&#xFF0C;&#x5176;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x8CAC;&#x4EFB;&#x7B49;&#x7D1A;&#x70BA;&#x4F55; ?</span>
-                                                            </button>
-                                                        </div>
-                                                        <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
+                                                                    <span>2.4. &#x5E02;&#x7ACB;&#x7684;&#x4E2D;&#x91AB;&#x91AB;&#x9662;&#x662F;&#x5426;&#x4E5F;&#x5C6C;&#x65BC;&#x516C;&#x7ACB;&#x5340;&#x57DF;&#x91AB;&#x9662;&#x6216;&#x5730;&#x5340;&#x91AB;&#x9662;&#xFF0C;&#x5176;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x8CAC;&#x4EFB;&#x7B49;&#x7D1A;&#x70BA;&#x4F55; ?</span>
+                                                                </button>
+                                                            </div>
+                                                            <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
                                         <div id="qaCon576" class="accordion-collapse collapse" aria-labelledby="qaH576" data-bs-parent="#qa1">
-                                                            <div class="accordion-body">
-                                                                <div class="article1">
-                                                                    <p>市立中醫醫院屬於公立區域醫院或地區醫院，依資通安全責任等級分級辦法第5條，其資通安全責任等級原則上列為B級。</p>
+                                                                <div class="accordion-body">
+                                                                    <div class="article1">
+                                                                        <p>市立中醫醫院屬於公立區域醫院或地區醫院，依資通安全責任等級分級辦法第5條，其資通安全責任等級原則上列為B級。</p>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="accordion-item">
-                                                        <!-- 每項題目需套不同的id-->
+                                                        <div class="accordion-item">
+                                                            <!-- 每項題目需套不同的id-->
                                         <div class="accordion-header" id="qaH578">
-                                                            <!--需套跟內容對應的data-bs-target、aria-controls -->
+                                                                <!--需套跟內容對應的data-bs-target、aria-controls -->
                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#qaCon578" aria-controls="qaCon578">
-                                                                <span>2.5. &#x76EE;&#x524D;&#x90E8;&#x7ACB;&#x91AB;&#x9662;&#x3001;&#x5340;&#x57DF;&#x91AB;&#x9662;&#x90FD;&#x88AB;&#x8981;&#x6C42;&#x662F;B&#x7D1A;&#xFF0C;&#x53EF;&#x662F;&#x6709;&#x4E9B;&#x91AB;&#x9662;&#x898F;&#x7BC4;&#x4E0D;&#x5927;&#xFF0C;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x8ABF;&#x964D;&#x5176;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x8CAC;&#x4EFB;&#x7B49;&#x7D1A;&#xFF1F;</span>
-                                                            </button>
-                                                        </div>
-                                                        <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
+                                                                    <span>2.5. &#x76EE;&#x524D;&#x90E8;&#x7ACB;&#x91AB;&#x9662;&#x3001;&#x5340;&#x57DF;&#x91AB;&#x9662;&#x90FD;&#x88AB;&#x8981;&#x6C42;&#x662F;B&#x7D1A;&#xFF0C;&#x53EF;&#x662F;&#x6709;&#x4E9B;&#x91AB;&#x9662;&#x898F;&#x7BC4;&#x4E0D;&#x5927;&#xFF0C;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x8ABF;&#x964D;&#x5176;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x8CAC;&#x4EFB;&#x7B49;&#x7D1A;&#xFF1F;</span>
+                                                                </button>
+                                                            </div>
+                                                            <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
                                         <div id="qaCon578" class="accordion-collapse collapse" aria-labelledby="qaH578" data-bs-parent="#qa1">
-                                                            <div class="accordion-body">
-                                                                <div class="article1">
-                                                                    <p>機關可依資通安全責任等級分級辦法第10條，彈性調整各機關之等級，惟應敘明調整之理由 。</p>
+                                                                <div class="accordion-body">
+                                                                    <div class="article1">
+                                                                        <p>機關可依資通安全責任等級分級辦法第10條，彈性調整各機關之等級，惟應敘明調整之理由 。</p>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="accordion-item">
-                                                        <!-- 每項題目需套不同的id-->
+                                                        <div class="accordion-item">
+                                                            <!-- 每項題目需套不同的id-->
                                         <div class="accordion-header" id="qaH580">
-                                                            <!--需套跟內容對應的data-bs-target、aria-controls -->
+                                                                <!--需套跟內容對應的data-bs-target、aria-controls -->
                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#qaCon580" aria-controls="qaCon580">
-                                                                <span>2.6. &#x8CC7;&#x901A;&#x5B89;&#x5168;&#x8CAC;&#x4EFB;&#x7B49;&#x7D1A;C&#x7D1A;&#x8207;D&#x7D1A;&#x6A5F;&#x95DC;&#x7684;&#x5DEE;&#x7570;&#x70BA;&#x4F55;&#xFF1F;</span>
-                                                            </button>
-                                                        </div>
-                                                        <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
+                                                                    <span>2.6. &#x8CC7;&#x901A;&#x5B89;&#x5168;&#x8CAC;&#x4EFB;&#x7B49;&#x7D1A;C&#x7D1A;&#x8207;D&#x7D1A;&#x6A5F;&#x95DC;&#x7684;&#x5DEE;&#x7570;&#x70BA;&#x4F55;&#xFF1F;</span>
+                                                                </button>
+                                                            </div>
+                                                            <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
                                         <div id="qaCon580" class="accordion-collapse collapse" aria-labelledby="qaH580" data-bs-parent="#qa1">
-                                                            <div class="accordion-body">
-                                                                <div class="article1">
-                                                                    <p>資通安全責任等級C級及D級的差異在於是否有維運自行或委外設置、開發之資通系統若有，則機關之資通安全責任等級至少為C級（請參閱資通安全責任等級分級辦法第6、7條）。</p>
+                                                                <div class="accordion-body">
+                                                                    <div class="article1">
+                                                                        <p>資通安全責任等級C級及D級的差異在於是否有維運自行或委外設置、開發之資通系統若有，則機關之資通安全責任等級至少為C級（請參閱資通安全責任等級分級辦法第6、7條）。</p>
 
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="accordion-item">
-                                                        <!-- 每項題目需套不同的id-->
+                                                        <div class="accordion-item">
+                                                            <!-- 每項題目需套不同的id-->
                                         <div class="accordion-header" id="qaH582">
-                                                            <!--需套跟內容對應的data-bs-target、aria-controls -->
+                                                                <!--需套跟內容對應的data-bs-target、aria-controls -->
                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#qaCon582" aria-controls="qaCon582">
-                                                                <span>2.7. &#x53EA;&#x6709;1&#x500B;&#x5B98;&#x7DB2;&#x7B97;&#x4E0D;&#x7B97;C&#x7D1A;&#x6A5F;&#x95DC;&#xFF1F;</span>
-                                                            </button>
-                                                        </div>
-                                                        <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
+                                                                    <span>2.7. &#x53EA;&#x6709;1&#x500B;&#x5B98;&#x7DB2;&#x7B97;&#x4E0D;&#x7B97;C&#x7D1A;&#x6A5F;&#x95DC;&#xFF1F;</span>
+                                                                </button>
+                                                            </div>
+                                                            <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
                                         <div id="qaCon582" class="accordion-collapse collapse" aria-labelledby="qaH582" data-bs-parent="#qa1">
-                                                            <div class="accordion-body">
-                                                                <div class="article1">
-                                                                    <p>官網如係屬機關自行或委外設置、開發即符合資通安全責任等級第6條C級機關之條件，機關之資安責任等級即為C級。建議類此機關，宜積極進行資通系統向上集中，減少機關維運負擔，連帶調降機關資通安全責任等級。</p>
+                                                                <div class="accordion-body">
+                                                                    <div class="article1">
+                                                                        <p>官網如係屬機關自行或委外設置、開發即符合資通安全責任等級第6條C級機關之條件，機關之資安責任等級即為C級。建議類此機關，宜積極進行資通系統向上集中，減少機關維運負擔，連帶調降機關資通安全責任等級。</p>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="accordion-item">
-                                                        <!-- 每項題目需套不同的id-->
+                                                        <div class="accordion-item">
+                                                            <!-- 每項題目需套不同的id-->
                                         <div class="accordion-header" id="qaH584">
-                                                            <!--需套跟內容對應的data-bs-target、aria-controls -->
+                                                                <!--需套跟內容對應的data-bs-target、aria-controls -->
                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#qaCon584" aria-controls="qaCon584">
-                                                                <span>2.8. &#x5167;&#x90E8;&#x4E0D;&#x5C0D;&#x5916;&#x7684;&#x7DB2;&#x7AD9;&#xFF0C;&#x662F;&#x5426;&#x5C6C;&#x65BC;C&#x7D1A;&#x7684;&#x8CC7;&#x901A;&#x7CFB;&#x7D71;&#xFF1F;</span>
-                                                            </button>
-                                                        </div>
-                                                        <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
+                                                                    <span>2.8. &#x5167;&#x90E8;&#x4E0D;&#x5C0D;&#x5916;&#x7684;&#x7DB2;&#x7AD9;&#xFF0C;&#x662F;&#x5426;&#x5C6C;&#x65BC;C&#x7D1A;&#x7684;&#x8CC7;&#x901A;&#x7CFB;&#x7D71;&#xFF1F;</span>
+                                                                </button>
+                                                            </div>
+                                                            <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
                                         <div id="qaCon584" class="accordion-collapse collapse" aria-labelledby="qaH584" data-bs-parent="#qa1">
-                                                            <div class="accordion-body">
-                                                                <div class="article1">
-                                                                    <p>內部不對外的網站，如為自行或委外設置、開發即符合資通安全責任等級第6條C級機關之條件，機關之資安責任等級即為C級。</p>
+                                                                <div class="accordion-body">
+                                                                    <div class="article1">
+                                                                        <p>內部不對外的網站，如為自行或委外設置、開發即符合資通安全責任等級第6條C級機關之條件，機關之資安責任等級即為C級。</p>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="accordion-item">
-                                                        <!-- 每項題目需套不同的id-->
+                                                        <div class="accordion-item">
+                                                            <!-- 每項題目需套不同的id-->
                                         <div class="accordion-header" id="qaH586">
-                                                            <!--需套跟內容對應的data-bs-target、aria-controls -->
+                                                                <!--需套跟內容對應的data-bs-target、aria-controls -->
                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#qaCon586" aria-controls="qaCon586">
-                                                                <span>2.9. &#x6A5F;&#x95DC;&#x53EA;&#x6709;&#x81EA;&#x884C;&#x7DAD;&#x8B77;&#x500B;&#x4EBA;&#x96FB;&#x8166;&#x53CA;&#x5370;&#x8868;&#x6A5F;&#x7B49;&#x8A2D;&#x5099;&#xFF0C;&#x662F;&#x5426;&#x53EF;&#x5217;&#x70BA;E&#x7D1A;&#x6A5F;&#x95DC; ?</span>
-                                                            </button>
-                                                        </div>
-                                                        <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
+                                                                    <span>2.9. &#x6A5F;&#x95DC;&#x53EA;&#x6709;&#x81EA;&#x884C;&#x7DAD;&#x8B77;&#x500B;&#x4EBA;&#x96FB;&#x8166;&#x53CA;&#x5370;&#x8868;&#x6A5F;&#x7B49;&#x8A2D;&#x5099;&#xFF0C;&#x662F;&#x5426;&#x53EF;&#x5217;&#x70BA;E&#x7D1A;&#x6A5F;&#x95DC; ?</span>
+                                                                </button>
+                                                            </div>
+                                                            <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
                                         <div id="qaCon586" class="accordion-collapse collapse" aria-labelledby="qaH586" data-bs-parent="#qa1">
-                                                            <div class="accordion-body">
-                                                                <div class="article1">
-                                                                    <p>機關如僅自行維護個人電腦及印表機等設備，仍屬自行辦理資通業務之一部份，故依資通安全責任等級分級辦法第7條規定列為D級。</p>
+                                                                <div class="accordion-body">
+                                                                    <div class="article1">
+                                                                        <p>機關如僅自行維護個人電腦及印表機等設備，仍屬自行辦理資通業務之一部份，故依資通安全責任等級分級辦法第7條規定列為D級。</p>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="accordion-item">
-                                                        <!-- 每項題目需套不同的id-->
+                                                        <div class="accordion-item">
+                                                            <!-- 每項題目需套不同的id-->
                                         <div class="accordion-header" id="qaH588">
-                                                            <!--需套跟內容對應的data-bs-target、aria-controls -->
+                                                                <!--需套跟內容對應的data-bs-target、aria-controls -->
                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#qaCon588" aria-controls="qaCon588">
-                                                                <span>2.10. &#x4F9D;&#x8CAC;&#x4EFB;&#x7B49;&#x7D1A;&#x5206;&#x7D1A;&#x8FA6;&#x6CD5;&#x7B2C;3&#x689D;&#xFF0C;&#x76F4;&#x8F44;&#x5E02;&#x653F;&#x5E9C;&#x61C9;&#x63D0;&#x4EA4;&#x6240;&#x5C6C;&#x6A5F;&#x95DC;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x8CAC;&#x4EFB;&#x7B49;&#x7D1A;&#xFF0C;&#x662F;&#x5426;&#x5305;&#x542B;&#x5B78;&#x6821;&#xFF1F;</span>
-                                                            </button>
-                                                        </div>
-                                                        <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
+                                                                    <span>2.10. &#x4F9D;&#x8CAC;&#x4EFB;&#x7B49;&#x7D1A;&#x5206;&#x7D1A;&#x8FA6;&#x6CD5;&#x7B2C;3&#x689D;&#xFF0C;&#x76F4;&#x8F44;&#x5E02;&#x653F;&#x5E9C;&#x61C9;&#x63D0;&#x4EA4;&#x6240;&#x5C6C;&#x6A5F;&#x95DC;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x8CAC;&#x4EFB;&#x7B49;&#x7D1A;&#xFF0C;&#x662F;&#x5426;&#x5305;&#x542B;&#x5B78;&#x6821;&#xFF1F;</span>
+                                                                </button>
+                                                            </div>
+                                                            <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
                                         <div id="qaCon588" class="accordion-collapse collapse" aria-labelledby="qaH588" data-bs-parent="#qa1">
-                                                            <div class="accordion-body">
-                                                                <div class="article1">
-                                                                    <p>依資通安全責任等級分級辦法第3條第3項規定，市立學校的資通安全責任等級由地方政府彙整提交。</p>
+                                                                <div class="accordion-body">
+                                                                    <div class="article1">
+                                                                        <p>依資通安全責任等級分級辦法第3條第3項規定，市立學校的資通安全責任等級由地方政府彙整提交。</p>
 
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="accordion-item">
-                                                        <!-- 每項題目需套不同的id-->
+                                                        <div class="accordion-item">
+                                                            <!-- 每項題目需套不同的id-->
                                         <div class="accordion-header" id="qaH590">
-                                                            <!--需套跟內容對應的data-bs-target、aria-controls -->
+                                                                <!--需套跟內容對應的data-bs-target、aria-controls -->
                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#qaCon590" aria-controls="qaCon590">
-                                                                <span>2.11. &#x5404;&#x6A5F;&#x95DC;&#x5982;&#x6709;&#x56E0;&#x7D44;&#x7E54;&#x6216;&#x696D;&#x52D9;&#x8ABF;&#x6574;&#x81F4;&#x9808;&#x8B8A;&#x66F4;&#x539F;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x8CAC;&#x4EFB;&#x7B49;&#x7D1A;&#xFF0C;&#x6216;&#x65B0;&#x8A2D;&#x6A5F;&#x95DC;&#x4E4B;&#x60C5;&#x5F62;&#xFF0C;&#x5176;&#x4E0A;&#x7D1A;&#x6A5F;&#x95DC;&#x61C9;&#x65BC;&#x591A;&#x4E45;&#x5167;&#x63D0;&#x5831;&#x8A72;&#x6A5F;&#x95DC;&#x4E4B;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x8CAC;&#x4EFB;&#x7B49;&#x7D1A;&#x6216;&#x89E3;&#x9664;&#x7D0D;&#x7BA1;&#xFF1F;</span>
-                                                            </button>
-                                                        </div>
-                                                        <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
+                                                                    <span>2.11. &#x5404;&#x6A5F;&#x95DC;&#x5982;&#x6709;&#x56E0;&#x7D44;&#x7E54;&#x6216;&#x696D;&#x52D9;&#x8ABF;&#x6574;&#x81F4;&#x9808;&#x8B8A;&#x66F4;&#x539F;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x8CAC;&#x4EFB;&#x7B49;&#x7D1A;&#xFF0C;&#x6216;&#x65B0;&#x8A2D;&#x6A5F;&#x95DC;&#x4E4B;&#x60C5;&#x5F62;&#xFF0C;&#x5176;&#x4E0A;&#x7D1A;&#x6A5F;&#x95DC;&#x61C9;&#x65BC;&#x591A;&#x4E45;&#x5167;&#x63D0;&#x5831;&#x8A72;&#x6A5F;&#x95DC;&#x4E4B;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x8CAC;&#x4EFB;&#x7B49;&#x7D1A;&#x6216;&#x89E3;&#x9664;&#x7D0D;&#x7BA1;&#xFF1F;</span>
+                                                                </button>
+                                                            </div>
+                                                            <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
                                         <div id="qaCon590" class="accordion-collapse collapse" aria-labelledby="qaH590" data-bs-parent="#qa1">
-                                                            <div class="accordion-body">
-                                                                <div class="article1">
-                                                                    <p>機關如有下列情形，其上級機關應於1個月內，依資通安全責任等級分級辦法第3條第6項辦理等級異動作業：</p>
+                                                                <div class="accordion-body">
+                                                                    <div class="article1">
+                                                                        <p>機關如有下列情形，其上級機關應於1個月內，依資通安全責任等級分級辦法第3條第6項辦理等級異動作業：</p>
 
 <ol>
 	<li>機關裁撤（自本院人事行政總處函生效日起）。</li>
@@ -647,14 +657,14 @@
 	<li>新設機關（自組織法施行日起）。</li>
 </ol>
 
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                         <div class="pageBar mb-5 ">
     <div class="pageSet mb-4">
                         <div class="mRow">共<span class="totalData">11</span>筆資料</div>
@@ -930,7 +940,7 @@
                 <div class="ftBtmRights">
                     <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero (另開新視窗)">CC0</a>No copyright reserved.</p>
 
-                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-18<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-19<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
             </div>
             <div class="col-12 col-md text-md-end">
@@ -970,28 +980,27 @@
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/ACS/assets/js/common.js?v=BLEx1xMx8LdNW-siIJG4LygHISZ5IOw30trbmzE4joY"></script>
+            <script src="/ACS/assets/js/common.js?v=GAhTzP0xl-JvdI-CVtp-UnsTsdJHzyy7DxzZzVIKmAg"></script>
     <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=V2JExwd7xdBP26AtgTeajbqPQbpLse0DlFgoRNwRcdo"></script>
+    <script src="/js/site.js?v=r3b45PJ-Q435KvD8SAVTjXll8cXI-McYimLv_DaGbWU"></script>
     <script>
         webSiteLange('zh-tw' ,'ACS'  );
 
     </script>
     
-<script>
-    var _JsData;
-    var S1 ;
-    var S2 ;
-    var _needtag = NeedTag('AccordionList');
-    _JsData = JSON.parse('[{"mainsn":"570","istopdisplay":"none","href":"/ACS/laws/faq/02/570.html","target":null,"title":"2.1. \u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u7B2C4\u689D\u4E2D\uFF0C\u5168\u570B\u6027\u6C11\u773E\u6216\u516C\u52D9\u54E1\u500B\u4EBA\u8CC7\u6599\u6A94\u6848\u5176\u8A8D\u5B9A\u6A19\u6E96\u70BA\u4F55\uFF1F","startdate":"2022-06-23","newstitle":"2.1. \u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u7B2C4\u689D\u4E2D\uFF0C\u5168\u570B\u6027\u6C11\u773E\u6216\u516C\u52D9\u54E1\u500B\u4EBA\u8CC7\u6599\u6A94\u6848\u5176\u8A8D\u5B9A\u6A19\u6E96\u70BA\u4F55\uFF1F","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"\u003Cp\u003E\u5168\u570B\u6027\u6C11\u773E\u6216\u516C\u52D9\u54E1\u500B\u4EBA\u8CC7\u6599\u6A94\u6848\uFF0C\u6307\u542B\u62EC\u5168\u570B\u5927\u90E8\u5206\u6C11\u773E\u6216\u516C\u52D9\u54E1\u4E4B\u500B\u4EBA\u8CC7\u6599\u6A94\u6848\u3002\u003C/p\u003E","tags":[],"crosslinkdisplay":"none"},{"mainsn":"572","istopdisplay":"none","href":"/ACS/laws/faq/02/572.html","target":null,"title":"2.2. \u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u7B2C5\u689D\u4E2D\uFF0C\u5340\u57DF\u6027\u3001\u5730\u5340\u6027\u6C11\u773E\u500B\u4EBA\u8CC7\u6599\u6A94\u6848\uFF0C\u5176\u8A8D\u5B9A\u6A19\u6E96\u70BA\u4F55\uFF1F","startdate":"2022-06-23","newstitle":"2.2. \u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u7B2C5\u689D\u4E2D\uFF0C\u5340\u57DF\u6027\u3001\u5730\u5340\u6027\u6C11\u773E\u500B\u4EBA\u8CC7\u6599\u6A94\u6848\uFF0C\u5176\u8A8D\u5B9A\u6A19\u6E96\u70BA\u4F55\uFF1F","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"\u003Cp\u003E\u5340\u57DF\u6027\u6216\u5730\u5340\u6027\u6C11\u773E\u500B\u4EBA\u8CC7\u6599\u6A94\u6848\uFF0C\u6307\u542B\u62EC\u8DE8\u76F4\u8F44\u5E02\u3001\u7E23\uFF08\u5E02\uFF09\u6216\u55AE\u4E00\u76F4\u8F44\u5E02\u3001\u7E23\uFF08\u5E02\uFF09\u5730\u57DF\u7BC4\u570D\u5167\u4E4B\u5927\u90E8\u5206\u6C11\u773E\u4E4B\u500B\u4EBA\u8CC7\u6599\u6A94\u6848\u3002\u003C/p\u003E","tags":[],"crosslinkdisplay":"none"},{"mainsn":"574","istopdisplay":"none","href":"/ACS/laws/faq/02/574.html","target":null,"title":"2.3. \u6A5F\u95DC\u7684\u5B98\u65B9\u7DB2\u7AD9\u662F\u63D0\u4F9B\u8CC7\u8A0A\u7D66\u5168\u570B\u6C11\u773E\uFF0C\u662F\u5426\u5C6C\u65BC\u5168\u570B\u6027\u7684\u6C11\u773E\u670D\u52D9 ?","startdate":"2022-06-23","newstitle":"2.3. \u6A5F\u95DC\u7684\u5B98\u65B9\u7DB2\u7AD9\u662F\u63D0\u4F9B\u8CC7\u8A0A\u7D66\u5168\u570B\u6C11\u773E\uFF0C\u662F\u5426\u5C6C\u65BC\u5168\u570B\u6027\u7684\u6C11\u773E\u670D\u52D9 ?","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"\u003Cp\u003E\u6A5F\u95DC\u4E4B\u5B98\u7DB2\u975E\u5C6C\u672C\u6CD5\u6240\u7A31\u5168\u570B\u6027\u6C11\u773E\u670D\u52D9\u4E4B\u7BC4\u570D\uFF0C\u5168\u570B\u6027\u6C11\u773E\u670D\u52D9\u901A\u5E38\u70BA\u4E2D\u592E\u6A5F\u95DC\u70BA\u57F7\u884C\u6CD5\u5B9A\u8077\u638C\uFF0C\u7D71\u4E00\u898F\u5283\u53CA\u63D0\u4F9B\u4E88\u5168\u570B\u6C11\u773E\u6216\u5168\u570B\u516C\u52D9\u6A5F\u95DC\u4F7F\u7528\u4E4B\u7533\u8FA6\u670D\u52D9\uFF0C\u5982\u6236\u7C4D\u767B\u8A18\u3001\u5730\u7C4D\u767B\u8A18\u3001\u5DE5\u5546\u767B\u8A18\u3001\u5831\u7A05\u7B49\u3002\u003C/p\u003E","tags":[],"crosslinkdisplay":"none"},{"mainsn":"576","istopdisplay":"none","href":"/ACS/laws/faq/02/576.html","target":null,"title":"2.4. \u5E02\u7ACB\u7684\u4E2D\u91AB\u91AB\u9662\u662F\u5426\u4E5F\u5C6C\u65BC\u516C\u7ACB\u5340\u57DF\u91AB\u9662\u6216\u5730\u5340\u91AB\u9662\uFF0C\u5176\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u70BA\u4F55 ?","startdate":"2022-06-23","newstitle":"2.4. \u5E02\u7ACB\u7684\u4E2D\u91AB\u91AB\u9662\u662F\u5426\u4E5F\u5C6C\u65BC\u516C\u7ACB\u5340\u57DF\u91AB\u9662\u6216\u5730\u5340\u91AB\u9662\uFF0C\u5176\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u70BA\u4F55 ?","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"\u003Cp\u003E\u5E02\u7ACB\u4E2D\u91AB\u91AB\u9662\u5C6C\u65BC\u516C\u7ACB\u5340\u57DF\u91AB\u9662\u6216\u5730\u5340\u91AB\u9662\uFF0C\u4F9D\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u7B2C5\u689D\uFF0C\u5176\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u539F\u5247\u4E0A\u5217\u70BAB\u7D1A\u3002\u003C/p\u003E","tags":[],"crosslinkdisplay":"none"},{"mainsn":"578","istopdisplay":"none","href":"/ACS/laws/faq/02/578.html","target":null,"title":"2.5. \u76EE\u524D\u90E8\u7ACB\u91AB\u9662\u3001\u5340\u57DF\u91AB\u9662\u90FD\u88AB\u8981\u6C42\u662FB\u7D1A\uFF0C\u53EF\u662F\u6709\u4E9B\u91AB\u9662\u898F\u7BC4\u4E0D\u5927\uFF0C\u662F\u5426\u53EF\u4EE5\u8ABF\u964D\u5176\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\uFF1F","startdate":"2022-06-23","newstitle":"2.5. \u76EE\u524D\u90E8\u7ACB\u91AB\u9662\u3001\u5340\u57DF\u91AB\u9662\u90FD\u88AB\u8981\u6C42\u662FB\u7D1A\uFF0C\u53EF\u662F\u6709\u4E9B\u91AB\u9662\u898F\u7BC4\u4E0D\u5927\uFF0C\u662F\u5426\u53EF\u4EE5\u8ABF\u964D\u5176\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\uFF1F","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"\u003Cp\u003E\u6A5F\u95DC\u53EF\u4F9D\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u7B2C10\u689D\uFF0C\u5F48\u6027\u8ABF\u6574\u5404\u6A5F\u95DC\u4E4B\u7B49\u7D1A\uFF0C\u60DF\u61C9\u6558\u660E\u8ABF\u6574\u4E4B\u7406\u7531 \u3002\u003C/p\u003E","tags":[],"crosslinkdisplay":"none"},{"mainsn":"580","istopdisplay":"none","href":"/ACS/laws/faq/02/580.html","target":null,"title":"2.6. \u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1AC\u7D1A\u8207D\u7D1A\u6A5F\u95DC\u7684\u5DEE\u7570\u70BA\u4F55\uFF1F","startdate":"2022-06-23","newstitle":"2.6. \u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1AC\u7D1A\u8207D\u7D1A\u6A5F\u95DC\u7684\u5DEE\u7570\u70BA\u4F55\uFF1F","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"\u003Cp\u003E\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1AC\u7D1A\u53CAD\u7D1A\u7684\u5DEE\u7570\u5728\u65BC\u662F\u5426\u6709\u7DAD\u904B\u81EA\u884C\u6216\u59D4\u5916\u8A2D\u7F6E\u3001\u958B\u767C\u4E4B\u8CC7\u901A\u7CFB\u7D71\u82E5\u6709\uFF0C\u5247\u6A5F\u95DC\u4E4B\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u81F3\u5C11\u70BAC\u7D1A\uFF08\u8ACB\u53C3\u95B1\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u7B2C6\u30017\u689D\uFF09\u3002\u003C/p\u003E","tags":[],"crosslinkdisplay":"none"},{"mainsn":"582","istopdisplay":"none","href":"/ACS/laws/faq/02/582.html","target":null,"title":"2.7. \u53EA\u67091\u500B\u5B98\u7DB2\u7B97\u4E0D\u7B97C\u7D1A\u6A5F\u95DC\uFF1F","startdate":"2022-06-23","newstitle":"2.7. \u53EA\u67091\u500B\u5B98\u7DB2\u7B97\u4E0D\u7B97C\u7D1A\u6A5F\u95DC\uFF1F","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"\u003Cp\u003E\u5B98\u7DB2\u5982\u4FC2\u5C6C\u6A5F\u95DC\u81EA\u884C\u6216\u59D4\u5916\u8A2D\u7F6E\u3001\u958B\u767C\u5373\u7B26\u5408\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u7B2C6\u689DC\u7D1A\u6A5F\u95DC\u4E4B\u689D\u4EF6\uFF0C\u6A5F\u95DC\u4E4B\u8CC7\u5B89\u8CAC\u4EFB\u7B49\u7D1A\u5373\u70BAC\u7D1A\u3002\u5EFA\u8B70\u985E\u6B64\u6A5F\u95DC\uFF0C\u5B9C\u7A4D\u6975\u9032\u884C\u8CC7\u901A\u7CFB\u7D71\u5411\u4E0A\u96C6\u4E2D\uFF0C\u6E1B\u5C11\u6A5F\u95DC\u7DAD\u904B\u8CA0\u64D4\uFF0C\u9023\u5E36\u8ABF\u964D\u6A5F\u95DC\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u3002\u003C/p\u003E","tags":[],"crosslinkdisplay":"none"},{"mainsn":"584","istopdisplay":"none","href":"/ACS/laws/faq/02/584.html","target":null,"title":"2.8. \u5167\u90E8\u4E0D\u5C0D\u5916\u7684\u7DB2\u7AD9\uFF0C\u662F\u5426\u5C6C\u65BCC\u7D1A\u7684\u8CC7\u901A\u7CFB\u7D71\uFF1F","startdate":"2022-06-23","newstitle":"2.8. \u5167\u90E8\u4E0D\u5C0D\u5916\u7684\u7DB2\u7AD9\uFF0C\u662F\u5426\u5C6C\u65BCC\u7D1A\u7684\u8CC7\u901A\u7CFB\u7D71\uFF1F","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"\u003Cp\u003E\u5167\u90E8\u4E0D\u5C0D\u5916\u7684\u7DB2\u7AD9\uFF0C\u5982\u70BA\u81EA\u884C\u6216\u59D4\u5916\u8A2D\u7F6E\u3001\u958B\u767C\u5373\u7B26\u5408\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u7B2C6\u689DC\u7D1A\u6A5F\u95DC\u4E4B\u689D\u4EF6\uFF0C\u6A5F\u95DC\u4E4B\u8CC7\u5B89\u8CAC\u4EFB\u7B49\u7D1A\u5373\u70BAC\u7D1A\u3002\u003C/p\u003E","tags":[],"crosslinkdisplay":"none"},{"mainsn":"586","istopdisplay":"none","href":"/ACS/laws/faq/02/586.html","target":null,"title":"2.9. \u6A5F\u95DC\u53EA\u6709\u81EA\u884C\u7DAD\u8B77\u500B\u4EBA\u96FB\u8166\u53CA\u5370\u8868\u6A5F\u7B49\u8A2D\u5099\uFF0C\u662F\u5426\u53EF\u5217\u70BAE\u7D1A\u6A5F\u95DC ?","startdate":"2022-06-23","newstitle":"2.9. \u6A5F\u95DC\u53EA\u6709\u81EA\u884C\u7DAD\u8B77\u500B\u4EBA\u96FB\u8166\u53CA\u5370\u8868\u6A5F\u7B49\u8A2D\u5099\uFF0C\u662F\u5426\u53EF\u5217\u70BAE\u7D1A\u6A5F\u95DC ?","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"\u003Cp\u003E\u6A5F\u95DC\u5982\u50C5\u81EA\u884C\u7DAD\u8B77\u500B\u4EBA\u96FB\u8166\u53CA\u5370\u8868\u6A5F\u7B49\u8A2D\u5099\uFF0C\u4ECD\u5C6C\u81EA\u884C\u8FA6\u7406\u8CC7\u901A\u696D\u52D9\u4E4B\u4E00\u90E8\u4EFD\uFF0C\u6545\u4F9D\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u7B2C7\u689D\u898F\u5B9A\u5217\u70BAD\u7D1A\u3002\u003C/p\u003E","tags":[],"crosslinkdisplay":"none"},{"mainsn":"588","istopdisplay":"none","href":"/ACS/laws/faq/02/588.html","target":null,"title":"2.10. \u4F9D\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u7B2C3\u689D\uFF0C\u76F4\u8F44\u5E02\u653F\u5E9C\u61C9\u63D0\u4EA4\u6240\u5C6C\u6A5F\u95DC\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\uFF0C\u662F\u5426\u5305\u542B\u5B78\u6821\uFF1F","startdate":"2022-06-23","newstitle":"2.10. \u4F9D\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u7B2C3\u689D\uFF0C\u76F4\u8F44\u5E02\u653F\u5E9C\u61C9\u63D0\u4EA4\u6240\u5C6C\u6A5F\u95DC\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\uFF0C\u662F\u5426\u5305\u542B\u5B78\u6821\uFF1F","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"\u003Cp\u003E\u4F9D\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u7B2C3\u689D\u7B2C3\u9805\u898F\u5B9A\uFF0C\u5E02\u7ACB\u5B78\u6821\u7684\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u7531\u5730\u65B9\u653F\u5E9C\u5F59\u6574\u63D0\u4EA4\u3002\u003C/p\u003E","tags":[],"crosslinkdisplay":"none"},{"mainsn":"590","istopdisplay":"none","href":"/ACS/laws/faq/02/590.html","target":null,"title":"2.11. \u5404\u6A5F\u95DC\u5982\u6709\u56E0\u7D44\u7E54\u6216\u696D\u52D9\u8ABF\u6574\u81F4\u9808\u8B8A\u66F4\u539F\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\uFF0C\u6216\u65B0\u8A2D\u6A5F\u95DC\u4E4B\u60C5\u5F62\uFF0C\u5176\u4E0A\u7D1A\u6A5F\u95DC\u61C9\u65BC\u591A\u4E45\u5167\u63D0\u5831\u8A72\u6A5F\u95DC\u4E4B\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u6216\u89E3\u9664\u7D0D\u7BA1\uFF1F","startdate":"2022-06-23","newstitle":"2.11. \u5404\u6A5F\u95DC\u5982\u6709\u56E0\u7D44\u7E54\u6216\u696D\u52D9\u8ABF\u6574\u81F4\u9808\u8B8A\u66F4\u539F\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\uFF0C\u6216\u65B0\u8A2D\u6A5F\u95DC\u4E4B\u60C5\u5F62\uFF0C\u5176\u4E0A\u7D1A\u6A5F\u95DC\u61C9\u65BC\u591A\u4E45\u5167\u63D0\u5831\u8A72\u6A5F\u95DC\u4E4B\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u6216\u89E3\u9664\u7D0D\u7BA1\uFF1F","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"\u003Cp\u003E\u6A5F\u95DC\u5982\u6709\u4E0B\u5217\u60C5\u5F62\uFF0C\u5176\u4E0A\u7D1A\u6A5F\u95DC\u61C9\u65BC1\u500B\u6708\u5167\uFF0C\u4F9D\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u7B2C3\u689D\u7B2C6\u9805\u8FA6\u7406\u7B49\u7D1A\u7570\u52D5\u4F5C\u696D\uFF1A\u003C/p\u003E\u003Col\u003E\u003Cli\u003E\u6A5F\u95DC\u88C1\u64A4\uFF08\u81EA\u672C\u9662\u4EBA\u4E8B\u884C\u653F\u7E3D\u8655\u51FD\u751F\u6548\u65E5\u8D77\uFF09\u3002\u003C/li\u003E\u003Cli\u003E\u6A5F\u95DC\u56E0\u7D44\u7E54\u6216\u696D\u52D9\u8ABF\u6574\uFF08\u81EA\u672C\u9662\u4EBA\u4E8B\u884C\u653F\u7E3D\u8655\u51FD\u751F\u6548\u65E5\u8D77\uFF09\u3002\u003C/li\u003E\u003Cli\u003E\u6210\u7ACB\u7C4C\u5099\u8655\uFF08\u81EA\u7C4C\u5099\u8655\u7D44\u7E54\u898F\u7A0B\u767C\u5E03\u65E5\u8D77\uFF09\u3002\u003C/li\u003E\u003Cli\u003E\u65B0\u8A2D\u6A5F\u95DC\uFF08\u81EA\u7D44\u7E54\u6CD5\u65BD\u884C\u65E5\u8D77\uFF09\u3002\u003C/li\u003E\u003C/ol\u003E","tags":[],"crosslinkdisplay":"none"}]');
-    LeftMenu('634');
-   NewList('634');
-    var ListPage = '/_news/AccordionList.html';
-    var listTag2Page = '/_news/listTag2.html';
-    $("#ns").load(ListPage, function () {
-        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
-    });
-</script>
+    <script>
+        var _JsData;
+        var _needtag = NeedTag('AccordionList');
+        var _Module = 'NEWS';
+        _JsData = JSON.parse('[{"mainsn":"570","istopdisplay":"none","href":"/ACS/laws/faq/02/570.html","target":null,"title":"2.1. \u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u7B2C4\u689D\u4E2D\uFF0C\u5168\u570B\u6027\u6C11\u773E\u6216\u516C\u52D9\u54E1\u500B\u4EBA\u8CC7\u6599\u6A94\u6848\u5176\u8A8D\u5B9A\u6A19\u6E96\u70BA\u4F55\uFF1F","startdate":"2022-06-23","newstitle":"2.1. \u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u7B2C4\u689D\u4E2D\uFF0C\u5168\u570B\u6027\u6C11\u773E\u6216\u516C\u52D9\u54E1\u500B\u4EBA\u8CC7\u6599\u6A94\u6848\u5176\u8A8D\u5B9A\u6A19\u6E96\u70BA\u4F55\uFF1F","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"\u003Cp\u003E\u5168\u570B\u6027\u6C11\u773E\u6216\u516C\u52D9\u54E1\u500B\u4EBA\u8CC7\u6599\u6A94\u6848\uFF0C\u6307\u542B\u62EC\u5168\u570B\u5927\u90E8\u5206\u6C11\u773E\u6216\u516C\u52D9\u54E1\u4E4B\u500B\u4EBA\u8CC7\u6599\u6A94\u6848\u3002\u003C/p\u003E","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"572","istopdisplay":"none","href":"/ACS/laws/faq/02/572.html","target":null,"title":"2.2. \u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u7B2C5\u689D\u4E2D\uFF0C\u5340\u57DF\u6027\u3001\u5730\u5340\u6027\u6C11\u773E\u500B\u4EBA\u8CC7\u6599\u6A94\u6848\uFF0C\u5176\u8A8D\u5B9A\u6A19\u6E96\u70BA\u4F55\uFF1F","startdate":"2022-06-23","newstitle":"2.2. \u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u7B2C5\u689D\u4E2D\uFF0C\u5340\u57DF\u6027\u3001\u5730\u5340\u6027\u6C11\u773E\u500B\u4EBA\u8CC7\u6599\u6A94\u6848\uFF0C\u5176\u8A8D\u5B9A\u6A19\u6E96\u70BA\u4F55\uFF1F","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"\u003Cp\u003E\u5340\u57DF\u6027\u6216\u5730\u5340\u6027\u6C11\u773E\u500B\u4EBA\u8CC7\u6599\u6A94\u6848\uFF0C\u6307\u542B\u62EC\u8DE8\u76F4\u8F44\u5E02\u3001\u7E23\uFF08\u5E02\uFF09\u6216\u55AE\u4E00\u76F4\u8F44\u5E02\u3001\u7E23\uFF08\u5E02\uFF09\u5730\u57DF\u7BC4\u570D\u5167\u4E4B\u5927\u90E8\u5206\u6C11\u773E\u4E4B\u500B\u4EBA\u8CC7\u6599\u6A94\u6848\u3002\u003C/p\u003E","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"574","istopdisplay":"none","href":"/ACS/laws/faq/02/574.html","target":null,"title":"2.3. \u6A5F\u95DC\u7684\u5B98\u65B9\u7DB2\u7AD9\u662F\u63D0\u4F9B\u8CC7\u8A0A\u7D66\u5168\u570B\u6C11\u773E\uFF0C\u662F\u5426\u5C6C\u65BC\u5168\u570B\u6027\u7684\u6C11\u773E\u670D\u52D9 ?","startdate":"2022-06-23","newstitle":"2.3. \u6A5F\u95DC\u7684\u5B98\u65B9\u7DB2\u7AD9\u662F\u63D0\u4F9B\u8CC7\u8A0A\u7D66\u5168\u570B\u6C11\u773E\uFF0C\u662F\u5426\u5C6C\u65BC\u5168\u570B\u6027\u7684\u6C11\u773E\u670D\u52D9 ?","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"\u003Cp\u003E\u6A5F\u95DC\u4E4B\u5B98\u7DB2\u975E\u5C6C\u672C\u6CD5\u6240\u7A31\u5168\u570B\u6027\u6C11\u773E\u670D\u52D9\u4E4B\u7BC4\u570D\uFF0C\u5168\u570B\u6027\u6C11\u773E\u670D\u52D9\u901A\u5E38\u70BA\u4E2D\u592E\u6A5F\u95DC\u70BA\u57F7\u884C\u6CD5\u5B9A\u8077\u638C\uFF0C\u7D71\u4E00\u898F\u5283\u53CA\u63D0\u4F9B\u4E88\u5168\u570B\u6C11\u773E\u6216\u5168\u570B\u516C\u52D9\u6A5F\u95DC\u4F7F\u7528\u4E4B\u7533\u8FA6\u670D\u52D9\uFF0C\u5982\u6236\u7C4D\u767B\u8A18\u3001\u5730\u7C4D\u767B\u8A18\u3001\u5DE5\u5546\u767B\u8A18\u3001\u5831\u7A05\u7B49\u3002\u003C/p\u003E","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"576","istopdisplay":"none","href":"/ACS/laws/faq/02/576.html","target":null,"title":"2.4. \u5E02\u7ACB\u7684\u4E2D\u91AB\u91AB\u9662\u662F\u5426\u4E5F\u5C6C\u65BC\u516C\u7ACB\u5340\u57DF\u91AB\u9662\u6216\u5730\u5340\u91AB\u9662\uFF0C\u5176\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u70BA\u4F55 ?","startdate":"2022-06-23","newstitle":"2.4. \u5E02\u7ACB\u7684\u4E2D\u91AB\u91AB\u9662\u662F\u5426\u4E5F\u5C6C\u65BC\u516C\u7ACB\u5340\u57DF\u91AB\u9662\u6216\u5730\u5340\u91AB\u9662\uFF0C\u5176\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u70BA\u4F55 ?","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"\u003Cp\u003E\u5E02\u7ACB\u4E2D\u91AB\u91AB\u9662\u5C6C\u65BC\u516C\u7ACB\u5340\u57DF\u91AB\u9662\u6216\u5730\u5340\u91AB\u9662\uFF0C\u4F9D\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u7B2C5\u689D\uFF0C\u5176\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u539F\u5247\u4E0A\u5217\u70BAB\u7D1A\u3002\u003C/p\u003E","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"578","istopdisplay":"none","href":"/ACS/laws/faq/02/578.html","target":null,"title":"2.5. \u76EE\u524D\u90E8\u7ACB\u91AB\u9662\u3001\u5340\u57DF\u91AB\u9662\u90FD\u88AB\u8981\u6C42\u662FB\u7D1A\uFF0C\u53EF\u662F\u6709\u4E9B\u91AB\u9662\u898F\u7BC4\u4E0D\u5927\uFF0C\u662F\u5426\u53EF\u4EE5\u8ABF\u964D\u5176\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\uFF1F","startdate":"2022-06-23","newstitle":"2.5. \u76EE\u524D\u90E8\u7ACB\u91AB\u9662\u3001\u5340\u57DF\u91AB\u9662\u90FD\u88AB\u8981\u6C42\u662FB\u7D1A\uFF0C\u53EF\u662F\u6709\u4E9B\u91AB\u9662\u898F\u7BC4\u4E0D\u5927\uFF0C\u662F\u5426\u53EF\u4EE5\u8ABF\u964D\u5176\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\uFF1F","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"\u003Cp\u003E\u6A5F\u95DC\u53EF\u4F9D\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u7B2C10\u689D\uFF0C\u5F48\u6027\u8ABF\u6574\u5404\u6A5F\u95DC\u4E4B\u7B49\u7D1A\uFF0C\u60DF\u61C9\u6558\u660E\u8ABF\u6574\u4E4B\u7406\u7531 \u3002\u003C/p\u003E","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"580","istopdisplay":"none","href":"/ACS/laws/faq/02/580.html","target":null,"title":"2.6. \u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1AC\u7D1A\u8207D\u7D1A\u6A5F\u95DC\u7684\u5DEE\u7570\u70BA\u4F55\uFF1F","startdate":"2022-06-23","newstitle":"2.6. \u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1AC\u7D1A\u8207D\u7D1A\u6A5F\u95DC\u7684\u5DEE\u7570\u70BA\u4F55\uFF1F","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"\u003Cp\u003E\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1AC\u7D1A\u53CAD\u7D1A\u7684\u5DEE\u7570\u5728\u65BC\u662F\u5426\u6709\u7DAD\u904B\u81EA\u884C\u6216\u59D4\u5916\u8A2D\u7F6E\u3001\u958B\u767C\u4E4B\u8CC7\u901A\u7CFB\u7D71\u82E5\u6709\uFF0C\u5247\u6A5F\u95DC\u4E4B\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u81F3\u5C11\u70BAC\u7D1A\uFF08\u8ACB\u53C3\u95B1\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u7B2C6\u30017\u689D\uFF09\u3002\u003C/p\u003E","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"582","istopdisplay":"none","href":"/ACS/laws/faq/02/582.html","target":null,"title":"2.7. \u53EA\u67091\u500B\u5B98\u7DB2\u7B97\u4E0D\u7B97C\u7D1A\u6A5F\u95DC\uFF1F","startdate":"2022-06-23","newstitle":"2.7. \u53EA\u67091\u500B\u5B98\u7DB2\u7B97\u4E0D\u7B97C\u7D1A\u6A5F\u95DC\uFF1F","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"\u003Cp\u003E\u5B98\u7DB2\u5982\u4FC2\u5C6C\u6A5F\u95DC\u81EA\u884C\u6216\u59D4\u5916\u8A2D\u7F6E\u3001\u958B\u767C\u5373\u7B26\u5408\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u7B2C6\u689DC\u7D1A\u6A5F\u95DC\u4E4B\u689D\u4EF6\uFF0C\u6A5F\u95DC\u4E4B\u8CC7\u5B89\u8CAC\u4EFB\u7B49\u7D1A\u5373\u70BAC\u7D1A\u3002\u5EFA\u8B70\u985E\u6B64\u6A5F\u95DC\uFF0C\u5B9C\u7A4D\u6975\u9032\u884C\u8CC7\u901A\u7CFB\u7D71\u5411\u4E0A\u96C6\u4E2D\uFF0C\u6E1B\u5C11\u6A5F\u95DC\u7DAD\u904B\u8CA0\u64D4\uFF0C\u9023\u5E36\u8ABF\u964D\u6A5F\u95DC\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u3002\u003C/p\u003E","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"584","istopdisplay":"none","href":"/ACS/laws/faq/02/584.html","target":null,"title":"2.8. \u5167\u90E8\u4E0D\u5C0D\u5916\u7684\u7DB2\u7AD9\uFF0C\u662F\u5426\u5C6C\u65BCC\u7D1A\u7684\u8CC7\u901A\u7CFB\u7D71\uFF1F","startdate":"2022-06-23","newstitle":"2.8. \u5167\u90E8\u4E0D\u5C0D\u5916\u7684\u7DB2\u7AD9\uFF0C\u662F\u5426\u5C6C\u65BCC\u7D1A\u7684\u8CC7\u901A\u7CFB\u7D71\uFF1F","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"\u003Cp\u003E\u5167\u90E8\u4E0D\u5C0D\u5916\u7684\u7DB2\u7AD9\uFF0C\u5982\u70BA\u81EA\u884C\u6216\u59D4\u5916\u8A2D\u7F6E\u3001\u958B\u767C\u5373\u7B26\u5408\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u7B2C6\u689DC\u7D1A\u6A5F\u95DC\u4E4B\u689D\u4EF6\uFF0C\u6A5F\u95DC\u4E4B\u8CC7\u5B89\u8CAC\u4EFB\u7B49\u7D1A\u5373\u70BAC\u7D1A\u3002\u003C/p\u003E","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"586","istopdisplay":"none","href":"/ACS/laws/faq/02/586.html","target":null,"title":"2.9. \u6A5F\u95DC\u53EA\u6709\u81EA\u884C\u7DAD\u8B77\u500B\u4EBA\u96FB\u8166\u53CA\u5370\u8868\u6A5F\u7B49\u8A2D\u5099\uFF0C\u662F\u5426\u53EF\u5217\u70BAE\u7D1A\u6A5F\u95DC ?","startdate":"2022-06-23","newstitle":"2.9. \u6A5F\u95DC\u53EA\u6709\u81EA\u884C\u7DAD\u8B77\u500B\u4EBA\u96FB\u8166\u53CA\u5370\u8868\u6A5F\u7B49\u8A2D\u5099\uFF0C\u662F\u5426\u53EF\u5217\u70BAE\u7D1A\u6A5F\u95DC ?","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"\u003Cp\u003E\u6A5F\u95DC\u5982\u50C5\u81EA\u884C\u7DAD\u8B77\u500B\u4EBA\u96FB\u8166\u53CA\u5370\u8868\u6A5F\u7B49\u8A2D\u5099\uFF0C\u4ECD\u5C6C\u81EA\u884C\u8FA6\u7406\u8CC7\u901A\u696D\u52D9\u4E4B\u4E00\u90E8\u4EFD\uFF0C\u6545\u4F9D\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u7B2C7\u689D\u898F\u5B9A\u5217\u70BAD\u7D1A\u3002\u003C/p\u003E","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"588","istopdisplay":"none","href":"/ACS/laws/faq/02/588.html","target":null,"title":"2.10. \u4F9D\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u7B2C3\u689D\uFF0C\u76F4\u8F44\u5E02\u653F\u5E9C\u61C9\u63D0\u4EA4\u6240\u5C6C\u6A5F\u95DC\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\uFF0C\u662F\u5426\u5305\u542B\u5B78\u6821\uFF1F","startdate":"2022-06-23","newstitle":"2.10. \u4F9D\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u7B2C3\u689D\uFF0C\u76F4\u8F44\u5E02\u653F\u5E9C\u61C9\u63D0\u4EA4\u6240\u5C6C\u6A5F\u95DC\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\uFF0C\u662F\u5426\u5305\u542B\u5B78\u6821\uFF1F","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"\u003Cp\u003E\u4F9D\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u7B2C3\u689D\u7B2C3\u9805\u898F\u5B9A\uFF0C\u5E02\u7ACB\u5B78\u6821\u7684\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u7531\u5730\u65B9\u653F\u5E9C\u5F59\u6574\u63D0\u4EA4\u3002\u003C/p\u003E","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"590","istopdisplay":"none","href":"/ACS/laws/faq/02/590.html","target":null,"title":"2.11. \u5404\u6A5F\u95DC\u5982\u6709\u56E0\u7D44\u7E54\u6216\u696D\u52D9\u8ABF\u6574\u81F4\u9808\u8B8A\u66F4\u539F\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\uFF0C\u6216\u65B0\u8A2D\u6A5F\u95DC\u4E4B\u60C5\u5F62\uFF0C\u5176\u4E0A\u7D1A\u6A5F\u95DC\u61C9\u65BC\u591A\u4E45\u5167\u63D0\u5831\u8A72\u6A5F\u95DC\u4E4B\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u6216\u89E3\u9664\u7D0D\u7BA1\uFF1F","startdate":"2022-06-23","newstitle":"2.11. \u5404\u6A5F\u95DC\u5982\u6709\u56E0\u7D44\u7E54\u6216\u696D\u52D9\u8ABF\u6574\u81F4\u9808\u8B8A\u66F4\u539F\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\uFF0C\u6216\u65B0\u8A2D\u6A5F\u95DC\u4E4B\u60C5\u5F62\uFF0C\u5176\u4E0A\u7D1A\u6A5F\u95DC\u61C9\u65BC\u591A\u4E45\u5167\u63D0\u5831\u8A72\u6A5F\u95DC\u4E4B\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u6216\u89E3\u9664\u7D0D\u7BA1\uFF1F","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"\u003Cp\u003E\u6A5F\u95DC\u5982\u6709\u4E0B\u5217\u60C5\u5F62\uFF0C\u5176\u4E0A\u7D1A\u6A5F\u95DC\u61C9\u65BC1\u500B\u6708\u5167\uFF0C\u4F9D\u8CC7\u901A\u5B89\u5168\u8CAC\u4EFB\u7B49\u7D1A\u5206\u7D1A\u8FA6\u6CD5\u7B2C3\u689D\u7B2C6\u9805\u8FA6\u7406\u7B49\u7D1A\u7570\u52D5\u4F5C\u696D\uFF1A\u003C/p\u003E\u003Col\u003E\u003Cli\u003E\u6A5F\u95DC\u88C1\u64A4\uFF08\u81EA\u672C\u9662\u4EBA\u4E8B\u884C\u653F\u7E3D\u8655\u51FD\u751F\u6548\u65E5\u8D77\uFF09\u3002\u003C/li\u003E\u003Cli\u003E\u6A5F\u95DC\u56E0\u7D44\u7E54\u6216\u696D\u52D9\u8ABF\u6574\uFF08\u81EA\u672C\u9662\u4EBA\u4E8B\u884C\u653F\u7E3D\u8655\u51FD\u751F\u6548\u65E5\u8D77\uFF09\u3002\u003C/li\u003E\u003Cli\u003E\u6210\u7ACB\u7C4C\u5099\u8655\uFF08\u81EA\u7C4C\u5099\u8655\u7D44\u7E54\u898F\u7A0B\u767C\u5E03\u65E5\u8D77\uFF09\u3002\u003C/li\u003E\u003Cli\u003E\u65B0\u8A2D\u6A5F\u95DC\uFF08\u81EA\u7D44\u7E54\u6CD5\u65BD\u884C\u65E5\u8D77\uFF09\u3002\u003C/li\u003E\u003C/ol\u003E","tags":[],"crosslinkdisplay":"none","schedule":null}]');
+        LeftMenu('634');
+        NewList('634');
+        var ListPage = '/_news/AccordionList.html';
+        var listTag2Page = '/_news/listTag2.html';
+        $("#ns").load(ListPage, function () {
+            if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+        });
+    </script>
 
 </body>
 </html>
