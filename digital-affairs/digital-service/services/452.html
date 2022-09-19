@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/assets/css/layout.css?v=tTGoCxztsQOvCiNhPuj18KZLmIGt1fwY3ntriCxklTI" media="all" />
+            <link rel="stylesheet" href="/assets/css/layout.css?v=e1P_5uuoUtjl1zChWah5ruj4KO91O9429nZDv13HEBE" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -55,18 +55,22 @@
     <header class="header">
         <!-- header -->
         <div b-jabq2d7uqs class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-jabq2d7uqs class="a11yBrickBar1 position-relative"><a b-jabq2d7uqs href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="&#x9801;&#x9762;&#x9802;&#x7AEF;&#x529F;&#x80FD;&#x5340;&#x584A;[&#x5FEB;&#x6377;&#x9375;Alt&#x2B;U]">:::</a></div></div>
-        <div b-jabq2d7uqs class="baseNav d-none d-xxl-block">
+
+        <!-- 若沒有社群鈕<div class="baseNav d-none d-xxl-block"> -->
+		<div b-jabq2d7uqs class="baseNav">
             <div b-jabq2d7uqs class="wrap1 mx-auto px-4 px-lg-5">
-                <div b-jabq2d7uqs class="d-md-flex justify-content-end align-items-center">
+				<div b-jabq2d7uqs class="d-flex justify-content-end align-items-top">
                     <!-- Top bar right -->
                     <div b-jabq2d7uqs class="d-flex align-items-top">
-                        <ul b-jabq2d7uqs class="nav">
+                        <!-- 社群鈕 -->
+                        <ul b-jabq2d7uqs class="nav d-none d-xxl-flex">
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/sitemap/546.html" title="&#x7DB2;&#x7AD9;&#x5C0E;&#x89BD;">
                                     <i b-jabq2d7uqs class="ci ci-sitemap"></i>
                                     <span b-jabq2d7uqs class="visually-hidden">&#x7DB2;&#x7AD9;&#x5C0E;&#x89BD;</span>
                                 </a>
                             </li>
+
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/en/index.html" title="English">
                                     <i b-jabq2d7uqs class="ci ci-en"></i>
@@ -75,7 +79,7 @@
                             </li>
                         </ul>
                         <!-- 切換字體大小 -->
-                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs">
+                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs d-none d-xxl-flex">
                             <button b-jabq2d7uqs class="fontSizeDdNow btn-dropdownNow dropdown-toggle text-white" type="button" id="fontSizeDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-order="2" title="&#x4E2D;&#x5B57;&#x7D1A;"><i b-jabq2d7uqs class="ci ci-font2"></i><span b-jabq2d7uqs class="visually-hidden">A</span></button>
                             <ul b-jabq2d7uqs class="dropdown-menu" aria-labelledby="fontSizeDropdown">
                                 <li b-jabq2d7uqs><button b-jabq2d7uqs class="dropdown-item" type="button" data-order="1" title="&#x5927;&#x5B57;&#x7D1A;">A<sup b-jabq2d7uqs>+</sup></button></li>
@@ -83,13 +87,19 @@
                             </ul>
                         </div>
                         <!-- 搜尋鈕 -->
-                        <div b-jabq2d7uqs class="nav-item navbar-icon-link">
+                        <div b-jabq2d7uqs class="nav-item navbar-icon-link d-none d-xxl-flex">
                             <a b-jabq2d7uqs href="javascript:;" id="S" accesskey="S" class="searchSwitchBtn searchSwitchBtnJs nav-link text-white px-3" title="&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;">
                                 <i b-jabq2d7uqs class="ci ci-scope"></i>
                                 <span b-jabq2d7uqs class="visually-hidden">&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;</span>
                             </a>
                         </div>
                     </div>
+                    <script>
+                        //detect header social btn
+                        if(!document.getElementsByClassName('navSocial').length){
+                            document.body.className += ' noHdSocial';
+                        }
+                    </script>
                 </div>
             </div>
         </div>
@@ -440,144 +450,144 @@
                 </div>
 
                 <!-- 列表 -->
-                                <!-- 列表樣式八 -->
-                                <div class="list2 row text-center px-lg-5 mb-5" id="ListTable">
-                                        <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
-                                            <a href="https://www.gsp.gov.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='電子化政府服務平臺 （GSP）（另開新視窗）'>
-                                                <div class="listPic">
-                                                    <div class="bg-full"></div>
-                                                    <div class="listIcon" style="background-image:url('/copyright/MODA/m5eloeay.xsk.svg')"></div>
-                                                </div>
-                                                <b class="title5">&#x96FB;&#x5B50;&#x5316;&#x653F;&#x5E9C;&#x670D;&#x52D9;&#x5E73;&#x81FA; &#xFF08;GSP&#xFF09;</b>
-                                            </a>
-                                        </div>
-                                        <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
-                                            <a href="https://oid.nat.gov.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='物件識別碼 （OID）網站（另開新視窗）'>
-                                                <div class="listPic">
-                                                    <div class="bg-full"></div>
-                                                    <div class="listIcon" style="background-image:url('/copyright/MODA/hba5a2pz.kjw.svg')"></div>
-                                                </div>
-                                                <b class="title5">&#x7269;&#x4EF6;&#x8B58;&#x5225;&#x78BC; &#xFF08;OID&#xFF09;&#x7DB2;&#x7AD9;</b>
-                                            </a>
-                                        </div>
-                                        <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
-                                            <a href="https://xca.nat.gov.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='組織及團體憑證管理中心網站（另開新視窗）'>
-                                                <div class="listPic">
-                                                    <div class="bg-full"></div>
-                                                    <div class="listIcon" style="background-image:url('/copyright/MODA/ehfnmc0n.szj.svg')"></div>
-                                                </div>
-                                                <b class="title5">&#x7D44;&#x7E54;&#x53CA;&#x5718;&#x9AD4;&#x6191;&#x8B49;&#x7BA1;&#x7406;&#x4E2D;&#x5FC3;&#x7DB2;&#x7AD9;</b>
-                                            </a>
-                                        </div>
-                                        <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
-                                            <a href="https://gcp.nat.gov.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='政府憑證管理中心網站（另開新視窗）'>
-                                                <div class="listPic">
-                                                    <div class="bg-full"></div>
-                                                    <div class="listIcon" style="background-image:url('/copyright/MODA/uzx0yx2l.q4x.svg')"></div>
-                                                </div>
-                                                <b class="title5">&#x653F;&#x5E9C;&#x6191;&#x8B49;&#x7BA1;&#x7406;&#x4E2D;&#x5FC3;&#x7DB2;&#x7AD9;</b>
-                                            </a>
-                                        </div>
-                                        <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
-                                            <a href="https://grca.nat.gov.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='政府憑證總管理中心網站（另開新視窗）'>
-                                                <div class="listPic">
-                                                    <div class="bg-full"></div>
-                                                    <div class="listIcon" style="background-image:url('/copyright/MODA/njblf0be.awq.svg')"></div>
-                                                </div>
-                                                <b class="title5">&#x653F;&#x5E9C;&#x6191;&#x8B49;&#x7E3D;&#x7BA1;&#x7406;&#x4E2D;&#x5FC3;&#x7DB2;&#x7AD9;</b>
-                                            </a>
-                                        </div>
-                                        <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
-                                            <a href="https://www.cns11643.gov.tw" class="d-block" target='_blank' rel='noreferrer noopener' title='CNS11643 中文標準交換碼全字庫網站（另開新視窗）'>
-                                                <div class="listPic">
-                                                    <div class="bg-full"></div>
-                                                    <div class="listIcon" style="background-image:url('/copyright/MODA/wyhotqzr.tvi.svg')"></div>
-                                                </div>
-                                                <b class="title5">CNS11643 &#x4E2D;&#x6587;&#x6A19;&#x6E96;&#x4EA4;&#x63DB;&#x78BC;&#x5168;&#x5B57;&#x5EAB;&#x7DB2;&#x7AD9;</b>
-                                            </a>
-                                        </div>
-                                        <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
-                                            <a href="https://gsn.nat.gov.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='GSN 政府網際服務網網站（另開新視窗）'>
-                                                <div class="listPic">
-                                                    <div class="bg-full"></div>
-                                                    <div class="listIcon" style="background-image:url('/copyright/MODA/crzeresb.a1m.svg')"></div>
-                                                </div>
-                                                <b class="title5">GSN &#x653F;&#x5E9C;&#x7DB2;&#x969B;&#x670D;&#x52D9;&#x7DB2;&#x7DB2;&#x7AD9;</b>
-                                            </a>
-                                        </div>
-                                        <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
-                                            <a href="https://www.teg.org.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='數位治理研究中心網站（另開新視窗）'>
-                                                <div class="listPic">
-                                                    <div class="bg-full"></div>
-                                                    <div class="listIcon" style="background-image:url('/copyright/MODA/s3tg5ese.2t2.svg')"></div>
-                                                </div>
-                                                <b class="title5">&#x6578;&#x4F4D;&#x6CBB;&#x7406;&#x7814;&#x7A76;&#x4E2D;&#x5FC3;&#x7DB2;&#x7AD9;</b>
-                                            </a>
-                                        </div>
-                                        <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
-                                            <a href="https://training.nat.gov.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='政府機關資訊職能教育訓練平臺（另開新視窗）'>
-                                                <div class="listPic">
-                                                    <div class="bg-full"></div>
-                                                    <div class="listIcon" style="background-image:url('/copyright/MODA/ii4szkqj.pqr.svg')"></div>
-                                                </div>
-                                                <b class="title5">&#x653F;&#x5E9C;&#x6A5F;&#x95DC;&#x8CC7;&#x8A0A;&#x8077;&#x80FD;&#x6559;&#x80B2;&#x8A13;&#x7DF4;&#x5E73;&#x81FA;</b>
-                                            </a>
-                                        </div>
-                                        <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
-                                            <a href="https://www.webguide.nat.gov.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='政府網站營運交流平台（另開新視窗）'>
-                                                <div class="listPic">
-                                                    <div class="bg-full"></div>
-                                                    <div class="listIcon" style="background-image:url('/copyright/MODA/f5ommm2k.sop.svg')"></div>
-                                                </div>
-                                                <b class="title5">&#x653F;&#x5E9C;&#x7DB2;&#x7AD9;&#x71DF;&#x904B;&#x4EA4;&#x6D41;&#x5E73;&#x53F0;</b>
-                                            </a>
-                                        </div>
-                                        <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
-                                            <a href="https://accessibility.moda.gov.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='無障礙空間服務網（另開新視窗）'>
-                                                <div class="listPic">
-                                                    <div class="bg-full"></div>
-                                                    <div class="listIcon" style="background-image:url('/copyright/MODA/znwhvs3y.qh0.svg')"></div>
-                                                </div>
-                                                <b class="title5">&#x7121;&#x969C;&#x7919;&#x7A7A;&#x9593;&#x670D;&#x52D9;&#x7DB2;</b>
-                                            </a>
-                                        </div>
-                                        <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
-                                            <a href="https://www.service.gov.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='電子化政府基礎建設線上客服網站（另開新視窗）'>
-                                                <div class="listPic">
-                                                    <div class="bg-full"></div>
-                                                    <div class="listIcon" style="background-image:url('/copyright/MODA/2btbttac.5db.svg')"></div>
-                                                </div>
-                                                <b class="title5">&#x96FB;&#x5B50;&#x5316;&#x653F;&#x5E9C;&#x57FA;&#x790E;&#x5EFA;&#x8A2D;&#x7DDA;&#x4E0A;&#x5BA2;&#x670D;&#x7DB2;&#x7AD9;</b>
-                                            </a>
-                                        </div>
-                                        <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
-                                            <a href="https://odf.nat.gov.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='ODF小幫手網站（另開新視窗）'>
-                                                <div class="listPic">
-                                                    <div class="bg-full"></div>
-                                                    <div class="listIcon" style="background-image:url('/copyright/MODA/04cbnj4x.qxg.svg')"></div>
-                                                </div>
-                                                <b class="title5">ODF&#x5C0F;&#x5E6B;&#x624B;&#x7DB2;&#x7AD9;</b>
-                                            </a>
-                                        </div>
-                                        <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
-                                            <a href="https://itaiwan.gov.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='iTaiwan 無線上網網站（另開新視窗）'>
-                                                <div class="listPic">
-                                                    <div class="bg-full"></div>
-                                                    <div class="listIcon" style="background-image:url('/copyright/MODA/vtv3umge.4ks.svg')"></div>
-                                                </div>
-                                                <b class="title5">iTaiwan &#x7121;&#x7DDA;&#x4E0A;&#x7DB2;&#x7DB2;&#x7AD9;</b>
-                                            </a>
-                                        </div>
-                                        <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
-                                            <a href="https://www.gov.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='我的 E 政府入口網（另開新視窗）'>
-                                                <div class="listPic">
-                                                    <div class="bg-full"></div>
-                                                    <div class="listIcon" style="background-image:url('/copyright/MODA/hnsmfrui.fjr.svg')"></div>
-                                                </div>
-                                                <b class="title5">&#x6211;&#x7684; E &#x653F;&#x5E9C;&#x5165;&#x53E3;&#x7DB2;</b>
-                                            </a>
-                                        </div>
-                                </div>
+                                    <!-- 列表樣式八 -->
+                                    <div class="list2 row text-center px-lg-5 mb-5" id="ListTable">
+                                            <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
+                                                <a href="https://www.gsp.gov.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='電子化政府服務平臺 （GSP）（另開新視窗）'>
+                                                    <div class="listPic">
+                                                        <div class="bg-full"></div>
+                                                        <div class="listIcon" style="background-image:url('/copyright/MODA/m5eloeay.xsk.svg')"></div>
+                                                    </div>
+                                                    <b class="title5">&#x96FB;&#x5B50;&#x5316;&#x653F;&#x5E9C;&#x670D;&#x52D9;&#x5E73;&#x81FA; &#xFF08;GSP&#xFF09;</b>
+                                                </a>
+                                            </div>
+                                            <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
+                                                <a href="https://oid.nat.gov.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='物件識別碼 （OID）網站（另開新視窗）'>
+                                                    <div class="listPic">
+                                                        <div class="bg-full"></div>
+                                                        <div class="listIcon" style="background-image:url('/copyright/MODA/hba5a2pz.kjw.svg')"></div>
+                                                    </div>
+                                                    <b class="title5">&#x7269;&#x4EF6;&#x8B58;&#x5225;&#x78BC; &#xFF08;OID&#xFF09;&#x7DB2;&#x7AD9;</b>
+                                                </a>
+                                            </div>
+                                            <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
+                                                <a href="https://xca.nat.gov.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='組織及團體憑證管理中心網站（另開新視窗）'>
+                                                    <div class="listPic">
+                                                        <div class="bg-full"></div>
+                                                        <div class="listIcon" style="background-image:url('/copyright/MODA/ehfnmc0n.szj.svg')"></div>
+                                                    </div>
+                                                    <b class="title5">&#x7D44;&#x7E54;&#x53CA;&#x5718;&#x9AD4;&#x6191;&#x8B49;&#x7BA1;&#x7406;&#x4E2D;&#x5FC3;&#x7DB2;&#x7AD9;</b>
+                                                </a>
+                                            </div>
+                                            <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
+                                                <a href="https://gcp.nat.gov.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='政府憑證管理中心網站（另開新視窗）'>
+                                                    <div class="listPic">
+                                                        <div class="bg-full"></div>
+                                                        <div class="listIcon" style="background-image:url('/copyright/MODA/uzx0yx2l.q4x.svg')"></div>
+                                                    </div>
+                                                    <b class="title5">&#x653F;&#x5E9C;&#x6191;&#x8B49;&#x7BA1;&#x7406;&#x4E2D;&#x5FC3;&#x7DB2;&#x7AD9;</b>
+                                                </a>
+                                            </div>
+                                            <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
+                                                <a href="https://grca.nat.gov.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='政府憑證總管理中心網站（另開新視窗）'>
+                                                    <div class="listPic">
+                                                        <div class="bg-full"></div>
+                                                        <div class="listIcon" style="background-image:url('/copyright/MODA/njblf0be.awq.svg')"></div>
+                                                    </div>
+                                                    <b class="title5">&#x653F;&#x5E9C;&#x6191;&#x8B49;&#x7E3D;&#x7BA1;&#x7406;&#x4E2D;&#x5FC3;&#x7DB2;&#x7AD9;</b>
+                                                </a>
+                                            </div>
+                                            <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
+                                                <a href="https://www.cns11643.gov.tw" class="d-block" target='_blank' rel='noreferrer noopener' title='CNS11643 中文標準交換碼全字庫網站（另開新視窗）'>
+                                                    <div class="listPic">
+                                                        <div class="bg-full"></div>
+                                                        <div class="listIcon" style="background-image:url('/copyright/MODA/wyhotqzr.tvi.svg')"></div>
+                                                    </div>
+                                                    <b class="title5">CNS11643 &#x4E2D;&#x6587;&#x6A19;&#x6E96;&#x4EA4;&#x63DB;&#x78BC;&#x5168;&#x5B57;&#x5EAB;&#x7DB2;&#x7AD9;</b>
+                                                </a>
+                                            </div>
+                                            <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
+                                                <a href="https://gsn.nat.gov.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='GSN 政府網際服務網網站（另開新視窗）'>
+                                                    <div class="listPic">
+                                                        <div class="bg-full"></div>
+                                                        <div class="listIcon" style="background-image:url('/copyright/MODA/crzeresb.a1m.svg')"></div>
+                                                    </div>
+                                                    <b class="title5">GSN &#x653F;&#x5E9C;&#x7DB2;&#x969B;&#x670D;&#x52D9;&#x7DB2;&#x7DB2;&#x7AD9;</b>
+                                                </a>
+                                            </div>
+                                            <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
+                                                <a href="https://www.teg.org.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='數位治理研究中心網站（另開新視窗）'>
+                                                    <div class="listPic">
+                                                        <div class="bg-full"></div>
+                                                        <div class="listIcon" style="background-image:url('/copyright/MODA/s3tg5ese.2t2.svg')"></div>
+                                                    </div>
+                                                    <b class="title5">&#x6578;&#x4F4D;&#x6CBB;&#x7406;&#x7814;&#x7A76;&#x4E2D;&#x5FC3;&#x7DB2;&#x7AD9;</b>
+                                                </a>
+                                            </div>
+                                            <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
+                                                <a href="https://training.nat.gov.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='政府機關資訊職能教育訓練平臺（另開新視窗）'>
+                                                    <div class="listPic">
+                                                        <div class="bg-full"></div>
+                                                        <div class="listIcon" style="background-image:url('/copyright/MODA/ii4szkqj.pqr.svg')"></div>
+                                                    </div>
+                                                    <b class="title5">&#x653F;&#x5E9C;&#x6A5F;&#x95DC;&#x8CC7;&#x8A0A;&#x8077;&#x80FD;&#x6559;&#x80B2;&#x8A13;&#x7DF4;&#x5E73;&#x81FA;</b>
+                                                </a>
+                                            </div>
+                                            <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
+                                                <a href="https://www.webguide.nat.gov.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='政府網站營運交流平台（另開新視窗）'>
+                                                    <div class="listPic">
+                                                        <div class="bg-full"></div>
+                                                        <div class="listIcon" style="background-image:url('/copyright/MODA/f5ommm2k.sop.svg')"></div>
+                                                    </div>
+                                                    <b class="title5">&#x653F;&#x5E9C;&#x7DB2;&#x7AD9;&#x71DF;&#x904B;&#x4EA4;&#x6D41;&#x5E73;&#x53F0;</b>
+                                                </a>
+                                            </div>
+                                            <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
+                                                <a href="https://accessibility.moda.gov.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='無障礙空間服務網（另開新視窗）'>
+                                                    <div class="listPic">
+                                                        <div class="bg-full"></div>
+                                                        <div class="listIcon" style="background-image:url('/copyright/MODA/znwhvs3y.qh0.svg')"></div>
+                                                    </div>
+                                                    <b class="title5">&#x7121;&#x969C;&#x7919;&#x7A7A;&#x9593;&#x670D;&#x52D9;&#x7DB2;</b>
+                                                </a>
+                                            </div>
+                                            <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
+                                                <a href="https://www.service.gov.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='電子化政府基礎建設線上客服網站（另開新視窗）'>
+                                                    <div class="listPic">
+                                                        <div class="bg-full"></div>
+                                                        <div class="listIcon" style="background-image:url('/copyright/MODA/2btbttac.5db.svg')"></div>
+                                                    </div>
+                                                    <b class="title5">&#x96FB;&#x5B50;&#x5316;&#x653F;&#x5E9C;&#x57FA;&#x790E;&#x5EFA;&#x8A2D;&#x7DDA;&#x4E0A;&#x5BA2;&#x670D;&#x7DB2;&#x7AD9;</b>
+                                                </a>
+                                            </div>
+                                            <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
+                                                <a href="https://odf.nat.gov.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='ODF小幫手網站（另開新視窗）'>
+                                                    <div class="listPic">
+                                                        <div class="bg-full"></div>
+                                                        <div class="listIcon" style="background-image:url('/copyright/MODA/04cbnj4x.qxg.svg')"></div>
+                                                    </div>
+                                                    <b class="title5">ODF&#x5C0F;&#x5E6B;&#x624B;&#x7DB2;&#x7AD9;</b>
+                                                </a>
+                                            </div>
+                                            <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
+                                                <a href="https://itaiwan.gov.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='iTaiwan 無線上網網站（另開新視窗）'>
+                                                    <div class="listPic">
+                                                        <div class="bg-full"></div>
+                                                        <div class="listIcon" style="background-image:url('/copyright/MODA/vtv3umge.4ks.svg')"></div>
+                                                    </div>
+                                                    <b class="title5">iTaiwan &#x7121;&#x7DDA;&#x4E0A;&#x7DB2;&#x7DB2;&#x7AD9;</b>
+                                                </a>
+                                            </div>
+                                            <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
+                                                <a href="https://www.gov.tw/" class="d-block" target='_blank' rel='noreferrer noopener' title='我的 E 政府入口網（另開新視窗）'>
+                                                    <div class="listPic">
+                                                        <div class="bg-full"></div>
+                                                        <div class="listIcon" style="background-image:url('/copyright/MODA/hnsmfrui.fjr.svg')"></div>
+                                                    </div>
+                                                    <b class="title5">&#x6211;&#x7684; E &#x653F;&#x5E9C;&#x5165;&#x53E3;&#x7DB2;</b>
+                                                </a>
+                                            </div>
+                                    </div>
                         <div class="pageBar mb-5 ">
     <div class="pageSet mb-4">
                         <div class="mRow">共<span class="totalData">15</span>筆資料</div>
@@ -806,7 +816,7 @@
                 <div class="ftBtmRights">
                     <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero (另開新視窗)">CC0</a>No copyright reserved.</p>
 
-                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-18<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-19<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
             </div>
             <div class="col-12 col-md text-md-end">
@@ -846,28 +856,27 @@
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/assets/js/common.js?v=gDbLZglneWxIXoUIs8UczuclyHwWlQIsF2m5b1w6GZE"></script>
+            <script src="/assets/js/common.js?v=QZ5wUV6wmTSH_KN9q1eKJ9BC2A45ymIwOsi7Y6WeDXY"></script>
     <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=V2JExwd7xdBP26AtgTeajbqPQbpLse0DlFgoRNwRcdo"></script>
+    <script src="/js/site.js?v=r3b45PJ-Q435KvD8SAVTjXll8cXI-McYimLv_DaGbWU"></script>
     <script>
         webSiteLange('zh-tw' ,'MODA'  );
 
     </script>
     
-<script>
-    var _JsData;
-    var S1 ;
-    var S2 ;
-    var _needtag = NeedTag('IcoList');
-    _JsData = JSON.parse('[{"mainsn":"156","istopdisplay":"none","href":"https://www.gsp.gov.tw/","target":"_blank","title":"\u96FB\u5B50\u5316\u653F\u5E9C\u670D\u52D9\u5E73\u81FA \uFF08GSP\uFF09","startdate":"2022-08-27","newstitle":"\u96FB\u5B50\u5316\u653F\u5E9C\u670D\u52D9\u5E73\u81FA \uFF08GSP\uFF09","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/m5eloeay.xsk.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"154","istopdisplay":"none","href":"https://oid.nat.gov.tw/","target":"_blank","title":"\u7269\u4EF6\u8B58\u5225\u78BC \uFF08OID\uFF09\u7DB2\u7AD9","startdate":"2022-08-27","newstitle":"\u7269\u4EF6\u8B58\u5225\u78BC \uFF08OID\uFF09\u7DB2\u7AD9","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/hba5a2pz.kjw.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"152","istopdisplay":"none","href":"https://xca.nat.gov.tw/","target":"_blank","title":"\u7D44\u7E54\u53CA\u5718\u9AD4\u6191\u8B49\u7BA1\u7406\u4E2D\u5FC3\u7DB2\u7AD9","startdate":"2022-08-27","newstitle":"\u7D44\u7E54\u53CA\u5718\u9AD4\u6191\u8B49\u7BA1\u7406\u4E2D\u5FC3\u7DB2\u7AD9","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/ehfnmc0n.szj.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"150","istopdisplay":"none","href":"https://gcp.nat.gov.tw/","target":"_blank","title":"\u653F\u5E9C\u6191\u8B49\u7BA1\u7406\u4E2D\u5FC3\u7DB2\u7AD9","startdate":"2022-08-27","newstitle":"\u653F\u5E9C\u6191\u8B49\u7BA1\u7406\u4E2D\u5FC3\u7DB2\u7AD9","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/uzx0yx2l.q4x.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"148","istopdisplay":"none","href":"https://grca.nat.gov.tw/","target":"_blank","title":"\u653F\u5E9C\u6191\u8B49\u7E3D\u7BA1\u7406\u4E2D\u5FC3\u7DB2\u7AD9","startdate":"2022-08-27","newstitle":"\u653F\u5E9C\u6191\u8B49\u7E3D\u7BA1\u7406\u4E2D\u5FC3\u7DB2\u7AD9","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/njblf0be.awq.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"146","istopdisplay":"none","href":"https://www.cns11643.gov.tw","target":"_blank","title":"CNS11643 \u4E2D\u6587\u6A19\u6E96\u4EA4\u63DB\u78BC\u5168\u5B57\u5EAB\u7DB2\u7AD9","startdate":"2022-08-27","newstitle":"CNS11643 \u4E2D\u6587\u6A19\u6E96\u4EA4\u63DB\u78BC\u5168\u5B57\u5EAB\u7DB2\u7AD9","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/wyhotqzr.tvi.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"144","istopdisplay":"none","href":"https://gsn.nat.gov.tw/","target":"_blank","title":"GSN \u653F\u5E9C\u7DB2\u969B\u670D\u52D9\u7DB2\u7DB2\u7AD9","startdate":"2022-08-27","newstitle":"GSN \u653F\u5E9C\u7DB2\u969B\u670D\u52D9\u7DB2\u7DB2\u7AD9","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/crzeresb.a1m.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"142","istopdisplay":"none","href":"https://www.teg.org.tw/","target":"_blank","title":"\u6578\u4F4D\u6CBB\u7406\u7814\u7A76\u4E2D\u5FC3\u7DB2\u7AD9","startdate":"2022-08-27","newstitle":"\u6578\u4F4D\u6CBB\u7406\u7814\u7A76\u4E2D\u5FC3\u7DB2\u7AD9","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/s3tg5ese.2t2.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"140","istopdisplay":"none","href":"https://training.nat.gov.tw/","target":"_blank","title":"\u653F\u5E9C\u6A5F\u95DC\u8CC7\u8A0A\u8077\u80FD\u6559\u80B2\u8A13\u7DF4\u5E73\u81FA","startdate":"2022-08-27","newstitle":"\u653F\u5E9C\u6A5F\u95DC\u8CC7\u8A0A\u8077\u80FD\u6559\u80B2\u8A13\u7DF4\u5E73\u81FA","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/ii4szkqj.pqr.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"138","istopdisplay":"none","href":"https://www.webguide.nat.gov.tw/","target":"_blank","title":"\u653F\u5E9C\u7DB2\u7AD9\u71DF\u904B\u4EA4\u6D41\u5E73\u53F0","startdate":"2022-08-27","newstitle":"\u653F\u5E9C\u7DB2\u7AD9\u71DF\u904B\u4EA4\u6D41\u5E73\u53F0","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/f5ommm2k.sop.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"136","istopdisplay":"none","href":"https://accessibility.moda.gov.tw/","target":"_blank","title":"\u7121\u969C\u7919\u7A7A\u9593\u670D\u52D9\u7DB2","startdate":"2022-08-27","newstitle":"\u7121\u969C\u7919\u7A7A\u9593\u670D\u52D9\u7DB2","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/znwhvs3y.qh0.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"134","istopdisplay":"none","href":"https://www.service.gov.tw/","target":"_blank","title":"\u96FB\u5B50\u5316\u653F\u5E9C\u57FA\u790E\u5EFA\u8A2D\u7DDA\u4E0A\u5BA2\u670D\u7DB2\u7AD9","startdate":"2022-08-27","newstitle":"\u96FB\u5B50\u5316\u653F\u5E9C\u57FA\u790E\u5EFA\u8A2D\u7DDA\u4E0A\u5BA2\u670D\u7DB2\u7AD9","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/2btbttac.5db.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"132","istopdisplay":"none","href":"https://odf.nat.gov.tw/","target":"_blank","title":"ODF\u5C0F\u5E6B\u624B\u7DB2\u7AD9","startdate":"2022-08-27","newstitle":"ODF\u5C0F\u5E6B\u624B\u7DB2\u7AD9","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/04cbnj4x.qxg.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"130","istopdisplay":"none","href":"https://itaiwan.gov.tw/","target":"_blank","title":"iTaiwan \u7121\u7DDA\u4E0A\u7DB2\u7DB2\u7AD9","startdate":"2022-08-27","newstitle":"iTaiwan \u7121\u7DDA\u4E0A\u7DB2\u7DB2\u7AD9","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/vtv3umge.4ks.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"128","istopdisplay":"none","href":"https://www.gov.tw/","target":"_blank","title":"\u6211\u7684 E \u653F\u5E9C\u5165\u53E3\u7DB2","startdate":"2022-08-27","newstitle":"\u6211\u7684 E \u653F\u5E9C\u5165\u53E3\u7DB2","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/hnsmfrui.fjr.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"}]');
-    LeftMenu('452');
-   NewList('452');
-    var ListPage = '/_news/IcoList.html';
-    var listTag2Page = '/_news/listTag2.html';
-    $("#ns").load(ListPage, function () {
-        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
-    });
-</script>
+    <script>
+        var _JsData;
+        var _needtag = NeedTag('IcoList');
+        var _Module = 'NEWS';
+        _JsData = JSON.parse('[{"mainsn":"156","istopdisplay":"none","href":"https://www.gsp.gov.tw/","target":"_blank","title":"\u96FB\u5B50\u5316\u653F\u5E9C\u670D\u52D9\u5E73\u81FA \uFF08GSP\uFF09","startdate":"2022-08-27","newstitle":"\u96FB\u5B50\u5316\u653F\u5E9C\u670D\u52D9\u5E73\u81FA \uFF08GSP\uFF09","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/m5eloeay.xsk.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"154","istopdisplay":"none","href":"https://oid.nat.gov.tw/","target":"_blank","title":"\u7269\u4EF6\u8B58\u5225\u78BC \uFF08OID\uFF09\u7DB2\u7AD9","startdate":"2022-08-27","newstitle":"\u7269\u4EF6\u8B58\u5225\u78BC \uFF08OID\uFF09\u7DB2\u7AD9","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/hba5a2pz.kjw.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"152","istopdisplay":"none","href":"https://xca.nat.gov.tw/","target":"_blank","title":"\u7D44\u7E54\u53CA\u5718\u9AD4\u6191\u8B49\u7BA1\u7406\u4E2D\u5FC3\u7DB2\u7AD9","startdate":"2022-08-27","newstitle":"\u7D44\u7E54\u53CA\u5718\u9AD4\u6191\u8B49\u7BA1\u7406\u4E2D\u5FC3\u7DB2\u7AD9","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/ehfnmc0n.szj.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"150","istopdisplay":"none","href":"https://gcp.nat.gov.tw/","target":"_blank","title":"\u653F\u5E9C\u6191\u8B49\u7BA1\u7406\u4E2D\u5FC3\u7DB2\u7AD9","startdate":"2022-08-27","newstitle":"\u653F\u5E9C\u6191\u8B49\u7BA1\u7406\u4E2D\u5FC3\u7DB2\u7AD9","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/uzx0yx2l.q4x.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"148","istopdisplay":"none","href":"https://grca.nat.gov.tw/","target":"_blank","title":"\u653F\u5E9C\u6191\u8B49\u7E3D\u7BA1\u7406\u4E2D\u5FC3\u7DB2\u7AD9","startdate":"2022-08-27","newstitle":"\u653F\u5E9C\u6191\u8B49\u7E3D\u7BA1\u7406\u4E2D\u5FC3\u7DB2\u7AD9","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/njblf0be.awq.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"146","istopdisplay":"none","href":"https://www.cns11643.gov.tw","target":"_blank","title":"CNS11643 \u4E2D\u6587\u6A19\u6E96\u4EA4\u63DB\u78BC\u5168\u5B57\u5EAB\u7DB2\u7AD9","startdate":"2022-08-27","newstitle":"CNS11643 \u4E2D\u6587\u6A19\u6E96\u4EA4\u63DB\u78BC\u5168\u5B57\u5EAB\u7DB2\u7AD9","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/wyhotqzr.tvi.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"144","istopdisplay":"none","href":"https://gsn.nat.gov.tw/","target":"_blank","title":"GSN \u653F\u5E9C\u7DB2\u969B\u670D\u52D9\u7DB2\u7DB2\u7AD9","startdate":"2022-08-27","newstitle":"GSN \u653F\u5E9C\u7DB2\u969B\u670D\u52D9\u7DB2\u7DB2\u7AD9","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/crzeresb.a1m.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"142","istopdisplay":"none","href":"https://www.teg.org.tw/","target":"_blank","title":"\u6578\u4F4D\u6CBB\u7406\u7814\u7A76\u4E2D\u5FC3\u7DB2\u7AD9","startdate":"2022-08-27","newstitle":"\u6578\u4F4D\u6CBB\u7406\u7814\u7A76\u4E2D\u5FC3\u7DB2\u7AD9","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/s3tg5ese.2t2.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"140","istopdisplay":"none","href":"https://training.nat.gov.tw/","target":"_blank","title":"\u653F\u5E9C\u6A5F\u95DC\u8CC7\u8A0A\u8077\u80FD\u6559\u80B2\u8A13\u7DF4\u5E73\u81FA","startdate":"2022-08-27","newstitle":"\u653F\u5E9C\u6A5F\u95DC\u8CC7\u8A0A\u8077\u80FD\u6559\u80B2\u8A13\u7DF4\u5E73\u81FA","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/ii4szkqj.pqr.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"138","istopdisplay":"none","href":"https://www.webguide.nat.gov.tw/","target":"_blank","title":"\u653F\u5E9C\u7DB2\u7AD9\u71DF\u904B\u4EA4\u6D41\u5E73\u53F0","startdate":"2022-08-27","newstitle":"\u653F\u5E9C\u7DB2\u7AD9\u71DF\u904B\u4EA4\u6D41\u5E73\u53F0","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/f5ommm2k.sop.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"136","istopdisplay":"none","href":"https://accessibility.moda.gov.tw/","target":"_blank","title":"\u7121\u969C\u7919\u7A7A\u9593\u670D\u52D9\u7DB2","startdate":"2022-08-27","newstitle":"\u7121\u969C\u7919\u7A7A\u9593\u670D\u52D9\u7DB2","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/znwhvs3y.qh0.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"134","istopdisplay":"none","href":"https://www.service.gov.tw/","target":"_blank","title":"\u96FB\u5B50\u5316\u653F\u5E9C\u57FA\u790E\u5EFA\u8A2D\u7DDA\u4E0A\u5BA2\u670D\u7DB2\u7AD9","startdate":"2022-08-27","newstitle":"\u96FB\u5B50\u5316\u653F\u5E9C\u57FA\u790E\u5EFA\u8A2D\u7DDA\u4E0A\u5BA2\u670D\u7DB2\u7AD9","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/2btbttac.5db.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"132","istopdisplay":"none","href":"https://odf.nat.gov.tw/","target":"_blank","title":"ODF\u5C0F\u5E6B\u624B\u7DB2\u7AD9","startdate":"2022-08-27","newstitle":"ODF\u5C0F\u5E6B\u624B\u7DB2\u7AD9","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/04cbnj4x.qxg.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"130","istopdisplay":"none","href":"https://itaiwan.gov.tw/","target":"_blank","title":"iTaiwan \u7121\u7DDA\u4E0A\u7DB2\u7DB2\u7AD9","startdate":"2022-08-27","newstitle":"iTaiwan \u7121\u7DDA\u4E0A\u7DB2\u7DB2\u7AD9","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/vtv3umge.4ks.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"128","istopdisplay":"none","href":"https://www.gov.tw/","target":"_blank","title":"\u6211\u7684 E \u653F\u5E9C\u5165\u53E3\u7DB2","startdate":"2022-08-27","newstitle":"\u6211\u7684 E \u653F\u5E9C\u5165\u53E3\u7DB2","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/hnsmfrui.fjr.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null}]');
+        LeftMenu('452');
+        NewList('452');
+        var ListPage = '/_news/IcoList.html';
+        var listTag2Page = '/_news/listTag2.html';
+        $("#ns").load(ListPage, function () {
+            if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+        });
+    </script>
 
 </body>
 </html>

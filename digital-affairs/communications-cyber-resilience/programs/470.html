@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/assets/css/layout.css?v=tTGoCxztsQOvCiNhPuj18KZLmIGt1fwY3ntriCxklTI" media="all" />
+            <link rel="stylesheet" href="/assets/css/layout.css?v=e1P_5uuoUtjl1zChWah5ruj4KO91O9429nZDv13HEBE" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -55,18 +55,22 @@
     <header class="header">
         <!-- header -->
         <div b-jabq2d7uqs class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-jabq2d7uqs class="a11yBrickBar1 position-relative"><a b-jabq2d7uqs href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="&#x9801;&#x9762;&#x9802;&#x7AEF;&#x529F;&#x80FD;&#x5340;&#x584A;[&#x5FEB;&#x6377;&#x9375;Alt&#x2B;U]">:::</a></div></div>
-        <div b-jabq2d7uqs class="baseNav d-none d-xxl-block">
+
+        <!-- 若沒有社群鈕<div class="baseNav d-none d-xxl-block"> -->
+		<div b-jabq2d7uqs class="baseNav">
             <div b-jabq2d7uqs class="wrap1 mx-auto px-4 px-lg-5">
-                <div b-jabq2d7uqs class="d-md-flex justify-content-end align-items-center">
+				<div b-jabq2d7uqs class="d-flex justify-content-end align-items-top">
                     <!-- Top bar right -->
                     <div b-jabq2d7uqs class="d-flex align-items-top">
-                        <ul b-jabq2d7uqs class="nav">
+                        <!-- 社群鈕 -->
+                        <ul b-jabq2d7uqs class="nav d-none d-xxl-flex">
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/sitemap/546.html" title="&#x7DB2;&#x7AD9;&#x5C0E;&#x89BD;">
                                     <i b-jabq2d7uqs class="ci ci-sitemap"></i>
                                     <span b-jabq2d7uqs class="visually-hidden">&#x7DB2;&#x7AD9;&#x5C0E;&#x89BD;</span>
                                 </a>
                             </li>
+
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/en/index.html" title="English">
                                     <i b-jabq2d7uqs class="ci ci-en"></i>
@@ -75,7 +79,7 @@
                             </li>
                         </ul>
                         <!-- 切換字體大小 -->
-                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs">
+                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs d-none d-xxl-flex">
                             <button b-jabq2d7uqs class="fontSizeDdNow btn-dropdownNow dropdown-toggle text-white" type="button" id="fontSizeDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-order="2" title="&#x4E2D;&#x5B57;&#x7D1A;"><i b-jabq2d7uqs class="ci ci-font2"></i><span b-jabq2d7uqs class="visually-hidden">A</span></button>
                             <ul b-jabq2d7uqs class="dropdown-menu" aria-labelledby="fontSizeDropdown">
                                 <li b-jabq2d7uqs><button b-jabq2d7uqs class="dropdown-item" type="button" data-order="1" title="&#x5927;&#x5B57;&#x7D1A;">A<sup b-jabq2d7uqs>+</sup></button></li>
@@ -83,13 +87,19 @@
                             </ul>
                         </div>
                         <!-- 搜尋鈕 -->
-                        <div b-jabq2d7uqs class="nav-item navbar-icon-link">
+                        <div b-jabq2d7uqs class="nav-item navbar-icon-link d-none d-xxl-flex">
                             <a b-jabq2d7uqs href="javascript:;" id="S" accesskey="S" class="searchSwitchBtn searchSwitchBtnJs nav-link text-white px-3" title="&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;">
                                 <i b-jabq2d7uqs class="ci ci-scope"></i>
                                 <span b-jabq2d7uqs class="visually-hidden">&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;</span>
                             </a>
                         </div>
                     </div>
+                    <script>
+                        //detect header social btn
+                        if(!document.getElementsByClassName('navSocial').length){
+                            document.body.className += ' noHdSocial';
+                        }
+                    </script>
                 </div>
             </div>
         </div>
@@ -440,92 +450,92 @@
                 </div>
 
                 <!-- 列表 -->
-                                <div class="list3-2 row gy-3 gx-sm-5 mb-5" id="ListTable">
-                                        <div class="col-12 col-sm-6 position-relative">
-                                            <div class="card h-100 rounded-0">
-                                                <div class="card-body ps-0 pb-0 pe-0">
-                                                    <div class="d-flex flex-wrap">
-                                                        <a href="https://www.grb.gov.tw/search/planDetail?id=13923297" class="cardT col-12" target='_blank' rel='noreferrer noopener' title='海纜安全防護計畫（另開新視窗）'>
-                                                            <b class="card-title title5 fw-normal">
-                                                                &#x6D77;&#x7E9C;&#x5B89;&#x5168;&#x9632;&#x8B77;&#x8A08;&#x756B;
-                                                                        <i class="bi bi-box-arrow-up-right"></i>
-                                                            </b>
-                                                                <p class="card-text">建立保護海纜架設、運作管理與安全法制環境</p>
-                                                        </a>
-                                                        <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
+                                    <div class="list3-2 row gy-3 gx-sm-5 mb-5" id="ListTable">
+                                            <div class="col-12 col-sm-6 position-relative">
+                                                <div class="card h-100 rounded-0">
+                                                    <div class="card-body ps-0 pb-0 pe-0">
+                                                        <div class="d-flex flex-wrap">
+                                                            <a href="https://www.grb.gov.tw/search/planDetail?id=13923297" class="cardT col-12" target='_blank' rel='noreferrer noopener' title='海纜安全防護計畫（另開新視窗）'>
+                                                                <b class="card-title title5 fw-normal">
+                                                                    &#x6D77;&#x7E9C;&#x5B89;&#x5168;&#x9632;&#x8B77;&#x8A08;&#x756B;
+                                                                            <i class="bi bi-box-arrow-up-right"></i>
+                                                                </b>
+                                                                    <p class="card-text">建立保護海纜架設、運作管理與安全法制環境</p>
+                                                            </a>
+                                                            <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 position-relative">
-                                            <div class="card h-100 rounded-0">
-                                                <div class="card-body ps-0 pb-0 pe-0">
-                                                    <div class="d-flex flex-wrap">
-                                                        <a href="/digital-affairs/communications-cyber-resilience/programs/384.html" class="cardT col-12" target='' title='補助 5G 網路建設計畫'>
-                                                            <b class="card-title title5 fw-normal">
-                                                                &#x88DC;&#x52A9; 5G &#x7DB2;&#x8DEF;&#x5EFA;&#x8A2D;&#x8A08;&#x756B;
-                                                            </b>
-                                                                <p class="card-text">補助5G基地臺建置，完善5G應用服務基礎</p>
-                                                        </a>
-                                                        <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
-                                                            <div class="listTag2 flex-fill pt-2 pe-4">
-                                                                    <a href="javascript:;" class="btn" role="button">&#x88DC;&#x52A9;5G&#x7DB2;&#x8DEF;&#x5EFA;&#x8A2D;&#x8A08;&#x756B;</a>
-                                                            </div>
+                                            <div class="col-12 col-sm-6 position-relative">
+                                                <div class="card h-100 rounded-0">
+                                                    <div class="card-body ps-0 pb-0 pe-0">
+                                                        <div class="d-flex flex-wrap">
+                                                            <a href="/digital-affairs/communications-cyber-resilience/programs/384.html" class="cardT col-12" target='' title='補助 5G 網路建設計畫'>
+                                                                <b class="card-title title5 fw-normal">
+                                                                    &#x88DC;&#x52A9; 5G &#x7DB2;&#x8DEF;&#x5EFA;&#x8A2D;&#x8A08;&#x756B;
+                                                                </b>
+                                                                    <p class="card-text">補助5G基地臺建置，完善5G應用服務基礎</p>
+                                                            </a>
+                                                            <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
+                                                                <div class="listTag2 flex-fill pt-2 pe-4">
+                                                                        <a href="javascript:;" class="btn" role="button">&#x88DC;&#x52A9;5G&#x7DB2;&#x8DEF;&#x5EFA;&#x8A2D;&#x8A08;&#x756B;</a>
+                                                                </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 position-relative">
-                                            <div class="card h-100 rounded-0">
-                                                <div class="card-body ps-0 pb-0 pe-0">
-                                                    <div class="d-flex flex-wrap">
-                                                        <a href="/digital-affairs/communications-cyber-resilience/programs/386.html" class="cardT col-12" target='' title='改善山區行動通訊'>
-                                                            <b class="card-title title5 fw-normal">
-                                                                &#x6539;&#x5584;&#x5C71;&#x5340;&#x884C;&#x52D5;&#x901A;&#x8A0A;
-                                                            </b>
-                                                                <p class="card-text">因應開放山林政策，改善山區熱門步道通訊</p>
-                                                        </a>
-                                                        <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
-                                                            <div class="listTag2 flex-fill pt-2 pe-4">
-                                                                    <a href="javascript:;" class="btn" role="button">&#x6539;&#x5584;&#x5C71;&#x6797;&#x5340;&#x57DF;&#xFF08;&#x542B;&#x570B;&#x5BB6;&#x516C;&#x5712;&#xFF09;&#x884C;&#x52D5;&#x901A;&#x4FE1;&#x8A0A;&#x865F;&#x6DB5;&#x84CB;</a>
-                                                            </div>
+                                            <div class="col-12 col-sm-6 position-relative">
+                                                <div class="card h-100 rounded-0">
+                                                    <div class="card-body ps-0 pb-0 pe-0">
+                                                        <div class="d-flex flex-wrap">
+                                                            <a href="/digital-affairs/communications-cyber-resilience/programs/386.html" class="cardT col-12" target='' title='改善山區行動通訊'>
+                                                                <b class="card-title title5 fw-normal">
+                                                                    &#x6539;&#x5584;&#x5C71;&#x5340;&#x884C;&#x52D5;&#x901A;&#x8A0A;
+                                                                </b>
+                                                                    <p class="card-text">因應開放山林政策，改善山區熱門步道通訊</p>
+                                                            </a>
+                                                            <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
+                                                                <div class="listTag2 flex-fill pt-2 pe-4">
+                                                                        <a href="javascript:;" class="btn" role="button">&#x6539;&#x5584;&#x5C71;&#x6797;&#x5340;&#x57DF;&#xFF08;&#x542B;&#x570B;&#x5BB6;&#x516C;&#x5712;&#xFF09;&#x884C;&#x52D5;&#x901A;&#x4FE1;&#x8A0A;&#x865F;&#x6DB5;&#x84CB;</a>
+                                                                </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 position-relative">
-                                            <div class="card h-100 rounded-0">
-                                                <div class="card-body ps-0 pb-0 pe-0">
-                                                    <div class="d-flex flex-wrap">
-                                                        <a href="https://www.grb.gov.tw/search/planDetail?id=13998935" class="cardT col-12" target='_blank' rel='noreferrer noopener' title='健全電信資安計畫（另開新視窗）'>
-                                                            <b class="card-title title5 fw-normal">
-                                                                &#x5065;&#x5168;&#x96FB;&#x4FE1;&#x8CC7;&#x5B89;&#x8A08;&#x756B;
-                                                                        <i class="bi bi-box-arrow-up-right"></i>
-                                                            </b>
-                                                                <p class="card-text">推動5G及物聯網設備資安防護</p>
-                                                        </a>
-                                                        <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
+                                            <div class="col-12 col-sm-6 position-relative">
+                                                <div class="card h-100 rounded-0">
+                                                    <div class="card-body ps-0 pb-0 pe-0">
+                                                        <div class="d-flex flex-wrap">
+                                                            <a href="https://www.grb.gov.tw/search/planDetail?id=13998935" class="cardT col-12" target='_blank' rel='noreferrer noopener' title='健全電信資安計畫（另開新視窗）'>
+                                                                <b class="card-title title5 fw-normal">
+                                                                    &#x5065;&#x5168;&#x96FB;&#x4FE1;&#x8CC7;&#x5B89;&#x8A08;&#x756B;
+                                                                            <i class="bi bi-box-arrow-up-right"></i>
+                                                                </b>
+                                                                    <p class="card-text">推動5G及物聯網設備資安防護</p>
+                                                            </a>
+                                                            <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 position-relative">
-                                            <div class="card h-100 rounded-0">
-                                                <div class="card-body ps-0 pb-0 pe-0">
-                                                    <div class="d-flex flex-wrap">
-                                                        <a href="https://www.grb.gov.tw/search/planDetail?id=13776440" class="cardT col-12" target='_blank' rel='noreferrer noopener' title='5G資安法規整備（另開新視窗）'>
-                                                            <b class="card-title title5 fw-normal">
-                                                                5G&#x8CC7;&#x5B89;&#x6CD5;&#x898F;&#x6574;&#x5099;
-                                                                        <i class="bi bi-box-arrow-up-right"></i>
-                                                            </b>
-                                                                <p class="card-text">建置5G資安實驗室驗證及完備5G相關法規</p>
-                                                        </a>
-                                                        <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
+                                            <div class="col-12 col-sm-6 position-relative">
+                                                <div class="card h-100 rounded-0">
+                                                    <div class="card-body ps-0 pb-0 pe-0">
+                                                        <div class="d-flex flex-wrap">
+                                                            <a href="https://www.grb.gov.tw/search/planDetail?id=13776440" class="cardT col-12" target='_blank' rel='noreferrer noopener' title='5G資安法規整備（另開新視窗）'>
+                                                                <b class="card-title title5 fw-normal">
+                                                                    5G&#x8CC7;&#x5B89;&#x6CD5;&#x898F;&#x6574;&#x5099;
+                                                                            <i class="bi bi-box-arrow-up-right"></i>
+                                                                </b>
+                                                                    <p class="card-text">建置5G資安實驗室驗證及完備5G相關法規</p>
+                                                            </a>
+                                                            <div class="listDate me-auto pt-2"><span class="pe-2">2022-08-27</span></div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                </div>
+                                    </div>
                         <div class="pageBar mb-5 ">
     <div class="pageSet mb-4">
                         <div class="mRow">共<span class="totalData">5</span>筆資料</div>
@@ -754,7 +764,7 @@
                 <div class="ftBtmRights">
                     <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero (另開新視窗)">CC0</a>No copyright reserved.</p>
 
-                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-18<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-19<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
             </div>
             <div class="col-12 col-md text-md-end">
@@ -794,28 +804,27 @@
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/assets/js/common.js?v=gDbLZglneWxIXoUIs8UczuclyHwWlQIsF2m5b1w6GZE"></script>
+            <script src="/assets/js/common.js?v=QZ5wUV6wmTSH_KN9q1eKJ9BC2A45ymIwOsi7Y6WeDXY"></script>
     <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=V2JExwd7xdBP26AtgTeajbqPQbpLse0DlFgoRNwRcdo"></script>
+    <script src="/js/site.js?v=r3b45PJ-Q435KvD8SAVTjXll8cXI-McYimLv_DaGbWU"></script>
     <script>
         webSiteLange('zh-tw' ,'MODA'  );
 
     </script>
     
-<script>
-    var _JsData;
-    var S1 ;
-    var S2 ;
-    var _needtag = NeedTag('TwoTextList');
-    _JsData = JSON.parse('[{"mainsn":"378","istopdisplay":"none","href":"https://www.grb.gov.tw/search/planDetail?id=13923297","target":"_blank","title":"\u6D77\u7E9C\u5B89\u5168\u9632\u8B77\u8A08\u756B","startdate":"2022-08-27","newstitle":"\u6D77\u7E9C\u5B89\u5168\u9632\u8B77\u8A08\u756B","newssubtitle":"\u5EFA\u7ACB\u4FDD\u8B77\u6D77\u7E9C\u67B6\u8A2D\u3001\u904B\u4F5C\u7BA1\u7406\u8207\u5B89\u5168\u6CD5\u5236\u74B0\u5883","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"384","istopdisplay":"none","href":"/digital-affairs/communications-cyber-resilience/programs/384.html","target":null,"title":"\u88DC\u52A9 5G \u7DB2\u8DEF\u5EFA\u8A2D\u8A08\u756B","startdate":"2022-08-27","newstitle":"\u88DC\u52A9 5G \u7DB2\u8DEF\u5EFA\u8A2D\u8A08\u756B","newssubtitle":"\u88DC\u52A95G\u57FA\u5730\u81FA\u5EFA\u7F6E\uFF0C\u5B8C\u55845G\u61C9\u7528\u670D\u52D9\u57FA\u790E","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u88DC\u52A95G\u7DB2\u8DEF\u5EFA\u8A2D\u8A08\u756B"}],"crosslinkdisplay":"none"},{"mainsn":"386","istopdisplay":"none","href":"/digital-affairs/communications-cyber-resilience/programs/386.html","target":null,"title":"\u6539\u5584\u5C71\u5340\u884C\u52D5\u901A\u8A0A","startdate":"2022-08-27","newstitle":"\u6539\u5584\u5C71\u5340\u884C\u52D5\u901A\u8A0A","newssubtitle":"\u56E0\u61C9\u958B\u653E\u5C71\u6797\u653F\u7B56\uFF0C\u6539\u5584\u5C71\u5340\u71B1\u9580\u6B65\u9053\u901A\u8A0A","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u6539\u5584\u5C71\u6797\u5340\u57DF\uFF08\u542B\u570B\u5BB6\u516C\u5712\uFF09\u884C\u52D5\u901A\u4FE1\u8A0A\u865F\u6DB5\u84CB"}],"crosslinkdisplay":"none"},{"mainsn":"388","istopdisplay":"none","href":"https://www.grb.gov.tw/search/planDetail?id=13998935","target":"_blank","title":"\u5065\u5168\u96FB\u4FE1\u8CC7\u5B89\u8A08\u756B","startdate":"2022-08-27","newstitle":"\u5065\u5168\u96FB\u4FE1\u8CC7\u5B89\u8A08\u756B","newssubtitle":"\u63A8\u52D55G\u53CA\u7269\u806F\u7DB2\u8A2D\u5099\u8CC7\u5B89\u9632\u8B77","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"},{"mainsn":"390","istopdisplay":"none","href":"https://www.grb.gov.tw/search/planDetail?id=13776440","target":"_blank","title":"5G\u8CC7\u5B89\u6CD5\u898F\u6574\u5099","startdate":"2022-08-27","newstitle":"5G\u8CC7\u5B89\u6CD5\u898F\u6574\u5099","newssubtitle":"\u5EFA\u7F6E5G\u8CC7\u5B89\u5BE6\u9A57\u5BA4\u9A57\u8B49\u53CA\u5B8C\u50995G\u76F8\u95DC\u6CD5\u898F","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline"}]');
-    LeftMenu('470');
-   NewList('470');
-    var ListPage = '/_news/TwoTextList.html';
-    var listTag2Page = '/_news/listTag2.html';
-    $("#ns").load(ListPage, function () {
-        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
-    });
-</script>
+    <script>
+        var _JsData;
+        var _needtag = NeedTag('TwoTextList');
+        var _Module = 'NEWS';
+        _JsData = JSON.parse('[{"mainsn":"378","istopdisplay":"none","href":"https://www.grb.gov.tw/search/planDetail?id=13923297","target":"_blank","title":"\u6D77\u7E9C\u5B89\u5168\u9632\u8B77\u8A08\u756B","startdate":"2022-08-27","newstitle":"\u6D77\u7E9C\u5B89\u5168\u9632\u8B77\u8A08\u756B","newssubtitle":"\u5EFA\u7ACB\u4FDD\u8B77\u6D77\u7E9C\u67B6\u8A2D\u3001\u904B\u4F5C\u7BA1\u7406\u8207\u5B89\u5168\u6CD5\u5236\u74B0\u5883","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"384","istopdisplay":"none","href":"/digital-affairs/communications-cyber-resilience/programs/384.html","target":null,"title":"\u88DC\u52A9 5G \u7DB2\u8DEF\u5EFA\u8A2D\u8A08\u756B","startdate":"2022-08-27","newstitle":"\u88DC\u52A9 5G \u7DB2\u8DEF\u5EFA\u8A2D\u8A08\u756B","newssubtitle":"\u88DC\u52A95G\u57FA\u5730\u81FA\u5EFA\u7F6E\uFF0C\u5B8C\u55845G\u61C9\u7528\u670D\u52D9\u57FA\u790E","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u88DC\u52A95G\u7DB2\u8DEF\u5EFA\u8A2D\u8A08\u756B"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"386","istopdisplay":"none","href":"/digital-affairs/communications-cyber-resilience/programs/386.html","target":null,"title":"\u6539\u5584\u5C71\u5340\u884C\u52D5\u901A\u8A0A","startdate":"2022-08-27","newstitle":"\u6539\u5584\u5C71\u5340\u884C\u52D5\u901A\u8A0A","newssubtitle":"\u56E0\u61C9\u958B\u653E\u5C71\u6797\u653F\u7B56\uFF0C\u6539\u5584\u5C71\u5340\u71B1\u9580\u6B65\u9053\u901A\u8A0A","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u6539\u5584\u5C71\u6797\u5340\u57DF\uFF08\u542B\u570B\u5BB6\u516C\u5712\uFF09\u884C\u52D5\u901A\u4FE1\u8A0A\u865F\u6DB5\u84CB"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"388","istopdisplay":"none","href":"https://www.grb.gov.tw/search/planDetail?id=13998935","target":"_blank","title":"\u5065\u5168\u96FB\u4FE1\u8CC7\u5B89\u8A08\u756B","startdate":"2022-08-27","newstitle":"\u5065\u5168\u96FB\u4FE1\u8CC7\u5B89\u8A08\u756B","newssubtitle":"\u63A8\u52D55G\u53CA\u7269\u806F\u7DB2\u8A2D\u5099\u8CC7\u5B89\u9632\u8B77","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"390","istopdisplay":"none","href":"https://www.grb.gov.tw/search/planDetail?id=13776440","target":"_blank","title":"5G\u8CC7\u5B89\u6CD5\u898F\u6574\u5099","startdate":"2022-08-27","newstitle":"5G\u8CC7\u5B89\u6CD5\u898F\u6574\u5099","newssubtitle":"\u5EFA\u7F6E5G\u8CC7\u5B89\u5BE6\u9A57\u5BA4\u9A57\u8B49\u53CA\u5B8C\u50995G\u76F8\u95DC\u6CD5\u898F","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null}]');
+        LeftMenu('470');
+        NewList('470');
+        var ListPage = '/_news/TwoTextList.html';
+        var listTag2Page = '/_news/listTag2.html';
+        $("#ns").load(ListPage, function () {
+            if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+        });
+    </script>
 
 </body>
 </html>

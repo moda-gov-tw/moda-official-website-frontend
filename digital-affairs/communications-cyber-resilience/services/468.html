@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/assets/css/layout.css?v=tTGoCxztsQOvCiNhPuj18KZLmIGt1fwY3ntriCxklTI" media="all" />
+            <link rel="stylesheet" href="/assets/css/layout.css?v=e1P_5uuoUtjl1zChWah5ruj4KO91O9429nZDv13HEBE" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -55,18 +55,22 @@
     <header class="header">
         <!-- header -->
         <div b-jabq2d7uqs class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-jabq2d7uqs class="a11yBrickBar1 position-relative"><a b-jabq2d7uqs href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="&#x9801;&#x9762;&#x9802;&#x7AEF;&#x529F;&#x80FD;&#x5340;&#x584A;[&#x5FEB;&#x6377;&#x9375;Alt&#x2B;U]">:::</a></div></div>
-        <div b-jabq2d7uqs class="baseNav d-none d-xxl-block">
+
+        <!-- 若沒有社群鈕<div class="baseNav d-none d-xxl-block"> -->
+		<div b-jabq2d7uqs class="baseNav">
             <div b-jabq2d7uqs class="wrap1 mx-auto px-4 px-lg-5">
-                <div b-jabq2d7uqs class="d-md-flex justify-content-end align-items-center">
+				<div b-jabq2d7uqs class="d-flex justify-content-end align-items-top">
                     <!-- Top bar right -->
                     <div b-jabq2d7uqs class="d-flex align-items-top">
-                        <ul b-jabq2d7uqs class="nav">
+                        <!-- 社群鈕 -->
+                        <ul b-jabq2d7uqs class="nav d-none d-xxl-flex">
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/sitemap/546.html" title="&#x7DB2;&#x7AD9;&#x5C0E;&#x89BD;">
                                     <i b-jabq2d7uqs class="ci ci-sitemap"></i>
                                     <span b-jabq2d7uqs class="visually-hidden">&#x7DB2;&#x7AD9;&#x5C0E;&#x89BD;</span>
                                 </a>
                             </li>
+
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/en/index.html" title="English">
                                     <i b-jabq2d7uqs class="ci ci-en"></i>
@@ -75,7 +79,7 @@
                             </li>
                         </ul>
                         <!-- 切換字體大小 -->
-                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs">
+                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs d-none d-xxl-flex">
                             <button b-jabq2d7uqs class="fontSizeDdNow btn-dropdownNow dropdown-toggle text-white" type="button" id="fontSizeDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-order="2" title="&#x4E2D;&#x5B57;&#x7D1A;"><i b-jabq2d7uqs class="ci ci-font2"></i><span b-jabq2d7uqs class="visually-hidden">A</span></button>
                             <ul b-jabq2d7uqs class="dropdown-menu" aria-labelledby="fontSizeDropdown">
                                 <li b-jabq2d7uqs><button b-jabq2d7uqs class="dropdown-item" type="button" data-order="1" title="&#x5927;&#x5B57;&#x7D1A;">A<sup b-jabq2d7uqs>+</sup></button></li>
@@ -83,13 +87,19 @@
                             </ul>
                         </div>
                         <!-- 搜尋鈕 -->
-                        <div b-jabq2d7uqs class="nav-item navbar-icon-link">
+                        <div b-jabq2d7uqs class="nav-item navbar-icon-link d-none d-xxl-flex">
                             <a b-jabq2d7uqs href="javascript:;" id="S" accesskey="S" class="searchSwitchBtn searchSwitchBtnJs nav-link text-white px-3" title="&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;">
                                 <i b-jabq2d7uqs class="ci ci-scope"></i>
                                 <span b-jabq2d7uqs class="visually-hidden">&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;</span>
                             </a>
                         </div>
                     </div>
+                    <script>
+                        //detect header social btn
+                        if(!document.getElementsByClassName('navSocial').length){
+                            document.body.className += ' noHdSocial';
+                        }
+                    </script>
                 </div>
             </div>
         </div>
@@ -440,45 +450,45 @@
                 </div>
 
                 <!-- 列表 -->
-                                <!-- 列表樣式八 -->
-                                <div class="list2 row text-center px-lg-5 mb-5" id="ListTable">
-                                        <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
-                                            <a href="/digital-affairs/communications-cyber-resilience/services/374.html" class="d-block" target='' title='通傳事業資安防護'>
-                                                <div class="listPic">
-                                                    <div class="bg-full"></div>
-                                                    <div class="listIcon" style="background-image:url('/copyright/MODA/htbbyyss.xa1.svg')"></div>
-                                                </div>
-                                                <b class="title5">&#x901A;&#x50B3;&#x4E8B;&#x696D;&#x8CC7;&#x5B89;&#x9632;&#x8B77;</b>
-                                            </a>
-                                        </div>
-                                        <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
-                                            <a href="/digital-affairs/communications-cyber-resilience/services/376.html" class="d-block" target='' title='通傳資通設備驗證'>
-                                                <div class="listPic">
-                                                    <div class="bg-full"></div>
-                                                    <div class="listIcon" style="background-image:url('/copyright/MODA/b3hggcdi.b4m.svg')"></div>
-                                                </div>
-                                                <b class="title5">&#x901A;&#x50B3;&#x8CC7;&#x901A;&#x8A2D;&#x5099;&#x9A57;&#x8B49;</b>
-                                            </a>
-                                        </div>
-                                        <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
-                                            <a href="/digital-affairs/communications-cyber-resilience/broadband-to-every-village/812.html" class="d-block" target='_self' title='村村有寬頻專區'>
-                                                <div class="listPic">
-                                                    <div class="bg-full"></div>
-                                                    <div class="listIcon" style="background-image:url('/copyright/MODA/npbitc0e.jo2.svg')"></div>
-                                                </div>
-                                                <b class="title5">&#x6751;&#x6751;&#x6709;&#x5BEC;&#x983B;&#x5C08;&#x5340;</b>
-                                            </a>
-                                        </div>
-                                        <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
-                                            <a href="/digital-affairs/communications-cyber-resilience/universal-access/814.html" class="d-block" target='_self' title='普及服務相關書表'>
-                                                <div class="listPic">
-                                                    <div class="bg-full"></div>
-                                                    <div class="listIcon" style="background-image:url('/copyright/MODA/r03akffy.4dd.svg')"></div>
-                                                </div>
-                                                <b class="title5">&#x666E;&#x53CA;&#x670D;&#x52D9;&#x76F8;&#x95DC;&#x66F8;&#x8868;</b>
-                                            </a>
-                                        </div>
-                                </div>
+                                    <!-- 列表樣式八 -->
+                                    <div class="list2 row text-center px-lg-5 mb-5" id="ListTable">
+                                            <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
+                                                <a href="/digital-affairs/communications-cyber-resilience/services/374.html" class="d-block" target='' title='通傳事業資安防護'>
+                                                    <div class="listPic">
+                                                        <div class="bg-full"></div>
+                                                        <div class="listIcon" style="background-image:url('/copyright/MODA/htbbyyss.xa1.svg')"></div>
+                                                    </div>
+                                                    <b class="title5">&#x901A;&#x50B3;&#x4E8B;&#x696D;&#x8CC7;&#x5B89;&#x9632;&#x8B77;</b>
+                                                </a>
+                                            </div>
+                                            <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
+                                                <a href="/digital-affairs/communications-cyber-resilience/services/376.html" class="d-block" target='' title='通傳資通設備驗證'>
+                                                    <div class="listPic">
+                                                        <div class="bg-full"></div>
+                                                        <div class="listIcon" style="background-image:url('/copyright/MODA/b3hggcdi.b4m.svg')"></div>
+                                                    </div>
+                                                    <b class="title5">&#x901A;&#x50B3;&#x8CC7;&#x901A;&#x8A2D;&#x5099;&#x9A57;&#x8B49;</b>
+                                                </a>
+                                            </div>
+                                            <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
+                                                <a href="/digital-affairs/communications-cyber-resilience/broadband-to-every-village/812.html" class="d-block" target='_self' title='村村有寬頻專區'>
+                                                    <div class="listPic">
+                                                        <div class="bg-full"></div>
+                                                        <div class="listIcon" style="background-image:url('/copyright/MODA/npbitc0e.jo2.svg')"></div>
+                                                    </div>
+                                                    <b class="title5">&#x6751;&#x6751;&#x6709;&#x5BEC;&#x983B;&#x5C08;&#x5340;</b>
+                                                </a>
+                                            </div>
+                                            <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
+                                                <a href="/digital-affairs/communications-cyber-resilience/universal-access/814.html" class="d-block" target='_self' title='普及服務相關書表'>
+                                                    <div class="listPic">
+                                                        <div class="bg-full"></div>
+                                                        <div class="listIcon" style="background-image:url('/copyright/MODA/r03akffy.4dd.svg')"></div>
+                                                    </div>
+                                                    <b class="title5">&#x666E;&#x53CA;&#x670D;&#x52D9;&#x76F8;&#x95DC;&#x66F8;&#x8868;</b>
+                                                </a>
+                                            </div>
+                                    </div>
                         <div class="pageBar mb-5 ">
     <div class="pageSet mb-4">
                         <div class="mRow">共<span class="totalData">4</span>筆資料</div>
@@ -707,7 +717,7 @@
                 <div class="ftBtmRights">
                     <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero (另開新視窗)">CC0</a>No copyright reserved.</p>
 
-                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-18<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-19<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
             </div>
             <div class="col-12 col-md text-md-end">
@@ -747,28 +757,27 @@
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/assets/js/common.js?v=gDbLZglneWxIXoUIs8UczuclyHwWlQIsF2m5b1w6GZE"></script>
+            <script src="/assets/js/common.js?v=QZ5wUV6wmTSH_KN9q1eKJ9BC2A45ymIwOsi7Y6WeDXY"></script>
     <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=V2JExwd7xdBP26AtgTeajbqPQbpLse0DlFgoRNwRcdo"></script>
+    <script src="/js/site.js?v=r3b45PJ-Q435KvD8SAVTjXll8cXI-McYimLv_DaGbWU"></script>
     <script>
         webSiteLange('zh-tw' ,'MODA'  );
 
     </script>
     
-<script>
-    var _JsData;
-    var S1 ;
-    var S2 ;
-    var _needtag = NeedTag('IcoList');
-    _JsData = JSON.parse('[{"mainsn":"374","istopdisplay":"none","href":"/digital-affairs/communications-cyber-resilience/services/374.html","target":null,"title":"\u901A\u50B3\u4E8B\u696D\u8CC7\u5B89\u9632\u8B77","startdate":"2022-08-27","newstitle":"\u901A\u50B3\u4E8B\u696D\u8CC7\u5B89\u9632\u8B77","newssubtitle":"\u7763\u5C0E\u901A\u50B3\u4E8B\u696D\u8FA6\u7406\u8CC7\u901A\u5B89\u5168\u9632\u8B77\u4E4B\u5E74\u5EA6\u63A8\u52D5\u60C5\u5F62","filetypedisplay":"none","weblogopath":"/copyright/MODA/htbbyyss.xa1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u670D\u52D9\u5217\u8868"}],"crosslinkdisplay":"none"},{"mainsn":"376","istopdisplay":"none","href":"/digital-affairs/communications-cyber-resilience/services/376.html","target":null,"title":"\u901A\u50B3\u8CC7\u901A\u8A2D\u5099\u9A57\u8B49","startdate":"2022-08-27","newstitle":"\u901A\u50B3\u8CC7\u901A\u8A2D\u5099\u9A57\u8B49","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/b3hggcdi.b4m.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u670D\u52D9\u5217\u8868"}],"crosslinkdisplay":"none"},{"mainsn":"396","istopdisplay":"none","href":"/digital-affairs/communications-cyber-resilience/broadband-to-every-village/812.html","target":"_self","title":"\u6751\u6751\u6709\u5BEC\u983B\u5C08\u5340","startdate":"2022-08-27","newstitle":"\u6751\u6751\u6709\u5BEC\u983B\u5C08\u5340","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/npbitc0e.jo2.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"398","istopdisplay":"none","href":"/digital-affairs/communications-cyber-resilience/universal-access/814.html","target":"_self","title":"\u666E\u53CA\u670D\u52D9\u76F8\u95DC\u66F8\u8868","startdate":"2022-08-27","newstitle":"\u666E\u53CA\u670D\u52D9\u76F8\u95DC\u66F8\u8868","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/r03akffy.4dd.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"}]');
-    LeftMenu('468');
-   NewList('468');
-    var ListPage = '/_news/IcoList.html';
-    var listTag2Page = '/_news/listTag2.html';
-    $("#ns").load(ListPage, function () {
-        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
-    });
-</script>
+    <script>
+        var _JsData;
+        var _needtag = NeedTag('IcoList');
+        var _Module = 'NEWS';
+        _JsData = JSON.parse('[{"mainsn":"374","istopdisplay":"none","href":"/digital-affairs/communications-cyber-resilience/services/374.html","target":null,"title":"\u901A\u50B3\u4E8B\u696D\u8CC7\u5B89\u9632\u8B77","startdate":"2022-08-27","newstitle":"\u901A\u50B3\u4E8B\u696D\u8CC7\u5B89\u9632\u8B77","newssubtitle":"\u7763\u5C0E\u901A\u50B3\u4E8B\u696D\u8FA6\u7406\u8CC7\u901A\u5B89\u5168\u9632\u8B77\u4E4B\u5E74\u5EA6\u63A8\u52D5\u60C5\u5F62","filetypedisplay":"none","weblogopath":"/copyright/MODA/htbbyyss.xa1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u670D\u52D9\u5217\u8868"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"376","istopdisplay":"none","href":"/digital-affairs/communications-cyber-resilience/services/376.html","target":null,"title":"\u901A\u50B3\u8CC7\u901A\u8A2D\u5099\u9A57\u8B49","startdate":"2022-08-27","newstitle":"\u901A\u50B3\u8CC7\u901A\u8A2D\u5099\u9A57\u8B49","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/b3hggcdi.b4m.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"\u670D\u52D9\u5217\u8868"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"396","istopdisplay":"none","href":"/digital-affairs/communications-cyber-resilience/broadband-to-every-village/812.html","target":"_self","title":"\u6751\u6751\u6709\u5BEC\u983B\u5C08\u5340","startdate":"2022-08-27","newstitle":"\u6751\u6751\u6709\u5BEC\u983B\u5C08\u5340","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/npbitc0e.jo2.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"398","istopdisplay":"none","href":"/digital-affairs/communications-cyber-resilience/universal-access/814.html","target":"_self","title":"\u666E\u53CA\u670D\u52D9\u76F8\u95DC\u66F8\u8868","startdate":"2022-08-27","newstitle":"\u666E\u53CA\u670D\u52D9\u76F8\u95DC\u66F8\u8868","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/r03akffy.4dd.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null}]');
+        LeftMenu('468');
+        NewList('468');
+        var ListPage = '/_news/IcoList.html';
+        var listTag2Page = '/_news/listTag2.html';
+        $("#ns").load(ListPage, function () {
+            if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+        });
+    </script>
 
 </body>
 </html>

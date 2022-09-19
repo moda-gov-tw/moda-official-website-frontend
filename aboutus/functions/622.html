@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/assets/css/layout.css?v=tTGoCxztsQOvCiNhPuj18KZLmIGt1fwY3ntriCxklTI" media="all" />
+            <link rel="stylesheet" href="/assets/css/layout.css?v=e1P_5uuoUtjl1zChWah5ruj4KO91O9429nZDv13HEBE" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -55,18 +55,22 @@
     <header class="header">
         <!-- header -->
         <div b-jabq2d7uqs class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-jabq2d7uqs class="a11yBrickBar1 position-relative"><a b-jabq2d7uqs href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="&#x9801;&#x9762;&#x9802;&#x7AEF;&#x529F;&#x80FD;&#x5340;&#x584A;[&#x5FEB;&#x6377;&#x9375;Alt&#x2B;U]">:::</a></div></div>
-        <div b-jabq2d7uqs class="baseNav d-none d-xxl-block">
+
+        <!-- 若沒有社群鈕<div class="baseNav d-none d-xxl-block"> -->
+		<div b-jabq2d7uqs class="baseNav">
             <div b-jabq2d7uqs class="wrap1 mx-auto px-4 px-lg-5">
-                <div b-jabq2d7uqs class="d-md-flex justify-content-end align-items-center">
+				<div b-jabq2d7uqs class="d-flex justify-content-end align-items-top">
                     <!-- Top bar right -->
                     <div b-jabq2d7uqs class="d-flex align-items-top">
-                        <ul b-jabq2d7uqs class="nav">
+                        <!-- 社群鈕 -->
+                        <ul b-jabq2d7uqs class="nav d-none d-xxl-flex">
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/sitemap/546.html" title="&#x7DB2;&#x7AD9;&#x5C0E;&#x89BD;">
                                     <i b-jabq2d7uqs class="ci ci-sitemap"></i>
                                     <span b-jabq2d7uqs class="visually-hidden">&#x7DB2;&#x7AD9;&#x5C0E;&#x89BD;</span>
                                 </a>
                             </li>
+
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/en/index.html" title="English">
                                     <i b-jabq2d7uqs class="ci ci-en"></i>
@@ -75,7 +79,7 @@
                             </li>
                         </ul>
                         <!-- 切換字體大小 -->
-                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs">
+                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs d-none d-xxl-flex">
                             <button b-jabq2d7uqs class="fontSizeDdNow btn-dropdownNow dropdown-toggle text-white" type="button" id="fontSizeDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-order="2" title="&#x4E2D;&#x5B57;&#x7D1A;"><i b-jabq2d7uqs class="ci ci-font2"></i><span b-jabq2d7uqs class="visually-hidden">A</span></button>
                             <ul b-jabq2d7uqs class="dropdown-menu" aria-labelledby="fontSizeDropdown">
                                 <li b-jabq2d7uqs><button b-jabq2d7uqs class="dropdown-item" type="button" data-order="1" title="&#x5927;&#x5B57;&#x7D1A;">A<sup b-jabq2d7uqs>+</sup></button></li>
@@ -83,13 +87,19 @@
                             </ul>
                         </div>
                         <!-- 搜尋鈕 -->
-                        <div b-jabq2d7uqs class="nav-item navbar-icon-link">
+                        <div b-jabq2d7uqs class="nav-item navbar-icon-link d-none d-xxl-flex">
                             <a b-jabq2d7uqs href="javascript:;" id="S" accesskey="S" class="searchSwitchBtn searchSwitchBtnJs nav-link text-white px-3" title="&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;">
                                 <i b-jabq2d7uqs class="ci ci-scope"></i>
                                 <span b-jabq2d7uqs class="visually-hidden">&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;</span>
                             </a>
                         </div>
                     </div>
+                    <script>
+                        //detect header social btn
+                        if(!document.getElementsByClassName('navSocial').length){
+                            document.body.className += ' noHdSocial';
+                        }
+                    </script>
                 </div>
             </div>
         </div>
@@ -466,121 +476,121 @@
                 </div>
 
                 <!-- 列表 -->
-                                <!-- 列表樣式七 -->
-                                <div class="list1 row mb-5 g-3" id="ListTable">
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/aboutus/functions/436.html" class="card-body text-decoration-none" target='' title='數位策略司'>
-                                                    <b class="card-title title5">&#x6578;&#x4F4D;&#x7B56;&#x7565;&#x53F8;</b>
-                                                    <p class="card-text">Department of Digital Strategy</p>
-                                                </a>
+                                    <!-- 列表樣式七 -->
+                                    <div class="list1 row mb-5 g-3" id="ListTable">
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/aboutus/functions/436.html" class="card-body text-decoration-none" target='' title='數位策略司'>
+                                                        <b class="card-title title5">&#x6578;&#x4F4D;&#x7B56;&#x7565;&#x53F8;</b>
+                                                        <p class="card-text">Department of Digital Strategy</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/aboutus/functions/438.html" class="card-body text-decoration-none" target='' title='韌性建設司'>
-                                                    <b class="card-title title5">&#x97CC;&#x6027;&#x5EFA;&#x8A2D;&#x53F8;</b>
-                                                    <p class="card-text">Department of Communications and Cyber Resilience</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/aboutus/functions/438.html" class="card-body text-decoration-none" target='' title='韌性建設司'>
+                                                        <b class="card-title title5">&#x97CC;&#x6027;&#x5EFA;&#x8A2D;&#x53F8;</b>
+                                                        <p class="card-text">Department of Communications and Cyber Resilience</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/aboutus/functions/440.html" class="card-body text-decoration-none" target='' title='資源管理司'>
-                                                    <b class="card-title title5">&#x8CC7;&#x6E90;&#x7BA1;&#x7406;&#x53F8;</b>
-                                                    <p class="card-text">Department of Resource Management</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/aboutus/functions/440.html" class="card-body text-decoration-none" target='' title='資源管理司'>
+                                                        <b class="card-title title5">&#x8CC7;&#x6E90;&#x7BA1;&#x7406;&#x53F8;</b>
+                                                        <p class="card-text">Department of Resource Management</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/aboutus/functions/442.html" class="card-body text-decoration-none" target='' title='數位政府司'>
-                                                    <b class="card-title title5">&#x6578;&#x4F4D;&#x653F;&#x5E9C;&#x53F8;</b>
-                                                    <p class="card-text">Department of Digital Service</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/aboutus/functions/442.html" class="card-body text-decoration-none" target='' title='數位政府司'>
+                                                        <b class="card-title title5">&#x6578;&#x4F4D;&#x653F;&#x5E9C;&#x53F8;</b>
+                                                        <p class="card-text">Department of Digital Service</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/aboutus/functions/444.html" class="card-body text-decoration-none" target='' title='民主網絡司'>
-                                                    <b class="card-title title5">&#x6C11;&#x4E3B;&#x7DB2;&#x7D61;&#x53F8;</b>
-                                                    <p class="card-text">Department of Democracy Network</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/aboutus/functions/444.html" class="card-body text-decoration-none" target='' title='民主網絡司'>
+                                                        <b class="card-title title5">&#x6C11;&#x4E3B;&#x7DB2;&#x7D61;&#x53F8;</b>
+                                                        <p class="card-text">Department of Democracy Network</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/aboutus/functions/446.html" class="card-body text-decoration-none" target='' title='多元創新司'>
-                                                    <b class="card-title title5">&#x591A;&#x5143;&#x5275;&#x65B0;&#x53F8;</b>
-                                                    <p class="card-text">Department of Plural Innovation</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/aboutus/functions/446.html" class="card-body text-decoration-none" target='' title='多元創新司'>
+                                                        <b class="card-title title5">&#x591A;&#x5143;&#x5275;&#x65B0;&#x53F8;</b>
+                                                        <p class="card-text">Department of Plural Innovation</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/aboutus/functions/448.html" class="card-body text-decoration-none" target='' title='秘書處'>
-                                                    <b class="card-title title5">&#x79D8;&#x66F8;&#x8655;</b>
-                                                    <p class="card-text">Secretariat</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/aboutus/functions/448.html" class="card-body text-decoration-none" target='' title='秘書處'>
+                                                        <b class="card-title title5">&#x79D8;&#x66F8;&#x8655;</b>
+                                                        <p class="card-text">Secretariat</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/aboutus/functions/452.html" class="card-body text-decoration-none" target='' title='人事處'>
-                                                    <b class="card-title title5">&#x4EBA;&#x4E8B;&#x8655;</b>
-                                                    <p class="card-text">Department of Personnel</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/aboutus/functions/452.html" class="card-body text-decoration-none" target='' title='人事處'>
+                                                        <b class="card-title title5">&#x4EBA;&#x4E8B;&#x8655;</b>
+                                                        <p class="card-text">Department of Personnel</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/aboutus/functions/454.html" class="card-body text-decoration-none" target='' title='政風處'>
-                                                    <b class="card-title title5">&#x653F;&#x98A8;&#x8655;</b>
-                                                    <p class="card-text">Department of Civil Service Ethics</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/aboutus/functions/454.html" class="card-body text-decoration-none" target='' title='政風處'>
+                                                        <b class="card-title title5">&#x653F;&#x98A8;&#x8655;</b>
+                                                        <p class="card-text">Department of Civil Service Ethics</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/aboutus/functions/456.html" class="card-body text-decoration-none" target='' title='主計處'>
-                                                    <b class="card-title title5">&#x4E3B;&#x8A08;&#x8655;</b>
-                                                    <p class="card-text">Department of Budget, Accounting and Statistics</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/aboutus/functions/456.html" class="card-body text-decoration-none" target='' title='主計處'>
+                                                        <b class="card-title title5">&#x4E3B;&#x8A08;&#x8655;</b>
+                                                        <p class="card-text">Department of Budget, Accounting and Statistics</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/aboutus/functions/458.html" class="card-body text-decoration-none" target='' title='資訊處'>
-                                                    <b class="card-title title5">&#x8CC7;&#x8A0A;&#x8655;</b>
-                                                    <p class="card-text">Department of Information Management</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/aboutus/functions/458.html" class="card-body text-decoration-none" target='' title='資訊處'>
+                                                        <b class="card-title title5">&#x8CC7;&#x8A0A;&#x8655;</b>
+                                                        <p class="card-text">Department of Information Management</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/aboutus/functions/460.html" class="card-body text-decoration-none" target='' title='法制處'>
-                                                    <b class="card-title title5">&#x6CD5;&#x5236;&#x8655;</b>
-                                                    <p class="card-text">Department of Legal Affairs</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/aboutus/functions/460.html" class="card-body text-decoration-none" target='' title='法制處'>
+                                                        <b class="card-title title5">&#x6CD5;&#x5236;&#x8655;</b>
+                                                        <p class="card-text">Department of Legal Affairs</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/ADI/index.html" class="card-body text-decoration-none" target='_blank' rel='noreferrer noopener' title='數位產業署（另開新視窗）'>
-                                                    <b class="card-title title5">&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72;</b>
-                                                    <p class="card-text">Administration for Digital Industries</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/ADI/index.html" class="card-body text-decoration-none" target='_blank' rel='noreferrer noopener' title='數位產業署（另開新視窗）'>
+                                                        <b class="card-title title5">&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72;</b>
+                                                        <p class="card-text">Administration for Digital Industries</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-4">
-                                            <div class="card h-100 shadow-md">
-                                                <a href="/ACS/index.html" class="card-body text-decoration-none" target='_blank' rel='noreferrer noopener' title='資通安全署（另開新視窗）'>
-                                                    <b class="card-title title5">&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7F72;</b>
-                                                    <p class="card-text">Administration for Cyber Security</p>
-                                                </a>
+                                            <div class="col-12 col-sm-6 col-md-4">
+                                                <div class="card h-100 shadow-md">
+                                                    <a href="/ACS/index.html" class="card-body text-decoration-none" target='_blank' rel='noreferrer noopener' title='資通安全署（另開新視窗）'>
+                                                        <b class="card-title title5">&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x7F72;</b>
+                                                        <p class="card-text">Administration for Cyber Security</p>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                </div>
+                                    </div>
                         <div class="pageBar mb-5 ">
     <div class="pageSet mb-4">
                         <div class="mRow">共<span class="totalData">14</span>筆資料</div>
@@ -809,7 +819,7 @@
                 <div class="ftBtmRights">
                     <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero (另開新視窗)">CC0</a>No copyright reserved.</p>
 
-                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-18<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-19<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
             </div>
             <div class="col-12 col-md text-md-end">
@@ -849,28 +859,27 @@
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/assets/js/common.js?v=gDbLZglneWxIXoUIs8UczuclyHwWlQIsF2m5b1w6GZE"></script>
+            <script src="/assets/js/common.js?v=QZ5wUV6wmTSH_KN9q1eKJ9BC2A45ymIwOsi7Y6WeDXY"></script>
     <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=V2JExwd7xdBP26AtgTeajbqPQbpLse0DlFgoRNwRcdo"></script>
+    <script src="/js/site.js?v=r3b45PJ-Q435KvD8SAVTjXll8cXI-McYimLv_DaGbWU"></script>
     <script>
         webSiteLange('zh-tw' ,'MODA'  );
 
     </script>
     
-<script>
-    var _JsData;
-    var S1 ;
-    var S2 ;
-    var _needtag = NeedTag('LabelList');
-    _JsData = JSON.parse('[{"mainsn":"436","istopdisplay":"none","href":"/aboutus/functions/436.html","target":null,"title":"\u6578\u4F4D\u7B56\u7565\u53F8","startdate":"2022-08-27","newstitle":"\u6578\u4F4D\u7B56\u7565\u53F8","newssubtitle":"Department of Digital Strategy","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"438","istopdisplay":"none","href":"/aboutus/functions/438.html","target":null,"title":"\u97CC\u6027\u5EFA\u8A2D\u53F8","startdate":"2022-08-27","newstitle":"\u97CC\u6027\u5EFA\u8A2D\u53F8","newssubtitle":"Department of Communications and Cyber Resilience","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"440","istopdisplay":"none","href":"/aboutus/functions/440.html","target":null,"title":"\u8CC7\u6E90\u7BA1\u7406\u53F8","startdate":"2022-08-27","newstitle":"\u8CC7\u6E90\u7BA1\u7406\u53F8","newssubtitle":"Department of Resource Management","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"442","istopdisplay":"none","href":"/aboutus/functions/442.html","target":null,"title":"\u6578\u4F4D\u653F\u5E9C\u53F8","startdate":"2022-08-27","newstitle":"\u6578\u4F4D\u653F\u5E9C\u53F8","newssubtitle":"Department of Digital Service","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"444","istopdisplay":"none","href":"/aboutus/functions/444.html","target":null,"title":"\u6C11\u4E3B\u7DB2\u7D61\u53F8","startdate":"2022-08-27","newstitle":"\u6C11\u4E3B\u7DB2\u7D61\u53F8","newssubtitle":"Department of Democracy Network","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"446","istopdisplay":"none","href":"/aboutus/functions/446.html","target":null,"title":"\u591A\u5143\u5275\u65B0\u53F8","startdate":"2022-08-27","newstitle":"\u591A\u5143\u5275\u65B0\u53F8","newssubtitle":"Department of Plural Innovation","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"448","istopdisplay":"none","href":"/aboutus/functions/448.html","target":null,"title":"\u79D8\u66F8\u8655","startdate":"2022-08-27","newstitle":"\u79D8\u66F8\u8655","newssubtitle":"Secretariat","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"452","istopdisplay":"none","href":"/aboutus/functions/452.html","target":null,"title":"\u4EBA\u4E8B\u8655","startdate":"2022-08-27","newstitle":"\u4EBA\u4E8B\u8655","newssubtitle":"Department of Personnel","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"454","istopdisplay":"none","href":"/aboutus/functions/454.html","target":null,"title":"\u653F\u98A8\u8655","startdate":"2022-08-27","newstitle":"\u653F\u98A8\u8655","newssubtitle":"Department of Civil Service Ethics","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"456","istopdisplay":"none","href":"/aboutus/functions/456.html","target":null,"title":"\u4E3B\u8A08\u8655","startdate":"2022-08-27","newstitle":"\u4E3B\u8A08\u8655","newssubtitle":"Department of Budget, Accounting and Statistics","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"458","istopdisplay":"none","href":"/aboutus/functions/458.html","target":null,"title":"\u8CC7\u8A0A\u8655","startdate":"2022-08-27","newstitle":"\u8CC7\u8A0A\u8655","newssubtitle":"Department of Information Management","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"460","istopdisplay":"none","href":"/aboutus/functions/460.html","target":null,"title":"\u6CD5\u5236\u8655","startdate":"2022-08-27","newstitle":"\u6CD5\u5236\u8655","newssubtitle":"Department of Legal Affairs","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"462","istopdisplay":"none","href":"/ADI/index.html","target":"_blank","title":"\u6578\u4F4D\u7522\u696D\u7F72","startdate":"2022-08-27","newstitle":"\u6578\u4F4D\u7522\u696D\u7F72","newssubtitle":"Administration for Digital Industries","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"464","istopdisplay":"none","href":"/ACS/index.html","target":"_blank","title":"\u8CC7\u901A\u5B89\u5168\u7F72","startdate":"2022-08-27","newstitle":"\u8CC7\u901A\u5B89\u5168\u7F72","newssubtitle":"Administration for Cyber Security","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"}]');
-    LeftMenu('622');
-   NewList('622');
-    var ListPage = '/_news/LabelList.html';
-    var listTag2Page = '/_news/listTag2.html';
-    $("#ns").load(ListPage, function () {
-        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
-    });
-</script>
+    <script>
+        var _JsData;
+        var _needtag = NeedTag('LabelList');
+        var _Module = 'NEWS';
+        _JsData = JSON.parse('[{"mainsn":"436","istopdisplay":"none","href":"/aboutus/functions/436.html","target":null,"title":"\u6578\u4F4D\u7B56\u7565\u53F8","startdate":"2022-08-27","newstitle":"\u6578\u4F4D\u7B56\u7565\u53F8","newssubtitle":"Department of Digital Strategy","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"438","istopdisplay":"none","href":"/aboutus/functions/438.html","target":null,"title":"\u97CC\u6027\u5EFA\u8A2D\u53F8","startdate":"2022-08-27","newstitle":"\u97CC\u6027\u5EFA\u8A2D\u53F8","newssubtitle":"Department of Communications and Cyber Resilience","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"440","istopdisplay":"none","href":"/aboutus/functions/440.html","target":null,"title":"\u8CC7\u6E90\u7BA1\u7406\u53F8","startdate":"2022-08-27","newstitle":"\u8CC7\u6E90\u7BA1\u7406\u53F8","newssubtitle":"Department of Resource Management","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"442","istopdisplay":"none","href":"/aboutus/functions/442.html","target":null,"title":"\u6578\u4F4D\u653F\u5E9C\u53F8","startdate":"2022-08-27","newstitle":"\u6578\u4F4D\u653F\u5E9C\u53F8","newssubtitle":"Department of Digital Service","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"444","istopdisplay":"none","href":"/aboutus/functions/444.html","target":null,"title":"\u6C11\u4E3B\u7DB2\u7D61\u53F8","startdate":"2022-08-27","newstitle":"\u6C11\u4E3B\u7DB2\u7D61\u53F8","newssubtitle":"Department of Democracy Network","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"446","istopdisplay":"none","href":"/aboutus/functions/446.html","target":null,"title":"\u591A\u5143\u5275\u65B0\u53F8","startdate":"2022-08-27","newstitle":"\u591A\u5143\u5275\u65B0\u53F8","newssubtitle":"Department of Plural Innovation","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"448","istopdisplay":"none","href":"/aboutus/functions/448.html","target":null,"title":"\u79D8\u66F8\u8655","startdate":"2022-08-27","newstitle":"\u79D8\u66F8\u8655","newssubtitle":"Secretariat","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"452","istopdisplay":"none","href":"/aboutus/functions/452.html","target":null,"title":"\u4EBA\u4E8B\u8655","startdate":"2022-08-27","newstitle":"\u4EBA\u4E8B\u8655","newssubtitle":"Department of Personnel","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"454","istopdisplay":"none","href":"/aboutus/functions/454.html","target":null,"title":"\u653F\u98A8\u8655","startdate":"2022-08-27","newstitle":"\u653F\u98A8\u8655","newssubtitle":"Department of Civil Service Ethics","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"456","istopdisplay":"none","href":"/aboutus/functions/456.html","target":null,"title":"\u4E3B\u8A08\u8655","startdate":"2022-08-27","newstitle":"\u4E3B\u8A08\u8655","newssubtitle":"Department of Budget, Accounting and Statistics","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"458","istopdisplay":"none","href":"/aboutus/functions/458.html","target":null,"title":"\u8CC7\u8A0A\u8655","startdate":"2022-08-27","newstitle":"\u8CC7\u8A0A\u8655","newssubtitle":"Department of Information Management","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"460","istopdisplay":"none","href":"/aboutus/functions/460.html","target":null,"title":"\u6CD5\u5236\u8655","startdate":"2022-08-27","newstitle":"\u6CD5\u5236\u8655","newssubtitle":"Department of Legal Affairs","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"462","istopdisplay":"none","href":"/ADI/index.html","target":"_blank","title":"\u6578\u4F4D\u7522\u696D\u7F72","startdate":"2022-08-27","newstitle":"\u6578\u4F4D\u7522\u696D\u7F72","newssubtitle":"Administration for Digital Industries","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"464","istopdisplay":"none","href":"/ACS/index.html","target":"_blank","title":"\u8CC7\u901A\u5B89\u5168\u7F72","startdate":"2022-08-27","newstitle":"\u8CC7\u901A\u5B89\u5168\u7F72","newssubtitle":"Administration for Cyber Security","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null}]');
+        LeftMenu('622');
+        NewList('622');
+        var ListPage = '/_news/LabelList.html';
+        var listTag2Page = '/_news/listTag2.html';
+        $("#ns").load(ListPage, function () {
+            if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+        });
+    </script>
 
 </body>
 </html>

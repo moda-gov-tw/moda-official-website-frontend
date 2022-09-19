@@ -16,6 +16,7 @@
 <meta name="keywords" content="&#x901A;&#x50B3;&#x4E8B;&#x696D;&#x8FA6;&#x7406;&#x8CC7;&#x901A;&#x5B89;&#x5168;&#x9632;&#x8B77;" />
 <meta name="description" content="&#x78BA;&#x4FDD;&#x901A;&#x50B3;&#x7DB2;&#x8DEF;&#x5B89;&#x5168;&#x3001;&#x5177;&#x53EF;&#x4FE1;&#x8CF4;&#x53CA;&#x97CC;&#x6027;" />
 
+
     <!-- favicon -->
         <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.ico">
         <link rel="apple-touch-icon" sizes="192x192" href="/assets/img/touch-icon.png">
@@ -27,7 +28,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/assets/css/layout.css?v=tTGoCxztsQOvCiNhPuj18KZLmIGt1fwY3ntriCxklTI" media="all" />
+            <link rel="stylesheet" href="/assets/css/layout.css?v=e1P_5uuoUtjl1zChWah5ruj4KO91O9429nZDv13HEBE" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -56,18 +57,22 @@
     <header class="header">
         <!-- header -->
         <div b-jabq2d7uqs class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-jabq2d7uqs class="a11yBrickBar1 position-relative"><a b-jabq2d7uqs href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="&#x9801;&#x9762;&#x9802;&#x7AEF;&#x529F;&#x80FD;&#x5340;&#x584A;[&#x5FEB;&#x6377;&#x9375;Alt&#x2B;U]">:::</a></div></div>
-        <div b-jabq2d7uqs class="baseNav d-none d-xxl-block">
+
+        <!-- 若沒有社群鈕<div class="baseNav d-none d-xxl-block"> -->
+		<div b-jabq2d7uqs class="baseNav">
             <div b-jabq2d7uqs class="wrap1 mx-auto px-4 px-lg-5">
-                <div b-jabq2d7uqs class="d-md-flex justify-content-end align-items-center">
+				<div b-jabq2d7uqs class="d-flex justify-content-end align-items-top">
                     <!-- Top bar right -->
                     <div b-jabq2d7uqs class="d-flex align-items-top">
-                        <ul b-jabq2d7uqs class="nav">
+                        <!-- 社群鈕 -->
+                        <ul b-jabq2d7uqs class="nav d-none d-xxl-flex">
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/sitemap/546.html" title="&#x7DB2;&#x7AD9;&#x5C0E;&#x89BD;">
                                     <i b-jabq2d7uqs class="ci ci-sitemap"></i>
                                     <span b-jabq2d7uqs class="visually-hidden">&#x7DB2;&#x7AD9;&#x5C0E;&#x89BD;</span>
                                 </a>
                             </li>
+
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/en/index.html" title="English">
                                     <i b-jabq2d7uqs class="ci ci-en"></i>
@@ -76,7 +81,7 @@
                             </li>
                         </ul>
                         <!-- 切換字體大小 -->
-                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs">
+                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs d-none d-xxl-flex">
                             <button b-jabq2d7uqs class="fontSizeDdNow btn-dropdownNow dropdown-toggle text-white" type="button" id="fontSizeDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-order="2" title="&#x4E2D;&#x5B57;&#x7D1A;"><i b-jabq2d7uqs class="ci ci-font2"></i><span b-jabq2d7uqs class="visually-hidden">A</span></button>
                             <ul b-jabq2d7uqs class="dropdown-menu" aria-labelledby="fontSizeDropdown">
                                 <li b-jabq2d7uqs><button b-jabq2d7uqs class="dropdown-item" type="button" data-order="1" title="&#x5927;&#x5B57;&#x7D1A;">A<sup b-jabq2d7uqs>+</sup></button></li>
@@ -84,13 +89,19 @@
                             </ul>
                         </div>
                         <!-- 搜尋鈕 -->
-                        <div b-jabq2d7uqs class="nav-item navbar-icon-link">
+                        <div b-jabq2d7uqs class="nav-item navbar-icon-link d-none d-xxl-flex">
                             <a b-jabq2d7uqs href="javascript:;" id="S" accesskey="S" class="searchSwitchBtn searchSwitchBtnJs nav-link text-white px-3" title="&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;">
                                 <i b-jabq2d7uqs class="ci ci-scope"></i>
                                 <span b-jabq2d7uqs class="visually-hidden">&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;</span>
                             </a>
                         </div>
                     </div>
+                    <script>
+                        //detect header social btn
+                        if(!document.getElementsByClassName('navSocial').length){
+                            document.body.className += ' noHdSocial';
+                        }
+                    </script>
                 </div>
             </div>
         </div>
@@ -646,7 +657,7 @@
                 <div class="ftBtmRights">
                     <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero (另開新視窗)">CC0</a>No copyright reserved.</p>
 
-                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-18<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-19<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
             </div>
             <div class="col-12 col-md text-md-end">
@@ -686,9 +697,9 @@
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/assets/js/common.js?v=gDbLZglneWxIXoUIs8UczuclyHwWlQIsF2m5b1w6GZE"></script>
+            <script src="/assets/js/common.js?v=QZ5wUV6wmTSH_KN9q1eKJ9BC2A45ymIwOsi7Y6WeDXY"></script>
     <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=V2JExwd7xdBP26AtgTeajbqPQbpLse0DlFgoRNwRcdo"></script>
+    <script src="/js/site.js?v=r3b45PJ-Q435KvD8SAVTjXll8cXI-McYimLv_DaGbWU"></script>
     <script>
         webSiteLange('zh-tw' ,'MODA'  );
 
