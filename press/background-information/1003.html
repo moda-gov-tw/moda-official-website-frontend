@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/assets/css/layout.css?v=tTGoCxztsQOvCiNhPuj18KZLmIGt1fwY3ntriCxklTI" media="all" />
+            <link rel="stylesheet" href="/assets/css/layout.css?v=e1P_5uuoUtjl1zChWah5ruj4KO91O9429nZDv13HEBE" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -55,18 +55,22 @@
     <header class="header">
         <!-- header -->
         <div b-jabq2d7uqs class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-jabq2d7uqs class="a11yBrickBar1 position-relative"><a b-jabq2d7uqs href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="&#x9801;&#x9762;&#x9802;&#x7AEF;&#x529F;&#x80FD;&#x5340;&#x584A;[&#x5FEB;&#x6377;&#x9375;Alt&#x2B;U]">:::</a></div></div>
-        <div b-jabq2d7uqs class="baseNav d-none d-xxl-block">
+
+        <!-- 若沒有社群鈕<div class="baseNav d-none d-xxl-block"> -->
+		<div b-jabq2d7uqs class="baseNav">
             <div b-jabq2d7uqs class="wrap1 mx-auto px-4 px-lg-5">
-                <div b-jabq2d7uqs class="d-md-flex justify-content-end align-items-center">
+				<div b-jabq2d7uqs class="d-flex justify-content-end align-items-top">
                     <!-- Top bar right -->
                     <div b-jabq2d7uqs class="d-flex align-items-top">
-                        <ul b-jabq2d7uqs class="nav">
+                        <!-- 社群鈕 -->
+                        <ul b-jabq2d7uqs class="nav d-none d-xxl-flex">
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/sitemap/546.html" title="&#x7DB2;&#x7AD9;&#x5C0E;&#x89BD;">
                                     <i b-jabq2d7uqs class="ci ci-sitemap"></i>
                                     <span b-jabq2d7uqs class="visually-hidden">&#x7DB2;&#x7AD9;&#x5C0E;&#x89BD;</span>
                                 </a>
                             </li>
+
                             <li b-jabq2d7uqs class="nav-item">
                                 <a b-jabq2d7uqs class="nav-link px-3 text-white" href="/en/index.html" title="English">
                                     <i b-jabq2d7uqs class="ci ci-en"></i>
@@ -75,7 +79,7 @@
                             </li>
                         </ul>
                         <!-- 切換字體大小 -->
-                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs">
+                        <div b-jabq2d7uqs class="dropdown fontSizeDd fontSizeDdJs d-none d-xxl-flex">
                             <button b-jabq2d7uqs class="fontSizeDdNow btn-dropdownNow dropdown-toggle text-white" type="button" id="fontSizeDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-order="2" title="&#x4E2D;&#x5B57;&#x7D1A;"><i b-jabq2d7uqs class="ci ci-font2"></i><span b-jabq2d7uqs class="visually-hidden">A</span></button>
                             <ul b-jabq2d7uqs class="dropdown-menu" aria-labelledby="fontSizeDropdown">
                                 <li b-jabq2d7uqs><button b-jabq2d7uqs class="dropdown-item" type="button" data-order="1" title="&#x5927;&#x5B57;&#x7D1A;">A<sup b-jabq2d7uqs>+</sup></button></li>
@@ -83,13 +87,19 @@
                             </ul>
                         </div>
                         <!-- 搜尋鈕 -->
-                        <div b-jabq2d7uqs class="nav-item navbar-icon-link">
+                        <div b-jabq2d7uqs class="nav-item navbar-icon-link d-none d-xxl-flex">
                             <a b-jabq2d7uqs href="javascript:;" id="S" accesskey="S" class="searchSwitchBtn searchSwitchBtnJs nav-link text-white px-3" title="&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;">
                                 <i b-jabq2d7uqs class="ci ci-scope"></i>
                                 <span b-jabq2d7uqs class="visually-hidden">&#x5C55;&#x958B;&#x95DC;&#x9375;&#x5B57;&#x641C;&#x5C0B;</span>
                             </a>
                         </div>
                     </div>
+                    <script>
+                        //detect header social btn
+                        if(!document.getElementsByClassName('navSocial').length){
+                            document.body.className += ' noHdSocial';
+                        }
+                    </script>
                 </div>
             </div>
         </div>
@@ -432,91 +442,91 @@
                 </div>
 
                 <!-- 列表 -->
-                                <ul class="list4-2 list-group divider mb-5" id="ListTable">
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/press/background-information/2262.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='唐鳳部長線上視訊記者會逐字稿'>
-                                                <div class="listDate ms-md-3 order-md-2">2022-09-01</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        &#x5510;&#x9CF3;&#x90E8;&#x9577;&#x7DDA;&#x4E0A;&#x8996;&#x8A0A;&#x8A18;&#x8005;&#x6703;&#x9010;&#x5B57;&#x7A3F;
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://www-api.moda.gov.tw/File/Get/zGFZSqc4yfbe7yy" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='財團法人台灣網路資訊中心112年度預算案書.pdf（另開新視窗）'>
-                                                <div class="listDate ms-md-3 order-md-2">2022-08-31</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        &#x8CA1;&#x5718;&#x6CD5;&#x4EBA;&#x53F0;&#x7063;&#x7DB2;&#x8DEF;&#x8CC7;&#x8A0A;&#x4E2D;&#x5FC3;112&#x5E74;&#x5EA6;&#x9810;&#x7B97;&#x6848;&#x66F8;
-                                                            <span class="fileTypeI">PDF</span>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://www-api.moda.gov.tw/File/Get/ziwb6dMszjNZGi8" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='財團法人電信技術中心112年度預算案書.pdf（另開新視窗）'>
-                                                <div class="listDate ms-md-3 order-md-2">2022-08-31</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        &#x8CA1;&#x5718;&#x6CD5;&#x4EBA;&#x96FB;&#x4FE1;&#x6280;&#x8853;&#x4E2D;&#x5FC3;112&#x5E74;&#x5EA6;&#x9810;&#x7B97;&#x6848;&#x66F8;
-                                                            <span class="fileTypeI">PDF</span>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="https://www-api.moda.gov.tw/File/Get/FiMC3vmuV69lOTm" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='中央政府前瞻基礎建設計畫第4期特別預算案數位發展部主管部分.pdf（另開新視窗）'>
-                                                <div class="listDate ms-md-3 order-md-2">2022-08-31</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        &#x524D;&#x77BB;&#x57FA;&#x790E;&#x5EFA;&#x8A2D;&#x8A08;&#x756B;&#x7B2C;4&#x671F;&#x7279;&#x5225;&#x9810;&#x7B97;&#x6848;&#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;&#x4E3B;&#x7BA1;&#x90E8;&#x5206;
-                                                            <span class="fileTypeI">PDF</span>
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/press/background-information/2380.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='電電公會拜會唐鳳部長逐字稿'>
-                                                <div class="listDate ms-md-3 order-md-2">2022-08-31</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        &#x96FB;&#x96FB;&#x516C;&#x6703;&#x62DC;&#x6703;&#x5510;&#x9CF3;&#x90E8;&#x9577;&#x9010;&#x5B57;&#x7A3F;
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/press/background-information/2134.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='數位發展部112年主管預算書'>
-                                                <div class="listDate ms-md-3 order-md-2">2022-08-31</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        &#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;112&#x5E74;&#x4E3B;&#x7BA1;&#x9810;&#x7B97;&#x66F8;
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/press/background-information/2288.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='唐鳳部長拜訪中華民國無店面零售商業同業公會逐字稿'>
-                                                <div class="listDate ms-md-3 order-md-2">2022-08-30</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        &#x5510;&#x9CF3;&#x90E8;&#x9577;&#x62DC;&#x8A2A;&#x4E2D;&#x83EF;&#x6C11;&#x570B;&#x7121;&#x5E97;&#x9762;&#x96F6;&#x552E;&#x5546;&#x696D;&#x540C;&#x696D;&#x516C;&#x6703;&#x9010;&#x5B57;&#x7A3F;
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-group-item d-block bg-transparent px-0">
-                                            <a href="/press/background-information/2264.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='數位部揭牌媒體交流逐字稿'>
-                                                <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
-                                                <div class="col mb-0">
-                                                    <b class="title5 fw-normal">
-                                                        &#x6578;&#x4F4D;&#x90E8;&#x63ED;&#x724C;&#x5A92;&#x9AD4;&#x4EA4;&#x6D41;&#x9010;&#x5B57;&#x7A3F;
-                                                    </b>
-                                                </div>
-                                            </a>
-                                        </li>
-                                </ul>
+                                    <ul class="list4-2 list-group divider mb-5" id="ListTable">
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/press/background-information/2262.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='唐鳳部長線上視訊記者會逐字稿'>
+                                                    <div class="listDate ms-md-3 order-md-2">2022-09-01</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            &#x5510;&#x9CF3;&#x90E8;&#x9577;&#x7DDA;&#x4E0A;&#x8996;&#x8A0A;&#x8A18;&#x8005;&#x6703;&#x9010;&#x5B57;&#x7A3F;
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://www-api.moda.gov.tw/File/Get/zGFZSqc4yfbe7yy" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='財團法人台灣網路資訊中心112年度預算案書.pdf（另開新視窗）'>
+                                                    <div class="listDate ms-md-3 order-md-2">2022-08-31</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            &#x8CA1;&#x5718;&#x6CD5;&#x4EBA;&#x53F0;&#x7063;&#x7DB2;&#x8DEF;&#x8CC7;&#x8A0A;&#x4E2D;&#x5FC3;112&#x5E74;&#x5EA6;&#x9810;&#x7B97;&#x6848;&#x66F8;
+                                                                <span class="fileTypeI">PDF</span>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://www-api.moda.gov.tw/File/Get/ziwb6dMszjNZGi8" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='財團法人電信技術中心112年度預算案書.pdf（另開新視窗）'>
+                                                    <div class="listDate ms-md-3 order-md-2">2022-08-31</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            &#x8CA1;&#x5718;&#x6CD5;&#x4EBA;&#x96FB;&#x4FE1;&#x6280;&#x8853;&#x4E2D;&#x5FC3;112&#x5E74;&#x5EA6;&#x9810;&#x7B97;&#x6848;&#x66F8;
+                                                                <span class="fileTypeI">PDF</span>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="https://www-api.moda.gov.tw/File/Get/FiMC3vmuV69lOTm" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='中央政府前瞻基礎建設計畫第4期特別預算案數位發展部主管部分.pdf（另開新視窗）'>
+                                                    <div class="listDate ms-md-3 order-md-2">2022-08-31</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            &#x524D;&#x77BB;&#x57FA;&#x790E;&#x5EFA;&#x8A2D;&#x8A08;&#x756B;&#x7B2C;4&#x671F;&#x7279;&#x5225;&#x9810;&#x7B97;&#x6848;&#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;&#x4E3B;&#x7BA1;&#x90E8;&#x5206;
+                                                                <span class="fileTypeI">PDF</span>
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/press/background-information/2380.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='電電公會拜會唐鳳部長逐字稿'>
+                                                    <div class="listDate ms-md-3 order-md-2">2022-08-31</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            &#x96FB;&#x96FB;&#x516C;&#x6703;&#x62DC;&#x6703;&#x5510;&#x9CF3;&#x90E8;&#x9577;&#x9010;&#x5B57;&#x7A3F;
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/press/background-information/2134.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='數位發展部112年主管預算書'>
+                                                    <div class="listDate ms-md-3 order-md-2">2022-08-31</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            &#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;112&#x5E74;&#x4E3B;&#x7BA1;&#x9810;&#x7B97;&#x66F8;
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/press/background-information/2288.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='唐鳳部長拜訪中華民國無店面零售商業同業公會逐字稿'>
+                                                    <div class="listDate ms-md-3 order-md-2">2022-08-30</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            &#x5510;&#x9CF3;&#x90E8;&#x9577;&#x62DC;&#x8A2A;&#x4E2D;&#x83EF;&#x6C11;&#x570B;&#x7121;&#x5E97;&#x9762;&#x96F6;&#x552E;&#x5546;&#x696D;&#x540C;&#x696D;&#x516C;&#x6703;&#x9010;&#x5B57;&#x7A3F;
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/press/background-information/2264.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='數位部揭牌媒體交流逐字稿'>
+                                                    <div class="listDate ms-md-3 order-md-2">2022-08-27</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            &#x6578;&#x4F4D;&#x90E8;&#x63ED;&#x724C;&#x5A92;&#x9AD4;&#x4EA4;&#x6D41;&#x9010;&#x5B57;&#x7A3F;
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                    </ul>
                         <div class="pageBar mb-5 ">
     <div class="pageSet mb-4">
                         <div class="mRow">共<span class="totalData">8</span>筆資料</div>
@@ -745,7 +755,7 @@
                 <div class="ftBtmRights">
                     <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero (另開新視窗)">CC0</a>No copyright reserved.</p>
 
-                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-18<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-19<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
             </div>
             <div class="col-12 col-md text-md-end">
@@ -785,28 +795,27 @@
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/assets/js/common.js?v=gDbLZglneWxIXoUIs8UczuclyHwWlQIsF2m5b1w6GZE"></script>
+            <script src="/assets/js/common.js?v=QZ5wUV6wmTSH_KN9q1eKJ9BC2A45ymIwOsi7Y6WeDXY"></script>
     <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=V2JExwd7xdBP26AtgTeajbqPQbpLse0DlFgoRNwRcdo"></script>
+    <script src="/js/site.js?v=r3b45PJ-Q435KvD8SAVTjXll8cXI-McYimLv_DaGbWU"></script>
     <script>
         webSiteLange('zh-tw' ,'MODA'  );
 
     </script>
     
-<script>
-    var _JsData;
-    var S1 ;
-    var S2 ;
-    var _needtag = NeedTag('OneTextList');
-    _JsData = JSON.parse('[{"mainsn":"2262","istopdisplay":"none","href":"/press/background-information/2262.html","target":null,"title":"\u5510\u9CF3\u90E8\u9577\u7DDA\u4E0A\u8996\u8A0A\u8A18\u8005\u6703\u9010\u5B57\u7A3F","startdate":"2022-09-01","newstitle":"\u5510\u9CF3\u90E8\u9577\u7DDA\u4E0A\u8996\u8A0A\u8A18\u8005\u6703\u9010\u5B57\u7A3F","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"2220","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/zGFZSqc4yfbe7yy","target":null,"title":"\u8CA1\u5718\u6CD5\u4EBA\u53F0\u7063\u7DB2\u8DEF\u8CC7\u8A0A\u4E2D\u5FC3112\u5E74\u5EA6\u9810\u7B97\u6848\u66F8","startdate":"2022-08-31","newstitle":"\u8CA1\u5718\u6CD5\u4EBA\u53F0\u7063\u7DB2\u8DEF\u8CC7\u8A0A\u4E2D\u5FC3112\u5E74\u5EA6\u9810\u7B97\u6848\u66F8","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"2218","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/ziwb6dMszjNZGi8","target":null,"title":"\u8CA1\u5718\u6CD5\u4EBA\u96FB\u4FE1\u6280\u8853\u4E2D\u5FC3112\u5E74\u5EA6\u9810\u7B97\u6848\u66F8","startdate":"2022-08-31","newstitle":"\u8CA1\u5718\u6CD5\u4EBA\u96FB\u4FE1\u6280\u8853\u4E2D\u5FC3112\u5E74\u5EA6\u9810\u7B97\u6848\u66F8","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"2214","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/FiMC3vmuV69lOTm","target":null,"title":"\u524D\u77BB\u57FA\u790E\u5EFA\u8A2D\u8A08\u756B\u7B2C4\u671F\u7279\u5225\u9810\u7B97\u6848\u6578\u4F4D\u767C\u5C55\u90E8\u4E3B\u7BA1\u90E8\u5206","startdate":"2022-08-31","newstitle":"\u524D\u77BB\u57FA\u790E\u5EFA\u8A2D\u8A08\u756B\u7B2C4\u671F\u7279\u5225\u9810\u7B97\u6848\u6578\u4F4D\u767C\u5C55\u90E8\u4E3B\u7BA1\u90E8\u5206","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"2380","istopdisplay":"none","href":"/press/background-information/2380.html","target":null,"title":"\u96FB\u96FB\u516C\u6703\u62DC\u6703\u5510\u9CF3\u90E8\u9577\u9010\u5B57\u7A3F","startdate":"2022-08-31","newstitle":"\u96FB\u96FB\u516C\u6703\u62DC\u6703\u5510\u9CF3\u90E8\u9577\u9010\u5B57\u7A3F","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"2134","istopdisplay":"none","href":"/press/background-information/2134.html","target":null,"title":"\u6578\u4F4D\u767C\u5C55\u90E8112\u5E74\u4E3B\u7BA1\u9810\u7B97\u66F8","startdate":"2022-08-31","newstitle":"\u6578\u4F4D\u767C\u5C55\u90E8112\u5E74\u4E3B\u7BA1\u9810\u7B97\u66F8","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"2288","istopdisplay":"none","href":"/press/background-information/2288.html","target":null,"title":"\u5510\u9CF3\u90E8\u9577\u62DC\u8A2A\u4E2D\u83EF\u6C11\u570B\u7121\u5E97\u9762\u96F6\u552E\u5546\u696D\u540C\u696D\u516C\u6703\u9010\u5B57\u7A3F","startdate":"2022-08-30","newstitle":"\u5510\u9CF3\u90E8\u9577\u62DC\u8A2A\u4E2D\u83EF\u6C11\u570B\u7121\u5E97\u9762\u96F6\u552E\u5546\u696D\u540C\u696D\u516C\u6703\u9010\u5B57\u7A3F","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"},{"mainsn":"2264","istopdisplay":"none","href":"/press/background-information/2264.html","target":null,"title":"\u6578\u4F4D\u90E8\u63ED\u724C\u5A92\u9AD4\u4EA4\u6D41\u9010\u5B57\u7A3F","startdate":"2022-08-27","newstitle":"\u6578\u4F4D\u90E8\u63ED\u724C\u5A92\u9AD4\u4EA4\u6D41\u9010\u5B57\u7A3F","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none"}]');
-    LeftMenu('1003');
-   NewList('1003');
-    var ListPage = '/_news/OneTextList.html';
-    var listTag2Page = '/_news/listTag2.html';
-    $("#ns").load(ListPage, function () {
-        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
-    });
-</script>
+    <script>
+        var _JsData;
+        var _needtag = NeedTag('OneTextList');
+        var _Module = 'NEWS';
+        _JsData = JSON.parse('[{"mainsn":"2262","istopdisplay":"none","href":"/press/background-information/2262.html","target":null,"title":"\u5510\u9CF3\u90E8\u9577\u7DDA\u4E0A\u8996\u8A0A\u8A18\u8005\u6703\u9010\u5B57\u7A3F","startdate":"2022-09-01","newstitle":"\u5510\u9CF3\u90E8\u9577\u7DDA\u4E0A\u8996\u8A0A\u8A18\u8005\u6703\u9010\u5B57\u7A3F","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"2220","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/zGFZSqc4yfbe7yy","target":null,"title":"\u8CA1\u5718\u6CD5\u4EBA\u53F0\u7063\u7DB2\u8DEF\u8CC7\u8A0A\u4E2D\u5FC3112\u5E74\u5EA6\u9810\u7B97\u6848\u66F8","startdate":"2022-08-31","newstitle":"\u8CA1\u5718\u6CD5\u4EBA\u53F0\u7063\u7DB2\u8DEF\u8CC7\u8A0A\u4E2D\u5FC3112\u5E74\u5EA6\u9810\u7B97\u6848\u66F8","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"2218","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/ziwb6dMszjNZGi8","target":null,"title":"\u8CA1\u5718\u6CD5\u4EBA\u96FB\u4FE1\u6280\u8853\u4E2D\u5FC3112\u5E74\u5EA6\u9810\u7B97\u6848\u66F8","startdate":"2022-08-31","newstitle":"\u8CA1\u5718\u6CD5\u4EBA\u96FB\u4FE1\u6280\u8853\u4E2D\u5FC3112\u5E74\u5EA6\u9810\u7B97\u6848\u66F8","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"2214","istopdisplay":"none","href":"https://www-api.moda.gov.tw/File/Get/FiMC3vmuV69lOTm","target":null,"title":"\u524D\u77BB\u57FA\u790E\u5EFA\u8A2D\u8A08\u756B\u7B2C4\u671F\u7279\u5225\u9810\u7B97\u6848\u6578\u4F4D\u767C\u5C55\u90E8\u4E3B\u7BA1\u90E8\u5206","startdate":"2022-08-31","newstitle":"\u524D\u77BB\u57FA\u790E\u5EFA\u8A2D\u8A08\u756B\u7B2C4\u671F\u7279\u5225\u9810\u7B97\u6848\u6578\u4F4D\u767C\u5C55\u90E8\u4E3B\u7BA1\u90E8\u5206","newssubtitle":null,"filetypedisplay":"inline","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"PDF","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"2380","istopdisplay":"none","href":"/press/background-information/2380.html","target":null,"title":"\u96FB\u96FB\u516C\u6703\u62DC\u6703\u5510\u9CF3\u90E8\u9577\u9010\u5B57\u7A3F","startdate":"2022-08-31","newstitle":"\u96FB\u96FB\u516C\u6703\u62DC\u6703\u5510\u9CF3\u90E8\u9577\u9010\u5B57\u7A3F","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"2134","istopdisplay":"none","href":"/press/background-information/2134.html","target":null,"title":"\u6578\u4F4D\u767C\u5C55\u90E8112\u5E74\u4E3B\u7BA1\u9810\u7B97\u66F8","startdate":"2022-08-31","newstitle":"\u6578\u4F4D\u767C\u5C55\u90E8112\u5E74\u4E3B\u7BA1\u9810\u7B97\u66F8","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"2288","istopdisplay":"none","href":"/press/background-information/2288.html","target":null,"title":"\u5510\u9CF3\u90E8\u9577\u62DC\u8A2A\u4E2D\u83EF\u6C11\u570B\u7121\u5E97\u9762\u96F6\u552E\u5546\u696D\u540C\u696D\u516C\u6703\u9010\u5B57\u7A3F","startdate":"2022-08-30","newstitle":"\u5510\u9CF3\u90E8\u9577\u62DC\u8A2A\u4E2D\u83EF\u6C11\u570B\u7121\u5E97\u9762\u96F6\u552E\u5546\u696D\u540C\u696D\u516C\u6703\u9010\u5B57\u7A3F","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"2264","istopdisplay":"none","href":"/press/background-information/2264.html","target":null,"title":"\u6578\u4F4D\u90E8\u63ED\u724C\u5A92\u9AD4\u4EA4\u6D41\u9010\u5B57\u7A3F","startdate":"2022-08-27","newstitle":"\u6578\u4F4D\u90E8\u63ED\u724C\u5A92\u9AD4\u4EA4\u6D41\u9010\u5B57\u7A3F","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null}]');
+        LeftMenu('1003');
+        NewList('1003');
+        var ListPage = '/_news/OneTextList.html';
+        var listTag2Page = '/_news/listTag2.html';
+        $("#ns").load(ListPage, function () {
+            if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+        });
+    </script>
 
 </body>
 </html>
