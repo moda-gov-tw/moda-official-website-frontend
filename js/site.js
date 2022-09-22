@@ -1,4 +1,4 @@
-﻿//開發階段
+﻿//
 function GetApiUrl() {
     return "https://www-api.moda.gov.tw";
 }
@@ -76,7 +76,6 @@ function NewList(sqn) {
     }
 }
 function Search(p) {
-
     var displaycount = 15;
     var key = $("#sqn").val();
     if ($("#perPageShow").length > 0) {
@@ -199,22 +198,29 @@ function SearchJsonData(p) {
     {
         var S1 = $("#ns")[0].innerHTML;
         var S2 = $("#ca")[0].innerHTML;
+        var lang = $(".webSitelanguage").attr("lang");
+        if (lang == "en") { S1 = S1.replace("連結此問答", "Link in context"); }
         var displaycount = 15;
         if ($("#perPageShow").length > 0) {
             displaycount = $("#perPageShow").find(':selected').val();
         }
+
         var itemArray = [];
         var itemCoint = _JsData.length;
         var Page = p;
         var PageCount = displaycount;
         for (var i = 0; i < PageCount; i++) {
+         
             var _item = ((Page - 1) * PageCount) + i;
+            
             if (_item >= itemCoint) { }
             else {
                 var JsData = _JsData[_item];
                 var _s1 = "";
                 var _tags = "";
+              
                 _s1 = NewListReJson(S1, JsData);
+                
                 if (_needtag) {
                     if (JsData.tags.length > 0) {
                         $.each(JsData.tags, function (j, jitem) {
@@ -234,6 +240,7 @@ function SearchJsonData(p) {
         if (listType == "AccordionList") {
             itemHtml = "<div class='row d-flex justify-content-center'><div class='col'><div class='accordion mb-5' id='qa1'>";
         }
+       
         $.each(itemArray, function (i, item) {
             itemHtml += item;
         });
@@ -266,9 +273,7 @@ function ReLoadPagination(p, pageCount) {
 
     var lang = $(".webSitelanguage").attr("lang");
     var pendingcount = parseInt(5 / 2);
-    console.log("pendingcount" + pendingcount);
     var pageIndex = parseInt(p - 1);
-    console.log("pageIndex" + pageIndex);
     var start = 0;
     var end = 0;
     start = pageIndex - pendingcount < 0 ? 0 : pageIndex - pendingcount;
@@ -418,4 +423,20 @@ function LocalUrl(href, location) {
         }
     });
     return _chk;
+}
+
+
+function serials(tasks, callback) {
+    var step = tasks.length;
+    var result = [];
+    function check(r) {
+        result.push(r);
+        if (result.length === step) {
+            callback();
+        }
+    }
+
+    tasks.forEach(function (f) {
+        f(check);
+    });
 }
