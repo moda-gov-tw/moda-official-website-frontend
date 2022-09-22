@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/assets/css/layout.css?v=e1P_5uuoUtjl1zChWah5ruj4KO91O9429nZDv13HEBE" media="all" />
+            <link rel="stylesheet" href="/assets/css/layout.css?v=Jb87RomHjfdAnCJ8cVjf85KeZl9lD3pj4Vtt-raCdxU" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -47,15 +47,43 @@
     <noscript>
         Browser not support JavaScript
     </noscript>
+    <script>
+		//fontSize.theme change
+		var fontSize = localStorage['fontSize'];
+		var theme = localStorage['theme'];
+		switch(fontSize) {
+			case '1':
+				document.body.className += ' fontSizeL';
+				break;
+			case '2':
+				document.body.className += ' fontSizeM';
+				break;
+			case '3':
+				document.body.className += ' fontSizeS';
+				break;
+			default:
+				document.body.className += ' fontSizeM';
+				break;
+		}
+		switch(theme) {
+			case 'light':
+				document.documentElement.className += ' light';
+				break;
+			case 'dark':
+				document.documentElement.className += ' dark';
+				break;
+		}
+	</script>
 
     <div b-jabq2d7uqs class="loading" id="loading"><span b-jabq2d7uqs class="loadingLogo"></span></div>
 
     <a b-jabq2d7uqs href="#AC" id="startBrick" class="visually-hidden-focusable" title="To the central content area">To the central content area</a>
+
+
     <header class="header">
         <!-- header -->
         <div b-jabq2d7uqs class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-jabq2d7uqs class="a11yBrickBar1 position-relative"><a b-jabq2d7uqs href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="Go Top">:::</a></div></div>
 
-        <!-- 若沒有社群鈕<div class="baseNav d-none d-xxl-block"> -->
 		<div b-jabq2d7uqs class="baseNav">
             <div b-jabq2d7uqs class="wrap1 mx-auto px-4 px-lg-5">
 				<div b-jabq2d7uqs class="d-flex justify-content-end align-items-top">
@@ -151,7 +179,7 @@
                 <!-- 淺色版面的logo -->
                 <img class="mw-100 lightShow" src="/copyright/MODA/yoicufqx.ztw.svg" width="398" height="66" alt="Ministry of Digital Affairs: Index">
                 <!-- 深色版面的logo -->
-                <!-- <img class="mw-100 darkShow" src="~/assets/img/logo_moda-dark.svg" width="398" height="66" alt="數位發展部:回首頁"> -->
+                <img class="mw-100 darkShow" width="398" height="66" alt="Ministry of Digital Affairs: Index">
             </a>
             <b class="visually-hidden">moda</b>
         </h1>
@@ -754,7 +782,7 @@ Operations					</li>
                         <!-- 淺色版面的logo -->
                         <img class="mw-100 lightShow" src="/copyright/MODA/trqar24e.cr1.svg" width="340" height="56" alt="Ministry of Digital Affairs">
                         <!-- 深色版面的logo -->
-                        <!-- <img class="mw-100 darkShow" src="~/assets/img/logo_moda-dark2.svg" width="340" height="56" alt="數位發展部"> -->
+                        <img class="mw-100 darkShow" width="340" height="56" alt="Ministry of Digital Affairs">
                     </a>
                 </div>
                 <div class="ftBtmRights">
@@ -800,27 +828,54 @@ Operations					</li>
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/assets/js/common.js?v=QZ5wUV6wmTSH_KN9q1eKJ9BC2A45ymIwOsi7Y6WeDXY"></script>
-    <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=r3b45PJ-Q435KvD8SAVTjXll8cXI-McYimLv_DaGbWU"></script>
+            <script src="/assets/js/common.js?v=40yVVDptl4vhDrTXiZI_r9DhF29_kz5Hl-cT16wFIbs"></script>
+    <script src="/js/axios.min.js?v=iSkNRnKsHORmMCNgQIxzyW0QzHrWeko_lyVjyI78G2c"></script>
+    <script src="/js/site.js?v=YF5kmEC5GZA9y9BOzGi_24gk__BBsov-G_qFBiUuYos"></script>
     <script>
         webSiteLange('en' ,'MODA'  );
 
     </script>
     
-    <script>
-        var _JsData;
-        var _needtag = NeedTag('LabelList');
-        var _Module = 'NEWS';
-        _JsData = JSON.parse('[{"mainsn":"310","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/310.html","target":null,"title":"Preparation and Planning for Advanced Networks","startdate":"2022-08-27","newstitle":"Preparation and Planning for Advanced Networks","newssubtitle":"Preparation and Planning for advanced network infrastructure ,and the resilience of the public telecommunications network ","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"312","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/312.html","target":null,"title":"Planning for Communications Network Construction","startdate":"2022-08-27","newstitle":"Planning for Communications Network Construction","newssubtitle":"Planning for Communications Network Construction and Providing Subsidies","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"314","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/314.html","target":null,"title":"Telecommunications Infrastructure Protection","startdate":"2022-08-27","newstitle":"Telecommunications Infrastructure Protection","newssubtitle":"Planning and management of telecommunications Iinfrastructure protection","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Telecommunications infrastructure protection planning"},{"tag":"supervision, and management"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"368","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/368.html","target":null,"title":"Supervision and Management of Equal Access Services","startdate":"2022-08-27","newstitle":"Supervision and Management of Equal Access Services","newssubtitle":"Supervising, managing, and guiding of number portability service and equal access services","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Management of eEqual access service and number portability management"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"370","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/370.html","target":null,"title":"Reinforcing Telecommunications Universal Service","startdate":"2022-08-27","newstitle":"Reinforcing Telecommunications Universal Service","newssubtitle":"Planning, implementing, and supervising universal service of telecommunications providers","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"322","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/322.html","target":null,"title":"Telecommunications Network Technology Research","startdate":"2022-08-27","newstitle":"Telecommunications Network Technology Research","newssubtitle":"Referring to regulations and relevant information from other nations when planning domestic technical regulations","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Telecommunications network technology research"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"326","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/326.html","target":null,"title":"Management of  the Cybersecurity of Telecommunications","startdate":"2022-08-27","newstitle":"Management of  the Cybersecurity of Telecommunications","newssubtitle":"Ensuring the cybersecurity, reliability, and resilience of telecommunications ","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Main operations"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"332","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/332.html","target":null,"title":"Joint Defense of Communication Network Cyber Security","startdate":"2022-08-27","newstitle":"Joint Defense of Communication Network Cyber Security","newssubtitle":"Enhancing joint defense mechanisms for communication network cyber security","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Main operations"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"320","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/320.html","target":null,"title":"Mobilization Readiness Program and of Telecommunications","startdate":"2022-08-27","newstitle":"Mobilization Readiness Program and of Telecommunications","newssubtitle":"Affairs Relating to the Mobilization of Telecommunications ","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Affairs relating to the mobilization of telecommunications"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"324","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/324.html","target":null,"title":"Cybersecurity Inspections of Telecommunications Networks","startdate":"2022-08-27","newstitle":"Cybersecurity Inspections of Telecommunications Networks","newssubtitle":"Cybersecurity inspections for applications and modifications of telecommunications networks","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"328","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/328.html","target":null,"title":"Cybersecurity Regulations on Information Communications Equipment","startdate":"2022-08-27","newstitle":"Cybersecurity Regulations on Information Communications Equipment","newssubtitle":"Technical specification regulations, Regulations for Management of Testing Bodies and Certification Bodies","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Regulations Governing Testing and Certification Bodies of Information and Communications Equipment Used by Critical Telecommunications Infrastructure"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"330","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/330.html","target":null,"title":"List of Certification Laboratories","startdate":"2022-08-27","newstitle":"List of Certification Laboratories","newssubtitle":"List of qualified CTI information and communications equipment cyber security certification laboratories","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"372","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/372.html","target":null,"title":"Telecom Technology Center Supervision","startdate":"2022-08-27","newstitle":"Telecom Technology Center Supervision","newssubtitle":"Management of the Telecom Technology Center","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Telecom Technology Center supervision"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"338","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/338.html","target":null,"title":"Inspections of the Embedded Software of Mobile Phones","startdate":"2022-08-27","newstitle":"Inspections of the Embedded Software of Mobile Phones","newssubtitle":"Annual sampling inspection results of mobile phone embedded software cybersecurity","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Cybersecurity testing of mobile phones"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"356","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/smartphonerule/578.html","target":"_self","title":"Specifications for Mobile Phone Embedded Software","startdate":"2022-08-27","newstitle":"Specifications for Mobile Phone Embedded Software","newssubtitle":"Promotion and verification of Infocom Security Test Specifications for Embedded Software on Smartphone Systems  ","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null}]');
-        LeftMenu('467');
-        NewList('466');
-        var ListPage = '/_news/LabelList.html';
-        var listTag2Page = '/_news/listTag2.html';
-        $("#ns").load(ListPage, function () {
-            if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
-        });
-    </script>
+<script>
+    var _JsData;
+    var _needtag = NeedTag('LabelList');
+    var _Module = 'NEWS';
+
+    _JsData = JSON.parse('[{"mainsn":"310","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/310.html","target":null,"title":"Preparation and Planning for Advanced Networks","startdate":"2022-08-27","newstitle":"Preparation and Planning for Advanced Networks","newssubtitle":"Preparation and Planning for advanced network infrastructure ,and the resilience of the public telecommunications network ","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"312","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/312.html","target":null,"title":"Planning for Communications Network Construction","startdate":"2022-08-27","newstitle":"Planning for Communications Network Construction","newssubtitle":"Planning for Communications Network Construction and Providing Subsidies","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"314","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/314.html","target":null,"title":"Telecommunications Infrastructure Protection","startdate":"2022-08-27","newstitle":"Telecommunications Infrastructure Protection","newssubtitle":"Planning and management of telecommunications Iinfrastructure protection","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Telecommunications infrastructure protection planning"},{"tag":"supervision, and management"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"368","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/368.html","target":null,"title":"Supervision and Management of Equal Access Services","startdate":"2022-08-27","newstitle":"Supervision and Management of Equal Access Services","newssubtitle":"Supervising, managing, and guiding of number portability service and equal access services","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Management of eEqual access service and number portability management"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"370","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/370.html","target":null,"title":"Reinforcing Telecommunications Universal Service","startdate":"2022-08-27","newstitle":"Reinforcing Telecommunications Universal Service","newssubtitle":"Planning, implementing, and supervising universal service of telecommunications providers","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"322","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/322.html","target":null,"title":"Telecommunications Network Technology Research","startdate":"2022-08-27","newstitle":"Telecommunications Network Technology Research","newssubtitle":"Referring to regulations and relevant information from other nations when planning domestic technical regulations","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Telecommunications network technology research"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"326","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/326.html","target":null,"title":"Management of  the Cybersecurity of Telecommunications","startdate":"2022-08-27","newstitle":"Management of  the Cybersecurity of Telecommunications","newssubtitle":"Ensuring the cybersecurity, reliability, and resilience of telecommunications ","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Main operations"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"332","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/332.html","target":null,"title":"Joint Defense of Communication Network Cyber Security","startdate":"2022-08-27","newstitle":"Joint Defense of Communication Network Cyber Security","newssubtitle":"Enhancing joint defense mechanisms for communication network cyber security","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Main operations"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"320","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/320.html","target":null,"title":"Mobilization Readiness Program and of Telecommunications","startdate":"2022-08-27","newstitle":"Mobilization Readiness Program and of Telecommunications","newssubtitle":"Affairs Relating to the Mobilization of Telecommunications ","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Affairs relating to the mobilization of telecommunications"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"324","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/324.html","target":null,"title":"Cybersecurity Inspections of Telecommunications Networks","startdate":"2022-08-27","newstitle":"Cybersecurity Inspections of Telecommunications Networks","newssubtitle":"Cybersecurity inspections for applications and modifications of telecommunications networks","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"328","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/328.html","target":null,"title":"Cybersecurity Regulations on Information Communications Equipment","startdate":"2022-08-27","newstitle":"Cybersecurity Regulations on Information Communications Equipment","newssubtitle":"Technical specification regulations, Regulations for Management of Testing Bodies and Certification Bodies","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Regulations Governing Testing and Certification Bodies of Information and Communications Equipment Used by Critical Telecommunications Infrastructure"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"330","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/330.html","target":null,"title":"List of Certification Laboratories","startdate":"2022-08-27","newstitle":"List of Certification Laboratories","newssubtitle":"List of qualified CTI information and communications equipment cyber security certification laboratories","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"372","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/372.html","target":null,"title":"Telecom Technology Center Supervision","startdate":"2022-08-27","newstitle":"Telecom Technology Center Supervision","newssubtitle":"Management of the Telecom Technology Center","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Telecom Technology Center supervision"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"338","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/operations/338.html","target":null,"title":"Inspections of the Embedded Software of Mobile Phones","startdate":"2022-08-27","newstitle":"Inspections of the Embedded Software of Mobile Phones","newssubtitle":"Annual sampling inspection results of mobile phone embedded software cybersecurity","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Cybersecurity testing of mobile phones"}],"crosslinkdisplay":"none","schedule":null},{"mainsn":"356","istopdisplay":"none","href":"/en/digital-affairs/communications-cyber-resilience/smartphonerule/578.html","target":"_self","title":"Specifications for Mobile Phone Embedded Software","startdate":"2022-08-27","newstitle":"Specifications for Mobile Phone Embedded Software","newssubtitle":"Promotion and verification of Infocom Security Test Specifications for Embedded Software on Smartphone Systems  ","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null}]');
+    LeftMenu('467');
+    NewList('466');
+    var ListPage = '/_news/LabelList.html';
+    var listTag2Page = '/_news/listTag2.html';
+    $("#ns").load(ListPage, function () {
+        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+    });
+        if( 'LabelList' == 'AccordionList' && 'MODA'=='MODA' ){
+            var tag = location.hash;
+            var lang = 'en';
+            function tagclick(tag){
+                $("#qaH"+tag).children(".accordion-button").click();
+            }
+            if(tag.length > 1)
+            {
+                tag = tag.replace("#qaH","");
+                var tagIndex = _JsData.findIndex(x=>x.mainsn== tag);
+                if(tagIndex > -1)
+                {
+                    var _tagIndex = tagIndex +1;
+                    var p = Math.ceil(_tagIndex / 15) ;
+                    if(p > 1)
+                    {
+                         $("#ns").load(ListPage, function () {
+                             serials( SearchJsonData(p),  tagclick(tag));
+                         });
+                    }else{
+                        tagclick(tag);
+                    }
+                }
+            }
+        }
+
+</script>
 
 </body>
 </html>

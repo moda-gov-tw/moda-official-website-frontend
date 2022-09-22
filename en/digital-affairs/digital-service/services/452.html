@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/assets/css/layout.css?v=e1P_5uuoUtjl1zChWah5ruj4KO91O9429nZDv13HEBE" media="all" />
+            <link rel="stylesheet" href="/assets/css/layout.css?v=Jb87RomHjfdAnCJ8cVjf85KeZl9lD3pj4Vtt-raCdxU" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -47,15 +47,43 @@
     <noscript>
         Browser not support JavaScript
     </noscript>
+    <script>
+		//fontSize.theme change
+		var fontSize = localStorage['fontSize'];
+		var theme = localStorage['theme'];
+		switch(fontSize) {
+			case '1':
+				document.body.className += ' fontSizeL';
+				break;
+			case '2':
+				document.body.className += ' fontSizeM';
+				break;
+			case '3':
+				document.body.className += ' fontSizeS';
+				break;
+			default:
+				document.body.className += ' fontSizeM';
+				break;
+		}
+		switch(theme) {
+			case 'light':
+				document.documentElement.className += ' light';
+				break;
+			case 'dark':
+				document.documentElement.className += ' dark';
+				break;
+		}
+	</script>
 
     <div b-jabq2d7uqs class="loading" id="loading"><span b-jabq2d7uqs class="loadingLogo"></span></div>
 
     <a b-jabq2d7uqs href="#AC" id="startBrick" class="visually-hidden-focusable" title="To the central content area">To the central content area</a>
+
+
     <header class="header">
         <!-- header -->
         <div b-jabq2d7uqs class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-jabq2d7uqs class="a11yBrickBar1 position-relative"><a b-jabq2d7uqs href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="Go Top">:::</a></div></div>
 
-        <!-- 若沒有社群鈕<div class="baseNav d-none d-xxl-block"> -->
 		<div b-jabq2d7uqs class="baseNav">
             <div b-jabq2d7uqs class="wrap1 mx-auto px-4 px-lg-5">
 				<div b-jabq2d7uqs class="d-flex justify-content-end align-items-top">
@@ -151,7 +179,7 @@
                 <!-- 淺色版面的logo -->
                 <img class="mw-100 lightShow" src="/copyright/MODA/yoicufqx.ztw.svg" width="398" height="66" alt="Ministry of Digital Affairs: Index">
                 <!-- 深色版面的logo -->
-                <!-- <img class="mw-100 darkShow" src="~/assets/img/logo_moda-dark.svg" width="398" height="66" alt="數位發展部:回首頁"> -->
+                <img class="mw-100 darkShow" width="398" height="66" alt="Ministry of Digital Affairs: Index">
             </a>
             <b class="visually-hidden">moda</b>
         </h1>
@@ -760,7 +788,7 @@ Services					</li>
                         <!-- 淺色版面的logo -->
                         <img class="mw-100 lightShow" src="/copyright/MODA/trqar24e.cr1.svg" width="340" height="56" alt="Ministry of Digital Affairs">
                         <!-- 深色版面的logo -->
-                        <!-- <img class="mw-100 darkShow" src="~/assets/img/logo_moda-dark2.svg" width="340" height="56" alt="數位發展部"> -->
+                        <img class="mw-100 darkShow" width="340" height="56" alt="Ministry of Digital Affairs">
                     </a>
                 </div>
                 <div class="ftBtmRights">
@@ -806,27 +834,54 @@ Services					</li>
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/assets/js/common.js?v=QZ5wUV6wmTSH_KN9q1eKJ9BC2A45ymIwOsi7Y6WeDXY"></script>
-    <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=r3b45PJ-Q435KvD8SAVTjXll8cXI-McYimLv_DaGbWU"></script>
+            <script src="/assets/js/common.js?v=40yVVDptl4vhDrTXiZI_r9DhF29_kz5Hl-cT16wFIbs"></script>
+    <script src="/js/axios.min.js?v=iSkNRnKsHORmMCNgQIxzyW0QzHrWeko_lyVjyI78G2c"></script>
+    <script src="/js/site.js?v=YF5kmEC5GZA9y9BOzGi_24gk__BBsov-G_qFBiUuYos"></script>
     <script>
         webSiteLange('en' ,'MODA'  );
 
     </script>
     
-    <script>
-        var _JsData;
-        var _needtag = NeedTag('IcoList');
-        var _Module = 'NEWS';
-        _JsData = JSON.parse('[{"mainsn":"156","istopdisplay":"none","href":"https://www.gsp.gov.tw/","target":"_blank","title":"Goverment Service Platform","startdate":"2022-08-27","newstitle":"Goverment Service Platform","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/tspftx0x.u3o.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"154","istopdisplay":"none","href":"https://oid.nat.gov.tw/","target":"_blank","title":"Object Identifier","startdate":"2022-08-27","newstitle":"Object Identifier","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/132z152x.p1x.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"152","istopdisplay":"none","href":"https://xca.nat.gov.tw/","target":"_blank","title":"miXed organization Certification Authority","startdate":"2022-08-27","newstitle":"miXed organization Certification Authority","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/spi5dsl0.q10.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"150","istopdisplay":"none","href":"https://gcp.nat.gov.tw/","target":"_blank","title":"Government Certification Authority","startdate":"2022-08-27","newstitle":"Government Certification Authority","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/p0hfspeh.leb.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"148","istopdisplay":"none","href":"https://grca.nat.gov.tw/GRCAeng/index.html","target":"_blank","title":"Government Public Key Infrastructure","startdate":"2022-08-27","newstitle":"Government Public Key Infrastructure","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/3otdyp2j.4ib.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"146","istopdisplay":"none","href":"https://www.cns11643.gov.tw/index.jsp?ID=0\u0026SN=\u0026lang=en","target":"_blank","title":"Chinese National Standard Code","startdate":"2022-08-27","newstitle":"Chinese National Standard Code","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/unudg4my.la1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"144","istopdisplay":"none","href":"https://gsn.nat.gov.tw/eng/index.html","target":"_blank","title":"Government Service Network","startdate":"2022-08-27","newstitle":"Government Service Network","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/v0clqk1o.24g.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"142","istopdisplay":"none","href":"https://www.teg.org.tw/index.php?lg=eng","target":"_blank","title":"Taiwan E-Governance Research Center","startdate":"2022-08-27","newstitle":"Taiwan E-Governance Research Center","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/ki0iu5rf.iva.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"140","istopdisplay":"none","href":"https://training.nat.gov.tw/","target":"_blank","title":"Government Agency Information Competency Education and Training Platform","startdate":"2022-08-27","newstitle":"Government Agency Information Competency Education and Training Platform","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/u1ru00gx.4dz.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"138","istopdisplay":"none","href":"https://www.webguide.nat.gov.tw/en/","target":"_blank","title":"Webguide Service","startdate":"2022-08-27","newstitle":"Webguide Service","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/kk3gcnn4.43w.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"136","istopdisplay":"none","href":"https://accessibility.moda.gov.tw/","target":"_blank","title":"Web Accessibility Service","startdate":"2022-08-27","newstitle":"Web Accessibility Service","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/mmi0j1xs.4a4.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"132","istopdisplay":"none","href":"https://odf.nat.gov.tw","target":"_blank","title":"ODF Application Tools","startdate":"2022-08-27","newstitle":"ODF Application Tools","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/1tm5uyf0.c2e.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"130","istopdisplay":"none","href":"https://itaiwan.gov.tw/en/","target":"_blank","title":"Government Indoor Public Area Free WiFi Access","startdate":"2022-08-27","newstitle":"Government Indoor Public Area Free WiFi Access","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/tw32mo3x.eif.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"128","istopdisplay":"none","href":"https://www.gov.tw/News3.aspx?n=18\u0026sms=9062","target":"_blank","title":"MyEGov","startdate":"2022-08-27","newstitle":"MyEGov","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/adaclnwz.0ku.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null}]');
-        LeftMenu('453');
-        NewList('452');
-        var ListPage = '/_news/IcoList.html';
-        var listTag2Page = '/_news/listTag2.html';
-        $("#ns").load(ListPage, function () {
-            if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
-        });
-    </script>
+<script>
+    var _JsData;
+    var _needtag = NeedTag('IcoList');
+    var _Module = 'NEWS';
+
+    _JsData = JSON.parse('[{"mainsn":"156","istopdisplay":"none","href":"https://www.gsp.gov.tw/","target":"_blank","title":"Goverment Service Platform","startdate":"2022-08-27","newstitle":"Goverment Service Platform","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/tspftx0x.u3o.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"154","istopdisplay":"none","href":"https://oid.nat.gov.tw/","target":"_blank","title":"Object Identifier","startdate":"2022-08-27","newstitle":"Object Identifier","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/132z152x.p1x.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"152","istopdisplay":"none","href":"https://xca.nat.gov.tw/","target":"_blank","title":"miXed organization Certification Authority","startdate":"2022-08-27","newstitle":"miXed organization Certification Authority","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/spi5dsl0.q10.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"150","istopdisplay":"none","href":"https://gcp.nat.gov.tw/","target":"_blank","title":"Government Certification Authority","startdate":"2022-08-27","newstitle":"Government Certification Authority","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/p0hfspeh.leb.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"148","istopdisplay":"none","href":"https://grca.nat.gov.tw/GRCAeng/index.html","target":"_blank","title":"Government Public Key Infrastructure","startdate":"2022-08-27","newstitle":"Government Public Key Infrastructure","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/3otdyp2j.4ib.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"146","istopdisplay":"none","href":"https://www.cns11643.gov.tw/index.jsp?ID=0\u0026SN=\u0026lang=en","target":"_blank","title":"Chinese National Standard Code","startdate":"2022-08-27","newstitle":"Chinese National Standard Code","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/unudg4my.la1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"144","istopdisplay":"none","href":"https://gsn.nat.gov.tw/eng/index.html","target":"_blank","title":"Government Service Network","startdate":"2022-08-27","newstitle":"Government Service Network","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/v0clqk1o.24g.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"142","istopdisplay":"none","href":"https://www.teg.org.tw/index.php?lg=eng","target":"_blank","title":"Taiwan E-Governance Research Center","startdate":"2022-08-27","newstitle":"Taiwan E-Governance Research Center","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/ki0iu5rf.iva.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"140","istopdisplay":"none","href":"https://training.nat.gov.tw/","target":"_blank","title":"Government Agency Information Competency Education and Training Platform","startdate":"2022-08-27","newstitle":"Government Agency Information Competency Education and Training Platform","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/u1ru00gx.4dz.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"138","istopdisplay":"none","href":"https://www.webguide.nat.gov.tw/en/","target":"_blank","title":"Webguide Service","startdate":"2022-08-27","newstitle":"Webguide Service","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/kk3gcnn4.43w.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"136","istopdisplay":"none","href":"https://accessibility.moda.gov.tw/","target":"_blank","title":"Web Accessibility Service","startdate":"2022-08-27","newstitle":"Web Accessibility Service","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/mmi0j1xs.4a4.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"132","istopdisplay":"none","href":"https://odf.nat.gov.tw","target":"_blank","title":"ODF Application Tools","startdate":"2022-08-27","newstitle":"ODF Application Tools","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/1tm5uyf0.c2e.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"130","istopdisplay":"none","href":"https://itaiwan.gov.tw/en/","target":"_blank","title":"Government Indoor Public Area Free WiFi Access","startdate":"2022-08-27","newstitle":"Government Indoor Public Area Free WiFi Access","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/tw32mo3x.eif.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"128","istopdisplay":"none","href":"https://www.gov.tw/News3.aspx?n=18\u0026sms=9062","target":"_blank","title":"MyEGov","startdate":"2022-08-27","newstitle":"MyEGov","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/adaclnwz.0ku.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null}]');
+    LeftMenu('453');
+    NewList('452');
+    var ListPage = '/_news/IcoList.html';
+    var listTag2Page = '/_news/listTag2.html';
+    $("#ns").load(ListPage, function () {
+        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+    });
+        if( 'IcoList' == 'AccordionList' && 'MODA'=='MODA' ){
+            var tag = location.hash;
+            var lang = 'en';
+            function tagclick(tag){
+                $("#qaH"+tag).children(".accordion-button").click();
+            }
+            if(tag.length > 1)
+            {
+                tag = tag.replace("#qaH","");
+                var tagIndex = _JsData.findIndex(x=>x.mainsn== tag);
+                if(tagIndex > -1)
+                {
+                    var _tagIndex = tagIndex +1;
+                    var p = Math.ceil(_tagIndex / 15) ;
+                    if(p > 1)
+                    {
+                         $("#ns").load(ListPage, function () {
+                             serials( SearchJsonData(p),  tagclick(tag));
+                         });
+                    }else{
+                        tagclick(tag);
+                    }
+                }
+            }
+        }
+
+</script>
 
 </body>
 </html>
