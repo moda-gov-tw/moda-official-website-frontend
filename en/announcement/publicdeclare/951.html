@@ -27,7 +27,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/assets/css/layout.css?v=e1P_5uuoUtjl1zChWah5ruj4KO91O9429nZDv13HEBE" media="all" />
+            <link rel="stylesheet" href="/assets/css/layout.css?v=Jb87RomHjfdAnCJ8cVjf85KeZl9lD3pj4Vtt-raCdxU" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -48,15 +48,43 @@
     <noscript>
         Browser not support JavaScript
     </noscript>
+    <script>
+		//fontSize.theme change
+		var fontSize = localStorage['fontSize'];
+		var theme = localStorage['theme'];
+		switch(fontSize) {
+			case '1':
+				document.body.className += ' fontSizeL';
+				break;
+			case '2':
+				document.body.className += ' fontSizeM';
+				break;
+			case '3':
+				document.body.className += ' fontSizeS';
+				break;
+			default:
+				document.body.className += ' fontSizeM';
+				break;
+		}
+		switch(theme) {
+			case 'light':
+				document.documentElement.className += ' light';
+				break;
+			case 'dark':
+				document.documentElement.className += ' dark';
+				break;
+		}
+	</script>
 
     <div b-jabq2d7uqs class="loading" id="loading"><span b-jabq2d7uqs class="loadingLogo"></span></div>
 
     <a b-jabq2d7uqs href="#AC" id="startBrick" class="visually-hidden-focusable" title="To the central content area">To the central content area</a>
+
+
     <header class="header">
         <!-- header -->
         <div b-jabq2d7uqs class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-jabq2d7uqs class="a11yBrickBar1 position-relative"><a b-jabq2d7uqs href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="Go Top">:::</a></div></div>
 
-        <!-- 若沒有社群鈕<div class="baseNav d-none d-xxl-block"> -->
 		<div b-jabq2d7uqs class="baseNav">
             <div b-jabq2d7uqs class="wrap1 mx-auto px-4 px-lg-5">
 				<div b-jabq2d7uqs class="d-flex justify-content-end align-items-top">
@@ -152,7 +180,7 @@
                 <!-- 淺色版面的logo -->
                 <img class="mw-100 lightShow" src="/copyright/MODA/yoicufqx.ztw.svg" width="398" height="66" alt="Ministry of Digital Affairs: Index">
                 <!-- 深色版面的logo -->
-                <!-- <img class="mw-100 darkShow" src="~/assets/img/logo_moda-dark.svg" width="398" height="66" alt="數位發展部:回首頁"> -->
+                <img class="mw-100 darkShow" width="398" height="66" alt="Ministry of Digital Affairs: Index">
             </a>
             <b class="visually-hidden">moda</b>
         </h1>
@@ -585,7 +613,7 @@ Government Website Open Information Announcement					</li>
                         <!-- 淺色版面的logo -->
                         <img class="mw-100 lightShow" src="/copyright/MODA/trqar24e.cr1.svg" width="340" height="56" alt="Ministry of Digital Affairs">
                         <!-- 深色版面的logo -->
-                        <!-- <img class="mw-100 darkShow" src="~/assets/img/logo_moda-dark2.svg" width="340" height="56" alt="數位發展部"> -->
+                        <img class="mw-100 darkShow" width="340" height="56" alt="Ministry of Digital Affairs">
                     </a>
                 </div>
                 <div class="ftBtmRights">
@@ -631,9 +659,9 @@ Government Website Open Information Announcement					</li>
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/assets/js/common.js?v=QZ5wUV6wmTSH_KN9q1eKJ9BC2A45ymIwOsi7Y6WeDXY"></script>
-    <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=r3b45PJ-Q435KvD8SAVTjXll8cXI-McYimLv_DaGbWU"></script>
+            <script src="/assets/js/common.js?v=40yVVDptl4vhDrTXiZI_r9DhF29_kz5Hl-cT16wFIbs"></script>
+    <script src="/js/axios.min.js?v=iSkNRnKsHORmMCNgQIxzyW0QzHrWeko_lyVjyI78G2c"></script>
+    <script src="/js/site.js?v=YF5kmEC5GZA9y9BOzGi_24gk__BBsov-G_qFBiUuYos"></script>
     <script>
         webSiteLange('en' ,'MODA'  );
 

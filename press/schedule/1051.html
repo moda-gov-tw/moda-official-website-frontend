@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/assets/css/layout.css?v=e1P_5uuoUtjl1zChWah5ruj4KO91O9429nZDv13HEBE" media="all" />
+            <link rel="stylesheet" href="/assets/css/layout.css?v=Jb87RomHjfdAnCJ8cVjf85KeZl9lD3pj4Vtt-raCdxU" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -48,15 +48,43 @@
     <noscript>
         Your browser does not support JavaScript! &#x60A8;&#x7684;&#x700F;&#x89BD;&#x5668;&#x4E0D;&#x652F;&#x63F4;JavaScript&#x529F;&#x80FD;&#xFF0C;&#x82E5;&#x7DB2;&#x9801;&#x529F;&#x80FD;&#x7121;&#x6CD5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x6642;&#xFF0C;&#x8ACB;&#x958B;&#x555F;&#x700F;&#x89BD;&#x5668;JavaScript&#x72C0;&#x614B;&#x3002;
     </noscript>
+    <script>
+		//fontSize.theme change
+		var fontSize = localStorage['fontSize'];
+		var theme = localStorage['theme'];
+		switch(fontSize) {
+			case '1':
+				document.body.className += ' fontSizeL';
+				break;
+			case '2':
+				document.body.className += ' fontSizeM';
+				break;
+			case '3':
+				document.body.className += ' fontSizeS';
+				break;
+			default:
+				document.body.className += ' fontSizeM';
+				break;
+		}
+		switch(theme) {
+			case 'light':
+				document.documentElement.className += ' light';
+				break;
+			case 'dark':
+				document.documentElement.className += ' dark';
+				break;
+		}
+	</script>
 
     <div b-jabq2d7uqs class="loading" id="loading"><span b-jabq2d7uqs class="loadingLogo"></span></div>
 
     <a b-jabq2d7uqs href="#AC" id="startBrick" class="visually-hidden-focusable" title="&#x8DF3;&#x5230;&#x4E3B;&#x8981;&#x5167;&#x5BB9;">&#x8DF3;&#x5230;&#x4E3B;&#x8981;&#x5167;&#x5BB9;</a>
+
+
     <header class="header">
         <!-- header -->
         <div b-jabq2d7uqs class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-jabq2d7uqs class="a11yBrickBar1 position-relative"><a b-jabq2d7uqs href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="&#x9801;&#x9762;&#x9802;&#x7AEF;&#x529F;&#x80FD;&#x5340;&#x584A;[&#x5FEB;&#x6377;&#x9375;Alt&#x2B;U]">:::</a></div></div>
 
-        <!-- 若沒有社群鈕<div class="baseNav d-none d-xxl-block"> -->
 		<div b-jabq2d7uqs class="baseNav">
             <div b-jabq2d7uqs class="wrap1 mx-auto px-4 px-lg-5">
 				<div b-jabq2d7uqs class="d-flex justify-content-end align-items-top">
@@ -152,7 +180,7 @@
                 <!-- 淺色版面的logo -->
                 <img class="mw-100 lightShow" src="/copyright/MODA/dijzj4q4.ozn.svg" width="398" height="66" alt="&#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;&#xFF1A;&#x56DE;&#x9996;&#x9801;">
                 <!-- 深色版面的logo -->
-                <!-- <img class="mw-100 darkShow" src="~/assets/img/logo_moda-dark.svg" width="398" height="66" alt="數位發展部:回首頁"> -->
+                <img class="mw-100 darkShow" width="398" height="66" alt="&#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;&#xFF1A;&#x56DE;&#x9996;&#x9801;">
             </a>
             <b class="visually-hidden">&#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;</b>
         </h1>
@@ -937,7 +965,7 @@
                         <!-- 淺色版面的logo -->
                         <img class="mw-100 lightShow" src="/copyright/MODA/5nw5fc0u.eo2.svg" width="340" height="56" alt="moda &#x2014; &#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8; Ministry of Digital Affairs">
                         <!-- 深色版面的logo -->
-                        <!-- <img class="mw-100 darkShow" src="~/assets/img/logo_moda-dark2.svg" width="340" height="56" alt="數位發展部"> -->
+                        <img class="mw-100 darkShow" width="340" height="56" alt="moda &#x2014; &#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8; Ministry of Digital Affairs">
                     </a>
                 </div>
                 <div class="ftBtmRights">
@@ -983,27 +1011,54 @@
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/assets/js/common.js?v=QZ5wUV6wmTSH_KN9q1eKJ9BC2A45ymIwOsi7Y6WeDXY"></script>
-    <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=r3b45PJ-Q435KvD8SAVTjXll8cXI-McYimLv_DaGbWU"></script>
+            <script src="/assets/js/common.js?v=40yVVDptl4vhDrTXiZI_r9DhF29_kz5Hl-cT16wFIbs"></script>
+    <script src="/js/axios.min.js?v=iSkNRnKsHORmMCNgQIxzyW0QzHrWeko_lyVjyI78G2c"></script>
+    <script src="/js/site.js?v=YF5kmEC5GZA9y9BOzGi_24gk__BBsov-G_qFBiUuYos"></script>
     <script>
         webSiteLange('zh-tw' ,'MODA'  );
 
     </script>
     
-    <script>
-        var _JsData;
-        var _needtag = NeedTag('LabelList');
-        var _Module = 'Schedule';
-        _JsData = JSON.parse('[{"mainsn":"2506","istopdisplay":"none","href":"/press/schedule/2506.html","target":null,"title":"\u966A\u540C\u884C\u653F\u9662\u8607\u9662\u9577\u63A5\u898B\u6377\u514B\u53C3\u8B70\u9662\u300C\u6559\u80B2\u3001\u79D1\u5B78\u3001\u6587\u5316\u3001\u4EBA\u6B0A\u66A8\u8ACB\u9858\u59D4\u54E1\u6703\u300D\u5FB7\u62C9\u970D\u65AF\u4E3B\u5E2D\u4E00\u884C","startdate":"2022-09-21","newstitle":"\u966A\u540C\u884C\u653F\u9662\u8607\u9662\u9577\u63A5\u898B\u6377\u514B\u53C3\u8B70\u9662\u300C\u6559\u80B2\u3001\u79D1\u5B78\u3001\u6587\u5316\u3001\u4EBA\u6B0A\u66A8\u8ACB\u9858\u59D4\u54E1\u6703\u300D\u5FB7\u62C9\u970D\u65AF\u4E3B\u5E2D\u4E00\u884C","newssubtitle":"\u884C\u653F\u9662\u7389\u5C71\u5EF3","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":{"scheduledate":"2022\u5E749\u670822\u65E5","scheduletime":"\u4E0B\u5348 04:00","schedulenewsdisplay":"none","schedulenews":[],"schedulefiledisplay":"none","schedulefile":[],"schedulelinkdisplay":"none","schedulelink":[]}},{"mainsn":"2504","istopdisplay":"none","href":"/press/schedule/2504.html","target":null,"title":"\u51FA\u5E2D\u884C\u653F\u9662\u9662\u6703","startdate":"2022-09-21","newstitle":"\u51FA\u5E2D\u884C\u653F\u9662\u9662\u6703","newssubtitle":"\u884C\u653F\u9662\u7B2C1\u6703\u8B70\u5BA4","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":{"scheduledate":"2022\u5E749\u670822\u65E5","scheduletime":"\u4E0A\u5348 09:30","schedulenewsdisplay":"none","schedulenews":[],"schedulefiledisplay":"none","schedulefile":[],"schedulelinkdisplay":"none","schedulelink":[]}},{"mainsn":"2496","istopdisplay":"none","href":"/press/schedule/2496.html","target":null,"title":"CYBERSEC 2022\u81FA\u7063\u8CC7\u5B89\u5927\u6703\u6F14\u8B1B","startdate":"2022-09-21","newstitle":"CYBERSEC 2022\u81FA\u7063\u8CC7\u5B89\u5927\u6703\u6F14\u8B1B","newssubtitle":"\u81FA\u5317\u5357\u6E2F\u5C55\u89BD\u9928\u4E8C\u9928701\uFF0C\u81FA\u5317\u5E02\u5357\u6E2F\u5340\u7D93\u8CBF\u4E8C\u8DEF2\u865F7\u6A13","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":{"scheduledate":"2022\u5E749\u670821\u65E5","scheduletime":"\u4E0A\u5348 10:00","schedulenewsdisplay":"none","schedulenews":[],"schedulefiledisplay":"none","schedulefile":[],"schedulelinkdisplay":"none","schedulelink":[]}},{"mainsn":"2494","istopdisplay":"none","href":"/press/schedule/2494.html","target":null,"title":"\u51FA\u5E2DCYBERSEC 2022\u81FA\u7063\u8CC7\u5B89\u5927\u6703\u958B\u5E55","startdate":"2022-09-20","newstitle":"\u51FA\u5E2DCYBERSEC 2022\u81FA\u7063\u8CC7\u5B89\u5927\u6703\u958B\u5E55","newssubtitle":"\u81FA\u5317\u5357\u6E2F\u5C55\u89BD\u9928\u4E8C\u9928701\uFF0C\u81FA\u5317\u5E02\u5357\u6E2F\u5340\u7D93\u8CBF\u4E8C\u8DEF2\u865F7\u6A13","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":{"scheduledate":"2022\u5E749\u670820\u65E5","scheduletime":"\u4E0A\u5348 10:00","schedulenewsdisplay":"none","schedulenews":[],"schedulefiledisplay":"none","schedulefile":[],"schedulelinkdisplay":"none","schedulelink":[]}},{"mainsn":"2492","istopdisplay":"none","href":"/press/schedule/2492.html","target":null,"title":"\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u9AD4\u9A57","startdate":"2022-09-19","newstitle":"\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u9AD4\u9A57","newssubtitle":"\u81FA\u5317\u5E02\u5317\u6295\u904B\u52D5\u4E2D\u5FC3\uFF0C\u81FA\u5317\u5E02\u5317\u6295\u5340\u77F3\u724C\u8DEF\u4E00\u6BB539\u5DF7100\u865F","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":{"scheduledate":"2022\u5E749\u670819\u65E5","scheduletime":"\u4E0B\u5348 02:30","schedulenewsdisplay":"block","schedulenews":[{"newstitle":"\u5510\u9CF3\u90E8\u9577\uFF1A\u6578\u4F4D\u79D1\u6280\u7D50\u5408\u904B\u52D5\u548C\u904A\u6232   \u63EA\u5168\u6C11\u9AD4\u9A57\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703","newsurl":"/press/press-releases/2392.html","newscontext":"\u6578\u4F4D\u767C\u5C55\u90E8\u5510\u9CF3\u90E8\u9577\u4ECA\uFF0819\uFF09\u65E5\u51FA\u5E2D\u7531\u6578\u4F4D\u7522\u696D\u7F72\u4E3B\u8FA6\u76842022\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D\uFF0C\u5510\u90E8\u9577\u8868\u793A\uFF0C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u662F\u4EE5\u6578\u4F4D\u79D1\u6280\u7D50\u5408\u904B\u52D5\u548C\u904A\u6232\u7684\u7AF6\u8CFD\uFF0C\u5E0C\u671B\u85C9\u9019\u500B\u6D3B\u52D5\u63D0\u5347\u904B\u52D5\u53C3\u8207\u7684\u6A02\u8DA3\uFF0C\u589E\u9032\u5927\u773E\u5C0D\u904B\u52D5\u79D1\u6280\u7684\u8A8D\u8B58\uFF0C\u9032\u800C\u63D0\u5347\u5168\u6C11\u7684\u904B\u52D5\u610F\u9858\u3002\u5510\u90E8\u9577\u4ECA\u65E5\u5728\u6578\u4F4D\u7522\u696D\u7F72\u7F72\u9577\u5442\u6B63\u83EF\u966A\u540C\u4E0B\uFF0C\u524D\u5F80\u81FA\u5317\u5E02\u5317\u6295\u904B\u52D5\u4E2D\u5FC3......","imagedisplay":"block","newsimage":[{"title":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D1","filename":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D1","filetype":".jpg","url":"/copyright/MODA/kcyu1jpi.11n.jpg"},{"title":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D2","filename":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D2","filetype":".jpg","url":"/copyright/MODA/xbl4qmr2.hsp.jpg"},{"title":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D3","filename":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D3","filetype":".jpg","url":"/copyright/MODA/mhxcsccm.lmk.jpg"},{"title":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D4","filename":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D4","filetype":".jpg","url":"/copyright/MODA/eyk0dzci.hfc.jpg"},{"title":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D5","filename":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D5","filetype":".jpg","url":"/copyright/MODA/pknrfg1v.g0v.jpg"},{"title":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D6","filename":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D6","filetype":".jpg","url":"/copyright/MODA/3okis55i.4wv.jpg"},{"title":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D7","filename":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D7","filetype":".jpg","url":"/copyright/MODA/hmiq2u0z.srd.jpg"}],"videodisplay":"none","newsvideo":[]}],"schedulefiledisplay":"none","schedulefile":[],"schedulelinkdisplay":"none","schedulelink":[]}},{"mainsn":"2490","istopdisplay":"none","href":"/press/schedule/2490.html","target":null,"title":"\u51FA\u5E2D\u884C\u653F\u9662\u9662\u6703","startdate":"2022-09-15","newstitle":"\u51FA\u5E2D\u884C\u653F\u9662\u9662\u6703","newssubtitle":"\u884C\u653F\u9662\u7B2C1\u6703\u8B70\u5BA4","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":{"scheduledate":"2022\u5E749\u670815\u65E5","scheduletime":"\u4E0A\u5348 09:30","schedulenewsdisplay":"none","schedulenews":[],"schedulefiledisplay":"none","schedulefile":[],"schedulelinkdisplay":"none","schedulelink":[]}},{"mainsn":"2488","istopdisplay":"none","href":"/press/schedule/2488.html","target":null,"title":"\u63A5\u53D7\u5BF6\u5CF6\u806F\u64AD\u7DB2\u5C08\u8A2A","startdate":"2022-09-12","newstitle":"\u63A5\u53D7\u5BF6\u5CF6\u806F\u64AD\u7DB2\u5C08\u8A2A","newssubtitle":"\u81FA\u5317\u5E02\u4E2D\u6B63\u5340\u65B0\u751F\u5357\u8DEF\u4E00\u6BB556\u865F7\u6A13","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":{"scheduledate":"2022\u5E749\u670812\u65E5","scheduletime":"\u4E0A\u5348 08:00","schedulenewsdisplay":"none","schedulenews":[],"schedulefiledisplay":"none","schedulefile":[],"schedulelinkdisplay":"none","schedulelink":[]}}]');
-        LeftMenu('1051');
-        NewList('1051');
-        var ListPage = '/_news/LabelList.html';
-        var listTag2Page = '/_news/listTag2.html';
-        $("#ns").load(ListPage, function () {
-            if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
-        });
-    </script>
+<script>
+    var _JsData;
+    var _needtag = NeedTag('LabelList');
+    var _Module = 'Schedule';
+
+    _JsData = JSON.parse('[{"mainsn":"2506","istopdisplay":"none","href":"/press/schedule/2506.html","target":null,"title":"\u966A\u540C\u884C\u653F\u9662\u8607\u9662\u9577\u63A5\u898B\u6377\u514B\u53C3\u8B70\u9662\u300C\u6559\u80B2\u3001\u79D1\u5B78\u3001\u6587\u5316\u3001\u4EBA\u6B0A\u66A8\u8ACB\u9858\u59D4\u54E1\u6703\u300D\u5FB7\u62C9\u970D\u65AF\u4E3B\u5E2D\u4E00\u884C","startdate":"2022-09-21","newstitle":"\u966A\u540C\u884C\u653F\u9662\u8607\u9662\u9577\u63A5\u898B\u6377\u514B\u53C3\u8B70\u9662\u300C\u6559\u80B2\u3001\u79D1\u5B78\u3001\u6587\u5316\u3001\u4EBA\u6B0A\u66A8\u8ACB\u9858\u59D4\u54E1\u6703\u300D\u5FB7\u62C9\u970D\u65AF\u4E3B\u5E2D\u4E00\u884C","newssubtitle":"\u884C\u653F\u9662\u7389\u5C71\u5EF3","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":{"scheduledate":"2022\u5E749\u670822\u65E5","scheduletime":"\u4E0B\u5348 04:00","schedulenewsdisplay":"none","schedulenews":[],"schedulefiledisplay":"none","schedulefile":[],"schedulelinkdisplay":"none","schedulelink":[]}},{"mainsn":"2504","istopdisplay":"none","href":"/press/schedule/2504.html","target":null,"title":"\u51FA\u5E2D\u884C\u653F\u9662\u9662\u6703","startdate":"2022-09-21","newstitle":"\u51FA\u5E2D\u884C\u653F\u9662\u9662\u6703","newssubtitle":"\u884C\u653F\u9662\u7B2C1\u6703\u8B70\u5BA4","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":{"scheduledate":"2022\u5E749\u670822\u65E5","scheduletime":"\u4E0A\u5348 09:30","schedulenewsdisplay":"none","schedulenews":[],"schedulefiledisplay":"none","schedulefile":[],"schedulelinkdisplay":"none","schedulelink":[]}},{"mainsn":"2496","istopdisplay":"none","href":"/press/schedule/2496.html","target":null,"title":"CYBERSEC 2022\u81FA\u7063\u8CC7\u5B89\u5927\u6703\u6F14\u8B1B","startdate":"2022-09-21","newstitle":"CYBERSEC 2022\u81FA\u7063\u8CC7\u5B89\u5927\u6703\u6F14\u8B1B","newssubtitle":"\u81FA\u5317\u5357\u6E2F\u5C55\u89BD\u9928\u4E8C\u9928701\uFF0C\u81FA\u5317\u5E02\u5357\u6E2F\u5340\u7D93\u8CBF\u4E8C\u8DEF2\u865F7\u6A13","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":{"scheduledate":"2022\u5E749\u670821\u65E5","scheduletime":"\u4E0A\u5348 10:00","schedulenewsdisplay":"none","schedulenews":[],"schedulefiledisplay":"none","schedulefile":[],"schedulelinkdisplay":"none","schedulelink":[]}},{"mainsn":"2494","istopdisplay":"none","href":"/press/schedule/2494.html","target":null,"title":"\u51FA\u5E2DCYBERSEC 2022\u81FA\u7063\u8CC7\u5B89\u5927\u6703\u958B\u5E55","startdate":"2022-09-20","newstitle":"\u51FA\u5E2DCYBERSEC 2022\u81FA\u7063\u8CC7\u5B89\u5927\u6703\u958B\u5E55","newssubtitle":"\u81FA\u5317\u5357\u6E2F\u5C55\u89BD\u9928\u4E8C\u9928701\uFF0C\u81FA\u5317\u5E02\u5357\u6E2F\u5340\u7D93\u8CBF\u4E8C\u8DEF2\u865F7\u6A13","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":{"scheduledate":"2022\u5E749\u670820\u65E5","scheduletime":"\u4E0A\u5348 10:00","schedulenewsdisplay":"none","schedulenews":[],"schedulefiledisplay":"none","schedulefile":[],"schedulelinkdisplay":"none","schedulelink":[]}},{"mainsn":"2492","istopdisplay":"none","href":"/press/schedule/2492.html","target":null,"title":"\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u9AD4\u9A57","startdate":"2022-09-19","newstitle":"\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u9AD4\u9A57","newssubtitle":"\u81FA\u5317\u5E02\u5317\u6295\u904B\u52D5\u4E2D\u5FC3\uFF0C\u81FA\u5317\u5E02\u5317\u6295\u5340\u77F3\u724C\u8DEF\u4E00\u6BB539\u5DF7100\u865F","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":{"scheduledate":"2022\u5E749\u670819\u65E5","scheduletime":"\u4E0B\u5348 02:30","schedulenewsdisplay":"block","schedulenews":[{"newstitle":"\u5510\u9CF3\u90E8\u9577\uFF1A\u6578\u4F4D\u79D1\u6280\u7D50\u5408\u904B\u52D5\u548C\u904A\u6232   \u63EA\u5168\u6C11\u9AD4\u9A57\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703","newsurl":"/press/press-releases/2392.html","newscontext":"\u6578\u4F4D\u767C\u5C55\u90E8\u5510\u9CF3\u90E8\u9577\u4ECA\uFF0819\uFF09\u65E5\u51FA\u5E2D\u7531\u6578\u4F4D\u7522\u696D\u7F72\u4E3B\u8FA6\u76842022\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D\uFF0C\u5510\u90E8\u9577\u8868\u793A\uFF0C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u662F\u4EE5\u6578\u4F4D\u79D1\u6280\u7D50\u5408\u904B\u52D5\u548C\u904A\u6232\u7684\u7AF6\u8CFD\uFF0C\u5E0C\u671B\u85C9\u9019\u500B\u6D3B\u52D5\u63D0\u5347\u904B\u52D5\u53C3\u8207\u7684\u6A02\u8DA3\uFF0C\u589E\u9032\u5927\u773E\u5C0D\u904B\u52D5\u79D1\u6280\u7684\u8A8D\u8B58\uFF0C\u9032\u800C\u63D0\u5347\u5168\u6C11\u7684\u904B\u52D5\u610F\u9858\u3002\u5510\u90E8\u9577\u4ECA\u65E5\u5728\u6578\u4F4D\u7522\u696D\u7F72\u7F72\u9577\u5442\u6B63\u83EF\u966A\u540C\u4E0B\uFF0C\u524D\u5F80\u81FA\u5317\u5E02\u5317\u6295\u904B\u52D5\u4E2D\u5FC3......","imagedisplay":"block","newsimage":[{"title":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D1","filename":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D1","filetype":".jpg","url":"/copyright/MODA/kcyu1jpi.11n.jpg"},{"title":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D2","filename":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D2","filetype":".jpg","url":"/copyright/MODA/xbl4qmr2.hsp.jpg"},{"title":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D3","filename":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D3","filetype":".jpg","url":"/copyright/MODA/mhxcsccm.lmk.jpg"},{"title":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D4","filename":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D4","filetype":".jpg","url":"/copyright/MODA/eyk0dzci.hfc.jpg"},{"title":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D5","filename":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D5","filetype":".jpg","url":"/copyright/MODA/pknrfg1v.g0v.jpg"},{"title":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D6","filename":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D6","filetype":".jpg","url":"/copyright/MODA/3okis55i.4wv.jpg"},{"title":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D7","filename":"2022\u5E749\u670819\u65E5\u6578\u4F4D\u767C\u5C55\u90E8\u90E8\u9577\u5510\u9CF3\u9AD4\u9A57\u300C\u65B0\u73FE\u4EE3\u4E94\u9805\u79D1\u6280\u904B\u52D5\u6703\u300D7","filetype":".jpg","url":"/copyright/MODA/hmiq2u0z.srd.jpg"}],"videodisplay":"none","newsvideo":[]}],"schedulefiledisplay":"none","schedulefile":[],"schedulelinkdisplay":"none","schedulelink":[]}},{"mainsn":"2490","istopdisplay":"none","href":"/press/schedule/2490.html","target":null,"title":"\u51FA\u5E2D\u884C\u653F\u9662\u9662\u6703","startdate":"2022-09-15","newstitle":"\u51FA\u5E2D\u884C\u653F\u9662\u9662\u6703","newssubtitle":"\u884C\u653F\u9662\u7B2C1\u6703\u8B70\u5BA4","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":{"scheduledate":"2022\u5E749\u670815\u65E5","scheduletime":"\u4E0A\u5348 09:30","schedulenewsdisplay":"none","schedulenews":[],"schedulefiledisplay":"none","schedulefile":[],"schedulelinkdisplay":"none","schedulelink":[]}},{"mainsn":"2488","istopdisplay":"none","href":"/press/schedule/2488.html","target":null,"title":"\u63A5\u53D7\u5BF6\u5CF6\u806F\u64AD\u7DB2\u5C08\u8A2A","startdate":"2022-09-12","newstitle":"\u63A5\u53D7\u5BF6\u5CF6\u806F\u64AD\u7DB2\u5C08\u8A2A","newssubtitle":"\u81FA\u5317\u5E02\u4E2D\u6B63\u5340\u65B0\u751F\u5357\u8DEF\u4E00\u6BB556\u865F7\u6A13","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":{"scheduledate":"2022\u5E749\u670812\u65E5","scheduletime":"\u4E0A\u5348 08:00","schedulenewsdisplay":"none","schedulenews":[],"schedulefiledisplay":"none","schedulefile":[],"schedulelinkdisplay":"none","schedulelink":[]}}]');
+    LeftMenu('1051');
+    NewList('1051');
+    var ListPage = '/_news/LabelList.html';
+    var listTag2Page = '/_news/listTag2.html';
+    $("#ns").load(ListPage, function () {
+        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+    });
+        if( 'LabelList' == 'AccordionList' && 'MODA'=='MODA' ){
+            var tag = location.hash;
+            var lang = 'zh-tw';
+            function tagclick(tag){
+                $("#qaH"+tag).children(".accordion-button").click();
+            }
+            if(tag.length > 1)
+            {
+                tag = tag.replace("#qaH","");
+                var tagIndex = _JsData.findIndex(x=>x.mainsn== tag);
+                if(tagIndex > -1)
+                {
+                    var _tagIndex = tagIndex +1;
+                    var p = Math.ceil(_tagIndex / 15) ;
+                    if(p > 1)
+                    {
+                         $("#ns").load(ListPage, function () {
+                             serials( SearchJsonData(p),  tagclick(tag));
+                         });
+                    }else{
+                        tagclick(tag);
+                    }
+                }
+            }
+        }
+
+</script>
 
 </body>
 </html>
