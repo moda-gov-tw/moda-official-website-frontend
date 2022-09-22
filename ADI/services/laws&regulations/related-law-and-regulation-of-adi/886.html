@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/ADI/assets/css/layout.css?v=jZyKUu2SZ5ExvaVv1DVT7z8BKU_Z3Q98pCjfF9x0Ux8" media="all" />
+            <link rel="stylesheet" href="/ADI/assets/css/layout.css?v=77WrfN5QncvX3cL3QKZXhGgqz736ikoA-VixAGKFlIw" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -48,15 +48,43 @@
     <noscript>
         Your browser does not support JavaScript! &#x60A8;&#x7684;&#x700F;&#x89BD;&#x5668;&#x4E0D;&#x652F;&#x63F4;JavaScript&#x529F;&#x80FD;&#xFF0C;&#x82E5;&#x7DB2;&#x9801;&#x529F;&#x80FD;&#x7121;&#x6CD5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x6642;&#xFF0C;&#x8ACB;&#x958B;&#x555F;&#x700F;&#x89BD;&#x5668;JavaScript&#x72C0;&#x614B;&#x3002;
     </noscript>
+    <script>
+		//fontSize.theme change
+		var fontSize = localStorage['fontSize'];
+		var theme = localStorage['theme'];
+		switch(fontSize) {
+			case '1':
+				document.body.className += ' fontSizeL';
+				break;
+			case '2':
+				document.body.className += ' fontSizeM';
+				break;
+			case '3':
+				document.body.className += ' fontSizeS';
+				break;
+			default:
+				document.body.className += ' fontSizeM';
+				break;
+		}
+		switch(theme) {
+			case 'light':
+				document.documentElement.className += ' light';
+				break;
+			case 'dark':
+				document.documentElement.className += ' dark';
+				break;
+		}
+	</script>
 
     <div b-jabq2d7uqs class="loading" id="loading"><span b-jabq2d7uqs class="loadingLogo"></span></div>
 
     <a b-jabq2d7uqs href="#AC" id="startBrick" class="visually-hidden-focusable" title="&#x8DF3;&#x5230;&#x4E3B;&#x8981;&#x5167;&#x5BB9;">&#x8DF3;&#x5230;&#x4E3B;&#x8981;&#x5167;&#x5BB9;</a>
+
+
     <header class="header">
         <!-- header -->
         <div b-jabq2d7uqs class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-jabq2d7uqs class="a11yBrickBar1 position-relative"><a b-jabq2d7uqs href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="&#x9801;&#x9762;&#x9802;&#x7AEF;&#x529F;&#x80FD;&#x5340;&#x584A;[&#x5FEB;&#x6377;&#x9375;Alt&#x2B;U]">:::</a></div></div>
 
-        <!-- 若沒有社群鈕<div class="baseNav d-none d-xxl-block"> -->
 		<div b-jabq2d7uqs class="baseNav">
             <div b-jabq2d7uqs class="wrap1 mx-auto px-4 px-lg-5">
 				<div b-jabq2d7uqs class="d-flex justify-content-end align-items-top">
@@ -146,7 +174,7 @@
                 <!-- 淺色版面的logo -->
                 <img class="mw-100 lightShow" src="/copyright/ADI/uul03bj1.u2r.svg" width="398" height="66" alt="&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72;&#xFF1A;&#x56DE;&#x9996;&#x9801;">
                 <!-- 深色版面的logo -->
-                <!-- <img class="mw-100 darkShow" src="~/assets/img/logo_moda-dark.svg" width="398" height="66" alt="數位發展部:回首頁"> -->
+                <img class="mw-100 darkShow" width="398" height="66" alt="&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72;&#xFF1A;&#x56DE;&#x9996;&#x9801;">
             </a>
             <b class="visually-hidden">&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72;</b>
         </h1>
@@ -725,13 +753,13 @@
                         <!-- 淺色版面的logo -->
                         <img class="mw-100 lightShow" src="/copyright/ADI/h11s51od.gka.svg" width="340" height="56" alt="&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72; Administration for Digital Industries, moda">
                         <!-- 深色版面的logo -->
-                        <!-- <img class="mw-100 darkShow" src="~/assets/img/logo_moda-dark2.svg" width="340" height="56" alt="數位發展部"> -->
+                        <img class="mw-100 darkShow" width="340" height="56" alt="&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72; Administration for Digital Industries, moda">
                     </a>
                 </div>
                 <div class="ftBtmRights">
                     <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero (另開新視窗)">CC0</a>&nbsp;No copyright reserved.</p>
 
-                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-21<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-22<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
             </div>
             <div class="col-12 col-md text-md-end">
@@ -771,27 +799,54 @@
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/ADI/assets/js/common.js?v=zmUPd4Szq_QadYaZuW3Pv7TwZ8vgeEkcGx3qVI32v1M"></script>
-    <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=r3b45PJ-Q435KvD8SAVTjXll8cXI-McYimLv_DaGbWU"></script>
+            <script src="/ADI/assets/js/common.js?v=Bus3UWOcoFvrL_gwyp_4bbxWZ637Q841_Lm5yZdirAQ"></script>
+    <script src="/js/axios.min.js?v=iSkNRnKsHORmMCNgQIxzyW0QzHrWeko_lyVjyI78G2c"></script>
+    <script src="/js/site.js?v=YF5kmEC5GZA9y9BOzGi_24gk__BBsov-G_qFBiUuYos"></script>
     <script>
         webSiteLange('zh-tw' ,'ADI'  );
 
     </script>
     
-    <script>
-        var _JsData;
-        var _needtag = NeedTag('NoDateTextList');
-        var _Module = 'NEWS';
-        _JsData = JSON.parse('[{"mainsn":"1537","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080037","target":"_blank","title":"\u96FB\u5B50\u7C3D\u7AE0\u6CD5","startdate":"2022-08-27","newstitle":"\u96FB\u5B50\u7C3D\u7AE0\u6CD5","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1245","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080039\u0026kw=%e9%9b%bb%e5%ad%90%e7%b0%bd%e7%ab%a0%e6%b3%95","target":"_blank","title":"\u96FB\u5B50\u7C3D\u7AE0\u6CD5\u65BD\u884C\u7D30\u5247","startdate":"2022-08-27","newstitle":"\u96FB\u5B50\u7C3D\u7AE0\u6CD5\u65BD\u884C\u7D30\u5247","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1247","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080038","target":"_blank","title":"\u5916\u570B\u6191\u8B49\u6A5F\u69CB\u8A31\u53EF\u8FA6\u6CD5","startdate":"2022-08-27","newstitle":"\u5916\u570B\u6191\u8B49\u6A5F\u69CB\u8A31\u53EF\u8FA6\u6CD5","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1249","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080040","target":"_blank","title":"\u6191\u8B49\u5BE6\u52D9\u4F5C\u696D\u57FA\u6E96\u61C9\u8F09\u660E\u4E8B\u9805\u6E96\u5247","startdate":"2022-08-27","newstitle":"\u6191\u8B49\u5BE6\u52D9\u4F5C\u696D\u57FA\u6E96\u61C9\u8F09\u660E\u4E8B\u9805\u6E96\u5247","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1539","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL001228\u0026kw=%e9%9b%b6%e5%94%ae%e6%a5%ad%e7%ad%89%e7%b6%b2%e8%b7%af%e4%ba%a4%e6%98%93%e5%ae%9a%e5%9e%8b%e5%8c%96%e5%a5%91%e7%b4%84%e6%87%89%e8%a8%98%e8%bc%89%e5%8f%8a%e4%b8%8d%e5%be%97%e8%a8%98%e8%bc%89%e4%ba%8b%e9%a0%85","target":"_blank","title":"\u96F6\u552E\u696D\u7B49\u7DB2\u8DEF\u4EA4\u6613\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","startdate":"2022-08-27","newstitle":"\u96F6\u552E\u696D\u7B49\u7DB2\u8DEF\u4EA4\u6613\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1541","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080060","target":"_blank","title":"\u7B2C\u4E09\u65B9\u652F\u4ED8\u670D\u52D9\u696D\u9632\u5236\u6D17\u9322\u53CA\u6253\u64CA\u8CC7\u6050\u8FA6\u6CD5","startdate":"2022-08-27","newstitle":"\u7B2C\u4E09\u65B9\u652F\u4ED8\u670D\u52D9\u696D\u9632\u5236\u6D17\u9322\u53CA\u6253\u64CA\u8CC7\u6050\u8FA6\u6CD5","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1549","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL001229\u0026kw=%e7%ac%ac%e4%b8%89%e6%96%b9%e6%94%af%e4%bb%98%e6%9c%8d%e5%8b%99%e5%ae%9a%e5%9e%8b%e5%8c%96%e5%a5%91%e7%b4%84%e6%87%89%e8%a8%98%e8%bc%89%e5%8f%8a%e4%b8%8d%e5%be%97%e8%a8%98%e8%bc%89%e4%ba%8b%e9%a0%85","target":"_blank","title":"\u7B2C\u4E09\u65B9\u652F\u4ED8\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","startdate":"2022-08-27","newstitle":"\u7B2C\u4E09\u65B9\u652F\u4ED8\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1543","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080052\u0026flno=4","target":"_blank","title":"\u7DB2\u969B\u7DB2\u8DEF\u96F6\u552E\u696D\u53CA\u7DB2\u969B\u7DB2\u8DEF\u96F6\u552E\u670D\u52D9\u5E73\u53F0\u696D\u500B\u4EBA\u8CC7\u6599\u6A94\u6848\u5B89\u5168\u7DAD\u8B77\u8A08\u756B\u53CA\u696D\u52D9\u7D42\u6B62\u5F8C\u500B\u4EBA\u8CC7\u6599\u8655\u7406\u4F5C\u696D\u8FA6\u6CD5","startdate":"2022-08-27","newstitle":"\u7DB2\u969B\u7DB2\u8DEF\u96F6\u552E\u696D\u53CA\u7DB2\u969B\u7DB2\u8DEF\u96F6\u552E\u670D\u52D9\u5E73\u53F0\u696D\u500B\u4EBA\u8CC7\u6599\u6A94\u6848\u5B89\u5168\u7DAD\u8B77\u8A08\u756B\u53CA\u696D\u52D9\u7D42\u6B62\u5F8C\u500B\u4EBA\u8CC7\u6599\u8655\u7406\u4F5C\u696D\u8FA6\u6CD5","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1545","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL000876\u0026kw=%e7%b6%b2%e9%9a%9b%e7%b6%b2%e8%b7%af%e6%95%99%e5%ad%b8%e6%9c%8d%e5%8b%99%e5%ae%9a%e5%9e%8b%e5%8c%96%e5%a5%91%e7%b4%84%e6%87%89%e8%a8%98%e8%bc%89%e5%8f%8a%e4%b8%8d%e5%be%97%e8%a8%98%e8%bc%89%e4%ba%8b%e9%a0%85","target":"_blank","title":"\u7DB2\u969B\u7DB2\u8DEF\u6559\u5B78\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","startdate":"2022-08-27","newstitle":"\u7DB2\u969B\u7DB2\u8DEF\u6559\u5B78\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1257","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL000876#lawmenu","target":"_blank","title":"\u7DB2\u8DEF\u9023\u7DDA\u904A\u6232\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","startdate":"2022-08-27","newstitle":"\u7DB2\u8DEF\u9023\u7DDA\u904A\u6232\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1547","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL001209\u0026kw=%e7%b7%9a%e4%b8%8a%e9%81%8a%e6%88%b2%e9%bb%9e%ef%a5%a9%ef%bc%88%e5%8d%a1%ef%bc%89%e5%ae%9a%e5%9e%8b%e5%8c%96%ef%a4%89%e7%b4%84%e6%87%89%e8%a8%98%e8%bc%89%e5%8f%8a%ef%a5%a7%e5%be%97%e8%a8%98%e8%bc%89%e4%ba%8b%e9%a0%85","target":"_blank","title":"\u7DDA\u4E0A\u904A\u6232\u9EDE\uF969\uFF08\u5361\uFF09\u5B9A\u578B\u5316\uF909\u7D04\u61C9\u8A18\u8F09\u53CA\uF967\u5F97\u8A18\u8F09\u4E8B\u9805","startdate":"2022-08-27","newstitle":"\u7DDA\u4E0A\u904A\u6232\u9EDE\uF969\uFF08\u5361\uFF09\u5B9A\u578B\u5316\uF909\u7D04\u61C9\u8A18\u8F09\u53CA\uF967\u5F97\u8A18\u8F09\u4E8B\u9805","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1259","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0030086","target":"_blank","title":"\u904A\u6232\u8EDF\u9AD4\u5206\u7D1A\u7BA1\u7406\u8FA6\u6CD5","startdate":"2022-08-27","newstitle":"\u904A\u6232\u8EDF\u9AD4\u5206\u7D1A\u7BA1\u7406\u8FA6\u6CD5","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1740","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL000459#lawmenu","target":"_blank","title":"\u5373\u6642\u901A\u8A0A\u8EDF\u9AD4\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","startdate":"2022-08-27","newstitle":"\u5373\u6642\u901A\u8A0A\u8EDF\u9AD4\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null}]');
-        LeftMenu('886');
-        NewList('886');
-        var ListPage = '/_news/NoDateTextList.html';
-        var listTag2Page = '/_news/listTag2.html';
-        $("#ns").load(ListPage, function () {
-            if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
-        });
-    </script>
+<script>
+    var _JsData;
+    var _needtag = NeedTag('NoDateTextList');
+    var _Module = 'NEWS';
+
+    _JsData = JSON.parse('[{"mainsn":"1537","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080037","target":"_blank","title":"\u96FB\u5B50\u7C3D\u7AE0\u6CD5","startdate":"2022-08-27","newstitle":"\u96FB\u5B50\u7C3D\u7AE0\u6CD5","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1245","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080039\u0026kw=%e9%9b%bb%e5%ad%90%e7%b0%bd%e7%ab%a0%e6%b3%95","target":"_blank","title":"\u96FB\u5B50\u7C3D\u7AE0\u6CD5\u65BD\u884C\u7D30\u5247","startdate":"2022-08-27","newstitle":"\u96FB\u5B50\u7C3D\u7AE0\u6CD5\u65BD\u884C\u7D30\u5247","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1247","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080038","target":"_blank","title":"\u5916\u570B\u6191\u8B49\u6A5F\u69CB\u8A31\u53EF\u8FA6\u6CD5","startdate":"2022-08-27","newstitle":"\u5916\u570B\u6191\u8B49\u6A5F\u69CB\u8A31\u53EF\u8FA6\u6CD5","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1249","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080040","target":"_blank","title":"\u6191\u8B49\u5BE6\u52D9\u4F5C\u696D\u57FA\u6E96\u61C9\u8F09\u660E\u4E8B\u9805\u6E96\u5247","startdate":"2022-08-27","newstitle":"\u6191\u8B49\u5BE6\u52D9\u4F5C\u696D\u57FA\u6E96\u61C9\u8F09\u660E\u4E8B\u9805\u6E96\u5247","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1539","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL001228\u0026kw=%e9%9b%b6%e5%94%ae%e6%a5%ad%e7%ad%89%e7%b6%b2%e8%b7%af%e4%ba%a4%e6%98%93%e5%ae%9a%e5%9e%8b%e5%8c%96%e5%a5%91%e7%b4%84%e6%87%89%e8%a8%98%e8%bc%89%e5%8f%8a%e4%b8%8d%e5%be%97%e8%a8%98%e8%bc%89%e4%ba%8b%e9%a0%85","target":"_blank","title":"\u96F6\u552E\u696D\u7B49\u7DB2\u8DEF\u4EA4\u6613\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","startdate":"2022-08-27","newstitle":"\u96F6\u552E\u696D\u7B49\u7DB2\u8DEF\u4EA4\u6613\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1541","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080060","target":"_blank","title":"\u7B2C\u4E09\u65B9\u652F\u4ED8\u670D\u52D9\u696D\u9632\u5236\u6D17\u9322\u53CA\u6253\u64CA\u8CC7\u6050\u8FA6\u6CD5","startdate":"2022-08-27","newstitle":"\u7B2C\u4E09\u65B9\u652F\u4ED8\u670D\u52D9\u696D\u9632\u5236\u6D17\u9322\u53CA\u6253\u64CA\u8CC7\u6050\u8FA6\u6CD5","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1549","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL001229\u0026kw=%e7%ac%ac%e4%b8%89%e6%96%b9%e6%94%af%e4%bb%98%e6%9c%8d%e5%8b%99%e5%ae%9a%e5%9e%8b%e5%8c%96%e5%a5%91%e7%b4%84%e6%87%89%e8%a8%98%e8%bc%89%e5%8f%8a%e4%b8%8d%e5%be%97%e8%a8%98%e8%bc%89%e4%ba%8b%e9%a0%85","target":"_blank","title":"\u7B2C\u4E09\u65B9\u652F\u4ED8\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","startdate":"2022-08-27","newstitle":"\u7B2C\u4E09\u65B9\u652F\u4ED8\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1543","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=J0080052\u0026flno=4","target":"_blank","title":"\u7DB2\u969B\u7DB2\u8DEF\u96F6\u552E\u696D\u53CA\u7DB2\u969B\u7DB2\u8DEF\u96F6\u552E\u670D\u52D9\u5E73\u53F0\u696D\u500B\u4EBA\u8CC7\u6599\u6A94\u6848\u5B89\u5168\u7DAD\u8B77\u8A08\u756B\u53CA\u696D\u52D9\u7D42\u6B62\u5F8C\u500B\u4EBA\u8CC7\u6599\u8655\u7406\u4F5C\u696D\u8FA6\u6CD5","startdate":"2022-08-27","newstitle":"\u7DB2\u969B\u7DB2\u8DEF\u96F6\u552E\u696D\u53CA\u7DB2\u969B\u7DB2\u8DEF\u96F6\u552E\u670D\u52D9\u5E73\u53F0\u696D\u500B\u4EBA\u8CC7\u6599\u6A94\u6848\u5B89\u5168\u7DAD\u8B77\u8A08\u756B\u53CA\u696D\u52D9\u7D42\u6B62\u5F8C\u500B\u4EBA\u8CC7\u6599\u8655\u7406\u4F5C\u696D\u8FA6\u6CD5","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1545","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL000876\u0026kw=%e7%b6%b2%e9%9a%9b%e7%b6%b2%e8%b7%af%e6%95%99%e5%ad%b8%e6%9c%8d%e5%8b%99%e5%ae%9a%e5%9e%8b%e5%8c%96%e5%a5%91%e7%b4%84%e6%87%89%e8%a8%98%e8%bc%89%e5%8f%8a%e4%b8%8d%e5%be%97%e8%a8%98%e8%bc%89%e4%ba%8b%e9%a0%85","target":"_blank","title":"\u7DB2\u969B\u7DB2\u8DEF\u6559\u5B78\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","startdate":"2022-08-27","newstitle":"\u7DB2\u969B\u7DB2\u8DEF\u6559\u5B78\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1257","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL000876#lawmenu","target":"_blank","title":"\u7DB2\u8DEF\u9023\u7DDA\u904A\u6232\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","startdate":"2022-08-27","newstitle":"\u7DB2\u8DEF\u9023\u7DDA\u904A\u6232\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1547","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL001209\u0026kw=%e7%b7%9a%e4%b8%8a%e9%81%8a%e6%88%b2%e9%bb%9e%ef%a5%a9%ef%bc%88%e5%8d%a1%ef%bc%89%e5%ae%9a%e5%9e%8b%e5%8c%96%ef%a4%89%e7%b4%84%e6%87%89%e8%a8%98%e8%bc%89%e5%8f%8a%ef%a5%a7%e5%be%97%e8%a8%98%e8%bc%89%e4%ba%8b%e9%a0%85","target":"_blank","title":"\u7DDA\u4E0A\u904A\u6232\u9EDE\uF969\uFF08\u5361\uFF09\u5B9A\u578B\u5316\uF909\u7D04\u61C9\u8A18\u8F09\u53CA\uF967\u5F97\u8A18\u8F09\u4E8B\u9805","startdate":"2022-08-27","newstitle":"\u7DDA\u4E0A\u904A\u6232\u9EDE\uF969\uFF08\u5361\uFF09\u5B9A\u578B\u5316\uF909\u7D04\u61C9\u8A18\u8F09\u53CA\uF967\u5F97\u8A18\u8F09\u4E8B\u9805","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1259","istopdisplay":"none","href":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0030086","target":"_blank","title":"\u904A\u6232\u8EDF\u9AD4\u5206\u7D1A\u7BA1\u7406\u8FA6\u6CD5","startdate":"2022-08-27","newstitle":"\u904A\u6232\u8EDF\u9AD4\u5206\u7D1A\u7BA1\u7406\u8FA6\u6CD5","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null},{"mainsn":"1740","istopdisplay":"none","href":"https://law.moea.gov.tw/LawContent.aspx?id=GL000459#lawmenu","target":"_blank","title":"\u5373\u6642\u901A\u8A0A\u8EDF\u9AD4\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","startdate":"2022-08-27","newstitle":"\u5373\u6642\u901A\u8A0A\u8EDF\u9AD4\u670D\u52D9\u5B9A\u578B\u5316\u5951\u7D04\u61C9\u8A18\u8F09\u53CA\u4E0D\u5F97\u8A18\u8F09\u4E8B\u9805","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"inline","schedule":null}]');
+    LeftMenu('886');
+    NewList('886');
+    var ListPage = '/_news/NoDateTextList.html';
+    var listTag2Page = '/_news/listTag2.html';
+    $("#ns").load(ListPage, function () {
+        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+    });
+        if( 'NoDateTextList' == 'AccordionList' && 'ADI'=='MODA' ){
+            var tag = location.hash;
+            var lang = 'zh-tw';
+            function tagclick(tag){
+                $("#qaH"+tag).children(".accordion-button").click();
+            }
+            if(tag.length > 1)
+            {
+                tag = tag.replace("#qaH","");
+                var tagIndex = _JsData.findIndex(x=>x.mainsn== tag);
+                if(tagIndex > -1)
+                {
+                    var _tagIndex = tagIndex +1;
+                    var p = Math.ceil(_tagIndex / 15) ;
+                    if(p > 1)
+                    {
+                         $("#ns").load(ListPage, function () {
+                             serials( SearchJsonData(p),  tagclick(tag));
+                         });
+                    }else{
+                        tagclick(tag);
+                    }
+                }
+            }
+        }
+
+</script>
 
 </body>
 </html>

@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/ADI/assets/css/layout.css?v=jZyKUu2SZ5ExvaVv1DVT7z8BKU_Z3Q98pCjfF9x0Ux8" media="all" />
+            <link rel="stylesheet" href="/ADI/assets/css/layout.css?v=77WrfN5QncvX3cL3QKZXhGgqz736ikoA-VixAGKFlIw" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -48,15 +48,43 @@
     <noscript>
         Your browser does not support JavaScript! &#x60A8;&#x7684;&#x700F;&#x89BD;&#x5668;&#x4E0D;&#x652F;&#x63F4;JavaScript&#x529F;&#x80FD;&#xFF0C;&#x82E5;&#x7DB2;&#x9801;&#x529F;&#x80FD;&#x7121;&#x6CD5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x6642;&#xFF0C;&#x8ACB;&#x958B;&#x555F;&#x700F;&#x89BD;&#x5668;JavaScript&#x72C0;&#x614B;&#x3002;
     </noscript>
+    <script>
+		//fontSize.theme change
+		var fontSize = localStorage['fontSize'];
+		var theme = localStorage['theme'];
+		switch(fontSize) {
+			case '1':
+				document.body.className += ' fontSizeL';
+				break;
+			case '2':
+				document.body.className += ' fontSizeM';
+				break;
+			case '3':
+				document.body.className += ' fontSizeS';
+				break;
+			default:
+				document.body.className += ' fontSizeM';
+				break;
+		}
+		switch(theme) {
+			case 'light':
+				document.documentElement.className += ' light';
+				break;
+			case 'dark':
+				document.documentElement.className += ' dark';
+				break;
+		}
+	</script>
 
     <div b-jabq2d7uqs class="loading" id="loading"><span b-jabq2d7uqs class="loadingLogo"></span></div>
 
     <a b-jabq2d7uqs href="#AC" id="startBrick" class="visually-hidden-focusable" title="&#x8DF3;&#x5230;&#x4E3B;&#x8981;&#x5167;&#x5BB9;">&#x8DF3;&#x5230;&#x4E3B;&#x8981;&#x5167;&#x5BB9;</a>
+
+
     <header class="header">
         <!-- header -->
         <div b-jabq2d7uqs class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-jabq2d7uqs class="a11yBrickBar1 position-relative"><a b-jabq2d7uqs href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="&#x9801;&#x9762;&#x9802;&#x7AEF;&#x529F;&#x80FD;&#x5340;&#x584A;[&#x5FEB;&#x6377;&#x9375;Alt&#x2B;U]">:::</a></div></div>
 
-        <!-- 若沒有社群鈕<div class="baseNav d-none d-xxl-block"> -->
 		<div b-jabq2d7uqs class="baseNav">
             <div b-jabq2d7uqs class="wrap1 mx-auto px-4 px-lg-5">
 				<div b-jabq2d7uqs class="d-flex justify-content-end align-items-top">
@@ -146,7 +174,7 @@
                 <!-- 淺色版面的logo -->
                 <img class="mw-100 lightShow" src="/copyright/ADI/uul03bj1.u2r.svg" width="398" height="66" alt="&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72;&#xFF1A;&#x56DE;&#x9996;&#x9801;">
                 <!-- 深色版面的logo -->
-                <!-- <img class="mw-100 darkShow" src="~/assets/img/logo_moda-dark.svg" width="398" height="66" alt="數位發展部:回首頁"> -->
+                <img class="mw-100 darkShow" width="398" height="66" alt="&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72;&#xFF1A;&#x56DE;&#x9996;&#x9801;">
             </a>
             <b class="visually-hidden">&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72;</b>
         </h1>
@@ -684,13 +712,13 @@
                         <!-- 淺色版面的logo -->
                         <img class="mw-100 lightShow" src="/copyright/ADI/h11s51od.gka.svg" width="340" height="56" alt="&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72; Administration for Digital Industries, moda">
                         <!-- 深色版面的logo -->
-                        <!-- <img class="mw-100 darkShow" src="~/assets/img/logo_moda-dark2.svg" width="340" height="56" alt="數位發展部"> -->
+                        <img class="mw-100 darkShow" width="340" height="56" alt="&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72; Administration for Digital Industries, moda">
                     </a>
                 </div>
                 <div class="ftBtmRights">
                     <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero (另開新視窗)">CC0</a>&nbsp;No copyright reserved.</p>
 
-                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-21<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-09-22<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
             </div>
             <div class="col-12 col-md text-md-end">
@@ -730,27 +758,54 @@
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/ADI/assets/js/common.js?v=zmUPd4Szq_QadYaZuW3Pv7TwZ8vgeEkcGx3qVI32v1M"></script>
-    <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
-    <script src="/js/site.js?v=r3b45PJ-Q435KvD8SAVTjXll8cXI-McYimLv_DaGbWU"></script>
+            <script src="/ADI/assets/js/common.js?v=Bus3UWOcoFvrL_gwyp_4bbxWZ637Q841_Lm5yZdirAQ"></script>
+    <script src="/js/axios.min.js?v=iSkNRnKsHORmMCNgQIxzyW0QzHrWeko_lyVjyI78G2c"></script>
+    <script src="/js/site.js?v=YF5kmEC5GZA9y9BOzGi_24gk__BBsov-G_qFBiUuYos"></script>
     <script>
         webSiteLange('zh-tw' ,'ADI'  );
 
     </script>
     
-    <script>
-        var _JsData;
-        var _needtag = NeedTag('OneTextList');
-        var _Module = 'NEWS';
-        _JsData = JSON.parse('[{"mainsn":"1575","istopdisplay":"none","href":"/ADI/services/apply-serivces/regulations-for-industrial-innovation/1575.html","target":null,"title":"\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u7814\u767C\u6D3B\u52D5\u5BE9\u67E5\u8A8D\u5B9A\u7533\u8ACB\u6587\u4EF6\uFF08\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u7814\u7A76\u767C\u5C55\u652F\u51FA\u9069\u7528\u6295\u8CC7\u62B5\u6E1B\u8FA6\u6CD5\u7B2C14\u689D\uFF09","startdate":"2022-08-27","newstitle":"\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u7814\u767C\u6D3B\u52D5\u5BE9\u67E5\u8A8D\u5B9A\u7533\u8ACB\u6587\u4EF6\uFF08\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u7814\u7A76\u767C\u5C55\u652F\u51FA\u9069\u7528\u6295\u8CC7\u62B5\u6E1B\u8FA6\u6CD5\u7B2C14\u689D\uFF09","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1573","istopdisplay":"none","href":"/ADI/services/apply-serivces/regulations-for-industrial-innovation/1573.html","target":null,"title":"\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u7814\u767C\u652F\u51FA\u5C08\u6848\u8A8D\u5B9A\u7533\u8ACB\u66F8(\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u7814\u7A76\u767C\u5C55\u652F\u51FA\u9069\u7528\u6295\u8CC7\u62B5\u6E1B\u8FA6\u6CD5\u7B2C9\u689D)","startdate":"2022-08-27","newstitle":"\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u7814\u767C\u652F\u51FA\u5C08\u6848\u8A8D\u5B9A\u7533\u8ACB\u66F8(\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u7814\u7A76\u767C\u5C55\u652F\u51FA\u9069\u7528\u6295\u8CC7\u62B5\u6E1B\u8FA6\u6CD5\u7B2C9\u689D)","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1563","istopdisplay":"none","href":"/ADI/services/apply-serivces/regulations-for-industrial-innovation/1563.html","target":null,"title":"\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u6295\u8CC7\u667A\u6167\u6A5F\u68B0\u6216\u7B2C\u4E94\u4EE3\u884C\u52D5\u901A\u8A0A\u7CFB\u7D71\u62B5\u6E1B\u8FA6\u6CD5","startdate":"2022-08-27","newstitle":"\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u6295\u8CC7\u667A\u6167\u6A5F\u68B0\u6216\u7B2C\u4E94\u4EE3\u884C\u52D5\u901A\u8A0A\u7CFB\u7D71\u62B5\u6E1B\u8FA6\u6CD5","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1565","istopdisplay":"none","href":"/ADI/services/apply-serivces/regulations-for-industrial-innovation/1565.html","target":null,"title":"\u500B\u4EBA\u6295\u8CC7\u65B0\u5275\u4E8B\u696D\u516C\u53F8\u6240\u5F97\u6E1B\u9664\u8FA6\u6CD5(\u4F9D\u7522\u696D\u5275\u65B0\u689D\u4F8B\u7B2C23\u689D\u4E4B2\u7B2C2\u9805\u898F\u5B9A\u8A02\u5B9A\u4E4B)","startdate":"2022-08-27","newstitle":"\u500B\u4EBA\u6295\u8CC7\u65B0\u5275\u4E8B\u696D\u516C\u53F8\u6240\u5F97\u6E1B\u9664\u8FA6\u6CD5(\u4F9D\u7522\u696D\u5275\u65B0\u689D\u4F8B\u7B2C23\u689D\u4E4B2\u7B2C2\u9805\u898F\u5B9A\u8A02\u5B9A\u4E4B)","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1561","istopdisplay":"none","href":"/ADI/services/apply-serivces/regulations-for-industrial-innovation/1561.html","target":null,"title":"\u6709\u9650\u5408\u5925\u7D44\u7E54\u5275\u696D\u6295\u8CC7\u4E8B\u696D\u9069\u7528\u7522\u696D\u5275\u65B0\u689D\u4F8B\u7B2C\u4E8C\u5341\u4E09\u689D\u4E4B\u4E00\u8A8D\u5B9A\u7533\u8ACB\u6587\u4EF6(\u6709\u9650\u5408\u5925\u7D44\u7E54\u5275\u696D\u6295\u8CC7\u4E8B\u696D\u79DF\u7A05\u734E\u52F5\u9069\u7528\u8FA6\u6CD5\u7B2C6\u689D)","startdate":"2022-08-27","newstitle":"\u6709\u9650\u5408\u5925\u7D44\u7E54\u5275\u696D\u6295\u8CC7\u4E8B\u696D\u9069\u7528\u7522\u696D\u5275\u65B0\u689D\u4F8B\u7B2C\u4E8C\u5341\u4E09\u689D\u4E4B\u4E00\u8A8D\u5B9A\u7533\u8ACB\u6587\u4EF6(\u6709\u9650\u5408\u5925\u7D44\u7E54\u5275\u696D\u6295\u8CC7\u4E8B\u696D\u79DF\u7A05\u734E\u52F5\u9069\u7528\u8FA6\u6CD5\u7B2C6\u689D)","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1571","istopdisplay":"none","href":"/ADI/services/apply-serivces/regulations-for-industrial-innovation/1571.html","target":null,"title":"\u667A\u6167\u8CA1\u7522\u6B0A\u4F5C\u50F9\u5165\u80A1\u9069\u7528\u7DE9\u7E73(\u8AB2)\u8A8D\u5B9A\u7533\u8ACB\u6587\u4EF6(\u7522\u696D\u5275\u65B0\u689D\u4F8B\u65BD\u884C\u7D30\u5247\u7B2C3\u689D\u4E4B3)","startdate":"2022-08-27","newstitle":"\u667A\u6167\u8CA1\u7522\u6B0A\u4F5C\u50F9\u5165\u80A1\u9069\u7528\u7DE9\u7E73(\u8AB2)\u8A8D\u5B9A\u7533\u8ACB\u6587\u4EF6(\u7522\u696D\u5275\u65B0\u689D\u4F8B\u65BD\u884C\u7D30\u5247\u7B2C3\u689D\u4E4B3)","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1319","istopdisplay":"none","href":"/ADI/services/apply-serivces/regulations-for-industrial-innovation/1319.html","target":null,"title":"\u5275\u65B0\u7814\u7A76\u767C\u5C55\u8A08\u756B\u667A\u6167\u8CA1\u7522\u71DF\u904B\u7B56\u7565\u63A8\u52D5\u8FA6\u6CD5(\u4F9D\u7522\u696D\u5275\u65B0\u689D\u4F8B\u7B2C12\u689D\u7B2C3\u9805\u898F\u5B9A\u8A02\u5B9A\u4E4B)","startdate":"2022-08-27","newstitle":"\u5275\u65B0\u7814\u7A76\u767C\u5C55\u8A08\u756B\u667A\u6167\u8CA1\u7522\u71DF\u904B\u7B56\u7565\u63A8\u52D5\u8FA6\u6CD5(\u4F9D\u7522\u696D\u5275\u65B0\u689D\u4F8B\u7B2C12\u689D\u7B2C3\u9805\u898F\u5B9A\u8A02\u5B9A\u4E4B)","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1569","istopdisplay":"none","href":"/ADI/services/apply-serivces/regulations-for-industrial-innovation/1569.html","target":null,"title":"\u516C\u53F8\u734E\u916C\u54E1\u5DE5\u80A1\u4EFD\u57FA\u790E\u7D66\u4ED8\u9069\u7528\u7DE9\u8AB2\u5099\u67E5\u7533\u8ACB(\u7522\u696D\u5275\u65B0\u689D\u4F8B\u65BD\u884C\u7D30\u5247\u7B2C3\u689D\u4E4B5)","startdate":"2022-08-27","newstitle":"\u516C\u53F8\u734E\u916C\u54E1\u5DE5\u80A1\u4EFD\u57FA\u790E\u7D66\u4ED8\u9069\u7528\u7DE9\u8AB2\u5099\u67E5\u7533\u8ACB(\u7522\u696D\u5275\u65B0\u689D\u4F8B\u65BD\u884C\u7D30\u5247\u7B2C3\u689D\u4E4B5)","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1567","istopdisplay":"none","href":"/ADI/services/apply-serivces/regulations-for-industrial-innovation/1567.html","target":null,"title":"\u6211\u570B\u500B\u4EBA\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u7814\u7A76\u767C\u5C55\u652F\u51FA\u9069\u7528\u52A0\u500D\u6E1B\u9664\u8A8D\u5B9A\u7533\u8ACB\u6587\u4EF6(\u6211\u570B\u500B\u4EBA\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u7814\u7A76\u767C\u5C55\u652F\u51FA\u9069\u7528\u52A0\u500D\u6E1B\u9664\u8FA6\u6CD5\u7B2C7\u689D)","startdate":"2022-08-27","newstitle":"\u6211\u570B\u500B\u4EBA\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u7814\u7A76\u767C\u5C55\u652F\u51FA\u9069\u7528\u52A0\u500D\u6E1B\u9664\u8A8D\u5B9A\u7533\u8ACB\u6587\u4EF6(\u6211\u570B\u500B\u4EBA\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u7814\u7A76\u767C\u5C55\u652F\u51FA\u9069\u7528\u52A0\u500D\u6E1B\u9664\u8FA6\u6CD5\u7B2C7\u689D)","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null}]');
-        LeftMenu('888');
-        NewList('888');
-        var ListPage = '/_news/OneTextList.html';
-        var listTag2Page = '/_news/listTag2.html';
-        $("#ns").load(ListPage, function () {
-            if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
-        });
-    </script>
+<script>
+    var _JsData;
+    var _needtag = NeedTag('OneTextList');
+    var _Module = 'NEWS';
+
+    _JsData = JSON.parse('[{"mainsn":"1575","istopdisplay":"none","href":"/ADI/services/apply-serivces/regulations-for-industrial-innovation/1575.html","target":null,"title":"\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u7814\u767C\u6D3B\u52D5\u5BE9\u67E5\u8A8D\u5B9A\u7533\u8ACB\u6587\u4EF6\uFF08\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u7814\u7A76\u767C\u5C55\u652F\u51FA\u9069\u7528\u6295\u8CC7\u62B5\u6E1B\u8FA6\u6CD5\u7B2C14\u689D\uFF09","startdate":"2022-08-27","newstitle":"\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u7814\u767C\u6D3B\u52D5\u5BE9\u67E5\u8A8D\u5B9A\u7533\u8ACB\u6587\u4EF6\uFF08\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u7814\u7A76\u767C\u5C55\u652F\u51FA\u9069\u7528\u6295\u8CC7\u62B5\u6E1B\u8FA6\u6CD5\u7B2C14\u689D\uFF09","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1573","istopdisplay":"none","href":"/ADI/services/apply-serivces/regulations-for-industrial-innovation/1573.html","target":null,"title":"\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u7814\u767C\u652F\u51FA\u5C08\u6848\u8A8D\u5B9A\u7533\u8ACB\u66F8(\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u7814\u7A76\u767C\u5C55\u652F\u51FA\u9069\u7528\u6295\u8CC7\u62B5\u6E1B\u8FA6\u6CD5\u7B2C9\u689D)","startdate":"2022-08-27","newstitle":"\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u7814\u767C\u652F\u51FA\u5C08\u6848\u8A8D\u5B9A\u7533\u8ACB\u66F8(\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u7814\u7A76\u767C\u5C55\u652F\u51FA\u9069\u7528\u6295\u8CC7\u62B5\u6E1B\u8FA6\u6CD5\u7B2C9\u689D)","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1563","istopdisplay":"none","href":"/ADI/services/apply-serivces/regulations-for-industrial-innovation/1563.html","target":null,"title":"\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u6295\u8CC7\u667A\u6167\u6A5F\u68B0\u6216\u7B2C\u4E94\u4EE3\u884C\u52D5\u901A\u8A0A\u7CFB\u7D71\u62B5\u6E1B\u8FA6\u6CD5","startdate":"2022-08-27","newstitle":"\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u6295\u8CC7\u667A\u6167\u6A5F\u68B0\u6216\u7B2C\u4E94\u4EE3\u884C\u52D5\u901A\u8A0A\u7CFB\u7D71\u62B5\u6E1B\u8FA6\u6CD5","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1565","istopdisplay":"none","href":"/ADI/services/apply-serivces/regulations-for-industrial-innovation/1565.html","target":null,"title":"\u500B\u4EBA\u6295\u8CC7\u65B0\u5275\u4E8B\u696D\u516C\u53F8\u6240\u5F97\u6E1B\u9664\u8FA6\u6CD5(\u4F9D\u7522\u696D\u5275\u65B0\u689D\u4F8B\u7B2C23\u689D\u4E4B2\u7B2C2\u9805\u898F\u5B9A\u8A02\u5B9A\u4E4B)","startdate":"2022-08-27","newstitle":"\u500B\u4EBA\u6295\u8CC7\u65B0\u5275\u4E8B\u696D\u516C\u53F8\u6240\u5F97\u6E1B\u9664\u8FA6\u6CD5(\u4F9D\u7522\u696D\u5275\u65B0\u689D\u4F8B\u7B2C23\u689D\u4E4B2\u7B2C2\u9805\u898F\u5B9A\u8A02\u5B9A\u4E4B)","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1561","istopdisplay":"none","href":"/ADI/services/apply-serivces/regulations-for-industrial-innovation/1561.html","target":null,"title":"\u6709\u9650\u5408\u5925\u7D44\u7E54\u5275\u696D\u6295\u8CC7\u4E8B\u696D\u9069\u7528\u7522\u696D\u5275\u65B0\u689D\u4F8B\u7B2C\u4E8C\u5341\u4E09\u689D\u4E4B\u4E00\u8A8D\u5B9A\u7533\u8ACB\u6587\u4EF6(\u6709\u9650\u5408\u5925\u7D44\u7E54\u5275\u696D\u6295\u8CC7\u4E8B\u696D\u79DF\u7A05\u734E\u52F5\u9069\u7528\u8FA6\u6CD5\u7B2C6\u689D)","startdate":"2022-08-27","newstitle":"\u6709\u9650\u5408\u5925\u7D44\u7E54\u5275\u696D\u6295\u8CC7\u4E8B\u696D\u9069\u7528\u7522\u696D\u5275\u65B0\u689D\u4F8B\u7B2C\u4E8C\u5341\u4E09\u689D\u4E4B\u4E00\u8A8D\u5B9A\u7533\u8ACB\u6587\u4EF6(\u6709\u9650\u5408\u5925\u7D44\u7E54\u5275\u696D\u6295\u8CC7\u4E8B\u696D\u79DF\u7A05\u734E\u52F5\u9069\u7528\u8FA6\u6CD5\u7B2C6\u689D)","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1571","istopdisplay":"none","href":"/ADI/services/apply-serivces/regulations-for-industrial-innovation/1571.html","target":null,"title":"\u667A\u6167\u8CA1\u7522\u6B0A\u4F5C\u50F9\u5165\u80A1\u9069\u7528\u7DE9\u7E73(\u8AB2)\u8A8D\u5B9A\u7533\u8ACB\u6587\u4EF6(\u7522\u696D\u5275\u65B0\u689D\u4F8B\u65BD\u884C\u7D30\u5247\u7B2C3\u689D\u4E4B3)","startdate":"2022-08-27","newstitle":"\u667A\u6167\u8CA1\u7522\u6B0A\u4F5C\u50F9\u5165\u80A1\u9069\u7528\u7DE9\u7E73(\u8AB2)\u8A8D\u5B9A\u7533\u8ACB\u6587\u4EF6(\u7522\u696D\u5275\u65B0\u689D\u4F8B\u65BD\u884C\u7D30\u5247\u7B2C3\u689D\u4E4B3)","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1319","istopdisplay":"none","href":"/ADI/services/apply-serivces/regulations-for-industrial-innovation/1319.html","target":null,"title":"\u5275\u65B0\u7814\u7A76\u767C\u5C55\u8A08\u756B\u667A\u6167\u8CA1\u7522\u71DF\u904B\u7B56\u7565\u63A8\u52D5\u8FA6\u6CD5(\u4F9D\u7522\u696D\u5275\u65B0\u689D\u4F8B\u7B2C12\u689D\u7B2C3\u9805\u898F\u5B9A\u8A02\u5B9A\u4E4B)","startdate":"2022-08-27","newstitle":"\u5275\u65B0\u7814\u7A76\u767C\u5C55\u8A08\u756B\u667A\u6167\u8CA1\u7522\u71DF\u904B\u7B56\u7565\u63A8\u52D5\u8FA6\u6CD5(\u4F9D\u7522\u696D\u5275\u65B0\u689D\u4F8B\u7B2C12\u689D\u7B2C3\u9805\u898F\u5B9A\u8A02\u5B9A\u4E4B)","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1569","istopdisplay":"none","href":"/ADI/services/apply-serivces/regulations-for-industrial-innovation/1569.html","target":null,"title":"\u516C\u53F8\u734E\u916C\u54E1\u5DE5\u80A1\u4EFD\u57FA\u790E\u7D66\u4ED8\u9069\u7528\u7DE9\u8AB2\u5099\u67E5\u7533\u8ACB(\u7522\u696D\u5275\u65B0\u689D\u4F8B\u65BD\u884C\u7D30\u5247\u7B2C3\u689D\u4E4B5)","startdate":"2022-08-27","newstitle":"\u516C\u53F8\u734E\u916C\u54E1\u5DE5\u80A1\u4EFD\u57FA\u790E\u7D66\u4ED8\u9069\u7528\u7DE9\u8AB2\u5099\u67E5\u7533\u8ACB(\u7522\u696D\u5275\u65B0\u689D\u4F8B\u65BD\u884C\u7D30\u5247\u7B2C3\u689D\u4E4B5)","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null},{"mainsn":"1567","istopdisplay":"none","href":"/ADI/services/apply-serivces/regulations-for-industrial-innovation/1567.html","target":null,"title":"\u6211\u570B\u500B\u4EBA\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u7814\u7A76\u767C\u5C55\u652F\u51FA\u9069\u7528\u52A0\u500D\u6E1B\u9664\u8A8D\u5B9A\u7533\u8ACB\u6587\u4EF6(\u6211\u570B\u500B\u4EBA\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u7814\u7A76\u767C\u5C55\u652F\u51FA\u9069\u7528\u52A0\u500D\u6E1B\u9664\u8FA6\u6CD5\u7B2C7\u689D)","startdate":"2022-08-27","newstitle":"\u6211\u570B\u500B\u4EBA\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u7814\u7A76\u767C\u5C55\u652F\u51FA\u9069\u7528\u52A0\u500D\u6E1B\u9664\u8A8D\u5B9A\u7533\u8ACB\u6587\u4EF6(\u6211\u570B\u500B\u4EBA\u516C\u53F8\u6216\u6709\u9650\u5408\u5925\u4E8B\u696D\u7814\u7A76\u767C\u5C55\u652F\u51FA\u9069\u7528\u52A0\u500D\u6E1B\u9664\u8FA6\u6CD5\u7B2C7\u689D)","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null}]');
+    LeftMenu('888');
+    NewList('888');
+    var ListPage = '/_news/OneTextList.html';
+    var listTag2Page = '/_news/listTag2.html';
+    $("#ns").load(ListPage, function () {
+        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+    });
+        if( 'OneTextList' == 'AccordionList' && 'ADI'=='MODA' ){
+            var tag = location.hash;
+            var lang = 'zh-tw';
+            function tagclick(tag){
+                $("#qaH"+tag).children(".accordion-button").click();
+            }
+            if(tag.length > 1)
+            {
+                tag = tag.replace("#qaH","");
+                var tagIndex = _JsData.findIndex(x=>x.mainsn== tag);
+                if(tagIndex > -1)
+                {
+                    var _tagIndex = tagIndex +1;
+                    var p = Math.ceil(_tagIndex / 15) ;
+                    if(p > 1)
+                    {
+                         $("#ns").load(ListPage, function () {
+                             serials( SearchJsonData(p),  tagclick(tag));
+                         });
+                    }else{
+                        tagclick(tag);
+                    }
+                }
+            }
+        }
+
+</script>
 
 </body>
 </html>
