@@ -28,7 +28,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/assets/css/layout.css?v=BUtaZlLu2VQbFnt6LXyhJQuSAMs6kxX-IjBddvImhQ4" media="all" />
+            <link rel="stylesheet" href="/assets/css/layout.css?v=YeH5fVJz8-1OAXbTcdMPoDrXQgNxSVrONx8f-IiBh_Q" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -51,9 +51,23 @@
         Your browser does not support JavaScript! &#x60A8;&#x7684;&#x700F;&#x89BD;&#x5668;&#x4E0D;&#x652F;&#x63F4;JavaScript&#x529F;&#x80FD;&#xFF0C;&#x82E5;&#x7DB2;&#x9801;&#x529F;&#x80FD;&#x7121;&#x6CD5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x6642;&#xFF0C;&#x8ACB;&#x958B;&#x555F;&#x700F;&#x89BD;&#x5668;JavaScript&#x72C0;&#x614B;&#x3002;
     </noscript>
     <script>
-		//fontSize.theme change
-		var fontSize = localStorage['fontSize'];
+		//default theme&fontSize
 		var theme = localStorage['theme'];
+		var fontSize = localStorage['fontSize'];
+		if (theme == undefined) {
+			if (window.matchMedia && window.matchMedia('(prefers-color-scheme:dark)').matches) {
+				document.documentElement.className += ' dark';
+			}
+		}else{
+			switch(theme) {
+				case 'light':
+					document.documentElement.className += ' light';
+					break;
+				case 'dark':
+					document.documentElement.className += ' dark';
+					break;
+			}
+		}
 		switch(fontSize) {
 			case '1':
 				document.body.className += ' fontSizeL';
@@ -68,20 +82,16 @@
 				document.body.className += ' fontSizeM';
 				break;
 		}
-		switch(theme) {
-			case 'light':
-				document.documentElement.className += ' light';
-				break;
-			case 'dark':
-				document.documentElement.className += ' dark';
-				break;
-		}
 	</script>
 
     <div b-jabq2d7uqs class="loading" id="loading"><span b-jabq2d7uqs class="loadingLogo"></span></div>
 
     <a b-jabq2d7uqs href="#AC" id="startBrick" class="visually-hidden-focusable" title="&#x8DF3;&#x5230;&#x4E3B;&#x8981;&#x5167;&#x5BB9;">&#x8DF3;&#x5230;&#x4E3B;&#x8981;&#x5167;&#x5BB9;</a>
 
+    <div b-jabq2d7uqs class="themeNav">
+		<span b-jabq2d7uqs class="visually-hidden">&#x7DB2;&#x7AD9;&#x984F;&#x8272;&#x5207;&#x63DB;</span>
+		<a b-jabq2d7uqs href="javascript:;" class="themeSwitch themeSwitchJs" data-darktitle="&#x6DF1;&#x8272;&#x6A21;&#x5F0F;" data-lighttitle="&#x6DFA;&#x8272;&#x6A21;&#x5F0F;" title="&#x6DF1;&#x8272;&#x6A21;&#x5F0F;"><i b-jabq2d7uqs class="ci ci-theme"></i><span b-jabq2d7uqs class="visually-hidden">&#x6DF1;&#x8272;&#x6A21;&#x5F0F;</span></a>
+	</div>
 
     <header class="header">
         <!-- header -->
@@ -182,7 +192,7 @@
                 <!-- 淺色版面的logo -->
                 <img class="mw-100 lightShow" src="/copyright/MODA/dijzj4q4.ozn.svg" width="398" height="66" alt="&#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;&#xFF1A;&#x56DE;&#x9996;&#x9801;">
                 <!-- 深色版面的logo -->
-                <img class="mw-100 darkShow" width="398" height="66" alt="&#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;&#xFF1A;&#x56DE;&#x9996;&#x9801;">
+                <img class="mw-100 darkShow" src="/copyright/MODA/foayupuv.4af.svg" width="398" height="66" alt="&#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;&#xFF1A;&#x56DE;&#x9996;&#x9801;">
             </a>
             <b class="visually-hidden">&#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;</b>
         </h1>
@@ -477,154 +487,154 @@
                                                 <li class="list-group-item d-block bg-transparent">
                                                     <a href="https://www-api.moda.gov.tw/File/Get/ZPQX0jOoYIyFVtZ" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='中小企業行動智慧應用計畫-補助名單.csv'>
                                                         <div class="col mb-0 listIcon1">
-                                                            <b class="title5 fw-normal">&#x4E2D;&#x5C0F;&#x4F01;&#x696D;&#x884C;&#x52D5;&#x667A;&#x6167;&#x61C9;&#x7528;&#x8A08;&#x756B;-&#x88DC;&#x52A9;&#x540D;&#x55AE;.csv<span class="fileTypeI">CSV</span></b>
+                                                            <b class="title5 fw-normal">&#x4E2D;&#x5C0F;&#x4F01;&#x696D;&#x884C;&#x52D5;&#x667A;&#x6167;&#x61C9;&#x7528;&#x8A08;&#x756B;-&#x88DC;&#x52A9;&#x540D;&#x55AE;<span class="fileTypeI">CSV</span></b>
                                                         </div>
                                                     </a>
                                                 </li>
                                                 <li class="list-group-item d-block bg-transparent">
                                                     <a href="https://www-api.moda.gov.tw/File/Get/JBHi5d1FL7UcXhB" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='全國資訊主管聯席會會議紀錄.csv'>
                                                         <div class="col mb-0 listIcon1">
-                                                            <b class="title5 fw-normal">&#x5168;&#x570B;&#x8CC7;&#x8A0A;&#x4E3B;&#x7BA1;&#x806F;&#x5E2D;&#x6703;&#x6703;&#x8B70;&#x7D00;&#x9304;.csv<span class="fileTypeI">CSV</span></b>
+                                                            <b class="title5 fw-normal">&#x5168;&#x570B;&#x8CC7;&#x8A0A;&#x4E3B;&#x7BA1;&#x806F;&#x5E2D;&#x6703;&#x6703;&#x8B70;&#x7D00;&#x9304;<span class="fileTypeI">CSV</span></b>
                                                         </div>
                                                     </a>
                                                 </li>
                                                 <li class="list-group-item d-block bg-transparent">
                                                     <a href="https://www-api.moda.gov.tw/File/Get/dV9v3hZYRfXhQQs" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='垃圾郵件攔阻數據統計.csv'>
                                                         <div class="col mb-0 listIcon1">
-                                                            <b class="title5 fw-normal">&#x5783;&#x573E;&#x90F5;&#x4EF6;&#x6514;&#x963B;&#x6578;&#x64DA;&#x7D71;&#x8A08;.csv<span class="fileTypeI">CSV</span></b>
+                                                            <b class="title5 fw-normal">&#x5783;&#x573E;&#x90F5;&#x4EF6;&#x6514;&#x963B;&#x6578;&#x64DA;&#x7D71;&#x8A08;<span class="fileTypeI">CSV</span></b>
                                                         </div>
                                                     </a>
                                                 </li>
                                                 <li class="list-group-item d-block bg-transparent">
                                                     <a href="https://www-api.moda.gov.tw/File/Get/IeMSdARNMOGTFiV" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='政府機關電腦應用概況.csv'>
                                                         <div class="col mb-0 listIcon1">
-                                                            <b class="title5 fw-normal">&#x653F;&#x5E9C;&#x6A5F;&#x95DC;&#x96FB;&#x8166;&#x61C9;&#x7528;&#x6982;&#x6CC1;.csv<span class="fileTypeI">CSV</span></b>
+                                                            <b class="title5 fw-normal">&#x653F;&#x5E9C;&#x6A5F;&#x95DC;&#x96FB;&#x8166;&#x61C9;&#x7528;&#x6982;&#x6CC1;<span class="fileTypeI">CSV</span></b>
                                                         </div>
                                                     </a>
                                                 </li>
                                                 <li class="list-group-item d-block bg-transparent">
                                                     <a href="https://www-api.moda.gov.tw/File/Get/vOtbEM2ejM8VDpq" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='國內各場域行動支付滲透率2019.csv'>
                                                         <div class="col mb-0 listIcon1">
-                                                            <b class="title5 fw-normal">&#x570B;&#x5167;&#x5404;&#x5834;&#x57DF;&#x884C;&#x52D5;&#x652F;&#x4ED8;&#x6EF2;&#x900F;&#x7387;2019.csv<span class="fileTypeI">CSV</span></b>
+                                                            <b class="title5 fw-normal">&#x570B;&#x5167;&#x5404;&#x5834;&#x57DF;&#x884C;&#x52D5;&#x652F;&#x4ED8;&#x6EF2;&#x900F;&#x7387;2019<span class="fileTypeI">CSV</span></b>
                                                         </div>
                                                     </a>
                                                 </li>
                                                 <li class="list-group-item d-block bg-transparent">
                                                     <a href="https://www-api.moda.gov.tw/File/Get/08BdjykA8TmaEez" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='2015-2017資訊服務產業專業人才需求調查.csv'>
                                                         <div class="col mb-0 listIcon1">
-                                                            <b class="title5 fw-normal">2015-2017&#x8CC7;&#x8A0A;&#x670D;&#x52D9;&#x7522;&#x696D;&#x5C08;&#x696D;&#x4EBA;&#x624D;&#x9700;&#x6C42;&#x8ABF;&#x67E5;.csv<span class="fileTypeI">CSV</span></b>
+                                                            <b class="title5 fw-normal">2015-2017&#x8CC7;&#x8A0A;&#x670D;&#x52D9;&#x7522;&#x696D;&#x5C08;&#x696D;&#x4EBA;&#x624D;&#x9700;&#x6C42;&#x8ABF;&#x67E5;<span class="fileTypeI">CSV</span></b>
                                                         </div>
                                                     </a>
                                                 </li>
                                                 <li class="list-group-item d-block bg-transparent">
                                                     <a href="https://www-api.moda.gov.tw/File/Get/vY1lnX4Tyqh3Q5K" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='2016-2018年資訊服務產業專業人才需求調查.csv'>
                                                         <div class="col mb-0 listIcon1">
-                                                            <b class="title5 fw-normal">2016-2018&#x5E74;&#x8CC7;&#x8A0A;&#x670D;&#x52D9;&#x7522;&#x696D;&#x5C08;&#x696D;&#x4EBA;&#x624D;&#x9700;&#x6C42;&#x8ABF;&#x67E5;.csv<span class="fileTypeI">CSV</span></b>
+                                                            <b class="title5 fw-normal">2016-2018&#x5E74;&#x8CC7;&#x8A0A;&#x670D;&#x52D9;&#x7522;&#x696D;&#x5C08;&#x696D;&#x4EBA;&#x624D;&#x9700;&#x6C42;&#x8ABF;&#x67E5;<span class="fileTypeI">CSV</span></b>
                                                         </div>
                                                     </a>
                                                 </li>
                                                 <li class="list-group-item d-block bg-transparent">
                                                     <a href="https://www-api.moda.gov.tw/File/Get/Bt8IlPgT8zQU0RR" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='2021_2023年資料服務產業專業人才需求調查.csv'>
                                                         <div class="col mb-0 listIcon1">
-                                                            <b class="title5 fw-normal">2021_2023&#x5E74;&#x8CC7;&#x6599;&#x670D;&#x52D9;&#x7522;&#x696D;&#x5C08;&#x696D;&#x4EBA;&#x624D;&#x9700;&#x6C42;&#x8ABF;&#x67E5;.csv<span class="fileTypeI">CSV</span></b>
+                                                            <b class="title5 fw-normal">2021_2023&#x5E74;&#x8CC7;&#x6599;&#x670D;&#x52D9;&#x7522;&#x696D;&#x5C08;&#x696D;&#x4EBA;&#x624D;&#x9700;&#x6C42;&#x8ABF;&#x67E5;<span class="fileTypeI">CSV</span></b>
                                                         </div>
                                                     </a>
                                                 </li>
                                                 <li class="list-group-item d-block bg-transparent">
                                                     <a href="https://www-api.moda.gov.tw/File/Get/6uaZuEL37XXvrdT" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='ODF 文件應用工具下載統計.csv'>
                                                         <div class="col mb-0 listIcon1">
-                                                            <b class="title5 fw-normal">ODF &#x6587;&#x4EF6;&#x61C9;&#x7528;&#x5DE5;&#x5177;&#x4E0B;&#x8F09;&#x7D71;&#x8A08;.csv<span class="fileTypeI">CSV</span></b>
+                                                            <b class="title5 fw-normal">ODF &#x6587;&#x4EF6;&#x61C9;&#x7528;&#x5DE5;&#x5177;&#x4E0B;&#x8F09;&#x7D71;&#x8A08;<span class="fileTypeI">CSV</span></b>
                                                         </div>
                                                     </a>
                                                 </li>
                                                 <li class="list-group-item d-block bg-transparent">
                                                     <a href="https://www-api.moda.gov.tw/File/Get/jTkPaSDPUNGKMeO" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='資訊主管聯席會地方分組會議.csv'>
                                                         <div class="col mb-0 listIcon1">
-                                                            <b class="title5 fw-normal">&#x8CC7;&#x8A0A;&#x4E3B;&#x7BA1;&#x806F;&#x5E2D;&#x6703;&#x5730;&#x65B9;&#x5206;&#x7D44;&#x6703;&#x8B70;.csv<span class="fileTypeI">CSV</span></b>
+                                                            <b class="title5 fw-normal">&#x8CC7;&#x8A0A;&#x4E3B;&#x7BA1;&#x806F;&#x5E2D;&#x6703;&#x5730;&#x65B9;&#x5206;&#x7D44;&#x6703;&#x8B70;<span class="fileTypeI">CSV</span></b>
                                                         </div>
                                                     </a>
                                                 </li>
                                                 <li class="list-group-item d-block bg-transparent">
                                                     <a href="https://www-api.moda.gov.tw/File/Get/5WtuVrCH6VCEYbz" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='資訊主管聯席會中央部會分組會議紀錄.csv'>
                                                         <div class="col mb-0 listIcon1">
-                                                            <b class="title5 fw-normal">&#x8CC7;&#x8A0A;&#x4E3B;&#x7BA1;&#x806F;&#x5E2D;&#x6703;&#x4E2D;&#x592E;&#x90E8;&#x6703;&#x5206;&#x7D44;&#x6703;&#x8B70;&#x7D00;&#x9304;.csv<span class="fileTypeI">CSV</span></b>
+                                                            <b class="title5 fw-normal">&#x8CC7;&#x8A0A;&#x4E3B;&#x7BA1;&#x806F;&#x5E2D;&#x6703;&#x4E2D;&#x592E;&#x90E8;&#x6703;&#x5206;&#x7D44;&#x6703;&#x8B70;&#x7D00;&#x9304;<span class="fileTypeI">CSV</span></b>
                                                         </div>
                                                     </a>
                                                 </li>
                                                 <li class="list-group-item d-block bg-transparent">
                                                     <a href="https://www-api.moda.gov.tw/File/Get/xNZOfpbq64NkIxB" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='無障礙網頁標章統計.csv'>
                                                         <div class="col mb-0 listIcon1">
-                                                            <b class="title5 fw-normal">&#x7121;&#x969C;&#x7919;&#x7DB2;&#x9801;&#x6A19;&#x7AE0;&#x7D71;&#x8A08;.csv<span class="fileTypeI">CSV</span></b>
+                                                            <b class="title5 fw-normal">&#x7121;&#x969C;&#x7919;&#x7DB2;&#x9801;&#x6A19;&#x7AE0;&#x7D71;&#x8A08;<span class="fileTypeI">CSV</span></b>
                                                         </div>
                                                     </a>
                                                 </li>
                                                 <li class="list-group-item d-block bg-transparent">
                                                     <a href="https://www-api.moda.gov.tw/File/Get/M47PRZALuwKGsY3" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='國內各場域行動支付滲透率2021.csv'>
                                                         <div class="col mb-0 listIcon1">
-                                                            <b class="title5 fw-normal">&#x570B;&#x5167;&#x5404;&#x5834;&#x57DF;&#x884C;&#x52D5;&#x652F;&#x4ED8;&#x6EF2;&#x900F;&#x7387;2021.csv<span class="fileTypeI">CSV</span></b>
+                                                            <b class="title5 fw-normal">&#x570B;&#x5167;&#x5404;&#x5834;&#x57DF;&#x884C;&#x52D5;&#x652F;&#x4ED8;&#x6EF2;&#x900F;&#x7387;2021<span class="fileTypeI">CSV</span></b>
                                                         </div>
                                                     </a>
                                                 </li>
                                                 <li class="list-group-item d-block bg-transparent">
                                                     <a href="https://www-api.moda.gov.tw/File/Get/Fo6hHlpjmyaFKIq" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='機關服務信箱.csv'>
                                                         <div class="col mb-0 listIcon1">
-                                                            <b class="title5 fw-normal">&#x6A5F;&#x95DC;&#x670D;&#x52D9;&#x4FE1;&#x7BB1;.csv<span class="fileTypeI">CSV</span></b>
+                                                            <b class="title5 fw-normal">&#x6A5F;&#x95DC;&#x670D;&#x52D9;&#x4FE1;&#x7BB1;<span class="fileTypeI">CSV</span></b>
                                                         </div>
                                                     </a>
                                                 </li>
                                                 <li class="list-group-item d-block bg-transparent">
                                                     <a href="https://www-api.moda.gov.tw/File/Get/9yOx0yiHPFJCxFL" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='國內各場域行動支付滲透率2020.csv'>
                                                         <div class="col mb-0 listIcon1">
-                                                            <b class="title5 fw-normal">&#x570B;&#x5167;&#x5404;&#x5834;&#x57DF;&#x884C;&#x52D5;&#x652F;&#x4ED8;&#x6EF2;&#x900F;&#x7387;2020.csv<span class="fileTypeI">CSV</span></b>
+                                                            <b class="title5 fw-normal">&#x570B;&#x5167;&#x5404;&#x5834;&#x57DF;&#x884C;&#x52D5;&#x652F;&#x4ED8;&#x6EF2;&#x900F;&#x7387;2020<span class="fileTypeI">CSV</span></b>
                                                         </div>
                                                     </a>
                                                 </li>
                                                 <li class="list-group-item d-block bg-transparent">
                                                     <a href="https://www-api.moda.gov.tw/File/Get/DaveOZ3SLbvKNOG" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='數位政府績效統計表.csv'>
                                                         <div class="col mb-0 listIcon1">
-                                                            <b class="title5 fw-normal">&#x6578;&#x4F4D;&#x653F;&#x5E9C;&#x7E3E;&#x6548;&#x7D71;&#x8A08;&#x8868;.csv<span class="fileTypeI">CSV</span></b>
+                                                            <b class="title5 fw-normal">&#x6578;&#x4F4D;&#x653F;&#x5E9C;&#x7E3E;&#x6548;&#x7D71;&#x8A08;&#x8868;<span class="fileTypeI">CSV</span></b>
                                                         </div>
                                                     </a>
                                                 </li>
                                                 <li class="list-group-item d-block bg-transparent">
                                                     <a href="https://www-api.moda.gov.tw/File/Get/KCTwKNflD6sRklc" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='資訊應用服務人才培訓計畫課程.csv'>
                                                         <div class="col mb-0 listIcon1">
-                                                            <b class="title5 fw-normal">&#x8CC7;&#x8A0A;&#x61C9;&#x7528;&#x670D;&#x52D9;&#x4EBA;&#x624D;&#x57F9;&#x8A13;&#x8A08;&#x756B;&#x8AB2;&#x7A0B;.csv<span class="fileTypeI">CSV</span></b>
+                                                            <b class="title5 fw-normal">&#x8CC7;&#x8A0A;&#x61C9;&#x7528;&#x670D;&#x52D9;&#x4EBA;&#x624D;&#x57F9;&#x8A13;&#x8A08;&#x756B;&#x8AB2;&#x7A0B;<span class="fileTypeI">CSV</span></b>
                                                         </div>
                                                     </a>
                                                 </li>
                                                 <li class="list-group-item d-block bg-transparent">
                                                     <a href="https://www-api.moda.gov.tw/File/Get/U2AzYE5bMCS8ENp" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='中央及所屬機關網站Web2.0服務一覽表.csv'>
                                                         <div class="col mb-0 listIcon1">
-                                                            <b class="title5 fw-normal">&#x4E2D;&#x592E;&#x53CA;&#x6240;&#x5C6C;&#x6A5F;&#x95DC;&#x7DB2;&#x7AD9;Web2.0&#x670D;&#x52D9;&#x4E00;&#x89BD;&#x8868;.csv<span class="fileTypeI">CSV</span></b>
+                                                            <b class="title5 fw-normal">&#x4E2D;&#x592E;&#x53CA;&#x6240;&#x5C6C;&#x6A5F;&#x95DC;&#x7DB2;&#x7AD9;Web2.0&#x670D;&#x52D9;&#x4E00;&#x89BD;&#x8868;<span class="fileTypeI">CSV</span></b>
                                                         </div>
                                                     </a>
                                                 </li>
                                                 <li class="list-group-item d-block bg-transparent">
                                                     <a href="https://www-api.moda.gov.tw/File/Get/cSR5uEJXNQ83G8E" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='歷年數位機會_落差_調查彙整資料.csv'>
                                                         <div class="col mb-0 listIcon1">
-                                                            <b class="title5 fw-normal">&#x6B77;&#x5E74;&#x6578;&#x4F4D;&#x6A5F;&#x6703;_&#x843D;&#x5DEE;_&#x8ABF;&#x67E5;&#x5F59;&#x6574;&#x8CC7;&#x6599;.csv<span class="fileTypeI">CSV</span></b>
+                                                            <b class="title5 fw-normal">&#x6B77;&#x5E74;&#x6578;&#x4F4D;&#x6A5F;&#x6703;_&#x843D;&#x5DEE;_&#x8ABF;&#x67E5;&#x5F59;&#x6574;&#x8CC7;&#x6599;<span class="fileTypeI">CSV</span></b>
                                                         </div>
                                                     </a>
                                                 </li>
                                                 <li class="list-group-item d-block bg-transparent">
                                                     <a href="https://www-api.moda.gov.tw/File/Get/L2mvmiwsz2Y4nj7" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='辦理示範性「跨域服務再造及網路參與」補助資訊情形.csv'>
                                                         <div class="col mb-0 listIcon1">
-                                                            <b class="title5 fw-normal">&#x8FA6;&#x7406;&#x793A;&#x7BC4;&#x6027;&#x300C;&#x8DE8;&#x57DF;&#x670D;&#x52D9;&#x518D;&#x9020;&#x53CA;&#x7DB2;&#x8DEF;&#x53C3;&#x8207;&#x300D;&#x88DC;&#x52A9;&#x8CC7;&#x8A0A;&#x60C5;&#x5F62;.csv<span class="fileTypeI">CSV</span></b>
+                                                            <b class="title5 fw-normal">&#x8FA6;&#x7406;&#x793A;&#x7BC4;&#x6027;&#x300C;&#x8DE8;&#x57DF;&#x670D;&#x52D9;&#x518D;&#x9020;&#x53CA;&#x7DB2;&#x8DEF;&#x53C3;&#x8207;&#x300D;&#x88DC;&#x52A9;&#x8CC7;&#x8A0A;&#x60C5;&#x5F62;<span class="fileTypeI">CSV</span></b>
                                                         </div>
                                                     </a>
                                                 </li>
                                                 <li class="list-group-item d-block bg-transparent">
                                                     <a href="https://www-api.moda.gov.tw/File/Get/h8bSckATrRkChnJ" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='數位機會調查.csv'>
                                                         <div class="col mb-0 listIcon1">
-                                                            <b class="title5 fw-normal">&#x6578;&#x4F4D;&#x6A5F;&#x6703;&#x8ABF;&#x67E5;.csv<span class="fileTypeI">CSV</span></b>
+                                                            <b class="title5 fw-normal">&#x6578;&#x4F4D;&#x6A5F;&#x6703;&#x8ABF;&#x67E5;<span class="fileTypeI">CSV</span></b>
                                                         </div>
                                                     </a>
                                                 </li>
                                                 <li class="list-group-item d-block bg-transparent">
                                                     <a href="https://www-api.moda.gov.tw/File/Get/CDZessvERGw6DP4" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" title='「辦理示範性基層機關行動服務」補助資訊情形表.csv'>
                                                         <div class="col mb-0 listIcon1">
-                                                            <b class="title5 fw-normal">&#x300C;&#x8FA6;&#x7406;&#x793A;&#x7BC4;&#x6027;&#x57FA;&#x5C64;&#x6A5F;&#x95DC;&#x884C;&#x52D5;&#x670D;&#x52D9;&#x300D;&#x88DC;&#x52A9;&#x8CC7;&#x8A0A;&#x60C5;&#x5F62;&#x8868;.csv<span class="fileTypeI">CSV</span></b>
+                                                            <b class="title5 fw-normal">&#x300C;&#x8FA6;&#x7406;&#x793A;&#x7BC4;&#x6027;&#x57FA;&#x5C64;&#x6A5F;&#x95DC;&#x884C;&#x52D5;&#x670D;&#x52D9;&#x300D;&#x88DC;&#x52A9;&#x8CC7;&#x8A0A;&#x60C5;&#x5F62;&#x8868;<span class="fileTypeI">CSV</span></b>
                                                         </div>
                                                     </a>
                                                 </li>
@@ -867,7 +877,7 @@
                         <!-- 淺色版面的logo -->
                         <img class="mw-100 lightShow" src="/copyright/MODA/5nw5fc0u.eo2.svg" width="340" height="56" alt="moda &#x2014; &#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8; Ministry of Digital Affairs">
                         <!-- 深色版面的logo -->
-                        <img class="mw-100 darkShow" width="340" height="56" alt="moda &#x2014; &#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8; Ministry of Digital Affairs">
+                        <img class="mw-100 darkShow" src="/copyright/MODA/azfs4g3s.bnl.svg" width="340" height="56" alt="moda &#x2014; &#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8; Ministry of Digital Affairs">
                     </a>
                 </div>
                 <div class="ftBtmRights">
@@ -914,7 +924,7 @@
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/assets/js/common.js?v=-BaCxwwOVbNp0HpHlZs5fOCR8GCQ43DTd2nqxVolUJw"></script>
+            <script src="/assets/js/common.js?v=UEb61YO0YTY4sNK3BKDZLccEUoEFyazLR1ehFxNgNEI"></script>
     <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
     <script src="/js/site.js?v=RbRNJR7umTBSuDOxcys5AJupyOo3TvIDRwP8ZfsZ32M"></script>
     <script>

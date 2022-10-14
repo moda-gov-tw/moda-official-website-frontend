@@ -28,7 +28,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/ADI/assets/css/layout.css?v=YeHOql5t2akOansrL0BSQKuroMhKTRm6OGYnaKFkPC0" media="all" />
+            <link rel="stylesheet" href="/ADI/assets/css/layout.css?v=0xLwfMfomdSWnQt3v20jGO9DAKwbrz_UGxmboqlK3yc" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -51,9 +51,23 @@
         Your browser does not support JavaScript! &#x60A8;&#x7684;&#x700F;&#x89BD;&#x5668;&#x4E0D;&#x652F;&#x63F4;JavaScript&#x529F;&#x80FD;&#xFF0C;&#x82E5;&#x7DB2;&#x9801;&#x529F;&#x80FD;&#x7121;&#x6CD5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x6642;&#xFF0C;&#x8ACB;&#x958B;&#x555F;&#x700F;&#x89BD;&#x5668;JavaScript&#x72C0;&#x614B;&#x3002;
     </noscript>
     <script>
-		//fontSize.theme change
-		var fontSize = localStorage['fontSize'];
+		//default theme&fontSize
 		var theme = localStorage['theme'];
+		var fontSize = localStorage['fontSize'];
+		if (theme == undefined) {
+			if (window.matchMedia && window.matchMedia('(prefers-color-scheme:dark)').matches) {
+				document.documentElement.className += ' dark';
+			}
+		}else{
+			switch(theme) {
+				case 'light':
+					document.documentElement.className += ' light';
+					break;
+				case 'dark':
+					document.documentElement.className += ' dark';
+					break;
+			}
+		}
 		switch(fontSize) {
 			case '1':
 				document.body.className += ' fontSizeL';
@@ -68,20 +82,16 @@
 				document.body.className += ' fontSizeM';
 				break;
 		}
-		switch(theme) {
-			case 'light':
-				document.documentElement.className += ' light';
-				break;
-			case 'dark':
-				document.documentElement.className += ' dark';
-				break;
-		}
 	</script>
 
     <div b-jabq2d7uqs class="loading" id="loading"><span b-jabq2d7uqs class="loadingLogo"></span></div>
 
     <a b-jabq2d7uqs href="#AC" id="startBrick" class="visually-hidden-focusable" title="&#x8DF3;&#x5230;&#x4E3B;&#x8981;&#x5167;&#x5BB9;">&#x8DF3;&#x5230;&#x4E3B;&#x8981;&#x5167;&#x5BB9;</a>
 
+    <div b-jabq2d7uqs class="themeNav">
+		<span b-jabq2d7uqs class="visually-hidden">&#x7DB2;&#x7AD9;&#x984F;&#x8272;&#x5207;&#x63DB;</span>
+		<a b-jabq2d7uqs href="javascript:;" class="themeSwitch themeSwitchJs" data-darktitle="&#x6DF1;&#x8272;&#x6A21;&#x5F0F;" data-lighttitle="&#x6DFA;&#x8272;&#x6A21;&#x5F0F;" title="&#x6DF1;&#x8272;&#x6A21;&#x5F0F;"><i b-jabq2d7uqs class="ci ci-theme"></i><span b-jabq2d7uqs class="visually-hidden">&#x6DF1;&#x8272;&#x6A21;&#x5F0F;</span></a>
+	</div>
 
     <header class="header">
         <!-- header -->
@@ -176,7 +186,7 @@
                 <!-- 淺色版面的logo -->
                 <img class="mw-100 lightShow" src="/copyright/ADI/uul03bj1.u2r.svg" width="398" height="66" alt="&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72;&#xFF1A;&#x56DE;&#x9996;&#x9801;">
                 <!-- 深色版面的logo -->
-                <img class="mw-100 darkShow" width="398" height="66" alt="&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72;&#xFF1A;&#x56DE;&#x9996;&#x9801;">
+                <img class="mw-100 darkShow" src="/copyright/ADI/rxvpnkqz.kd1.svg" width="398" height="66" alt="&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72;&#xFF1A;&#x56DE;&#x9996;&#x9801;">
             </a>
             <b class="visually-hidden">&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72;</b>
         </h1>
@@ -439,7 +449,7 @@
 
 <p>今日現場示範案例展示廠商分別為「雪王食品行」，他們透過點點全球股份有限公司之「【快一點】LINE點餐客戶服務系統」，用LINE來快速點餐，讓訂餐不漏接且方便出餐；「博仁堂食品有限公司」從中藥行轉型加入藥膳湯品、養生茶飲等多元化經營，因為使用益欣資訊股份有限公司之「單店雲端進銷存系統」，使得中藥藥材跟食材的銷售情形可以即時掌握；「花蓮海悅酒店有限公司」導入解決方案為旭海國際科技股份有限公司之「OTA數位行銷整合系統」，再也不用擔心不同訂房管道的訂單無法整合；「好時光風格股份有限公司」導入解決方案為老虎網路科技股份有限公司之「企業版營運系統_課程/服務/入場模組_三選一+電子發票」，可以更有效的管理會員，提供更符合會員需求的課程；「台北逸馨文化商號」導入解決方案為資廚管理顧問股份有限公司之「資廚- iCHEF POS 進階方案」，讓這個位於中山堂堡壘古蹟餐廳，在開店經營上更有效率。 近年來市場環境因疫情影響發生改變，面對經營難題挑戰，許多中小微型企業首當其衝，更仰賴數位轉型提升營運效能。鑒於雲端軟體訂閱制方式可降低一次性購置成本、服務不中斷且資安有保障，讓中小企業老闆可以輕鬆掌握經營狀況，因此「臺灣雲市集」嚴選中小企業適用的各類雲端工具，同時提供免紙本、免臨櫃、隨時申請、快速查驗等4大特色服務，只要符合中小企業認定標準或稅籍登記之營利事業，皆可透過「工商憑證」、「企業負責人手機認證」、「企業負責人自然人憑證認證」三種多元認證方式來申請，中小企業10分鐘即可完成申請作業全線上申請、審核與簽約作業，方便無紙又減碳。</p>
 
-<p>臺灣雲市集「您付一半、政府幫您付一半」，每家企業最高補助3萬元點數之優惠持續推廣中，誠摯邀請所有的中小微型企業把握機會，一起跨出數位轉型的第一步。臺灣雲市集網站為<a href="http://www.tcloud.gov.tw" target="_blank" title="臺灣雲市集（另開新視窗）">www.tcloud.gov.tw</a> ，有相關雲端軟體選購問題亦可透過客服專線0809-092-091洽詢。</p>
+<p>臺灣雲市集「您付一半、政府幫您付一半」，每家企業最高補助3萬元點數之優惠持續推廣中，誠摯邀請所有的中小微型企業把握機會，一起跨出數位轉型的第一步。臺灣雲市集網站為<a href="https://www.tcloud.gov.tw" target="_blank" title="臺灣雲市集（另開新視窗）">www.tcloud.gov.tw</a> ，有相關雲端軟體選購問題亦可透過客服專線0809-092-091洽詢。</p>
 
 <p>此外，數位發展部與經濟部將於10月22日至25日於松山文創園區 2-3 號倉庫共同舉辦「<a href="https://edm.bnext.com.tw/2022future_infinity/" target="_blank" title="2022數位綠色雙轉型聯合成果展（另開新視窗）">2022數位綠色雙轉型聯合成果展</a>」，預計超過500家受輔導企業參展，歡迎大家踴躍參與，一起來體驗數位、綠色雙轉型。</p>
 
@@ -479,7 +489,7 @@
                     <div class="d-block d-md-inline-flex">
                         <div class="infoUnit"><b>&#x767C;&#x5E03;&#x55AE;&#x4F4D;&#xFF1A;</b><span>&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72;</span></div>
                         <div class="infoDate"><b>&#x5EFA;&#x7ACB;&#x65E5;&#x671F;&#xFF1A;</b><span>2022-09-29</span></div>
-                        <div class="infoTime"><b>&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;</b><span>2022-09-30</span></div>
+                        <div class="infoTime"><b>&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;</b><span>2022-10-14</span></div>
                     </div>
                 </div>
             </div>
@@ -654,13 +664,13 @@
                         <!-- 淺色版面的logo -->
                         <img class="mw-100 lightShow" src="/copyright/ADI/h11s51od.gka.svg" width="340" height="56" alt="&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72; Administration for Digital Industries, moda">
                         <!-- 深色版面的logo -->
-                        <img class="mw-100 darkShow" width="340" height="56" alt="&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72; Administration for Digital Industries, moda">
+                        <img class="mw-100 darkShow" src="/copyright/ADI/acsszpzb.re2.svg" width="340" height="56" alt="&#x6578;&#x4F4D;&#x7522;&#x696D;&#x7F72; Administration for Digital Industries, moda">
                     </a>
                 </div>
                 <div class="ftBtmRights">
                     <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero (另開新視窗)">CC0</a>&nbsp;No copyright reserved.</p>
 
-                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-10-13<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                    <p class="mb-2 mb-md-0">&#x66F4;&#x65B0;&#x65E5;&#x671F;&#xFF1A;2022-10-14<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
             </div>
             <div class="col-12 col-md text-md-end">
@@ -700,7 +710,7 @@
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/ADI/assets/js/common.js?v=cnX7EbF-K3nf2cThtjmCAbIXBntyXrxtFpevDUaA3BE"></script>
+            <script src="/ADI/assets/js/common.js?v=hEiixmVybquNkAQ_91hYSO0QN-BCmf7tGME8EHYWRdw"></script>
     <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
     <script src="/js/site.js?v=RbRNJR7umTBSuDOxcys5AJupyOo3TvIDRwP8ZfsZ32M"></script>
     <script>

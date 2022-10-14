@@ -28,7 +28,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/assets/css/layout.css?v=BUtaZlLu2VQbFnt6LXyhJQuSAMs6kxX-IjBddvImhQ4" media="all" />
+            <link rel="stylesheet" href="/assets/css/layout.css?v=YeH5fVJz8-1OAXbTcdMPoDrXQgNxSVrONx8f-IiBh_Q" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -51,9 +51,23 @@
         Your browser does not support JavaScript! &#x60A8;&#x7684;&#x700F;&#x89BD;&#x5668;&#x4E0D;&#x652F;&#x63F4;JavaScript&#x529F;&#x80FD;&#xFF0C;&#x82E5;&#x7DB2;&#x9801;&#x529F;&#x80FD;&#x7121;&#x6CD5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x6642;&#xFF0C;&#x8ACB;&#x958B;&#x555F;&#x700F;&#x89BD;&#x5668;JavaScript&#x72C0;&#x614B;&#x3002;
     </noscript>
     <script>
-		//fontSize.theme change
-		var fontSize = localStorage['fontSize'];
+		//default theme&fontSize
 		var theme = localStorage['theme'];
+		var fontSize = localStorage['fontSize'];
+		if (theme == undefined) {
+			if (window.matchMedia && window.matchMedia('(prefers-color-scheme:dark)').matches) {
+				document.documentElement.className += ' dark';
+			}
+		}else{
+			switch(theme) {
+				case 'light':
+					document.documentElement.className += ' light';
+					break;
+				case 'dark':
+					document.documentElement.className += ' dark';
+					break;
+			}
+		}
 		switch(fontSize) {
 			case '1':
 				document.body.className += ' fontSizeL';
@@ -68,20 +82,16 @@
 				document.body.className += ' fontSizeM';
 				break;
 		}
-		switch(theme) {
-			case 'light':
-				document.documentElement.className += ' light';
-				break;
-			case 'dark':
-				document.documentElement.className += ' dark';
-				break;
-		}
 	</script>
 
     <div b-jabq2d7uqs class="loading" id="loading"><span b-jabq2d7uqs class="loadingLogo"></span></div>
 
     <a b-jabq2d7uqs href="#AC" id="startBrick" class="visually-hidden-focusable" title="&#x8DF3;&#x5230;&#x4E3B;&#x8981;&#x5167;&#x5BB9;">&#x8DF3;&#x5230;&#x4E3B;&#x8981;&#x5167;&#x5BB9;</a>
 
+    <div b-jabq2d7uqs class="themeNav">
+		<span b-jabq2d7uqs class="visually-hidden">&#x7DB2;&#x7AD9;&#x984F;&#x8272;&#x5207;&#x63DB;</span>
+		<a b-jabq2d7uqs href="javascript:;" class="themeSwitch themeSwitchJs" data-darktitle="&#x6DF1;&#x8272;&#x6A21;&#x5F0F;" data-lighttitle="&#x6DFA;&#x8272;&#x6A21;&#x5F0F;" title="&#x6DF1;&#x8272;&#x6A21;&#x5F0F;"><i b-jabq2d7uqs class="ci ci-theme"></i><span b-jabq2d7uqs class="visually-hidden">&#x6DF1;&#x8272;&#x6A21;&#x5F0F;</span></a>
+	</div>
 
     <header class="header">
         <!-- header -->
@@ -182,7 +192,7 @@
                 <!-- 淺色版面的logo -->
                 <img class="mw-100 lightShow" src="/copyright/MODA/dijzj4q4.ozn.svg" width="398" height="66" alt="&#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;&#xFF1A;&#x56DE;&#x9996;&#x9801;">
                 <!-- 深色版面的logo -->
-                <img class="mw-100 darkShow" width="398" height="66" alt="&#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;&#xFF1A;&#x56DE;&#x9996;&#x9801;">
+                <img class="mw-100 darkShow" src="/copyright/MODA/foayupuv.4af.svg" width="398" height="66" alt="&#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;&#xFF1A;&#x56DE;&#x9996;&#x9801;">
             </a>
             <b class="visually-hidden">&#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8;</b>
         </h1>
@@ -724,7 +734,7 @@
                         <!-- 淺色版面的logo -->
                         <img class="mw-100 lightShow" src="/copyright/MODA/5nw5fc0u.eo2.svg" width="340" height="56" alt="moda &#x2014; &#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8; Ministry of Digital Affairs">
                         <!-- 深色版面的logo -->
-                        <img class="mw-100 darkShow" width="340" height="56" alt="moda &#x2014; &#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8; Ministry of Digital Affairs">
+                        <img class="mw-100 darkShow" src="/copyright/MODA/azfs4g3s.bnl.svg" width="340" height="56" alt="moda &#x2014; &#x6578;&#x4F4D;&#x767C;&#x5C55;&#x90E8; Ministry of Digital Affairs">
                     </a>
                 </div>
                 <div class="ftBtmRights">
@@ -771,7 +781,7 @@
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/assets/js/common.js?v=-BaCxwwOVbNp0HpHlZs5fOCR8GCQ43DTd2nqxVolUJw"></script>
+            <script src="/assets/js/common.js?v=UEb61YO0YTY4sNK3BKDZLccEUoEFyazLR1ehFxNgNEI"></script>
     <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
     <script src="/js/site.js?v=RbRNJR7umTBSuDOxcys5AJupyOo3TvIDRwP8ZfsZ32M"></script>
     <script>

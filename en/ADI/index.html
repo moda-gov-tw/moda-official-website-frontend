@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=PV7lC6Q5_vTdQK9yjbRaSGvKArzdeQ0amvJw2FwtCRs" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/ADI/assets/css/layout.css?v=YeHOql5t2akOansrL0BSQKuroMhKTRm6OGYnaKFkPC0" media="all" />
+            <link rel="stylesheet" href="/ADI/assets/css/layout.css?v=0xLwfMfomdSWnQt3v20jGO9DAKwbrz_UGxmboqlK3yc" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -49,9 +49,23 @@
         Browser not support JavaScript
     </noscript>
     <script>
-		//fontSize.theme change
-		var fontSize = localStorage['fontSize'];
+		//default theme&fontSize
 		var theme = localStorage['theme'];
+		var fontSize = localStorage['fontSize'];
+		if (theme == undefined) {
+			if (window.matchMedia && window.matchMedia('(prefers-color-scheme:dark)').matches) {
+				document.documentElement.className += ' dark';
+			}
+		}else{
+			switch(theme) {
+				case 'light':
+					document.documentElement.className += ' light';
+					break;
+				case 'dark':
+					document.documentElement.className += ' dark';
+					break;
+			}
+		}
 		switch(fontSize) {
 			case '1':
 				document.body.className += ' fontSizeL';
@@ -66,20 +80,16 @@
 				document.body.className += ' fontSizeM';
 				break;
 		}
-		switch(theme) {
-			case 'light':
-				document.documentElement.className += ' light';
-				break;
-			case 'dark':
-				document.documentElement.className += ' dark';
-				break;
-		}
 	</script>
 
     <div b-jabq2d7uqs class="loading" id="loading"><span b-jabq2d7uqs class="loadingLogo"></span></div>
 
     <a b-jabq2d7uqs href="#AC" id="startBrick" class="visually-hidden-focusable" title="To the central content area">To the central content area</a>
 
+    <div b-jabq2d7uqs class="themeNav">
+		<span b-jabq2d7uqs class="visually-hidden"></span>
+		<a b-jabq2d7uqs href="javascript:;" class="themeSwitch themeSwitchJs" data-darktitle="" data-lighttitle="" title=""><i b-jabq2d7uqs class="ci ci-theme"></i><span b-jabq2d7uqs class="visually-hidden"></span></a>
+	</div>
 
     <header class="header">
         <!-- header -->
@@ -717,7 +727,7 @@
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=sKRc1a7Wbie9juhh0OO3gsjnmEm94y-Q8Hi58kUaNvI"></script>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
-            <script src="/ADI/assets/js/common.js?v=cnX7EbF-K3nf2cThtjmCAbIXBntyXrxtFpevDUaA3BE"></script>
+            <script src="/ADI/assets/js/common.js?v=hEiixmVybquNkAQ_91hYSO0QN-BCmf7tGME8EHYWRdw"></script>
     <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
     <script src="/js/site.js?v=RbRNJR7umTBSuDOxcys5AJupyOo3TvIDRwP8ZfsZ32M"></script>
     <script>
