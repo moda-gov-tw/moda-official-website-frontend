@@ -946,7 +946,6 @@
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
             <script src="/ACS/assets/js/common.js?v=VRHhUBofDq6aUrCPTqPgFNRIAYk2TIbkEXhufDarjUE"></script>
-    <script src="/js/axios.min.js?v=bNi6QqjRIstfz1PQfgZgH-302Mz8wZewD1dJ2aLTh08"></script>
     <script src="/js/site.js?v=RbRNJR7umTBSuDOxcys5AJupyOo3TvIDRwP8ZfsZ32M"></script>
     <script>
         webSiteLange('zh-tw' ,'ACS'  );
@@ -954,18 +953,20 @@
     </script>
     
 <script>
-    if(window.navigator.cookieEnabled){
-         var sys = "";
-         var webLan = $(".webSitelanguage").attr("lang");
-         sys = (navigator.language||navigator.userLanguage||navigator.browserLanguage||navigator.systemLanguage).toLowerCase();
-         var _lang =getCookie("_lang");
-        if(webLan!=sys && _lang =="" )
-        {
-            //SetCookie("_lang","1");
-            //if(sys=="zh-tw"){ location.href="/";}
-            //else{location.href="/en/"; }
+   
+        var sys = "";
+        var webLan = $(".webSitelanguage").attr("lang");
+        sys = (navigator.language||navigator.userLanguage||navigator.browserLanguage||navigator.systemLanguage).toLowerCase();
+
+        var _lang = sessionStorage.getItem("_lang");
+        sessionStorage.setItem("_lang","1");
+        if(webLan!=sys && _lang ==null )
+        {  
+            if(sys=="zh-tw"){ location.href="/";}
+            else{location.href="/en/"; }
         }
-    }
+        
+    
 
 
     $(".PlanTab").on('click',function(){
