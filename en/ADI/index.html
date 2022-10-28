@@ -156,7 +156,7 @@
             <div class="form-group d-flex">
                 <input class="searchAreaIpt searchAreaIptJs flex-fill w-100 rounded-4" type="text" name="q" id="query" placeholder="Enter KeyWords" title="Enter KeyWords">
                 <button class="searchAreaBtn" type="button" onclick="gooSearch('en','ADI', $('#query').val() )" value="Search" title="Search KeyWords"><i class="ci ci-scope"></i><span class="visually-hidden">Search KeyWords</span></button>
-                <a href="javascript:;" onclick="window.open('http://www.google.com.tw/advanced_search?hl=zh-TW&amp;as_q=&amp;num=100&amp;as_sitesearch=www.moda.gov.tw/&amp;cof=FORID%3A10&amp;ie=UTF-8&amp;sa=%E6%90%9C%E5%B0%8B&amp;siteurl=www', '_blank')" class="advancedBtn btn rounded-4" title="Advanced Search (open in new window)">Advanced Search</a>
+                <a href="javascript:;" onclick="window.open('http://www.google.com.tw/advanced_search?hl=zh-TW&amp;as_q=&amp;num=100&amp;as_sitesearch=moda.gov.tw/&amp;cof=FORID%3A10&amp;ie=UTF-8&amp;sa=%E6%90%9C%E5%B0%8B&amp;siteurl=www', '_blank')" class="advancedBtn btn rounded-4" title="Advanced Search (open in new window)">Advanced Search</a>
             </div>
             <div class="hotSearch w-100 py-4">
                 <div class="listTag">
@@ -734,31 +734,8 @@
 
     </script>
     
-<script>
-   
-        var sys = "";
-        var webLan = $(".webSitelanguage").attr("lang");
-        sys = (navigator.language||navigator.userLanguage||navigator.browserLanguage||navigator.systemLanguage).toLowerCase();
+     <script src="/js/index.js?v=nL5f4ZGTh0DSV7pKTk8Gtnj2hXR8Q7bwa_rMQuzv0xQ"></script>
 
-        var _lang = sessionStorage.getItem("_lang");
-        sessionStorage.setItem("_lang","1");
-        if(webLan!=sys && _lang ==null )
-        {  
-            if(sys=="zh-tw"){ location.href="/";}
-            else{location.href="/en/"; }
-        }
-        
-    
-
-
-    $(".PlanTab").on('click',function(){
-        var sb = $(this).data('storage');
-        $("#MainPlanTab").empty();
-        $("#SB" + sb + " > div").clone().appendTo("#MainPlanTab");
-        FECommon.widgetIdxList2Swiper();
-        wLazyLoad.update();//update lazyload
-    });
-</script>
 
 </body>
 </html>
