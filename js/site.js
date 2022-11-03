@@ -1,6 +1,6 @@
 ﻿//
 function GetApiUrl() {
-    return "https://www-api.moda.gov.tw";
+    return "https://www-api.moda.gov.tw"; 
 }
 $(document).on("click", "a", function () {
     if ($(this).find('span').length > 0) {
