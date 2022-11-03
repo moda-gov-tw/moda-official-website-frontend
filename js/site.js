@@ -249,6 +249,7 @@ function SearchJsonData(p) {
             itemHtml += "</div></div></div>";
         }
         $("#ListTable").html(itemHtml);
+	wLazyLoad.update();
         JsPagination(p);
         $('html').stop().animate({ scrollTop: 0 }, 100, 'linear');
     } 
