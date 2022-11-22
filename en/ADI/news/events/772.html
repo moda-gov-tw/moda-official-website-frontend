@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width,initial-scale = 1" />
     <meta name="format-detection" content="telephone=no">
     
-<title>Latest News｜Administration for Digital Industries, moda</title>
-<meta property="og:title" content="Latest News｜Administration for Digital Industries, moda" />
+<title>Events-Latest News｜Administration for Digital Industries, moda</title>
+<meta property="og:title" content="Events-Latest News｜Administration for Digital Industries, moda" />
 <meta property="og:image" content="https://moda.gov.tw/ADI/assets/img/fbshare.jpg" />
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="628">
-<meta property="og:description" content="Latest News" />
+<meta property="og:description" content="Events" />
 <meta name="keywords" />
-<meta name="description" content="Latest News" />
+<meta name="description" content="Events" />
 
     <!-- favicon -->
         <link rel="shortcut icon" type="image/png" href="/ADI/assets/img/favicon.ico">
@@ -285,8 +285,11 @@
 				<li class="breadcrumb-item breadHome">
 					<a href="/en/ADI/index.html")">Home</a>
 					</li>
+					<li class="breadcrumb-item  ">
+							<a href="/en/ADI/news/758.html">Latest News</a>	
+					</li>
 					<li class="breadcrumb-item  active">
-Latest News					</li>
+Events					</li>
 			</ol>
 		</nav>
 	</div>
@@ -309,7 +312,7 @@ Latest News					</li>
 										<li class="">
 											<a href="/en/ADI/news/latest-news/766.html"  target='' title='Press Releases'>Press Releases</a>
 										</li>
-										<li class="">
+										<li class="on">
 											<a href="/en/ADI/news/events/772.html"  target='' title='Events'>Events</a>
 										</li>
 							</ul>
@@ -369,13 +372,13 @@ Latest News					</li>
             <div class="rightMain">
 
                 <div class="a11yBrickBar1">
-                    <a href="#AC" id="AC" accesskey="C" class="a11yBrick position-absolute"	title="頁面中央內容區塊[快捷鍵Alt+C]">:::</a>
+                    <a href="#AC" id="AC" accesskey="C" class="a11yBrick position-absolute" title="Alt&#x2B;C: Content Area">:::</a>
                 </div>
-                
+
                 <!-- 標題 -->
                 <div class="titleBar2 row">
     <div class="col">
-        <h2 class="title3 mb-0 fw-normal"><span class="titleTxt">Latest News</span></h2>
+        <h2 class="title3 mb-0 fw-normal"><span class="titleTxt">Events</span></h2>
     </div>
     <div class="col-auto text-end d-flex">
         <ul class="shareBar list-unstyled list-inline mb-0">
@@ -391,36 +394,116 @@ Latest News					</li>
             <li class="list-inline-item d-none d-md-inline-block">
                 <a class="printBtn printJs" href="javascript:;" title="Print Page Info"><i class="ci ci-print"></i><span class="visually-hidden">Print</span></a>
             </li>
+                <li class="list-inline-item">
+                    <a href="javascript:;" class="searchSwitch searchSwitchJs" data-opentitle="Expand Search Bar" data-closetitle="Collapse Search Bar" title="Expand Search Bar"><i class="ci ci-open"></i><span class="visually-hidden">Expand Search Bar</span></a>
+                </li>
         </ul>
     </div>
 </div>
 
+                <!-- 搜尋功能 -->
+                <div class="conSearchBar1 mb-4 conSearchBarJs off">
+                    <!-- <div class="text-end">
+                        <a href="javascript:;" class="searchSwitch btn rounded-4 searchSwitchJs" data-opentitle="展開查詢" data-closetitle="收合查詢">展開查詢</a>
+                    </div> -->
+                    <div class="conSearchBarWrap">
+                        <!-- 結尾有日曆的 -->
+                        <div class="searchIw3">
+                            <div class="searchI">
+                                <div class="searchI-C">
+                                    <label for="QryDateS" class="visually-hidden">Date</label>
+                                    <input name="QryDateS" type="text" id="QryDateS" title="yyyy-mm-dd" class="ipt1 rounded-4 datepicker1" placeholder="yyyy-mm-dd" maxlength="10" autocomplete="off" value="">
+                                </div>
+                                <div class="searchI-R">
+                                    <a href="javascript:;" title="StartDate" class="calendarBtn1"><span class="visually-hidden">StartDate</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 開頭有~結尾有日曆的 -->
+                        <div class="searchIw4">
+                            <div class="searchI">
+                                <div class="searchI-L">~</div>
+                                <div class="searchI-C">
+                                    <label for="QryDateE" class="visually-hidden">To</label>
+                                    <input name="QryDateE" type="text" id="QryDateE" title="yyyy-mm-dd" class="ipt1 rounded-4 datepicker1" placeholder="yyyy-mm-dd" maxlength="10" autocomplete="off" value="">
+                                </div>
+                                <div class="searchI-R">
+                                    <a href="javascript:;" title="EndDate" class="calendarBtn1"><span class="visually-hidden">EndDate</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 結尾有按鈕 -->
+                        <div class="searchIw5">
+                            <div class="searchI">
+                                <div class="searchI-C">
+                                    <label for="QryKeyword" class="visually-hidden">Keyword(s)</label>
+                                    <input type="text" name="QryKeyword" id="QryKeyword" placeholder="Enter KeyWords" value="" class="searchI-C ipt1 rounded-4 searchField" title="Enter KeyWords">
+                                </div>
+                                <div class="searchI-R">
+                                    <input type="button" class="btn btn2 rounded-4 searchSubmit" value="Search" title="Search KeyWords" onclick="Search(1)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!--Header-->
+                <div id="ContentHeader">
+                </div>
+
                 <!-- 列表 -->
-                            <!-- 列表樣式七 -->
-<div class="list1 row mb-5 g-3">
-        <div class="col-12 col-sm-6 col-md-4">
-            <div class="card h-100 shadow-md">
-                <a href="/en/ADI/news/latest-news/766.html" class="card-body text-decoration-none" target='' title='Press Releases'>
-                    <b class="card-title title5">Press Releases</b>
-                    <p class="card-text"></p>
-                </a>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4">
-            <div class="card h-100 shadow-md">
-                <a href="/en/ADI/news/events/772.html" class="card-body text-decoration-none" target='' title='Events'>
-                    <b class="card-title title5">Events</b>
-                    <p class="card-text"></p>
-                </a>
-            </div>
-        </div>
+                                    <div class="qa" id="ListTable">
+                                        <div class="row d-flex justify-content-center">
+                                            <div class="col">
+                                                <div class="accordion mb-5" id="qa1">
+                                                        <div class="accordion-item">
+                                                            <!-- 每項題目需套不同的id-->
+                                        <div class="accordion-header" id="qaH3164">
+                                                                <!--需套跟內容對應的data-bs-target、aria-controls -->
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#qaCon3164" aria-controls="qaCon3164">
+                                                                    <span>2022 DIGI&#x2B; X TCA Global Digital Talent Awards</span>
+                                                                </button>
+                                                            </div>
+                                                            <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
+                                        <div id="qaCon3164" class="accordion-collapse collapse" aria-labelledby="qaH3164" data-bs-parent="#qa1">
+                                                                <div class="accordion-body">
+                                                                    <div class="article1">
+                                                                        <p>Date： Dec 1 (Thu) ~ Dec 2 (Fri) </p>
+
+<p>Location： Syntrend Taipei 12F “Syntrend Show” (12F, No. 2, Section 3, Civic Blvd, Zhongzheng District, Taipei City)
+</p>
+
+<p>Activities：2022 DIGI+ X TCA Global Digital Talent Awards #eventoftheyear 
+In order to cultivate interdisciplinary and international digital talents, the Ministry of Digital Affairs has assigned the “DIGI+ Talent Accelerator and Jumpstart Program” and the “Talent Circulation Alliance (TCA) Program” to work hand in hand with 30 Training Institutions, including 15 legal entities and 15 corporates, to cultivate a total of 229 Taiwanese students and 79 international students from 20 countries for the past 6 months. Now, we present to you the 2022 “DIGI+ x TCA Global Digital Talent Awards,” an event showcasing our trainees’ exceptional final presentations, and the event will include activities such as booth exhibition of final projects, project presentation competition, commendation ceremony for outstanding Training Institutions, and the Awards Ceremony. We excitedly invite everyone interested in interdisciplinary studies or talent cultivation to come join us!</p>
+
+<p><a href="https://tinyurl.com/2022digixtcagdta " target="_blank" title="Event Page(open in new window)">Event Page</a></p>
+
+<p><a href="https://tinyurl.com/gdtaguide2022" target="_blank" title="Download our Quick Guide(open in new window)">Download our Quick Guide</a></p>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                        <div class="pageBar mb-5 ">
+    <div class="pageSet mb-4">
+                        <div class="mRow">total items<span class="totalData">1</span>.</div>
+    </div>
 </div>
+
                 <!--Footer-->
+                <div class="article1 mb-4">
+                    
+                </div>
             </div>
             <!-- 右半主內容 end -->
         </div>
     </div>
+    <input type="hidden" value='772' id="sqn" />
+    <div id="ns" style="display:none;"></div>
+    <div id="ca" style="display:none;"></div>
 </main>
 
 
@@ -620,9 +703,46 @@ Latest News					</li>
         confirm
     </script>
     
-    <script>
-    LeftMenu('759');
-    </script>
+<script>
+    var _JsData;
+    var _needtag = NeedTag('AccordionList');
+    var _Module = 'NEWS';
+
+    _JsData = JSON.parse('[{"mainsn":"3164","istopdisplay":"none","href":"/en/ADI/news/events/3164.html","target":null,"title":"2022 DIGI\u002B X TCA Global Digital Talent Awards","startdate":"2022-11-22","newstitle":"2022 DIGI\u002B X TCA Global Digital Talent Awards","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"\u003Cp\u003EDate\uFF1A Dec 1 (Thu) ~ Dec 2 (Fri) \u003C/p\u003E\u003Cp\u003ELocation\uFF1A Syntrend Taipei 12F \u201CSyntrend Show\u201D (12F, No. 2, Section 3, Civic Blvd, Zhongzheng District, Taipei City)\u003C/p\u003E\u003Cp\u003EActivities\uFF1A2022 DIGI\u002B X TCA Global Digital Talent Awards #eventoftheyear In order to cultivate interdisciplinary and international digital talents, the Ministry of Digital Affairs has assigned the \u201CDIGI\u002B Talent Accelerator and Jumpstart Program\u201D and the \u201CTalent Circulation Alliance (TCA) Program\u201D to work hand in hand with 30 Training Institutions, including 15 legal entities and 15 corporates, to cultivate a total of 229 Taiwanese students and 79 international students from 20 countries for the past 6 months. Now, we present to you the 2022 \u201CDIGI\u002B x TCA Global Digital Talent Awards,\u201D an event showcasing our trainees\u2019 exceptional final presentations, and the event will include activities such as booth exhibition of final projects, project presentation competition, commendation ceremony for outstanding Training Institutions, and the Awards Ceremony. We excitedly invite everyone interested in interdisciplinary studies or talent cultivation to come join us!\u003C/p\u003E\u003Cp\u003E\u003Ca href=\u0027https://tinyurl.com/2022digixtcagdta \u0027 target=\u0027_blank\u0027 title=\u0027Event Page(open in new window)\u0027\u003EEvent Page\u003C/a\u003E\u003C/p\u003E\u003Cp\u003E\u003Ca href=\u0027https://tinyurl.com/gdtaguide2022\u0027 target=\u0027_blank\u0027 title=\u0027Download our Quick Guide(open in new window)\u0027\u003EDownload our Quick Guide\u003C/a\u003E\u003C/p\u003E","tags":[],"crosslinkdisplay":"none","schedule":null}]');
+    LeftMenu('773');
+    NewList('772');
+    var ListPage = '/_news/AccordionList.html';
+    var listTag2Page = '/_news/listTag2.html';
+    $("#ns").load(ListPage, function () {
+        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+    });
+        if( 'AccordionList' == 'AccordionList' && 'ADI'=='MODA' ){
+            var tag = location.hash;
+            var lang = 'en';
+            function tagclick(tag){
+                $("#qaH"+tag).children(".accordion-button").click();
+            }
+            if(tag.length > 1)
+            {
+                tag = tag.replace("#qaH","");
+                var tagIndex = _JsData.findIndex(x=>x.mainsn== tag);
+                if(tagIndex > -1)
+                {
+                    var _tagIndex = tagIndex +1;
+                    var p = Math.ceil(_tagIndex / 15) ;
+                    if(p > 1)
+                    {
+                         $("#ns").load(ListPage, function () {
+                             serials( SearchJsonData(p),  tagclick(tag));
+                         });
+                    }else{
+                        tagclick(tag);
+                    }
+                }
+            }
+        }
+
+</script>
 
 </body>
 </html>
