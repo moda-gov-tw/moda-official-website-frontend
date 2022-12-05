@@ -467,6 +467,9 @@
                                         <div class="searchI-C">
                                             <select id="CustomizeTags" class="sel1 rounded-4">
                                                 <option value="">請選擇</option>
+                                                    <option value="3">111年度</option>
+                                                    <option value="4">112年度</option>
+                                                    <option value="5">113年度</option>
                                             </select>
                                         </div>
                                     </div>
@@ -490,7 +493,24 @@
                 </div>
 
                 <!-- 列表 -->
-                        <div id="ListTable" class="text-center txt1 py-5">查無任何資訊</div>
+                                    <ul class="list4-2 list-group divider mb-5" id="ListTable">
+                                            <li class="list-group-item d-block bg-transparent px-0">
+                                                <a href="/information-service/govinfo/official-travel-report/3267.html" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target='' title='參加亞太經濟合作（APEC）電信暨資訊工作小組第65次會議報告書_視訊報告'>
+                                                    <div class="listDate ms-md-3 order-md-2">2022-12-05</div>
+                                                    <div class="col mb-0">
+                                                        <b class="title5 fw-normal">
+                                                            參加亞太經濟合作（APEC）電信暨資訊工作小組第65次會議報告書_視訊報告
+                                                        </b>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                    </ul>
+                        <div class="pageBar mb-5 ">
+    <div class="pageSet mb-4">
+                        <div class="mRow">共<span class="totalData">1</span>筆資料</div>
+    </div>
+</div>
+
                 <!--Footer-->
                 <div class="article1 mb-4">
                     
@@ -796,7 +816,7 @@
     var _needtag = NeedTag('OneTextList');
     var _Module = 'NEWS';
 
-    _JsData = JSON.parse('[]');
+    _JsData = JSON.parse('[{"mainsn":"3267","istopdisplay":"none","href":"/information-service/govinfo/official-travel-report/3267.html","target":null,"title":"\u53C3\u52A0\u4E9E\u592A\u7D93\u6FDF\u5408\u4F5C\uFF08APEC\uFF09\u96FB\u4FE1\u66A8\u8CC7\u8A0A\u5DE5\u4F5C\u5C0F\u7D44\u7B2C65\u6B21\u6703\u8B70\u5831\u544A\u66F8_\u8996\u8A0A\u5831\u544A","startdate":"2022-12-05","newstitle":"\u53C3\u52A0\u4E9E\u592A\u7D93\u6FDF\u5408\u4F5C\uFF08APEC\uFF09\u96FB\u4FE1\u66A8\u8CC7\u8A0A\u5DE5\u4F5C\u5C0F\u7D44\u7B2C65\u6B21\u6703\u8B70\u5831\u544A\u66F8_\u8996\u8A0A\u5831\u544A","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null}]');
     LeftMenu('1191');
     NewList('1191');
     var ListPage = '/_news/OneTextList.html';
