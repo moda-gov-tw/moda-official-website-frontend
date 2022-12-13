@@ -694,18 +694,18 @@
     
 <script>
     var _JsData;
-    var _needtag = NeedTag('OneTextList');
+    var _needtag = NeedTag('AccordionList');
     var _Module = 'NEWS';
 
     _JsData = JSON.parse('[]');
     LeftMenu('1183');
     NewList('1183');
-    var ListPage = '/_news/OneTextList.html';
+    var ListPage = '/_news/AccordionList.html';
     var listTag2Page = '/_news/listTag2.html';
     $("#ns").load(ListPage, function () {
         if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
     });
-        if( 'OneTextList' == 'AccordionList' && 'ADI'=='MODA' ){
+        if( 'AccordionList' == 'AccordionList' && 'ADI'=='MODA' ){
             var tag = location.hash;
             var lang = 'zh-tw';
             function tagclick(tag){
