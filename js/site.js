@@ -51,7 +51,7 @@ function webSiteLange(lan, webSiteId) {
 
 //search
 var _JsData;
-
+var foreverApi = 0;
 function NewList(sqn) {
     var obj = getCookie("SearchObjN");
     obj = "";
@@ -192,7 +192,7 @@ function NeedTag(e) {
     if (needAarray.indexOf(e) > -1) { return true; } else { return false; }
 }
 function SearchJsonData(p) {
-    if (_Module == "Schedule") {
+     if (foreverApi =="1" ) {
         Search(p);
     }
     else
