@@ -1,13 +1,17 @@
-﻿//
+﻿//開發階段
 function GetApiUrl() {
-    return "https://www-api.moda.gov.tw"; 
+     return "https://www-api.moda.gov.tw"; 
 }
-$(document).on("click", "a", function () {
+$(document).on("click", "a", function (e) {
     if ($(this).find('span').length > 0) {
         if ($(this).find('span')[0].innerHTML.toUpperCase().indexOf("PDF") >= 0) {
             window.open($(this)[0].href);
             return false;
         }
+    }
+   else if ($(this).hasClass("copyLinkBtn")) {
+        e.preventDefault();
+		tagcopy($(this));
     }
     else if (!LocalUrl($(this).attr('href'), location.href)) {
         var flag = confirm("是否要連結至非本網站頁面？ \n Are you sure you want to visit this website? \n" + $(this).attr('href'));
@@ -44,7 +48,7 @@ function webSiteLange(lan, webSiteId) {
         });
         $(".footer").load(lan + webSiteId + "/home/Footer.html", function () {
             FECommon.footerFtNavStyle();
-            wLazyLoad.update();//update lazyload
+	    wLazyLoad.update();
         });
     }
 }
@@ -127,8 +131,9 @@ function SearchObj(obj) {
         FECommon.basicLoadingOff();
         return;
     }
-
+//serials(SearchAjax(obj),FECommon.mainQaAnchor());
     SearchAjax(obj);
+	FECommon.mainQaAnchor();
 }
 function SearchAjax(obj) {
     var innerHtml = "";
@@ -171,6 +176,7 @@ function SearchAjax(obj) {
                     if (obj.str != "" || obj.end != "" || obj.txt != "" ||
                         obj.C4 != "" || obj.C5 != "" || obj.C6 != "" || obj.CT != "" || obj.ZC != "") {
                         $(".searchSwitch").click();
+						
                     }
                 }
                 $('.datepicker1').datepicker();
@@ -192,7 +198,7 @@ function NeedTag(e) {
     if (needAarray.indexOf(e) > -1) { return true; } else { return false; }
 }
 function SearchJsonData(p) {
-     if (foreverApi =="1" ) {
+    if (foreverApi =="1") {
         Search(p);
     }
     else
@@ -200,7 +206,10 @@ function SearchJsonData(p) {
         var S1 = $("#ns")[0].innerHTML;
         var S2 = $("#ca")[0].innerHTML;
         var lang = $(".webSitelanguage").attr("lang");
-        if (lang == "en") { S1 = S1.replace("連結此問答", "Link in context"); }
+		console.log(lang);
+        if (lang == "en") { 
+			S1 = S1.replace(new RegExp("連結此問答", 'g'), "Link in context"); 
+		}
         var displaycount = 15;
         if ($("#perPageShow").length > 0) {
             displaycount = $("#perPageShow").find(':selected').val();
@@ -249,7 +258,7 @@ function SearchJsonData(p) {
             itemHtml += "</div></div></div>";
         }
         $("#ListTable").html(itemHtml);
-	wLazyLoad.update();
+		wLazyLoad.update();
         JsPagination(p);
         $('html').stop().animate({ scrollTop: 0 }, 100, 'linear');
     } 
@@ -441,4 +450,35 @@ function serials(tasks, callback) {
     tasks.forEach(function (f) {
         f(check);
     });
+}
+function MODAEncode(txt) {
+    var ele = document.createElement('span');
+    ele.appendChild(document.createTextNode(txt));
+    return MODADecode(ele.innerHTML);
+}
+function MODADecode(text) {
+    var temp = document.createElement("div");
+    temp.innerHTML = text;
+    var output = temp.innerText || temp.textContent;
+    temp = null;
+    return output;
+}
+function tagcopy(e) {
+    var href = location.href.replace(location.hash, "") + e.attr('href');
+	var navH = $('.navbar').outerHeight();
+	var topBarH = $('.baseNav').outerHeight();
+	var position = $(e.attr('href')).stop().offset().top - navH - topBarH;;
+    navigator.clipboard.writeText(href)
+        .then(() => {
+            e.find('.copyMsg').fadeIn(200, function() {
+				e.find('.copyMsg').delay(1500).fadeOut(200);
+			});
+			setTimeout(function(){
+				$('html, body').stop().animate({ scrollTop: position },400,'linear');
+				location.href = href;
+			},1900);
+        })
+        .catch(err => {
+            console.log('Something went wrong', err);
+        })
 }

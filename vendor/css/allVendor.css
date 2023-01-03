@@ -38,6 +38,10 @@ fonts
   content: "\f470";
 }
 
+.bi-link::before {
+  content: "\f471";
+}
+
 .bi-tag::before {
   content: "\f5b0";
 }
