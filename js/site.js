@@ -48,7 +48,7 @@ function webSiteLange(lan, webSiteId) {
         });
         $(".footer").load(lan + webSiteId + "/home/Footer.html", function () {
             FECommon.footerFtNavStyle();
-	    wLazyLoad.update();
+	    FECommon.widgetLazyload();
         });
     }
 }
