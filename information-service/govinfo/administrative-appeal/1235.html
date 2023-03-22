@@ -1,5 +1,4 @@
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-tw" class="webSitelanguage">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -13,9 +12,8 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="628">
 <meta property="og:description" content="訴願決定查詢" />
-<meta name="keywords" content="" />
+<meta name="keywords" />
 <meta name="description" content="訴願決定查詢" />
-
 
     <!-- favicon -->
         <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.ico">
@@ -256,7 +254,7 @@
                                                         <li><a class="dropdown-item" href="/information-service/govinfo/business-report/1177.html" title="業務報告"  target="">業務報告</a></li>
                                                         <li><a class="dropdown-item" href="https://report.nat.gov.tw/ReportFront/ReportList/category/orgCenter?orgid=A29000000G" title="公務出國報告（另開新視窗）" rel=noreferrer noopener target="_blank">公務出國報告</a></li>
                                                         <li><a class="dropdown-item" href="/information-service/govinfo/budget-financialstatement/1101.html" title="預算及決算書"  target="">預算及決算書</a></li>
-                                                        <li><a class="dropdown-item" href="/information-service/govinfo/administrative-appeal/1087.html" title="訴願決定查詢"  target="">訴願決定查詢</a></li>
+                                                        <li><a class="dropdown-item" href="/information-service/govinfo/administrative-appeal/1235.html" title="訴願決定查詢"  target="">訴願決定查詢</a></li>
                                                         <li><a class="dropdown-item" href="/information-service/govinfo/subsidies/1113.html" title="支付或接受之補助"  target="">支付或接受之補助</a></li>
                                                         <li><a class="dropdown-item" href="/information-service/govinfo/advertisement/1169.html" title="辦理政策及業務宣導之執行情形"  target="">辦理政策及業務宣導之執行情形</a></li>
                                                 </ul>
@@ -369,7 +367,7 @@
                                     <a href="/information-service/govinfo/budget-financialstatement/1101.html" target='' title='預算及決算書'>預算及決算書</a>
                                 </li>
                                 <li class="on">
-                                    <a href="/information-service/govinfo/administrative-appeal/1087.html" target='' title='訴願決定查詢'>訴願決定查詢</a>
+                                    <a href="/information-service/govinfo/administrative-appeal/1235.html" target='' title='訴願決定查詢'>訴願決定查詢</a>
                                 </li>
                                 <li class="">
                                     <a href="/information-service/govinfo/subsidies/1113.html" target='' title='支付或接受之補助'>支付或接受之補助</a>
@@ -404,9 +402,9 @@
             <div class="rightMain">
 
                 <div class="a11yBrickBar1">
-                    <a href="#AC" id="AC" accesskey="C" class="a11yBrick position-absolute"	title="中央內容區塊[快捷鍵Alt&#x2B;C]">:::</a>
+                    <a href="#AC" id="AC" accesskey="C" class="a11yBrick position-absolute" title="中央內容區塊[快捷鍵Alt&#x2B;C]">:::</a>
                 </div>
-                
+
                 <!-- 標題 -->
                 <div class="titleBar2 row">
     <div class="col">
@@ -426,28 +424,75 @@
             <li class="list-inline-item d-none d-md-inline-block">
                 <a class="printBtn printJs" href="javascript:;" title="列印頁面內容"><i class="ci ci-print"></i><span class="visually-hidden">列印</span></a>
             </li>
+                <li class="list-inline-item">
+                    <a href="javascript:;" class="searchSwitch searchSwitchJs" data-opentitle="展開查詢" data-closetitle="收合查詢" title="展開查詢"><i class="ci ci-open"></i><span class="visually-hidden">展開查詢</span></a>
+                </li>
         </ul>
     </div>
 </div>
 
-                <!-- 標籤 -->
-                <div class="listTag3 mb-2 mb-md-3">
-                </div>
-                <!-- 文字編輯區 -->
-                <div class="article1 cpArticle">
-                    <p>目前尚無訴願決定</p>
-                </div>
-                <div class="articleInfo">
-                    <div class="d-block d-md-inline-flex">
-                        <div class="infoUnit"><b>發布單位：</b><span>數位發展部</span></div>
-                        <div class="infoDate"><b>建立日期：</b><span>2022-09-28</span></div>
-                        <div class="infoTime"><b>更新日期：</b><span>2022-09-28</span></div>
+                <!-- 搜尋功能 -->
+                <div class="conSearchBar1 mb-4 conSearchBarJs off">
+                    <!-- <div class="text-end">
+                        <a href="javascript:;" class="searchSwitch btn rounded-4 searchSwitchJs" data-opentitle="展開查詢" data-closetitle="收合查詢">展開查詢</a>
+                    </div> -->
+                    <div class="conSearchBarWrap">
+                        <!-- 結尾有日曆的 -->
+                        <div class="searchIw3">
+                            <div class="searchI">
+                                <div class="searchI-C">
+                                    <label for="QryDateS" class="visually-hidden">日期</label>
+                                    <input name="QryDateS" type="text" id="QryDateS" title="yyyy-mm-dd" class="ipt1 rounded-4 datepicker1" placeholder="yyyy-mm-dd" maxlength="10" autocomplete="off" value="">
+                                </div>
+                                <div class="searchI-R">
+                                    <a href="javascript:;" title="點擊選擇日期起日" class="calendarBtn1"><span class="visually-hidden">點擊選擇日期起日</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 開頭有~結尾有日曆的 -->
+                        <div class="searchIw4">
+                            <div class="searchI">
+                                <div class="searchI-L">~</div>
+                                <div class="searchI-C">
+                                    <label for="QryDateE" class="visually-hidden">至</label>
+                                    <input name="QryDateE" type="text" id="QryDateE" title="yyyy-mm-dd" class="ipt1 rounded-4 datepicker1" placeholder="yyyy-mm-dd" maxlength="10" autocomplete="off" value="">
+                                </div>
+                                <div class="searchI-R">
+                                    <a href="javascript:;" title="點擊選擇日期迄日" class="calendarBtn1"><span class="visually-hidden">點擊選擇日期迄日</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 結尾有按鈕 -->
+                        <div class="searchIw5">
+                            <div class="searchI">
+                                <div class="searchI-C">
+                                    <label for="QryKeyword" class="visually-hidden">關鍵字</label>
+                                    <input type="text" name="QryKeyword" id="QryKeyword" placeholder="請輸入關鍵字" value="" class="searchI-C ipt1 rounded-4 searchField" title="關鍵字搜尋">
+                                </div>
+                                <div class="searchI-R">
+                                    <input type="button" class="btn btn2 rounded-4 searchSubmit" value="查詢" title="送出關鍵字查詢" onclick="Search(1)">
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <!--Header-->
+                <div id="ContentHeader">
+                </div>
+
+                <!-- 列表 -->
+                        <div id="ListTable" class="text-center txt1 py-5">查無任何資訊</div>
+                <!--Footer-->
+                <div class="article1 mb-4">
+                    
                 </div>
             </div>
             <!-- 右半主內容 end -->
         </div>
     </div>
+    <input type="hidden" value='1235' id="sqn" />
+    <div id="ns" style="display:none;"></div>
+    <div id="ca" style="display:none;"></div>
 </main>
 
 
@@ -738,11 +783,49 @@
     </script>
     
 <script>
- LeftMenu('1087');
-</script>
+    var _JsData;
+    var _needtag = NeedTag('OneTextList');
+    var _Module = 'NEWS';
+    _JsData = JSON.parse('[]');
+    foreverApi = '0';
+    LeftMenu('1235');
+    NewList('1235');
+    var ListPage = '/_news/OneTextList.html';
+    var listTag2Page = '/_news/listTag2.html';
+    $("#ns").load(ListPage, function () {
+        if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
+    });
+        if( 'OneTextList' == 'AccordionList'  ){
+            var tag = location.hash;
+            var lang = 'zh-tw';
+            function tagclick(tag){
+                $("#qaH"+tag).children(".accordion-button").click();
+            }
+            if(tag.length > 1)
+            {
+                tag = tag.replace("#qaH","");
+                var tagIndex = _JsData.findIndex(x=>x.mainsn== tag);
+                if(tagIndex > -1)
+                {
+                    var _tagIndex = tagIndex +1;
+                    var p = Math.ceil(_tagIndex / 15) ;
+                    if(p > 1)
+                    {
+                         $("#ns").load(ListPage, function () {
+                             serials( SearchJsonData(p),  tagclick(tag));
+                              var navH = $('.navbar').outerHeight();
+							  var topBarH = $('.baseNav').outerHeight();
+							  var position = $("#qaH"+tag).stop().offset().top - navH - topBarH;
+							 $('html, body').stop().animate({ scrollTop: position },400,'linear');
+                         });
+                    }else{
+                        tagclick(tag);
+                    }
+                }
+            }
+        }
 
+</script>
 
 </body>
 </html>
-
-
