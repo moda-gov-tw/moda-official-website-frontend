@@ -1,6 +1,6 @@
-﻿//開發階段
+﻿
 function GetApiUrl() {
-     return "https://www-api.moda.gov.tw"; 
+    return "https://www-api.moda.gov.tw";
 }
 $(document).on("click", "a", function (e) {
     if ($(this).find('span').length > 0) {
@@ -258,7 +258,7 @@ function SearchJsonData(p) {
             itemHtml += "</div></div></div>";
         }
         $("#ListTable").html(itemHtml);
-		wLazyLoad.update();
+	   if (typeof wLazyLoad != 'undefined') { wLazyLoad.update(); }
         JsPagination(p);
         $('html').stop().animate({ scrollTop: 0 }, 100, 'linear');
     } 
