@@ -26,7 +26,7 @@
     <!-- 套件css -->
     <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=moN4zjlRJsbq1NVg3LLaugM1htrg2BKz7kgxuAi62LQ" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/ACS/assets/css/layout.css?v=tkoYzZGZiZC-03DK_Y-LOh8H_w-AX3XCDtmQfl_z0kM" media="all" />
+            <link rel="stylesheet" href="/ACS/assets/css/layout.css?v=odIVxxjgIctUCBaZiaHEy7XCt7urMNmtYbzWVBc9Lec" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -156,7 +156,7 @@
             <div class="form-group d-flex">
                 <input class="searchAreaIpt searchAreaIptJs flex-fill w-100 rounded-4" type="text" name="q" id="query" placeholder="Enter KeyWords" title="Enter KeyWords">
                 <button class="searchAreaBtn" type="button" onclick="gooSearch('en','ACS', $('#query').val() )" value="Search" title="Search KeyWords"><i class="ci ci-scope"></i><span class="visually-hidden">Search KeyWords</span></button>
-                <a href="javascript:;" onclick="window.open('http://www.google.com.tw/advanced_search?hl=zh-TW&amp;as_q=&amp;num=100&amp;as_sitesearch=moda.gov.tw/&amp;cof=FORID%3A10&amp;ie=UTF-8&amp;sa=%E6%90%9C%E5%B0%8B&amp;siteurl=www', '_blank')" class="advancedBtn btn rounded-4" title="Advanced Search (open in new window)">Advanced Search</a>
+                <a href="javascript:;" onclick="window.open('https://www.google.com.tw/advanced_search?hl=zh-TW&amp;as_q=&amp;num=100&amp;as_sitesearch=moda.gov.tw/&amp;cof=FORID%3A10&amp;ie=UTF-8&amp;sa=%E6%90%9C%E5%B0%8B&amp;siteurl=www', '_blank')" class="advancedBtn btn rounded-4" title="Advanced Search (open in new window)">Advanced Search</a>
             </div>
             <div class="hotSearch w-100 py-4">
                 <div class="listTag">
@@ -635,7 +635,7 @@ Cyber Security Management Act &amp; Related Regulations					</li>
                 <div class="ftBtmRights">
                     <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero (open in new window)">CC0</a>No copyright reserved.</p>
 
-                    <p class="mb-2 mb-md-0">Update Date: 2023-05-10<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                    <p class="mb-2 mb-md-0">Update Date: 2023-05-11<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
             </div>
             <div class="col-12 col-md text-md-end">
@@ -676,7 +676,7 @@ Cyber Security Management Act &amp; Related Regulations					</li>
     <script src="/vendor/js/jquery.marquee.min.js?v=MpzUTaWqeyzk6PDYkKG6mg7zUbilf_cs50jbLXmpHRs"></script>
     <!-- main -->
             <script src="/ACS/assets/js/common.js?v=x-rm680ZeVwOr0XEqczko-xsauA5r487l9_otFID-OA"></script>
-    <script src="/js/site.js?v=hN43GT1SCGjKInlaQhLWPOPrN192gtG5JC_pk_Mir_0"></script>
+    <script src="/js/site.js?v=6XWCCn8eatp40_uRYOOb-teWZCuPuwAb_eHdkisp8KE"></script>
     <script>
         webSiteLange('en' ,'ACS'  );
         
@@ -714,9 +714,9 @@ Cyber Security Management Act &amp; Related Regulations					</li>
                          $("#ns").load(ListPage, function () {
                              serials( SearchJsonData(p),  tagclick(tag));
                               var navH = $('.navbar').outerHeight();
-							  var topBarH = $('.baseNav').outerHeight();
-							  var position = $("#qaH"+tag).stop().offset().top - navH - topBarH;
-							 $('html, body').stop().animate({ scrollTop: position },400,'linear');
+                              var topBarH = $('.baseNav').outerHeight();
+                              var position = $("#qaH"+tag).stop().offset().top - navH - topBarH;
+                             $('html, body').stop().animate({ scrollTop: position },400,'linear');
                          });
                     }else{
                         tagclick(tag);
