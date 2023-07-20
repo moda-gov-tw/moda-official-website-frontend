@@ -749,18 +749,18 @@
     
 <script>
     var _JsData;
-    var _needtag = NeedTag('NoDateTextList');
+    var _needtag = NeedTag('OneTextList');
     var _Module = 'NEWS';
     _JsData = JSON.parse('[]');
     foreverApi = '0';
     LeftMenu('1363');
     NewList('1363');
-    var ListPage = '/_news/NoDateTextList.html';
+    var ListPage = '/_news/OneTextList.html';
     var listTag2Page = '/_news/listTag2.html';
     $("#ns").load(ListPage, function () {
         if( _needtag ) { $("#ca").load(listTag2Page, function () {});}
     });
-        if( 'NoDateTextList' == 'AccordionList'  ){
+        if( 'OneTextList' == 'AccordionList'  ){
             var tag = location.hash;
             var lang = 'zh-tw';
             function tagclick(tag){
