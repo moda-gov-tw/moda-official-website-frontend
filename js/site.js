@@ -1,4 +1,4 @@
-﻿
+﻿//開發階段
 function GetApiUrl() {
     return "https://www-api.moda.gov.tw";
 }
@@ -36,6 +36,7 @@ function gooSearch(lan, webSiteId, txt) {
     var _txt = txt;
     location.href = "/".concat(_lan, _webSiteId, "home/", "search.html", "?q=", _txt);
 }
+
 function webSiteLange(lan, webSiteId) {
     if (lan != null) {
         var lan = lan == "zh-tw" ? "" : "/" + lan;
@@ -48,7 +49,7 @@ function webSiteLange(lan, webSiteId) {
         });
         $(".footer").load(lan + webSiteId + "/home/Footer.html", function () {
             FECommon.footerFtNavStyle();
-	    FECommon.widgetLazyload();
+			FECommon.widgetLazyload();
         });
     }
 }
@@ -70,9 +71,11 @@ function NewList(sqn) {
         $("#Condition6").val(objJson.C6);
         $("#CustomizeTags").val(objJson.CT);
         $("#SysZipCode").val(objJson.ZC);
+        $("#Chief").val(objJson.CF);
         if ($("#QryDateS").val() != "" || $("#QryDateE").val() != "" || $("#QryKeyword").val() != "" ||
             $("#Condition4").val() != "" || $("#Condition5").val() != "" || $("#Condition6").val() != "" || $("#CustomizeTags").val() != "" || $("#SysZipCode").val() != "") {
             $(".searchSwitch").click();
+           
         }
 
         SearchObj(objJson);
@@ -96,6 +99,7 @@ function Search(p) {
         C6: $("#Condition6").val() ?? "",
         CT: $("#CustomizeTags").val() ?? "",
         ZC: $("#SysZipCode").val() ?? "",
+        CF: $("#Chief").val() ?? "",
         displaycount: displaycount,
         p: p
     };
@@ -149,10 +153,11 @@ function SearchAjax(obj) {
         "Condition6": obj.C6,
         "CustomizeTagSN": obj.CT,
         "SysZipCode": obj.ZC,
+        "Condition7": obj.CF,
         "P": parseInt(obj.p),
         "DisplayCount": parseInt(obj.displaycount)
     };
-
+    console.log(obj);
     $.ajax({
         url: Url,
         method: 'POST',
@@ -164,7 +169,7 @@ function SearchAjax(obj) {
             innerHtml = res;
             $('.rightMain').empty();
             $('.rightMain').html(innerHtml).promise().done(function () {
-                if (obj != "") {
+                if (obj !="" ) {
                     $("#QryDateS").val(obj.str);
                     $("#QryDateE").val(obj.end);
                     $("#QryKeyword").val(obj.txt);
@@ -173,12 +178,9 @@ function SearchAjax(obj) {
                     $("#Condition6").val(obj.C6);
                     $("#CustomizeTags").val(obj.CT);
                     $("#SysZipCode").val(obj.ZC);
-                    if (obj.str != "" || obj.end != "" || obj.txt != "" ||
-                        obj.C4 != "" || obj.C5 != "" || obj.C6 != "" || obj.CT != "" || obj.ZC != "") {
-                        $(".searchSwitch").click();
-						
-                    }
+                    $("#Chief").val(obj.CF);
                 }
+                
                 $('.datepicker1').datepicker();
                 _JsData = JSON.parse($('#JsonData').val());
                 $('#JsonData').remove();
@@ -186,6 +188,7 @@ function SearchAjax(obj) {
                 $('html').stop().animate({ scrollTop: 0 }, 100, 'linear');
             });
         }, complete: function (data) {
+            $(".searchSwitch").click();
             FECommon.basicLoadingOff();
         }
     });
@@ -206,7 +209,6 @@ function SearchJsonData(p) {
         var S1 = $("#ns")[0].innerHTML;
         var S2 = $("#ca")[0].innerHTML;
         var lang = $(".webSitelanguage").attr("lang");
-		console.log(lang);
         if (lang == "en") { 
 			S1 = S1.replace(new RegExp("連結此問答", 'g'), "Link in context"); 
 		}
@@ -258,7 +260,9 @@ function SearchJsonData(p) {
             itemHtml += "</div></div></div>";
         }
         $("#ListTable").html(itemHtml);
-	   if (typeof wLazyLoad != 'undefined') { wLazyLoad.update(); }
+		 if (typeof wLazyLoad != 'undefined') {
+            wLazyLoad.update();
+        }
         JsPagination(p);
         $('html').stop().animate({ scrollTop: 0 }, 100, 'linear');
     } 
