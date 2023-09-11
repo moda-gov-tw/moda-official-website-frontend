@@ -10,8 +10,7 @@
 
 | package                  | license     | comment      |
 |--------------------------|-------------|--------------|
-| jQuery                   | MIT         | 選擇使用 MIT |
-| axios                    | MIT         |              |
+| jQuery                   | MIT         |              |
 | jQuery Validation Plugin | MIT         |              |
 | jQuery UI                | MIT         |              |
 | Magnific Popup           | MIT         |              |
