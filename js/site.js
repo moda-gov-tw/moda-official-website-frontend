@@ -157,7 +157,6 @@ function SearchAjax(obj) {
         "P": parseInt(obj.p),
         "DisplayCount": parseInt(obj.displaycount)
     };
-    console.log(obj);
     $.ajax({
         url: Url,
         method: 'POST',
@@ -180,7 +179,6 @@ function SearchAjax(obj) {
                     $("#SysZipCode").val(obj.ZC);
                     $("#Chief").val(obj.CF);
                 }
-                
                 $('.datepicker1').datepicker();
                 _JsData = JSON.parse($('#JsonData').val());
                 $('#JsonData').remove();
@@ -201,6 +199,7 @@ function NeedTag(e) {
     if (needAarray.indexOf(e) > -1) { return true; } else { return false; }
 }
 function SearchJsonData(p) {
+   
     if (foreverApi =="1") {
         Search(p);
     }
@@ -211,26 +210,38 @@ function SearchJsonData(p) {
         var lang = $(".webSitelanguage").attr("lang");
         if (lang == "en") { 
 			S1 = S1.replace(new RegExp("連結此問答", 'g'), "Link in context"); 
-		}
+        }
+        if (_Module == "Bilingual" && lang == "en") {
+            S1 = S1.replace(new RegExp("#zhtw", 'g'), "#1en");
+            S1 = S1.replace(new RegExp("#en", 'g'), "#zhtw0");
+
+            S1 = S1.replace(new RegExp("#1en", 'g'), "#en");
+            S1 = S1.replace(new RegExp("#zhtw0", 'g'), "#zhtw");
+
+            S1 = S1.replace(new RegExp("雙語詞彙", 'g'), "Bilingual");
+            S1 = S1.replace(new RegExp("序號", 'g'), "No");
+            S1 = S1.replace(new RegExp("詞彙", 'g'), "English");
+            S1 = S1.replace(new RegExp("英譯文", 'g'), "Chinese"); 
+        }
         var displaycount = 15;
         if ($("#perPageShow").length > 0) {
             displaycount = $("#perPageShow").find(':selected').val();
         }
-
         var itemArray = [];
         var itemCoint = _JsData.length;
         var Page = p;
         var PageCount = displaycount;
+       
         for (var i = 0; i < PageCount; i++) {
          
             var _item = ((Page - 1) * PageCount) + i;
-            
+           
             if (_item >= itemCoint) { }
             else {
                 var JsData = _JsData[_item];
                 var _s1 = "";
                 var _tags = "";
-              
+                
                 _s1 = NewListReJson(S1, JsData);
                 
                 if (_needtag) {
@@ -271,6 +282,7 @@ function NewListReJson(str, obj) {
     $.each(Object.keys(obj), function (i, item) {
         str = str.replace(new RegExp("#".concat(item), 'g'), obj[item] == null ? "" : obj[item]);
     });
+    console.log(str);
     return str;
 }
 function JsPagination(p) {
