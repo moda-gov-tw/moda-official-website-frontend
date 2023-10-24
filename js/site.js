@@ -1,7 +1,7 @@
-﻿//開發階段
-function GetApiUrl() {
+﻿function GetApiUrl() {
     return "https://www-api.moda.gov.tw";
 }
+
 $(document).on("click", "a", function (e) {
     if ($(this).find('span').length > 0) {
         if ($(this).find('span')[0].innerHTML.toUpperCase().indexOf("PDF") >= 0) {
@@ -74,8 +74,8 @@ function NewList(sqn) {
         $("#Chief").val(objJson.CF);
         if ($("#QryDateS").val() != "" || $("#QryDateE").val() != "" || $("#QryKeyword").val() != "" ||
             $("#Condition4").val() != "" || $("#Condition5").val() != "" || $("#Condition6").val() != "" || $("#CustomizeTags").val() != "" || $("#SysZipCode").val() != "") {
-            $(".searchSwitch").click();
            
+            $(".searchSwitch").click();
         }
 
         SearchObj(objJson);
@@ -218,8 +218,15 @@ function SearchJsonData(p) {
             S1 = S1.replace(new RegExp("#1en", 'g'), "#en");
             S1 = S1.replace(new RegExp("#zhtw0", 'g'), "#zhtw");
 
+            S1 = S1.replace(new RegExp("#bzh", 'g'), "#b1en");
+            S1 = S1.replace(new RegExp("#ben", 'g'), "#b1zh");
+
+            S1 = S1.replace(new RegExp("#b1en", 'g'), "#ben");
+            S1 = S1.replace(new RegExp("#b1zh", 'g'), "#bzh");
+
+
             S1 = S1.replace(new RegExp("雙語詞彙", 'g'), "Bilingual");
-            S1 = S1.replace(new RegExp("序號", 'g'), "No");
+            S1 = S1.replace(new RegExp("序號", 'g'), "No.");
             S1 = S1.replace(new RegExp("詞彙", 'g'), "English");
             S1 = S1.replace(new RegExp("英譯文", 'g'), "Chinese"); 
         }
@@ -282,7 +289,7 @@ function NewListReJson(str, obj) {
     $.each(Object.keys(obj), function (i, item) {
         str = str.replace(new RegExp("#".concat(item), 'g'), obj[item] == null ? "" : obj[item]);
     });
-    console.log(str);
+   
     return str;
 }
 function JsPagination(p) {
