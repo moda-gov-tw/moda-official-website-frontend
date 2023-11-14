@@ -552,17 +552,18 @@
                 </div>
 
                 <!-- 列表 -->
-                            <div class="list2 row text-center px-lg-5 mb-5" id="ListTable">
-        <div class="col-6 col-sm-4 pt-2 pb-2 pb-lg-4">
-            <a href="https://moda.gov.tw/ADI/services/govinfo/a-directions/1403" class="d-block" target="_blank" rel="noreferrer noopener" title="行政指導有關文書（另開新視窗）">
-                <div class="listPic">
-                    <div class="bg-full"></div>
-                    <span class="listIcon lazy" data-bg="/copyright/MODA/avpkssyk.utz.svg"></span>
+                            <!-- 列表樣式三 -->
+<ul class="list4-2 list-group divider mb-5" id="ListTable">
+        <li class="list-group-item d-block bg-transparent px-0">
+            <a href="https://moda.gov.tw/ADI/services/govinfo/a-directions/1403" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target="_blank" rel="noreferrer noopener" title="行政指導有關文書（另開新視窗）">
+                <div class="col mb-0 listIcon1">
+                    <b class="title5 fw-normal">
+                        行政指導有關文書
+                    </b>
                 </div>
-                <b class="title5">行政指導有關文書</b>
             </a>
-        </div>
-</div>
+        </li>
+</ul>
                         <div class="pageBar mb-5 ">
     <div class="pageSet mb-4">
                         <div class="mRow">共<span class="totalData">1</span>筆資料</div>
@@ -912,18 +913,18 @@
     
     <script>
         var _JsData;
-        var _needtag = NeedTag('IcoList');
+        var _needtag = NeedTag('NoDateTextList');
         var _Module = 'NEWS';
         _JsData = JSON.parse('[{"MainSN":0,"no":1,"mainsn":"8777","istopdisplay":"none","href":"https://moda.gov.tw/ADI/services/govinfo/a-directions/1403","target":"_blank","title":"行政指導有關文書","startdate":"2023-11-10","newstitle":"行政指導有關文書","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/MODA/avpkssyk.utz.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null,"relatedFile":null,"relatedImg":null,"relatedlink":null,"relatedvideo":null,"relatedmoj":null,"zhtwTitle":null,"enTitle":null,"ArticleType":0,"bzhURL":null,"benURL":null,"bzhtwtarget":null,"bentarget":null,"benfiletype":null,"bzhfiletype":null,"bzhfiledisplay":"none","benfiledisplay":"none","bzhUrldisplay":"none","benUrldisplay":"none","bzhHasUrl":"none","bzhNoUrl":"none","benHasUrl":"none","benNoUrl":"none"}]');
         foreverApi = '0';
         LeftMenu('1423');
         NewList('1423');
-        var ListPage = '/_news/IcoList.html';
+        var ListPage = '/_news/NoDateTextList.html';
         var listTag2Page = '/_news/listTag2.html';
         $("#ns").load(ListPage, function () {
             if (_needtag) { $("#ca").load(listTag2Page, function () { }); }
         });
-        if ('IcoList' == 'AccordionList') {
+        if ('NoDateTextList' == 'AccordionList') {
             var tag = location.hash;
             var lang = 'zh-tw';
             function tagclick(tag) {
