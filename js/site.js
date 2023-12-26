@@ -1,3 +1,4 @@
+﻿
 
 $(document).on("click", "a", function (e) {
     if ($(this).find('span').length > 0) {
@@ -6,9 +7,9 @@ $(document).on("click", "a", function (e) {
             return false;
         }
     }
-   else if ($(this).hasClass("copyLinkBtn")) {
+    else if ($(this).hasClass("copyLinkBtn")) {
         e.preventDefault();
-		tagcopy($(this));
+        tagcopy($(this));
     }
     else if (!LocalUrl($(this).attr('href'), location.href)) {
         var flag = confirm("是否要連結至非本網站頁面？ \n Are you sure you want to visit this website? \n" + $(this).attr('href'));
@@ -46,7 +47,7 @@ function webSiteLange(lan, webSiteId) {
         });
         $(".footer").load(lan + webSiteId + "/home/Footer.html", function () {
             FECommon.footerFtNavStyle();
-			FECommon.widgetLazyload();
+            FECommon.widgetLazyload();
         });
     }
 }
@@ -57,6 +58,12 @@ var foreverApi = 0;
 function NewList(sqn) {
     var obj = getCookie("SearchObjN");
     obj = "";
+    var isBilingual = false;
+    var openSearhList = ["Bilingual"];
+    if (openSearhList.filter(x => x == _Module).length > 0) {
+        isBilingual = true;
+    }
+
     if (obj != "") {
         RemoveCookie("SearchObjN");
         var objJson = JSON.parse(obj);
@@ -69,15 +76,16 @@ function NewList(sqn) {
         $("#CustomizeTags").val(objJson.CT);
         $("#SysZipCode").val(objJson.ZC);
         $("#Chief").val(objJson.CF);
-        if ($("#QryDateS").val() != "" || $("#QryDateE").val() != "" || $("#QryKeyword").val() != "" ||
+        $("typeLaw").prop("checked", objJson.BI);
+        if ($("#QryDateS").val() != "" || $("#QryDateE").val() != "" || $("#QryKeyword").val() != "" || isBilingual ||
             $("#Condition4").val() != "" || $("#Condition5").val() != "" || $("#Condition6").val() != "" || $("#CustomizeTags").val() != "" || $("#SysZipCode").val() != "") {
-           
-            $(".searchSwitch").click();
-        }
+            $(".conSearchBarJs").removeClass("off");
 
+        }
         SearchObj(objJson);
     } else {
         Search(1);
+
     }
 }
 function Search(p) {
@@ -97,6 +105,7 @@ function Search(p) {
         CT: $("#CustomizeTags").val() ?? "",
         ZC: $("#SysZipCode").val() ?? "",
         CF: $("#Chief").val() ?? "",
+        BI: $("#Regulations").prop("checked") ?? "",
         displaycount: displaycount,
         p: p
     };
@@ -105,6 +114,7 @@ function Search(p) {
 }
 var chk = false;
 function SearchObj(obj) {
+
     chk = false;
     FECommon.basicLoadingOn();
     var msg = "";
@@ -118,7 +128,7 @@ function SearchObj(obj) {
         }
         if (obj.str != "" && obj.end != "" && msg == "") {
             if (Date.parse(obj.str) > Date.parse(obj.end)) {
-                msg += "起始時間請勿小於結束時間。\n StartDate should not be later than EndDate. \n";
+                msg += "結束時間請勿小於起始時間。\n EndDate should be later than StartDate. \n";
             }
         }
     }
@@ -132,13 +142,14 @@ function SearchObj(obj) {
         FECommon.basicLoadingOff();
         return;
     }
-//serials(SearchAjax(obj),FECommon.mainQaAnchor());
     SearchAjax(obj);
-	FECommon.mainQaAnchor();
+    FECommon.mainQaAnchor();
 }
 function SearchAjax(obj) {
+
     var innerHtml = "";
     var Url = GetApiUrl().concat("/WebsiteList/NewsList");
+    var Regulations = obj.BI ? "1" : "0";
     var data = {
         "Lang": $(".webSitelanguage").attr("lang"),
         "MainSN": parseInt(obj.key),
@@ -151,9 +162,11 @@ function SearchAjax(obj) {
         "CustomizeTagSN": obj.CT,
         "SysZipCode": obj.ZC,
         "Condition7": obj.CF,
+        "Regulations": Regulations,
         "P": parseInt(obj.p),
         "DisplayCount": parseInt(obj.displaycount)
     };
+    console.log(data);
     $.ajax({
         url: Url,
         method: 'POST',
@@ -165,7 +178,7 @@ function SearchAjax(obj) {
             innerHtml = res;
             $('.rightMain').empty();
             $('.rightMain').html(innerHtml).promise().done(function () {
-                if (obj !="" ) {
+                if (obj != "") {
                     $("#QryDateS").val(obj.str);
                     $("#QryDateE").val(obj.end);
                     $("#QryKeyword").val(obj.txt);
@@ -175,6 +188,7 @@ function SearchAjax(obj) {
                     $("#CustomizeTags").val(obj.CT);
                     $("#SysZipCode").val(obj.ZC);
                     $("#Chief").val(obj.CF);
+                    $("#Regulations").prop("checked", obj.BI);
                 }
                 $('.datepicker1').datepicker();
                 _JsData = JSON.parse($('#JsonData').val());
@@ -191,8 +205,12 @@ function SearchAjax(obj) {
                     return;
                 }
             });
+            var openSearhList = ["Bilingual"];
+            if (openSearhList.filter(x => x == _Module).length > 0) {
+                IsAnykey = true;
+            }
             if (IsAnykey) {
-                $(".searchSwitch").click();
+                $(".conSearchBarJs").removeClass("off");
             }
             FECommon.basicLoadingOff();
         }
@@ -206,17 +224,16 @@ function NeedTag(e) {
     if (needAarray.indexOf(e) > -1) { return true; } else { return false; }
 }
 function SearchJsonData(p) {
-   
-    if (foreverApi =="1") {
+
+    if (foreverApi == "1") {
         Search(p);
     }
-    else
-    {
+    else {
         var S1 = $("#ns")[0].innerHTML;
         var S2 = $("#ca")[0].innerHTML;
         var lang = $(".webSitelanguage").attr("lang");
-        if (lang == "en") { 
-			S1 = S1.replace(new RegExp("連結此問答", 'g'), "Link in context"); 
+        if (lang == "en") {
+            S1 = S1.replace(new RegExp("連結此問答", 'g'), "Link in context");
         }
         if (_Module == "Bilingual" && lang == "en") {
             S1 = S1.replace(new RegExp("#zhtw", 'g'), "#1en");
@@ -235,7 +252,7 @@ function SearchJsonData(p) {
             S1 = S1.replace(new RegExp("雙語詞彙", 'g'), "Bilingual");
             S1 = S1.replace(new RegExp("序號", 'g'), "No.");
             S1 = S1.replace(new RegExp("詞彙", 'g'), "English");
-            S1 = S1.replace(new RegExp("英譯文", 'g'), "Chinese"); 
+            S1 = S1.replace(new RegExp("英譯文", 'g'), "Chinese");
         }
         var displaycount = 15;
         if ($("#perPageShow").length > 0) {
@@ -245,19 +262,19 @@ function SearchJsonData(p) {
         var itemCoint = _JsData.length;
         var Page = p;
         var PageCount = displaycount;
-       
+
         for (var i = 0; i < PageCount; i++) {
-         
+
             var _item = ((Page - 1) * PageCount) + i;
-           
+
             if (_item >= itemCoint) { }
             else {
                 var JsData = _JsData[_item];
                 var _s1 = "";
                 var _tags = "";
-                
+
                 _s1 = NewListReJson(S1, JsData);
-                
+
                 if (_needtag) {
                     if (JsData.tags.length > 0) {
                         $.each(JsData.tags, function (j, jitem) {
@@ -277,7 +294,7 @@ function SearchJsonData(p) {
         if (listType == "AccordionList") {
             itemHtml = "<div class='row d-flex justify-content-center'><div class='col'><div class='accordion mb-5' id='qa1'>";
         }
-       
+
         $.each(itemArray, function (i, item) {
             itemHtml += item;
         });
@@ -285,18 +302,18 @@ function SearchJsonData(p) {
             itemHtml += "</div></div></div>";
         }
         $("#ListTable").html(itemHtml);
-		 if (typeof wLazyLoad != 'undefined') {
+        if (typeof wLazyLoad != 'undefined') {
             wLazyLoad.update();
         }
         JsPagination(p);
         $('html').stop().animate({ scrollTop: 0 }, 100, 'linear');
-    } 
+    }
 }
 function NewListReJson(str, obj) {
     $.each(Object.keys(obj), function (i, item) {
         str = str.replace(new RegExp("#".concat(item), 'g'), obj[item] == null ? "" : obj[item]);
     });
-   
+
     return str;
 }
 function JsPagination(p) {
@@ -439,7 +456,9 @@ function RemoveCookie(name) {
 
 function dateIsValid(dateStr) {
     const regex = /^\d{4}-\d{2}-\d{2}$/;
-
+    if (dateStr == undefined) {
+        return true;
+    }
     if (dateStr.match(regex) === null) {
         return false;
     }
@@ -495,18 +514,18 @@ function MODADecode(text) {
 }
 function tagcopy(e) {
     var href = location.href.replace(location.hash, "") + e.attr('href');
-	var navH = $('.navbar').outerHeight();
-	var topBarH = $('.baseNav').outerHeight();
-	var position = $(e.attr('href')).stop().offset().top - navH - topBarH;;
+    var navH = $('.navbar').outerHeight();
+    var topBarH = $('.baseNav').outerHeight();
+    var position = $(e.attr('href')).stop().offset().top - navH - topBarH;;
     navigator.clipboard.writeText(href)
         .then(() => {
-            e.find('.copyMsg').fadeIn(200, function() {
-				e.find('.copyMsg').delay(1500).fadeOut(200);
-			});
-			setTimeout(function(){
-				$('html, body').stop().animate({ scrollTop: position },400,'linear');
-				location.href = href;
-			},1900);
+            e.find('.copyMsg').fadeIn(200, function () {
+                e.find('.copyMsg').delay(1500).fadeOut(200);
+            });
+            setTimeout(function () {
+                $('html, body').stop().animate({ scrollTop: position }, 400, 'linear');
+                location.href = href;
+            }, 1900);
         })
         .catch(err => {
             console.log('Something went wrong', err);
