@@ -24,9 +24,9 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
 
     <!-- 套件css -->
-    <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=Sk6dx0fS0Y2Yyd9zeFeK8ORq1-0KkABd-bKB1WYiPvQ" media="all" />
+    <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=tru8TMf65z2xNLZFghWRlTXipH51yURjVqNfBreE3ow" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/ADI/assets/css/layout.css?v=NBFJ1B8wMY9S8sR_FPuJmwUZN4_RDrztEYP7DBnvY04" media="all" />
+            <link rel="stylesheet" href="/ADI/assets/css/layout.css?v=4qc9KLC8HUNN8EsG0bmHxnTekPlnlea3QM4yYTOoQcQ" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -404,47 +404,46 @@ Emerging and Cross-Domain					</li>
 
                 <!-- 搜尋功能 -->
                 <div class="conSearchBar1 mb-4 conSearchBarJs off">
-                    <!-- <div class="text-end">
-                        <a href="javascript:;" class="searchSwitch btn rounded-4 searchSwitchJs" data-opentitle="展開查詢" data-closetitle="收合查詢">展開查詢</a>
-                    </div> -->
+
                     <div class="conSearchBarWrap">
-                        <!-- 結尾有日曆的 -->
-                        <div class="searchIw3"  >
-                            <div class="searchI">
-                                <div class="searchI-C">
-                                    <label for="QryDateS" class="visually-hidden">Date</label>
-                                    <input name="QryDateS" type="text" id="QryDateS" title="yyyy-mm-dd" class="ipt1 rounded-4 datepicker1" placeholder="yyyy-mm-dd" maxlength="10" autocomplete="off" value="">
+                                <!-- 結尾有日曆的 -->
+                                <div class="searchIw3" >
+                                    <div class="searchI">
+                                        <div class="searchI-C">
+                                            <label for="QryDateS" class="visually-hidden">Date</label>
+                                            <input name="QryDateS" type="text" id="QryDateS" title="yyyy-mm-dd" class="ipt1 rounded-4 datepicker1" placeholder="yyyy-mm-dd" maxlength="10" autocomplete="off" value="">
+                                        </div>
+                                        <div class="searchI-R">
+                                            <a href="javascript:;" title="StartDate" class="calendarBtn1"><span class="visually-hidden">StartDate</span></a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="searchI-R">
-                                    <a href="javascript:;" title="StartDate" class="calendarBtn1"><span class="visually-hidden">StartDate</span></a>
+                                <!-- 開頭有~結尾有日曆的 -->
+                                <div class="searchIw4" >
+                                    <div class="searchI">
+                                        <div class="searchI-L">~</div>
+                                        <div class="searchI-C">
+                                            <label for="QryDateE" class="visually-hidden">To</label>
+                                            <input name="QryDateE" type="text" id="QryDateE" title="yyyy-mm-dd" class="ipt1 rounded-4 datepicker1" placeholder="yyyy-mm-dd" maxlength="10" autocomplete="off" value="">
+                                        </div>
+                                        <div class="searchI-R">
+                                            <a href="javascript:;" title="EndDate" class="calendarBtn1"><span class="visually-hidden">EndDate</span></a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- 開頭有~結尾有日曆的 -->
-                        <div class="searchIw4" >
-                            <div class="searchI">
-                                <div class="searchI-L">~</div>
-                                <div class="searchI-C">
-                                    <label for="QryDateE" class="visually-hidden">To</label>
-                                    <input name="QryDateE" type="text" id="QryDateE" title="yyyy-mm-dd" class="ipt1 rounded-4 datepicker1" placeholder="yyyy-mm-dd" maxlength="10" autocomplete="off" value="">
+                                <!-- 結尾有按鈕 -->
+                                <div class="searchIw5">
+                                    <div class="searchI">
+                                        <div class="searchI-C">
+                                            <label for="QryKeyword" class="visually-hidden">Keyword(s)</label>
+                                            <input type="text" name="QryKeyword" id="QryKeyword" placeholder="Enter Keywords" value="" class="searchI-C ipt1 rounded-4 searchField" title="Enter Keywords">
+                                        </div>
+                                        <div class="searchI-R">
+                                            <input type="button" class="btn btn2 rounded-4 searchSubmit" value="Search" title="Search Keywords" onclick="Search(1)">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="searchI-R">
-                                    <a href="javascript:;" title="EndDate" class="calendarBtn1"><span class="visually-hidden">EndDate</span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 結尾有按鈕 -->
-                        <div class="searchIw5">
-                            <div class="searchI">
-                                <div class="searchI-C">
-                                    <label for="QryKeyword" class="visually-hidden">Keyword(s)</label>
-                                    <input type="text" name="QryKeyword" id="QryKeyword" placeholder="Enter Keywords" value="" class="searchI-C ipt1 rounded-4 searchField" title="Enter Keywords">
-                                </div>
-                                <div class="searchI-R">
-                                    <input type="button" class="btn btn2 rounded-4 searchSubmit" value="Search" title="Search Keywords" onclick="Search(1)">
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
                 <!--Header-->
@@ -749,7 +748,7 @@ Emerging and Cross-Domain					</li>
                 <div class="ftBtmRights">
                     <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero(open in new window)">CC0</a>&nbsp;No copyright reserved.</p>
 
-                    <p class="mb-2 mb-md-0">Update Date: 2023-12-26<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                    <p class="mb-2 mb-md-0">Update Date: 2023-12-27<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
             </div>
             <div class="col-12 col-md text-md-end">
@@ -778,7 +777,7 @@ Emerging and Cross-Domain					</li>
     <a b-cc24bo3soz href="#toTop" class="topBtn border border-2 border-white text-center rounded-circle" id="topBtn" title="Go Top"><i b-cc24bo3soz class="ci ci-top"></i><span b-cc24bo3soz class="visually-hidden">Go Top</span></a>
     <!-- 所有頁面共用的js -->
     <!-- plugin -->
-    <script src="/js/apiurl.js?v=N7rWGlMtpFck-EK823isLCR-Iw-x2xKRsqS3PlBFTQM"></script>
+    <script src="/js/apiurl.js?v=Vhqdn3qgTBZrqadQtFMSeOxnjH6EBMHFKbSK30U4_5w"></script>
     <script src="/vendor/js/jquery-3.6.0.min.js?v=_xUj-3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej_m4"></script>
     <script src="/vendor/js/jquery-ui.min.js?v=Gbg0sxV5vbLDdHDR429YSemFS0IMQGQgeUSO99wk5s8"></script>
     <script src="/vendor/js/bootstrap.bundle.min.js?v=KG_HW-HnsItuj4xwtLb2m_d_zZvskpaU0SK0Tsu0hY0"></script>
@@ -789,8 +788,8 @@ Emerging and Cross-Domain					</li>
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=P93G0oq6PBPWTP1IR8Mz_0jHHUpaWL0aBJTKauisG7Q"></script>
     
     <!-- main -->
-            <script src="/ADI/assets/js/common.js?v=28D7X3J2yXeHSI2GO3HohLsUGTIyc6OPd6goaRwigIo"></script>
-    <script src="/js/site.js?v=w94-BXULqn0mGzARo5JNClvO6Qqqx6G2bp5i_pgeG3A"></script>
+            <script src="/ADI/assets/js/common.js?v=vzHIVkMoOv1C9cb5tECs14gMl405cstJW-fXqKYGwCE"></script>
+    <script src="/js/site.js?v=WBSsOb9qatYtpyR-77vjqg4D1V4dOWoWFtbDQXI5SNw"></script>
     <script>
         webSiteLange('en' ,'ADI'  );
         
@@ -800,7 +799,7 @@ Emerging and Cross-Domain					</li>
         var _JsData;
         var _needtag = NeedTag('TwoTextList');
         var _Module = 'NEWS';
-        _JsData = JSON.parse('[{"MainSN":0,"no":1,"mainsn":"5459","istopdisplay":"none","href":"/en/ADI/industry-counseling/interdisciplinary/5459.html","target":null,"title":"The Innovation and Development for Sports Technology Project","startdate":"2023-11-17","newstitle":"The Innovation and Development for Sports Technology Project","newssubtitle":"The adi is constructing the development environment for sports data and technology applications, and building Taiwan\u0027s sports technology into an emerging industry.","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null,"relatedFile":null,"relatedImg":null,"relatedlink":null,"relatedvideo":null,"relatedmoj":null,"zhtwTitle":null,"enTitle":null,"ArticleType":0,"bzhURL":null,"benURL":null,"bzhtwtarget":null,"bentarget":null,"benfiletype":null,"bzhfiletype":null,"bzhfiledisplay":"none","benfiledisplay":"none","bzhUrldisplay":"none","benUrldisplay":"none","bzhHasUrl":"none","bzhNoUrl":"none","benHasUrl":"none","benNoUrl":"none"},{"MainSN":0,"no":2,"mainsn":"1209","istopdisplay":"none","href":"/en/ADI/industry-counseling/interdisciplinary/1209.html","target":null,"title":"Action Plan for Enhancing Cross-Industry Cybersecurity","startdate":"2022-08-27","newstitle":"Action Plan for Enhancing Cross-Industry Cybersecurity","newssubtitle":"By strengthening information and communication industry products’ cyber security and developing independent solutions, the program strives to build a cyber security industry capable of supporting a digital country’s economy and security","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Cyber Security Industry"}],"crosslinkdisplay":"none","schedule":null,"relatedFile":null,"relatedImg":null,"relatedlink":null,"relatedvideo":null,"relatedmoj":null,"zhtwTitle":null,"enTitle":null,"ArticleType":0,"bzhURL":null,"benURL":null,"bzhtwtarget":null,"bentarget":null,"benfiletype":null,"bzhfiletype":null,"bzhfiledisplay":"none","benfiledisplay":"none","bzhUrldisplay":"none","benUrldisplay":"none","bzhHasUrl":"none","bzhNoUrl":"none","benHasUrl":"none","benNoUrl":"none"},{"MainSN":0,"no":3,"mainsn":"1211","istopdisplay":"none","href":"/en/ADI/industry-counseling/interdisciplinary/1211.html","target":null,"title":"Pilot Project of Emerging IoT Cybersecurity Promotion","startdate":"2022-08-27","newstitle":"Pilot Project of Emerging IoT Cybersecurity Promotion","newssubtitle":"Reinforcing The Internet of Things field defense capabilities with cyber security technology, developing interdisciplinary supply chain cyber security management maturity, and building IoT cyber security demonstration fields","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Cyber Security Industry"}],"crosslinkdisplay":"none","schedule":null,"relatedFile":null,"relatedImg":null,"relatedlink":null,"relatedvideo":null,"relatedmoj":null,"zhtwTitle":null,"enTitle":null,"ArticleType":0,"bzhURL":null,"benURL":null,"bzhtwtarget":null,"bentarget":null,"benfiletype":null,"bzhfiletype":null,"bzhfiledisplay":"none","benfiledisplay":"none","bzhUrldisplay":"none","benUrldisplay":"none","bzhHasUrl":"none","bzhNoUrl":"none","benHasUrl":"none","benNoUrl":"none"},{"MainSN":0,"no":4,"mainsn":"1213","istopdisplay":"none","href":"/en/ADI/industry-counseling/interdisciplinary/1213.html","target":null,"title":"Smart Shalun IoT Cyber Security Testing Program","startdate":"2022-08-27","newstitle":"Smart Shalun IoT Cyber Security Testing Program","newssubtitle":"Located in Shalun Smart Green Energy Science City, Tainan, ACW SOUTH (Shalun Cybersecurity Base) of Administration for Digital Industries is Taiwan\u0027s first cybersecurity base for practical training, demonstration and testing. This program aims to strengthen Taiwan’s cybersecurity resilience and facilitate cross-domain collaboration of the cybersecurity industry and industrial cybersecurity by hosting various talent-cultivating events and demonstrations, product testing, and consultation services.","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Cyber Security Industry"}],"crosslinkdisplay":"none","schedule":null,"relatedFile":null,"relatedImg":null,"relatedlink":null,"relatedvideo":null,"relatedmoj":null,"zhtwTitle":null,"enTitle":null,"ArticleType":0,"bzhURL":null,"benURL":null,"bzhtwtarget":null,"bentarget":null,"benfiletype":null,"bzhfiletype":null,"bzhfiledisplay":"none","benfiledisplay":"none","bzhUrldisplay":"none","benUrldisplay":"none","bzhHasUrl":"none","bzhNoUrl":"none","benHasUrl":"none","benNoUrl":"none"},{"MainSN":0,"no":5,"mainsn":"1215","istopdisplay":"none","href":"/en/ADI/industry-counseling/interdisciplinary/1215.html","target":null,"title":"The Export and Global Expansion Project for System Integration","startdate":"2022-08-27","newstitle":"The Export and Global Expansion Project for System Integration","newssubtitle":"Actively following business opportunities in urban development and planning from  other countries to facilitate the export of high-quality solutions from Taiwan, deepening supply chain partnerships with new southbound countries","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Global Operations"}],"crosslinkdisplay":"none","schedule":null,"relatedFile":null,"relatedImg":null,"relatedlink":null,"relatedvideo":null,"relatedmoj":null,"zhtwTitle":null,"enTitle":null,"ArticleType":0,"bzhURL":null,"benURL":null,"bzhtwtarget":null,"bentarget":null,"benfiletype":null,"bzhfiletype":null,"bzhfiledisplay":"none","benfiledisplay":"none","bzhUrldisplay":"none","benUrldisplay":"none","bzhHasUrl":"none","bzhNoUrl":"none","benHasUrl":"none","benNoUrl":"none"},{"MainSN":0,"no":6,"mainsn":"1219","istopdisplay":"none","href":"/en/ADI/industry-counseling/interdisciplinary/1219.html","target":null,"title":"Taiwan Smart City Development Project","startdate":"2022-08-27","newstitle":"Taiwan Smart City Development Project","newssubtitle":"Collaborating with local governments and industries, to assist in establishing smart city solutions, this project focuses on the phases of digital governance in local governments, digital transformation of industry, and digital services solutions exports globally.","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Local Connections"}],"crosslinkdisplay":"none","schedule":null,"relatedFile":null,"relatedImg":null,"relatedlink":null,"relatedvideo":null,"relatedmoj":null,"zhtwTitle":null,"enTitle":null,"ArticleType":0,"bzhURL":null,"benURL":null,"bzhtwtarget":null,"bentarget":null,"benfiletype":null,"bzhfiletype":null,"bzhfiledisplay":"none","benfiledisplay":"none","bzhUrldisplay":"none","benUrldisplay":"none","bzhHasUrl":"none","bzhNoUrl":"none","benHasUrl":"none","benNoUrl":"none"}]');
+        _JsData = JSON.parse('[{"MainSN":0,"no":1,"mainsn":"5459","istopdisplay":"none","href":"/en/ADI/industry-counseling/interdisciplinary/5459.html","target":null,"title":"The Innovation and Development for Sports Technology Project","startdate":"2023-11-17","newstitle":"The Innovation and Development for Sports Technology Project","newssubtitle":"The adi is constructing the development environment for sports data and technology applications, and building Taiwan\u0027s sports technology into an emerging industry.","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"","tags":[],"crosslinkdisplay":"none","schedule":null,"relatedFile":null,"relatedImg":null,"relatedlink":null,"relatedvideo":null,"relatedmoj":null,"zhtwTitle":null,"enTitle":null,"ArticleType":0,"bzhURL":null,"benURL":null,"bzhtwtarget":null,"bentarget":null,"benfiletype":null,"bzhfiletype":null,"bzhfiledisplay":"none","benfiledisplay":"none","bzhUrldisplay":"none","benUrldisplay":"none","bzhHasUrl":"none","bzhNoUrl":"none","benHasUrl":"none","benNoUrl":"none","zhtwregulationsURL":null,"zhtwregulationsTitle":null,"enregulationsURL":null,"enregulationsTitle":null,"zhtw_regulationsdisplay":"none","en_regulationsdisplay":"none"},{"MainSN":0,"no":2,"mainsn":"1209","istopdisplay":"none","href":"/en/ADI/industry-counseling/interdisciplinary/1209.html","target":null,"title":"Action Plan for Enhancing Cross-Industry Cybersecurity","startdate":"2022-08-27","newstitle":"Action Plan for Enhancing Cross-Industry Cybersecurity","newssubtitle":"By strengthening information and communication industry products’ cyber security and developing independent solutions, the program strives to build a cyber security industry capable of supporting a digital country’s economy and security","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Cyber Security Industry"}],"crosslinkdisplay":"none","schedule":null,"relatedFile":null,"relatedImg":null,"relatedlink":null,"relatedvideo":null,"relatedmoj":null,"zhtwTitle":null,"enTitle":null,"ArticleType":0,"bzhURL":null,"benURL":null,"bzhtwtarget":null,"bentarget":null,"benfiletype":null,"bzhfiletype":null,"bzhfiledisplay":"none","benfiledisplay":"none","bzhUrldisplay":"none","benUrldisplay":"none","bzhHasUrl":"none","bzhNoUrl":"none","benHasUrl":"none","benNoUrl":"none","zhtwregulationsURL":null,"zhtwregulationsTitle":null,"enregulationsURL":null,"enregulationsTitle":null,"zhtw_regulationsdisplay":"none","en_regulationsdisplay":"none"},{"MainSN":0,"no":3,"mainsn":"1211","istopdisplay":"none","href":"/en/ADI/industry-counseling/interdisciplinary/1211.html","target":null,"title":"Pilot Project of Emerging IoT Cybersecurity Promotion","startdate":"2022-08-27","newstitle":"Pilot Project of Emerging IoT Cybersecurity Promotion","newssubtitle":"Reinforcing The Internet of Things field defense capabilities with cyber security technology, developing interdisciplinary supply chain cyber security management maturity, and building IoT cyber security demonstration fields","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Cyber Security Industry"}],"crosslinkdisplay":"none","schedule":null,"relatedFile":null,"relatedImg":null,"relatedlink":null,"relatedvideo":null,"relatedmoj":null,"zhtwTitle":null,"enTitle":null,"ArticleType":0,"bzhURL":null,"benURL":null,"bzhtwtarget":null,"bentarget":null,"benfiletype":null,"bzhfiletype":null,"bzhfiledisplay":"none","benfiledisplay":"none","bzhUrldisplay":"none","benUrldisplay":"none","bzhHasUrl":"none","bzhNoUrl":"none","benHasUrl":"none","benNoUrl":"none","zhtwregulationsURL":null,"zhtwregulationsTitle":null,"enregulationsURL":null,"enregulationsTitle":null,"zhtw_regulationsdisplay":"none","en_regulationsdisplay":"none"},{"MainSN":0,"no":4,"mainsn":"1213","istopdisplay":"none","href":"/en/ADI/industry-counseling/interdisciplinary/1213.html","target":null,"title":"Smart Shalun IoT Cyber Security Testing Program","startdate":"2022-08-27","newstitle":"Smart Shalun IoT Cyber Security Testing Program","newssubtitle":"Located in Shalun Smart Green Energy Science City, Tainan, ACW SOUTH (Shalun Cybersecurity Base) of Administration for Digital Industries is Taiwan\u0027s first cybersecurity base for practical training, demonstration and testing. This program aims to strengthen Taiwan’s cybersecurity resilience and facilitate cross-domain collaboration of the cybersecurity industry and industrial cybersecurity by hosting various talent-cultivating events and demonstrations, product testing, and consultation services.","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Cyber Security Industry"}],"crosslinkdisplay":"none","schedule":null,"relatedFile":null,"relatedImg":null,"relatedlink":null,"relatedvideo":null,"relatedmoj":null,"zhtwTitle":null,"enTitle":null,"ArticleType":0,"bzhURL":null,"benURL":null,"bzhtwtarget":null,"bentarget":null,"benfiletype":null,"bzhfiletype":null,"bzhfiledisplay":"none","benfiledisplay":"none","bzhUrldisplay":"none","benUrldisplay":"none","bzhHasUrl":"none","bzhNoUrl":"none","benHasUrl":"none","benNoUrl":"none","zhtwregulationsURL":null,"zhtwregulationsTitle":null,"enregulationsURL":null,"enregulationsTitle":null,"zhtw_regulationsdisplay":"none","en_regulationsdisplay":"none"},{"MainSN":0,"no":5,"mainsn":"1215","istopdisplay":"none","href":"/en/ADI/industry-counseling/interdisciplinary/1215.html","target":null,"title":"The Export and Global Expansion Project for System Integration","startdate":"2022-08-27","newstitle":"The Export and Global Expansion Project for System Integration","newssubtitle":"Actively following business opportunities in urban development and planning from  other countries to facilitate the export of high-quality solutions from Taiwan, deepening supply chain partnerships with new southbound countries","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Global Operations"}],"crosslinkdisplay":"none","schedule":null,"relatedFile":null,"relatedImg":null,"relatedlink":null,"relatedvideo":null,"relatedmoj":null,"zhtwTitle":null,"enTitle":null,"ArticleType":0,"bzhURL":null,"benURL":null,"bzhtwtarget":null,"bentarget":null,"benfiletype":null,"bzhfiletype":null,"bzhfiledisplay":"none","benfiledisplay":"none","bzhUrldisplay":"none","benUrldisplay":"none","bzhHasUrl":"none","bzhNoUrl":"none","benHasUrl":"none","benNoUrl":"none","zhtwregulationsURL":null,"zhtwregulationsTitle":null,"enregulationsURL":null,"enregulationsTitle":null,"zhtw_regulationsdisplay":"none","en_regulationsdisplay":"none"},{"MainSN":0,"no":6,"mainsn":"1219","istopdisplay":"none","href":"/en/ADI/industry-counseling/interdisciplinary/1219.html","target":null,"title":"Taiwan Smart City Development Project","startdate":"2022-08-27","newstitle":"Taiwan Smart City Development Project","newssubtitle":"Collaborating with local governments and industries, to assist in establishing smart city solutions, this project focuses on the phases of digital governance in local governments, digital transformation of industry, and digital services solutions exports globally.","filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"block","contenttext":"","tags":[{"tag":"Local Connections"}],"crosslinkdisplay":"none","schedule":null,"relatedFile":null,"relatedImg":null,"relatedlink":null,"relatedvideo":null,"relatedmoj":null,"zhtwTitle":null,"enTitle":null,"ArticleType":0,"bzhURL":null,"benURL":null,"bzhtwtarget":null,"bentarget":null,"benfiletype":null,"bzhfiletype":null,"bzhfiledisplay":"none","benfiledisplay":"none","bzhUrldisplay":"none","benUrldisplay":"none","bzhHasUrl":"none","bzhNoUrl":"none","benHasUrl":"none","benNoUrl":"none","zhtwregulationsURL":null,"zhtwregulationsTitle":null,"enregulationsURL":null,"enregulationsTitle":null,"zhtw_regulationsdisplay":"none","en_regulationsdisplay":"none"}]');
         foreverApi = '0';
         LeftMenu('849');
         NewList('848');

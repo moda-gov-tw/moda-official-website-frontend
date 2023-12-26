@@ -24,9 +24,9 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
 
     <!-- 套件css -->
-    <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=Sk6dx0fS0Y2Yyd9zeFeK8ORq1-0KkABd-bKB1WYiPvQ" media="all" />
+    <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=tru8TMf65z2xNLZFghWRlTXipH51yURjVqNfBreE3ow" media="all" />
     <!-- 主要css -->
-            <link rel="stylesheet" href="/assets/css/layout.css?v=F_Ca6vToVuxc5iVFHcpqGFxPioQTc8Ur1Vh0J2HDmdo" media="all" />
+            <link rel="stylesheet" href="/assets/css/layout.css?v=-lYTx5xpd-Y8oX_MrcGlEat2odKT8oZqPMy2u8Jb7rI" media="all" />
 
     <!-- (google font)async CSS -->
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
@@ -540,96 +540,95 @@
 
                 <!-- 搜尋功能 -->
                 <div class="conSearchBar1 mb-4 conSearchBarJs off">
-                    <!-- <div class="text-end">
-                        <a href="javascript:;" class="searchSwitch btn rounded-4 searchSwitchJs" data-opentitle="展開查詢" data-closetitle="收合查詢">展開查詢</a>
-                    </div> -->
+
                     <div class="conSearchBarWrap">
-                        <!-- 結尾有日曆的 -->
-                        <div class="searchIw3"  >
-                            <div class="searchI">
-                                <div class="searchI-C">
-                                    <label for="QryDateS" class="visually-hidden">日期</label>
-                                    <input name="QryDateS" type="text" id="QryDateS" title="yyyy-mm-dd" class="ipt1 rounded-4 datepicker1" placeholder="yyyy-mm-dd" maxlength="10" autocomplete="off" value="">
-                                </div>
-                                <div class="searchI-R">
-                                    <a href="javascript:;" title="點擊選擇日期起日" class="calendarBtn1"><span class="visually-hidden">點擊選擇日期起日</span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 開頭有~結尾有日曆的 -->
-                        <div class="searchIw4" >
-                            <div class="searchI">
-                                <div class="searchI-L">~</div>
-                                <div class="searchI-C">
-                                    <label for="QryDateE" class="visually-hidden">至</label>
-                                    <input name="QryDateE" type="text" id="QryDateE" title="yyyy-mm-dd" class="ipt1 rounded-4 datepicker1" placeholder="yyyy-mm-dd" maxlength="10" autocomplete="off" value="">
-                                </div>
-                                <div class="searchI-R">
-                                    <a href="javascript:;" title="點擊選擇日期迄日" class="calendarBtn1"><span class="visually-hidden">點擊選擇日期迄日</span></a>
-                                </div>
-                            </div>
-                        </div>
-                            <div class="searchIw1">
-                                <div class="searchI">
-                                    <div class="searchI-L">
-                                        <label for="Chief">首長：</label>
-                                    </div>
-                                    <div class="searchI-C">
-                                        <select id="Chief" class="sel1 rounded-4">
-                                            <option value="">請選擇</option>
-                                                <option value="MODA-13-1">唐鳳部長</option>
-                                                <option value="MODA-13-2">闕河鳴次長</option>
-                                                <option value="MODA-13-3">李懷仁次長</option>
-                                        </select>
+                                <!-- 結尾有日曆的 -->
+                                <div class="searchIw3" >
+                                    <div class="searchI">
+                                        <div class="searchI-C">
+                                            <label for="QryDateS" class="visually-hidden">日期</label>
+                                            <input name="QryDateS" type="text" id="QryDateS" title="yyyy-mm-dd" class="ipt1 rounded-4 datepicker1" placeholder="yyyy-mm-dd" maxlength="10" autocomplete="off" value="">
+                                        </div>
+                                        <div class="searchI-R">
+                                            <a href="javascript:;" title="點擊選擇日期起日" class="calendarBtn1"><span class="visually-hidden">點擊選擇日期起日</span></a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="searchIw1">
-                                <div class="searchI">
-                                    <div class="searchI-L">
-                                        <label for="SysZipCode">縣市：</label>
-                                    </div>
-                                    <div class="searchI-C">
-                                        <select id="SysZipCode" class="sel1 rounded-4">
-                                            <option value="">請選擇</option>
-                                                <option value="1">基隆市</option>
-                                                <option value="2">臺北市</option>
-                                                <option value="3">新北市</option>
-                                                <option value="4">桃園市</option>
-                                                <option value="5">新竹市</option>
-                                                <option value="6">新竹縣</option>
-                                                <option value="7">苗栗縣</option>
-                                                <option value="8">臺中市</option>
-                                                <option value="9">彰化縣</option>
-                                                <option value="10">南投縣</option>
-                                                <option value="11">雲林縣</option>
-                                                <option value="12">嘉義市</option>
-                                                <option value="13">嘉義縣</option>
-                                                <option value="14">臺南市</option>
-                                                <option value="15">高雄市</option>
-                                                <option value="16">屏東縣</option>
-                                                <option value="17">臺東縣</option>
-                                                <option value="18">花蓮縣</option>
-                                                <option value="19">宜蘭縣</option>
-                                                <option value="20">澎湖縣</option>
-                                                <option value="21">金門縣</option>
-                                                <option value="22">連江縣</option>
-                                        </select>
+                                <!-- 開頭有~結尾有日曆的 -->
+                                <div class="searchIw4" >
+                                    <div class="searchI">
+                                        <div class="searchI-L">~</div>
+                                        <div class="searchI-C">
+                                            <label for="QryDateE" class="visually-hidden">至</label>
+                                            <input name="QryDateE" type="text" id="QryDateE" title="yyyy-mm-dd" class="ipt1 rounded-4 datepicker1" placeholder="yyyy-mm-dd" maxlength="10" autocomplete="off" value="">
+                                        </div>
+                                        <div class="searchI-R">
+                                            <a href="javascript:;" title="點擊選擇日期迄日" class="calendarBtn1"><span class="visually-hidden">點擊選擇日期迄日</span></a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        <!-- 結尾有按鈕 -->
-                        <div class="searchIw5">
-                            <div class="searchI">
-                                <div class="searchI-C">
-                                    <label for="QryKeyword" class="visually-hidden">關鍵字</label>
-                                    <input type="text" name="QryKeyword" id="QryKeyword" placeholder="請輸入關鍵字" value="" class="searchI-C ipt1 rounded-4 searchField" title="關鍵字搜尋">
+                                    <div class="searchIw1">
+                                        <div class="searchI">
+                                            <div class="searchI-L">
+                                                <label for="Chief">首長：</label>
+                                            </div>
+                                            <div class="searchI-C">
+                                                <select id="Chief" class="sel1 rounded-4">
+                                                    <option value="">請選擇</option>
+                                                        <option value="MODA-13-1">唐鳳部長</option>
+                                                        <option value="MODA-13-2">闕河鳴次長</option>
+                                                        <option value="MODA-13-3">李懷仁次長</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="searchIw1">
+                                        <div class="searchI">
+                                            <div class="searchI-L">
+                                                <label for="SysZipCode">縣市：</label>
+                                            </div>
+                                            <div class="searchI-C">
+                                                <select id="SysZipCode" class="sel1 rounded-4">
+                                                    <option value="">請選擇</option>
+                                                        <option value="1">基隆市</option>
+                                                        <option value="2">臺北市</option>
+                                                        <option value="3">新北市</option>
+                                                        <option value="4">桃園市</option>
+                                                        <option value="5">新竹市</option>
+                                                        <option value="6">新竹縣</option>
+                                                        <option value="7">苗栗縣</option>
+                                                        <option value="8">臺中市</option>
+                                                        <option value="9">彰化縣</option>
+                                                        <option value="10">南投縣</option>
+                                                        <option value="11">雲林縣</option>
+                                                        <option value="12">嘉義市</option>
+                                                        <option value="13">嘉義縣</option>
+                                                        <option value="14">臺南市</option>
+                                                        <option value="15">高雄市</option>
+                                                        <option value="16">屏東縣</option>
+                                                        <option value="17">臺東縣</option>
+                                                        <option value="18">花蓮縣</option>
+                                                        <option value="19">宜蘭縣</option>
+                                                        <option value="20">澎湖縣</option>
+                                                        <option value="21">金門縣</option>
+                                                        <option value="22">連江縣</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <!-- 結尾有按鈕 -->
+                                <div class="searchIw5">
+                                    <div class="searchI">
+                                        <div class="searchI-C">
+                                            <label for="QryKeyword" class="visually-hidden">關鍵字</label>
+                                            <input type="text" name="QryKeyword" id="QryKeyword" placeholder="請輸入關鍵字" value="" class="searchI-C ipt1 rounded-4 searchField" title="關鍵字搜尋">
+                                        </div>
+                                        <div class="searchI-R">
+                                            <input type="button" class="btn btn2 rounded-4 searchSubmit" value="查詢" title="送出關鍵字查詢" onclick="Search(1)">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="searchI-R">
-                                    <input type="button" class="btn btn2 rounded-4 searchSubmit" value="查詢" title="送出關鍵字查詢" onclick="Search(1)">
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
                 <!--Header-->
@@ -639,6 +638,23 @@
                 <!-- 列表 -->
                             <div class="scheduleWrap" id="ListTable">
     <div class="dayList">
+                <div class="dayI">
+                    <div class="date">
+                        <b>2023年12月27日</b>
+                    </div>
+                    <div class="timeList">
+                            <div class="timeI">
+                                <div class="name"><b>李懷仁次長</b></div>
+                                <div class="con overflow-hidden">
+                                    <div class="v2TimeI">
+                                            <div class="title"><b><span class="v2TimePoint">AM 10:30</span> 出席 CES 展前記者會</b></div>
+                                                <div class="site">地點：臺北小巨蛋TTA3樓階梯區</div>
+                                                <div class="site">地址：臺北市松山區南京東路四段2號</div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
                 <div class="dayI">
                     <div class="date">
                         <b>2023年12月22日</b>
@@ -839,9 +855,6 @@
                                 <div class="name"><b>唐鳳部長</b></div>
                                 <div class="con overflow-hidden">
                                     <div class="v2TimeI">
-                                            <div class="title"><b><span class="v2TimePoint">AM 11:00</span> 出席AI產品與系統評測中心啟動儀式</b></div>
-                                                <div class="site">地點：北科大先鋒國際大樓3樓</div>
-                                                <div class="site">地址：臺北市大安區忠孝東路三段46號</div>
                                             <div class="title"><b><span class="v2TimePoint">PM 02:00</span> 出席「數位產業創新與新創交流分享會」</b></div>
                                                 <div class="site">地點：The One at Taipei獨一文創</div>
                                                 <div class="site">地址：臺北市信義區信義路五段7號</div>
@@ -864,11 +877,11 @@
 </div>
                         <div class="pageBar mb-5 ">
     <div class="pageSet mb-4">
-                        <div class="mRow">共<span class="totalData">258</span>筆資料，第<span class="pageNum">1</span>/<span class="totalPage">18</span>頁，</div>
+                        <div class="mRow">共<span class="totalData">259</span>筆資料，第<span class="pageNum">1</span>/<span class="totalPage">18</span>頁，</div>
                         <div class="mRow">
                             <label for="perPageShow">每頁顯示</label>
                             <select class="sel2 rounded-4" id="perPageShow" title="每頁顯示筆數">
-                                <option value=15 selected>15</option><option value=30 >30</option><option value=45 >45</option><option value=60 >60</option><option value=75 >75</option>;
+                                <option value=15 selected>15</option><option value=30 >30</option><option value=45 >45</option><option value=60 >60</option><option value=75 >75</option><option value=90 >90</option><option value=105 >105</option><option value=120 >120</option><option value=135 >135</option><option value=150 >150</option><option value=165 >165</option><option value=180 >180</option><option value=195 >195</option><option value=210 >210</option><option value=225 >225</option><option value=240 >240</option><option value=255 >255</option><option value=270 >270</option><option value=285 >285</option><option value=300 >300</option>;
                             </select>筆
                         </div>
                         <div class="mRow">
@@ -1182,7 +1195,7 @@
                 <div class="ftBtmRights">
                     <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero (另開新視窗)">CC0</a>No copyright reserved.</p>
 
-                    <p class="mb-2 mb-md-0">更新日期：2023-12-26<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
+                    <p class="mb-2 mb-md-0">更新日期：2023-12-27<!--‧瀏覧人次：53,322（自2022-03-01起） --></p>
                 </div>
             </div>
             <div class="col-12 col-md text-md-end">
@@ -1212,7 +1225,7 @@
     <a b-cc24bo3soz href="#toTop" class="topBtn border border-2 border-white text-center rounded-circle" id="topBtn" title="返回頁面頂端"><i b-cc24bo3soz class="ci ci-top"></i><span b-cc24bo3soz class="visually-hidden">返回頁面頂端</span></a>
     <!-- 所有頁面共用的js -->
     <!-- plugin -->
-    <script src="/js/apiurl.js?v=N7rWGlMtpFck-EK823isLCR-Iw-x2xKRsqS3PlBFTQM"></script>
+    <script src="/js/apiurl.js?v=Vhqdn3qgTBZrqadQtFMSeOxnjH6EBMHFKbSK30U4_5w"></script>
     <script src="/vendor/js/jquery-3.6.0.min.js?v=_xUj-3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej_m4"></script>
     <script src="/vendor/js/jquery-ui.min.js?v=Gbg0sxV5vbLDdHDR429YSemFS0IMQGQgeUSO99wk5s8"></script>
     <script src="/vendor/js/bootstrap.bundle.min.js?v=KG_HW-HnsItuj4xwtLb2m_d_zZvskpaU0SK0Tsu0hY0"></script>
@@ -1223,8 +1236,8 @@
     <script src="/vendor/js/jquery.magnific-popup.min.js?v=P93G0oq6PBPWTP1IR8Mz_0jHHUpaWL0aBJTKauisG7Q"></script>
     
     <!-- main -->
-            <script src="/assets/js/common.js?v=j-ReekyNtVvY1QcOaYNMPSfR8swRom3vxdsAaCPZWcU"></script>
-    <script src="/js/site.js?v=w94-BXULqn0mGzARo5JNClvO6Qqqx6G2bp5i_pgeG3A"></script>
+            <script src="/assets/js/common.js?v=OH2t-spYj5afyN674C4wfrY4sTvMtbW4LubTz9AaKM0"></script>
+    <script src="/js/site.js?v=WBSsOb9qatYtpyR-77vjqg4D1V4dOWoWFtbDQXI5SNw"></script>
     <script>
         webSiteLange('zh-tw' ,'MODA'  );
         
