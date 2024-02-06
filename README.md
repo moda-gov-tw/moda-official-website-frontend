@@ -22,3 +22,4 @@
 | Bootstrap Icons          | MIT         |              |
 | Font Awesome Free        | CC BY 4.0   |              |
 | 字型                     | SIL OFL 1.1 |              |
+
