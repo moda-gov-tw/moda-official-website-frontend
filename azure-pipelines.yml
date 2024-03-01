@@ -1,0 +1,32 @@
+trigger:
+- main
+
+resources:
+- repo: self
+
+jobs:
+- job: CheckSecrets
+  displayName: 'Check for Git Secrets'
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+  - checkout: self
+  - script: |
+      git clone https://github.com/awslabs/git-secrets.git
+      cd git-secrets
+      make install
+    displayName: 'Install git-secrets'
+  - script: |
+      git secrets --register-aws
+      git secrets --install -f
+      git secrets --scan --recursive --exclude '**/*.png,**/*.jpg,**/*.jpeg,**/*.gif,**/*.zip'
+    displayName: 'Run git secrets scan'
+  - script: |
+      git secrets --scan-history --exclude '**/*.png,**/*.jpg,**/*.jpeg,**/*.gif,**/*.zip' > secrets_report.xml
+    displayName: 'Generate git secrets report'
+  - task: PublishTestResults@2
+    displayName: 'Publish Test Results'
+    condition: succeededOrFailed()
+    inputs:
+      testRunner: JUnit
+      testResultsFiles: '**/secrets_report.xml'
