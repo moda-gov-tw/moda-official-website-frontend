@@ -1,0 +1,915 @@
+
+    <!DOCTYPE html>
+<html lang="zh-tw" class="webSitelanguage">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale = 1" />
+    <meta name="format-detection" content="telephone=no">
+    
+<title>moda 的雲端之旅｜moda blog - 多媒體專區 - 公告訊息｜moda — 數位發展部 Ministry of Digital Affairs</title>
+<meta property="og:title" content="moda 的雲端之旅｜moda blog - 多媒體專區 - 公告訊息｜moda — 數位發展部 Ministry of Digital Affairs" />
+<meta property="og:image" content="https://moda.gov.tw/assets/img/fbshare.jpg" />
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+<meta property="og:description" content="「雲端」已經不只存在於雲端，我們的日常生活中也有許多常常使用「雲端」的場景。主流的三大公有雲平台（Microsoft Azure、Amazon Web Services、Google Cloud Platform）發展十多年至今，「雲端運算」也從熱門討論走向習以為常，改變了軟體與服務設計的架構思維：開發者無需自行準備各種伺服器、網路設備與機房空間，只需利用雲端平台所提供的各種運算、儲存及頻寬服務，就可以更快速地推出新的數位服務。今天能有如此生機蓬勃的數位世界，雲端是最重要的數位基礎建設之一。  雲端平台就像是一個有無窮無盡資源的世界，但打造一個新服務，就如同在這個新世界中蓋一座城堡，如何蓋出設施完善、又能承受敵人攻擊，甚至可以快速方便更換城門的城堡，並不是容易的事。  因此「雲原生（cloud native）」概念應運而生，其旨在充分利用雲端技術，讓開發者可以在雲端平台上順暢的設計和開發高效率且可以擴展的服務。具體來說，雲原生引入了一些新的流程與技術，例如 DevOps 與容器，讓開發者能夠好的建構程式與運行服務。  數位發展部（後簡稱「數位部」）期許自身相關的數位服務都能使用雲原生架構，不論是已經熟悉雲端的資訊人員，還是從未聽過雲端技術的同仁，都可以體驗到雲端技術帶來的優勢與好處。因此從成立之初，資訊單位便以「In the cloud」為目標，嘗試將服務以雲原生方式實作，並分享經驗給其他公務機關一起參考學習；同時，也透過導入各種辦公雲端服務，取代原有公務溝通流程並重塑成即時協作方式，讓公務流程更有彈性與效率。  本文將會從雲原生技術的基本概念開始，說明數位部實作雲服務的方法；此外，也具體描述數位部同仁公務流程中如何操作雲原生服務。" />
+<meta name="keywords" content="" />
+<meta name="description" content="「雲端」已經不只存在於雲端，我們的日常生活中也有許多常常使用「雲端」的場景。主流的三大公有雲平台（Microsoft Azure、Amazon Web Services、Google Cloud Platform）發展十多年至今，「雲端運算」也從熱門討論走向習以為常，改變了軟體與服務設計的架構思維：開發者無需自行準備各種伺服器、網路設備與機房空間，只需利用雲端平台所提供的各種運算、儲存及頻寬服務，就可以更快速地推出新的數位服務。今天能有如此生機蓬勃的數位世界，雲端是最重要的數位基礎建設之一。  雲端平台就像是一個有無窮無盡資源的世界，但打造一個新服務，就如同在這個新世界中蓋一座城堡，如何蓋出設施完善、又能承受敵人攻擊，甚至可以快速方便更換城門的城堡，並不是容易的事。  因此「雲原生（cloud native）」概念應運而生，其旨在充分利用雲端技術，讓開發者可以在雲端平台上順暢的設計和開發高效率且可以擴展的服務。具體來說，雲原生引入了一些新的流程與技術，例如 DevOps 與容器，讓開發者能夠好的建構程式與運行服務。  數位發展部（後簡稱「數位部」）期許自身相關的數位服務都能使用雲原生架構，不論是已經熟悉雲端的資訊人員，還是從未聽過雲端技術的同仁，都可以體驗到雲端技術帶來的優勢與好處。因此從成立之初，資訊單位便以「In the cloud」為目標，嘗試將服務以雲原生方式實作，並分享經驗給其他公務機關一起參考學習；同時，也透過導入各種辦公雲端服務，取代原有公務溝通流程並重塑成即時協作方式，讓公務流程更有彈性與效率。  本文將會從雲原生技術的基本概念開始，說明數位部實作雲服務的方法；此外，也具體描述數位部同仁公務流程中如何操作雲原生服務。" />
+ <link rel="stylesheet" href="/vendor/css/prism.min.css?v=BgH8AfWK1C9UhnPT9FudhSQmBLskubn__Jn_MttJ9r8" media="all" />
+
+    <!-- favicon -->
+        <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.ico">
+        <link rel="apple-touch-icon" sizes="192x192" href="/assets/img/touch-icon.png">
+    <!-- (google font)connect to domain of font files -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- (google font)optionally increase loading priority -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
+
+    <!-- 套件css -->
+    <link rel="stylesheet" href="/vendor/css/allVendor.min.css?v=tru8TMf65z2xNLZFghWRlTXipH51yURjVqNfBreE3ow" media="all" />
+    <!-- 主要css -->
+            <link rel="stylesheet" href="/assets/css/layout.css?v=RjMQJOQve2wnFVEEVSCcWVj9M1-0BzFGwLDygROY2oo" media="all" />
+
+    <!-- (google font)async CSS -->
+    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
+    <!-- (google font)no-JS fallback -->
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
+    </noscript>
+
+    
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-7THDT5WE9H"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7THDT5WE9H');
+</script>
+</head>
+<body class="d-flex flex-column min-vh-100   ">
+    <noscript>
+        Your browser does not support JavaScript! 您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態。
+    </noscript>
+    <script>
+        //default theme&fontSize
+        var theme = localStorage['theme'];
+        var fontSize = localStorage['fontSize'];
+        if (theme == undefined) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme:dark)').matches) {
+                document.documentElement.className += ' dark';
+            }
+        }else{
+            switch(theme) {
+                case 'light':
+                    document.documentElement.className += ' light';
+                    break;
+                case 'dark':
+                    document.documentElement.className += ' dark';
+                    break;
+            }
+        }
+        switch(fontSize) {
+            case '1':
+                document.body.className += ' fontSizeL';
+                break;
+            case '2':
+                document.body.className += ' fontSizeM';
+                break;
+            case '3':
+                document.body.className += ' fontSizeS';
+                break;
+            default:
+                document.body.className += ' fontSizeM';
+                break;
+        }
+    </script>
+
+    <div b-cc24bo3soz class="loading" id="loading"><span b-cc24bo3soz class="loadingLogo"></span></div>
+
+    <a b-cc24bo3soz href="#AC" id="startBrick" class="visually-hidden-focusable" title="跳到主要內容">跳到主要內容</a>
+
+    <div b-cc24bo3soz class="themeNav">
+        <span b-cc24bo3soz class="visually-hidden">網站顏色切換</span>
+        <a b-cc24bo3soz href="javascript:;" class="themeSwitch themeSwitchJs" data-darktitle="深色模式" data-lighttitle="淺色模式" title="深色模式"><i b-cc24bo3soz class="ci ci-theme"></i><span b-cc24bo3soz class="visually-hidden">深色模式</span></a>
+    </div>
+
+    <header class="header">
+        <!-- header -->
+        <div b-cc24bo3soz class="wrap1 mx-auto px-3 px-md-4 px-lg-5 position-relative"><div b-cc24bo3soz class="a11yBrickBar1 position-relative"><a b-cc24bo3soz href="#AU" id="AU" accesskey="U" class="a11yBrick position-absolute top-0 start-0" title="頁面頂端功能區塊[快捷鍵Alt&#x2B;U]">:::</a></div></div>
+
+        <div b-cc24bo3soz class="baseNav">
+            <div b-cc24bo3soz class="wrap1 mx-auto px-4 px-lg-5">
+                <div b-cc24bo3soz class="d-flex justify-content-end align-items-top">
+                    <!-- Top bar right -->
+                    <div b-cc24bo3soz class="d-flex align-items-top">
+                        <!-- 社群鈕 -->
+                                <ul b-cc24bo3soz class="nav navSocial position-relative">
+                                        <li b-cc24bo3soz class="nav-item">
+                                            <a b-cc24bo3soz class="navI nav-link text-white" href="https://www.facebook.com/moda.gov.tw" target="_blank" rel="noreferrer noopener" title="facebook（另開新視窗）">
+                                                <span b-cc24bo3soz class="ci ci-hdBaseNavIcon lazy" data-bg="/copyright/MODA/gbkxbn5t.dcs.svg"></span>
+                                                <span b-cc24bo3soz class="visually-hidden">facebook</span>
+                                            </a>
+                                        </li>
+                                        <li b-cc24bo3soz class="nav-item">
+                                            <a b-cc24bo3soz class="navI nav-link text-white" href="https://x.com/TAIWANmoda?s=20" target="_blank" rel="noreferrer noopener" title="X（另開新視窗）">
+                                                <span b-cc24bo3soz class="ci ci-hdBaseNavIcon lazy" data-bg="/copyright/MODA/mqktbceb.3yq.svg"></span>
+                                                <span b-cc24bo3soz class="visually-hidden">X</span>
+                                            </a>
+                                        </li>
+                                        <li b-cc24bo3soz class="nav-item">
+                                            <a b-cc24bo3soz class="navI nav-link text-white" href="https://www.youtube.com/channel/UCZXjUCBc5BHFQ1EceABtciw" target="_blank" rel="noreferrer noopener" title="YouTube（另開新視窗）">
+                                                <span b-cc24bo3soz class="ci ci-hdBaseNavIcon lazy" data-bg="/copyright/MODA/bczi1awo.sqt.svg"></span>
+                                                <span b-cc24bo3soz class="visually-hidden">YouTube</span>
+                                            </a>
+                                        </li>
+                                        <li b-cc24bo3soz class="nav-item">
+                                            <a b-cc24bo3soz class="navI nav-link text-white" href="https://www-mailbox.moda.gov.tw/" target="_blank" rel="noreferrer noopener" title="民意信箱（另開新視窗）">
+                                                <span b-cc24bo3soz class="ci ci-hdBaseNavIcon lazy" data-bg="/copyright/MODA/fw20yyeg.i45.svg"></span>
+                                                <span b-cc24bo3soz class="visually-hidden">民意信箱</span>
+                                            </a>
+                                        </li>
+                                        <li b-cc24bo3soz class="nav-item">
+                                            <a b-cc24bo3soz class="navI nav-link text-white" href="/information-service/bilingual-glossary/1391.html" target="_self" title="雙語詞彙">
+                                                <span b-cc24bo3soz class="ci ci-hdBaseNavIcon lazy" data-bg="/copyright/MODA/tcfiegh1.kle.svg"></span>
+                                                <span b-cc24bo3soz class="visually-hidden">雙語詞彙</span>
+                                            </a>
+                                        </li>
+                                </ul>
+                        <ul b-cc24bo3soz class="nav d-none d-xxl-flex">
+                            <li b-cc24bo3soz class="nav-item">
+                                <a b-cc24bo3soz class="nav-link px-3 text-white" href="/sitemap/546.html" title="網站導覽">
+                                    <i b-cc24bo3soz class="ci ci-sitemap"></i>
+                                    <span b-cc24bo3soz class="visually-hidden">網站導覽</span>
+                                </a>
+                            </li>
+
+                            <li b-cc24bo3soz class="nav-item">
+                                <a b-cc24bo3soz class="nav-link px-3 text-white" href="/en/index.html" title="English">
+                                    <i b-cc24bo3soz class="ci ci-en"></i>
+                                    <span b-cc24bo3soz class="visually-hidden">English</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- 切換字體大小 -->
+                        <div b-cc24bo3soz class="dropdown fontSizeDd fontSizeDdJs d-none d-xxl-flex">
+                            <button b-cc24bo3soz class="fontSizeDdNow btn-dropdownNow dropdown-toggle text-white" type="button" id="fontSizeDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-order="2" title="中字級"><i b-cc24bo3soz class="ci ci-font2"></i><span b-cc24bo3soz class="visually-hidden">A</span></button>
+                            <ul b-cc24bo3soz class="dropdown-menu" aria-labelledby="fontSizeDropdown">
+                                <li b-cc24bo3soz><button b-cc24bo3soz class="dropdown-item" type="button" data-order="1" title="大字級">A<sup b-cc24bo3soz>+</sup></button></li>
+                                <li b-cc24bo3soz><button b-cc24bo3soz class="dropdown-item" type="button" data-order="3" title="小字級">A<sup b-cc24bo3soz>-</sup></button></li>
+                            </ul>
+                        </div>
+                        <!-- 搜尋鈕 -->
+                        <div b-cc24bo3soz class="nav-item navbar-icon-link d-none d-xxl-flex">
+                            <a b-cc24bo3soz href="javascript:;" id="S" accesskey="S" class="searchSwitchBtn searchSwitchBtnJs nav-link text-white px-3" title="展開關鍵字搜尋">
+                                <i b-cc24bo3soz class="ci ci-scope"></i>
+                                <span b-cc24bo3soz class="visually-hidden">展開關鍵字搜尋</span>
+                            </a>
+                        </div>
+                    </div>
+                    <script>
+                        //detect header social btn
+                        if(!document.getElementsByClassName('navSocial').length){
+                            document.body.className += ' noHdSocial';
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div b-cc24bo3soz id="divHeader">
+            <!-- 滿版的搜尋 -->
+<div class="searchAreaWrap searchAreaJs position-fixed top-0 start-0 w-100">
+    <div class="searchArea d-flex w-100 align-items-center justify-content-center">
+        <div class="searchAreaMask searchAreaMaskJs"></div>
+        <div class="searchAreaFm p-4">
+            <div class="form-group d-flex">
+                <input class="searchAreaIpt searchAreaIptJs flex-fill w-100 rounded-4" type="text" name="q" id="query" placeholder="請輸入關鍵字" title="關鍵字搜尋">
+                <button class="searchAreaBtn" type="button" onclick="gooSearch('zh-tw','MODA', $('#query').val() )" value="Search" title="送出關鍵字查詢"><i class="ci ci-scope"></i><span class="visually-hidden">送出關鍵字查詢</span></button>
+                <a href="javascript:;" onclick="window.open('https://www.google.com.tw/advanced_search?hl=zh-TW&amp;as_q=&amp;num=100&amp;as_sitesearch=moda.gov.tw/&amp;cof=FORID%3A10&amp;ie=UTF-8&amp;sa=%E6%90%9C%E5%B0%8B&amp;siteurl=www', '_blank')" class="advancedBtn btn rounded-4" title="進階搜尋（另開新視窗）">進階搜尋</a>
+            </div>
+            <div class="hotSearch w-100 py-4">
+                <div class="listTag">
+                </div>
+            </div>
+        </div>
+        <a href="javascript:;" class="closeBtn closeBtnJs d-block position-absolute top-0 end-0 text-white fw-bolder"><i class="ci-x position-absolute top-0 end-0 w-100"></i><span class="visually-hidden">關閉搜尋</span></a>
+    </div>
+</div>
+
+<!-- logo+主選單-->
+<nav class="navbar navbar-light navbar-expand-xxl align-items-center">
+    <div class="wrap1 mx-auto px-3 px-md-4 px-lg-5 d-flex justify-content-between align-items-center w-100">
+        <div class="navbar-brand col-8 col-md-auto mb-0 me-auto">
+            <!-- Logo -->
+            <a class="d-block" href="/index.html">
+                <!-- 淺色版面的logo -->
+                <img class="mw-100 lightShow" src="/copyright/MODA/dijzj4q4.ozn.svg" width="398" height="66" alt="">
+                <!-- 深色版面的logo -->
+                <img class="mw-100 darkShow" src="/copyright/MODA/foayupuv.4af.svg" width="398" height="66" alt="">
+                <h1 class="visually-hidden">數位發展部全球資訊網</h1>
+            </a>
+        </div>
+        <!-- 手機版英版鈕 -->
+        <div class="mLang d-block d-xxl-none">
+            <a class="nav-link px-1 text-white" href="/en/index.html" title="English">
+                <i class="ci ci-en"></i>
+                <span class="visually-hidden">English</span>
+            </a>
+        </div>
+
+        <!-- 手機版選單開關 -->
+        <button type="button" class="navbar-toggler navbarNavSwitchJs" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-opentitle="展開選單" data-closetitle="關閉選單" title="展開選單">
+            <span class="navbar-toggler-icon"></span><span class="visually-hidden">展開選單</span>
+        </button>
+
+        <!-- offcanvas Type --------------------------->
+        <div id="navbarNav" class="offcanvas offcanvas-end navbarNav">
+            <div class="offcanvas-body navbarNavBodyJs">
+                <ul class="navbar-nav ms-auto align-items-xxl-center">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/major-policies/1303.html" data-bs-toggle="dropdown" data-submenu title="重點政策"  target="">重點政策</a>
+                                <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="/major-policies/policy-elucidation/1305.html" title="施政說明"  target="">施政說明</a></li>
+                                            <li><a class="dropdown-item" href="/major-policies/reinforce-rural-services/1307.html" title="強化偏鄉數位服務"  target="">強化偏鄉數位服務</a></li>
+                                            <li class="dropdown dropdown-submenu dropend">
+                                                <a class="dropdown-item dropdown-toggle" href="/major-policies/alignment-assemblies/1453.html" data-toggle="dropdown" title="對齊大會 Alignment Assemblies"  target="">對齊大會 Alignment Assemblies</a>
+                                                <ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+                                                        <li><a class="dropdown-item" href="/major-policies/alignment-assemblies/2023-ideathon/1459.html" title="AI 未來民主化審議式工作坊"  target="">AI 未來民主化審議式工作坊</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a class="dropdown-item" href="/major-policies/ngoempower/1465.html" title="數據賦能 公益創新"  target="">數據賦能 公益創新</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/digital-affairs/348.html" data-bs-toggle="dropdown" data-submenu title="核心業務"  target="">核心業務</a>
+                                <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="/digital-affairs/digital-strategy/350.html" title="數位策略"  target="">數位策略</a></li>
+                                            <li><a class="dropdown-item" href="/digital-affairs/communications-cyber-resilience/358.html" title="韌性建設"  target="">韌性建設</a></li>
+                                            <li><a class="dropdown-item" href="/digital-affairs/resource-management/356.html" title="資源管理"  target="">資源管理</a></li>
+                                            <li><a class="dropdown-item" href="/digital-affairs/digital-service/354.html" title="數位政府"  target="">數位政府</a></li>
+                                            <li><a class="dropdown-item" href="/digital-affairs/democracy-network/360.html" title="民主網絡"  target="">民主網絡</a></li>
+                                            <li><a class="dropdown-item" href="/digital-affairs/plural-innovation/352.html" title="多元創新"  target="">多元創新</a></li>
+                                            <li><a class="dropdown-item" href="/ADI/index.html" title="數位產業署（另開新視窗）" rel=noreferrer noopener target="_blank">數位產業署</a></li>
+                                            <li><a class="dropdown-item" href="/ACS/index.html" title="資通安全署（另開新視窗）" rel=noreferrer noopener target="_blank">資通安全署</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/press/370.html" data-bs-toggle="dropdown" data-submenu title="公告訊息"  target="">公告訊息</a>
+                                <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="/press/bulletin/1179.html" title="行政公告"  target="">行政公告</a></li>
+                                            <li><a class="dropdown-item" href="/press/press-releases/372.html" title="新聞發布"  target="">新聞發布</a></li>
+                                            <li><a class="dropdown-item" href="/press/background-information/1003.html" title="新聞參考資料"  target="">新聞參考資料</a></li>
+                                            <li><a class="dropdown-item" href="/press/clarification/378.html" title="常見問題澄清"  target="">常見問題澄清</a></li>
+                                            <li><a class="dropdown-item" href="/press/schedule/1051.html" title="首長行程"  target="">首長行程</a></li>
+                                            <li><a class="dropdown-item" href="https://web.pcc.gov.tw/prkms/tender/common/basic/readTenderBasic?pageSize=50&amp;firstSearch=true&amp;searchType=basic&amp;isBinding=N&amp;level_1=on&amp;orgName=%E6%95%B8%E4%BD%8D%E7%99%BC%E5%B1%95%E9%83%A8&amp;orgId=&amp;tenderName=&amp;tenderId=&amp;tenderType=TENDER_DECLARATION&amp;tenderWay=TENDER_WAY_ALL_DECLARATION&amp;dateType=isSpdt&amp;tenderStartDate=2023%2F03%2F02&amp;tenderEndDate=2023%2F03%2F08&amp;radProctrgCate=##" title="招標公告（另開新視窗）" rel=noreferrer noopener target="_blank">招標公告</a></li>
+                                            <li><a class="dropdown-item" href="/press/recruitment/376.html" title="徵才公告"  target="">徵才公告</a></li>
+                                            <li class="dropdown dropdown-submenu dropend">
+                                                <a class="dropdown-item dropdown-toggle" href="/press/multimedia/1197.html" data-toggle="dropdown" title="多媒體專區"  target="">多媒體專區</a>
+                                                <ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+                                                        <li><a class="dropdown-item" href="/press/multimedia/videos/1275.html" title="影音專區"  target="">影音專區</a></li>
+                                                        <li><a class="dropdown-item" href="/press/multimedia/blog/1429.html" title="moda blog"  target="">moda blog</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a class="dropdown-item" href="/press/dictionary/1431.html" title="moda小辭典"  target="">moda小辭典</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/information-service/382.html" data-bs-toggle="dropdown" data-submenu title="資訊服務"  target="">資訊服務</a>
+                                <ul class="dropdown-menu">
+                                            <li class="dropdown dropdown-submenu dropend">
+                                                <a class="dropdown-item dropdown-toggle" href="/information-service/govinfo/384.html" data-toggle="dropdown" title="資訊公開"  target="">資訊公開</a>
+                                                <ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+                                                        <li><a class="dropdown-item" href="/information-service/govinfo/administrative-plans/1049.html" title="施政計畫"  target="">施政計畫</a></li>
+                                                        <li><a class="dropdown-item" href="/information-service/govinfo/business-report/1177.html" title="業務報告"  target="">業務報告</a></li>
+                                                        <li><a class="dropdown-item" href="/information-service/govinfo/administrative-directions/1407.html" title="行政指導有關文書"  target="">行政指導有關文書</a></li>
+                                                        <li><a class="dropdown-item" href="https://report.nat.gov.tw/ReportFront/ReportList/category/orgCenter?orgid=A29000000G" title="公務出國報告（另開新視窗）" rel=noreferrer noopener target="_blank">公務出國報告</a></li>
+                                                        <li><a class="dropdown-item" href="/information-service/govinfo/budget-financialstatement/1101.html" title="預算及決算書"  target="">預算及決算書</a></li>
+                                                        <li><a class="dropdown-item" href="/information-service/govinfo/administrative-appeal/1235.html" title="訴願決定查詢"  target="">訴願決定查詢</a></li>
+                                                        <li><a class="dropdown-item" href="/information-service/govinfo/subsidies/1287.html" title="支付或接受之補助"  target="">支付或接受之補助</a></li>
+                                                        <li><a class="dropdown-item" href="/information-service/govinfo/advertisement/1169.html" title="辦理政策及業務宣導之執行情形"  target="">辦理政策及業務宣導之執行情形</a></li>
+                                                        <li><a class="dropdown-item" href="/information-service/govinfo/app-stats/1273.html" title="辦理人民申請提供政府資訊案件統計"  target="">辦理人民申請提供政府資訊案件統計</a></li>
+                                                        <li><a class="dropdown-item" href="/information-service/govinfo/genderequality/1253.html" title="性別平等專區"  target="">性別平等專區</a></li>
+                                                        <li><a class="dropdown-item" href="/information-service/govinfo/lobbying-act/1237.html" title="遊說法資訊專區"  target="">遊說法資訊專區</a></li>
+                                                        <li><a class="dropdown-item" href="/information-service/govinfo/remedy statistic/1359.html" title="國賠年度統計"  target="">國賠年度統計</a></li>
+                                                        <li><a class="dropdown-item" href="/information-service/govinfo/legal-order/1427.html" title="法規命令草案年度立法計畫專區"  target="">法規命令草案年度立法計畫專區</a></li>
+                                                        <li><a class="dropdown-item" href="/information-service/govinfo/pipa/1405.html" title="個人資料保護"  target="">個人資料保護</a></li>
+                                                        <li><a class="dropdown-item" href="/information-service/govinfo/two-covenants/1433.html" title="兩公約專區"  target="">兩公約專區</a></li>
+                                                        <li><a class="dropdown-item" href="/information-service/govinfo/the-statement-of-internal-control(sic)/1445.html" title="內部控制聲明書"  target="">內部控制聲明書</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a class="dropdown-item" href="https://data.gov.tw/datasets/search?p=1&amp;size=10&amp;s=pubdate.date_desc" title="資料開放（另開新視窗）" rel=noreferrer noopener target="_blank">資料開放</a></li>
+                                            <li><a class="dropdown-item" href="/information-service/service/1171.html" title="申辦及服務"  target="">申辦及服務</a></li>
+                                            <li class="dropdown dropdown-submenu dropend">
+                                                <a class="dropdown-item dropdown-toggle" href="/information-service/laws-and-regulations/1057.html" data-toggle="dropdown" title="法規查詢"  target="">法規查詢</a>
+                                                <ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+                                                        <li><a class="dropdown-item" href="https://law.moda.gov.tw/" title="主管法規查詢系統（另開新視窗）" rel=noreferrer noopener target="_blank">主管法規查詢系統</a></li>
+                                                        <li><a class="dropdown-item" href="/information-service/laws-and-regulations/press/1095.html" title="法規變更管轄公告"  target="">法規變更管轄公告</a></li>
+                                                        <li><a class="dropdown-item" href="/information-service/laws-and-regulations/english-opinion/1515.html" title="法規英譯徵集意見專區"  target="">法規英譯徵集意見專區</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown dropdown-submenu dropend">
+                                                <a class="dropdown-item dropdown-toggle" href="/information-service/ethics/1239.html" data-toggle="dropdown" title="廉政專區"  target="">廉政專區</a>
+                                                <ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+                                                        <li><a class="dropdown-item" href="/information-service/ethics/campaign/1241.html" title="廉政宣導"  target="">廉政宣導</a></li>
+                                                        <li><a class="dropdown-item" href="/information-service/ethics/ethics-guidelines/1243.html" title="公務員廉政倫理規範"  target="">公務員廉政倫理規範</a></li>
+                                                        <li><a class="dropdown-item" href="/information-service/ethics/property-declaration/1245.html" title="公職人員財產申報"  target="">公職人員財產申報</a></li>
+                                                        <li><a class="dropdown-item" href="/information-service/ethics/conflicts-of-interest/1247.html" title="利益衝突迴避身分揭露及公開專區"  target="">利益衝突迴避身分揭露及公開專區</a></li>
+                                                        <li><a class="dropdown-item" href="/information-service/ethics/contacts/1249.html" title="廉政窗口"  target="">廉政窗口</a></li>
+                                                        <li><a class="dropdown-item" href="/information-service/ethics/ethics-links/1251.html" title="廉政相關網站連結"  target="">廉政相關網站連結</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a class="dropdown-item" href="/information-service/bilingual-glossary/1391.html" title="雙語詞彙"  target="">雙語詞彙</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/aboutus/402.html" data-bs-toggle="dropdown" data-submenu title="關於moda"  target="">關於moda</a>
+                                <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="/aboutus/introduction/404.html" title="本部簡介"  target="">本部簡介</a></li>
+                                            <li class="dropdown dropdown-submenu dropend">
+                                                <a class="dropdown-item dropdown-toggle" href="/aboutus/principal-officers/987.html" data-toggle="dropdown" title="正副首長"  target="">正副首長</a>
+                                                <ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+                                                        <li><a class="dropdown-item" href="/aboutus/principal-officers/minister-tang/991.html" title="唐鳳 部長"  target="">唐鳳 部長</a></li>
+                                                        <li><a class="dropdown-item" href="/aboutus/principal-officers/deputy-minister-chiueh/993.html" title="闕河鳴 政務次長"  target="">闕河鳴 政務次長</a></li>
+                                                        <li><a class="dropdown-item" href="/aboutus/principal-officers/deputy-minister-lee/995.html" title="李懷仁 政務次長"  target="">李懷仁 政務次長</a></li>
+                                                        <li><a class="dropdown-item" href="/aboutus/principal-officers/deputy-minister-yeh/999.html" title="葉寧 常務次長"  target="">葉寧 常務次長</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a class="dropdown-item" href="/aboutus/organization/620.html" title="組織架構"  target="">組織架構</a></li>
+                                            <li><a class="dropdown-item" href="/aboutus/functions/622.html" title="業務職掌"  target="">業務職掌</a></li>
+                                            <li><a class="dropdown-item" href="/aboutus/history/410.html" title="重要紀事"  target="">重要紀事</a></li>
+                                            <li><a class="dropdown-item" href="/aboutus/visuals/412.html" title="標誌設計"  target="">標誌設計</a></li>
+                                            <li><a class="dropdown-item" href="/aboutus/contact/414.html" title="聯絡資訊"  target="">聯絡資訊</a></li>
+                                </ul>
+                            </li>
+                    
+                </ul>
+            </div>
+            <div class="mBaseNav d-block d-xxl-none">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link px-3 text-white" href="/sitemap/546.html" title="網站搜尋">
+                            <i class="ci ci-sitemap"></i>
+                            <span class="visually-hidden">網站搜尋</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:;" class="searchSwitchBtn searchSwitchBtnJs nav-link text-white px-3" title="展開關鍵字搜尋">
+                            <i class="ci ci-scope"></i>
+                            <span class="visually-hidden">展開關鍵字搜尋</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- Main navbar END -->
+    </div>
+</nav>
+
+<!-- Logo Nav END -->
+
+        </div>
+    </header>
+    <!-- main -->
+    <main class="main">
+    <!-- 0.麵包屑 -->
+    <div class="breadcrumb1">
+	<div class="wrap4 mx-auto px-3 px-md-4 px-lg-5">
+		<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+			<ol class="breadcrumb mb-0">
+				<li class="breadcrumb-item breadHome">
+					<a href="/index.html")">首頁</a>
+					</li>
+					<li class="breadcrumb-item  ">
+							<a href="/press/370.html">公告訊息</a>	
+					</li>
+					<li class="breadcrumb-item  ">
+							<a href="/press/multimedia/1197.html">多媒體專區</a>	
+					</li>
+					<li class="breadcrumb-item  ">
+							<a href="/press/multimedia/blog/1429.html">moda blog</a>	
+					</li>
+					<li class="breadcrumb-item  active">
+moda 的雲端之旅					</li>
+			</ol>
+		</nav>
+	</div>
+</div>
+    <div class="wrap4 mx-auto px-3 px-md-4 px-lg-5 py-4 py-md-5 overflow-hidden">
+        <div class="d-flex twoColConWrap">
+            <!-- 左側選單 start -->
+            <aside class="leftMenu">
+    <div class="a11yBrickBar1">
+        <a href="#AL" id="AL" accesskey="L" class="a11yBrick position-absolute" title="頁面左方功能區塊[快捷鍵Alt&#x2B;L]">:::</a>
+    </div>
+
+    <b class="title6 d-block pt-1 lh-sm">公告訊息</b>
+
+    <ul class="sidebar list-unstyled sidebarJs">
+            <li class="">
+                        <a class="menuI" href="/press/bulletin/1179.html" target="" title="行政公告"><span class="menuIFirst">行政公告</span></a>
+            </li>
+            <li class="">
+                        <a class="menuI" href="/press/press-releases/372.html" target="" title="新聞發布"><span class="menuIFirst">新聞發布</span></a>
+            </li>
+            <li class="">
+                        <a class="menuI" href="/press/background-information/1003.html" target="" title="新聞參考資料"><span class="menuIFirst">新聞參考資料</span></a>
+            </li>
+            <li class="">
+                        <a class="menuI" href="/press/clarification/378.html" target="" title="常見問題澄清"><span class="menuIFirst">常見問題澄清</span></a>
+            </li>
+            <li class="">
+                        <a class="menuI" href="/press/schedule/1051.html" target="" title="首長行程"><span class="menuIFirst">首長行程</span></a>
+            </li>
+            <li class="">
+                        <a class="menuI" href="https://web.pcc.gov.tw/prkms/tender/common/basic/readTenderBasic?pageSize=50&amp;firstSearch=true&amp;searchType=basic&amp;isBinding=N&amp;level_1=on&amp;orgName=%E6%95%B8%E4%BD%8D%E7%99%BC%E5%B1%95%E9%83%A8&amp;orgId=&amp;tenderName=&amp;tenderId=&amp;tenderType=TENDER_DECLARATION&amp;tenderWay=TENDER_WAY_ALL_DECLARATION&amp;dateType=isSpdt&amp;tenderStartDate=2023%2F03%2F02&amp;tenderEndDate=2023%2F03%2F08&amp;radProctrgCate=##" target="_blank" rel="noreferrer noopener" title="招標公告（另開新視窗）"><span class="menuIFirst">招標公告</span></a>
+            </li>
+            <li class="">
+                        <a class="menuI" href="/press/recruitment/376.html" target="" title="徵才公告"><span class="menuIFirst">徵才公告</span></a>
+            </li>
+            <li class="on">
+                        <a class="menuI" href="javascript:;" target="" title="多媒體專區"><span class="menuIFirst">多媒體專區</span></a>
+                        <ul class="menuSub list-unstyled">
+                                <li class="">
+                                    <a href="/press/multimedia/videos/1275.html" target="" title="影音專區">影音專區</a>
+                                </li>
+                                <li class="on">
+                                    <a href="/press/multimedia/blog/1429.html" target="" title="moda blog">moda blog</a>
+                                </li>
+                        </ul>
+            </li>
+            <li class="">
+                        <a class="menuI" href="/press/dictionary/1431.html" target="" title="moda小辭典"><span class="menuIFirst">moda小辭典</span></a>
+            </li>
+        <!-- 目前單元highlight時需加class="on" -->
+    </ul>
+</aside>
+            <!-- 左側選單 end -->
+            <!-- 右半主內容 start -->
+            <div class="rightMain">
+
+                <div class="a11yBrickBar1">
+                    <a href="#AC" id="AC" accesskey="C" class="a11yBrick position-absolute"	title="中央內容區塊[快捷鍵Alt&#x2B;C]">:::</a>
+                </div>
+                
+                <!-- 標題 -->
+                <div class="titleBar2 row">
+    <div class="col">
+        <h2 class="title3 mb-0 fw-normal"><span class="titleTxt">moda 的雲端之旅</span></h2>
+    </div>
+    <div class="col-auto text-end d-flex">
+        <ul class="shareBar list-unstyled list-inline mb-0">
+            <!-- 分享 -->
+            <li class="list-inline-item">
+                <a href="javascript:;" title="社群分享"><i class="ci ci-share"></i><span class="visually-hidden">社群分享</span></a>
+                <ul class="shareBarMenu list-unstyled">
+                    <li><a class="fbShareBtn fbShareJs" href="javascript:;" title="分享至 facebook（另開新視窗）"><i class="bi bi-facebook"></i><span class="visually-hidden">Facebook</span></a></li>
+                    <li><a class="ttShareBtn ttShareJs" href="javascript:;" title="分享到 twitter（另開新視窗）"><i class="bi bi-twitter"></i><span class="visually-hidden">Twitter</span></a></li>
+                    <li><a class="lineShareBtn lineShareJs" href="javascript:;" title="分享到 line（另開新視窗）"><i class="bi bi-line"></i><span class="visually-hidden">LINE</span></a></li>
+                </ul>
+            </li>
+            <li class="list-inline-item d-none d-md-inline-block">
+                <a class="printBtn printJs" href="javascript:;" title="列印頁面內容"><i class="ci ci-print"></i><span class="visually-hidden">列印</span></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+                <!-- 標籤 -->
+                <div class="listTag3 mb-2 mb-md-3">
+                </div>
+                <!-- 文字編輯區 -->
+                <div class="article1 cpArticle">
+                    <div class="listTag3 mb-2 mb-md-3"><a class="btn" href="javascript:;" onclick="" role="button">雲原生</a>&nbsp;<a class="btn" href="javascript:;" onclick="" role="button">容器化</a>&nbsp;<a class="btn" href="javascript:;" onclick="" role="button">DevOps</a></div>
+
+<h3 class="article1-title1">部長室 柯維然</h3>
+&nbsp;
+
+<p>「雲端」已經不只存在於雲端，我們的日常生活中也有許多常常使用「雲端」的場景。主流的三大公有雲平台（Microsoft Azure、Amazon Web Services、Google Cloud Platform）發展十多年至今，「雲端運算」也從熱門討論走向習以為常，改變了軟體與服務設計的架構思維：開發者無需自行準備各種伺服器、網路設備與機房空間，只需利用雲端平台所提供的各種運算、儲存及頻寬服務，就可以更快速地推出新的數位服務。今天能有如此生機蓬勃的數位世界，雲端是最重要的數位基礎建設之一。</p>
+
+<p>雲端平台就像是一個有無窮無盡資源的世界，但打造一個新服務，就如同在這個新世界中蓋一座城堡，如何蓋出設施完善、又能承受敵人攻擊，甚至可以快速方便更換城門的城堡，並不是容易的事。</p>
+
+<p>因此「雲原生（cloud native）」概念應運而生，其旨在充分利用雲端技術，讓開發者可以在雲端平台上順暢的設計和開發高效率且可以擴展的服務。具體來說，雲原生引入了一些新的流程與技術，例如 DevOps 與容器，讓開發者能夠好的建構程式與運行服務。</p>
+
+<p>數位發展部（後簡稱「數位部」）期許自身相關的數位服務都能使用雲原生架構，不論是已經熟悉雲端的資訊人員，還是從未聽過雲端技術的同仁，都可以體驗到雲端技術帶來的優勢與好處。因此從成立之初，資訊單位便以「In the cloud」為目標，嘗試將服務以雲原生方式實作，並分享經驗給其他公務機關一起參考學習；同時，也透過導入各種辦公雲端服務，取代原有公務溝通流程並重塑成即時協作方式，讓公務流程更有彈性與效率。</p>
+
+<p>本文將會從雲原生技術的基本概念開始，說明數位部實作雲服務的方法；此外，也具體描述數位部同仁公務流程中如何操作雲原生服務。</p>
+&nbsp;
+
+<h3 class="article1-title2"></h3>
+
+<h3 class="fs-4" style="color: var(--md-primary-1);">淺談雲原生</h3>
+
+<p>在談「雲原生」和它如何實踐之前，我們要先了解在此領域中很重要的幾個概念：分別是容器化和 DevOps。</p>
+
+<h3 style="color: var(--md-primary-1);">容器化</h3>
+
+<p>「容器化」是雲原生領域中的核心技術之一，可以視為一種輕量虛擬化技術。傳統的虛擬化技術是模擬整個硬體資源與作業系統，而容器則是以服務為核心，只將執行此服務所需的相關環境、套件打包起來。這個打包好的容器就像是一個標準大小的貨櫃，可以裝載到任何支援容器的平台上運行。因此，容器化相較於一般的虛擬化技術更輕量化且啟動速度更快，並且可以省去很多額外負擔。</p>
+
+<p>將服務打包成容器部署至雲端平台上就能運行，但這時也出現了新的問題：該如何管理這些容器化服務呢？如何自動化部署與更新？當服務發生異常時該如何重新啟動、甚至依照目前需求來調整服務量？</p>
+
+<p>這些需求讓容器調度與管理的工具應運而生，例如：Kubernetes（常簡稱為 k8s）就是由 Google 開源貢獻給社群的一個管理平台，目前也是主流的容器管理與調度平台，三大公有雲都有支援。將服務打包成容器後，就可以在雲端上使用 k8s 平台來管理，也可以在不同公有雲之間遷移。</p>
+
+<h3 style="color: var(--md-primary-1);">DevOps</h3>
+
+<p>DevOps 一詞是由開發（Development）與維護（Operations）組成，意思是將服務的開發與維護階段整合更緊密。一般來說，軟體開發流程可以簡化為：由開發團隊根據需求負責撰寫程式開發新服務或是增加新功能，服務開發到一定階段後（例如新增了一個新功能按鈕），再交給維護團隊把服務部署到正式環境（例如雲端平台）。這樣一次的軟體開發週期，過程中需要開發和維護兩個團隊的互相配合才能完成。</p>
+
+<p>導入 DevOps 流程和工具的好處在於，能夠以自動化和程式化的方式執行持續整合（Continuous Integration，簡稱 CI）和持續部署（Continuous Deployment，簡稱 CD）。所有該做的事情列成一項項的指令，這些指令可以規範新版本的程式碼應該先進行哪些檢測和掃描，然後才能打包成容器，以及最後應該上傳到哪個平台以及啟動哪些指令。因為完全是按照預先設計好的指令順序來執行程式，可以大幅減少很多當下輸入程式碼或是其他人為操作可能發生的錯誤，進而提升服務部署的效率與安全。</p>
+
+<h3 class="fs-4" style="color: var(--md-primary-1);">雲原生實踐</h3>
+
+<p>網站與功能的維護常常會碰到許多挑戰。例如，網站會因為瀏覽次數驟然增加或是遭受惡意攻擊，而導致服務中斷等。因此，建構一個具有韌性的官方網站，是公司到政府的各資訊單位的重要目標；而快速而有彈性的雲原生架構就是很適合的解決方案。</p>
+
+<p>那要如何實踐雲原生呢？在這裡我們以官方網站建置作為案例來解釋。</p>
+
+<p>我們可以將官網依據不同的功能拆解，把整個官網分成多個功能模組，像是：靜態化網站產生、管理介面、後端 API 等，然後個別打包成容器。</p>
+
+<p>這樣做的好處是，我們可以獨立更新與維護這些拆解成多個功能模組的容器，也可以依照功能常用與否或是需求多開幾個子服務。此外，還能將單體服務拆解成多個子服務或是功能，這樣的做法在雲原生領域中被稱為「微服務」設計方式。</p>
+
+<p>我們可以將網站想像成潛艇堡，它可以依據我們的喜好和需求去選擇麵包、不同種類的配料、要不要多加幾片生菜，而不用每次都必須接受同樣的潛艇堡。</p>
+
+<p><img alt="雲原生配圖" src="/copyright/MODA/1h3otiin.rj3.png" style="width: 100%;" /></p>
+
+<p>在拆解成多個功能模組後就，可以進行開發，並導入 DevOps 來自動化與開發與部署流程。</p>
+
+<p>開發者將程式碼推送到程式碼倉庫後，會由 DevOps 平台來執行設定好的流程：平台首先會掃描程式碼，確認沒有有中高風險漏洞，然後將程式碼編譯並生成容器映像檔，這樣就完成了整個官網服務所需的功能模組容器的打包。最後，將這些容器映像檔推送到雲端的容器管理平台上，逐一啟動每個功能模組的啟動指令，就成功完成一次官網服務的開發與部署流程。</p>
+
+<h3 class="fs-4" style="color: var(--md-primary-1);">辦公室上雲</h3>
+
+<p>雲端技術讓資訊單位可以更快速便利地打造各式服務，數位部也以此為基礎，積極進行部內流程的數位再造工作。</p>
+
+<p>你可以想像，政府部門裡面非常多各式各樣的流程：以往遇到一個新流程，就要開發新的系統；然後 A 流程用 A 系統、B 流程用 B 系統，10 個流程就有 10 個專用系統。這使得資訊部門需要不斷因應新流程製作新系統、每個服務都以客製化方式處理，不但開發成本高且後續管理也相當麻煩。</p>
+
+<p>其實，這些流程中很多步驟是一樣的，只是因為不同單位而互不知悉。數位部認為，如果我們能有一個平台整合這些步驟，就像積木一樣，大家可以自行選擇需要的積木，搭建自己所需的流程。以公務機關的預算的概算和控管為例，過程中有很多的規定和檢核，以及各單位的意見來往，同時還涉及主計與簽核會辦流程，是非常龐雜的過程。數位部便自己建構了一個表單服務系統，透過這個表單服務系統，不同單位可以自行拖拉需要的服務，去搭建自己想要的流程。</p>
+
+<p>除了龐大的流程服務，日常的行政工作也可以善用雲端服務而精進效率。過去各種文件都散落在同仁的電腦裡，需要協作時就透過電子郵件來回寄送檔案，導致時常出現大家需要仔細確認哪份檔案是最新版，或是該如何回復到前一個版本等版本控制的問題。導入雲端辦公服務後，同仁不再需要以檔案來回編修，而是在線上文件內設定權限，給需要協作的同仁編輯同一份檔案即可。如此一來，相關業務的同仁不僅可以隨時在文件上註記討論，而且還能隨時回溯到先前的版本。</p>
+
+<p>雲端的共享和協作即時性，讓同仁溝通與對齊討論更有效率，還可以互相整合不同的功能。例如：在管考施政計畫時，通常需要各單位提報說明目前的執行進度，再由業務單位彙整成完整計畫進度。現在透過承辦人線上共同編輯計畫管考試算表，不僅可以即時更新、省去檔案傳遞的困擾，還可以與其他服務介接，自動將各計畫進度以甘特圖、心智圖等視覺化方式呈現。</p>
+
+<p>這看來是數位再造的一小步，卻是 moda 雲原生的一大步：從這些逐步取代原有紙本或是冗餘流程的作法開始，數位部希望所有同仁都能享受雲端服務帶來的優勢與好處，讓本部從基礎建設到多元應用，都能有即時彈性的雲端特質，成為公務部門的數位轉型先行者。</p>
+
+                </div>
+                <div class="articleInfo">
+                    <div class="d-block d-md-inline-flex">
+                        <div class="infoUnit"><b>發布單位：</b><span>資訊處</span></div>
+                        <div class="infoDate"><b>建立日期：</b><span>2024-04-08</span></div>
+                        <div class="infoTime"><b>更新日期：</b><span>2024-04-08</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 右半主內容 end -->
+        </div>
+    </div>
+</main>
+
+
+    <!-- footer -->
+    <footer b-cc24bo3soz class="ft mt-auto footer">
+        
+<div class="a11yBrickBar1 wrap2 mx-auto px-3 px-md-4 px-lg-5"><a href="#AZ" id="AZ" accesskey="Z" class="a11yBrick" title="頁面尾端功能區塊[快捷鍵Alt&#x2B;Z]">:::</a></div>
+
+<div class="ftTop d-none d-lg-block">
+    <div class="wrap2 mx-auto px-4 px-lg-5">
+
+        <div class="ftNav off">
+            <div class="ftNavSwitchBar text-center w-100 position-relative">
+                <button type="button" class="ftNavSwitch ftNavSwitchJs btn rounded-circle position-absolute" data-opentitle="展開子選單" data-closetitle="收合子選單" title="展開子選單"><i class="fa-solid fa-chevron-up"></i><span class="visually-hidden">展開子選單</span></button>
+            </div>
+            <div class="ftNavLt row gx-5">
+                    <div class="col">
+                        <div class="ftNavLv1 text-lg text-white fs-5 border-bottom border-1 border-white">
+                            <a class="d-block text-white" href="/major-policies/1303.html" title="重點政策"  target="">
+                                <b class="d-block fw-light">重點政策</b>
+                            </a>
+                        </div>
+                            <div class="ftNavLv2">
+                                <div class="col">
+                                    <ul class="list-unstyled flex-column">
+                                            <li>
+                                                <a href="/major-policies/policy-elucidation/1305.html" class="d-block text-white" title="施政說明"  target="">
+                                                    施政說明
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/major-policies/reinforce-rural-services/1307.html" class="d-block text-white" title="強化偏鄉數位服務"  target="">
+                                                    強化偏鄉數位服務
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/major-policies/alignment-assemblies/1453.html" class="d-block text-white" title="對齊大會 Alignment Assemblies"  target="">
+                                                    對齊大會 Alignment Assemblies
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/major-policies/ngoempower/1465.html" class="d-block text-white" title="數據賦能 公益創新"  target="">
+                                                    數據賦能 公益創新
+                                                </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="col">
+                        <div class="ftNavLv1 text-lg text-white fs-5 border-bottom border-1 border-white">
+                            <a class="d-block text-white" href="/digital-affairs/348.html" title="核心業務"  target="">
+                                <b class="d-block fw-light">核心業務</b>
+                            </a>
+                        </div>
+                            <div class="ftNavLv2">
+                                <div class="col">
+                                    <ul class="list-unstyled flex-column">
+                                            <li>
+                                                <a href="/digital-affairs/digital-strategy/350.html" class="d-block text-white" title="數位策略"  target="">
+                                                    數位策略
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/digital-affairs/communications-cyber-resilience/358.html" class="d-block text-white" title="韌性建設"  target="">
+                                                    韌性建設
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/digital-affairs/resource-management/356.html" class="d-block text-white" title="資源管理"  target="">
+                                                    資源管理
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/digital-affairs/digital-service/354.html" class="d-block text-white" title="數位政府"  target="">
+                                                    數位政府
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/digital-affairs/democracy-network/360.html" class="d-block text-white" title="民主網絡"  target="">
+                                                    民主網絡
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/digital-affairs/plural-innovation/352.html" class="d-block text-white" title="多元創新"  target="">
+                                                    多元創新
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/ADI/index.html" class="d-block text-white" title="數位產業署（另開新視窗）" rel="noreferrer noopener" target="_blank">
+                                                    數位產業署
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/ACS/index.html" class="d-block text-white" title="資通安全署（另開新視窗）" rel="noreferrer noopener" target="_blank">
+                                                    資通安全署
+                                                </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="col">
+                        <div class="ftNavLv1 text-lg text-white fs-5 border-bottom border-1 border-white">
+                            <a class="d-block text-white" href="/press/370.html" title="公告訊息"  target="">
+                                <b class="d-block fw-light">公告訊息</b>
+                            </a>
+                        </div>
+                            <div class="ftNavLv2">
+                                <div class="col">
+                                    <ul class="list-unstyled flex-column">
+                                            <li>
+                                                <a href="/press/bulletin/1179.html" class="d-block text-white" title="行政公告"  target="">
+                                                    行政公告
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/press/press-releases/372.html" class="d-block text-white" title="新聞發布"  target="">
+                                                    新聞發布
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/press/background-information/1003.html" class="d-block text-white" title="新聞參考資料"  target="">
+                                                    新聞參考資料
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/press/clarification/378.html" class="d-block text-white" title="常見問題澄清"  target="">
+                                                    常見問題澄清
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/press/schedule/1051.html" class="d-block text-white" title="首長行程"  target="">
+                                                    首長行程
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://web.pcc.gov.tw/prkms/tender/common/basic/readTenderBasic?pageSize=50&amp;firstSearch=true&amp;searchType=basic&amp;isBinding=N&amp;level_1=on&amp;orgName=%E6%95%B8%E4%BD%8D%E7%99%BC%E5%B1%95%E9%83%A8&amp;orgId=&amp;tenderName=&amp;tenderId=&amp;tenderType=TENDER_DECLARATION&amp;tenderWay=TENDER_WAY_ALL_DECLARATION&amp;dateType=isSpdt&amp;tenderStartDate=2023%2F03%2F02&amp;tenderEndDate=2023%2F03%2F08&amp;radProctrgCate=##" class="d-block text-white" title="招標公告（另開新視窗）" rel="noreferrer noopener" target="_blank">
+                                                    招標公告
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/press/recruitment/376.html" class="d-block text-white" title="徵才公告"  target="">
+                                                    徵才公告
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/press/multimedia/1197.html" class="d-block text-white" title="多媒體專區"  target="">
+                                                    多媒體專區
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/press/dictionary/1431.html" class="d-block text-white" title="moda小辭典"  target="">
+                                                    moda小辭典
+                                                </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="col">
+                        <div class="ftNavLv1 text-lg text-white fs-5 border-bottom border-1 border-white">
+                            <a class="d-block text-white" href="/information-service/382.html" title="資訊服務"  target="">
+                                <b class="d-block fw-light">資訊服務</b>
+                            </a>
+                        </div>
+                            <div class="ftNavLv2">
+                                <div class="col">
+                                    <ul class="list-unstyled flex-column">
+                                            <li>
+                                                <a href="/information-service/govinfo/384.html" class="d-block text-white" title="資訊公開"  target="">
+                                                    資訊公開
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://data.gov.tw/datasets/search?p=1&amp;size=10&amp;s=pubdate.date_desc" class="d-block text-white" title="資料開放（另開新視窗）" rel="noreferrer noopener" target="_blank">
+                                                    資料開放
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/information-service/service/1171.html" class="d-block text-white" title="申辦及服務"  target="">
+                                                    申辦及服務
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/information-service/laws-and-regulations/1057.html" class="d-block text-white" title="法規查詢"  target="">
+                                                    法規查詢
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/information-service/ethics/1239.html" class="d-block text-white" title="廉政專區"  target="">
+                                                    廉政專區
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/information-service/bilingual-glossary/1391.html" class="d-block text-white" title="雙語詞彙"  target="">
+                                                    雙語詞彙
+                                                </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="col">
+                        <div class="ftNavLv1 text-lg text-white fs-5 border-bottom border-1 border-white">
+                            <a class="d-block text-white" href="/aboutus/402.html" title="關於moda"  target="">
+                                <b class="d-block fw-light">關於moda</b>
+                            </a>
+                        </div>
+                            <div class="ftNavLv2">
+                                <div class="col">
+                                    <ul class="list-unstyled flex-column">
+                                            <li>
+                                                <a href="/aboutus/introduction/404.html" class="d-block text-white" title="本部簡介"  target="">
+                                                    本部簡介
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/aboutus/principal-officers/987.html" class="d-block text-white" title="正副首長"  target="">
+                                                    正副首長
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/aboutus/organization/620.html" class="d-block text-white" title="組織架構"  target="">
+                                                    組織架構
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/aboutus/functions/622.html" class="d-block text-white" title="業務職掌"  target="">
+                                                    業務職掌
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/aboutus/history/410.html" class="d-block text-white" title="重要紀事"  target="">
+                                                    重要紀事
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/aboutus/visuals/412.html" class="d-block text-white" title="標誌設計"  target="">
+                                                    標誌設計
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/aboutus/contact/414.html" class="d-block text-white" title="聯絡資訊"  target="">
+                                                    聯絡資訊
+                                                </a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+        </div>
+            <div class="ftSocial text-end pt-3">
+                    <a class="d-inline-block overflow-hidden text-white border border-white rounded-circle text-center align-top"
+                       href="https://www.facebook.com/moda.gov.tw" title="facebook（另開新視窗）" rel="noreferrer noopener" target="_blank">
+                        <span class="ci ci-ftSocialIcon lazy" data-bg="/copyright/MODA/13y2jltx.cee.svg"></span>
+                        <span class="visually-hidden">facebook</span>
+                    </a>
+                    <a class="d-inline-block overflow-hidden text-white border border-white rounded-circle text-center align-top"
+                       href="https://x.com/TAIWANmoda?s=20" title="X（另開新視窗）" rel="noreferrer noopener" target="_blank">
+                        <span class="ci ci-ftSocialIcon lazy" data-bg="/copyright/MODA/1ktfj2oo.pof.svg"></span>
+                        <span class="visually-hidden">X</span>
+                    </a>
+                    <a class="d-inline-block overflow-hidden text-white border border-white rounded-circle text-center align-top"
+                       href="https://www.youtube.com/channel/UCZXjUCBc5BHFQ1EceABtciw" title="YouTube（另開新視窗）" rel="noreferrer noopener" target="_blank">
+                        <span class="ci ci-ftSocialIcon lazy" data-bg="/copyright/MODA/20nkea5x.344.svg"></span>
+                        <span class="visually-hidden">YouTube</span>
+                    </a>
+                    <a class="d-inline-block overflow-hidden text-white border border-white rounded-circle text-center align-top"
+                       href="https://www-mailbox.moda.gov.tw/" title="民意信箱（另開新視窗）" rel="noreferrer noopener" target="_blank">
+                        <span class="ci ci-ftSocialIcon lazy" data-bg="/copyright/MODA/jqzvna1y.3ju.svg"></span>
+                        <span class="visually-hidden">民意信箱</span>
+                    </a>
+                    <a class="d-inline-block overflow-hidden text-white border border-white rounded-circle text-center align-top"
+                       href="/information-service/bilingual-glossary/1391.html" title="雙語詞彙"  target="_self">
+                        <span class="ci ci-ftSocialIcon lazy" data-bg="/copyright/MODA/rvnamnvw.q3e.svg"></span>
+                        <span class="visually-hidden">雙語詞彙</span>
+                    </a>
+            </div>
+    </div>
+</div>
+<div class="ftBtm">
+    <div class="wrap2 mx-auto px-3 px-md-4 px-lg-5 fw-light fs-md-6">
+        <div class="row">
+            <div class="col-12 col-md">
+                <div class="ftBtmLogo mb-3">
+                    <a class="d-inline-block" href="/index.html">
+                        <!-- 淺色版面的logo -->
+                        <img class="mw-100 lightShow" src="/copyright/MODA/5nw5fc0u.eo2.svg" width="340" height="56" alt="moda — 數位發展部 Ministry of Digital Affairs">
+                        <!-- 深色版面的logo -->
+                        <img class="mw-100 darkShow" src="/copyright/MODA/azfs4g3s.bnl.svg" width="340" height="56" alt="moda — 數位發展部 Ministry of Digital Affairs">
+                    </a>
+                </div>
+                <div class="ftBtmRights">
+                    <p class="mb-2 mb-md-3"><a class="fileTypeI ms-0 me-1" href="https://spdx.org/licenses/CC0-1.0" target="_blank" title="Creative Commons Zero (另開新視窗)">CC0</a>No copyright reserved.</p>
+
+                    <p class="mb-2 mb-md-0">更新日期： <span id="spanDateNow"></span></p>
+                </div>
+            </div>
+            <div class="col-12 col-md text-md-end">
+                <ul class="listSlash list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a class="text-decoration-none" href="/announcement/privacy/949.html" title="隱私權及網站安全政策"  target="_self">隱私權及網站安全政策</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="text-decoration-none" href="/announcement/publicdeclare/951.html" title="政府網站資料開放宣告"  target="_self">政府網站資料開放宣告</a>
+                            </li>
+                </ul>
+                <ul class="listAdd list-unstyled list-inline">
+	<li>地址：<a class="ftAdd text-decoration-none" href="https://www.google.com.tw/maps/place/臺北市中正區延平南路143號" rel="noreferrer noopener" target="_blank" title="數位發展部地圖位置(另開新視窗)">100057 臺北市中正區延平南路143號</a></li>
+	<li class="list-inline-item ms-0 ms-md-2 me-2 me-md-0">服務電話：<a class="text-decoration-none" href="tel:0800-770-707" title="數位發展部聯絡電話">0800-770-707</a></li>
+	<li class="list-inline-item ms-0 ms-md-2 me-2 me-md-0">傳真電話：<a class="text-decoration-none" href="tel:02-2380-0791" title="數位發展部傳真電話">02-2380-0791</a></li>
+	<li class="list-inline-item ms-0 ms-md-2 me-2 me-md-0">民意信箱：<a class="text-decoration-none" href="https://www-mailbox.moda.gov.tw/" target="_blank" title="民意信箱（另開新視窗）">www-mailbox.moda.gov.tw</a></li>
+</ul>
+<a class="d-inline-block" href="https://accessibility.moda.gov.tw/Applications/Detail?category=20220830155044" target="_blank" title="移至無障礙標章網頁（另開新視窗）"><img alt="通過AA檢測等級無障礙網頁檢測" height="45" src="/copyright/MODA/pq1nv2gx.rfo.svg" width="127" /></a>
+                <div class="col-md-auto">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </footer>
+    <a b-cc24bo3soz href="#toTop" class="topBtn border border-2 border-white text-center rounded-circle" id="topBtn" title="返回頁面頂端"><i b-cc24bo3soz class="ci ci-top"></i><span b-cc24bo3soz class="visually-hidden">返回頁面頂端</span></a>
+    <!-- 所有頁面共用的js -->
+    <!-- plugin -->
+    <script src="/js/apiurl.js?v=Vhqdn3qgTBZrqadQtFMSeOxnjH6EBMHFKbSK30U4_5w"></script>
+    <script src="/vendor/js/jquery-3.6.0.min.js?v=_xUj-3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej_m4"></script>
+    <script src="/vendor/js/jquery-ui.min.js?v=Gbg0sxV5vbLDdHDR429YSemFS0IMQGQgeUSO99wk5s8"></script>
+    <script src="/vendor/js/bootstrap.bundle.min.js?v=KG_HW-HnsItuj4xwtLb2m_d_zZvskpaU0SK0Tsu0hY0"></script>
+    <script src="/vendor/js/bootstrap-submenu.js?v=dmCuBCcm2kPuzeyB3UguKUgti2xAeqWGtXRMLEv4W50"></script>
+    <script src="/vendor/js/swiper-bundle.min.js?v=qU3jSy7ir2lXIMea4IWnS0FqYdn9MJK6mK_hkz1TMJg"></script>
+    <script src="/vendor/js/lazyload.min.js?v=jOs5koYe0f2iWFXC5QDnaEKuDXiEBeUOOp9F3zZJnPY"></script>
+    <script src="/vendor/js/aos.js?v=3R-azxOxLxidpHXg8jx8UFdnhZq2IKrGNpZJdAk8KB0"></script>
+    <script src="/vendor/js/jquery.magnific-popup.min.js?v=P93G0oq6PBPWTP1IR8Mz_0jHHUpaWL0aBJTKauisG7Q"></script>
+    
+    <!-- main -->
+            <script src="/assets/js/common.js?v=89qqhQcDUyk_MOkNvgzedWH2sFAy_XYZ1pXZg5dPRVQ"></script>
+    <script src="/js/site.js?v=rWw0uCIvK9B0lxHfYmw_f7ShgmjTi6LaWa_xY9KJnT4"></script>
+    <script>
+        webSiteLange('zh-tw' ,'MODA'  );
+        
+    </script>
+    
+ <script src='/vendor/js/prism.js' type='text/javascript'></script> 
+<script>
+    LeftMenu('1429');
+</script>
+
+</body>
+</html>
+
+
