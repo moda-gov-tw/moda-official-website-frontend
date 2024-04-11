@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" width="18.3mm" height="14.1mm" version="1.1" viewBox="0 0 52 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M27.6,18.7l6.3-7.2h-1.5l-5.5,6.3-4.2-6.3h-5.1l6.6,9.4-6.6,7.6h1.5l5.8-6.6,4.6,6.6h5.1l-6.9-9.8ZM25.6,21l-.7-.9-5.4-7.5h2.3l4.3,6,.7.9,5.6,7.8h-2.3l-4.6-6.4h0Z"/>
+</svg>
