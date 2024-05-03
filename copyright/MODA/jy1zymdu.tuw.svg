@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" width="63.5mm" height="63.5mm" version="1.1" viewBox="0 0 180 180">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #caa870;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="15" y="72.8" width="16.3" height="34.3"/>
+  <g>
+    <rect class="cls-1" x="70.5" y="73.1" width="10.8" height="34"/>
+    <rect class="cls-1" x="82.3" y="73.1" width="16.4" height="10.6"/>
+    <rect class="cls-1" x="82.3" y="84.9" width="16.4" height="10.6"/>
+    <rect class="cls-1" x="82.3" y="96.6" width="16.4" height="10.6"/>
+  </g>
+  <g>
+    <rect class="cls-1" x="137.2" y="73.1" width="10.8" height="34"/>
+    <path class="cls-1" d="M148.9,73.2v33.9c9-.5,16.1-7.9,16.1-17s-7.1-16.5-16.1-17Z"/>
+  </g>
+  <g>
+    <rect class="cls-1" x="103.9" y="73.1" width="10.8" height="34"/>
+    <path class="cls-1" d="M123.1,73.1h-7.6v22.3h7.6c5.1-.7,9.1-5.4,9.1-11.1s-4-10.4-9.1-11.1Z"/>
+    <path class="cls-1" d="M132.2,107.2c0-5.7-4-10.3-9.1-11h-7.6v10.9h7.6c0,0,9.1,0,9.1,0Z"/>
+  </g>
+  <g>
+    <path class="cls-1" d="M65.8,102.4l-24.6-23.9c-6,6.8-5.6,17.2,1,23.6,6.6,6.4,17,6.4,23.7.3Z"/>
+    <path class="cls-1" d="M65.6,78.1c-6.6-6.4-17-6.4-23.6-.3l12.3,11.9,11.3-11.7Z"/>
+  </g>
+</svg>
