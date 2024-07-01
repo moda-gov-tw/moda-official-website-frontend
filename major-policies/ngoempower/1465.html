@@ -783,6 +783,39 @@
                     <div class="accordion" id="qa1">
                             <div class="accordion-item">
                                 <!-- 每項題目需套不同的id-->
+                                <div class="accordion-header" id="qaH13020">
+                                    <!--需套跟內容對應的data-bs-target、aria-controls -->
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#qaCon13020" aria-controls="qaCon13020">
+                                        <span>【2024 NGO/NPO數據創新培力課程】</span>
+                                    </button>
+                                </div>
+                                <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
+                                <div id="qaCon13020" class="accordion-collapse collapse" aria-labelledby="qaH13020" data-bs-parent="#qa1">
+                                    <div class="accordion-body">
+                                            <div class="article1">
+                                                <p>2024年數據賦能系列活動，除為組織中不同層級的工作者提供分級分眾數據創新培力課程，以貼合使用者需求，更兼顧區域特性，將於北、中、南、東開設課程，與NGO/NPO夥伴們共同學習！協助我國具有公益服務願景的NGO/NPO組織紮根數據力，讓公益領域的夥伴學會活用數據，打造創新服務，迎接AI時代的趨勢與挑戰。</p>
+
+<p>課程對象包含：決策及高階主管、中階幹部及第一線人員，逾20堂精彩課程，即日起開放報名！</p>
+
+<p><b><a class="fileTypeILink" href="https://www-api.moda.gov.tw/File/Get/moda/zh-tw/3kWMyWp7pktSruL" title="2024年度系列課程完整版.pdf（另開新視窗）">2024年度系列課程完整版請看</a></b><a class="fileTypeILink" href="https://www-api.moda.gov.tw/File/Get/moda/zh-tw/3kWMyWp7pktSruL" title="2024年度系列課程完整版.pdf（另開新視窗）"><span class="fileTypeI">PDF</span></a></p>
+
+<p>[現正開放]<br />
+<a href="https://gov.tw/zgf" rel="noopener noreferrer" target="_blank" title="113/7/26/決策及高階主管培訓報名表（另開新視窗）"><b>113/7/26/決策及高階主管培訓報名表</b></a><br />
+（更多課程資訊將陸續更新，敬請持續關注最新消息）</p>
+
+                                            </div>
+                                        <div class="articleOther">
+                                        </div>
+                                        <div class="linkBar">
+                                            <a class="copyLinkBtn copyLinkBtnJs" href='#qaH13020'>
+                                                <i class="bi bi-link"></i>複製連結<b class="copyMsg">已複製連結</b>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <!-- 每項題目需套不同的id-->
                                 <div class="accordion-header" id="qaH10602">
                                     <!--需套跟內容對應的data-bs-target、aria-controls -->
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#qaCon10602" aria-controls="qaCon10602">
@@ -2326,7 +2359,28 @@
         
     </script>
     
-<script src="https://www-api.moda.gov.tw/File/Get/moda/zh-tw/egE4zg7xQjhZ9K6"></script><script src="https://www-api.moda.gov.tw/File/Get/moda/zh-tw/A4SfEVQVxGrPTwE"></script>    <script>
+<script src="https://www-api.moda.gov.tw/File/Get/moda/zh-tw/egE4zg7xQjhZ9K6"></script><script src="https://www-api.moda.gov.tw/File/Get/moda/zh-tw/A4SfEVQVxGrPTwE"></script>
+<script>
+if($('.openQaJs').length){
+		$('.openQaJs').each(function(){
+			var qaNum = encodeURIComponent($(this).attr('href'));
+			qaNum = decodeURIComponent(qaNum);
+			$(this).on('click',function(){
+				if($(qaNum).find('button').attr('aria-expanded') == 'false'){
+					setTimeout(function(){
+						$(qaNum).find('button').click();
+					},100);
+				}else{
+					var hdH = $(".header").height();
+					setTimeout(function(){
+						var position = $(qaNum).stop().offset().top - hdH;
+						$('html,body').stop().animate({ scrollTop: position + 'px' },400,'linear');
+					},400);
+				}
+			});
+		});
+	}
+</script>    <script>
         var tag = window.location.hash;
         function tagclick(tag)
         {
