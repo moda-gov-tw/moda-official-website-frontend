@@ -2364,13 +2364,13 @@
         
     </script>
     
-<script src="https://www-api.moda.gov.tw/File/Get/moda/zh-tw/egE4zg7xQjhZ9K6"></script><script src="https://www-api.moda.gov.tw/File/Get/moda/zh-tw/A4SfEVQVxGrPTwE"></script>
-<script>
+<script src="https://www-api.moda.gov.tw/File/Get/moda/zh-tw/egE4zg7xQjhZ9K6"></script><script src="https://www-api.moda.gov.tw/File/Get/moda/zh-tw/A4SfEVQVxGrPTwE"></script><script>
 if($('.openQaJs').length){
 		$('.openQaJs').each(function(){
 			var qaNum = encodeURIComponent($(this).attr('href'));
 			qaNum = decodeURIComponent(qaNum);
-			$(this).on('click',function(){
+			$(this).on('click',function(e){
+				e.preventDefault();
 				if($(qaNum).find('button').attr('aria-expanded') == 'false'){
 					setTimeout(function(){
 						$(qaNum).find('button').click();
