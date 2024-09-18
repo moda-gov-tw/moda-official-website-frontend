@@ -2,12 +2,12 @@
 var webLan = $(".webSitelanguage").attr("lang");
 sys = (navigator.language || navigator.userLanguage || navigator.browserLanguage || navigator.systemLanguage).toLowerCase();
 
-var _lang = localStorage.getItem("_lang");
-localStorage.setItem("_lang", "1");
-if (webLan != sys && _lang == null) {
-    if (sys == "zh-tw") { location.href = "/" + getWebSite() }
-    else { location.href = "/en/" + getWebSite() }
-}
+//var _lang = localStorage.getItem("_lang");
+//localStorage.setItem("_lang", "1");
+//if (webLan != sys && _lang == null) {
+//    if (sys == "zh-tw") { location.href = "/" + getWebSite() }
+//    else { location.href = "/en/" + getWebSite() }
+//}
 
 function getWebSite() {
     let pathname = location.pathname;
