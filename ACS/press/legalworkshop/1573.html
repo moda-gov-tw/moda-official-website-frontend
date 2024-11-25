@@ -583,7 +583,57 @@
                 </div>
 
                 <!-- 列表 -->
-                        <div id="ListTable" class="text-center txt1 py-5">查無任何資訊</div>
+                            <div class="qa" id="ListTable">
+    <div class="row d-flex justify-content-center">
+        <div class="col">
+            <div class="accordion mb-5" id="qa1">
+                    <div class="accordion-item">
+                        <!-- 每項題目需套不同的id-->
+                        <div class="accordion-header" id="qaH14510">
+                            <!--需套跟內容對應的data-bs-target、aria-controls -->
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#qaCon14510" aria-controls="qaCon14510">
+                                <span>113年資通安全法令暨業務溝通說明會</span>
+                            </button>
+                        </div>
+                        <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
+                        <div id="qaCon14510" class="accordion-collapse collapse" aria-labelledby="qaH14510" data-bs-parent="#qa1">
+                            <div class="accordion-body">
+                                    <div class="article1">
+                                        本說明會於11月27日至12月13日於北、中、南、東辦理8場次。
+                                    </div>
+                                <div class="articleOther">
+                                        <div class="otherI pb-4">
+                                            <div class="title7">相關檔案</div>
+                                            <ul class="list4-3 list-group">
+                                                    <li class="list-group-item d-block bg-transparent">
+                                                        <a href="https://www-api.moda.gov.tw/File/Get/acs/zh-tw/pGt9dWyG182bX1F" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" rel="noreferrer noopener" title="113年資通安全法令暨業務溝通說明會議題一：資通安全管理法施行細則等子法">
+                                                            <div class="col mb-0 listIcon1">
+                                                                <b class="title5 fw-normal">113年資通安全法令暨業務溝通說明會議題一：資通安全管理法施行細則等子法<span class="fileTypeI">PDF</span></b>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                            </ul>
+                                        </div>
+                                </div>
+                                <div class="linkBar">
+                                    <a class="copyLinkBtn copyLinkBtnJs" href='#qaH14510'>
+                                        <i class="bi bi-link"></i>複製連結<b class="copyMsg">已複製連結</b>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                        <div class="pageBar mb-5 ">
+    <div class="pageSet mb-4">
+                        <div class="mRow">共<span class="totalData">1</span>筆資料</div>
+    </div>
+</div>
+
                 <!--Footer-->
                 <div class="article1 mb-4">
                     
@@ -940,7 +990,7 @@
         var _JsData;
         var _needtag = NeedTag('AccordionList');
         var _Module = 'NEWS';
-        _JsData = JSON.parse('[]');
+        _JsData = JSON.parse('[{"MainSN":0,"no":1,"mainsn":"14510","istopdisplay":"none","href":"/ACS/press/legalworkshop/14510.html","target":null,"title":"113年資通安全法令暨業務溝通說明會","startdate":"2024-11-25","newstitle":"113年資通安全法令暨業務溝通說明會","newssubtitle":null,"filetypedisplay":"none","weblogopath":"~/assets/img/icon_dept4-2-1.svg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"本說明會於11月27日至12月13日於北、中、南、東辦理8場次。","tags":[],"crosslinkdisplay":"none","schedule":null,"relatedFile":null,"relatedImg":null,"relatedlink":null,"relatedvideo":null,"relatedmoj":null,"zhtwTitle":null,"enTitle":null,"ArticleType":0,"bzhURL":null,"benURL":null,"bzhtwtarget":null,"bentarget":null,"benfiletype":null,"bzhfiletype":null,"bzhfiledisplay":"none","benfiledisplay":"none","bzhUrldisplay":"none","benUrldisplay":"none","bzhHasUrl":"none","bzhNoUrl":"none","benHasUrl":"none","benNoUrl":"none","zhtwregulationsURL":null,"zhtwregulationsTitle":null,"enregulationsURL":null,"enregulationsTitle":null,"zhtw_regulationsdisplay":"none","en_regulationsdisplay":"none"}]');
         foreverApi = '1';
         LeftMenu('1573');
         NewList('1573');
