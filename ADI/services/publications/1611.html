@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width,initial-scale = 1" />
     <meta name="format-detection" content="telephone=no">
     
-<title>業務服務｜數位產業署 Administration for Digital Industries, moda</title>
-<meta property="og:title" content="業務服務｜數位產業署 Administration for Digital Industries, moda" />
-<meta property="og:image" content="https://moda.gov.tw/ADI/assets/img/fbshare.jpg" />
-<meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="628">
-<meta property="og:description" content="業務服務" />
-<meta name="keywords" />
-<meta name="description" content="業務服務" />
+    <title>出版品專區 - 業務服務｜數位產業署 Administration for Digital Industries, moda</title>
+    <meta property="og:title" content="出版品專區 - 業務服務｜數位產業署 Administration for Digital Industries, moda" />
+    <meta property="og:image" content="https://moda.gov.tw/ADI/assets/img/fbshare.jpg" />
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta property="og:description" content="出版品專區" />
+    <meta name="keywords" />
+    <meta name="description" content="出版品專區" />
 
     <!-- favicon -->
         <link rel="shortcut icon" type="image/png" href="/ADI/assets/img/favicon.ico">
@@ -35,6 +35,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
     </noscript>
     
+
     
 <!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-169LBQCZ1T"></script><script>
   window.dataLayer = window.dataLayer || [];
@@ -347,8 +348,11 @@
 				<li class="breadcrumb-item breadHome">
 					<a href="/ADI/index.html")">首頁</a>
 					</li>
+					<li class="breadcrumb-item  ">
+							<a href="/ADI/services/760.html">業務服務</a>	
+					</li>
 					<li class="breadcrumb-item  active">
-業務服務					</li>
+出版品專區					</li>
 			</ol>
 		</nav>
 	</div>
@@ -422,7 +426,7 @@
                                 <li class="">
                                     <a href="/ADI/services/propaganda/1205.html" target="" title="協力宣導">協力宣導</a>
                                 </li>
-                                <li class="">
+                                <li class="on">
                                     <a href="/ADI/services/publications/1611.html" target="" title="出版品專區">出版品專區</a>
                                 </li>
                         </ul>
@@ -456,15 +460,13 @@
             <!-- 左側選單 end -->
             <!-- 右半主內容 start -->
             <div class="rightMain">
-
                 <div class="a11yBrickBar1">
-                    <a href="#AC" id="AC" accesskey="C" class="a11yBrick position-absolute"	title="頁面中央內容區塊[快捷鍵Alt+C]">:::</a>
+                    <a href="#AC" id="AC" accesskey="C" class="a11yBrick position-absolute" title="中央內容區塊[快捷鍵Alt&#x2B;C]">:::</a>
                 </div>
-                
                 <!-- 標題 -->
                 <div class="titleBar2 row">
     <div class="col">
-        <h2 class="title3 mb-0 fw-normal"><span class="titleTxt">業務服務</span></h2>
+        <h2 class="title3 mb-0 fw-normal"><span class="titleTxt">出版品專區</span></h2>
     </div>
     <div class="col-auto text-end d-flex">
         <ul class="shareBar list-unstyled list-inline mb-0">
@@ -480,68 +482,197 @@
             <li class="list-inline-item d-none d-md-inline-block">
                 <a class="printBtn printJs" href="javascript:;" title="列印頁面內容"><i class="ci ci-print"></i><span class="visually-hidden">列印</span></a>
             </li>
+                <li class="list-inline-item">
+                    <a href="javascript:;" class="searchSwitch searchSwitchJs" data-opentitle="展開查詢" data-closetitle="收合查詢" title="展開查詢"><i class="ci ci-open"></i><span class="visually-hidden">展開查詢</span></a>
+                </li>
         </ul>
     </div>
 </div>
 
+                <!-- 搜尋功能 -->
+                <div class="conSearchBar1 mb-4 conSearchBarJs off">
+
+                    <div class="conSearchBarWrap">
+                                <!-- 結尾有日曆的 -->
+                                <div class="searchIw3" >
+                                    <div class="searchI">
+                                        <div class="searchI-C">
+                                            <label for="QryDateS" class="visually-hidden">日期</label>
+                                            <input name="QryDateS" type="text" id="QryDateS" title="yyyy-mm-dd" class="ipt1 rounded-4 datepicker1" placeholder="yyyy-mm-dd" maxlength="10" autocomplete="off" value="">
+                                        </div>
+                                        <div class="searchI-R">
+                                            <a href="javascript:;" title="點擊選擇日期起日" class="calendarBtn1"><span class="visually-hidden">點擊選擇日期起日</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 開頭有~結尾有日曆的 -->
+                                <div class="searchIw4" >
+                                    <div class="searchI">
+                                        <div class="searchI-L">~</div>
+                                        <div class="searchI-C">
+                                            <label for="QryDateE" class="visually-hidden">至</label>
+                                            <input name="QryDateE" type="text" id="QryDateE" title="yyyy-mm-dd" class="ipt1 rounded-4 datepicker1" placeholder="yyyy-mm-dd" maxlength="10" autocomplete="off" value="">
+                                        </div>
+                                        <div class="searchI-R">
+                                            <a href="javascript:;" title="點擊選擇日期迄日" class="calendarBtn1"><span class="visually-hidden">點擊選擇日期迄日</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                        <div class="searchIw1">
+                                            <div class="searchI">
+                                                <div class="searchI-L">
+                                                    <label for="Condition6">服務對象：</label>
+                                                </div>
+                                                <div class="searchI-C">
+                                                    <select id="Condition6" class="sel1 rounded-4">
+                                                        <option value="">請選擇</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="searchIw1">
+                                            <div class="searchI">
+                                                <div class="searchI-L">
+                                                    <label for="CustomizeTags">分類：</label>
+                                                </div>
+                                                <div class="searchI-C">
+                                                    <select id="CustomizeTags" class="sel1 rounded-4">
+                                                        <option value="">請選擇</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                <!-- 結尾有按鈕 -->
+                                <div class="searchIw5">
+                                    <div class="searchI">
+                                        <div class="searchI-C">
+                                            <label for="QryKeyword" class="visually-hidden">關鍵字</label>
+                                            <input type="text" name="QryKeyword" id="QryKeyword" placeholder="請輸入關鍵字" value="" class="searchI-C ipt1 rounded-4 searchField" title="關鍵字搜尋">
+                                        </div>
+                                        <div class="searchI-R">
+                                            <input type="button" class="btn btn2 rounded-4 searchSubmit" value="查詢" title="送出關鍵字查詢" onclick="Search(1)">
+                                        </div>
+                                    </div>
+                                </div>
+
+                    </div>
+                </div>
                 <!--Header-->
+                <div id="ContentHeader">
+                </div>
+
                 <!-- 列表 -->
-                            <!-- 列表樣式七 -->
-<div class="list1 row mb-5 g-3">
-        <div class="col-12 col-sm-6 col-md-4">
-            <div class="card h-100 shadow-md">
-                <a href="/ADI/services/laws-regulations/790.html" class="card-body text-decoration-none" target="" title="法令規章">
-                    <b class="card-title title5">法令規章</b>
-                    <p class="card-text"></p>
-                </a>
+                            <div class="qa" id="ListTable">
+    <div class="row d-flex justify-content-center">
+        <div class="col">
+            <div class="accordion mb-5" id="qa1">
+                    <div class="accordion-item">
+                        <!-- 每項題目需套不同的id-->
+                        <div class="accordion-header" id="qaH14860">
+                            <!--需套跟內容對應的data-bs-target、aria-controls -->
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#qaCon14860" aria-controls="qaCon14860">
+                                <span>數位轉型行不行？企業轉型心法大揭秘</span>
+                            </button>
+                        </div>
+                        <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
+                        <div id="qaCon14860" class="accordion-collapse collapse" aria-labelledby="qaH14860" data-bs-parent="#qa1">
+                            <div class="accordion-body">
+                                    <div class="article1">
+                                        <img alt="" src="/copyright/ADI/w42o3deq.2vq.jpeg" style="width: 30%; height: 30%;" />
+                                    </div>
+                                <div class="articleOther">
+                                        <div class="otherI pb-4">
+                                            <div class="title7">相關連結</div>
+                                            <ul class="list4-3 list-group">
+                                                    <li class="list-group-item d-block bg-transparent">
+                                                        <a href="https://gpi.culture.tw/books/4711200017" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target="_blank" rel="noreferrer noopener" title="GPI 政府出版品資訊網-數位轉型行不行？企業轉型心法大揭秘">
+                                                            <div class="col mb-0 listIcon1">
+                                                                <!-- 外部連結需加上<i class="bi bi-box-arrow-up-right"></i> -->
+                                                                <!-- 內部連結需加上<i class="bi bi-link-45deg"></i> -->
+                                                                <b class="title5 fw-normal">GPI 政府出版品資訊網-數位轉型行不行？企業轉型心法大揭秘<i class="bi bi-box-arrow-up-right"></i></b>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                            </ul>
+                                        </div>
+                                </div>
+                                <div class="linkBar">
+                                    <a class="copyLinkBtn copyLinkBtnJs" href='#qaH14860'>
+                                        <i class="bi bi-link"></i>複製連結<b class="copyMsg">已複製連結</b>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <!-- 每項題目需套不同的id-->
+                        <div class="accordion-header" id="qaH14858">
+                            <!--需套跟內容對應的data-bs-target、aria-controls -->
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#qaCon14858" aria-controls="qaCon14858">
+                                <span>111 Taiwan數位內容產業年鑑</span>
+                            </button>
+                        </div>
+                        <!-- 每項內容需套不同的id，且要有加與題目id對應的aria-labelledby，要上與外框id對應的data-bs-parent-->
+                        <div id="qaCon14858" class="accordion-collapse collapse" aria-labelledby="qaH14858" data-bs-parent="#qa1">
+                            <div class="accordion-body">
+                                    <div class="article1">
+                                        <img alt="" src="/copyright/ADI/pkzlejgu.rtk.jpg" style="width: 30%; height: 30%;" />
+                                    </div>
+                                <div class="articleOther">
+                                        <div class="otherI pb-4">
+                                            <div class="title7">相關連結</div>
+                                            <ul class="list4-3 list-group">
+                                                    <li class="list-group-item d-block bg-transparent">
+                                                        <a href="https://gpi.culture.tw/books/1011101758" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target="_blank" rel="noreferrer noopener" title="GPI 政府出版品資訊網-111 Taiwan數位內容產業年鑑">
+                                                            <div class="col mb-0 listIcon1">
+                                                                <!-- 外部連結需加上<i class="bi bi-box-arrow-up-right"></i> -->
+                                                                <!-- 內部連結需加上<i class="bi bi-link-45deg"></i> -->
+                                                                <b class="title5 fw-normal">GPI 政府出版品資訊網-111 Taiwan數位內容產業年鑑<i class="bi bi-box-arrow-up-right"></i></b>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list-group-item d-block bg-transparent">
+                                                        <a href="https://drive.google.com/file/d/1eQVeB1Yqrk8IFZ0dDzizwWHctLvkPZC1/view?usp=drive_link" class="listCon d-flex w-100 justify-content-md-between align-items-top flex-wrap" target="_blank" rel="noreferrer noopener" title="【電子書下載】111 Taiwan數位內容產業年鑑">
+                                                            <div class="col mb-0 listIcon1">
+                                                                <!-- 外部連結需加上<i class="bi bi-box-arrow-up-right"></i> -->
+                                                                <!-- 內部連結需加上<i class="bi bi-link-45deg"></i> -->
+                                                                <b class="title5 fw-normal">【電子書下載】111 Taiwan數位內容產業年鑑<i class="bi bi-box-arrow-up-right"></i></b>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                            </ul>
+                                        </div>
+                                </div>
+                                <div class="linkBar">
+                                    <a class="copyLinkBtn copyLinkBtnJs" href='#qaH14858'>
+                                        <i class="bi bi-link"></i>複製連結<b class="copyMsg">已複製連結</b>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
-        <div class="col-12 col-sm-6 col-md-4">
-            <div class="card h-100 shadow-md">
-                <a href="/ADI/services/apply-serivces/794.html" class="card-body text-decoration-none" target="" title="申請服務">
-                    <b class="card-title title5">申請服務</b>
-                    <p class="card-text"></p>
-                </a>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4">
-            <div class="card h-100 shadow-md">
-                <a href="/ADI/services/govinfo/1209.html" class="card-body text-decoration-none" target="" title="資訊公開">
-                    <b class="card-title title5">資訊公開</b>
-                    <p class="card-text"></p>
-                </a>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4">
-            <div class="card h-100 shadow-md">
-                <a href="/ADI/services/ethics/1021.html" class="card-body text-decoration-none" target="" title="廉政專區">
-                    <b class="card-title title5">廉政專區</b>
-                    <p class="card-text"></p>
-                </a>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4">
-            <div class="card h-100 shadow-md">
-                <a href="/ADI/services/propaganda/1205.html" class="card-body text-decoration-none" target="" title="協力宣導">
-                    <b class="card-title title5">協力宣導</b>
-                    <p class="card-text"></p>
-                </a>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4">
-            <div class="card h-100 shadow-md">
-                <a href="/ADI/services/publications/1611.html" class="card-body text-decoration-none" target="" title="出版品專區">
-                    <b class="card-title title5">出版品專區</b>
-                    <p class="card-text"></p>
-                </a>
-            </div>
-        </div>
+    </div>
 </div>
+
+                        <div class="pageBar mb-5 ">
+    <div class="pageSet mb-4">
+                        <div class="mRow">共<span class="totalData">2</span>筆資料</div>
+    </div>
+</div>
+
                 <!--Footer-->
+                <div class="article1 mb-4">
+                    
+                </div>
             </div>
             <!-- 右半主內容 end -->
         </div>
     </div>
+    <input type="hidden" value='1611' id="sqn" />
+    <div id="ns" style="display:none;"></div>
+    <div id="ca" style="display:none;"></div>
 </main>
 
 
@@ -803,7 +934,45 @@
     </script>
     
     <script>
-    LeftMenu('760');
+        var _JsData;
+        var _needtag = NeedTag('AccordionList');
+        var _Module = 'NEWS';
+        _JsData = JSON.parse('[{"MainSN":0,"no":1,"mainsn":"14860","istopdisplay":"none","href":"/ADI/services/publications/14860.html","target":null,"title":"數位轉型行不行？企業轉型心法大揭秘","startdate":"2023-05-01","newstitle":"數位轉型行不行？企業轉型心法大揭秘","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/ADI/w42o3deq.2vq.jpeg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"\u003Cimg alt=\u0027\u0027 src=\u0027/copyright/ADI/w42o3deq.2vq.jpeg\u0027 style=\u0027width: 30%; height: 30%;\u0027 /\u003E","tags":[],"crosslinkdisplay":"none","schedule":null,"relatedFile":null,"relatedImg":null,"relatedlink":null,"relatedvideo":null,"relatedmoj":null,"zhtwTitle":null,"enTitle":null,"ArticleType":0,"bzhURL":null,"benURL":null,"bzhtwtarget":null,"bentarget":null,"benfiletype":null,"bzhfiletype":null,"bzhfiledisplay":"none","benfiledisplay":"none","bzhUrldisplay":"none","benUrldisplay":"none","bzhHasUrl":"none","bzhNoUrl":"none","benHasUrl":"none","benNoUrl":"none","zhtwregulationsURL":null,"zhtwregulationsTitle":null,"enregulationsURL":null,"enregulationsTitle":null,"zhtw_regulationsdisplay":"none","en_regulationsdisplay":"none"},{"MainSN":0,"no":2,"mainsn":"14858","istopdisplay":"none","href":"/ADI/services/publications/14858.html","target":null,"title":"111 Taiwan數位內容產業年鑑","startdate":"2022-10-01","newstitle":"111 Taiwan數位內容產業年鑑","newssubtitle":null,"filetypedisplay":"none","weblogopath":"/copyright/ADI/pkzlejgu.rtk.jpg","webvideokey":"","filetype":"","syscategoriesdisplay":"none","contenttext":"\u003Cimg alt=\u0027\u0027 src=\u0027/copyright/ADI/pkzlejgu.rtk.jpg\u0027 style=\u0027width: 30%; height: 30%;\u0027 /\u003E","tags":[],"crosslinkdisplay":"none","schedule":null,"relatedFile":null,"relatedImg":null,"relatedlink":null,"relatedvideo":null,"relatedmoj":null,"zhtwTitle":null,"enTitle":null,"ArticleType":0,"bzhURL":null,"benURL":null,"bzhtwtarget":null,"bentarget":null,"benfiletype":null,"bzhfiletype":null,"bzhfiledisplay":"none","benfiledisplay":"none","bzhUrldisplay":"none","benUrldisplay":"none","bzhHasUrl":"none","bzhNoUrl":"none","benHasUrl":"none","benNoUrl":"none","zhtwregulationsURL":null,"zhtwregulationsTitle":null,"enregulationsURL":null,"enregulationsTitle":null,"zhtw_regulationsdisplay":"none","en_regulationsdisplay":"none"}]');
+        foreverApi = '1';
+        LeftMenu('1611');
+        NewList('1611');
+        var ListPage = '/_news/AccordionList.html';
+        var listTag2Page = '/_news/listTag2.html';
+        $("#ns").load(ListPage, function () {
+            if (_needtag) { $("#ca").load(listTag2Page, function () { }); }
+        });
+        if ('AccordionList' == 'AccordionList') {
+            var tag = encodeURI( window.location.hash);
+            var lang = 'zh-tw';
+            function tagclick(tag) {
+                $("#qaH" + tag).children(".accordion-button").click();
+            }
+            if (tag.length > 1) {
+                tag = tag.replace("#qaH", "");
+                var tagIndex = _JsData.findIndex(x => x.mainsn == tag);
+                if (tagIndex > -1) {
+                    var _tagIndex = tagIndex + 1;
+                    var p = Math.ceil(_tagIndex / 15);
+                    if (p > 1) {
+                        $("#ns").load(ListPage, function () {
+                            serials(SearchJsonData(p), tagclick(tag));
+                            var navH = $('.navbar').outerHeight();
+                            var topBarH = $('.baseNav').outerHeight();
+                            var position = $("#qaH" + tag).stop().offset().top - navH - topBarH;
+                            $('html, body').stop().animate({ scrollTop: position }, 400, 'linear');
+                        });
+                    } else {
+                        tagclick(tag);
+                    }
+                }
+            }
+        }
+
     </script>
 
 </body>
