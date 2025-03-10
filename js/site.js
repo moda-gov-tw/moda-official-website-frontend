@@ -1,4 +1,10 @@
-﻿
+﻿///無障礙語音
+function FunSpeaking(txt) {
+    $("#speaking_div").html(txt);
+    setTimeout(() => {
+        $("#speaking_div").html("");
+    }, 1000);
+}
 
 $(document).on("click", "a", function (e) {
     if ($(this).find('span').length > 0) {
@@ -34,6 +40,7 @@ function gooSearch(lan, webSiteId, txt) {
     var _txt = txt;
     location.href = "/".concat(_lan, _webSiteId, "home/", "search.html", "?q=", _txt);
 }
+
 
 function webSiteLange(lan, webSiteId) {
     if (lan != null) {
@@ -160,7 +167,6 @@ function SearchObj(obj) {
     FECommon.mainQaAnchor();
 }
 function SearchAjax(obj) {
-
     var innerHtml = "";
     var Url = GetApiUrl().concat("/WebsiteList/NewsList");
     var Regulations = obj.BI ? "1" : "0";
@@ -236,8 +242,9 @@ function NeedTag(e) {
     var needAarray = ["OneTextList", "TwoTextList"];
     if (needAarray.indexOf(e) > -1) { return true; } else { return false; }
 }
+var is = 1;
 function SearchJsonData(p) {
-
+    is++;
     if (foreverApi == "1") {
         Search(p);
     }
@@ -323,6 +330,10 @@ function SearchJsonData(p) {
         JsPagination(p);
         $('html').stop().animate({ scrollTop: 0 }, 100, 'linear');
     }
+    var lang = $(".webSitelanguage").attr("lang");   
+    var arrivedTitle = lang == "en" ? "swithed to " : "已切換至第";
+    var pageTitle = lang == "en" ? " page " : " 頁";
+    FunSpeaking(arrivedTitle + p + pageTitle);
 }
 function NewListReJson(str, obj) {
     $.each(Object.keys(obj), function (i, item) {
@@ -349,6 +360,11 @@ function ReLoadPagination(p, pageCount) {
     var pageIndex = parseInt(p - 1);
     var start = 0;
     var end = 0;
+    var strPageTitle = "";
+    var endPageTitle = " page";
+    var goTitle = " go";
+    var firstPageTxt = "First";
+    var itemArray = [];
     start = pageIndex - pendingcount < 0 ? 0 : pageIndex - pendingcount;
     end = (pageIndex + pendingcount) > (pageCount - 1) ? (pageCount - 1) : (pageIndex + pendingcount);
     if (pageIndex + pendingcount > pageCount - 1) {
@@ -359,19 +375,23 @@ function ReLoadPagination(p, pageCount) {
         end += 0 - (pageIndex - pendingcount);
         end = end > pageCount - 1 ? pageCount - 1 : end;
     }
-    var itemArray = [];
+  
+    if (lang != "en") {
+        firstPageTxt = "第一頁";
+        strPageTitle = "第 ";
+        endPageTitle = " 頁";
+        goTitle = "點擊前往";
+    }
+
     if (pageIndex != 0) {
-        var firstPageTxt = "First";
-        if (lang != "en") {
-            firstPageTxt = "第一頁";
-        }
-        itemArray.push("<a class='page_a firstP' onclick='SearchJsonData(1)' href='javascript:; ' data-page='1'>" + firstPageTxt + "</a>");
+        
+        itemArray.push("<a class='page_a firstP' role='button' onclick='SearchJsonData(1)' href='javascript:; ' data-page='1' title='" + goTitle +"'  >" + firstPageTxt + "</a>");
     }
     var strCot = (start + 1);
     if (pageIndex <= Math.ceil(5 / 2)) { }
     else {
         if (strCot != 1) {
-            itemArray.push("<a class='page_a' onclick='SearchJsonData(1)' href='javascript:; ' data-page='1'>1</a>");
+            itemArray.push("<a class='page_a' role='button' onclick='SearchJsonData(1)' href='javascript:; ' data-page='1' title='" + goTitle +"' ><span class='visually-hidden'>" + strPageTitle + "</span>1<span class='visually-hidden'>" + endPageTitle +"</span></a>");
             itemArray.push("<span>..</span>");
         }
     }
@@ -379,18 +399,21 @@ function ReLoadPagination(p, pageCount) {
     var endCont = (end + 1);
     for (var i = start; i <= end; i++) {
         if (pageIndex == i) {
-            itemArray.push("<a class='page_a on' onclick='SearchJsonData(" + (i + 1) + ") ' href='javascript:; ' data-page='" + (i + 1) + "'>" + (i + 1) + "</a>");
+            itemArray.push("<a class='page_a on' role='button' onclick='SearchJsonData(" + (i + 1) + ") ' href='javascript:; ' data-page='" + (i + 1) + "' title='" + goTitle +"' ><span class='visually-hidden'>" + strPageTitle + "</span>" + (i + 1) + "<span class='visually-hidden'>" + endPageTitle + "</span></a>");
         }
         else {
-            itemArray.push("<a class='page_a' onclick='SearchJsonData(" + (i + 1) + ") ' href='javascript:; ' data-page='" + (i + 1) + "'>" + (i + 1) + "</a>");
+            itemArray.push("<a class='page_a' role='button' onclick='SearchJsonData(" + (i + 1) + ") ' href='javascript:; ' data-page='" + (i + 1) + "' title='" + goTitle +"' ><span class='visually-hidden'>" + strPageTitle + "</span>" + (i + 1) + "<span class='visually-hidden'>" + endPageTitle + "</span></a>");
         }
     }
     if (pageIndex >= (pageCount - 1 - Math.ceil(5 / 2))) {
     } else {
         if (endCont != pageCount) {
             itemArray.push("<span>..</span>");
-            itemArray.push("<a class='page_a' onclick='SearchJsonData(" + pageCount + ")' href='javascript:; ' data-page='" + pageCount + "'>");
+            itemArray.push("<a class='page_a' role='button' onclick='SearchJsonData(" + pageCount + ")' href='javascript:; ' data-page='" + pageCount + "' title='" + goTitle +"' >");
+
+            itemArray.push("<span class='visually-hidden'>" + strPageTitle + "</span>");
             itemArray.push(pageCount);
+            itemArray.push("<span class='visually-hidden'>" + endPageTitle + "</span>");
             itemArray.push("</a>");
         }
 
@@ -402,7 +425,7 @@ function ReLoadPagination(p, pageCount) {
         if (lang != "en") {
             lastText = "最後一頁";
         }
-        itemArray.push("<a class='page_a lastP' onclick='SearchJsonData(" + pageCount + ")' href='javascript:; ' data-page=" + pageCount + ">" + lastText + "</a>");
+        itemArray.push("<a class='page_a lastP' role='button' onclick='SearchJsonData(" + pageCount + ")' href='javascript:; ' data-page=" + pageCount + "  title='" + goTitle +"' >" + lastText + "</a>");
     }
     $(".pageNav").html("");
     var ss = "";
@@ -410,6 +433,7 @@ function ReLoadPagination(p, pageCount) {
         ss += item;
     });
     $(".pageNav").html(ss);
+   
 }
 //
 function LeftMenu(obj) {
