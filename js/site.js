@@ -75,7 +75,7 @@ function formatDate(date) {
 }
 //search
 var _JsData;
-var foreverApi = 0;
+var foreverApi = "0";
 function NewList(sqn) {
     var obj = getCookie("SearchObjN");
     obj = "";
@@ -97,6 +97,7 @@ function NewList(sqn) {
         $("#CustomizeTags").val(objJson.CT);
         $("#SysZipCode").val(objJson.ZC);
         $("#Chief").val(objJson.CF);
+        SetDepartment(objJson.Dep);
         $("typeLaw").prop("checked", objJson.BI);
         if ($("#QryDateS").val() != "" || $("#QryDateE").val() != "" || $("#QryKeyword").val() != "" || isBilingual ||
             $("#Condition4").val() != "" || $("#Condition5").val() != "" || $("#Condition6").val() != "" || $("#CustomizeTags").val() != "" || $("#SysZipCode").val() != "") {
@@ -110,11 +111,15 @@ function NewList(sqn) {
     }
 }
 function Search(p) {
+  
+    var _hashtag = encodeURI(window.location.hash);
+    _hashtag = _hashtag.replace("#qaH", "");
     var displaycount = 15;
     var key = $("#sqn").val();
     if ($("#perPageShow").length > 0) {
         displaycount = $("#perPageShow").find(':selected').val();
     }
+
     var obj = {
         key: key,
         str: $("#QryDateS").val(),
@@ -128,11 +133,17 @@ function Search(p) {
         CF: $("#Chief").val() ?? "",
         BI: $("#Regulations").prop("checked") ?? "",
         displaycount: displaycount,
-        p: p
+        p: p,
+        Dep: GetDepartment(),
+        hashtag: _odgche ? "": _hashtag
     };
     SetCookie("SearchObjN", obj);
     SearchObj(obj);
+    
 }
+
+
+
 var chk = false;
 function SearchObj(obj) {
 
@@ -167,6 +178,7 @@ function SearchObj(obj) {
     FECommon.mainQaAnchor();
 }
 function SearchAjax(obj) {
+   
     var innerHtml = "";
     var Url = GetApiUrl().concat("/WebsiteList/NewsList");
     var Regulations = obj.BI ? "1" : "0";
@@ -184,14 +196,15 @@ function SearchAjax(obj) {
         "Condition7": obj.CF,
         "Regulations": Regulations,
         "P": parseInt(obj.p),
-        "DisplayCount": parseInt(obj.displaycount)
+        "DisplayCount": parseInt(obj.displaycount),
+        "Dep": obj.Dep,
+        "hashtag": obj.hashtag
     };
     $.ajax({
         url: Url,
         method: 'POST',
         contentType: 'application/json',
         dataType: 'html',
-        async: false,
         data: JSON.stringify(data),
         success: function (res) {
             innerHtml = res;
@@ -208,14 +221,16 @@ function SearchAjax(obj) {
                     $("#SysZipCode").val(obj.ZC);
                     $("#Chief").val(obj.CF);
                     $("#Regulations").prop("checked", obj.BI);
+                    SetDepartment(obj.Dep);
                 }
                 $('.datepicker1').datepicker();
-                _JsData = JSON.parse($('#JsonData').val());
+              //  _JsData = JSON.parse($('#JsonData').val());
                 $('#JsonData').remove();
                 FECommon.widgetMagnific();
                 $('html').stop().animate({ scrollTop: 0 }, 100, 'linear');
             });
         }, complete: function (data) {
+            
             var IsAnykey = false;
             var missKey = ['key', 'displaycount', 'p'];
             $.each(Object.keys(obj), function (i, item) {
@@ -231,27 +246,39 @@ function SearchAjax(obj) {
             if (IsAnykey) {
                 $(".conSearchBarJs").removeClass("off");
             }
+            if (listType == "AccordionList" && !_odgche && obj.hashtag != "") {
+
+                $("#qaH" + obj.hashtag).children(".accordion-button").click();
+                var navH = $('.navbar').outerHeight();
+                var topBarH = $('.baseNav').outerHeight();
+                var position = $("#qaH" + obj.hashtag).stop().offset().top - navH - topBarH;
+                $('html, body').stop().animate({ scrollTop: position }, 400, 'linear');
+            }
             FECommon.basicLoadingOff();
+            FECommon.widgetLazyload();
+            _odgche = true;
         }
     });
 }
 //
-var listType = "";
+var listType2 = "";
 function NeedTag(e) {
-    listType = e;
+    listType2 = e;
     var needAarray = ["OneTextList", "TwoTextList"];
     if (needAarray.indexOf(e) > -1) { return true; } else { return false; }
 }
 var is = 1;
 function SearchJsonData(p) {
     is++;
-    if (foreverApi == "1") {
+    var S1 = $("#ns")[0].innerHTML;
+    var S2 = $("#ca")[0].innerHTML;
+    var lang = $(".webSitelanguage").attr("lang");
+    if ("1" == "1") {
         Search(p);
+        
     }
     else {
-        var S1 = $("#ns")[0].innerHTML;
-        var S2 = $("#ca")[0].innerHTML;
-        var lang = $(".webSitelanguage").attr("lang");
+      
         switch (lang) {
             case "en":
                 S1 = S1.replace(new RegExp("連結此問答", 'g'), "Link in context");
@@ -275,62 +302,7 @@ function SearchJsonData(p) {
                 S1 = S1.replace(new RegExp('lang="zh-tw"', 'g'), "");
                 break;
         }
-        
-        var displaycount = 15;
-        if ($("#perPageShow").length > 0) {
-            displaycount = $("#perPageShow").find(':selected').val();
-        }
-        var itemArray = [];
-        var itemCoint = _JsData.length;
-        var Page = p;
-        var PageCount = displaycount;
-
-        for (var i = 0; i < PageCount; i++) {
-
-            var _item = ((Page - 1) * PageCount) + i;
-
-            if (_item >= itemCoint) { }
-            else {
-                var JsData = _JsData[_item];
-                var _s1 = "";
-                var _tags = "";
-
-                _s1 = NewListReJson(S1, JsData);
-
-                if (_needtag) {
-                    if (JsData.tags.length > 0) {
-                        $.each(JsData.tags, function (j, jitem) {
-                            var _s2 = "";
-                            _s2 = NewListReJson(S2, JsData.tags[j]);
-                            _tags += _s2;
-                        });
-                    }
-                    _s1 = _s1.replace('#areatags', _tags);
-                    itemArray.push("".concat(_s1));
-                } else {
-                    itemArray.push("".concat(_s1));
-                }
-            }
-        }
-        var itemHtml = "";
-        if (listType == "AccordionList") {
-            itemHtml = "<div class='row d-flex justify-content-center'><div class='col'><div class='accordion mb-5' id='qa1'>";
-        }
-
-        $.each(itemArray, function (i, item) {
-            itemHtml += item;
-        });
-        if (listType == "AccordionList") {
-            itemHtml += "</div></div></div>";
-        }
-        $("#ListTable").html(itemHtml);
-        if (typeof wLazyLoad != 'undefined') {
-            wLazyLoad.update();
-        }
-        JsPagination(p);
-        $('html').stop().animate({ scrollTop: 0 }, 100, 'linear');
     }
-    var lang = $(".webSitelanguage").attr("lang");   
     var arrivedTitle = lang == "en" ? "swithed to " : "已切換至第";
     var pageTitle = lang == "en" ? " page " : " 頁";
     FunSpeaking(arrivedTitle + p + pageTitle);
@@ -448,7 +420,6 @@ function LeftMenuAjax(obj) {
         method: 'POST',
         contentType: 'application/json',
         dataType: 'html',
-        async: false,
         success: function (res) {
             innerHtml = res;
             $('.leftMenu').remove();
@@ -570,3 +541,262 @@ function tagcopy(e) {
             console.log('Something went wrong', err);
         })
 }
+
+function GetDepartment() {
+    var departments = [];
+    if ($('.ddDep').length > 0) {
+        $('.ddDep:checked').each(function () {
+            if ($(this).val() != "") {
+                departments.push($(this).val());
+            }
+        });
+    }
+    return departments;
+}
+function SetDepartment(dep) {
+    //if ($('.ddDep').length > 0) {
+    //    $('.ddDep').each(function () {
+    //        $(this).prop('checked', dep.includes($(this).val()));
+    //    });
+    //}
+}
+
+//2025-11-13新增
+function TagKep(tag,websiteid) {
+    var lang = $(".webSitelanguage").attr("lang");
+    var tag = $(".webSitelanguage").attr("lang");
+    var websiteid = $(".webSitelanguage").attr("lang");
+    alert(websiteid + "  " + lang +"  " +tag);
+}
+
+$(document).on('click', '.tagclick', function () {
+    // 白名單（依你系統實際允許值調整）
+    const LANG_OK = new Set(["zh-tw", "en", "ja"]);
+    const SITE_OK = new Set(["MODA", "ACS", "ADI"]);
+    const rawLang = String($(".webSitelanguage").attr("lang") || "").toLowerCase();
+    const rawTag = String($(this).data("key") || "");
+    const $body = $('body');
+    var webs = "";
+    if ($body.hasClass('ACS')) { webs = "ACS"; }
+    else if ($body.hasClass('ADI')) { webs = "ADI"; }
+    else { }
+    const rawSite = String(webs || "").toUpperCase();
+    // 驗證 + 正規化
+    const lang = LANG_OK.has(rawLang) ? rawLang : "zh-tw";
+    const websiteId = SITE_OK.has(rawSite) ? rawSite : "MODA";
+    // 用 URL 物件安全組 URL
+    const segments = [];
+    if (lang !== "zh-tw") segments.push(lang);
+    if (websiteId !== "MODA") segments.push(websiteId);
+    segments.push("knowledgelist.html");
+    const url = new URL("/" + segments.join("/"), window.location.origin);
+    // 以 URLSearchParams 自動處理編碼
+    if (rawTag) url.searchParams.set("t", rawTag);
+    console.log(rawSite);
+    console.log(url);
+    window.location.assign(url.href);
+});
+
+
+//新增主題標籤查詢
+//上面的
+function SearchKnowledgelist() {
+    var msg = "";
+    const urlParams = new URLSearchParams(window.location.search);
+    const siteIds = ['ACS', 'ADI', 'MODA']; // 可擴充
+    const body = document.body;
+    const wid = siteIds.find(id => body.classList.contains(id)) || 'MODA';
+    var obj = {
+        t: urlParams.get('t'),
+        s: MODAEncode($("#QryDateS").val()),
+        e: MODAEncode($("#QryDateE").val()),
+        k: MODAEncode($("#QryKeyword").val()),
+        l: $(".webSitelanguage").attr("lang"),
+        wid: wid
+    };
+    if (obj.s != "" || obj.e != "") {
+        if (obj.s != "" && !dateIsValid(obj.s)) {
+            msg += "起始時間格式有誤。\n The time format for StartDate is not allow. \n";
+        }
+        if (obj.e != "" && !dateIsValid(obj.e)) {
+            msg += "結束時間格式有誤。\n The time format for EndDate is not allow. \n";
+        }
+        if (obj.s != "" && obj.e != "" ) {
+            if (Date.parse(obj.s) > Date.parse(obj.e)) {
+                msg += "結束時間請勿小於起始時間。\n EndDate should be later than StartDate. \n";
+            }
+        }
+    }
+    if (obj.k != "") {
+        if (obj.k.length > 50) {
+            msg += "查詢字串請勿超過50個字。\n Keyword should not be longer than 50 letters. \n";
+        }
+    }
+    if (msg != "") {
+        alert(msg);
+        FECommon.basicLoadingOff();
+        return;
+    }
+
+
+    KnowledgelistAjax(obj);
+}
+//左側查詢+分頁的
+function SearchKnowledgelistLeft(p) {
+    var displaycount = 15;
+    if ($("#perPageShow").length > 0) {
+        displaycount = $("#perPageShow").find(':selected').val();
+    }
+    const urlParams = new URLSearchParams(window.location.search);
+    const siteIds = ['ACS', 'ADI', 'MODA']; // 可擴充
+    const body = document.body;
+    const wid = siteIds.find(id => body.classList.contains(id)) || 'MODA';
+    var obj = {
+        t: urlParams.get('t'),
+        s: MODAEncode($("#QryDateS").val()),
+        e: MODAEncode($("#QryDateE").val()),
+        k: MODAEncode($("#QryKeyword").val()),
+        l: $(".webSitelanguage").attr("lang"),
+        wid: wid,
+        p: p,
+        dc: displaycount,
+        lms: GetCheckBoxVal('lvc', '0'),
+        at: GetCheckBoxVal('atc', '99'),
+    };
+    KnowledgelistItemAjax(obj);
+}
+
+//Ajax
+function KnowledgelistAjax(obj) {
+    var Url = GetApiUrl().concat("/WebsiteList/KnowledgeList");
+    $.ajax({
+        url: Url,
+        method: 'POST',
+        contentType: 'application/json',
+        dataType: 'html',
+        data: JSON.stringify(obj),
+        success: function (res) {
+            innerHtml = res;
+            $('.twoColConWrap').empty();
+            $('.twoColConWrap').html(innerHtml).promise().done(function () {
+                FECommon.widgetMagnific();
+                $('html').stop().animate({ scrollTop: 0 }, 100, 'linear');
+            });
+        }, complete: function (data) {
+            KnowledgelistTitleAjax(obj);
+        }
+    });
+}
+function KnowledgelistItemAjax(obj) {
+    FECommon.basicLoadingOn();
+    var Url = GetApiUrl().concat("/WebsiteList/KnowledgeListItem");
+    $.ajax({
+        url: Url,
+        method: 'POST',
+        contentType: 'application/json',
+        dataType: 'html',
+        data: JSON.stringify(obj),
+        success: function (res) {
+            innerHtml = res;
+            $('#ListItem').empty();
+            $('#ListItem').html(innerHtml).promise().done(function () {
+                FECommon.widgetMagnific();
+                $('html').stop().animate({ scrollTop: 0 }, 100, 'linear');
+            });
+        }, complete: function (data) {
+            FECommon.basicLoadingOff();
+        }
+    });
+}
+
+function KnowledgelistTitleAjax(obj) {
+    var Url = GetApiUrl().concat("/WebsiteList/KnowledgeListTopicTagTilite");
+    $.ajax({
+        url: Url,
+        method: 'POST',
+        contentType: 'application/json',
+        dataType: 'html',
+        data: JSON.stringify(obj),
+        success: function (res) {
+            innerHtml = res;
+            $('#TopicTagTilite').empty();
+            $('#TopicTagTilite').html(innerHtml).promise().done(function () {
+                $('html').stop().animate({ scrollTop: 0 }, 100, 'linear');
+            });
+        }, complete: function (data) {
+            FECommon.basicLoadingOff();
+        }
+    });
+}
+//取checkedbox
+function GetCheckBoxVal(ckclss, allval) {
+    var _array = [];
+    var _allcount = 0;
+    $("." + ckclss).each(function () {
+        _allcount++;
+        var $checkbox = $(this);
+        if ($checkbox.prop("checked")) {
+            if ($checkbox.val() != "") {
+                _array.push($checkbox.val());
+            }
+        }
+    });
+    if (_array.length == _allcount) {
+        _array.length = 0;
+        _array.push(allval);
+    }
+    
+    return _array.join(',');
+}
+//checkedbox
+$(document).on('change', '.lvc', function () {
+    var $this = $(this);
+    // 如果是全選按鈕
+    if ($this.hasClass('all')) {
+        $('.lvc').prop('checked', $this.prop('checked'));
+    } else {
+        // 如果有任一項目取消，就取消全選
+        if (!$this.prop('checked')) {
+            $('.lvc.all').prop('checked', false);
+        } else {
+            // 若所有非全選項目都被勾選 → 全選打勾
+            var allChecked = $('.lvc:not(.all):checked').length === $('.lvc:not(.all)').length;
+            $('.lvc.all').prop('checked', allChecked);
+        }
+    }
+    SearchKnowledgelistLeft(1);
+});
+$(document).on('change', '.atc', function () {
+    var $this = $(this);
+    // 如果是全選按鈕
+    if ($this.hasClass('all')) {
+        $('.atc').prop('checked', $this.prop('checked'));
+    } else {
+        // 如果有任一項目取消，就取消全選
+        if (!$this.prop('checked')) {
+            $('.atc.all').prop('checked', false);
+        } else {
+            // 若所有非全選項目都被勾選 → 全選打勾
+            var allChecked = $('.atc:not(.all):checked').length === $('.atc:not(.all)').length;
+            $('.atc.all').prop('checked', allChecked);
+        }
+    }
+    SearchKnowledgelistLeft(1);
+});
+$(document).on('change', '.ddDep', function () {
+    var $this = $(this);
+    // 如果是全選按鈕
+    if ($this.hasClass('all')) {
+        $('.ddDep').prop('checked', $this.prop('checked'));
+    } else {
+        // 如果有任一項目取消，就取消全選
+        if (!$this.prop('checked')) {
+            $('.ddDep.all').prop('checked', false);
+        } else {
+            // 若所有非全選項目都被勾選 → 全選打勾
+            var allChecked = $('.ddDep:not(.all):checked').length === $('.ddDep:not(.all)').length;
+            $('.ddDep.all').prop('checked', allChecked);
+        }
+    }
+});
+
