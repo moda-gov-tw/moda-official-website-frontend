@@ -424,7 +424,7 @@ function LeftMenuAjax(obj) {
             innerHtml = res;
             $('.leftMenu').remove();
             $(".twoColConWrap").prepend(innerHtml);
-			$('.sidebarJs .menuSub').prev('a').addClass('hasSub').attr('role', 'button');
+            $('.sidebarJs .menuSub').prev('a').addClass('hasSub').attr('role', 'button');
         }
     });
     // return innerHtml;
