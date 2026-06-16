@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60" width="220" height="60">
+  <defs>
+    <style>
+      .number {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 60px;
+        font-weight: bold;
+        fill: #555B95; /* 完美匹配原圖的藍紫色 */
+      }
+      .text {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        fill: #555B95; /* 完美匹配原圖的藍紫色 */
+        letter-spacing: 0.5px;
+      }
+    </style>
+  </defs>
+  
+  <text x="0" y="52" class="number">3</text>
+  
+  <text x="40" y="46" class="text">Key Features</text>
+</svg>
