@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 60" width="260" height="60">
+  <defs>
+    <style>
+      .number {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 60px;
+        font-weight: bold;
+        fill: #C74A6B; /* 完美匹配原圖的桃紅色 */
+      }
+      .text {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        fill: #C74A6B; /* 完美匹配原圖的桃紅色 */
+        letter-spacing: 0.5px;
+      }
+    </style>
+  </defs>
+  
+  <text x="0" y="52" class="number">2</text>
+  
+  <text x="40" y="46" class="text">Things It's Not</text>
+</svg>
