@@ -150,7 +150,13 @@ function SearchObj(obj) {
     chk = false;
     FECommon.basicLoadingOn();
     var msg = "";
-    //檢核
+    // //檢核
+    // if (obj.str == "") {
+    //     msg += "請輸入起始時間。\n The StartDate is required. \n";
+    // }
+    // if (obj.end == "") {
+    //     msg += "請輸入結束時間。\n The EndDate is required. \n";
+    // }
     if (obj.str != "" || obj.end != "") {
         if (obj.str != "" && !dateIsValid(obj.str)) {
             msg += "起始時間格式有誤。\n The time format for StartDate is not allow. \n";
@@ -523,8 +529,21 @@ function MODADecode(text) {
     temp = null;
     return output;
 }
+function getSafeHash(rawHref) {
+    if (typeof rawHref !== 'string') return null;
+
+    rawHref = rawHref.trim();
+
+    // 只允許頁內錨點，例如 #section-1
+    if (!/^#[A-Za-z0-9_-]+$/.test(rawHref)) return null;
+
+    return rawHref;
+}
 function tagcopy(e) {
-    var href = location.href.replace(location.hash, "") + e.attr('href');
+    var hash = getSafeHash(e.attr('href'));
+    if (!hash) return;
+    var href = location.origin + location.pathname + location.search + hash;
+
     var navH = $('.navbar').outerHeight();
     var topBarH = $('.baseNav').outerHeight();
     var position = $(e.attr('href')).stop().offset().top - navH - topBarH;;
