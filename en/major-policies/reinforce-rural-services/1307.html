@@ -386,47 +386,442 @@ Enhance Digital Services in Remote Areas					</li>
                     <!--擴充圖文-->
 <link href="https://www-api.moda.gov.tw/File/Get/moda/en/PUEqMUj2I8xuTuq" media="all" rel="stylesheet" />
 <link href="https://www-api.moda.gov.tw/File/Get/moda/en/3D7VjkNwv1ZoFcq" media="all" rel="stylesheet" />
-<section class="event1Part">
-<div class="wrap4 mx-auto px-3 px-md-4 px-lg-5 pb-4 pb-md-5 mt-minus-4 mt-md-minus-5">
-<div class="summary2 py-3">Reliable communication networks are a fundamental human right. To promote the deployment of mobile broadband telecommunication networks in remote regions and advance the development of local applications, the Ministry of Digital Affairs (The moda) continuously improves the fee structures for digital communications resources. In 2024, the Standards for the Usage Fees of Radio Frequency were revised to encourage efficient frequency use and market development, thereby ensuring that overall resources serve the public interest.<br />
-<br />
-By establishing coverage factors for mobile communications in Remote areas, along major transportation routes, and in mountainous areas, The moda has successfully increased the population coverage rate for mobile broadband networks in 779 villages across 87 rural townships (towns, cities, and districts), enhanced connectivity across four major transportation segments, and improved network infrastructure in ten mountainous areas. The moda continues to explore policy incentives to guide public and private sector efforts in optimizing network coverage for underserved areas.<br />
-<br />
-In 2024, The moda introduced a new factor for 4G mobile communication networks in rural areas: achieving a population coverage rate of over 99%. Additionally, to promote efficient frequency use, The moda introduced a designated 5G factor to guide mobile broadband operators in expanding 5G coverage throughout economically unviable areas, including remote regions and major transportation routes such as the Taiwan Railways Eastern Line and the Suhua Highway. These measures aim to ensure inclusive access to digital services for all communities.</div>
+<style type="text/css">/* 2026更新 */
+html[lang="en"] .moda1331-starlist li{
+ font-size: 100%;
+ transition: all .5s;
+}
+html[lang="en"] .moda1331-starlist li::before {
+ transform: scale(.9);
+}
+@media screen and (min-width: 1180px) and (max-width: 1319px){
+ html[lang="en"] .moda1331-starlist li{
+  font-size: 90%;
+ }
+}
+#moda1331-deptWork,#moda1331-deptPlan,#moda1331-deptList{
+	display: none !important;
+}
+[aria-label="查驗量測"],
+[aria-label="數位應用"],
+[aria-label="數位影音"],
+[aria-label="創新應用 活動紀實"],
+[aria-label="現場查驗 量測紀錄"],
+[aria-label="數位服務 精選影音"]{
+    display: none !important;
+}
+.moda1331-color-primary{
+	color: var(--md-primary-1);
+}
+.moda1331-color-primary-g{
+	color: #45a7aa;
+}
+.moda1331-font-n{
+	font-size: 125%;
+	line-height: 1.75;
+	font-weight: 400;
+}
+@media (max-width: 576px) {
+	.moda1331-font-n{
+		font-size: 115%;
+	}
+}
+/* banner */
+.moda1331-guide.moda1331-2026.icon5G{
+	width: 33%;
+    left: 32%;
+    top: 3%;
+}
+.moda1331-guide.moda1331-2026.icon4G{
+	width: 12%;
+    left: 80%;
+    top: 14%;
+}
+@media (max-width: 768px) {
+	.moda1331-guide.moda1331-2026.icon5G {
+		width: 45%;
+		left: 23%;
+		top: -10%;
+	}
+	.moda1331-guide.moda1331-2026.icon4G{
+		width: 18%;
+		left: 76%;
+		top: 8%;
+	}
+}
+.moda1331-2026.icon5G{
+	--iconcolor:#6991c0;
+}
+.moda1331-2026.icon4G{
+	--iconcolor:#b2c2df;
+}
+.moda1331-2026 .moda1331-text,
+.moda1331-2026 .moda1331-wave{
+	fill: var(--iconcolor);
+}
+.moda1331-2026 .moda1331-wave {
+	opacity: 0;
+	animation: wifiPulse 1.6s infinite;
+}
 
-<div class="d-none d-md-block">
+.icon5G .moda1331-group1 { animation-delay: .1s; }
+.icon5G .moda1331-group2 { animation-delay: .3s; }
+.icon5G .moda1331-group3 { animation-delay: .6s; }
+
+.icon4G .moda1331-group1 { animation-delay: .3s; }
+.icon4G .moda1331-group2 { animation-delay: .6s; }
+.icon4G .moda1331-group3 { animation-delay: .9s; }
+
+.moda1331-2026.iconwifi{
+	fill: var(--iconcolor);
+	--iconcolor:#C9E6E9;
+}
+.moda1331-2026.iconwifi{
+	width: 20%;
+    left: 51%;
+    top: 16%;
+}
+.moda1331-2026.iconwifi02{
+	width: 19.5%;
+    left: 72%;
+    top: 2%;
+	--iconcolor:#BCE8EB;
+}
+.iconwifi .moda1331-group1 { animation-delay: .3s; }
+.iconwifi .moda1331-group2 { animation-delay: .6s; }
+.iconwifi .moda1331-group3 { animation-delay: .9s; }
+
+@keyframes wifiPulse {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 0.8;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+/* slogan */
+.moda1331-2026-slogan{
+	font-size: 200%;
+	font-weight: 600;
+	padding: 5vh 0;
+	margin-bottom: 0;
+}
+.moda1331-2026-slogan>span{
+	padding: 0 .25%;
+}
+@media (min-width: 992px) {
+	.moda1331-2026-slogan .slogan-h1{
+		font-weight: 700;
+		font-size: 150%;
+	}
+}
+@media (max-width: 991px) {
+	.moda1331-2026-slogan{
+		font-size: 180%;
+	}
+}
+@media (max-width: 768px) {
+	.moda1331-2026-slogan{
+		font-size: 150%;
+	}
+}
+@media (max-width: 576px) {	
+	html[lang="en"] .moda1331-2026-slogan{
+		font-size: 110%;
+	}
+	.moda1331-2026-slogan>span{
+		display: block;
+	}
+}
+/* videoBox */
+.moda1331-videoBox{
+	padding: 0 5%;
+	margin-bottom: 30px;
+}
+.moda1331-videoBox .pic.position-relative{
+	max-width: 840px;
+	z-index: 2;
+	margin: 0 auto;
+}
+.moda1331-videoBox [class*='videoBox-BG']{
+	position: absolute;
+	bottom: 0;
+	z-index: 1;
+	height: 90%;
+	width: auto;
+}
+.moda1331-videoBox .videoBox-BGL{
+	left: 0;
+}
+.moda1331-videoBox .videoBox-BGR{
+	right: 0;
+}
+/* info */
+.moda1331-2026-info{
+	align-items: center;
+	padding: 5vh 0 8vh;
+}
+.moda1331-2026-info img{
+	max-width: 95%;
+	height: auto;
+	margin: 0 auto 5vh;
+	display: block;
+}
+.moda1331-2026-info .moda1331-font-n{
+	padding-top: 40px;
+	padding-bottom: 20px;
+}
+.moda1331-starlist{
+	width: 100%;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0;
+}
+.moda1331-starlist li{
+	display: flex;
+	align-items: center;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	font-size: 110%;
+	font-weight: 500;
+}
+.moda1331-starlist li::before {
+	content: '';
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: #FFA000;
+    position: relative;
+    z-index: 2;
+    clip-path: path("M9.04 0L12.23 5.84L18.07 9.04L12.23 12.23L9.04 18.07L5.84 12.23L0 9.04L5.84 5.84L9.04 0Z");
+	margin-right: 3px;
+}
+@media (min-width: 992px) {	
+
+	.moda1331-2026-info .moda1331-font-n{
+		padding-right: 20px;
+	}
+}
+@media (max-width: 991px) {
+	.moda1331-2026-info{
+		padding-top: 3vh;
+		padding-bottom: 5vh;
+	}
+	.moda1331-2026-info .moda1331-font-n{
+		padding-top: 20px;
+	}
+	.moda1331-starlist{
+		margin-bottom: 5vh;
+	}
+	/* .moda1331-starlist li{
+		margin: 0 10px 20px;
+	} */
+}
+@media (max-width: 576px) {
+
+	.moda1331-starlist{
+		flex-flow: column;
+	}
+}
+/* 重要成效 */
+.moda1331-effect{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10vh;
+}
+.moda1331-effect .moda1331-effect-item{
+	aspect-ratio: 5/4;
+	max-width: 400px;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	width: 96%;
+	background-color: #FBFBFB;
+	margin: 0 2%;
+	border-radius: 10px;
+	box-shadow: 5px 5px 0 #ECECEC;
+	transition: all .5s;
+	border: 2px solid #FBFBFB;
+	padding: 10px;
+}
+.moda1331-effect .moda1331-effect-item .h4{
+	color: #5b5b5b;
+	font-size: 180%;
+	font-weight: 600;
+	padding: 20px 0 0;
+	margin-bottom: 0;
+}
+.moda1331-effect .moda1331-effect-item:hover{
+	border: 2px solid #45a7aa;
+	box-shadow: 5px 5px 0 #45a7aa;;
+}
+.moda1331-effect .moda1331-effect-item>img{
+	width: 70%;
+	max-width: 180px;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+}
+.moda1331-linkbtn{
+	max-width: 1280px;
+	margin: 0 auto 10vh;
+}
+.moda1331-linkbtn.accordion .accordion-item .accordion-button:after{
+	display: none;
+}
+@media (max-width: 991px) {	
+
+	.moda1331-effect .moda1331-effect-item .h4{
+		font-weight: 500;
+	}
+}
+@media (max-width: 768px) {	
+	.moda1331-effect{
+		flex-flow: column;
+		margin-bottom: 5vh;
+	}
+	.moda1331-effect .moda1331-effect-item{
+		aspect-ratio: 4/1;
+		margin: 10px auto;
+        flex-flow: row-reverse;
+        padding: 5px 5%;
+        justify-content: center;
+		width: 100%;
+		max-width: 480px;
+	}
+	.moda1331-effect .moda1331-effect-item .h4 {
+		font-weight: 500;
+		padding: 0 10px;
+		margin: 0;
+	}
+	.moda1331-effect .moda1331-effect-item>img {
+		width: 20%;
+		margin: 0;
+		margin-right: 20px;
+	}
+}
+
+
+@media (max-width: 767.9px) {
+	#eventMap3 .eventTable1 td:before {
+        -webkit-flex: 0 0 5em;
+        -ms-flex: 0 0 5em;
+        flex: 0 0 5em;
+    }
+    .eventMap2 #eventMap2-stop tbody td.eventTable1-w1-7 {
+        display: flex;
+        width: 100%;
+    }
+}
+@media (max-width: 576px) {
+    .eventNav1.eventNav-2025 .nav-item {
+        width: 33%;
+        margin: 0 auto;
+    }
+	.eventNav-2025 .ci-eventIcon2{
+        display: none;
+    }
+	.eventNav-2025 .nav-tabs .nav-item .nav-link, .eventNav-2025 .nav-tabs .nav-item .nav-link.active{
+		padding: 0;
+        text-align: center;
+	}
+}
+@media (max-width: 441px) {
+	
+}
+</style>
+<div class="summary2 wrap2"><!-- 主視覺 -->
+<div>
 <div class="moda1331-topbanner">
-<div class="moda1331-guide"><img alt="" class="moda1331-guidepic" src="/copyright/MODA/qv4wnq53.y4a.png" /></div>
+<div class="moda1331-guide moda1331-2026 icon5G"><svg viewbox="0 0 216 82"> <g class="moda1331-wave moda1331-group1"> <path d="M43,40.9c0-2.5,1-4.9,2.7-6.7,1-1,2.5-1,3.5,0,1,1,1,2.5,0,3.5-.8.9-1.3,2-1.3,3.3s.5,2.4,1.3,3.3c1,1,.9,2.6,0,3.5-1,1-2.6.9-3.5,0-1.7-1.8-2.7-4.2-2.7-6.7Z"></path> <path d="M172.7,40.9c0-2.5-1-4.9-2.7-6.7-1-1-2.5-1-3.5,0-1,1-1,2.5,0,3.5.8.9,1.3,2,1.3,3.3s-.5,2.4-1.3,3.3c-1,1-.9,2.6,0,3.5,1,1,2.6.9,3.5,0,1.7-1.8,2.7-4.2,2.7-6.7Z"></path> </g> <g class="moda1331-wave moda1331-group2"> <path d="M30.5,51.9c-4.7-6.1-4.7-15.9,0-22,.8-1.1,2.4-1.3,3.5-.5,1.1.8,1.3,2.4.5,3.5-3.3,4.4-3.3,11.6,0,16,.8,1.1.6,2.7-.5,3.5-1.1.8-2.7.6-3.5-.5Z"></path> <path d="M185.2,51.9c4.7-6.1,4.7-15.9,0-22-.8-1.1-2.4-1.3-3.5-.5-1.1.8-1.3,2.4-.5,3.5,3.3,4.4,3.3,11.6,0,16-.8,1.1-.6,2.7.5,3.5,1.1.8,2.7.6,3.5-.5Z"></path> </g> <g class="moda1331-wave moda1331-group3"> <path d="M10,40.9c0-5.6,1.4-11.4,4.4-15.9.8-1.1,2.3-1.5,3.5-.7,1.1.8,1.5,2.3.7,3.5-2.3,3.5-3.6,8.3-3.6,13.1,0,4.9,1.2,9.6,3.6,13.1.8,1.1.5,2.7-.7,3.5-1.1.8-2.7.5-3.5-.7-3-4.5-4.4-10.3-4.4-15.9Z"></path> <path d="M205.7,40.9c0-5.6-1.4-11.4-4.4-15.9-.8-1.1-2.3-1.5-3.5-.7-1.1.8-1.5,2.3-.7,3.5,2.3,3.5,3.6,8.3,3.6,13.1s-1.2,9.6-3.6,13.1c-.8,1.1-.5,2.7.7,3.5,1.1.8,2.7.5,3.5-.7,3-4.5,4.4-10.3,4.4-15.9Z"></path> </g> <g class="moda1331-text"> <path d="M97.8,39.9c-1.7-2.7-3.9-4.6-6.7-5.9-2.8-1.3-5.9-1.9-9.3-1.9s-2.2.1-3.1.3c-1,.2-2,.5-3,.9l.9-10.1h21.2v-11.9h-33.4l-1.5,29.5,6.2,4.1c1.8-1.1,3.2-1.9,4.2-2.3,1.1-.4,2.5-.6,4.2-.6,2.6,0,4.6.7,6.2,2.2,1.7,1.4,2.5,3.5,2.5,6.3s-.4,3.4-1.2,4.7c-.7,1.2-1.8,2.2-3.2,2.8s-3,1-5,1-3.1-.2-4.6-.7c-1.4-.5-2.8-1.2-4.1-2.1-1.3-.9-2.5-1.8-3.6-2.9l-6.5,9c1.6,1.5,3.4,3,5.4,4.2,2,1.2,4.3,2.2,6.9,2.9,2.6.7,5.4,1.1,8.6,1.1s7.4-.8,10.6-2.4c3.3-1.6,5.9-3.9,7.8-7,2-3.1,3-6.8,3-11s-.9-7.5-2.6-10.2Z"></path> <path d="M135.5,36.6v11.7h9.4v9.6c-.6.5-1.5.9-2.5,1.1-1,.3-2.1.4-3.1.4-3.7,0-6.7-.7-9.2-2.2-2.4-1.5-4.2-3.6-5.4-6.4-1.2-2.8-1.8-6.2-1.8-10.2s.6-7.2,1.9-9.9c1.3-2.8,3.1-4.9,5.4-6.3,2.3-1.5,4.9-2.2,7.8-2.2s4.6.5,6.2,1.4c1.7.9,3.3,1.9,4.8,3.3l7.5-9.1c-2-2-4.6-3.8-7.8-5.4-3.1-1.6-6.9-2.4-11.3-2.4s-7.8.7-11.3,2.1c-3.5,1.4-6.6,3.4-9.4,6.1-2.7,2.7-4.8,5.9-6.3,9.8-1.5,3.8-2.3,8.2-2.3,13.2s1.3,12.3,3.9,16.9c2.7,4.5,6.2,7.9,10.6,10.2,4.5,2.3,9.5,3.4,15,3.4s8-.7,11.4-2.2c3.5-1.4,6.3-3.1,8.4-5.1v-27.8h-22.2Z"></path> </g> </svg></div>
 
-<div class="moda1331-wifi"><img alt="" src="/copyright/MODA/hpjqomp5.f30.png" /></div>
-<img alt="" src="/copyright/MODA/40vyaqie.h01.png" /></div>
+<div class="moda1331-guide moda1331-2026 icon4G"><svg viewbox="0 0 219 82"> <g class="moda1331-wave moda1331-group1"> <path d="M43,40.9c0-2.5,1-4.9,2.7-6.7,1-1,2.5-1,3.5,0,1,1,1,2.5,0,3.5-.8.9-1.3,2-1.3,3.3s.5,2.4,1.3,3.3c1,1,.9,2.6,0,3.5-1,1-2.6.9-3.5,0-1.7-1.8-2.7-4.2-2.7-6.7Z"></path> <path d="M175.2,40.9c0-2.5-1-4.9-2.7-6.7-1-1-2.5-1-3.5,0-1,1-1,2.5,0,3.5.8.9,1.3,2,1.3,3.3s-.5,2.4-1.3,3.3c-1,1-.9,2.6,0,3.5,1,1,2.6.9,3.5,0,1.7-1.8,2.7-4.2,2.7-6.7Z"></path> </g> <g class="moda1331-wave moda1331-group2"> <path d="M30.5,51.9c-4.7-6.1-4.7-15.9,0-22,.8-1.1,2.4-1.3,3.5-.5,1.1.8,1.3,2.4.5,3.5-3.3,4.4-3.3,11.6,0,16,.8,1.1.6,2.7-.5,3.5-1.1.8-2.7.6-3.5-.5Z"></path> <path d="M187.7,51.9c4.7-6.1,4.7-15.9,0-22-.8-1.1-2.4-1.3-3.5-.5-1.1.8-1.3,2.4-.5,3.5,3.3,4.4,3.3,11.6,0,16-.8,1.1-.6,2.7.5,3.5,1.1.8,2.7.6,3.5-.5Z"></path> </g> <g class="moda1331-wave moda1331-group3"> <path d="M10,40.9c0-5.6,1.4-11.4,4.4-15.9.8-1.1,2.3-1.5,3.5-.7,1.1.8,1.5,2.3.7,3.5-2.3,3.5-3.6,8.3-3.6,13.1,0,4.9,1.2,9.6,3.6,13.1.8,1.1.5,2.7-.7,3.5-1.1.8-2.7.5-3.5-.7-3-4.5-4.4-10.3-4.4-15.9Z"></path> <path d="M208.2,40.9c0-5.6-1.4-11.4-4.4-15.9-.8-1.1-2.3-1.5-3.5-.7-1.1.8-1.5,2.3-.7,3.5,2.3,3.5,3.6,8.3,3.6,13.1s-1.2,9.6-3.6,13.1c-.8,1.1-.5,2.7.7,3.5,1.1.8,2.7.5,3.5-.7,3-4.5,4.4-10.3,4.4-15.9Z"></path> </g> <g class="moda1331-text"> <path d="M102.9,45.5h-6.6V11.8h-17.6l-20.7,34.6v9.9h25v13.5h13.3v-13.5h6.6v-10.9ZM71.6,45.5l6.8-11.7c.9-1.7,1.7-3.4,2.5-5,.8-1.7,1.6-3.4,2.3-5h.3c0,1.9-.2,4.1-.3,6.6-.1,2.6-.2,4.8-.2,6.6v8.5h-11.4Z"></path> <path d="M138.1,36.6v11.7h9.4v9.6c-.6.5-1.5.9-2.5,1.1-1,.3-2.1.4-3.1.4-3.7,0-6.7-.7-9.2-2.2-2.4-1.5-4.2-3.6-5.4-6.4-1.2-2.8-1.8-6.2-1.8-10.2s.6-7.2,1.9-9.9c1.3-2.8,3.1-4.9,5.4-6.3,2.3-1.5,4.9-2.2,7.8-2.2s4.6.5,6.2,1.4c1.7.9,3.3,1.9,4.8,3.3l7.5-9.1c-2-2-4.6-3.8-7.8-5.4-3.1-1.6-6.9-2.4-11.3-2.4s-7.8.7-11.3,2.1c-3.5,1.4-6.6,3.4-9.4,6.1-2.7,2.7-4.8,5.9-6.3,9.8-1.5,3.8-2.3,8.2-2.3,13.2s1.3,12.3,3.9,16.9c2.7,4.5,6.2,7.9,10.6,10.2,4.5,2.3,9.5,3.4,15,3.4s8-.7,11.4-2.2c3.5-1.4,6.3-3.1,8.4-5.1v-27.8h-22.2Z"></path> </g> </svg></div>
+<img alt="" loading="lazy" src="/copyright/MODA/dfl0wuru.52b.png" /></div>
+
+<p class="h2 moda1331-color-primary mb-4">Connecting Communities Through Spectrum</p>
+
+<p class="moda1331-font-n lh-base">Telecommunications are essential to modern society. To expand mobile coverage in remote and underserved areas and promote digital applications, the Ministry of Digital Affairs (MODA) combines universal service programs, government incentive schemes, and spectrum usage fee incentives to encourage Mobile Network Operator(MNO) to invest in network infrastructure, improve connectivity, and enable innovative digital services.</p>
+</div>
+<!-- slogan -->
+
+<p class="w-100 text-center moda1331-2026-slogan"><span class="slogan-h1 d-block">Public-Private Partnership for </span> <span class="moda1331-color-primary-g">Better Connectivity</span><span>and</span> <span class="moda1331-color-primary">Digital Development</span></p>
+<!-- videoBox -->
+
+<div class="videoBox1 moda1331-videoBox position-relative"><img alt="" class="videoBox-BGL" loading="lazy" src="/copyright/MODA/ykgu3er1.gng.png" />
+<div class="pic position-relative"><a href="https://drive.google.com/file/d/122crcrAx_509pESA8zlzFr8o9b9B5Wnq/view?usp=sharing" rel="noreferrer noopener" target="_blank" title="落實偏鄉數位人權影片（另開新視窗）"><img alt="落實偏鄉數位人權影片" class="w-100" loading="lazy" src="https://moda.gov.tw/copyright/MODA/jphe0itw.y12.jpg" />
+<div class="play" style="background-image: url(https://moda.gov.tw/copyright/MODA/xefnpay5.vdi.svg);"></div>
+</a></div>
+<img alt="" class="videoBox-BGR" loading="lazy" src="/copyright/MODA/sxdlyxy3.mqh.png" /></div>
+<!-- info -->
+
+<div class="moda1331-2026-info row">
+<div class="col-lg-7">
+<p class="moda1331-font-n pt-lg-0 lh-base">Radio spectrum is a scarce public resource. Spectrum usage fees help ensure its efficient and fair use. In addition, MODA uses incentive mechanisms to encourage mobile operators to expand telecommunications services in remote and underserved areas.</p>
+
+<ul class="moda1331-starlist">
+	<li>Mountain Lodges</li>
+	<li>National Parks</li>
+	<li>Nature Trails</li>
+	<li>Railway Stations</li>
+</ul>
 </div>
 
-<div class="d-block d-md-none">
-<div class="moda1331-topbanner">
-<div class="moda1331-guide"><img alt="" class="moda1331-guidepic" src="/copyright/MODA/ojchf11t.o3b.png" /></div>
+<div class="col-lg-5">
+<div class="moda1331-topbanner m-0">
+<div class="moda1331-guide moda1331-2026 iconwifi"><svg viewbox="0 0 134 120"> <path class="moda1331-wave moda1331-group1" d="M67,63c-10,0-19.7,3.6-26.9,10-4,3.6-4.1,9.4-.2,13.1,3.8,3.7,10.2,3.8,14.1.2,3.4-3.1,8.1-4.8,13.1-4.8s9.7,1.8,13.1,4.8c4,3.6,10.3,3.5,14.1-.2,3.8-3.7,3.7-9.6-.2-13.1-7.2-6.5-16.9-10-26.9-10Z"></path> <path class="moda1331-wave moda1331-group2" d="M110.1,45.2c-24.1-17.6-62.2-17.6-86.3,0-4.3,3.1-5.1,9-1.9,13.1,3.3,4.1,9.4,4.9,13.7,1.8,17-12.4,45.5-12.4,62.5,0,4.3,3.1,10.4,2.3,13.7-1.8,3.3-4.1,2.4-10-1.9-13.1Z"></path> <path class="moda1331-wave moda1331-group3" d="M67,0C44.8,0,22.1,5.4,4.4,16.7-.1,19.6-1.4,25.4,1.7,29.8c3,4.3,9.1,5.5,13.7,2.6,13.8-8.8,32.5-13.5,51.7-13.5,19.2,0,37.8,4.7,51.7,13.5,4.5,2.9,10.6,1.7,13.7-2.6,3-4.3,1.8-10.2-2.7-13.1C111.9,5.4,89.2,0,67,0Z"></path> <circle class="moda1331-2026 iconwifi" cx="67" cy="106" r="14"></circle> </svg></div>
+<img alt="" src="/copyright/MODA/20ywvwgy.gaf.png" /></div>
+</div>
+</div>
+<!-- info -->
 
-<div class="moda1331-wifi"><img alt="" src="/copyright/MODA/uny2kcmc.2y1.png" /></div>
-<img alt="" src="/copyright/MODA/a5zbzkck.v0w.png" /></div>
+<div class="moda1331-2026-info flex-lg-row-reverse row pt-0">
+<div class="col-lg-7">
+<p class="moda1331-font-n  pt-lg-0 lh-base">MODA uses spectrum usage fee incentives to encourage MNO to make better use of spectrum resources and mobile broadband networks by partnering with government agencies and industry to develop innovative digital services.</p>
+
+<ul class="moda1331-starlist">
+	<li>Industry Verticals</li>
+	<li>Trust &amp; Identity</li>
+	<li>Data Innovation</li>
+	<li>Green Sustainability</li>
+</ul>
 </div>
 
-<div class="summary2 pt-4">
-<div class="overflow-hidden videoBox1 w-100">
-<div class="pic position-relative float-md-end d-none d-lg-inline-block ms-3 mb-3" style="max-width: 45%;"><a href="https://drive.google.com/file/d/122crcrAx_509pESA8zlzFr8o9b9B5Wnq/view?usp=sharing" rel="noreferrer noopener" target="_blank" title="落實偏鄉數位人權影片（另開新視窗）"><img alt="落實偏鄉數位人權影片" class="w-100" loading="lazy" src="/copyright/MODA/jphe0itw.y12.jpg" />
-<div class="play" style="background-image: url(/copyright/MODA/xefnpay5.vdi.svg);"></div>
+<div class="col-lg-5">
+<div class="moda1331-topbanner m-0">
+<div class="moda1331-guide moda1331-2026 iconwifi iconwifi02"><svg viewbox="0 0 134 320"> <path class="moda1331-wave moda1331-group1" d="M67,63c-10,0-19.7,3.6-26.9,10-4,3.6-4.1,9.4-.2,13.1,3.8,3.7,10.2,3.8,14.1.2,3.4-3.1,8.1-4.8,13.1-4.8s9.7,1.8,13.1,4.8c4,3.6,10.3,3.5,14.1-.2,3.8-3.7,3.7-9.6-.2-13.1-7.2-6.5-16.9-10-26.9-10Z"></path> <path class="moda1331-wave moda1331-group2" d="M110.1,45.2c-24.1-17.6-62.2-17.6-86.3,0-4.3,3.1-5.1,9-1.9,13.1,3.3,4.1,9.4,4.9,13.7,1.8,17-12.4,45.5-12.4,62.5,0,4.3,3.1,10.4,2.3,13.7-1.8,3.3-4.1,2.4-10-1.9-13.1Z"></path> <path class="moda1331-wave moda1331-group3" d="M67,0C44.8,0,22.1,5.4,4.4,16.7-.1,19.6-1.4,25.4,1.7,29.8c3,4.3,9.1,5.5,13.7,2.6,13.8-8.8,32.5-13.5,51.7-13.5,19.2,0,37.8,4.7,51.7,13.5,4.5,2.9,10.6,1.7,13.7-2.6,3-4.3,1.8-10.2-2.7-13.1C111.9,5.4,89.2,0,67,0Z"></path> <path class="moda1331-2026 iconwifi" d="M112.3,282.9h-9.8l-5.3-25.1h8.5c3.7,0,6.7-3,6.7-6.6s-3-6.6-6.7-6.6h-11.3l-6-28.1h2.8c3.7,0,6.7-3,6.7-6.6s-3-6.6-6.7-6.6h-5.6l-12.1-56.2v-27.6c4.4-2.4,7.4-7,7.4-12.4,0-7.7-6.3-14-14-14s-14,6.3-14,14,3,10,7.4,12.4v27.6l-12.1,56.2h-5.6c-3.7,0-6.7,3-6.7,6.6s3,6.6,6.7,6.6h2.8l-6,28.1h-11.3c-3.7,0-6.7,3-6.7,6.6s3,6.6,6.7,6.6h8.5l-5.3,25.1h-9.8c-3.7,0-6.7,3-6.7,6.6s3,6.6,6.7,6.6h7l-5,23.8h11.7l5-23.8h53.3l5,23.8h11.7l-5-23.8h7c3.7,0,6.7-3,6.7-6.6s-3-6.6-6.7-6.6ZM67,170.4l7,32.8h-13.9l7-32.8ZM57.2,216.5h19.5l6,28.1h-31.4l6-28.1ZM43.2,282.9l5.3-25.1h37.1l5.3,25.1h-47.7Z"></path> </svg></div>
+<img alt="" src="/copyright/MODA/pcghh14r.ppy.png" /></div>
+</div>
+</div>
+<!-- link -->
+
+<h3 class="title3 position-relative text-center py-3 mb-4 mb-md-5">Related Policies</h3>
+
+<div class="moda1331-linkbtn accordion">
+<div class="accordion-item d-block"><a class="accordion-button collapsed" href="https://moda.gov.tw/digital-affairs/communications-cyber-resilience/broadband-to-every-village/812" target="_blank" title="Telecom enterprise universal service announcements(open in new window)">
+<p class="mb-0 moda1331-font-n lh-base">Universal Telecommunications Service Information</p>
 </a></div>
 
-<div class="pic d-block d-lg-none mb-3"><a href="https://drive.google.com/file/d/122crcrAx_509pESA8zlzFr8o9b9B5Wnq/view?usp=sharing" rel="noreferrer noopener" target="_blank" title="影片"><img alt="落實偏鄉數位人權影片" class="d-block w-100" loading="lazy" src="/copyright/MODA/jphe0itw.y12.jpg" />
-<div class="play" style="background-image: url(/copyright/MODA/xefnpay5.vdi.svg);"></div>
+<div class="accordion-item d-block"><a class="accordion-button collapsed" href="https://law.moda.gov.tw/LawContent.aspx?id=FL094170&amp;kw=%e9%9b%bb%e4%bf%a1%e6%99%ae%e5%8f%8a" target="_blank" title="Regulations Governing Universal Service of Telecommunications Enterprises(open in new window)">
+<p class="mb-0 moda1331-font-n lh-base">Regulations Governing Universal Service of Telecommunications Enterprises</p>
 </a></div>
 
-<p>To ensure stable and high-quality network access and realize digital rights in Remote areas, The moda actively conducts field inspections of communications coverage in Remote areas, along major transportation segments (including railways and highways), and in mountainous areas. These efforts include On site data connection and voice call tests to verify the improvement of communication quality in Remote areas, along major transportation routes, and in mountainous areas. This initiative reflects an ongoing commitment to bridging the digital divide between urban and Remote areas.</p>
+<div class="accordion-item d-block"><a class="accordion-button collapsed" href="https://law.moda.gov.tw/LawContent.aspx?id=FL094761&amp;kw=%E9%A0%BB%E7%8E%87%E4%BD%BF%E7%94%A8%E8%B2%BB%E6%94%B6%E8%B2%BB%E6%A8%99%E6%BA%96" target="_blank" title="Universal Telecommunications Service Information(open in new window)">
+<p class="mb-0 moda1331-font-n lh-base">Universal Telecommunications Service Information</p>
+</a></div>
 
-<p>As the driving force behind the development of Taiwan&#39;s digital industry, The moda continues to promote the Review Mechanism for Discounted Frequency Usage Fees for Telecom Operators Participating in Digital Diverse Application Services. This initiative encourages telecom operators to collaborate across sectors to offer innovative application services, including vertical applications, digital trust, data innovation, and energy sustainability. By developing novel 5G application models, The moda aims to enhance Taiwan&#39;s digital competitiveness and strengthen the accessibility and applications of digital technologies.</p>
+<div class="accordion-item d-block"><a class="accordion-button collapsed" href="https://moda.gov.tw/press/bulletin/19532" target="_blank" title="Designated Areas Under the Standards for Radio Frequency Usage Fees(open in new window)">
+<p class="mb-0 moda1331-font-n lh-base">Designated Areas Under the Standards for Radio Frequency Usage Fees</p>
+</a></div>
 </div>
 </div>
-</div>
-</section>
 
                     <!--擴充圖文-->
 <section class="event1Part">
@@ -1171,20 +1566,7 @@ Enhancing frequency utilization efficiency while emphasizing energy conservation
 	</div>
 </section>
 
-    <section class="deptInfo"><span class="deptInfoBg lazy" data-bg="/copyright/MODA/dvtv2zib.ci0.svg">　</span>
-<div class="wrap2 mx-auto px-3 px-md-4 px-lg-5 py-4 py-md-5">
-<div class="list6 row py-3">
-<div class="col-12"><!--<h3 class="title4 pb-2"></h3>-->
-<div class="listTxt">
-<p>Given that radio frequency is a scarce public resource, Taiwan adopts a reasonable frequency fee mechanism to enhance the efficient use of spectrum resources. These fee standards are reviewed and adjusted annually based on operators&#39; performance; service penetration; total allocated bandwidth; and the maturity of related technologies, markets, and services.</p>
-
-<p>To promote universal digital access, The moda continuously evaluates radio signal coverage and the difficulty of base station installation throughout Taiwan. By coordinating digital resources across various agencies and working in partnership with telecom operators, The moda is actively expanding 5G infrastructure, fostering diverse cross-sector 5G applications, and driving innovative services. These efforts aim to accelerate Taiwan&#39;s digital economy and achieve balanced digital development nationwide.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-
+    
 
 </main>
 
@@ -1494,7 +1876,7 @@ const countyDivideJson = 'https://www-api.moda.gov.tw/File/Get/moda/en/lxI4mxVrA
 const allPointJson = 'https://www-api.moda.gov.tw/File/Get/moda/en/eg9WEqgAskoSuw5';
 const ruralPointJson ='https://www-api.moda.gov.tw/File/Get/moda/en/gfIx43s9fRpWXli';
 const map1markerIcon = '/copyright/MODA/u0lihcov.w44.svg';
-</script><script src="https://cdn.jsdelivr.net/npm/d3@5.6.0/dist/d3.min.js"></script><script src="https://unpkg.com/topojson@3"></script><script src="https://www-api.moda.gov.tw/File/Get/moda/en/8nlTteS6PjHO6zM"></script><script src="https://www-api.moda.gov.tw/File/Get/moda/en/ysbWRfJCfYu3wEk">
+</script><script src="https://cdn.jsdelivr.net/npm/d3@5.6.0/dist/d3.min.js"></script><script src="https://unpkg.com/topojson@3"></script><script src="https://www-api.moda.gov.tw/File/Get/moda/en/8nlTteS6PjHO6zM"></script><script src="https://www-api.moda.gov.tw/File/Get/moda/en/Few4uFlQM6NGaix">
 </script>    <script>
         var tag = encodeURI(window.location.hash);
         function tagclick(tag)
