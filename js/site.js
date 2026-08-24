@@ -820,3 +820,66 @@ $(document).on('change', '.ddDep', function () {
     }
 });
 
+//切換語系
+//20260717 PC
+$(document).on('click', '.nav-link.px-3.text-white', function (event) {
+    const url = $(this).attr('href');
+    if (url.indexOf("index") > -1) {
+        event.preventDefault(); // 停止超連結導向
+        changeLang();
+    }
+});
+//20260717  手機版
+$(document).on('click', '.nav-link.px-1.text-white', function (event) {
+    event.preventDefault(); // 停止超連結導向
+    changeLang();
+});
+
+async function changeLang() {
+    const lang = $(".webSitelanguage").attr("lang");
+    const origin = location.origin;
+    const path = location.pathname;
+    const query = location.search;
+    const hash = location.hash;
+    let targetPath;
+    let fallbackUrl;
+    let websiteId = "";
+   
+    if (path.toUpperCase().indexOf("/ADI/") > -1)  websiteId="ADI";
+    if (path.toUpperCase().indexOf("/ACS/") > -1)  websiteId="ACS";
+
+
+    if (lang === "en") {
+        // 英文切換至中文，只移除開頭的 /en
+        targetPath = path.replace(/^\/en(?=\/|$)/, "") || "/";
+        fallbackUrl = `${origin}/${websiteId}`;
+    } else {
+        // 中文切換至英文
+        targetPath = `/en${path === "/" ? "" : path}`;
+        fallbackUrl = `${origin}/en/${websiteId}`;
+    }
+
+    const targetUrl = `${origin}${targetPath}${query}${hash}`;
+
+    try {
+        const response = await fetch(targetUrl, {
+            method: "GET",
+            cache: "no-store",
+            credentials: "same-origin",
+            redirect: "follow"
+        });
+        // 只將最終回應為 404 視為頁面不存在
+        if (response.status === 404) {
+            console.warn("目標語系頁面不存在，導向語系首頁");
+            location.href = fallbackUrl;
+            return false;
+        }
+        location.href = targetUrl;
+        return true;
+
+    } catch (error) {
+        console.error("頁面檢查失敗，導回語系首頁：", error);
+        location.href = fallbackUrl;
+        return false;
+    }
+}
