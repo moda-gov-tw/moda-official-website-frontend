@@ -12,9 +12,9 @@
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="628">
-    <meta property="og:description" content="資通安全網路月報（115年2月）" />
+    <meta property="og:description" content="" />
     <meta name="keywords" content="" />
-    <meta name="description" content="資通安全網路月報（115年2月）" />
+    <meta name="description" content="" />
     <link rel="stylesheet" href="/vendor/css/prism.min.css?v=BgH8AfWK1C9UhnPT9FudhSQmBLskubn__Jn_MttJ9r8" media="all" />
 
     <!-- favicon -->
@@ -593,147 +593,147 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <p style="margin:0cm"><strong><span style="color:#d35400;"><span style="font-size:x-large;">一、近期資安事件分享</span></span></strong></p>
 
-<p style="margin:0cm; text-align:justify"><font color="#2980b9"><u><strong>資料庫連線池耗盡導致服務效能異常事件說明</strong></u></font><br />
-<font color="#2980b9">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;機關提供全國各級機關人員使用之共同性系統，發生服務效能異常，使用者於登入及操作時出現明顯延遲。經查，起因於該系統上線後資料量持續增⻑，但資料庫的搜尋語法並未隨之最佳化，導致查詢資料極度耗時且佔⽤資料庫連線，當較多使用者同時上線操作時，資料庫連線數(Connection Pool)被全數耗盡進而影響效能。機關立即聯繫維護廠商，調高資料庫連線數上限，並緊急安排人員修改資料庫搜尋語法與效能，始逐步降低整體服務延遲時間，恢復系統運作。</font><br />
-<font color="#2980b9"><u><strong>經驗學習(Lessons Learned)&nbsp;</strong></u></font><br />
-<font color="#2980b9">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;系統於⻑期運作過程中，隨資料量與使⽤⼈數持續成⻑，若未同步檢視與調整系統效能設計，可能因資源使用效率下降而影響整體服務穩定性。建議機關於系統上線後，應建立持續性的效能監控與定期檢視機制、定期辦理容量與效能評估、將效能測試納入維運流程，以及系統變更時同步檢視效能設計：</font></p>
+<p style="margin:0cm; text-align:justify"><u><strong>資料庫連線池耗盡導致服務效能異常事件說明</strong></u><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;機關提供全國各級機關人員使用之共同性系統，發生服務效能異常，使用者於登入及操作時出現明顯延遲。經查，起因於該系統上線後資料量持續增⻑，但資料庫的搜尋語法並未隨之最佳化，導致查詢資料極度耗時且佔⽤資料庫連線，當較多使用者同時上線操作時，資料庫連線數(Connection Pool)被全數耗盡進而影響效能。機關立即聯繫維護廠商，調高資料庫連線數上限，並緊急安排人員修改資料庫搜尋語法與效能，始逐步降低整體服務延遲時間，恢復系統運作。<br />
+<u><strong>經驗學習(Lessons Learned)&nbsp;</strong></u><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;系統於⻑期運作過程中，隨資料量與使⽤⼈數持續成⻑，若未同步檢視與調整系統效能設計，可能因資源使用效率下降而影響整體服務穩定性。建議機關於系統上線後，應建立持續性的效能監控與定期檢視機制、定期辦理容量與效能評估、將效能測試納入維運流程，以及系統變更時同步檢視效能設計：</p>
 
-<p style="margin:0cm; text-align:justify"><font color="#2980b9">1.建立持續性效能監控機制，系統上線後應持續監控服務效能與資源使用情形，如登入回應時間、資料庫連線使用率及系統負載，並設定告警門檻，以即早發現效能下降徵兆，避免問題累積影響服務運作。</font></p>
+<p style="margin:0cm; text-align:justify">1.建立持續性效能監控機制，系統上線後應持續監控服務效能與資源使用情形，如登入回應時間、資料庫連線使用率及系統負載，並設定告警門檻，以即早發現效能下降徵兆，避免問題累積影響服務運作。</p>
 
-<p style="margin:0cm; text-align:justify"><font color="#2980b9">2.定期辦理容量與效能評估，隨系統使⽤⼈數與資料筆數成⻑，應定期評估系統承載能⼒與資源配置，例如檢視尖峰登入⼈數與資料成⻑趨勢，並透過壓力測試模擬較高使用量情境(如同時登入人數提升至既有規模的兩倍)，提前確認系統是否仍具備足夠處理能力，以避免於實際高使用期間發生服務壅塞。</font></p>
+<p style="margin:0cm; text-align:justify">2.定期辦理容量與效能評估，隨系統使⽤⼈數與資料筆數成⻑，應定期評估系統承載能⼒與資源配置，例如檢視尖峰登入⼈數與資料成⻑趨勢，並透過壓力測試模擬較高使用量情境(如同時登入人數提升至既有規模的兩倍)，提前確認系統是否仍具備足夠處理能力，以避免於實際高使用期間發生服務壅塞。</p>
 
-<p style="margin:0cm; text-align:justify"><font color="#2980b9">3.將效能測試納入維運流程，例如定期檢視執⾏時間過⻑的資料查詢並強化效能，或建立效能檢查清單作為改版前必要程序。</font></p>
+<p style="margin:0cm; text-align:justify">3.將效能測試納入維運流程，例如定期檢視執⾏時間過⻑的資料查詢並強化效能，或建立效能檢查清單作為改版前必要程序。</p>
 
-<p style="margin:0cm; text-align:justify"><font color="#2980b9">4.於系統變更時同步檢視效能設計，當系統新增功能、改版或資料量增加時，應同步檢視資料存取與查詢⽅式，例如避免⼀次載入過多歷史資料、改採分頁查詢機制，或依需求建立資料庫索引以提升搜尋效率。</font></p>
+<p style="margin:0cm; text-align:justify">4.於系統變更時同步檢視效能設計，當系統新增功能、改版或資料量增加時，應同步檢視資料存取與查詢⽅式，例如避免⼀次載入過多歷史資料、改採分頁查詢機制，或依需求建立資料庫索引以提升搜尋效率。</p>
 
 <p style="margin:0cm; text-align:justify"><strong><span style="color:#d35400;"><span style="font-size:x-large;">二、資通安全趨勢</span></span></strong><br />
-<strong><span style="color:#2980b9;"><span style="font-size:large;">(一)我國政府整體資安威脅趨勢</span></span></strong><br />
-<span style="color:#2980b9;"><strong>【事前聯防監控】</strong></span><br />
-<font color="#2980b9">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;本月蒐整政府機關資安聯防情資共 6 萬 0,764 件(減少 1 萬 1,979件)，分析可辨識的威脅種類，第 1 名為資訊蒐集類(54%)，主要是透過掃描、探測及社交工程等攻擊手法取得資訊；其次為入侵嘗試類(18%)，主要係嘗試入侵未經授權的主機；以及入侵攻擊類(15%)，大多是系統遭未經授權存取或取得系統/使用者權限。統計近 1 年情資數量分布，詳見圖1。</font></p>
+<strong><span style="font-size:large;">(一)我國政府整體資安威脅趨勢</span></strong><br />
+<strong>【事前聯防監控】</strong><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;本月蒐整政府機關資安聯防情資共 6 萬 0,764 件(減少 1 萬 1,979件)，分析可辨識的威脅種類，第 1 名為資訊蒐集類(54%)，主要是透過掃描、探測及社交工程等攻擊手法取得資訊；其次為入侵嘗試類(18%)，主要係嘗試入侵未經授權的主機；以及入侵攻擊類(15%)，大多是系統遭未經授權存取或取得系統/使用者權限。統計近 1 年情資數量分布，詳見圖1。</p>
 
-<p style="margin:0cm; text-align:justify"><font color="#2980b9"><img alt="" src="/copyright/ACS/rg3mdp13.5o5.png" style="width: 100%;" /></font></p>
+<p style="margin:0cm; text-align:justify"><img alt="" src="/copyright/ACS/rg3mdp13.5o5.png" style="width: 100%;" /></p>
 
-<p style="margin: 0cm; text-align: center;"><font color="#2980b9">圖1 資安聯防監控資安監控情資統計</font></p>
+<p style="margin: 0cm; text-align: center;">圖1 資安聯防監控資安監控情資統計</p>
 
-<p style="margin: 0cm;"><strong><font color="#2980b9">駭客偽冒行政院法規會發動社交工程郵件攻擊之資安警訊</font></strong></p>
+<p style="margin: 0cm;"><strong>駭客偽冒行政院法規會發動社交工程郵件攻擊之資安警訊</strong></p>
 
-<p style="margin: 0cm; text-align: justify;"><font color="#2980b9">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;經彙整分析聯防情資資訊，發現近期駭客偽冒行政院法規會名義並以「修正就業安定基金收支保管及運用辦法第 5 條條文」為由，針對政府機關與國營企業發動社交⼯程電⼦郵件攻擊。駭客利⽤⺠間企業之域名，並偽冒行政院(executive-yuan)作為寄件者帳號，於寄件人名稱與信件內容中署名「行政院法規會」，以提升郵件可信度，誘導收件者點擊釣魚連結並下載惡意附檔，查閱所謂「條文修正內容」等相關資料，進而植入惡意後門程式(Cobalt Strike)以達成遠端控制收件者電腦之目的，相關情資已提供各機關聯防監控防護建議。</font></p>
+<p style="margin: 0cm; text-align: justify;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;經彙整分析聯防情資資訊，發現近期駭客偽冒行政院法規會名義並以「修正就業安定基金收支保管及運用辦法第 5 條條文」為由，針對政府機關與國營企業發動社交⼯程電⼦郵件攻擊。駭客利⽤⺠間企業之域名，並偽冒行政院(executive-yuan)作為寄件者帳號，於寄件人名稱與信件內容中署名「行政院法規會」，以提升郵件可信度，誘導收件者點擊釣魚連結並下載惡意附檔，查閱所謂「條文修正內容」等相關資料，進而植入惡意後門程式(Cobalt Strike)以達成遠端控制收件者電腦之目的，相關情資已提供各機關聯防監控防護建議。</p>
 
-<p style="margin: 0cm;"><span style="color:#2980b9;"><strong>【事中通報應變】</strong></span></p>
+<p style="margin: 0cm;"><strong>【事中通報應變】</strong></p>
 
-<p style="margin: 0cm;"><font color="#2980b9">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;本月資安事件通報數量共 54 件，為去年同期的 0.9 倍，通報類型以非法入侵為主，占本月通報件數 72.22%。本月除偵測到疑似駭客利用路由器散佈 PeerBlight 惡意程式情形外，亦持續發現多個機關因安裝冒牌軟體而遭植入惡意程式之情事，占總通報件數 25.93%。近 1 年資安事件通報統計詳見圖 2。</font></p>
+<p style="margin: 0cm;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;本月資安事件通報數量共 54 件，為去年同期的 0.9 倍，通報類型以非法入侵為主，占本月通報件數 72.22%。本月除偵測到疑似駭客利用路由器散佈 PeerBlight 惡意程式情形外，亦持續發現多個機關因安裝冒牌軟體而遭植入惡意程式之情事，占總通報件數 25.93%。近 1 年資安事件通報統計詳見圖 2。</p>
 
-<p style="margin: 0cm;"><font color="#2980b9"><img alt="" src="/copyright/ACS/ccep0llz.yki.png" style="width: 100%;" /></font></p>
+<p style="margin: 0cm;"><img alt="" src="/copyright/ACS/ccep0llz.yki.png" style="width: 100%;" /></p>
 
-<p style="margin: 0cm; text-align: center;"><font color="#2980b9">圖2 資安事件通報統計</font></p>
+<p style="margin: 0cm; text-align: center;">圖2 資安事件通報統計</p>
 
-<p style="margin: 0cm;"><strong><span style="color:#2980b9;"><span style="font-size:large;">(二)重要漏洞警訊</span></span></strong></p>
+<p style="margin: 0cm;"><strong><span style="font-size:large;">(二)重要漏洞警訊</span></strong></p>
 
 <table border="2" cellpadding="1" cellspacing="1" class="th-center" style="vertical-align:middle;width:100%;">
-	<tbody>
-		<tr>
-			<th scope="col" style="text-align:center;width:15%;background-color:#b0c4de;"><span style="color:#2980b9;"><span style="color:#2980b9;"><span style="color:#2980b9;">警訊</span></span></span></th>
-			<th scope="col" style="text-align:center;width:30%;background-color:#b0c4de;"><span style="color:#2980b9;"><span style="color:#2980b9;"><span style="color:#2980b9;">類別<span style="display: none;">&nbsp;</span></span></span></span></th>
-			<th scope="col" style="text-align:center;width:55%;background-color:#b0c4de;"><span style="color:#2980b9;"><span style="color:#2980b9;"><span style="color:#2980b9;">內容說明<span style="display: none;">&nbsp;</span></span></span></span></th>
-		</tr>
-		<tr>
-			<td colspan="1" rowspan="3" style="text-align:center;"><span style="color:#2980b9;">漏洞警訊</span></td>
-			<td><span style="color:#2980b9;">電子目錄服務系統<br />
-			葳橋資訊單⼀簽入暨電子目錄服務系統<br />
-			嚴重程度：CVSS 8.8<br />
-			(CVE-2026-1427 與 CVE-2026-1428)</span></td>
-			<td>
-			<ul>
-				<li style="text-align: justify;"><span style="color:#2980b9;">研究⼈員發現葳橋資訊單⼀簽入暨電⼦⽬錄服務系統存在作業系統指令注入(OS Command Injection) 漏 洞 (CVE-2026-1427 與 CVE-2026-1428)。</span></li>
-				<li style="text-align: justify;"><span style="color:#2980b9;">已通過身分鑑別之遠端攻擊者可注入任意作業系統指令並於設備上執行，請更新至電子目錄服務系統(V4)至 IFTOP_P4_181(含)以後版本。</span></li>
-				<li style="text-align: justify;"><a href="https://www.wellchoose.com.tw/service/service.php?part=b"><span style="color:#2980b9;">請使用者儘速連繫葳橋資訊技術支援團隊，取得適用之修正版本，並完成系統升級。</span></a></li>
-			</ul>
-			</td>
-		</tr>
-		<tr>
-			<td><span style="color:#2980b9;">電子郵件系統<br />
-			C&amp;Cm@il 郵件協同系統<br />
-			嚴重程度：<br />
-			(CVE-2026-2234: CVSS 9.1)、(CVE2026-2235 : CVSS 6.5 )及(CVE-2026-2236 : CVSS 7.5 )</span></td>
-			<td>
-			<ul>
-				<li style="text-align: justify;"><span style="color:#2980b9;">研究人員發現桓基科技 C＆Cm@il 存在 3個高風險安全漏洞(CVE-2026-2234、CVE-2026-2235 及 CVE-2026-2236)。</span></li>
-				<li style="text-align: justify;"><span style="color:#2980b9;">類型包含缺乏身分鑑別(Missing Authentication)與 SQL 注入(SQL Injection)，最嚴重可使未經身分鑑別之遠端攻擊者讀取與修改任意使用者信件內容。</span></li>
-				<li style="text-align: justify;"><span style="color:#2980b9;">&nbsp;<a href="https://www.hgiga.com/patch.html">官方已提供安全公告，請參考官方說明儘速確認並採取相關緩解措施。</a></span></li>
-			</ul>
-			</td>
-		</tr>
-		<tr>
-			<td style="text-align: justify;"><span style="color:#2980b9;">流程管理系統<br />
-			AgentFlow<br />
-			嚴重程度：<br />
-			( CVE-2026-2095：CVSS 9.8 )、( CVE2026-2096：CVSS 9.8 )、( CVE-2026-2097：CVSS 8.8 )、( CVE-2026-2098：CVSS 6.1 )、(CVE2026-2099：CVSS 5.4 )</span></td>
-			<td>
-			<ul>
-				<li><span style="color:#2980b9;">研究人員發現華苓科技開發的 Agentflow存在多項安全漏洞 ( CVE-2026-2095 ~2099 )。</span></li>
-				<li><span style="color:#2980b9;">類型包含身分鑑別繞過與不安全的反序列化，遠端未經身分鑑別之攻擊者可藉此登入系統或執行任意程式碼 (RCE)，威脅等級評定為極高 (CVSS 9.8)。</span></li>
-				<li><a href="https://forum.flowring.com/post/view?bid=72&amp;id=45611&amp;tpg=1&amp;ppg=1&amp;sty=1#45939"><span style="color:#2980b9;">請使用者儘速連繫華苓科技技術支援團隊，取得適用之修正版本，完成系統更新或採取應對緩解措施。</span></a></li>
-			</ul>
-			</td>
-		</tr>
-		<tr>
-			<td colspan="1" rowspan="4" style="text-align:center;"><span style="color:#2980b9;">已知遭駭客利用之漏洞</span></td>
-			<td><span style="color:#2980b9;">通訊設備<br />
-			Cisco Catalyst SDWAN&nbsp;<br />
-			嚴重程度：CVSS 10.0<br />
-			( CVE-2026-20127 )</span></td>
-			<td>
-			<ul>
-				<li style="text-align: justify;"><span style="color:#2980b9;">研究人員發現 Cisco Catalyst SD-WAN Controller and Manager 軟體存在極嚴重之身分驗證繞過漏洞。</span></li>
-				<li style="text-align: justify;"><span style="color:#2980b9;">未經身分鑑別之遠端攻擊者可發送特製請求，繞過驗證程序並取得管理權限，進而完全控制設備。</span></li>
-				<li style="text-align: justify;"><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa-EHchtZk"><span style="color:#2980b9;">官方已提供安全建議，請參考官方說明進行軟體版本更新。</span></a></li>
-			</ul>
-			</td>
-		</tr>
-		<tr>
-			<td scope="col" style="width: 10%;"><span style="color:#2980b9;">文書處理軟體<br />
-			Microsoft Office&nbsp;<br />
-			嚴重程度：CVSS 7.8<br />
-			(CVE-2026-21509)</span></td>
-			<td>
-			<ul>
-				<li style="text-align: justify;"><span style="color:#2980b9;">研究人員發現 Microsoft Office 存在安全功能繞過(Security Feature Bypass)漏洞(CVE-2026-21509)。</span></li>
-				<li style="text-align: justify;"><span style="color:#2980b9;">未經身分鑑別之攻擊者可透過發送惡意Office 文件並誘使用戶開啟，進而繞過元件物件模型(Component Object Model,COM)與物件連結與嵌入(Object Linkingand Embedding, OLE)防護機制，使原本應該被阻擋之 COM/OLE 控制元件仍能執行。</span></li>
-				<li style="text-align: justify;"><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21509"><span style="color:#2980b9;">官方已針對漏洞釋出修復更新，請參考官方說明進行更新。</span></a></li>
-			</ul>
-			</td>
-		</tr>
-		<tr>
-			<td scope="col" style="width: 10%;">
-			<p><span style="color:#2980b9;">網頁瀏覽器<br />
-			Chromium 為基礎之瀏覽器<br />
-			嚴重程度：CVSS 8.8<br />
-			(CVE-2026-2441)</span></p>
-			</td>
-			<td>
-			<ul>
-				<li style="text-align: justify;"><span style="color:#2980b9;">研究人員發現 Google Chrome、Microsoft Edge、Vivaldi、Brave 及Opera 等以 Chromium 為基礎之瀏覽器存在使用釋放後記憶體(Use After Free)漏洞(CVE-2026-2441)。</span></li>
-				<li style="text-align: justify;"><span style="color:#2980b9;">未經身分鑑別之遠端攻擊者可利用特製HTML 頁面觸發記憶體錯誤，進而於瀏覽器沙箱環境執行任意程式碼。</span></li>
-				<li style="text-align: justify;"><a href="https://www.nics.nat.gov.tw/core_business/information_security_information_sharing/Vulnerability_Alert_Announcements/d9d538e7-519b-4ed9-82d7-db112d554c1b/"><span style="color:#2980b9;">&nbsp;建議管理人員儘速針對受影響服務進行安全更新。</span></a></li>
-			</ul>
-			</td>
-		</tr>
-		<tr>
-			<td scope="col" style="width: 10%;">
-			<p><span style="color:#2980b9;">網路安全設備<br />
-			Fortinet 多項產品<br />
-			嚴重程度：9.8<br />
-			(CVE-2026-24858)</span></p>
-			</td>
-			<td>
-			<ul>
-				<li style="text-align: justify;"><span style="color:#2980b9;">研究人員發現 Fortinet 多項產品存在身分鑑別繞過(Authentication Bypass)漏洞(CVE-2026-24858)。</span></li>
-				<li style="text-align: justify;"><span style="color:#2980b9;">設備啟用 FortiCloud SSO 之情況下，擁有FortiCloud 帳號且已註冊設備之遠端攻擊者可登入任意他人帳號註冊之設備，請儘速確認並進行修補。</span></li>
-				<li style="text-align: justify;"><a href="https://fortiguard.fortinet.com/psirt/FG-IR-26-060"><span style="color:#2980b9;">&nbsp;官方已針對漏洞釋出修復更新，請參考官方說明進行更新。</span></a></li>
-			</ul>
-			</td>
-		</tr>
-	</tbody>
+    <tbody>
+        <tr>
+            <th scope="col" style="text-align:center;width:15%;background-color:#b0c4de;">警訊</th>
+            <th scope="col" style="text-align:center;width:30%;background-color:#b0c4de;">類別<span style="display: none;">&nbsp;</span></th>
+            <th scope="col" style="text-align:center;width:55%;background-color:#b0c4de;">內容說明<span style="display: none;">&nbsp;</span></th>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="3" style="text-align:center;">漏洞警訊</td>
+            <td>電子目錄服務系統<br />
+            葳橋資訊單⼀簽入暨電子目錄服務系統<br />
+            嚴重程度：CVSS 8.8<br />
+            (CVE-2026-1427 與 CVE-2026-1428)</td>
+            <td>
+            <ul>
+                <li style="text-align: justify;">研究⼈員發現葳橋資訊單⼀簽入暨電⼦⽬錄服務系統存在作業系統指令注入(OS Command Injection) 漏 洞 (CVE-2026-1427 與 CVE-2026-1428)。</li>
+                <li style="text-align: justify;">已通過身分鑑別之遠端攻擊者可注入任意作業系統指令並於設備上執行，請更新至電子目錄服務系統(V4)至 IFTOP_P4_181(含)以後版本。</li>
+                <li style="text-align: justify;"><a href="https://www.wellchoose.com.tw/service/service.php?part=b">請使用者儘速連繫葳橋資訊技術支援團隊，取得適用之修正版本，並完成系統升級。</a></li>
+            </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>電子郵件系統<br />
+            C&amp;Cm@il 郵件協同系統<br />
+            嚴重程度：<br />
+            (CVE-2026-2234: CVSS 9.1)、(CVE2026-2235 : CVSS 6.5 )及(CVE-2026-2236 : CVSS 7.5 )</td>
+            <td>
+            <ul>
+                <li style="text-align: justify;">研究人員發現桓基科技 C＆Cm@il 存在 3個高風險安全漏洞(CVE-2026-2234、CVE-2026-2235 及 CVE-2026-2236)。</li>
+                <li style="text-align: justify;">類型包含缺乏身分鑑別(Missing Authentication)與 SQL 注入(SQL Injection)，最嚴重可使未經身分鑑別之遠端攻擊者讀取與修改任意使用者信件內容。</li>
+                <li style="text-align: justify;">&nbsp;<a href="https://www.hgiga.com/patch.html">官方已提供安全公告，請參考官方說明儘速確認並採取相關緩解措施。</a></li>
+            </ul>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: justify;">流程管理系統<br />
+            AgentFlow<br />
+            嚴重程度：<br />
+            ( CVE-2026-2095：CVSS 9.8 )、( CVE2026-2096：CVSS 9.8 )、( CVE-2026-2097：CVSS 8.8 )、( CVE-2026-2098：CVSS 6.1 )、(CVE2026-2099：CVSS 5.4 )</td>
+            <td>
+            <ul>
+                <li>研究人員發現華苓科技開發的 Agentflow存在多項安全漏洞 ( CVE-2026-2095 ~2099 )。</li>
+                <li>類型包含身分鑑別繞過與不安全的反序列化，遠端未經身分鑑別之攻擊者可藉此登入系統或執行任意程式碼 (RCE)，威脅等級評定為極高 (CVSS 9.8)。</li>
+                <li><a href="https://forum.flowring.com/post/view?bid=72&amp;id=45611&amp;tpg=1&amp;ppg=1&amp;sty=1#45939">請使用者儘速連繫華苓科技技術支援團隊，取得適用之修正版本，完成系統更新或採取應對緩解措施。</a></li>
+            </ul>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="4" style="text-align:center;">已知遭駭客利用之漏洞</td>
+            <td>通訊設備<br />
+            Cisco Catalyst SDWAN&nbsp;<br />
+            嚴重程度：CVSS 10.0<br />
+            ( CVE-2026-20127 )</td>
+            <td>
+            <ul>
+                <li style="text-align: justify;">研究人員發現 Cisco Catalyst SD-WAN Controller and Manager 軟體存在極嚴重之身分驗證繞過漏洞。</li>
+                <li style="text-align: justify;">未經身分鑑別之遠端攻擊者可發送特製請求，繞過驗證程序並取得管理權限，進而完全控制設備。</li>
+                <li style="text-align: justify;"><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa-EHchtZk">官方已提供安全建議，請參考官方說明進行軟體版本更新。</a></li>
+            </ul>
+            </td>
+        </tr>
+        <tr>
+            <td scope="col" style="width: 10%;">文書處理軟體<br />
+            Microsoft Office&nbsp;<br />
+            嚴重程度：CVSS 7.8<br />
+            (CVE-2026-21509)</td>
+            <td>
+            <ul>
+                <li style="text-align: justify;">研究人員發現 Microsoft Office 存在安全功能繞過(Security Feature Bypass)漏洞(CVE-2026-21509)。</li>
+                <li style="text-align: justify;">未經身分鑑別之攻擊者可透過發送惡意Office 文件並誘使用戶開啟，進而繞過元件物件模型(Component Object Model,COM)與物件連結與嵌入(Object Linkingand Embedding, OLE)防護機制，使原本應該被阻擋之 COM/OLE 控制元件仍能執行。</li>
+                <li style="text-align: justify;"><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21509">官方已針對漏洞釋出修復更新，請參考官方說明進行更新。</a></li>
+            </ul>
+            </td>
+        </tr>
+        <tr>
+            <td scope="col" style="width: 10%;">
+            <p>網頁瀏覽器<br />
+            Chromium 為基礎之瀏覽器<br />
+            嚴重程度：CVSS 8.8<br />
+            (CVE-2026-2441)</p>
+            </td>
+            <td>
+            <ul>
+                <li style="text-align: justify;">研究人員發現 Google Chrome、Microsoft Edge、Vivaldi、Brave 及Opera 等以 Chromium 為基礎之瀏覽器存在使用釋放後記憶體(Use After Free)漏洞(CVE-2026-2441)。</li>
+                <li style="text-align: justify;">未經身分鑑別之遠端攻擊者可利用特製HTML 頁面觸發記憶體錯誤，進而於瀏覽器沙箱環境執行任意程式碼。</li>
+                <li style="text-align: justify;"><a href="https://www.nics.nat.gov.tw/core_business/information_security_information_sharing/Vulnerability_Alert_Announcements/d9d538e7-519b-4ed9-82d7-db112d554c1b/">&nbsp;建議管理人員儘速針對受影響服務進行安全更新。</a></li>
+            </ul>
+            </td>
+        </tr>
+        <tr>
+            <td scope="col" style="width: 10%;">
+            <p>網路安全設備<br />
+            Fortinet 多項產品<br />
+            嚴重程度：9.8<br />
+            (CVE-2026-24858)</p>
+            </td>
+            <td>
+            <ul>
+                <li style="text-align: justify;">研究人員發現 Fortinet 多項產品存在身分鑑別繞過(Authentication Bypass)漏洞(CVE-2026-24858)。</li>
+                <li style="text-align: justify;">設備啟用 FortiCloud SSO 之情況下，擁有FortiCloud 帳號且已註冊設備之遠端攻擊者可登入任意他人帳號註冊之設備，請儘速確認並進行修補。</li>
+                <li style="text-align: justify;"><a href="https://fortiguard.fortinet.com/psirt/FG-IR-26-060">&nbsp;官方已針對漏洞釋出修復更新，請參考官方說明進行更新。</a></li>
+            </ul>
+            </td>
+        </tr>
+    </tbody>
 </table>
 
 <p style="text-align: justify;"><span style="color:#c0392b;">警訊說明：<br />
@@ -743,11 +743,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p style="text-align: justify;"><strong><span style="color:#d35400;"><span style="font-size:x-large;">三、國際資安新聞</span></span></strong><br />
 <span style="color:#c0392b;">攻擊者透過偽造 PDF 誘餌竊取 Dropbox 登入訊息<br />
 (資料來源：<a href="https://www.darkreading.com/cloud-security/attackers-harvest-dropbox-logins-fake-pdf-lures?utm_medium=email&amp;utm_source=Eloqua&amp;ref=GBSNewsletterEmail&amp;utm_campaign=TECH-DSB-2026.2.03-Global-M-CD-NL-All&amp;email_asset_id=127366">Dark Reading</a>)</span><br />
-<span style="color:#2980b9;"><span style="text-justify:inter-ideograph"><span style="layout-grid-mode:char"><span style="punctuation-wrap:simple">根據 Forcepoint 的研究報告指出，近期針對企業的網路釣魚攻擊活動呈現上升趨勢。攻擊者採用複雜的多階段混淆技術，試圖誘騙受害者輸入Dropbox 帳號憑證並加以竊取。在此攻擊活動中，攻擊者會利用偽造或遭入侵的內部電⼦郵件帳號發送郵件，誘導⽬標使⽤者查看⼀份偽造的「訂單請求」。郵件內附帶⼀個連結⾄ PDF 文件的連結。當使用者點擊後，會先被導向⼀個託管於合法雲端服務平台 Vercel 的模糊化 PDF 文件，接著再被重新導向⾄⼀個外觀與官⽅⾴⾯極為相似的偽造 Dropbox 登入頁面。在該頁面中，受害者會被要求輸入其工作帳號與密碼。實際上，這些憑證在頁面顯示「使用者名稱或密碼錯誤」提示之前就已被攻擊者竊取。隨後，竊得的憑證與相關使用者資訊會透過 Telegram 機器人即時傳送給攻擊者，使其能夠進⼀步進⾏帳⼾接管、內部系統存取，甚⾄發動後續詐欺⾏為。為降低此類攻擊風險，建議使用者遵循反釣魚安全最佳實務，例如對來源不明的電子郵件與 PDF 附件保持警覺，並在開啟或點擊連結前仔細確認其真實性。</span></span></span></span></p>
+<span style="text-justify:inter-ideograph"><span style="layout-grid-mode:char"><span style="punctuation-wrap:simple">根據 Forcepoint 的研究報告指出，近期針對企業的網路釣魚攻擊活動呈現上升趨勢。攻擊者採用複雜的多階段混淆技術，試圖誘騙受害者輸入Dropbox 帳號憑證並加以竊取。在此攻擊活動中，攻擊者會利用偽造或遭入侵的內部電⼦郵件帳號發送郵件，誘導⽬標使⽤者查看⼀份偽造的「訂單請求」。郵件內附帶⼀個連結⾄ PDF 文件的連結。當使用者點擊後，會先被導向⼀個託管於合法雲端服務平台 Vercel 的模糊化 PDF 文件，接著再被重新導向⾄⼀個外觀與官⽅⾴⾯極為相似的偽造 Dropbox 登入頁面。在該頁面中，受害者會被要求輸入其工作帳號與密碼。實際上，這些憑證在頁面顯示「使用者名稱或密碼錯誤」提示之前就已被攻擊者竊取。隨後，竊得的憑證與相關使用者資訊會透過 Telegram 機器人即時傳送給攻擊者，使其能夠進⼀步進⾏帳⼾接管、內部系統存取，甚⾄發動後續詐欺⾏為。為降低此類攻擊風險，建議使用者遵循反釣魚安全最佳實務，例如對來源不明的電子郵件與 PDF 附件保持警覺，並在開啟或點擊連結前仔細確認其真實性。</span></span></span></p>
 
 <p style="text-align: justify;"><span style="color:#c0392b;">微軟：Windows Admin Center 嚴重漏洞導致權限提升<br />
 (資料來源：<a href="https://www.techrepublic.com/article/news-windows-admin-center-privilege-escalation-february-2026/?utm_medium=email&amp;utm_source=Eloqua&amp;ref=GBSNewsletterEmail&amp;utm_campaign=TECH-DSB-2026.2.19-Global-M-CD-NL-All&amp;email_asset_id=128946">Tech Republic</a>)</span><br />
-<span style="color:#2980b9;"><span style="text-justify:inter-ideograph"><span style="layout-grid-mode:char"><span style="punctuation-wrap:simple">微軟警告，Windows Admin Center（WAC） 存在⼀項⾼風險安全漏洞CVE-2026-26119（CVSS 評分：8.8），可能在企業環境中被利用以進行權限提升攻擊。該漏洞源於身分驗證機制處理不當，使具備合法存取權限的攻擊者在無需使用者互動的情況下，即可透過網路提升其權限。若成功利用此漏洞，攻擊者可能取得管理員層級控制權，進而修改系統設定、建立或變更特權帳戶、停用安全防護機制、存取敏感資料，甚至在企業網路中進行橫向移動。由於 Windows Admin Center 為集中式伺服器與基礎架構管理平台，⼀旦遭到利⽤，可能影響多台受管理主機，進⼀步放⼤整體安全風險。目前該漏洞影響 Windows Admin Center 2.6.4 版本。截至目前為止，尚未有公開資訊顯示此漏洞已遭到實際利用。組織應透過以下方式降低風險：修補到最新版本、強制執行最小權限原則、實施多因素身份驗證、限制網路暴露、加強主機系統、啟用增強日誌紀錄以及測試事件應變計畫，以降低風險。</span></span></span></span></p>
+<span style="text-justify:inter-ideograph"><span style="layout-grid-mode:char"><span style="punctuation-wrap:simple">微軟警告，Windows Admin Center（WAC） 存在⼀項⾼風險安全漏洞CVE-2026-26119（CVSS 評分：8.8），可能在企業環境中被利用以進行權限提升攻擊。該漏洞源於身分驗證機制處理不當，使具備合法存取權限的攻擊者在無需使用者互動的情況下，即可透過網路提升其權限。若成功利用此漏洞，攻擊者可能取得管理員層級控制權，進而修改系統設定、建立或變更特權帳戶、停用安全防護機制、存取敏感資料，甚至在企業網路中進行橫向移動。由於 Windows Admin Center 為集中式伺服器與基礎架構管理平台，⼀旦遭到利⽤，可能影響多台受管理主機，進⼀步放⼤整體安全風險。目前該漏洞影響 Windows Admin Center 2.6.4 版本。截至目前為止，尚未有公開資訊顯示此漏洞已遭到實際利用。組織應透過以下方式降低風險：修補到最新版本、強制執行最小權限原則、實施多因素身份驗證、限制網路暴露、加強主機系統、啟用增強日誌紀錄以及測試事件應變計畫，以降低風險。</span></span></span></p>
 
                 </div>
                         <div class="articleOther">
@@ -770,7 +770,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <div class="d-block d-md-inline-flex">
                         <div class="infoUnit"><b>發布單位：</b><span>資通安全署</span></div>
                         <div class="infoDate"><b>建立日期：</b><span>2026-03-16</span></div>
-                        <div class="infoTime"><b>更新日期：</b><span>2026-03-16</span></div>
+                        <div class="infoTime"><b>更新日期：</b><span>2026-10-13</span></div>
                     </div>
                 </div>
             </div>
